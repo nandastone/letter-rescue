@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://collect001"]
+
+[ext_resource type="Script" path="res://scripts/collectible.gd" id="1_collect"]
+[ext_resource type="Texture2D" path="res://assets/sprites/letter.png" id="2_sprite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_collect"]
+size = Vector2(14, 14)
+
+[node name="Collectible" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_collect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_collect")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_sprite")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+horizontal_alignment = 1
+vertical_alignment = 1

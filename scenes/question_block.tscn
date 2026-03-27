@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://qblock001"]
+
+[ext_resource type="Script" path="res://scripts/question_block.gd" id="1_qblock"]
+[ext_resource type="Texture2D" path="res://assets/sprites/question_block.png" id="2_sprite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qblock"]
+size = Vector2(20, 20)
+
+[node name="QuestionBlock" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_qblock")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qblock")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_sprite")
+
+[node name="PictureSprite" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+
+[node name="Label" type="Label" parent="."]
+z_index = 2
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "?"
