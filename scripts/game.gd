@@ -90,9 +90,13 @@ func _build_level_from_data() -> void:
 	if bg_idx >= 0 and bg_idx < EGA_PALETTE.size():
 		background.color = EGA_PALETTE[bg_idx]
 
-	# Player spawn.
+	# Player spawn. The level format's player_start is "bottom middle of the
+	# exit-door image" (per ModdingWiki); for our clone's player, whose origin
+	# is at feet, we snap to the next tile boundary so the character stands
+	# on the ground at frame 0 instead of falling ~8px before landing.
 	var start = level_data.get("player_start", [2, 10])
-	spawn_position = Vector2(start[0] * TILE_SIZE, start[1] * TILE_SIZE)
+	var spawn_tile_y: float = ceil(float(start[1]))
+	spawn_position = Vector2(start[0] * TILE_SIZE, spawn_tile_y * TILE_SIZE)
 	player.global_position = spawn_position
 	player.is_dead = false
 	player.velocity = Vector2.ZERO
