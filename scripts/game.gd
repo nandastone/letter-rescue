@@ -5,6 +5,15 @@ extends Node2D
 const TILE_SIZE := 16
 const TILESET_COLS := 20
 
+# Empirically-derived tile remap: maps level-file tile indices to their
+# correct atlas positions. Built by template-matching reference frame 319's
+# gameplay tiles against BACK3 atlas cells. Fills the gap where the level
+# format's tile indexing doesn't match a simple 20-col row-major atlas
+# layout — likely because the original engine has a lookup table in the
+# binary or handles specific index ranges specially.
+const TILE_REMAP_PATH := "res://data/tile_remap.json"
+var tile_remap: Dictionary = {}
+
 # Standard EGA 16-colour palette, matching DOSBox's VGA output for EGA content.
 # Level files store `bg_colour` as an index 0-15; we fill the Background layer
 # with the matching RGB so the sky/wall/floor colour matches the original.
@@ -40,6 +49,13 @@ var exit_door: Area2D = null
 var is_level_ending: bool = false
 
 func _ready() -> void:
+	# Load tile remap table if present.
+	var f := FileAccess.open(TILE_REMAP_PATH, FileAccess.READ)
+	if f:
+		var j := JSON.new()
+		if j.parse(f.get_as_text()) == OK:
+			tile_remap = j.data
+
 	question_block_scene = load("res://scenes/question_block.tscn")
 	gruzzle_scene = load("res://scenes/gruzzle.tscn")
 	collectible_scene = load("res://scenes/collectible.tscn")
@@ -205,13 +221,10 @@ func _build_background(bg_data: Array) -> void:
 			var tile_idx: int = row[x]
 			if tile_idx == 0xFF or tile_idx == 255:
 				continue  # Transparent.
-			# Empirical: subtracting 1 from tile indices gives a net +0.76%
-			# match boost (via sweep -2..+2). Exact reason unclear — possibly
-			# level format is 1-based or atlas's first tile is pre-offset —
-			# but the result consistently beats the untreated indices.
-			var adjusted: int = max(0, tile_idx - 1)
-			var atlas_x: int = adjusted % TILESET_COLS
-			var atlas_y: int = adjusted / TILESET_COLS
+			# Apply remap if present; fall through to direct indexing otherwise.
+			var atlas_idx = int(tile_remap.get(str(tile_idx), tile_idx))
+			var atlas_x: int = atlas_idx % TILESET_COLS
+			var atlas_y: int = atlas_idx / TILESET_COLS
 			bg_tilemap.set_cell(Vector2i(x, y), 0, Vector2i(atlas_x, atlas_y))
 
 func _setup_test_level() -> void:
