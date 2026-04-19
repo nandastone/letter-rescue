@@ -23,6 +23,7 @@ config/features=PackedStringArray("4.6")
 
 GameManager="*res://scripts/game_manager.gd"
 AudioManager="*res://scripts/audio_manager.gd"
+InputReplay="*res://scripts/input_replay.gd"
 
 [display]
 
@@ -72,6 +73,13 @@ use_slime={
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="collectibles"
 
+[physics]
+
+common/physics_ticks_per_second=70
+common/physics_jitter_fix=0.0
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

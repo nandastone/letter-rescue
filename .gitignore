@@ -29,3 +29,18 @@ Thumbs.db
 # Build / export
 build/
 export/
+
+# Visual regression testing — generated artifacts, not source.
+# (BSV2 replays + the JSON they parse to + the DOSBox reference PNGs are
+# all regeneratable from a `lr.py record` session. Sentinel PNGs and the
+# asset-extraction research doc ARE source — keep.)
+testing/output/
+testing/reference/
+testing/replays/
+
+# Raw extracted GX Library blobs — the _png/ dirs are the usable form.
+assets/extracted/wr1_1/
+assets/extracted/wr1_2/
+
+# Python bytecode cache
+__pycache__/
