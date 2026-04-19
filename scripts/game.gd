@@ -147,11 +147,19 @@ func _build_level_from_data() -> void:
 	exit_door.player_entered_door.connect(_on_door_entered)
 	entities.add_child(exit_door)
 
-	# Question block entities deferred — extracted STATIC.WR sprite exists at
-	# assets/sprites/question_block.png but positioning it exactly over the
-	# reference's rendered QBs requires an offset I couldn't pin down from
-	# level data alone. Overlays handle these pixels correctly for frame 0.
+	# Question blocks: extracted STATIC.WR sprite, with the inner Sprite2D
+	# offset (+26, +18) inside the entity scene (sprite-center = entity_pos
+	# + (26, 18)). Derived from template-matching the extracted sprite
+	# against reference frame 325, which lands the QB at world center
+	# (entity_pos.x + 26, entity_pos.y + 18) = level data position +
+	# (1 tile, 0.5 tile) + sprite-half = (16+10, 8+10) = (26, 18) world.
 	var blocks: Array[Area2D] = []
+	var block_positions = level_data.get("question_blocks", [])
+	for pos in block_positions:
+		var block := question_block_scene.instantiate() as Area2D
+		block.global_position = Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE)
+		entities.add_child(block)
+		blocks.append(block)
 
 	# Setup word manager.
 	var words = level_data.get("words", ["cat", "dog", "hat", "sun", "cup", "bed", "pen"])
