@@ -351,6 +351,14 @@ def cmd_regtest(args) -> int:
         fail_threshold=0,
     )
 
+    # Copy the last settled frame to a predictable path so the user can always
+    # view "the result" of the latest test run at testing/output/<name>/latest.png.
+    frames = sorted(frames_dir.glob("*.png")) if frames_dir.exists() else []
+    latest_path = None
+    if frames:
+        latest_path = out_dir / "latest.png"
+        shutil.copy(frames[-1], latest_path)
+
     print()
     print("==========================================")
     print(f"  Test:    {test_name}")
@@ -360,6 +368,8 @@ def cmd_regtest(args) -> int:
     report_file = out_dir / "report.json"
     if report_file.is_file():
         print(f"  Report:  {report_file}")
+    if latest_path:
+        print(f"  Latest:  {latest_path}   (screenshot of settled frame)")
     print("==========================================")
     return rc
 
