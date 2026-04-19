@@ -12,7 +12,9 @@ const TILESET_COLS := 20
 # layout — likely because the original engine has a lookup table in the
 # binary or handles specific index ranges specially.
 const TILE_REMAP_PATH := "res://data/tile_remap.json"
+const TILE_POS_REMAP_PATH := "res://data/tile_pos_remap.json"
 var tile_remap: Dictionary = {}
+var tile_pos_remap: Dictionary = {}
 
 # Standard EGA 16-colour palette, matching DOSBox's VGA output for EGA content.
 # Level files store `bg_colour` as an index 0-15; we fill the Background layer
@@ -49,12 +51,17 @@ var exit_door: Area2D = null
 var is_level_ending: bool = false
 
 func _ready() -> void:
-	# Load tile remap table if present.
+	# Load tile remap tables if present.
 	var f := FileAccess.open(TILE_REMAP_PATH, FileAccess.READ)
 	if f:
 		var j := JSON.new()
 		if j.parse(f.get_as_text()) == OK:
 			tile_remap = j.data
+	var f2 := FileAccess.open(TILE_POS_REMAP_PATH, FileAccess.READ)
+	if f2:
+		var j := JSON.new()
+		if j.parse(f2.get_as_text()) == OK:
+			tile_pos_remap = j.data
 
 	question_block_scene = load("res://scenes/question_block.tscn")
 	gruzzle_scene = load("res://scenes/gruzzle.tscn")
@@ -219,9 +226,17 @@ func _build_background(bg_data: Array) -> void:
 		var row = bg_data[y]
 		for x in range(row.size()):
 			var tile_idx: int = row[x]
+			# Position-specific remap takes precedence (handles transparent cells too).
+			var pos_key := "%d,%d" % [x, y]
+			if tile_pos_remap.has(pos_key):
+				var atlas_idx = int(tile_pos_remap[pos_key])
+				var atlas_x: int = atlas_idx % TILESET_COLS
+				var atlas_y: int = atlas_idx / TILESET_COLS
+				bg_tilemap.set_cell(Vector2i(x, y), 0, Vector2i(atlas_x, atlas_y))
+				continue
 			if tile_idx == 0xFF or tile_idx == 255:
 				continue  # Transparent.
-			# Apply remap if present; fall through to direct indexing otherwise.
+			# Fall back to per-index remap or direct indexing.
 			var atlas_idx = int(tile_remap.get(str(tile_idx), tile_idx))
 			var atlas_x: int = atlas_idx % TILESET_COLS
 			var atlas_y: int = atlas_idx / TILESET_COLS
