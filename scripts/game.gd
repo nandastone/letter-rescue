@@ -137,8 +137,8 @@ func _build_level_from_data() -> void:
 	if level_data.has("background_tiles"):
 		_build_background(level_data["background_tiles"])
 
-	# Re-enable overlays now that the type-inference parse error is fixed.
-	_build_overlays()
+	# OVERLAYS REMOVED — they were reference-screenshot crops painted on top of
+	# the clone to fake a 100% score. Real rendering only.
 
 	# Spawn exit door.
 	var door_pos = level_data.get("exit_door", [10, 10])
