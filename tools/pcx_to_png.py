@@ -19,6 +19,33 @@ from pathlib import Path
 from PIL import Image
 
 
+def sanitize_ega_palette(img: Image.Image) -> Image.Image:
+    """Rewrite palette idx 6 from dark-yellow to brown.
+
+    The BACK*.WR / DROP*.WR PCX files embed an EGA palette where idx 6 is
+    (170, 170, 0) dark yellow. On real EGA hardware (and in DOSBox), the
+    default EGA palette-register setup maps idx 6 to (170, 85, 0) brown —
+    a well-known early-IBM-EGA quirk. The GX engine does not override this
+    register for these PCX loads, so what DOSBox actually renders is brown,
+    not dark yellow. Applying the remap here bakes hardware-correct colors
+    into the PNG so downstream consumers (Godot) match the reference.
+    """
+    if img.mode == "P":
+        pal = list(img.getpalette() or [])
+        if len(pal) >= 3 * 7 and pal[18:21] == [170, 170, 0]:
+            pal[18:21] = [170, 85, 0]
+            img.putpalette(pal)
+        return img
+    rgb = img.convert("RGB")
+    arr = rgb.load()
+    w, h = rgb.size
+    for y in range(h):
+        for x in range(w):
+            if arr[x, y] == (170, 170, 0):
+                arr[x, y] = (170, 85, 0)
+    return rgb
+
+
 def convert_dir(src: Path, dst: Path) -> list[tuple[Path, int, int]]:
     dst.mkdir(parents=True, exist_ok=True)
     results = []
@@ -35,6 +62,7 @@ def convert_dir(src: Path, dst: Path) -> list[tuple[Path, int, int]]:
         except Exception as e:
             print(f"  SKIP {p.name}: {e}")
             continue
+        img = sanitize_ega_palette(img)
         # Preserve the palette if the image is indexed; otherwise convert to RGB.
         if img.mode == "P":
             img.save(out_path)
