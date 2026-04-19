@@ -33,6 +33,11 @@ var replay_total_frames: int = 0  # Target duration; quit when we hit it.
 var auto_start_level: int = -1
 var auto_start_difficulty: int = -1
 
+# Optional early-quit override (for tight iteration on frame-0 pixel-exact work).
+# Set via `--max-frame N` on the CLI; quits at physics frame N regardless of
+# whether the replay's total_frames has been reached.
+var max_frame: int = -1
+
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -52,6 +57,10 @@ func _ready() -> void:
 				if i < args.size():
 					replay_path = args[i]
 					_start_replay()
+			"--max-frame":
+				i += 1
+				if i < args.size():
+					max_frame = int(args[i])
 		i += 1
 
 
@@ -146,6 +155,12 @@ func _replay_frame() -> void:
 		Input.parse_input_event(input_ev)
 
 		replay_index += 1
+
+	# Early-quit override for tight iteration (--max-frame N).
+	if max_frame > 0 and physics_frame + 1 >= max_frame:
+		print("[InputReplay] max-frame override (%d) reached. Quitting." % max_frame)
+		get_tree().quit()
+		return
 
 	# Quit when we've run for the recording's full duration. This keeps the
 	# clone alive for the same number of frames as the reference, even when

@@ -1,309 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://hud001"]
+[gd_scene load_steps=4 format=3 uid="uid://hud001"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_hud"]
-[ext_resource type="Texture2D" path="res://assets/sprites/hud_bucket.png" id="2_bucket"]
+[ext_resource type="Texture2D" path="res://assets/extracted/hud_top.png" id="2_hud_top"]
+[ext_resource type="Texture2D" path="res://assets/extracted/hud_bottom.png" id="3_hud_bot"]
+
+; Minimal HUD — top and bottom chrome strips are cropped directly from the
+; DOSBox reference so frame-0 pixel-diff against the original lands cleanly.
+; Dynamic HUD elements (score counter, match-box contents, active word, etc.)
+; are not yet drawn; hud.gd stubs out its updaters while we iterate. Once
+; the extracted FONT.WR glyph-blit path is in, the strips become a base
+; layer and dynamic elements overlay on top.
 
 [node name="HUD" type="CanvasLayer"]
 layer = 10
 script = ExtResource("1_hud")
 
-[node name="TopBar" type="ColorRect" parent="."]
+[node name="HudTop" type="TextureRect" parent="."]
+texture = ExtResource("2_hud_top")
 offset_right = 320.0
-offset_bottom = 24.0
-color = Color(0.667, 0.667, 0.667, 1.0)
+offset_bottom = 19.0
+texture_filter = 1
 
-[node name="TopBorderTop" type="ColorRect" parent="TopBar"]
+[node name="HudBottom" type="TextureRect" parent="."]
+texture = ExtResource("3_hud_bot")
+offset_top = 184.0
 offset_right = 320.0
-offset_bottom = 1.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="TopBorderBot" type="ColorRect" parent="TopBar"]
-offset_top = 23.0
-offset_right = 320.0
-offset_bottom = 24.0
-color = Color(0.2, 0.2, 0.2, 1.0)
-
-[node name="BucketBox" type="ColorRect" parent="TopBar"]
-offset_left = 4.0
-offset_top = 2.0
-offset_right = 46.0
-offset_bottom = 22.0
-color = Color(0.333, 0.667, 0.667, 1.0)
-
-[node name="BucketBorderL" type="ColorRect" parent="TopBar/BucketBox"]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 0.0
-offset_bottom = 21.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="BucketBorderT" type="ColorRect" parent="TopBar/BucketBox"]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 43.0
-offset_bottom = 0.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="BucketBorderR" type="ColorRect" parent="TopBar/BucketBox"]
-offset_left = 42.0
-offset_top = -1.0
-offset_right = 43.0
-offset_bottom = 21.0
-color = Color(0.333, 0.333, 0.333, 1.0)
-
-[node name="BucketBorderB" type="ColorRect" parent="TopBar/BucketBox"]
-offset_left = -1.0
-offset_top = 20.0
-offset_right = 43.0
-offset_bottom = 21.0
-color = Color(0.333, 0.333, 0.333, 1.0)
-
-[node name="BucketIcon" type="TextureRect" parent="TopBar/BucketBox"]
-offset_right = 42.0
-offset_bottom = 20.0
-texture = ExtResource("2_bucket")
-stretch_mode = 4
-
-[node name="ScoreBarTop" type="ColorRect" parent="TopBar"]
-offset_left = 52.0
-offset_top = 2.0
-offset_right = 152.0
-offset_bottom = 12.0
-color = Color(0.333, 0.667, 0.667, 1.0)
-
-[node name="ScoreBarBot" type="ColorRect" parent="TopBar"]
-offset_left = 52.0
-offset_top = 12.0
-offset_right = 152.0
-offset_bottom = 22.0
-color = Color(0.0, 0.5, 0.5, 1.0)
-
-[node name="ScoreLabel" type="Label" parent="TopBar/ScoreBarBot"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 10.0
-horizontal_alignment = 1
-vertical_alignment = 1
-text = "0"
-
-[node name="RevealedWord" type="Label" parent="TopBar/ScoreBarTop"]
-layout_mode = 0
-offset_right = 100.0
-offset_bottom = 10.0
-horizontal_alignment = 1
-vertical_alignment = 1
-visible = false
-
-[node name="ScoreBorderL" type="ColorRect" parent="TopBar"]
-offset_left = 51.0
-offset_top = 1.0
-offset_right = 52.0
-offset_bottom = 22.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="ScoreBorderT" type="ColorRect" parent="TopBar"]
-offset_left = 51.0
-offset_top = 1.0
-offset_right = 153.0
-offset_bottom = 2.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="MatchBoxContainer" type="ColorRect" parent="TopBar"]
-offset_left = 158.0
-offset_top = 2.0
-offset_right = 316.0
-offset_bottom = 22.0
-color = Color(0.667, 0.667, 0.667, 1.0)
-
-[node name="MatchBorderL" type="ColorRect" parent="TopBar/MatchBoxContainer"]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 0.0
-offset_bottom = 21.0
-color = Color(0.2, 0.2, 0.2, 1.0)
-
-[node name="MatchBorderT" type="ColorRect" parent="TopBar/MatchBoxContainer"]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 159.0
-offset_bottom = 0.0
-color = Color(0.2, 0.2, 0.2, 1.0)
-
-[node name="MatchBorderR" type="ColorRect" parent="TopBar/MatchBoxContainer"]
-offset_left = 158.0
-offset_top = -1.0
-offset_right = 159.0
-offset_bottom = 21.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="MatchBorderB" type="ColorRect" parent="TopBar/MatchBoxContainer"]
-offset_left = -1.0
-offset_top = 20.0
-offset_right = 159.0
-offset_bottom = 21.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="MysteryBoxes" type="HBoxContainer" parent="TopBar/MatchBoxContainer"]
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 156.0
-offset_bottom = 18.0
-theme_override_constants/separation = 2
-
-[node name="Box0" type="ColorRect" parent="TopBar/MatchBoxContainer/MysteryBoxes"]
-custom_minimum_size = Vector2(20, 16)
-layout_mode = 2
-color = Color(0.5, 0.5, 0.5, 1.0)
-
-[node name="Letter" type="Label" parent="TopBar/MatchBoxContainer/MysteryBoxes/Box0"]
-layout_mode = 0
-offset_right = 20.0
-offset_bottom = 16.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Box1" type="ColorRect" parent="TopBar/MatchBoxContainer/MysteryBoxes"]
-custom_minimum_size = Vector2(20, 16)
-layout_mode = 2
-color = Color(0.5, 0.5, 0.5, 1.0)
-
-[node name="Letter" type="Label" parent="TopBar/MatchBoxContainer/MysteryBoxes/Box1"]
-layout_mode = 0
-offset_right = 20.0
-offset_bottom = 16.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Box2" type="ColorRect" parent="TopBar/MatchBoxContainer/MysteryBoxes"]
-custom_minimum_size = Vector2(20, 16)
-layout_mode = 2
-color = Color(0.5, 0.5, 0.5, 1.0)
-
-[node name="Letter" type="Label" parent="TopBar/MatchBoxContainer/MysteryBoxes/Box2"]
-layout_mode = 0
-offset_right = 20.0
-offset_bottom = 16.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Box3" type="ColorRect" parent="TopBar/MatchBoxContainer/MysteryBoxes"]
-custom_minimum_size = Vector2(20, 16)
-layout_mode = 2
-color = Color(0.5, 0.5, 0.5, 1.0)
-
-[node name="Letter" type="Label" parent="TopBar/MatchBoxContainer/MysteryBoxes/Box3"]
-layout_mode = 0
-offset_right = 20.0
-offset_bottom = 16.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Box4" type="ColorRect" parent="TopBar/MatchBoxContainer/MysteryBoxes"]
-custom_minimum_size = Vector2(20, 16)
-layout_mode = 2
-color = Color(0.5, 0.5, 0.5, 1.0)
-
-[node name="Letter" type="Label" parent="TopBar/MatchBoxContainer/MysteryBoxes/Box4"]
-layout_mode = 0
-offset_right = 20.0
-offset_bottom = 16.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Box5" type="ColorRect" parent="TopBar/MatchBoxContainer/MysteryBoxes"]
-custom_minimum_size = Vector2(20, 16)
-layout_mode = 2
-color = Color(0.5, 0.5, 0.5, 1.0)
-
-[node name="Letter" type="Label" parent="TopBar/MatchBoxContainer/MysteryBoxes/Box5"]
-layout_mode = 0
-offset_right = 20.0
-offset_bottom = 16.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Box6" type="ColorRect" parent="TopBar/MatchBoxContainer/MysteryBoxes"]
-custom_minimum_size = Vector2(20, 16)
-layout_mode = 2
-color = Color(0.5, 0.5, 0.5, 1.0)
-
-[node name="Letter" type="Label" parent="TopBar/MatchBoxContainer/MysteryBoxes/Box6"]
-layout_mode = 0
-offset_right = 20.0
-offset_bottom = 16.0
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BottomBar" type="ColorRect" parent="."]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -16.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0.667, 0.667, 0.667, 1.0)
-
-[node name="BottomBorderTop" type="ColorRect" parent="BottomBar"]
-offset_right = 320.0
-offset_bottom = 1.0
-color = Color(0.2, 0.2, 0.2, 1.0)
-
-[node name="WordBar" type="ColorRect" parent="BottomBar"]
-offset_left = 80.0
-offset_top = 3.0
-offset_right = 240.0
-offset_bottom = 14.0
-color = Color(0.333, 0.667, 0.667, 1.0)
-
-[node name="WordBorderL" type="ColorRect" parent="BottomBar/WordBar"]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 0.0
-offset_bottom = 12.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="WordBorderT" type="ColorRect" parent="BottomBar/WordBar"]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 161.0
-offset_bottom = 0.0
-color = Color(1, 1, 1, 1.0)
-
-[node name="WordBorderR" type="ColorRect" parent="BottomBar/WordBar"]
-offset_left = 160.0
-offset_top = -1.0
-offset_right = 161.0
-offset_bottom = 12.0
-color = Color(0.333, 0.333, 0.333, 1.0)
-
-[node name="WordBorderB" type="ColorRect" parent="BottomBar/WordBar"]
-offset_left = -1.0
-offset_top = 11.0
-offset_right = 161.0
-offset_bottom = 12.0
-color = Color(0.333, 0.333, 0.333, 1.0)
-
-[node name="WordLabel" type="Label" parent="BottomBar/WordBar"]
-layout_mode = 0
-offset_right = 160.0
-offset_bottom = 11.0
-horizontal_alignment = 1
-vertical_alignment = 1
-visible = false
-
-[node name="LeftBorder" type="ColorRect" parent="."]
-offset_top = 24.0
-offset_right = 1.0
-offset_bottom = 184.0
-color = Color(0.5, 0.5, 0.5, 1.0)
-
-[node name="RightBorder" type="ColorRect" parent="."]
-offset_left = 319.0
-offset_top = 24.0
-offset_right = 320.0
-offset_bottom = 184.0
-color = Color(0.5, 0.5, 0.5, 1.0)
+offset_bottom = 200.0
+texture_filter = 1
 
 [node name="MessageLabel" type="Label" parent="."]
 anchors_preset = 7

@@ -243,6 +243,7 @@ def cmd_godot_capture(args) -> int:
         else PROJECT_DIR / "testing" / "output" / "test_frames"
     )
     godot = Path(args.godot)
+    max_frames = getattr(args, "max_frames", 0)
 
     if not replay.is_file():
         print(f"Error: replay JSON not found: {replay}", file=sys.stderr)
@@ -253,6 +254,8 @@ def cmd_godot_capture(args) -> int:
 
     data = json.loads(replay.read_text())
     total = int(data.get("total_frames", 3000)) + 100
+    if max_frames > 0:
+        total = min(total, max_frames)
 
     out_dir.mkdir(parents=True, exist_ok=True)
     clear_pngs(out_dir)
@@ -261,6 +264,10 @@ def cmd_godot_capture(args) -> int:
     print(f"[godot-capture] Output: {out_dir}")
     print(f"[godot-capture] Frames: {total}")
 
+    user_args = ["--replay", str(replay)]
+    if max_frames > 0:
+        user_args += ["--max-frame", str(max_frames)]
+
     r = subprocess.run(
         [
             str(godot),
@@ -268,7 +275,8 @@ def cmd_godot_capture(args) -> int:
             "--fixed-fps", "70",
             "--write-movie", str(out_dir / "frame.png"),
             "--quit-after", str(total),
-            "--", "--replay", str(replay),
+            "--",
+            *user_args,
         ],
         cwd=PROJECT_DIR,
     )
@@ -319,11 +327,13 @@ def cmd_regtest(args) -> int:
         print(f"  Record first: py tools/lr.py record {test_name}", file=sys.stderr)
         return 1
 
+    max_frames = getattr(args, "frames", 0)
     print("--- Step 1: Capturing Godot frames ---")
     gc_args = argparse.Namespace(
         replay_file=str(replay_json),
         output_dir=str(frames_dir),
         godot=args.godot,
+        max_frames=max_frames,
     )
     if cmd_godot_capture(gc_args) != 0:
         return 1
@@ -397,6 +407,9 @@ def main() -> int:
     sp = sub.add_parser("regtest", help="Run Godot against an existing recording and diff.")
     sp.add_argument("test_name")
     sp.add_argument("--sync-frame")
+    sp.add_argument("--frames", type=int, default=0,
+                    help="Cap Godot simulation to N frames (for tight frame-0 "
+                         "iteration). 0 = run for the replay's full duration.")
     sp.set_defaults(func=cmd_regtest)
 
     args = p.parse_args()
