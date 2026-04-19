@@ -16,6 +16,7 @@ shape = SubResource("RectangleShape2D_collect")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_sprite")
+position = Vector2(24, 6)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -8.0

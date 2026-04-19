@@ -188,11 +188,9 @@ func _build_level_from_data() -> void:
 	for pos in level_data.get("slime_buckets", []):
 		_spawn_collectible(Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE), "slime_bucket")
 
-	# Book collectibles are hidden during pixel-exact work — their art
-	# (hand-drawn pink "BOOK" box) doesn't match the original, and
-	# suppressing them establishes a cleaner baseline.
-	# for pos in level_data.get("books", []):
-	# 	_spawn_collectible(Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE), "book")
+	# Books re-enabled with reference-cropped sprite + (+24, +6) offset.
+	for pos in level_data.get("books", []):
+		_spawn_collectible(Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE), "book")
 
 	# Spawn mystery letters.
 	var mystery_upper = mystery.to_upper()
