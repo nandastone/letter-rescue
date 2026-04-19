@@ -131,7 +131,9 @@ func _build_level_from_data() -> void:
 	player.is_dead = false
 	player.velocity = Vector2.ZERO
 
-	# Build tilemaps.
+	# Build tilemaps. WR1 engine overwrites bg cells at level-load with
+	# entity-specific tile indices (per wr1.exe disassembly at 0x6e6a/0x6eea):
+	#   books -> tile 239, letters -> tile 238
 	if level_data.has("collision"):
 		_build_tilemap(level_data["collision"])
 	if level_data.has("background_tiles"):
