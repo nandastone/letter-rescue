@@ -20,7 +20,7 @@ script = ExtResource("1_hud")
 [node name="HudTop" type="TextureRect" parent="."]
 texture = ExtResource("2_hud_top")
 offset_right = 320.0
-offset_bottom = 19.0
+offset_bottom = 32.0
 texture_filter = 1
 
 [node name="HudBottom" type="TextureRect" parent="."]
