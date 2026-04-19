@@ -3,6 +3,17 @@ extends Node2D
 # Main game scene. Coordinates level loading, player, and all game systems.
 
 const TILE_SIZE := 16
+const TILESET_COLS := 20
+
+# Standard EGA 16-colour palette, matching DOSBox's VGA output for EGA content.
+# Level files store `bg_colour` as an index 0-15; we fill the Background layer
+# with the matching RGB so the sky/wall/floor colour matches the original.
+const EGA_PALETTE: Array[Color] = [
+	Color8(0, 0, 0),       Color8(0, 0, 170),       Color8(0, 170, 0),       Color8(0, 170, 170),
+	Color8(170, 0, 0),     Color8(170, 0, 170),     Color8(170, 170, 0),     Color8(170, 170, 170),
+	Color8(85, 85, 85),    Color8(85, 85, 255),     Color8(85, 255, 85),     Color8(85, 255, 255),
+	Color8(255, 85, 85),   Color8(255, 85, 255),    Color8(255, 255, 85),    Color8(255, 255, 255),
+]
 
 @onready var player: CharacterBody2D = $Player
 @onready var camera: Camera2D = $Camera
@@ -10,8 +21,7 @@ const TILE_SIZE := 16
 @onready var bg_tilemap: TileMapLayer = $BackgroundTileMapLayer
 @onready var tilemap: TileMapLayer = $CollisionTileMapLayer
 @onready var platform_tilemap: TileMapLayer = $PlatformTileMapLayer
-
-const TILESET_COLS := 20
+@onready var background: ColorRect = $Background
 @onready var entities: Node2D = $Entities
 @onready var word_manager: Node = $WordManager
 @onready var slime_system: Node = $SlimeSystem
@@ -74,6 +84,11 @@ func _build_level_from_data() -> void:
 
 	# Wait one frame for queue_free to process.
 	await get_tree().process_frame
+
+	# Background colour from the level's EGA index.
+	var bg_idx: int = int(level_data.get("bg_colour_ega", 0))
+	if bg_idx >= 0 and bg_idx < EGA_PALETTE.size():
+		background.color = EGA_PALETTE[bg_idx]
 
 	# Player spawn.
 	var start = level_data.get("player_start", [2, 10])

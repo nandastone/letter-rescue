@@ -10,10 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://lvlcomp01" path="res://scenes/level_complete.tscn" id="8_lvlcomp"]
 [ext_resource type="Texture2D" path="res://assets/tiles/collision8.png" id="9_ground"]
 [ext_resource type="Texture2D" path="res://assets/tiles/platform8.png" id="10_platform"]
-[ext_resource type="Texture2D" path="res://assets/tiles/tileset_back2.png" id="11_back2"]
+[ext_resource type="Texture2D" path="res://assets/tiles/tileset_back3.png" id="11_back3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bg"]
-texture = ExtResource("11_back2")
+texture = ExtResource("11_back3")
 texture_region_size = Vector2i(16, 16)
 0:0/0 = 0
 0:1/0 = 0
