@@ -44,3 +44,4 @@ assets/extracted/wr1_2/
 
 # Python bytecode cache
 __pycache__/
+.claude/
