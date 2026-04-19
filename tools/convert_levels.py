@@ -141,24 +141,17 @@ def parse_level(data: bytes) -> dict:
     # not a letter character. The disassembly's letter→238 claim is suspect
     # until we can verify what the engine actually renders at letter slots.
 
-    # Attribute layer (RLE compressed, 8x8 tile indices).
-    # Wiki: "(mapWidth - 1) × mapHeight × 4 bytes. Tiles positioned from
-    # X=1; first column (x=0) is unavailable." So on disk the attr layer is
-    # narrower by one 16x16 column. We decode at that width, then pad back
-    # to a mapWidth*2 grid with column 0-1 empty (engine treats these as
-    # implicit left-wall solid in the collision pass, but the on-disk data
-    # does not include them).
-    attr_width_disk = (map_width - 1) * 2  # 8x8 cells per disk row
+    # Attribute layer (RLE compressed, 8x8 tile indices). The ModdingWiki
+    # claim "(mapWidth - 1) × mapHeight × 4 bytes, positioned from X=1" is
+    # wrong for this format: empirical decoding (verified against DOSBox
+    # q-block positions in level 1) shows the disk attr layer is full
+    # mapWidth × mapHeight × 4 bytes, row-major over the 8x8 grid, with no
+    # column-0 shift. Q-block markers (attr vals 0..6) land at the correct
+    # pixel positions only with this full-width decode.
+    attr_width = map_width * 2  # 8x8 cells per row
     attr_height = map_height * 2
-    attr_total = attr_width_disk * attr_height
-    attr_disk, offset = decode_rle_layer(data, offset, attr_total)
-
-    # Pad to full-width grid starting at 8x8 column 2 (= 16x16 column 1).
-    attr_width = map_width * 2
-    attr_tiles = [0x20] * (attr_width * attr_height)
-    for y in range(attr_height):
-        for x in range(attr_width_disk):
-            attr_tiles[y * attr_width + (x + 2)] = attr_disk[y * attr_width_disk + x]
+    attr_total = attr_width * attr_height
+    attr_tiles, offset = decode_rle_layer(data, offset, attr_total)
 
     # Reshape into 2D arrays.
     bg_grid = []

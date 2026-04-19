@@ -6,28 +6,34 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qblock"]
 size = Vector2(20, 20)
 
+; Entity origin = TOP-LEFT of the 24x24 q-block sprite at world px
+; (attr-cell-x * 8, attr-cell-y * 8). Sprite and collision are offset by
+; (+12, +12) so their centers sit at entity_pos + (12, 12).
+
 [node name="QuestionBlock" type="Area2D"]
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_qblock")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 12)
 shape = SubResource("RectangleShape2D_qblock")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_sprite")
-position = Vector2(24, 16)
+position = Vector2(12, 12)
 
 [node name="PictureSprite" type="Sprite2D" parent="."]
+position = Vector2(12, 12)
 visible = false
 z_index = 1
 
 [node name="Label" type="Label" parent="."]
 z_index = 2
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 22.0
+offset_bottom = 22.0
 horizontal_alignment = 1
 vertical_alignment = 1
 text = "?"

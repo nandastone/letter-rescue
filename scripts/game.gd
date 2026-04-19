@@ -202,10 +202,10 @@ func _build_level_from_data() -> void:
 	camera.limit_bottom = map_height * TILE_SIZE + 16
 
 func _build_tilemap(collision_data: Array) -> void:
-	# Collision at 8x8 resolution. Data in the JSON is already world-aligned:
-	# columns 0-1 are the wiki's unavailable left boundary (padded empty),
-	# columns 2..mapWidth*2-1 carry the real attr bytes in their correct
-	# world positions. No shift needed.
+	# Collision at 8x8 resolution. Data in the JSON is the full mapWidth*2
+	# wide attr grid in row-major 8x8 order. No padding/shift — disk byte 0
+	# is world 8x8 cell (0, 0). Verified against DOSBox q-block positions
+	# for level 1.
 	tilemap.clear()
 	platform_tilemap.clear()
 
