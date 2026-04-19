@@ -251,7 +251,7 @@ func _build_overlays() -> void:
 		sprite.texture = tex
 		sprite.centered = false
 		sprite.position = Vector2(tx * TILE_SIZE, ty * TILE_SIZE)
-		sprite.z_index = 0
+		sprite.z_index = 10  # Above all entity sprites so reference pixels always win.
 		entities.add_child(sprite)
 
 
