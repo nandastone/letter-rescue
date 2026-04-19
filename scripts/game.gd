@@ -173,13 +173,16 @@ func _build_level_from_data() -> void:
 	hud.update_score(GameManager.score)
 	hud.update_level(GameManager.current_level)
 
-	# Set camera limits.
+	# Set camera limits. Bottom limit extended by 16px (one tile row) so the
+	# camera pans lower, matching the reference's vertical framing: reference
+	# shows the ground at screen y=137 while an unextended camera showed it
+	# at y=153 (16px too low).
 	var map_width = level_data.get("width", 30)
 	var map_height = level_data.get("height", 20)
 	camera.limit_left = 0
 	camera.limit_top = 0
 	camera.limit_right = map_width * TILE_SIZE
-	camera.limit_bottom = map_height * TILE_SIZE
+	camera.limit_bottom = map_height * TILE_SIZE + 16
 
 func _build_tilemap(collision_data: Array) -> void:
 	# Collision at 8x8 resolution. Offset by 1 cell (8px) to align with background.
