@@ -5,18 +5,15 @@ extends Node2D
 const TILE_SIZE := 16
 const TILESET_COLS := 20
 
-# Empirically-derived tile remap: maps level-file tile indices to their
-# correct atlas positions. Built by template-matching reference frame 319's
-# gameplay tiles against BACK3 atlas cells. Fills the gap where the level
-# format's tile indexing doesn't match a simple 20-col row-major atlas
-# layout — likely because the original engine has a lookup table in the
-# binary or handles specific index ranges specially.
-const TILE_REMAP_PATH := "res://data/tile_remap.json"
-const TILE_POS_REMAP_PATH := "res://data/tile_pos_remap.json"
-const TILE_OVERLAYS_PATH := "res://data/tile_overlays.json"
-var tile_remap: Dictionary = {}
-var tile_pos_remap: Dictionary = {}
-var tile_overlays: Dictionary = {}
+# Wiki: animated tiles cycle through the BG tile at (tx,ty) plus the next
+# three tiles to the right of it in the tileset image. Frame rate was not
+# pinned down in disassembly; tune against reference if needed.
+const ANIM_FRAMES_PER_CYCLE := 4
+const ANIM_TICKS_PER_FRAME := 8
+
+var anim_cells: Array = []  # list of Vector2i tile-grid coords (16x16)
+var anim_base_atlas: Array[Vector2i] = []  # atlas cell for frame 0 at each anim index
+var anim_tick_count: int = 0
 
 # Standard EGA 16-colour palette, matching DOSBox's VGA output for EGA content.
 # Level files store `bg_colour` as an index 0-15; we fill the Background layer
@@ -32,6 +29,7 @@ const EGA_PALETTE: Array[Color] = [
 @onready var camera: Camera2D = $Camera
 @onready var hud: CanvasLayer = $HUD
 @onready var bg_tilemap: TileMapLayer = $BackgroundTileMapLayer
+@onready var fg_tilemap: TileMapLayer = $ForegroundTileMapLayer
 @onready var tilemap: TileMapLayer = $CollisionTileMapLayer
 @onready var platform_tilemap: TileMapLayer = $PlatformTileMapLayer
 @onready var background: ColorRect = $Background
@@ -53,23 +51,6 @@ var exit_door: Area2D = null
 var is_level_ending: bool = false
 
 func _ready() -> void:
-	# Load tile remap tables if present.
-	var f := FileAccess.open(TILE_REMAP_PATH, FileAccess.READ)
-	if f:
-		var j := JSON.new()
-		if j.parse(f.get_as_text()) == OK:
-			tile_remap = j.data
-	var f2 := FileAccess.open(TILE_POS_REMAP_PATH, FileAccess.READ)
-	if f2:
-		var j := JSON.new()
-		if j.parse(f2.get_as_text()) == OK:
-			tile_pos_remap = j.data
-	var f3 := FileAccess.open(TILE_OVERLAYS_PATH, FileAccess.READ)
-	if f3:
-		var j := JSON.new()
-		if j.parse(f3.get_as_text()) == OK:
-			tile_overlays = j.data
-
 	question_block_scene = load("res://scenes/question_block.tscn")
 	gruzzle_scene = load("res://scenes/gruzzle.tscn")
 	collectible_scene = load("res://scenes/collectible.tscn")
@@ -138,9 +119,8 @@ func _build_level_from_data() -> void:
 		_build_tilemap(level_data["collision"])
 	if level_data.has("background_tiles"):
 		_build_background(level_data["background_tiles"])
-
-	# OVERLAYS REMOVED — they were reference-screenshot crops painted on top of
-	# the clone to fake a 100% score. Real rendering only.
+	_build_foreground(level_data.get("fg_tiles", []), level_data.get("background_tiles", []))
+	_setup_animations(level_data.get("animations", []), level_data.get("background_tiles", []))
 
 	# Spawn exit door.
 	var door_pos = level_data.get("exit_door", [10, 10])
@@ -210,19 +190,22 @@ func _build_level_from_data() -> void:
 	hud.update_score(GameManager.score)
 	hud.update_level(GameManager.current_level)
 
-	# Set camera limits. Bottom limit extended by 16px (one tile row) so the
-	# camera pans lower, matching the reference's vertical framing: reference
-	# shows the ground at screen y=137 while an unextended camera showed it
-	# at y=153 (16px too low).
+	# Set camera limits. The reference engine has a (+16, +40) viewport
+	# offset — playfield starts at screen (16, 40). Mirror this by pulling
+	# limit_left to -16 so the camera center can sit at world x=144 when the
+	# player is at spawn (x=32), placing world x=0 at screen x=16.
 	var map_width = level_data.get("width", 30)
 	var map_height = level_data.get("height", 20)
-	camera.limit_left = 0
+	camera.limit_left = -16
 	camera.limit_top = 0
 	camera.limit_right = map_width * TILE_SIZE
 	camera.limit_bottom = map_height * TILE_SIZE + 16
 
 func _build_tilemap(collision_data: Array) -> void:
-	# Collision at 8x8 resolution. Offset by 1 cell (8px) to align with background.
+	# Collision at 8x8 resolution. Data in the JSON is already world-aligned:
+	# columns 0-1 are the wiki's unavailable left boundary (padded empty),
+	# columns 2..mapWidth*2-1 carry the real attr bytes in their correct
+	# world positions. No shift needed.
 	tilemap.clear()
 	platform_tilemap.clear()
 
@@ -230,31 +213,61 @@ func _build_tilemap(collision_data: Array) -> void:
 		var row = collision_data[y]
 		for x in range(row.size()):
 			if row[x] == 1:
-				tilemap.set_cell(Vector2i(x + 1, y), 0, Vector2i(0, 0))
+				tilemap.set_cell(Vector2i(x, y), 0, Vector2i(0, 0))
 			elif row[x] == 2:
-				platform_tilemap.set_cell(Vector2i(x + 1, y), 0, Vector2i(0, 0))
+				platform_tilemap.set_cell(Vector2i(x, y), 0, Vector2i(0, 0))
 
-func _build_overlays() -> void:
-	for pos_key_any in tile_overlays.keys():
-		var pos_key: String = str(pos_key_any)
-		var fname: String = str(tile_overlays[pos_key_any])
-		var tex_path: String = "res://assets/extracted/tile_overlays/" + fname
-		if not ResourceLoader.exists(tex_path):
+func _build_foreground(fg_coords: Array, bg_data: Array) -> void:
+	# Wiki: fg_tiles are (x,y) pairs in 16x16 tile units. The drawn tile is
+	# the same BG cell at that coord, rendered on top of the player (z=5) so
+	# the character passes behind it.
+	fg_tilemap.clear()
+	for coord in fg_coords:
+		var tx: int = int(coord[0])
+		var ty: int = int(coord[1])
+		if ty < 0 or ty >= bg_data.size():
 			continue
-		var tex: Texture2D = load(tex_path)
-		if tex == null:
+		var row = bg_data[ty]
+		if tx < 0 or tx >= row.size():
 			continue
-		var parts: PackedStringArray = pos_key.split(",")
-		if parts.size() != 2:
+		var tile_idx: int = row[tx]
+		if tile_idx == 0xFF or tile_idx == 255:
 			continue
-		var tx: int = int(parts[0])
-		var ty: int = int(parts[1])
-		var sprite := Sprite2D.new()
-		sprite.texture = tex
-		sprite.centered = false
-		sprite.position = Vector2(tx * TILE_SIZE, ty * TILE_SIZE)
-		sprite.z_index = 10  # Above all entity sprites so reference pixels always win.
-		entities.add_child(sprite)
+		var atlas_x: int = tile_idx % TILESET_COLS
+		var atlas_y: int = tile_idx / TILESET_COLS
+		fg_tilemap.set_cell(Vector2i(tx, ty), 0, Vector2i(atlas_x, atlas_y))
+
+
+func _setup_animations(coords: Array, bg_data: Array) -> void:
+	# Wiki: animated tile cycles through the BG tile at (tx,ty) plus the next
+	# three tiles to the right in the tileset image. Physics tick drives it.
+	anim_cells = []
+	anim_base_atlas = []
+	anim_tick_count = 0
+	for coord in coords:
+		var tx: int = int(coord[0])
+		var ty: int = int(coord[1])
+		if ty < 0 or ty >= bg_data.size():
+			continue
+		var row = bg_data[ty]
+		if tx < 0 or tx >= row.size():
+			continue
+		var tile_idx: int = row[tx]
+		if tile_idx == 0xFF or tile_idx == 255:
+			continue
+		anim_cells.append(Vector2i(tx, ty))
+		anim_base_atlas.append(Vector2i(tile_idx % TILESET_COLS, tile_idx / TILESET_COLS))
+
+
+func _physics_process(_delta: float) -> void:
+	if anim_cells.is_empty():
+		return
+	anim_tick_count += 1
+	var frame: int = (anim_tick_count / ANIM_TICKS_PER_FRAME) % ANIM_FRAMES_PER_CYCLE
+	for i in range(anim_cells.size()):
+		var cell: Vector2i = anim_cells[i]
+		var base: Vector2i = anim_base_atlas[i]
+		bg_tilemap.set_cell(cell, 0, Vector2i(base.x + frame, base.y))
 
 
 func _build_background(bg_data: Array) -> void:
@@ -263,20 +276,10 @@ func _build_background(bg_data: Array) -> void:
 		var row = bg_data[y]
 		for x in range(row.size()):
 			var tile_idx: int = row[x]
-			# Position-specific remap takes precedence (handles transparent cells too).
-			var pos_key := "%d,%d" % [x, y]
-			if tile_pos_remap.has(pos_key):
-				var atlas_idx = int(tile_pos_remap[pos_key])
-				var atlas_x: int = atlas_idx % TILESET_COLS
-				var atlas_y: int = atlas_idx / TILESET_COLS
-				bg_tilemap.set_cell(Vector2i(x, y), 0, Vector2i(atlas_x, atlas_y))
-				continue
 			if tile_idx == 0xFF or tile_idx == 255:
 				continue  # Transparent.
-			# Fall back to per-index remap or direct indexing.
-			var atlas_idx = int(tile_remap.get(str(tile_idx), tile_idx))
-			var atlas_x: int = atlas_idx % TILESET_COLS
-			var atlas_y: int = atlas_idx / TILESET_COLS
+			var atlas_x: int = tile_idx % TILESET_COLS
+			var atlas_y: int = tile_idx / TILESET_COLS
 			bg_tilemap.set_cell(Vector2i(x, y), 0, Vector2i(atlas_x, atlas_y))
 
 func _setup_test_level() -> void:

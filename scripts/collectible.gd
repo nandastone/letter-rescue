@@ -26,8 +26,10 @@ func update_visual() -> void:
 			$Sprite2D.visible = true
 			$Label.visible = false
 		"book":
-			$Sprite2D.texture = preload("res://assets/sprites/book.png")
-			$Sprite2D.visible = true
+			# Book visual comes from BG tile 239 (wr1.exe stamps this at level
+			# load). Sprite-entity stays in place as an invisible pickup
+			# hitbox so collection still works.
+			$Sprite2D.visible = false
 			$Label.visible = false
 		"letter":
 			# Letters are large yellow text with no background, matching original.

@@ -359,6 +359,13 @@ def cmd_regtest(args) -> int:
         latest_path = out_dir / "latest.png"
         shutil.copy(frames[-1], latest_path)
 
+    # Side-by-side comparison at the first gameplay frame (sync). Emitted every
+    # regtest so a visual diff is always available without digging through
+    # separate frame directories.
+    side_by_side_path = _write_side_by_side(
+        ref_dir, frames_dir, out_dir, Path(sync_frame) if sync_frame else None
+    )
+
     print()
     print("==========================================")
     print(f"  Test:    {test_name}")
@@ -370,8 +377,65 @@ def cmd_regtest(args) -> int:
         print(f"  Report:  {report_file}")
     if latest_path:
         print(f"  Latest:  {latest_path}   (screenshot of settled frame)")
+    if side_by_side_path:
+        print(f"  Compare: {side_by_side_path}   (DOS ref | Godot clone, synced)")
     print("==========================================")
     return rc
+
+
+def _write_side_by_side(ref_dir: Path, test_dir: Path, out_dir: Path,
+                        sync_frame: Path | None) -> Path | None:
+    """Build a ref|clone composite after the clone has settled into gameplay.
+
+    Godot's level-load does an `await get_tree().process_frame` so the first
+    written frame is pre-load (blank playfield). Skip ahead N frames so the
+    comparison is at steady state, and use the same N offset on the ref side
+    (post-sync) so both show roughly the same game moment. A short label
+    strip underneath identifies which side is which.
+    """
+    try:
+        from PIL import Image, ImageDraw
+        import numpy as np
+    except ImportError:
+        return None
+
+    ref_frames = sorted(ref_dir.glob("*.png")) if ref_dir.is_dir() else []
+    test_frames = sorted(test_dir.glob("*.png")) if test_dir.is_dir() else []
+    if not ref_frames or not test_frames:
+        return None
+
+    ref_sync = 0
+    if sync_frame and sync_frame.is_file():
+        sentinel = np.array(Image.open(sync_frame).convert("RGB"))
+        for i, p in enumerate(ref_frames):
+            img = np.array(Image.open(p).convert("RGB"))
+            if img.shape == sentinel.shape and np.array_equal(img, sentinel):
+                ref_sync = i
+                break
+
+    # Skip the first frames; level-load await + anim settle. 10 frames ~= 140ms
+    # at 70Hz — enough to be post-load but still close to the sync point so the
+    # animation cycles are comparable.
+    skip = 10
+    ref_idx = min(ref_sync + skip, len(ref_frames) - 1)
+    test_idx = min(skip, len(test_frames) - 1)
+
+    ref_img = Image.open(ref_frames[ref_idx]).convert("RGB")
+    test_img = Image.open(test_frames[test_idx]).convert("RGB")
+    if ref_img.size != test_img.size:
+        return None
+    w, h = ref_img.size
+    gutter = 4
+    label_h = 14
+    composite = Image.new("RGB", (w * 2 + gutter, h + label_h), (40, 40, 40))
+    composite.paste(ref_img, (0, label_h))
+    composite.paste(test_img, (w + gutter, label_h))
+    d = ImageDraw.Draw(composite)
+    d.text((4, 2), f"DOSBox ref (frame {ref_idx})", fill=(220, 220, 220))
+    d.text((w + gutter + 4, 2), f"Godot clone (frame {test_idx})", fill=(220, 220, 220))
+    dest = out_dir / "side_by_side.png"
+    composite.save(dest)
+    return dest
 
 
 def main() -> int:

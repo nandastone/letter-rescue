@@ -129,12 +129,36 @@ def parse_level(data: bytes) -> dict:
     bg_total = map_width * map_height
     bg_tiles, offset = decode_rle_layer(data, offset, bg_total)
 
+    # Book BG-stamp (wr1.exe §1b): level loader writes tile idx 239 (atlas
+    # col 19, row 11 — verified to be the pink "book" image in BACK3.WR)
+    # at each book position. The sprite-entity book is invisible; BG stamp
+    # is the only visible book. Tile data on disk has 0xFF at these cells.
+    for (px, py) in books:
+        tx, ty = px // 16, py // 16
+        if 0 <= ty < map_height and 0 <= tx < map_width:
+            bg_tiles[ty * map_width + tx] = 239
+    # Letters (tile 238) NOT stamped: atlas cell (18, 11) is a slime bucket,
+    # not a letter character. The disassembly's letter→238 claim is suspect
+    # until we can verify what the engine actually renders at letter slots.
+
     # Attribute layer (RLE compressed, 8x8 tile indices).
-    # Width = mapWidth * 2, height = mapHeight * 2 (full map at 8x8 resolution).
-    attr_width = map_width * 2
+    # Wiki: "(mapWidth - 1) × mapHeight × 4 bytes. Tiles positioned from
+    # X=1; first column (x=0) is unavailable." So on disk the attr layer is
+    # narrower by one 16x16 column. We decode at that width, then pad back
+    # to a mapWidth*2 grid with column 0-1 empty (engine treats these as
+    # implicit left-wall solid in the collision pass, but the on-disk data
+    # does not include them).
+    attr_width_disk = (map_width - 1) * 2  # 8x8 cells per disk row
     attr_height = map_height * 2
-    attr_total = attr_width * attr_height
-    attr_tiles, offset = decode_rle_layer(data, offset, attr_total)
+    attr_total = attr_width_disk * attr_height
+    attr_disk, offset = decode_rle_layer(data, offset, attr_total)
+
+    # Pad to full-width grid starting at 8x8 column 2 (= 16x16 column 1).
+    attr_width = map_width * 2
+    attr_tiles = [0x20] * (attr_width * attr_height)
+    for y in range(attr_height):
+        for x in range(attr_width_disk):
+            attr_tiles[y * attr_width + (x + 2)] = attr_disk[y * attr_width_disk + x]
 
     # Reshape into 2D arrays.
     bg_grid = []
@@ -271,6 +295,8 @@ def convert_to_game_format(parsed: dict, words: list[str], level_index: int) -> 
         "books": [px_to_tiles(b) for b in parsed["books_px"]],
         "mystery_word": mystery_word,
         "mystery_letters": [px_to_tiles(l) for l in parsed["mystery_letters_px"]],
+        "animations": [px_to_tiles(a) for a in parsed["animations_px"]],
+        "fg_tiles": [px_to_tiles(f) for f in parsed["fg_tiles_px"]],
         "collision": collision,
         "background_tiles": parsed["background_tiles"],
         "_raw": {

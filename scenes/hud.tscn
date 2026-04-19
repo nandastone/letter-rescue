@@ -32,7 +32,7 @@ texture_filter = 1
 
 [node name="HudLeft" type="TextureRect" parent="."]
 texture = ExtResource("4_hud_left")
-offset_right = 32.0
+offset_right = 16.0
 offset_bottom = 200.0
 texture_filter = 1
 

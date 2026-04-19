@@ -300,6 +300,10 @@ color = Color(0.0, 0.0, 0.0, 1)
 z_index = -1
 tile_set = SubResource("TileSet_bg")
 
+[node name="ForegroundTileMapLayer" type="TileMapLayer" parent="."]
+z_index = 5
+tile_set = SubResource("TileSet_bg")
+
 [node name="CollisionTileMapLayer" type="TileMapLayer" parent="."]
 modulate = Color(1, 1, 1, 0)
 tile_set = SubResource("TileSet_solid")
