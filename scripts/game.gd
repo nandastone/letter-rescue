@@ -13,8 +13,10 @@ const TILESET_COLS := 20
 # binary or handles specific index ranges specially.
 const TILE_REMAP_PATH := "res://data/tile_remap.json"
 const TILE_POS_REMAP_PATH := "res://data/tile_pos_remap.json"
+const TILE_OVERLAYS_PATH := "res://data/tile_overlays.json"
 var tile_remap: Dictionary = {}
 var tile_pos_remap: Dictionary = {}
+var tile_overlays: Dictionary = {}
 
 # Standard EGA 16-colour palette, matching DOSBox's VGA output for EGA content.
 # Level files store `bg_colour` as an index 0-15; we fill the Background layer
@@ -62,6 +64,11 @@ func _ready() -> void:
 		var j := JSON.new()
 		if j.parse(f2.get_as_text()) == OK:
 			tile_pos_remap = j.data
+	var f3 := FileAccess.open(TILE_OVERLAYS_PATH, FileAccess.READ)
+	if f3:
+		var j := JSON.new()
+		if j.parse(f3.get_as_text()) == OK:
+			tile_overlays = j.data
 
 	question_block_scene = load("res://scenes/question_block.tscn")
 	gruzzle_scene = load("res://scenes/gruzzle.tscn")
@@ -129,6 +136,9 @@ func _build_level_from_data() -> void:
 		_build_tilemap(level_data["collision"])
 	if level_data.has("background_tiles"):
 		_build_background(level_data["background_tiles"])
+
+	# Re-enable overlays now that the type-inference parse error is fixed.
+	_build_overlays()
 
 	# Spawn exit door.
 	var door_pos = level_data.get("exit_door", [10, 10])
@@ -219,6 +229,29 @@ func _build_tilemap(collision_data: Array) -> void:
 				tilemap.set_cell(Vector2i(x + 1, y), 0, Vector2i(0, 0))
 			elif row[x] == 2:
 				platform_tilemap.set_cell(Vector2i(x + 1, y), 0, Vector2i(0, 0))
+
+func _build_overlays() -> void:
+	for pos_key_any in tile_overlays.keys():
+		var pos_key: String = str(pos_key_any)
+		var fname: String = str(tile_overlays[pos_key_any])
+		var tex_path: String = "res://assets/extracted/tile_overlays/" + fname
+		if not ResourceLoader.exists(tex_path):
+			continue
+		var tex: Texture2D = load(tex_path)
+		if tex == null:
+			continue
+		var parts: PackedStringArray = pos_key.split(",")
+		if parts.size() != 2:
+			continue
+		var tx: int = int(parts[0])
+		var ty: int = int(parts[1])
+		var sprite := Sprite2D.new()
+		sprite.texture = tex
+		sprite.centered = false
+		sprite.position = Vector2(tx * TILE_SIZE, ty * TILE_SIZE)
+		sprite.z_index = 0
+		entities.add_child(sprite)
+
 
 func _build_background(bg_data: Array) -> void:
 	bg_tilemap.clear()
