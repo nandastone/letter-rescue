@@ -1,15 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://hud001"]
+[gd_scene load_steps=6 format=3 uid="uid://hud001"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_hud"]
 [ext_resource type="Texture2D" path="res://assets/extracted/hud_top.png" id="2_hud_top"]
 [ext_resource type="Texture2D" path="res://assets/extracted/hud_bottom.png" id="3_hud_bot"]
+[ext_resource type="Texture2D" path="res://assets/extracted/hud_left.png" id="4_hud_left"]
+[ext_resource type="Texture2D" path="res://assets/extracted/hud_right.png" id="5_hud_right"]
 
-; Minimal HUD — top and bottom chrome strips are cropped directly from the
-; DOSBox reference so frame-0 pixel-diff against the original lands cleanly.
-; Dynamic HUD elements (score counter, match-box contents, active word, etc.)
-; are not yet drawn; hud.gd stubs out its updaters while we iterate. Once
-; the extracted FONT.WR glyph-blit path is in, the strips become a base
-; layer and dynamic elements overlay on top.
+; Minimal HUD — four chrome strips (top/bottom/left/right) are cropped
+; directly from the DOSBox reference so frame-0 pixel-diff against the
+; original lands cleanly. Reference gameplay viewport is 288x165 inside
+; the chrome (x=16..304, y=19..184); the clone renders gameplay across
+; the full 320x200 and the chrome strips mask the portions that would
+; otherwise be visible gameplay in the reference's chrome region.
 
 [node name="HUD" type="CanvasLayer"]
 layer = 10
@@ -24,6 +26,19 @@ texture_filter = 1
 [node name="HudBottom" type="TextureRect" parent="."]
 texture = ExtResource("3_hud_bot")
 offset_top = 184.0
+offset_right = 320.0
+offset_bottom = 200.0
+texture_filter = 1
+
+[node name="HudLeft" type="TextureRect" parent="."]
+texture = ExtResource("4_hud_left")
+offset_right = 16.0
+offset_bottom = 200.0
+texture_filter = 1
+
+[node name="HudRight" type="TextureRect" parent="."]
+texture = ExtResource("5_hud_right")
+offset_left = 304.0
 offset_right = 320.0
 offset_bottom = 200.0
 texture_filter = 1
