@@ -114,14 +114,15 @@ func _build_level_from_data() -> void:
 	exit_door.player_entered_door.connect(_on_door_entered)
 	entities.add_child(exit_door)
 
-	# Spawn question blocks.
+	# Question blocks hidden during pixel-exact work; original likely renders
+	# them as simpler EGA sprites than our hand-drawn "?" icon.
 	var blocks: Array[Area2D] = []
-	var block_positions = level_data.get("question_blocks", [])
-	for pos in block_positions:
-		var block := question_block_scene.instantiate() as Area2D
-		block.global_position = Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE)
-		entities.add_child(block)
-		blocks.append(block)
+	# var block_positions = level_data.get("question_blocks", [])
+	# for pos in block_positions:
+	# 	var block := question_block_scene.instantiate() as Area2D
+	# 	block.global_position = Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE)
+	# 	entities.add_child(block)
+	# 	blocks.append(block)
 
 	# Setup word manager.
 	var words = level_data.get("words", ["cat", "dog", "hat", "sun", "cup", "bed", "pen"])
