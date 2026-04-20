@@ -89,6 +89,9 @@ script = ExtResource("1_player")
 position = Vector2(0, -13)
 shape = SubResource("RectangleShape2D_player")
 
+; AnimatedSprite2D uses centered anchor; sprite is 24x32 and player origin
+; sits at the sprite's bottom-middle (feet on ground), so offset by -16
+; (half of 32) to place the center 16 px above the origin.
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_player")

@@ -112,6 +112,18 @@ func _build_level_from_data() -> void:
 	player.is_dead = false
 	player.velocity = Vector2.ZERO
 
+	# Spawn doorway backdrop — the decorative 32x40 pink-checker frame with
+	# dark-red outer trim and black inner frame. Extracted from STATIC.WR at
+	# (16, 73) — frame 0 (empty) of the girl's doorway-animation row.
+	# Top-left offset (-8, -32) from raw player_start aligns it pixel-exact
+	# with the DOSBox reference. (Raw start, not the ground-snapped spawn.)
+	var raw_start := Vector2(float(start[0]) * TILE_SIZE, float(start[1]) * TILE_SIZE)
+	var doorway_sprite := Sprite2D.new()
+	doorway_sprite.texture = preload("res://assets/sprites/spawn_doorway.png")
+	doorway_sprite.centered = false
+	doorway_sprite.position = raw_start + Vector2(-8, -32)
+	entities.add_child(doorway_sprite)
+
 	# Build tilemaps. WR1 engine overwrites bg cells at level-load with
 	# entity-specific tile indices (per wr1.exe disassembly at 0x6e6a/0x6eea):
 	#   books -> tile 239, letters -> tile 238
