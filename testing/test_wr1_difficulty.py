@@ -76,7 +76,7 @@ class DifficultyTests(unittest.TestCase):
                 fixture = json.loads((path.parent/(stem+'_boundaries.json')).read_text())
                 output = ROOT/'testing/output/replay_tests'/(stem+'.jsonl')
                 output.parent.mkdir(parents=True,exist_ok=True)
-                self.run_engine(['--headless','--','--original-rules','--replay',str(path),'--state-trace',str(output)])
+                self.run_engine(['--headless','--','--legacy','--replay',str(path),'--state-trace',str(output)])
                 rows = [json.loads(line) for line in output.read_text().splitlines()]
                 self.assertEqual(differences(fixture['initial'],rows[0],FIELDS+('drips','gruzzle_move_timers','entrance_timer')), {})
                 report = compare(fixture,rows,replay,hashlib.sha256(path.read_bytes()).hexdigest())
@@ -104,7 +104,7 @@ class DifficultyTests(unittest.TestCase):
                 self.assertEqual(manifest['instruction_trace_sha256'],replay['instruction_trace_sha256'])
                 directory = ROOT/'testing/output/replay_tests'/(stem+'_pixels_'+uuid.uuid4().hex)
                 targets = ','.join(str(p['clone_source_frame']) for p in manifest['pairs'])
-                self.run_engine(['--script','testing/capture_wr1_replay_frames.gd','--','--original-rules',
+                self.run_engine(['--script','testing/capture_wr1_replay_frames.gd','--','--legacy',
                     '--replay',str(path),'--capture-initial','--capture-source-frames',targets,'--capture-directory',str(directory)])
                 pairs = [(manifest['initial_file'],manifest['initial_sha256'],'initial.png')]
                 pairs += [(p['native_file'],p['sha256'],f"source_{p['clone_source_frame']:06d}.png") for p in manifest['pairs']]

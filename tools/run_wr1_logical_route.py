@@ -35,7 +35,7 @@ def run(name, godot, output):
     inputs = directory / 'inputs.json'
     save(inputs, input_stream(fixture, replay, digest(replay_path)))
     trace = directory / 'clone.jsonl'
-    args = ['--original-rules', '--replay', str(replay_path), '--logical-inputs', str(inputs), '--state-trace', str(trace)]
+    args = ['--legacy', '--replay', str(replay_path), '--logical-inputs', str(inputs), '--state-trace', str(trace)]
     if not replay.get('original_level_start'):
         args += ['--mystery-word', 'cup']
     warnings = run_engine(godot, ['--headless', '--'] + args, directory, 'state', 120)

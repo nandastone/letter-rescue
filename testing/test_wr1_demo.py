@@ -85,7 +85,7 @@ class DemoEngineTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT / 'testing/output') as temp:
             directory = Path(temp)
             trace = directory / 'clone.jsonl'
-            run_engine(os.environ['GODOT'], ['--headless','--','--original-rules','--replay',str(replay_path),
+            run_engine(os.environ['GODOT'], ['--headless','--','--legacy','--replay',str(replay_path),
                        '--state-trace',str(trace)], directory, 'state', 180)
             clone = [json.loads(line) for line in trace.read_text().splitlines()]
             report = compare(fixture, clone, replay, digest(replay_path))

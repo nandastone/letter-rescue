@@ -21,7 +21,7 @@ class ClearTextTests(unittest.TestCase):
                 result = subprocess.run([
                     os.environ['GODOT'], '--path', str(ROOT), '--quit-after', '900',
                     '--script', 'testing/test_wr1_clear_text.gd', '--',
-                    '--original-rules', '--original-seed', '20716', '--mute-original-audio',
+                    '--legacy', '--original-seed', '20716', '--mute-original-audio',
                     '--clear-output', str(directory),
                 ] + (['--clear-text'] if mode == 'clear' else []),
                     capture_output=True, text=True, timeout=45,

@@ -23,7 +23,7 @@ class LevelTitleTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT / 'testing/output') as temporary:
             output = Path(temporary)
             run_engine(os.environ['GODOT'], ['--headless', '--quit-after', '700', '--script',
-                       'testing/test_wr1_level_title.gd', '--', '--original-rules', str(output)],
+                       'testing/test_wr1_level_title.gd', '--', '--legacy', str(output)],
                        output, 'titles', 60)
             self.assertIn('lifecycle PASS', (output / 'titles.log').read_text())
             actual = Image.open(output / 'title-02.png').convert('RGB')

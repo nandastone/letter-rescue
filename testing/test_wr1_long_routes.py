@@ -52,7 +52,7 @@ class LongRouteEngineTests(unittest.TestCase):
             directory = Path(temp)
             controls, trace = directory / 'inputs.json', directory / 'clone.jsonl'
             save(controls, stream)
-            run_engine(os.environ['GODOT'], ['--headless', '--', '--original-rules', '--replay', str(replay_path),
+            run_engine(os.environ['GODOT'], ['--headless', '--', '--legacy', '--replay', str(replay_path),
                        '--logical-inputs', str(controls), '--state-trace', str(trace)], directory, 'negative', 60)
             clone = [json.loads(line) for line in trace.read_text().splitlines()]
             report = compare(fixture, clone, replay, digest(replay_path))

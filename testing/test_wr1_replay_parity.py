@@ -25,7 +25,7 @@ class NativeReplayParityTests(unittest.TestCase):
         cls.trace_path = ROOT/'testing/output/replay_tests/native_parity.jsonl'
         cls.trace_path.parent.mkdir(parents=True,exist_ok=True)
         result = subprocess.run([GODOT,'--headless','--fixed-fps','70','--path',str(ROOT),'--',
-            '--original-rules','--mystery-word','cup','--replay',str(cls.path),
+            '--legacy','--mystery-word','cup','--replay',str(cls.path),
             '--state-trace',str(cls.trace_path)],capture_output=True,text=True,timeout=30,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         if result.returncode or 'SCRIPT ERROR:' in result.stderr:

@@ -26,7 +26,7 @@ class LevelStartTests(unittest.TestCase):
         output = ROOT/'testing/output/replay_tests/level2_focus_release.jsonl'
         output.parent.mkdir(parents=True,exist_ok=True)
         run = subprocess.run([GODOT,'--headless','--fixed-fps','70','--path',str(ROOT),
-            '--script','testing/release_wr1_replay_input.gd','--','--original-rules',
+            '--script','testing/release_wr1_replay_input.gd','--','--legacy',
             '--replay',str(path),'--state-trace',str(output)],
             capture_output=True,text=True,timeout=30,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
@@ -44,7 +44,7 @@ class LevelStartTests(unittest.TestCase):
         directory = ROOT/'testing/output/replay_tests'/('level2_pixels_'+uuid.uuid4().hex)
         targets = ','.join(str(p['clone_source_frame']) for p in manifest['pairs'])
         run = subprocess.run([GODOT,'--path',str(ROOT),'--fixed-fps','70',
-            '--script','testing/capture_wr1_replay_frames.gd','--','--original-rules',
+            '--script','testing/capture_wr1_replay_frames.gd','--','--legacy',
             '--replay','testing/fixtures/wr1_level2_motion_replay.json','--capture-initial',
             '--capture-source-frames',targets,'--capture-directory',str(directory)],
             capture_output=True,text=True,timeout=30,
@@ -69,7 +69,7 @@ class LevelStartTests(unittest.TestCase):
         path, output = directory/'level2_no_jump.json',directory/'level2_no_jump.jsonl'
         path.write_text(json.dumps(replay)+'\n')
         run = subprocess.run([GODOT,'--headless','--fixed-fps','70','--path',str(ROOT),
-            '--','--original-rules','--replay',str(path),'--state-trace',str(output)],
+            '--','--legacy','--replay',str(path),'--state-trace',str(output)],
             capture_output=True,text=True,timeout=30,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         self.assertEqual(run.returncode,0,run.stdout+run.stderr)
@@ -87,7 +87,7 @@ class LevelStartTests(unittest.TestCase):
         output = ROOT/'testing/output/replay_tests/level2_motion.jsonl'
         output.parent.mkdir(parents=True,exist_ok=True)
         run = subprocess.run([GODOT,'--headless','--fixed-fps','70','--path',str(ROOT),
-            '--','--original-rules','--replay',str(path),'--state-trace',str(output)],
+            '--','--legacy','--replay',str(path),'--state-trace',str(output)],
             capture_output=True,text=True,timeout=30,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         self.assertEqual(run.returncode,0,run.stdout+run.stderr)

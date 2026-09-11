@@ -22,7 +22,7 @@ class RecapTimingTests(unittest.TestCase):
         path, output = directory/'input.json', directory/'clone.jsonl'
         path.write_text(json.dumps(replay)+'\n')
         run = subprocess.run([GODOT,'--headless','--fixed-fps','70','--path',str(ROOT),
-            '--','--original-rules','--mystery-word','cup','--replay',str(path),
+            '--','--legacy','--mystery-word','cup','--replay',str(path),
             '--state-trace',str(output)],capture_output=True,text=True,timeout=30,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         self.assertEqual(run.returncode,0,run.stdout+run.stderr)

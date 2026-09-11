@@ -13,7 +13,7 @@ func run() -> void:
 			break
 	var player = current_scene.get_node("Player")
 	if player.original_state == null:
-		push_error("Run this integration check with -- --original-rules")
+		push_error("Run this integration check with -- --legacy")
 		quit(1)
 		return
 	player.set_physics_process(false)

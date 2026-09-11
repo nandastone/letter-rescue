@@ -22,7 +22,7 @@ class StartupTests(unittest.TestCase):
         name = f'start-{seed}-{mode}'
         output = self.output / f'{name}.json'
         run_engine(os.environ['GODOT'], ['--headless', '--quit-after', '500', '--script',
-                   'testing/probe_wr1_start.gd', '--', '--original-rules', '--original-seed',
+                   'testing/probe_wr1_start.gd', '--', '--legacy', '--original-seed',
                    str(seed), '--probe-difficulty', str(mode), '--probe-output', str(output)],
                    self.output, name, 30)
         return json.loads(output.read_text())
@@ -63,7 +63,7 @@ class StartupTests(unittest.TestCase):
                 replay.write_text(json.dumps(dict(fps=70, level=1, difficulty=0, total_frames=1,
                                                   events=[], **data)))
                 process = subprocess.run([os.environ['GODOT'], '--headless', '--quit-after', '10',
-                    '--path', str(ROOT), '--', '--original-rules', '--replay', str(replay)],
+                    '--path', str(ROOT), '--', '--legacy', '--replay', str(replay)],
                     capture_output=True, text=True, timeout=30,
                     creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
                 self.assertEqual(process.returncode, 1, process.stdout + process.stderr)

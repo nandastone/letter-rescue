@@ -24,7 +24,7 @@ class FrontendTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT/'testing/output') as temporary:
             result = subprocess.run([os.environ['GODOT']]+([] if presented else ['--headless'])+['--path',str(ROOT),
 				'--quit-after','1800',
-                '--script','testing/test_wr1_frontend.gd','--','--original-rules',
+                '--script','testing/test_wr1_frontend.gd','--','--legacy',
                 '--original-seed','20716','--skip-intro','--frontend-output',temporary]+(['--frontend-presented','--mute-original-audio'] if presented else []),
                 capture_output=True,text=True,timeout=45,
                 creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))

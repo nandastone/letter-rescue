@@ -24,7 +24,7 @@ class CaptureWindowTests(unittest.TestCase):
                 args = ['--script','testing/capture_wr1_window_probe.gd']
                 if mode == 'start_minimized':
                     args += ['--minimized']
-                args += ['--','--original-rules','--replay','testing/fixtures/wr1_demo_level11_replay.json',
+                args += ['--','--legacy','--replay','testing/fixtures/wr1_demo_level11_replay.json',
                          '--state-trace',str(directory/'state.jsonl'), '--capture-initial',
                          '--capture-through-replay-end','--capture-source-frames','639,999,1009',
                          '--capture-directory',str(directory/'pixels')]

@@ -4,59 +4,59 @@ A word-matching educational platformer for kids, built with [Godot 4.6](https://
 
 Players explore side-scrolling levels, collect letters, and match words to pictures — all while avoiding enemies (Gruzzles) and hazards. Inspired by the classic DOS game *Word Rescue*.
 
+## Two games
+
+- **Letter Rescue** (the default, `just run`) runs on the recovered Word Rescue
+  engine with Clear Text and smooth motion: the original still updates about
+  12 times a second in 8-pixel steps, and `scripts/smooth_motion.gd` draws the
+  movement in between at the display's refresh rate. This is the game that
+  changes from here; the demo parity suite does not check it.
+- **Legacy** (`just legacy`, or `-- --legacy`) is the pixel-exact Word Rescue
+  Part 1 that `just parity` verifies against DOSBox. `just legacy-clear` adds
+  Clear Text. Keep it unchanged: changes to shared scripts must keep
+  `just parity` green.
+
 ## Gameplay
 
-- **Explore** platformer levels with running, jumping, and ladder climbing
+- **Explore** platformer levels with running, jumping, and climbing
 - **Reveal** words hidden inside question blocks
 - **Match** each word to the correct picture block
-- **Avoid** Gruzzles — or freeze them with slime!
+- **Avoid** Gruzzles, or slime them!
 - **Collect** mystery letters to uncover bonus words
 - **Progress** through the 15 recovered WR1 levels at Easy, Medium, or Hard difficulty
 
-## Controls
-
-| Action | Keys |
-|--------|------|
-| Move | Arrow keys / WASD |
-| Jump | Up / W |
-| Drop through platform | Down / S |
-| Use slime | Space / Enter |
-
 ## Running
 
-1. Install [Godot 4.6](https://godotengine.org/download)
-2. Open the project in the Godot editor
-3. Press F5 to run
+1. Install [Godot 4.6](https://godotengine.org/download) and [just](https://github.com/casey/just)
+2. `just run` for Letter Rescue, or `just legacy` for the original
 
 ### In a browser
 
 Every push to `main` that touches the game publishes a web build to
 <https://nandastone.github.io/letter-rescue/> (see `.github/workflows/web.yml`).
-It always runs the original rules with Clear Text (see below). URL flags:
-`?pixel-text` for the original pixel display, `?skip-intro`, or
-`?mute-original-audio` (combine with `&`).
-In Chrome, the install icon in the address bar adds it as an app. `just web`
-builds the same thing locally into `build/web/`.
+It runs Letter Rescue. URL flags: `?legacy` for the original game, which keeps
+Clear Text unless you also add `?pixel-text`; `?skip-intro`; and
+`?mute-original-audio` (combine with `&`). In Chrome, the install icon in the
+address bar adds it as an app. `just web` builds the same thing locally into
+`build/web/`.
 
-### Original mode
+### The recovered frontend
 
-Use `just run-original` for recovered Word Rescue gameplay and artwork, now
-including the original startup, menus, player profiles, ending, music and
-PC-speaker effects. Add `--skip-intro` to go straight to name entry, or `--mute-original-audio`
-for silent play. See [audio implementation and verification](testing/wr1_audio_research.md)
-for source evidence and remaining fidelity limits.
+Both games include the original startup, menus, player profiles, ending, music
+and PC-speaker effects. Add `--skip-intro` to go straight to name entry, or
+`--mute-original-audio` for silent play. See
+[audio implementation and verification](testing/wr1_audio_research.md) for
+source evidence and remaining fidelity limits.
 
-Use `just run-clear` (or `just run-original --clear-text`) for Clear Text mode.
-It keeps the original rules and draws gameplay text, scores, bonuses, word cards,
-menus, instructions, intro and ending text at the window's resolution. Text uses
-the bundled [Andika literacy font](https://software.sil.org/andika/design/), with
+Clear Text draws gameplay text, scores, bonuses, word cards, menus,
+instructions, intro and ending text at the window's resolution. Text uses the
+bundled [Andika literacy font](https://software.sil.org/andika/design/), with
 room for descenders and the original hidden-letter rules on Hard. No font
-installation is needed. `just run-original` retains the original pixel display.
-Both commands accept `--skip-intro`. The target word fits inside its original
-beveled panel. Illustrated screens keep their pictures and frames with readable
-lettering over the original text areas.
+installation is needed. The target word fits inside its original beveled panel.
+Illustrated screens keep their pictures and frames with readable lettering over
+the original text areas.
 
-In original mode, arrows move/jump/climb, Ctrl also jumps, and Space/Alt use
+Arrows move/jump/climb, Ctrl also jumps, and Space/Alt use
 slime. Escape opens the menu and resumes the same paused game. During play,
 H shows help, W shows the word list, S selects sound, Q asks to quit, and +/−
 change game speed. Menu letters select their labelled entries; Keyboard Redefine
@@ -74,7 +74,7 @@ Run Demo plays all fifteen original demos in sequence, with title/story
 interludes. Any key returns to the menu and preserves the suspended live game.
 See [frontend source and verification](testing/wr1_frontend_research.md).
 
-## Original-game regression suite
+## Legacy regression suite
 
 Run `just parity` to play all 15 original Word Rescue demos in their native order
 and compare gameplay state, controls, timing, endings, and sampled screenshots
@@ -110,13 +110,15 @@ These include visible-window and mixer tests; they supplement the fifteen demos.
 scenes/          Scene files (.tscn)
 scripts/         GDScript source files
 assets/
-  audio/sfx/     Sound effects
-  fonts/         Bitmap font
-  pictures/      Word-picture images
-  sprites/       Character and object sprites
-  tiles/         Tileset graphics
-data/levels/     Level data (JSON) — ep1, ep2, ep3
-tools/           Python utilities for level conversion and asset generation
+  audio/original/  Original music (CMF + rendered WAV) and speaker effects
+  extracted/       Graphics extracted from the WR1 data files
+  fonts/andika/    Clear Text font
+  sprites/         Character and object sprites
+  tiles/           Tileset graphics
+data/levels/       Level layouts (JSON)
+data/wr1/          Recovered WR1 rules, demos and frontend data
+testing/           Parity suite, research notes and native fixtures
+tools/             Extraction, capture and parity tooling
 ```
 
 ## License

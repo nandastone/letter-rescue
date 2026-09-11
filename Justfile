@@ -8,17 +8,17 @@ godot := env_var_or_default("GODOT", "C:/Users/nitch/AppData/Local/Microsoft/Win
 default:
     @just --list
 
-# Start the game (runs the project's main scene)
-run:
-    & "{{godot}}" --path .
+# Play the new game: Clear Text and smooth motion on the recovered engine.
+run *args:
+    & "{{godot}}" --path . -- {{args}}
 
-# Play with the recovered WR1 rules and original artwork.
-run-original *args:
-    & "{{godot}}" --path . -- --original-rules {{args}}
+# Play the pixel-exact original Word Rescue (the game `just parity` checks).
+legacy *args:
+    & "{{godot}}" --path . -- --legacy {{args}}
 
-# Original rules and artwork, with reading text rendered at window resolution.
-run-clear *args:
-    & "{{godot}}" --path . -- --original-rules --clear-text {{args}}
+# The original game with reading text rendered at window resolution.
+legacy-clear *args:
+    & "{{godot}}" --path . -- --legacy --clear-text {{args}}
 
 # Export the browser build to build/web (needs Godot's web export templates).
 web:

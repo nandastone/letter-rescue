@@ -34,7 +34,7 @@ class AttractTests(unittest.TestCase):
     def run_attract(self, clear_text):
         result = subprocess.run([os.environ['GODOT'],'--path',str(ROOT),
             '--fixed-fps','70','--quit-after','15000','--script','testing/test_wr1_attract.gd',
-            '--','--original-rules','--original-seed','20716','--attract-presented','--mute-original-audio'] + (['--clear-text'] if clear_text else []),
+            '--','--legacy','--original-seed','20716','--attract-presented','--mute-original-audio'] + (['--clear-text'] if clear_text else []),
             capture_output=True,text=True,timeout=240,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         self.assertEqual(result.returncode,0,result.stdout+result.stderr)

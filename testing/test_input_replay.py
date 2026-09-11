@@ -29,7 +29,7 @@ class InputReplayTests(unittest.TestCase):
                        '--path', str(ROOT)]
             if mode == 'record':
                 command += ['--script', 'testing/record_wr1_roundtrip.gd']
-            command += ['--', '--original-rules', '--'+mode, str(replay), '--state-trace', str(trace)]
+            command += ['--', '--legacy', '--'+mode, str(replay), '--state-trace', str(trace)]
             if mode == 'record':
                 command += ['--character', 'boy']
                 if profile_settings:
@@ -74,7 +74,7 @@ class InputReplayTests(unittest.TestCase):
         data.update(overrides or {})
         replay.write_text(json.dumps(data), encoding='utf-8')
         result = subprocess.run([GODOT, '--headless', '--fixed-fps', '70', '--path', str(ROOT), '--',
-            '--original-rules', '--replay', str(replay), '--state-trace', str(trace)],
+            '--legacy', '--replay', str(replay), '--state-trace', str(trace)],
             capture_output=True, text=True, timeout=30,
             creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

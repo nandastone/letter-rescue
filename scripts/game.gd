@@ -83,6 +83,8 @@ func _ready() -> void:
 
 	original_presentation = preload("res://scripts/wr1_presentation.gd").new()
 	add_child(original_presentation)
+	if not LaunchArgs.legacy():
+		add_child(preload("res://scripts/smooth_motion.gd").new())
 	load_current_level()
 
 func queue_original_video(elapsed_after_event: float = 0.0, ordinary_draw: bool = false) -> void:

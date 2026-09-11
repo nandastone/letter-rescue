@@ -29,7 +29,7 @@ func run() -> void:
 	var game = current_scene
 	var player = game.player
 	if player.original_state == null:
-		push_error("Run with -- --original-rules")
+		push_error("Run with -- --legacy")
 		quit(1)
 		return
 	player.set_physics_process(false)

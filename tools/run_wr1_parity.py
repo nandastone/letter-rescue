@@ -157,7 +157,7 @@ def run_scenario(name, godot, output, timeout, vga_scanout=False, snapshot_video
     fixture_path = FIXTURES / f'wr1_{name}_boundaries.json'
     replay, fixture = read(replay_path), read(fixture_path)
     validate_demo_evidence(name, replay, fixture)
-    args = ['--original-rules', '--replay', str(replay_path)]
+    args = ['--legacy', '--replay', str(replay_path)]
     if clear_text:
         args += ['--clear-text', '--capture-reference-video']
     if vga_scanout:

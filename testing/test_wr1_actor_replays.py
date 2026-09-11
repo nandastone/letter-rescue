@@ -24,7 +24,7 @@ class ActorReplayTests(unittest.TestCase):
         directory = ROOT/'testing/output/replay_tests'/('level2_pixels_'+uuid.uuid4().hex)
         frame = manifest['clone_source_frame']
         run = subprocess.run([GODOT,'--path',str(ROOT),'--fixed-fps','70',
-            '--script','testing/capture_wr1_replay_frames.gd','--','--original-rules','--mystery-word','cup',
+            '--script','testing/capture_wr1_replay_frames.gd','--','--legacy','--mystery-word','cup',
             '--replay','testing/fixtures/wr1_exit_replay.json','--capture-source-frames',str(frame),
             '--capture-directory',str(directory)],capture_output=True,text=True,timeout=90,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
@@ -40,7 +40,7 @@ class ActorReplayTests(unittest.TestCase):
         directory = ROOT/'testing/output/replay_tests'/('recap_pixels_'+uuid.uuid4().hex)
         frames = ','.join(str(p['clone_source_frame']) for p in manifest['pairs'])
         run = subprocess.run([GODOT,'--path',str(ROOT),'--fixed-fps','70',
-            '--script','testing/capture_wr1_replay_frames.gd','--','--original-rules','--mystery-word','cup',
+            '--script','testing/capture_wr1_replay_frames.gd','--','--legacy','--mystery-word','cup',
             '--replay','testing/fixtures/wr1_recap_replay.json','--capture-source-frames',frames,
             '--capture-directory',str(directory)],capture_output=True,text=True,timeout=60,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
@@ -60,7 +60,7 @@ class ActorReplayTests(unittest.TestCase):
         output = ROOT/f'testing/output/replay_tests/{name}.jsonl'
         output.parent.mkdir(parents=True,exist_ok=True)
         run = subprocess.run([GODOT,'--verbose','--headless','--fixed-fps','70','--path',str(ROOT),
-            '--','--original-rules','--mystery-word','cup','--replay',str(path),
+            '--','--legacy','--mystery-word','cup','--replay',str(path),
             '--state-trace',str(output)],capture_output=True,text=True,timeout=30,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         self.assertEqual(run.returncode,0,run.stdout+run.stderr)
@@ -105,7 +105,7 @@ class ActorReplayTests(unittest.TestCase):
         path = ROOT/'testing/fixtures/wr1_exit_replay.json'
         output = ROOT/'testing/output/replay_tests/exit.jsonl'
         run = subprocess.run([GODOT,'--verbose','--headless','--fixed-fps','70','--path',str(ROOT),
-            '--','--original-rules','--mystery-word','cup','--replay',str(path),
+            '--','--legacy','--mystery-word','cup','--replay',str(path),
             '--state-trace',str(output)],capture_output=True,text=True,timeout=30,
             creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         self.assertEqual(run.returncode,0,run.stdout+run.stderr)

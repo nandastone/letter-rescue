@@ -53,7 +53,7 @@ class AudioAssetsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=ROOT/'testing/output') as temporary:
             output = Path(temporary)/'mixer.wav'
             command = [os.environ['GODOT'], '--headless', '--path', str(ROOT), '--quit-after', '1500',
-                       '--script', 'testing/test_wr1_audio.gd', '--', '--original-rules',
+                       '--script', 'testing/test_wr1_audio.gd', '--', '--legacy',
                        '--original-seed', '20716', '--original-audio', '--audio-output', str(output)]
             result = subprocess.run(command, capture_output=True, text=True, timeout=40,
                                     creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))

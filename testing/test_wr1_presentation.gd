@@ -15,7 +15,7 @@ func _initialize() -> void:
 
 func run() -> void:
 	assert(DisplayServer.get_name() != "headless", "This check requires GPU rendering")
-	assert("--original-rules" in OS.get_cmdline_user_args())
+	assert("--legacy" in OS.get_cmdline_user_args())
 	paused = true
 	change_scene_to_file("res://scenes/game.tscn")
 	while current_scene == null or not current_scene.is_replay_ready():
