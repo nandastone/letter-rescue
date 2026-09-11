@@ -16,14 +16,22 @@ const MIN_MOVING_FRAMES := 100
 
 var sampler: Node
 var replaying: bool
+var checked: bool
+var waited: int
 
 func _initialize() -> void:
 	replaying = "--replay" in OS.get_cmdline_user_args()
 	change_scene_to_file.call_deferred("res://scenes/game.tscn")
 	process_frame.connect(_attach)
 
+
 func _attach() -> void:
 	var game := current_scene
+	waited += 1
+	if waited > FRAMES * 4:
+		# Also catches a sampler that never reported (e.g. a script error).
+		printerr("smoke FAILED: no sampled run after %d frames" % waited)
+		quit(1)
 	if sampler != null or game == null or not game.has_method("is_replay_ready") or not game.is_replay_ready():
 		return
 	if not replaying:
@@ -36,6 +44,7 @@ func _attach() -> void:
 	game.add_child(sampler)
 
 func _check(rows: Array) -> void:
+	checked = true
 	var moved: Array[float] = []
 	var largest := 0.0
 	var teleports := 0
