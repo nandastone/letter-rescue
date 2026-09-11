@@ -65,7 +65,8 @@ jobs:
           rm templates.tpz
 
       - name: Import
-        run: "$RUNNER_TEMP/godot" --headless --import
+        run: |
+          "$RUNNER_TEMP/godot" --headless --import
 
       # The demo parity suite covers legacy only (it needs testing/ and a GPU).
       # This is the default game's gate: it runs, and motion is drawn smoothly.

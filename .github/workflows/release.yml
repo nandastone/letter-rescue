@@ -51,10 +51,12 @@ jobs:
           rm templates.tpz
 
       - name: Import
-        run: "$RUNNER_TEMP/godot" --headless --import
+        run: |
+          "$RUNNER_TEMP/godot" --headless --import
 
       - name: Smoke-test the default game
-        run: "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd
+        run: |
+          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd
 
       # Desktop ships both games: it starts the default one, and `--legacy`
       # (after a bare `--`) runs the pixel-exact original.
