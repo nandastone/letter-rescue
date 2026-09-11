@@ -759,6 +759,10 @@ func finish_original_exit(held: Dictionary, source_frame: int) -> void:
 	original_restart = original_gruzzles.restart(starts, GameManager.current_difficulty, true, original_words.next_words)
 	original_restart["actors"] = original_gruzzles
 	original_restart["advancing"] = true
+	if OS.has_feature("web"):
+		# DOS players leave through Quit, which saves; browser tabs just close.
+		# Save once the new level's words exist so the profile resumes here.
+		save_original_profile()
 	await _show_original_level_title(false)
 	_build_level_from_data()
 
