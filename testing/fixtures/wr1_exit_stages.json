@@ -1,0 +1,1635 @@
+{
+  "source_trace_sha256": "0f254a0c5237c79b61bd0f4ba4f7869c3026130b83d3a1f09840ba53a90410d0",
+  "begin": {
+    "event": "lifecycle",
+    "ip": 2646,
+    "cs": 574,
+    "ds": 9213,
+    "ss": 12379,
+    "bp": 4064,
+    "pic_ms": 89480.727962971,
+    "launch_call": 6268,
+    "decoder": "DynX86",
+    "cycles_max": 27000,
+    "cycles_auto": false,
+    "x": 144,
+    "y": 136,
+    "gx": 77,
+    "gy": 22,
+    "camera_x": 62,
+    "camera_y": 9,
+    "phase": 2,
+    "sprite": 25,
+    "facing": 0,
+    "background_frame": 0,
+    "render_page": 0,
+    "display_page": 0,
+    "timer": 0,
+    "entity_timer": 767,
+    "threshold": 8,
+    "up": 0,
+    "down": 0,
+    "left": 0,
+    "right": 1,
+    "books_collected": 18,
+    "book_count": 24,
+    "mistakes": 0,
+    "source_x": -1,
+    "source_y": 12,
+    "word_offset": 5,
+    "picture_offset": 0,
+    "gruzzle_count": 1,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_request": 0,
+    "action_busy": 0,
+    "death": 0,
+    "slime_used": 0,
+    "slime_reward": 10,
+    "miss_timer": 0,
+    "miss_x": 38,
+    "miss_y": 7,
+    "mystery_index": 5,
+    "mystery_prefix": 1,
+    "reward_timer": 0,
+    "reward_x": 25,
+    "reward_y": 10,
+    "reward_bonus": 3,
+    "recap_pending": 0,
+    "door_state": 2,
+    "level_index": 0,
+    "slime_ever_used": 0,
+    "door_x": 78,
+    "door_y": 17,
+    "score": 740,
+    "rng": 1145078285,
+    "active_word": 0,
+    "active_index": 4,
+    "matched_count": 7,
+    "world_x": 640,
+    "world_y": 208,
+    "gruzzles": [
+      {
+        "gx": 52,
+        "gy": 21,
+        "type": 0,
+        "state": -1,
+        "animation_index": 6,
+        "jump_phase": 1,
+        "move_timer": 12
+      }
+    ],
+    "slime_pickups": [
+      {
+        "tile_x": 80,
+        "tile_y": 10,
+        "attribute": 154
+      },
+      {
+        "tile_x": 22,
+        "tile_y": 10,
+        "attribute": 155
+      }
+    ],
+    "mystery_pickups": [
+      {
+        "tile_x": 28,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 80,
+        "tile_y": 2,
+        "attribute": 124
+      },
+      {
+        "tile_x": 21,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 53,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 9,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 68,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 38,
+        "tile_y": 1,
+        "attribute": 32
+      }
+    ],
+    "picture_timers": [
+      1,
+      4,
+      6,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_frames": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_animation_enabled": 0,
+    "stack_args": [
+      4109,
+      1824,
+      4094,
+      263,
+      424
+    ],
+    "stack_locals": [
+      820,
+      1,
+      0,
+      0,
+      2,
+      -1,
+      29315,
+      1647
+    ],
+    "si": 22,
+    "di": 57,
+    "destination_x": 48,
+    "destination_y": 136,
+    "restart": 0,
+    "player_draw": 1
+  },
+  "extra_render": {
+    "event": "lifecycle",
+    "ip": 2657,
+    "cs": 574,
+    "ds": 9213,
+    "ss": 12379,
+    "bp": 4064,
+    "pic_ms": 89482.220444441,
+    "launch_call": 6268,
+    "decoder": "DynX86",
+    "cycles_max": 27000,
+    "cycles_auto": false,
+    "x": 144,
+    "y": 136,
+    "gx": 77,
+    "gy": 22,
+    "camera_x": 62,
+    "camera_y": 9,
+    "phase": 2,
+    "sprite": 25,
+    "facing": 0,
+    "background_frame": 1,
+    "render_page": 1,
+    "display_page": 0,
+    "timer": 0,
+    "entity_timer": 767,
+    "threshold": 8,
+    "up": 0,
+    "down": 0,
+    "left": 0,
+    "right": 1,
+    "books_collected": 18,
+    "book_count": 24,
+    "mistakes": 0,
+    "source_x": -1,
+    "source_y": 12,
+    "word_offset": 5,
+    "picture_offset": 0,
+    "gruzzle_count": 0,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_request": 0,
+    "action_busy": 0,
+    "death": 0,
+    "slime_used": 0,
+    "slime_reward": 10,
+    "miss_timer": 0,
+    "miss_x": 38,
+    "miss_y": 7,
+    "mystery_index": 5,
+    "mystery_prefix": 1,
+    "reward_timer": 0,
+    "reward_x": 25,
+    "reward_y": 10,
+    "reward_bonus": 3,
+    "recap_pending": 0,
+    "door_state": 2,
+    "level_index": 0,
+    "slime_ever_used": 0,
+    "door_x": 78,
+    "door_y": 17,
+    "score": 740,
+    "rng": 1145078285,
+    "active_word": 0,
+    "active_index": 4,
+    "matched_count": 7,
+    "world_x": 640,
+    "world_y": 208,
+    "gruzzles": [],
+    "slime_pickups": [
+      {
+        "tile_x": 80,
+        "tile_y": 10,
+        "attribute": 154
+      },
+      {
+        "tile_x": 22,
+        "tile_y": 10,
+        "attribute": 155
+      }
+    ],
+    "mystery_pickups": [
+      {
+        "tile_x": 28,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 80,
+        "tile_y": 2,
+        "attribute": 124
+      },
+      {
+        "tile_x": 21,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 53,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 9,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 68,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 38,
+        "tile_y": 1,
+        "attribute": 32
+      }
+    ],
+    "picture_timers": [
+      1,
+      4,
+      6,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_frames": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_animation_enabled": 0,
+    "stack_args": [
+      4109,
+      1824,
+      4094,
+      263,
+      424
+    ],
+    "stack_locals": [
+      820,
+      1,
+      0,
+      0,
+      2,
+      -1,
+      29315,
+      1647
+    ],
+    "si": 22,
+    "di": 57,
+    "destination_x": 48,
+    "destination_y": 136,
+    "restart": 0,
+    "player_draw": 1
+  },
+  "door_frames": [
+    {
+      "event": "lifecycle",
+      "ip": 2799,
+      "cs": 574,
+      "ds": 9213,
+      "ss": 12379,
+      "bp": 4064,
+      "pic_ms": 89603.803962946,
+      "launch_call": 6276,
+      "decoder": "DynX86",
+      "cycles_max": 27000,
+      "cycles_auto": false,
+      "x": 144,
+      "y": 136,
+      "gx": 77,
+      "gy": 22,
+      "camera_x": 62,
+      "camera_y": 9,
+      "phase": 2,
+      "sprite": 25,
+      "facing": 0,
+      "background_frame": 1,
+      "render_page": 1,
+      "display_page": 1,
+      "timer": 12,
+      "entity_timer": 767,
+      "threshold": 8,
+      "up": 0,
+      "down": 0,
+      "left": 0,
+      "right": 1,
+      "books_collected": 18,
+      "book_count": 24,
+      "mistakes": 0,
+      "source_x": -1,
+      "source_y": 12,
+      "word_offset": 5,
+      "picture_offset": 0,
+      "gruzzle_count": 0,
+      "gruzzle_difficulty": 14,
+      "gruzzle_cadence": 6,
+      "slime_request": 0,
+      "action_busy": 0,
+      "death": 0,
+      "slime_used": 0,
+      "slime_reward": 10,
+      "miss_timer": 0,
+      "miss_x": 38,
+      "miss_y": 7,
+      "mystery_index": 5,
+      "mystery_prefix": 1,
+      "reward_timer": 0,
+      "reward_x": 25,
+      "reward_y": 10,
+      "reward_bonus": 3,
+      "recap_pending": 0,
+      "door_state": 2,
+      "level_index": 0,
+      "slime_ever_used": 0,
+      "door_x": 78,
+      "door_y": 17,
+      "score": 740,
+      "rng": 1145078285,
+      "active_word": 0,
+      "active_index": 4,
+      "matched_count": 7,
+      "world_x": 640,
+      "world_y": 208,
+      "gruzzles": [],
+      "slime_pickups": [
+        {
+          "tile_x": 80,
+          "tile_y": 10,
+          "attribute": 154
+        },
+        {
+          "tile_x": 22,
+          "tile_y": 10,
+          "attribute": 155
+        }
+      ],
+      "mystery_pickups": [
+        {
+          "tile_x": 28,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 80,
+          "tile_y": 2,
+          "attribute": 124
+        },
+        {
+          "tile_x": 21,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 53,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 9,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 68,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 38,
+          "tile_y": 1,
+          "attribute": 32
+        }
+      ],
+      "picture_timers": [
+        1,
+        4,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_frames": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_animation_enabled": 0,
+      "stack_args": [
+        4109,
+        1824,
+        4094,
+        263,
+        424
+      ],
+      "stack_locals": [
+        820,
+        -40,
+        0,
+        0,
+        2,
+        -1,
+        29315,
+        1647
+      ],
+      "si": 1,
+      "di": -480,
+      "destination_x": 48,
+      "destination_y": 136,
+      "restart": 0,
+      "player_draw": 1
+    },
+    {
+      "event": "lifecycle",
+      "ip": 2799,
+      "cs": 574,
+      "ds": 9213,
+      "ss": 12379,
+      "bp": 4064,
+      "pic_ms": 89728.791259289,
+      "launch_call": 6285,
+      "decoder": "DynX86",
+      "cycles_max": 27000,
+      "cycles_auto": false,
+      "x": 144,
+      "y": 136,
+      "gx": 77,
+      "gy": 22,
+      "camera_x": 62,
+      "camera_y": 9,
+      "phase": 2,
+      "sprite": 25,
+      "facing": 0,
+      "background_frame": 1,
+      "render_page": 1,
+      "display_page": 1,
+      "timer": 12,
+      "entity_timer": 767,
+      "threshold": 8,
+      "up": 0,
+      "down": 0,
+      "left": 0,
+      "right": 1,
+      "books_collected": 18,
+      "book_count": 24,
+      "mistakes": 0,
+      "source_x": -1,
+      "source_y": 12,
+      "word_offset": 5,
+      "picture_offset": 0,
+      "gruzzle_count": 0,
+      "gruzzle_difficulty": 14,
+      "gruzzle_cadence": 6,
+      "slime_request": 0,
+      "action_busy": 0,
+      "death": 0,
+      "slime_used": 0,
+      "slime_reward": 10,
+      "miss_timer": 0,
+      "miss_x": 38,
+      "miss_y": 7,
+      "mystery_index": 5,
+      "mystery_prefix": 1,
+      "reward_timer": 0,
+      "reward_x": 25,
+      "reward_y": 10,
+      "reward_bonus": 3,
+      "recap_pending": 0,
+      "door_state": 2,
+      "level_index": 0,
+      "slime_ever_used": 0,
+      "door_x": 78,
+      "door_y": 17,
+      "score": 740,
+      "rng": 1145078285,
+      "active_word": 0,
+      "active_index": 4,
+      "matched_count": 7,
+      "world_x": 640,
+      "world_y": 208,
+      "gruzzles": [],
+      "slime_pickups": [
+        {
+          "tile_x": 80,
+          "tile_y": 10,
+          "attribute": 154
+        },
+        {
+          "tile_x": 22,
+          "tile_y": 10,
+          "attribute": 155
+        }
+      ],
+      "mystery_pickups": [
+        {
+          "tile_x": 28,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 80,
+          "tile_y": 2,
+          "attribute": 124
+        },
+        {
+          "tile_x": 21,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 53,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 9,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 68,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 38,
+          "tile_y": 1,
+          "attribute": 32
+        }
+      ],
+      "picture_timers": [
+        1,
+        4,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_frames": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_animation_enabled": 0,
+      "stack_args": [
+        4109,
+        1824,
+        4094,
+        263,
+        424
+      ],
+      "stack_locals": [
+        820,
+        -40,
+        0,
+        0,
+        2,
+        -1,
+        29315,
+        1647
+      ],
+      "si": 2,
+      "di": -480,
+      "destination_x": 48,
+      "destination_y": 136,
+      "restart": 0,
+      "player_draw": 1
+    },
+    {
+      "event": "lifecycle",
+      "ip": 2799,
+      "cs": 574,
+      "ds": 9213,
+      "ss": 12379,
+      "bp": 4064,
+      "pic_ms": 89855.76751852,
+      "launch_call": 6294,
+      "decoder": "DynX86",
+      "cycles_max": 27000,
+      "cycles_auto": false,
+      "x": 144,
+      "y": 136,
+      "gx": 77,
+      "gy": 22,
+      "camera_x": 62,
+      "camera_y": 9,
+      "phase": 2,
+      "sprite": 25,
+      "facing": 0,
+      "background_frame": 1,
+      "render_page": 1,
+      "display_page": 1,
+      "timer": 12,
+      "entity_timer": 767,
+      "threshold": 8,
+      "up": 0,
+      "down": 0,
+      "left": 0,
+      "right": 1,
+      "books_collected": 18,
+      "book_count": 24,
+      "mistakes": 0,
+      "source_x": -1,
+      "source_y": 12,
+      "word_offset": 5,
+      "picture_offset": 0,
+      "gruzzle_count": 0,
+      "gruzzle_difficulty": 14,
+      "gruzzle_cadence": 6,
+      "slime_request": 0,
+      "action_busy": 0,
+      "death": 0,
+      "slime_used": 0,
+      "slime_reward": 10,
+      "miss_timer": 0,
+      "miss_x": 38,
+      "miss_y": 7,
+      "mystery_index": 5,
+      "mystery_prefix": 1,
+      "reward_timer": 0,
+      "reward_x": 25,
+      "reward_y": 10,
+      "reward_bonus": 3,
+      "recap_pending": 0,
+      "door_state": 2,
+      "level_index": 0,
+      "slime_ever_used": 0,
+      "door_x": 78,
+      "door_y": 17,
+      "score": 740,
+      "rng": 1145078285,
+      "active_word": 0,
+      "active_index": 4,
+      "matched_count": 7,
+      "world_x": 640,
+      "world_y": 208,
+      "gruzzles": [],
+      "slime_pickups": [
+        {
+          "tile_x": 80,
+          "tile_y": 10,
+          "attribute": 154
+        },
+        {
+          "tile_x": 22,
+          "tile_y": 10,
+          "attribute": 155
+        }
+      ],
+      "mystery_pickups": [
+        {
+          "tile_x": 28,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 80,
+          "tile_y": 2,
+          "attribute": 124
+        },
+        {
+          "tile_x": 21,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 53,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 9,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 68,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 38,
+          "tile_y": 1,
+          "attribute": 32
+        }
+      ],
+      "picture_timers": [
+        1,
+        4,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_frames": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_animation_enabled": 0,
+      "stack_args": [
+        4109,
+        1824,
+        4094,
+        263,
+        424
+      ],
+      "stack_locals": [
+        820,
+        -40,
+        0,
+        0,
+        2,
+        -1,
+        29315,
+        1647
+      ],
+      "si": 3,
+      "di": -480,
+      "destination_x": 48,
+      "destination_y": 136,
+      "restart": 0,
+      "player_draw": 1
+    },
+    {
+      "event": "lifecycle",
+      "ip": 2799,
+      "cs": 574,
+      "ds": 9213,
+      "ss": 12379,
+      "bp": 4064,
+      "pic_ms": 89978.771555543,
+      "launch_call": 6302,
+      "decoder": "DynX86",
+      "cycles_max": 27000,
+      "cycles_auto": false,
+      "x": 144,
+      "y": 136,
+      "gx": 77,
+      "gy": 22,
+      "camera_x": 62,
+      "camera_y": 9,
+      "phase": 2,
+      "sprite": 25,
+      "facing": 0,
+      "background_frame": 1,
+      "render_page": 1,
+      "display_page": 1,
+      "timer": 12,
+      "entity_timer": 767,
+      "threshold": 8,
+      "up": 0,
+      "down": 0,
+      "left": 0,
+      "right": 0,
+      "books_collected": 18,
+      "book_count": 24,
+      "mistakes": 0,
+      "source_x": -1,
+      "source_y": 12,
+      "word_offset": 5,
+      "picture_offset": 0,
+      "gruzzle_count": 0,
+      "gruzzle_difficulty": 14,
+      "gruzzle_cadence": 6,
+      "slime_request": 0,
+      "action_busy": 0,
+      "death": 0,
+      "slime_used": 0,
+      "slime_reward": 10,
+      "miss_timer": 0,
+      "miss_x": 38,
+      "miss_y": 7,
+      "mystery_index": 5,
+      "mystery_prefix": 1,
+      "reward_timer": 0,
+      "reward_x": 25,
+      "reward_y": 10,
+      "reward_bonus": 3,
+      "recap_pending": 0,
+      "door_state": 2,
+      "level_index": 0,
+      "slime_ever_used": 0,
+      "door_x": 78,
+      "door_y": 17,
+      "score": 740,
+      "rng": 1145078285,
+      "active_word": 0,
+      "active_index": 4,
+      "matched_count": 7,
+      "world_x": 640,
+      "world_y": 208,
+      "gruzzles": [],
+      "slime_pickups": [
+        {
+          "tile_x": 80,
+          "tile_y": 10,
+          "attribute": 154
+        },
+        {
+          "tile_x": 22,
+          "tile_y": 10,
+          "attribute": 155
+        }
+      ],
+      "mystery_pickups": [
+        {
+          "tile_x": 28,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 80,
+          "tile_y": 2,
+          "attribute": 124
+        },
+        {
+          "tile_x": 21,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 53,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 9,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 68,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 38,
+          "tile_y": 1,
+          "attribute": 32
+        }
+      ],
+      "picture_timers": [
+        1,
+        4,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_frames": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_animation_enabled": 0,
+      "stack_args": [
+        4109,
+        1824,
+        4094,
+        263,
+        424
+      ],
+      "stack_locals": [
+        820,
+        -40,
+        0,
+        0,
+        2,
+        -1,
+        29315,
+        1647
+      ],
+      "si": 4,
+      "di": -480,
+      "destination_x": 48,
+      "destination_y": 136,
+      "restart": 0,
+      "player_draw": 1
+    },
+    {
+      "event": "lifecycle",
+      "ip": 2799,
+      "cs": 574,
+      "ds": 9213,
+      "ss": 12379,
+      "bp": 4064,
+      "pic_ms": 90103.76170373,
+      "launch_call": 6311,
+      "decoder": "DynX86",
+      "cycles_max": 27000,
+      "cycles_auto": false,
+      "x": 144,
+      "y": 136,
+      "gx": 77,
+      "gy": 22,
+      "camera_x": 62,
+      "camera_y": 9,
+      "phase": 2,
+      "sprite": 25,
+      "facing": 0,
+      "background_frame": 1,
+      "render_page": 1,
+      "display_page": 1,
+      "timer": 12,
+      "entity_timer": 767,
+      "threshold": 8,
+      "up": 0,
+      "down": 0,
+      "left": 0,
+      "right": 0,
+      "books_collected": 18,
+      "book_count": 24,
+      "mistakes": 0,
+      "source_x": -1,
+      "source_y": 12,
+      "word_offset": 5,
+      "picture_offset": 0,
+      "gruzzle_count": 0,
+      "gruzzle_difficulty": 14,
+      "gruzzle_cadence": 6,
+      "slime_request": 0,
+      "action_busy": 0,
+      "death": 0,
+      "slime_used": 0,
+      "slime_reward": 10,
+      "miss_timer": 0,
+      "miss_x": 38,
+      "miss_y": 7,
+      "mystery_index": 5,
+      "mystery_prefix": 1,
+      "reward_timer": 0,
+      "reward_x": 25,
+      "reward_y": 10,
+      "reward_bonus": 3,
+      "recap_pending": 0,
+      "door_state": 2,
+      "level_index": 0,
+      "slime_ever_used": 0,
+      "door_x": 78,
+      "door_y": 17,
+      "score": 740,
+      "rng": 1145078285,
+      "active_word": 0,
+      "active_index": 4,
+      "matched_count": 7,
+      "world_x": 640,
+      "world_y": 208,
+      "gruzzles": [],
+      "slime_pickups": [
+        {
+          "tile_x": 80,
+          "tile_y": 10,
+          "attribute": 154
+        },
+        {
+          "tile_x": 22,
+          "tile_y": 10,
+          "attribute": 155
+        }
+      ],
+      "mystery_pickups": [
+        {
+          "tile_x": 28,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 80,
+          "tile_y": 2,
+          "attribute": 124
+        },
+        {
+          "tile_x": 21,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 53,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 9,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 68,
+          "tile_y": 1,
+          "attribute": 32
+        },
+        {
+          "tile_x": 38,
+          "tile_y": 1,
+          "attribute": 32
+        }
+      ],
+      "picture_timers": [
+        1,
+        4,
+        6,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_frames": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "picture_animation_enabled": 0,
+      "stack_args": [
+        4109,
+        1824,
+        4094,
+        263,
+        424
+      ],
+      "stack_locals": [
+        820,
+        -40,
+        0,
+        0,
+        2,
+        -1,
+        29315,
+        1647
+      ],
+      "si": 5,
+      "di": -480,
+      "destination_x": 48,
+      "destination_y": 136,
+      "restart": 0,
+      "player_draw": 1
+    }
+  ],
+  "end": {
+    "event": "lifecycle",
+    "ip": 3138,
+    "cs": 574,
+    "ds": 9213,
+    "ss": 12379,
+    "bp": 4064,
+    "pic_ms": 90853.834000014,
+    "launch_call": 6364,
+    "decoder": "DynX86",
+    "cycles_max": 27000,
+    "cycles_auto": false,
+    "x": 144,
+    "y": 136,
+    "gx": 77,
+    "gy": 22,
+    "camera_x": 62,
+    "camera_y": 9,
+    "phase": 2,
+    "sprite": 25,
+    "facing": 0,
+    "background_frame": 1,
+    "render_page": 1,
+    "display_page": 1,
+    "timer": 12,
+    "entity_timer": 767,
+    "threshold": 8,
+    "up": 0,
+    "down": 0,
+    "left": 0,
+    "right": 0,
+    "books_collected": 18,
+    "book_count": 24,
+    "mistakes": 0,
+    "source_x": -1,
+    "source_y": 12,
+    "word_offset": 5,
+    "picture_offset": 0,
+    "gruzzle_count": 0,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_request": 0,
+    "action_busy": 0,
+    "death": 0,
+    "slime_used": 0,
+    "slime_reward": 10,
+    "miss_timer": 0,
+    "miss_x": 38,
+    "miss_y": 7,
+    "mystery_index": 5,
+    "mystery_prefix": 1,
+    "reward_timer": 0,
+    "reward_x": 25,
+    "reward_y": 10,
+    "reward_bonus": 3,
+    "recap_pending": 0,
+    "door_state": 2,
+    "level_index": 1,
+    "slime_ever_used": 0,
+    "door_x": 78,
+    "door_y": 17,
+    "score": 740,
+    "rng": 1145078285,
+    "active_word": 0,
+    "active_index": 4,
+    "matched_count": 7,
+    "world_x": 640,
+    "world_y": 208,
+    "gruzzles": [],
+    "slime_pickups": [
+      {
+        "tile_x": 80,
+        "tile_y": 10,
+        "attribute": 154
+      },
+      {
+        "tile_x": 22,
+        "tile_y": 10,
+        "attribute": 155
+      }
+    ],
+    "mystery_pickups": [
+      {
+        "tile_x": 28,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 80,
+        "tile_y": 2,
+        "attribute": 124
+      },
+      {
+        "tile_x": 21,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 53,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 9,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 68,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 38,
+        "tile_y": 1,
+        "attribute": 32
+      }
+    ],
+    "picture_timers": [
+      1,
+      4,
+      6,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_frames": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_animation_enabled": 0,
+    "stack_args": [
+      4109,
+      1824,
+      4094,
+      263,
+      424
+    ],
+    "stack_locals": [
+      820,
+      -40,
+      0,
+      0,
+      2,
+      -1,
+      29315,
+      1647
+    ],
+    "si": 7,
+    "di": -480,
+    "destination_x": 48,
+    "destination_y": 136,
+    "restart": 2,
+    "player_draw": 1
+  },
+  "reset_begin": {
+    "event": "lifecycle",
+    "ip": 2621,
+    "cs": 843,
+    "ds": 9213,
+    "ss": 12379,
+    "bp": 4064,
+    "pic_ms": 90853.847037017,
+    "launch_call": 6364,
+    "decoder": "DynX86",
+    "cycles_max": 27000,
+    "cycles_auto": false,
+    "x": 144,
+    "y": 136,
+    "gx": 77,
+    "gy": 22,
+    "camera_x": 62,
+    "camera_y": 9,
+    "phase": 2,
+    "sprite": 25,
+    "facing": 0,
+    "background_frame": 1,
+    "render_page": 1,
+    "display_page": 1,
+    "timer": 12,
+    "entity_timer": 767,
+    "threshold": 8,
+    "up": 0,
+    "down": 0,
+    "left": 0,
+    "right": 0,
+    "books_collected": 18,
+    "book_count": 24,
+    "mistakes": 0,
+    "source_x": -1,
+    "source_y": 12,
+    "word_offset": 5,
+    "picture_offset": 0,
+    "gruzzle_count": 0,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_request": 0,
+    "action_busy": 0,
+    "death": 0,
+    "slime_used": 0,
+    "slime_reward": 10,
+    "miss_timer": 0,
+    "miss_x": 38,
+    "miss_y": 7,
+    "mystery_index": 5,
+    "mystery_prefix": 1,
+    "reward_timer": 0,
+    "reward_x": 25,
+    "reward_y": 10,
+    "reward_bonus": 3,
+    "recap_pending": 0,
+    "door_state": 2,
+    "level_index": 1,
+    "slime_ever_used": 0,
+    "door_x": 78,
+    "door_y": 17,
+    "score": 740,
+    "rng": 1145078285,
+    "active_word": 0,
+    "active_index": 4,
+    "matched_count": 7,
+    "world_x": 640,
+    "world_y": 208,
+    "gruzzles": [],
+    "slime_pickups": [
+      {
+        "tile_x": 80,
+        "tile_y": 10,
+        "attribute": 154
+      },
+      {
+        "tile_x": 22,
+        "tile_y": 10,
+        "attribute": 155
+      }
+    ],
+    "mystery_pickups": [
+      {
+        "tile_x": 28,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 80,
+        "tile_y": 2,
+        "attribute": 124
+      },
+      {
+        "tile_x": 21,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 53,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 9,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 68,
+        "tile_y": 1,
+        "attribute": 32
+      },
+      {
+        "tile_x": 38,
+        "tile_y": 1,
+        "attribute": 32
+      }
+    ],
+    "picture_timers": [
+      1,
+      4,
+      6,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_frames": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_animation_enabled": 0,
+    "stack_args": [
+      4109,
+      1824,
+      4094,
+      263,
+      424
+    ],
+    "stack_locals": [
+      821,
+      -40,
+      0,
+      0,
+      2,
+      -1,
+      29315,
+      1647
+    ],
+    "si": 7,
+    "di": -480,
+    "destination_x": 48,
+    "destination_y": 136,
+    "restart": 2,
+    "player_draw": 1
+  },
+  "reset_end": {
+    "event": "lifecycle",
+    "ip": 3253,
+    "cs": 843,
+    "ds": 9213,
+    "ss": 12379,
+    "bp": 4036,
+    "pic_ms": 90966.138481486,
+    "launch_call": 6372,
+    "decoder": "DynX86",
+    "cycles_max": 27000,
+    "cycles_auto": false,
+    "x": 160,
+    "y": 176,
+    "gx": 73,
+    "gy": 48,
+    "camera_x": 56,
+    "camera_y": 30,
+    "phase": 2,
+    "sprite": 0,
+    "facing": 1,
+    "background_frame": 1,
+    "render_page": 0,
+    "display_page": 1,
+    "timer": 0,
+    "entity_timer": 767,
+    "threshold": 8,
+    "up": 0,
+    "down": 0,
+    "left": 0,
+    "right": 0,
+    "books_collected": 0,
+    "book_count": 21,
+    "mistakes": 0,
+    "source_x": -1,
+    "source_y": 12,
+    "word_offset": 5,
+    "picture_offset": 6,
+    "gruzzle_count": 1,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_request": 0,
+    "action_busy": 0,
+    "death": 0,
+    "slime_used": 0,
+    "slime_reward": 10,
+    "miss_timer": 0,
+    "miss_x": 38,
+    "miss_y": 7,
+    "mystery_index": 4,
+    "mystery_prefix": 0,
+    "reward_timer": 0,
+    "reward_x": 0,
+    "reward_y": 0,
+    "reward_bonus": 0,
+    "recap_pending": 0,
+    "door_state": 0,
+    "level_index": 1,
+    "slime_ever_used": 0,
+    "door_x": 6,
+    "door_y": 7,
+    "score": 740,
+    "rng": 3921914530,
+    "active_word": 0,
+    "active_index": 4,
+    "matched_count": 0,
+    "world_x": 608,
+    "world_y": 416,
+    "gruzzles": [
+      {
+        "gx": 100,
+        "gy": 44,
+        "type": 3,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 12
+      }
+    ],
+    "slime_pickups": [
+      {
+        "tile_x": 21,
+        "tile_y": 17,
+        "attribute": 151
+      },
+      {
+        "tile_x": 34,
+        "tile_y": 23,
+        "attribute": 152
+      }
+    ],
+    "mystery_pickups": [
+      {
+        "tile_x": 13,
+        "tile_y": 14,
+        "attribute": 123
+      },
+      {
+        "tile_x": 14,
+        "tile_y": 5,
+        "attribute": 124
+      },
+      {
+        "tile_x": 58,
+        "tile_y": 23,
+        "attribute": 125
+      },
+      {
+        "tile_x": 48,
+        "tile_y": 15,
+        "attribute": 32
+      },
+      {
+        "tile_x": 55,
+        "tile_y": 12,
+        "attribute": 32
+      },
+      {
+        "tile_x": 8,
+        "tile_y": 12,
+        "attribute": 32
+      },
+      {
+        "tile_x": 12,
+        "tile_y": 1,
+        "attribute": 32
+      }
+    ],
+    "picture_timers": [
+      1,
+      4,
+      6,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_frames": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_animation_enabled": 1,
+    "stack_args": [
+      57,
+      1,
+      78,
+      1647,
+      29315
+    ],
+    "stack_locals": [
+      7,
+      843,
+      3177,
+      8957,
+      50,
+      9,
+      25,
+      15
+    ],
+    "si": 10,
+    "di": -480,
+    "destination_x": 160,
+    "destination_y": 168,
+    "restart": 0,
+    "player_draw": 1
+  }
+}

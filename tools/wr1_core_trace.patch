@@ -1,0 +1,212 @@
+diff --git a/dosbox_pure_libretro.cpp b/dosbox_pure_libretro.cpp
+index 5f93721..3959621 100644
+--- a/dosbox_pure_libretro.cpp
++++ b/dosbox_pure_libretro.cpp
+@@ -3376,6 +3376,8 @@ void retro_run_touchpad(bool has_press, Bit16s absx, Bit16s absy)
+ 
+ void retro_run(void)
+ {
++	extern void DBP_WR1_BeginFrontend();
++	DBP_WR1_BeginFrontend();
+ 	#ifdef DBP_ENABLE_FPS_COUNTERS
+ 	DBP_FPSCOUNT(dbp_fpscount_retro)
+ 	uint32_t curTick = DBP_GetTicks();
+@@ -3473,6 +3475,8 @@ void retro_run(void)
+ 		for (DBP_InputBind& b : dbp_input_binds)
+ 		{
+ 			Bit16s val = input_state_cb(b.port, b.device, b.index, b.id);
++			extern void DBP_WR1_Input(unsigned,unsigned,unsigned,unsigned,int);
++			DBP_WR1_Input(b.port,b.device,b.index,b.id,val);
+ 			if (val != b.lastval) b.Update(val);
+ 		}
+ 	}
+@@ -3610,6 +3614,8 @@ void retro_run(void)
+ 
+ 	if (dbp_opengl_draw && voodoo_ogl_mainthread()) { view_width *= voodoo_ogl_scale; view_height *= voodoo_ogl_scale; }
+ 
++	extern void DBP_WR1_FrontendBoundary();
++	DBP_WR1_FrontendBoundary();
+ 	DBP_ThreadControl(skip_emulate ? TCM_RESUME_FRAME : TCM_NEXT_FRAME);
+ 
+ 	#ifndef DBP_STANDALONE
+@@ -3697,6 +3703,10 @@ static bool retro_serialize_all(DBPArchive& ar, bool unlock_thread)
+ 	bool pauseThread = (dbp_state != DBPSTATE_BOOT && dbp_state != DBPSTATE_SHUTDOWN);
+ 	if (pauseThread) DBP_ThreadControl(TCM_PAUSE_FRAME);
+ 	DBPSerialize_All(ar, (dbp_state == DBPSTATE_RUNNING || dbp_state == DBPSTATE_FIRST_FRAME), dbp_game_running);
++	if (ar.mode == DBPArchive::MODE_LOAD && !ar.had_error) {
++		extern void DBP_WR1_LoadBoundary();
++		DBP_WR1_LoadBoundary();
++	}
+ 	//log_cb(RETRO_LOG_WARN, "[SERIALIZE] [%d] [%s] %u\n", ((dbp_state == DBPSTATE_RUNNING || dbp_state == DBPSTATE_FIRST_FRAME) && dbp_game_running), (ar.mode == DBPArchive::MODE_LOAD ? "LOAD" : ar.mode == DBPArchive::MODE_SAVE ? "SAVE" : ar.mode == DBPArchive::MODE_SIZE ? "SIZE" : ar.mode == DBPArchive::MODE_MAXSIZE ? "MAXX" : ar.mode == DBPArchive::MODE_ZERO ? "ZERO" : "???????"), (Bit32u)ar.GetOffset());
+ 	if (dbp_game_running && ar.mode == DBPArchive::MODE_LOAD) dbp_lastmenuticks = DBP_GetTicks(); // force show menu on immediate emulation crash
+ 	if (pauseThread && unlock_thread) DBP_ThreadControl(TCM_RESUME_FRAME);
+diff --git a/src/cpu/core_dyn_x86/decoder.h b/src/cpu/core_dyn_x86/decoder.h
+index 098d170..8c77155 100644
+--- a/src/cpu/core_dyn_x86/decoder.h
++++ b/src/cpu/core_dyn_x86/decoder.h
+@@ -2233,6 +2233,14 @@ static CacheBlock * CreateCacheBlock(CodePageHandler * codepage,PhysPt start,Bit
+ 	bool fpu_used=false;
+ #endif
+ 	while (max_opcodes--) {
++		unsigned wr1_ip = decode.code - SegPhys(cs);
++		if (!cpu.pmode && (wr1_ip==0xa || wr1_ip==0x558 || wr1_ip==0x2f8 || wr1_ip==0x31f || wr1_ip==0x345 || wr1_ip==0x36c || wr1_ip==0x4f || wr1_ip==0x173 || wr1_ip==0x327 || wr1_ip==0x0 || wr1_ip==0x1a || wr1_ip==0x8 || wr1_ip==0x21a || wr1_ip==0x2 || wr1_ip==0x118 || wr1_ip==0x5 || wr1_ip==0x1689 || wr1_ip==0x25 || wr1_ip==0x83 || wr1_ip==0x6 || wr1_ip==0x95 || wr1_ip==0xa23 || wr1_ip==0xa39 || wr1_ip==0xa3e || wr1_ip==0x3be || wr1_ip==0x4a9 || wr1_ip==0x626 || wr1_ip==0x86d || wr1_ip==0x903 || wr1_ip==0xa63 || wr1_ip==0x4b5 || wr1_ip==0x543 || wr1_ip==0x6df || wr1_ip==0x820 || wr1_ip==0x1a5 || wr1_ip==0x671 || wr1_ip==0x848 || wr1_ip==0xad6 || wr1_ip==0xecc || wr1_ip==0xf18 || wr1_ip==0x113e || wr1_ip==0x138 || wr1_ip==0x187 || wr1_ip==0x94 || wr1_ip==0x2ee || wr1_ip==0x570 || wr1_ip==0xfb || wr1_ip==0x12 || wr1_ip==0x24f || wr1_ip==0x5c92 || wr1_ip==0x5c94 || wr1_ip==0x5ca0 || wr1_ip==0x5ca2 || wr1_ip==0x5caa || wr1_ip==0x5cac || wr1_ip==0x5cb5 || wr1_ip==0x5cb7 || wr1_ip==0x602a || wr1_ip==0x602c || wr1_ip==0x6088 || wr1_ip==0x608a || wr1_ip==0x6310 || wr1_ip==0x58f1 || wr1_ip==0x599f || wr1_ip==0x579e || wr1_ip==0x57c3 || wr1_ip==0x313 || wr1_ip==0x232 || wr1_ip==0x2d8 || wr1_ip==0x2dc || wr1_ip==0x30a || wr1_ip==0x444 || wr1_ip==0x447 || wr1_ip==0xa1e || wr1_ip==0xa43 || wr1_ip==0xd44 || wr1_ip==0xd72 || wr1_ip==0x8b1 || wr1_ip==0x1432 || wr1_ip==0x14a9 || wr1_ip==0x1504 || wr1_ip==0x1ace || wr1_ip==0x969 || wr1_ip==0xa0c || wr1_ip==0xa3d || wr1_ip==0x151c || wr1_ip==0x1960 || wr1_ip==0x1697 || wr1_ip==0x1789 || wr1_ip==0x17c0 || wr1_ip==0x17e2 || wr1_ip==0x18f9 || wr1_ip==0x197d || wr1_ip==0x1982 || wr1_ip==0x1a82 || wr1_ip==0x1a79 || wr1_ip==0x17dd || wr1_ip==0x18b0 || wr1_ip==0x175a || wr1_ip==0x194f || wr1_ip==0xcb5 || wr1_ip==0x2b || wr1_ip==0x102 || wr1_ip==0x110 || wr1_ip==0x2d8 || wr1_ip==0x2dc || wr1_ip==0xc0b || wr1_ip==0xc10 || wr1_ip==0xb || wr1_ip==0x115 || wr1_ip==0x13a || wr1_ip==0x34c || wr1_ip==0x355 || wr1_ip==0xa00 || wr1_ip==0xb28 || wr1_ip==0xd66 || wr1_ip==0xea4 || wr1_ip==0xfe6 || wr1_ip==0xa56 || wr1_ip==0xa61 || wr1_ip==0xaef || wr1_ip==0xc2e || wr1_ip==0xc42)) {
++			extern void DBP_WR1_ObserveDynamic(unsigned,unsigned);
++			gen_protectflags();
++			dyn_save_noncritical_regs();
++			gen_releasereg(DREG(CYCLES));
++			gen_call_function((void*)&DBP_WR1_ObserveDynamic,"%Id%Id",(Bitu)wr1_ip,(Bitu)decode.cycles);
++		}
+ /* Init prefixes */
+ 		decode.big_addr=cpu.code.big;
+ 		decode.big_op=cpu.code.big;
+diff --git a/src/cpu/core_normal.cpp b/src/cpu/core_normal.cpp
+index 037b550..4cbeafc 100644
+--- a/src/cpu/core_normal.cpp
++++ b/src/cpu/core_normal.cpp
+@@ -151,6 +151,10 @@ static INLINE Bit32u Fetchd() {
+ 
+ Bits CPU_Core_Normal_Run(void) {
+ 	while (CPU_Cycles-->0) {
++		if (reg_eip==0xa || reg_eip==0x558 || reg_eip==0x2f8 || reg_eip==0x31f || reg_eip==0x345 || reg_eip==0x36c || reg_eip==0x4f || reg_eip==0x173 || reg_eip==0x327 || reg_eip==0x0 || reg_eip==0x1a || reg_eip==0x8 || reg_eip==0x21a || reg_eip==0x2 || reg_eip==0x118 || reg_eip==0x5 || reg_eip==0x1689 || reg_eip==0x25 || reg_eip==0x83 || reg_eip==0x6 || reg_eip==0x95 || reg_eip==0xa23 || reg_eip==0xa39 || reg_eip==0xa3e || reg_eip==0x3be || reg_eip==0x4a9 || reg_eip==0x626 || reg_eip==0x86d || reg_eip==0x903 || reg_eip==0xa63 || reg_eip==0x4b5 || reg_eip==0x543 || reg_eip==0x6df || reg_eip==0x820 || reg_eip==0x1a5 || reg_eip==0x671 || reg_eip==0x848 || reg_eip==0xad6 || reg_eip==0xecc || reg_eip==0xf18 || reg_eip==0x113e || reg_eip==0x138 || reg_eip==0x187 || reg_eip==0x94 || reg_eip==0x2ee || reg_eip==0x570 || reg_eip==0xfb || reg_eip==0x12 || reg_eip==0x24f || reg_eip==0x5c92 || reg_eip==0x5c94 || reg_eip==0x5ca0 || reg_eip==0x5ca2 || reg_eip==0x5caa || reg_eip==0x5cac || reg_eip==0x5cb5 || reg_eip==0x5cb7 || reg_eip==0x602a || reg_eip==0x602c || reg_eip==0x6088 || reg_eip==0x608a || reg_eip==0x6310 || reg_eip==0x58f1 || reg_eip==0x599f || reg_eip==0x579e || reg_eip==0x57c3 || reg_eip==0x313 || reg_eip==0x232 || reg_eip==0x2d8 || reg_eip==0x2dc || reg_eip==0x30a || reg_eip==0x444 || reg_eip==0x447 || reg_eip==0xa1e || reg_eip==0xa43 || reg_eip==0xd44 || reg_eip==0xd72 || reg_eip==0x8b1 || reg_eip==0x1432 || reg_eip==0x14a9 || reg_eip==0x1504 || reg_eip==0x1ace || reg_eip==0x969 || reg_eip==0xa0c || reg_eip==0xa3d || reg_eip==0x151c || reg_eip==0x1960 || reg_eip==0x1697 || reg_eip==0x1789 || reg_eip==0x17c0 || reg_eip==0x17e2 || reg_eip==0x18f9 || reg_eip==0x197d || reg_eip==0x1982 || reg_eip==0x1a82 || reg_eip==0x1a79 || reg_eip==0x17dd || reg_eip==0x18b0 || reg_eip==0x175a || reg_eip==0x194f || reg_eip==0xcb5 || reg_eip==0x2b || reg_eip==0x102 || reg_eip==0x110 || reg_eip==0x2d8 || reg_eip==0x2dc || reg_eip==0xc0b || reg_eip==0xc10 || reg_eip==0xb || reg_eip==0x115 || reg_eip==0x13a || reg_eip==0x34c || reg_eip==0x355 || reg_eip==0xa00 || reg_eip==0xb28 || reg_eip==0xd66 || reg_eip==0xea4 || reg_eip==0xfe6 || reg_eip==0xa56 || reg_eip==0xa61 || reg_eip==0xaef || reg_eip==0xc2e || reg_eip==0xc42) {
++			extern void DBP_WR1_Observe(unsigned);
++			DBP_WR1_Observe(reg_eip);
++		}
+ 		LOADIP;
+ 		core.opcode_index=cpu.code.big*0x200;
+ 		core.prefixes=cpu.code.big;
+diff --git a/src/hardware/keyboard.cpp b/src/hardware/keyboard.cpp
+index 77527ad..2a4d188 100644
+--- a/src/hardware/keyboard.cpp
++++ b/src/hardware/keyboard.cpp
+@@ -17,6 +17,7 @@
+  */
+ 
+ 
++#include <cstdio>
+ #include "dosbox.h"
+ #include "keyboard.h"
+ #include "inout.h"
+@@ -247,6 +248,8 @@ static Bitu read_p64(Bitu /*port*/,Bitu iolen) {
+ }
+ 
+ void KEYBOARD_AddKey(KBD_KEYS keytype,bool pressed) {
++	extern void DBP_WR1_KeyboardInput(unsigned,bool);
++	DBP_WR1_KeyboardInput((unsigned)keytype,pressed);
+ 	if (pressed == !!(keyb.down[keytype>>3] & (1<<(keytype&7)))) return;
+ 	if (pressed) keyb.down[keytype>>3] |= (Bit8u)(1<<(keytype&7));
+ 	else keyb.down[keytype>>3] &= (Bit8u)~(1<<(keytype&7));
+@@ -469,3 +472,13 @@ void DBPSerialize_Keyboard(DBPArchive& ar)
+ 		}
+ 	}
+ }
++
++// Observation only: no port reads or queue mutation.
++void DBP_WR1_KeyboardState(FILE* file) {
++    std::fprintf(file,",\"keyboard\":{\"port60\":%u,\"changed\":%s,\"scheduled\":%s,\"active\":%s,\"scanning\":%s,\"repeat_key\":%u,\"repeat_wait\":%u,\"repeat_pause\":%u,\"repeat_rate\":%u,\"buffer\":[",
++        (unsigned)keyb.p60data,keyb.p60changed ? "true":"false",keyb.scheduled ? "true":"false",
++        keyb.active ? "true":"false",keyb.scanning ? "true":"false",(unsigned)keyb.repeat.key,
++        (unsigned)keyb.repeat.wait,(unsigned)keyb.repeat.pause,(unsigned)keyb.repeat.rate);
++    for (unsigned i=0;i<keyb.used;++i) std::fprintf(file,"%s%u",i ? ",":"",(unsigned)keyb.buffer[(keyb.pos+i)%KEYBUFSIZE]);
++    std::fprintf(file,"]}");
++}
+diff --git a/src/hardware/pic.cpp b/src/hardware/pic.cpp
+index 6fe49f2..af903e5 100644
+--- a/src/hardware/pic.cpp
++++ b/src/hardware/pic.cpp
+@@ -504,10 +504,31 @@ bool PIC_RunQueue(void) {
+ 		}
+ 	} else CPU_Cycles=CPU_CycleLeft;
+ 	CPU_CycleLeft-=CPU_Cycles;
++	// Observation only: expose the hardware event limiting an OPL busy-wait slice.
++	extern bool DBP_WR1_OplActive();
++	if (DBP_WR1_OplActive()) {
++		extern void DBP_WR1_PicSlice(long long,double);
++		DBP_WR1_PicSlice(pic_queue.next_entry ? (long long)((Bitu)pic_queue.next_entry->pic_event-(Bitu)&PIC_RunQueue) : 0,
++			pic_queue.next_entry ? pic_queue.next_entry->index : -1.0);
++	}
+ 	if (PIC_IRQCheck) PIC_runIRQs();
+ 	return true;
+ }
+ 
++void DBP_WR1_PicState(FILE* file) {
++	std::fprintf(file,",\"pic_interrupts\":{\"irr\":%u,\"isr\":%u,\"imr\":%u,\"active_irq\":%u,\"special\":%u,\"auto_eoi\":%u,\"irq_check\":%u}",
++		(unsigned)master.irr,(unsigned)master.isr,(unsigned)master.imr,(unsigned)master.active_irq,
++		(unsigned)master.special,(unsigned)master.auto_eoi,(unsigned)PIC_IRQCheck);
++	std::fprintf(file,",\"pic_ticks\":%u,\"cycle_left\":%d,\"pic_queue\":[",(unsigned)PIC_Ticks,(int)CPU_CycleLeft);
++	bool first=true;
++	for (PICEntry* entry=pic_queue.next_entry;entry;entry=entry->next) {
++		std::fprintf(file,"%s{\"id\":%lld,\"index\":%.12f,\"value\":%u}",first ? "" : ",",
++			(long long)((Bitu)entry->pic_event-(Bitu)&PIC_RunQueue),(double)entry->index,(unsigned)entry->value);
++		first=false;
++	}
++	std::fprintf(file,"]");
++}
++
+ /* The TIMER Part */
+ struct TickerBlock {
+ 	TIMER_TickHandler handler;
+diff --git a/src/hardware/timer.cpp b/src/hardware/timer.cpp
+index 615b8de..8ba28a7 100644
+--- a/src/hardware/timer.cpp
++++ b/src/hardware/timer.cpp
+@@ -25,6 +25,7 @@
+ #include "mixer.h"
+ #include "timer.h"
+ #include "setup.h"
++#include <cstdio>
+ 
+ static INLINE void BIN2BCD(Bit16u& val) {
+ 	Bit16u temp=val%10 + (((val/10)%10)<<4)+ (((val/100)%10)<<8) + (((val/1000)%10)<<12);
+@@ -58,6 +59,9 @@ struct PIT_Block {
+ };
+ 
+ static PIT_Block pit[3];
++// Observation only: expose the timer epoch without latching or altering PIT IO.
++double DBP_WR1_PIT0Start() { return pit[0].start; }
++double DBP_WR1_PIT0Delay() { return pit[0].delay; }
+ static bool gate2;
+ 
+ static Bit8u latched_timerstatus;
+@@ -65,6 +69,17 @@ static Bit8u latched_timerstatus;
+ // reprogrammed.
+ static bool latched_timerstatus_locked;
+ 
++void DBP_WR1_PitState(FILE* file) {
++	std::fprintf(file,",\"pit\":[");
++	for (int i=0;i<2;++i) {
++		const PIT_Block& p=pit[i];
++		std::fprintf(file,"%s{\"count\":%u,\"start\":%.12f,\"delay\":%.12f,\"read_latch\":%u,\"read_state\":%u,\"go_read_latch\":%s,\"mode\":%u,\"new_mode\":%s,\"bcd\":%s,\"counterstatus_set\":%s}",
++			i ? "," : "",(unsigned)p.cntr,p.start,(double)p.delay,(unsigned)p.read_latch,(unsigned)p.read_state,
++			p.go_read_latch ? "true" : "false",(unsigned)p.mode,p.new_mode ? "true" : "false",p.bcd ? "true" : "false",p.counterstatus_set ? "true" : "false");
++	}
++	std::fprintf(file,"]");
++}
++
+ static void PIT0_Event(Bitu /*val*/) {
+ 	PIC_ActivateIRQ(0);
+ 	if (pit[0].mode != 0) {
+diff --git a/src/hardware/vga_draw.cpp b/src/hardware/vga_draw.cpp
+index 91350e2..0d844ad 100644
+--- a/src/hardware/vga_draw.cpp
++++ b/src/hardware/vga_draw.cpp
+@@ -19,6 +19,7 @@
+ 
+ #include <string.h>
+ #include <math.h>
++#include <cstdio>
+ #include "dosbox.h"
+ #include "video.h"
+ #include "render.h"
+@@ -32,6 +33,12 @@
+ 
+ #define VGA_PARTS 4
+ 
++void DBP_WR1_VgaState(FILE* file) {
++	std::fprintf(file,",\"vga_timing\":{\"frame_start\":%.12f,\"vtotal\":%.12f,\"vrstart\":%.12f,\"vrend\":%.12f,\"vdend\":%.12f,\"parts\":%.12f,\"parts_left\":%u,\"parts_lines\":%u,\"lines_total\":%u,\"lines_done\":%u,\"vblank_skip\":%u}",
++		vga.draw.delay.framestart,vga.draw.delay.vtotal,vga.draw.delay.vrstart,vga.draw.delay.vrend,vga.draw.delay.vdend,vga.draw.delay.parts,
++		(unsigned)vga.draw.parts_left,(unsigned)vga.draw.parts_lines,(unsigned)vga.draw.lines_total,(unsigned)vga.draw.lines_done,(unsigned)vga.draw.vblank_skip);
++}
++
+ typedef Bit8u * (* VGA_Line_Handler)(Bitu vidstart, Bitu line);
+ 
+ static VGA_Line_Handler VGA_DrawLine;

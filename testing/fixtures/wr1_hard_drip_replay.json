@@ -1,0 +1,265 @@
+{
+  "fps": 70,
+  "level": 14,
+  "difficulty": 2,
+  "total_frames": 884,
+  "events": [
+    {
+      "frame": 113,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 113,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 119,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 125,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 131,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 247,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 253,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 259,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 288,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 294,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 347,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 352,
+      "action": "move_down",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 560,
+  "source_end_frame": 1444,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "0e60caad0249bd234867c6ea03664175ee6677d421ac39e3288ce61429e046c5",
+  "source_frame_count": 1900,
+  "source_fps": 70.086304,
+  "character": "girl",
+  "original_level_start": {
+    "x": 64,
+    "y": 128,
+    "gx": 5,
+    "gy": 14,
+    "camera_x": 0,
+    "camera_y": 2,
+    "phase": 16,
+    "sprite": 0,
+    "facing": 0,
+    "background_frame": 1,
+    "idle_ticks": 2,
+    "left_index": -1,
+    "right_index": -1,
+    "score": 0,
+    "words": [
+      "hat",
+      "dog",
+      "arm",
+      "bat",
+      "ant",
+      "car",
+      "run"
+    ],
+    "word_cursor": 56,
+    "mystery_index": 5,
+    "active_index": 255,
+    "word_offset": 4,
+    "picture_offset": 0,
+    "entrance_timer": 59,
+    "drips": [
+      {
+        "x": 30,
+        "y": 57,
+        "origin_y": 54,
+        "max_y": 68,
+        "frame": 1
+      },
+      {
+        "x": 50,
+        "y": 57,
+        "origin_y": 54,
+        "max_y": 68,
+        "frame": 1
+      },
+      {
+        "x": 102,
+        "y": 47,
+        "origin_y": 44,
+        "max_y": 68,
+        "frame": 1
+      }
+    ]
+  },
+  "original_entity_start": {
+    "rng": 2674725648,
+    "gruzzles": [
+      {
+        "gx": 72,
+        "gy": 20,
+        "type": 2,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 17
+      },
+      {
+        "gx": 31,
+        "gy": 13,
+        "type": 1,
+        "state": -1,
+        "animation_index": 1,
+        "jump_phase": -1,
+        "move_timer": 0
+      },
+      {
+        "gx": 4,
+        "gy": 32,
+        "type": 2,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 9
+      },
+      {
+        "gx": 44,
+        "gy": 50,
+        "type": 2,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 10
+      },
+      {
+        "gx": 24,
+        "gy": 60,
+        "type": 2,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 5
+      },
+      {
+        "gx": 94,
+        "gy": 60,
+        "type": 2,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 6
+      },
+      {
+        "gx": 112,
+        "gy": 38,
+        "type": 3,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 7
+      },
+      {
+        "gx": 70,
+        "gy": 40,
+        "type": 2,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 8
+      },
+      {
+        "gx": 36,
+        "gy": 32,
+        "type": 0,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 9
+      }
+    ],
+    "entity_timer": 17,
+    "gruzzle_difficulty": 2,
+    "gruzzle_cadence": 1,
+    "slime_used": 0,
+    "slime_ever_used": 0,
+    "render_page": 1,
+    "miss_timer": 0,
+    "miss_x": 0,
+    "miss_y": 0,
+    "gruzzle_move_timers": [
+      17,
+      0,
+      9,
+      10,
+      5,
+      6,
+      7,
+      8,
+      9,
+      9
+    ]
+  },
+  "original_picture_start": {
+    "picture_timers": [
+      1,
+      4,
+      6,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_frames": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "picture_animation_enabled": 1
+  },
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.0006301001690717385,
+  "original_clock_phase_seconds": 0.032479244297613244,
+  "synchronization_note": "One initial state at post-load counter 560; clock phase from idle counters 553..669. No loading-duration requirement, later state injection or resynchronization.",
+  "instruction_trace_sha256": "f9993a6d1ea8e0578a437e8c71b7ef6df49676403a4a6ca263d3149b6849c758",
+  "original_video_start": {
+    "page": 1
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "baseline_build_matches_installed": {
+    "samples": 13,
+    "equal": 13
+  },
+  "tracing_core_matches_installed": {
+    "samples": 366,
+    "equal": 366
+  },
+  "repeat_memory": {
+    "samples": 16,
+    "equal": 16
+  },
+  "repeat_instructions": {
+    "samples": 12,
+    "equal": true
+  },
+  "source_revision": "db325ff427e3d0df2e6c38bc75b00b6771e03b38",
+  "core_sha256": "21df1599bfd60b88c4fe43e97c1a64326d15cbda2d0dcfb3bc5e3f7265d3731b",
+  "exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+  "source_sha256": "924b9beb1d96bc88e41bc7aace380696ae5b58a1a76242b2abe3d4abc090db8c",
+  "tracing_code_sha256": "b5704804eb6bc75c8afc1933446d15fab9f88c7638f475cc7bfea21dc3e2e753",
+  "patch_sha256": "54a141ee84f2ac3a168378fe34f0e8dfd32faddf2106f252902c0ec8b2500885"
+}

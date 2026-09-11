@@ -128,6 +128,7 @@ def parse_level(data: bytes) -> dict:
     # Background layer (RLE compressed, 16x16 tile indices).
     bg_total = map_width * map_height
     bg_tiles, offset = decode_rle_layer(data, offset, bg_total)
+    original_bg_tiles = list(bg_tiles)
 
     # Book BG-stamp (wr1.exe §1b): level loader writes tile idx 239 (atlas
     # col 19, row 11 — verified to be the pink "book" image in BACK3.WR)
@@ -220,7 +221,10 @@ def parse_level(data: bytes) -> dict:
             for b in question_blocks
         ],
         "background_tiles": bg_grid,
+        "original_background_tiles": [original_bg_tiles[y * map_width:(y + 1) * map_width]
+                                      for y in range(map_height)],
         "collision_8x8": collision_8x8,
+        "attributes": attr_grid,
     }
 
 
@@ -241,9 +245,11 @@ def convert_to_game_format(parsed: dict, words: list[str], level_index: int) -> 
     """
     orig_tile = 16  # Original tile size in pixels.
 
-    # Words for this level (8 per level: 7 game words + 1 mystery word).
-    level_words = words[level_index * 8:(level_index * 8) + 7]
-    mystery_word = words[level_index * 8 + 7] if level_index * 8 + 7 < len(words) else ""
+    # Static defaults for modern mode. Original mode selects seven words from
+    # a persistent byte cursor at runtime (wr1_words.gd), including random EOF
+    # wrapping; its mystery word is one of those seven, not an eighth word.
+    level_words = [words[(level_index * 7 + i) % len(words)] for i in range(7)]
+    mystery_word = level_words[5]
 
     # Map dimensions stay the same (in tiles).
     map_w = parsed["map_width_16"]

@@ -44,13 +44,13 @@
     ]
   ],
   "words": [
+    "watch",
+    "money",
+    "bottle",
     "camera",
     "bell",
     "flag",
-    "clown",
-    "sign",
-    "fence",
-    "heart"
+    "clown"
   ],
   "gruzzles": [
     [
@@ -235,7 +235,7 @@
       17.0
     ]
   ],
-  "mystery_word": "nurse",
+  "mystery_word": "flag",
   "mystery_letters": [
     [
       32.0,

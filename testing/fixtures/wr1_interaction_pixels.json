@@ -1,0 +1,31 @@
+{
+  "source": "WORD-260907-104720.png, native RetroArch DOSBox Pure framebuffer, exactly4x integer-scaled; downsampled with nearest neighbor",
+  "snapshot_request_replay_frame": 501,
+  "caveat": "Displayed framebuffer can lag memory completion; crops verify static active-word rasters, not frame scheduling",
+  "rectangles": {
+    "wr1_score_5": [
+      89,
+      19,
+      8,
+      8
+    ],
+    "wr1_current_cup": [
+      79,
+      5,
+      24,
+      8
+    ],
+    "wr1_picture_gun": [
+      216,
+      96,
+      24,
+      24
+    ],
+    "wr1_word_cup_right": [
+      124,
+      96,
+      52,
+      18
+    ]
+  }
+}

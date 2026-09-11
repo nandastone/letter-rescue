@@ -1,0 +1,80 @@
+{
+  "description": "Package decoded demo controls and one initial checkpoint for runtime playback.\n\nNo reference images, completed states, per-update timestamps or expected outcomes\nare included. The maintained test fixtures remain immutable and independent.\n",
+  "demos": {
+    "1": {
+      "source_fixture_sha256": "723063482893ff8e071b9866620cef08837584ab4739ec998086627650e4215f",
+      "runtime_sha256": "d77d076e77282908add2a6ab936cd42c6fa308e3b8aaad366c61f1e1515dd746",
+      "demo_sha256": "79bdd93987d28659c21efc36110b5f7406f85a6ac0c0891a0dde3f350655e8cd"
+    },
+    "2": {
+      "source_fixture_sha256": "87d24e377fdf51e438f932a3d4c10c060224010590fe0d9881fc564c04343460",
+      "runtime_sha256": "bee107b12f55c26015e9cec40ff92b9af09f241c844114979c4b2acc0b07ec2a",
+      "demo_sha256": "4bb973c2f1223f4188deade0e37b9cc8292077bb728b660ccfa9da43a7b33a4b"
+    },
+    "3": {
+      "source_fixture_sha256": "3361f1137fbc1f94fbad3e8c242393c115d96500a36074ddba9dc9e8201b9a95",
+      "runtime_sha256": "1e226191c1104e37c2061ad6ecbe598d08794a3551788377a5e93a9fc9c73bf0",
+      "demo_sha256": "80ea0dddd1c91a9d7217f6e4aa04f5026f6de4db1c013e36bd9bcec3f97151b7"
+    },
+    "4": {
+      "source_fixture_sha256": "8610ccfd094c7f0a8f6b797513ffbfe7b1fae8d213a874f66cd3a3e2a564193d",
+      "runtime_sha256": "1fd7a81a41442642f48417767706f952c6babf0babd7b5b3fd60554d09ac33a8",
+      "demo_sha256": "5bd580c29de9f0e10ef1865ef7a4437ea30325e3c3e74a11e35fed964cff47aa"
+    },
+    "5": {
+      "source_fixture_sha256": "33afe764fe92298d236a2e9392a6ff77a93bb8d8ef8f03155c3dcea8bc4f02b5",
+      "runtime_sha256": "148890982f22a6d381683e6a579271b45e67f8dcbf877f5a63b507ea723cb39c",
+      "demo_sha256": "3f6e3ed9a64bf7d42a82e3f948fa5bfee50741a095d6b64851351a8fd17e7638"
+    },
+    "6": {
+      "source_fixture_sha256": "9301ea4d6f71d10767f14bc8a021c98074e5c596642cb1529b25914ec8edca4d",
+      "runtime_sha256": "273283e53a80d2a63c1dbcb619a81a8c809edaff86d9ae813bfe4a7daab57086",
+      "demo_sha256": "8c605149862aa9ee8e36dd1ec460189d074058ef8ed83ee046c232104bed12cf"
+    },
+    "7": {
+      "source_fixture_sha256": "8d3ad687ac7b52346456d093fb5f27b1ee27779b8cf4b61700696648604a6992",
+      "runtime_sha256": "eae7961885f2b44a7a873ca6e2860a7aab1835e5a90fbc4829a341c86f046eb4",
+      "demo_sha256": "296eb1784b9f16ca24998156f76cbf8166756efb02fbb036eb619d29278b34f7"
+    },
+    "8": {
+      "source_fixture_sha256": "f753444623239dd25a0c0d7c248415bc57775238fd355af11e92c1a6e824c0e6",
+      "runtime_sha256": "05442c2eaba456f091f8886842cd73768da3c982c7d0e09cbb663f72b8d11233",
+      "demo_sha256": "f3f2343e3da1e15a4bab2e000f155a87bf109568c1e2c5fdcaa428f8fcabf3a7"
+    },
+    "9": {
+      "source_fixture_sha256": "4d15225d6c988e56b60825ee4d53cc86010c8101dced86286b12844223429236",
+      "runtime_sha256": "01522e7daa888c3dbf8dc08f70c3aca1cfa1b1adcd36909724d2ac936b5115a6",
+      "demo_sha256": "1a393fe38d2cfafa31143295809be99c662e291687f654ba28ec40359914780b"
+    },
+    "10": {
+      "source_fixture_sha256": "8942d5fb64b4c3fcd6d3a22a587bfda25bac0bccf88eb504536fc5af8df8e725",
+      "runtime_sha256": "9364a83b781283e06a11ee328ec34dcb2e486badf61fdb546ca20fdbb9371cfd",
+      "demo_sha256": "3891bf164e6c7a5787ad4db099ce40c437b60bb91ecf6e0c8b55c4bb12017b3c"
+    },
+    "11": {
+      "source_fixture_sha256": "a2c7eb352508fa8cee07834003f743c8d2b19033d26ddfd7cd44ea287ae40872",
+      "runtime_sha256": "a519795b962865f8cb5e3502507bc8aba22d06e620d6c92854d5975da04edcb7",
+      "demo_sha256": "0e532578ecd3e8d78e2512310ce227bd6431049d9af6a06759904a281a6d426e"
+    },
+    "12": {
+      "source_fixture_sha256": "5d6f3a235e5d6d1b2e32c2c992a9e92f8bad6540709d3f88d02c069bad5d089b",
+      "runtime_sha256": "ecb90f7fb64598ac99cd5108b254d56c8ae75431bd987dbcb9d8aa7b52f7a3c6",
+      "demo_sha256": "c3381bc2b224bcd04ca4c123cfe7a744655eb5e60e3a6c3697394f7b7be8eded"
+    },
+    "13": {
+      "source_fixture_sha256": "27f7226465fcd3a911905b508ca3432076b422582be8ee143b582832e1c75d93",
+      "runtime_sha256": "4e3ee7f9852010ebd35a8582d6e07efd8a3f806af051570bf636a7b696dace3e",
+      "demo_sha256": "0998659ed58c4573a959257e79aa8602f259995995a5ba96f679cb2034ac19c6"
+    },
+    "14": {
+      "source_fixture_sha256": "81428375695432ffae27da318f05b08c873354c339f26d79d05beb9d5271f8f5",
+      "runtime_sha256": "a510e93e050b0599c4a575995d5ac3ede48d218c7e7f8aa177175d4276c63158",
+      "demo_sha256": "17110411d8781a1143bfe9ad71d70980200d7f0f35da8b55b43d9d2ff93bea97"
+    },
+    "15": {
+      "source_fixture_sha256": "e9620f636c016ca1d7c4c3d4fc39e1b14f5b195b5f2389745885c3ea6d99eed1",
+      "runtime_sha256": "4f8f7b7f13f0930588b191f5880e487ffc3303a0c0866aaf5106f3a5439ce5cb",
+      "demo_sha256": "d4529491c4b844c45214311d5280d6c202b409b7743a2b97a00c180796b21e67"
+    }
+  }
+}

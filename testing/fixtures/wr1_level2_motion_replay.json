@@ -1,0 +1,137 @@
+{
+  "fps": 70,
+  "level": 2,
+  "difficulty": 0,
+  "total_frames": 423,
+  "events": [
+    {
+      "frame": 41,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 41,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 91,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 121,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 127,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 151,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 201,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 261,
+      "action": "move_right",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 6379,
+  "source_end_frame": 6802,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "bcf2011a131ec53e1a9b8de6d420c7b7f94d179b35bc68c736ab3c1daea0d7d9",
+  "source_frame_count": 7000,
+  "source_fps": 70.086304,
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.000503480280545773,
+  "synchronization_note": "One initial state at post-load counter 6379; clock phase from idle counters 6372..6419. No loading-duration requirement, later state injection or resynchronization.",
+  "instruction_trace_sha256": "136fde61e9f219f483a269f6967ef405d72602b8955103c505de98a2bab634af",
+  "original_level_start": {
+    "x": 152,
+    "y": 168,
+    "gx": 73,
+    "gy": 48,
+    "camera_x": 57,
+    "camera_y": 31,
+    "phase": 3,
+    "sprite": 0,
+    "facing": 0,
+    "background_frame": 2,
+    "idle_ticks": 1,
+    "left_index": -1,
+    "right_index": 2,
+    "score": 740,
+    "words": [
+      "hat",
+      "dog",
+      "arm",
+      "bat",
+      "ant",
+      "car",
+      "run"
+    ],
+    "word_cursor": 56,
+    "mystery_index": 4,
+    "active_index": 4,
+    "word_offset": 5,
+    "picture_offset": 6,
+    "entrance_timer": 59
+  },
+  "original_entity_start": {
+    "rng": 3921914530,
+    "gruzzles": [
+      {
+        "gx": 100,
+        "gy": 44,
+        "type": 3,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 13
+      }
+    ],
+    "entity_timer": 768,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_used": 0,
+    "slime_ever_used": 0,
+    "render_page": 1,
+    "miss_timer": 0,
+    "miss_x": 38,
+    "miss_y": 7
+  },
+  "original_picture_start": {
+    "picture_timers": [
+      2,
+      5,
+      7,
+      1,
+      1,
+      1,
+      1
+    ],
+    "picture_frames": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_animation_enabled": 1
+  },
+  "original_clock_phase_seconds": 0.029242614286839726,
+  "original_video_start": {
+    "page": 1
+  }
+}

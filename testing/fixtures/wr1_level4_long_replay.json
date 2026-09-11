@@ -1,0 +1,1734 @@
+{
+  "fps": 70,
+  "level": 4,
+  "difficulty": 1,
+  "total_frames": 4920,
+  "events": [
+    {
+      "frame": 53,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 53,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 59,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 88,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 106,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 152,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 164,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 170,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 181,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 187,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 217,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 234,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 240,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 240,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 244,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 263,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 263,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 298,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 298,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 304,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 304,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 316,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 316,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 322,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 322,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 322,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 327,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 327,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 327,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 333,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 333,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 339,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 339,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 345,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 345,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 351,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 357,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 363,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 363,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 368,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 368,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 380,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 386,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 386,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 386,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 398,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 415,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 415,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 421,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 421,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 456,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 520,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 524,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 649,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 701,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 707,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 719,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 725,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 736,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 777,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 841,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 888,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 917,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 920,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 923,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 923,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 924,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 958,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 970,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 970,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 970,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 987,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 993,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 999,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 999,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 1005,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 1005,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 1011,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 1011,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 1017,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 1017,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 1022,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 1028,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 1093,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1098,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1104,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1110,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1128,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1145,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1168,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1198,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1221,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1250,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1262,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1279,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1303,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1332,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1349,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1361,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1367,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1373,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1379,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1385,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1390,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1402,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1420,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 1425,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 1431,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1455,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1460,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1466,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1472,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1484,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1490,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 1490,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 1490,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1520,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 1524,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 1548,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1560,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1566,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1571,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1577,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1583,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1589,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1612,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1624,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1834,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1858,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1881,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 1881,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 1887,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 1887,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 1945,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 1945,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 1951,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2004,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2062,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2091,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2091,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 2103,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2109,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 2109,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 2109,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2161,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2161,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 2161,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2173,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2196,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 2208,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2214,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2220,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 2224,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 2255,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2301,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2348,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2372,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2377,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2383,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2389,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2395,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2401,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2407,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2412,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 2418,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 2442,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 2447,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 2681,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 2687,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 2693,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 2693,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 2699,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2699,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 2704,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 2704,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 2710,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2710,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 2716,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2722,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2728,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 2728,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 2734,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2734,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 2745,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2751,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2763,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 2763,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 2763,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2774,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2780,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2786,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2792,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2792,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 2792,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2845,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 2850,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2891,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2897,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2909,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 2909,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 2915,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2915,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 2915,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3002,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3020,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3037,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 3055,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3102,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3113,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3119,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3131,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3137,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3166,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 3183,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 3189,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3212,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3212,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 3248,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3248,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3253,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 3253,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3265,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 3265,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 3271,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3271,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3271,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 3277,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3277,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3277,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 3283,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3283,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 3288,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3288,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 3294,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3294,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 3300,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3306,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3312,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3312,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 3318,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3318,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 3329,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3335,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3335,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 3335,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3347,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3364,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3364,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 3370,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3370,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 3405,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3598,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3650,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3656,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3668,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3674,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3686,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3726,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3791,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3837,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3867,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 3872,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 3872,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3907,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3919,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3919,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 3919,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3937,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 3942,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 3948,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3948,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 3954,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3954,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 3960,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3960,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 3966,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3966,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 3972,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 3978,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 4042,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4048,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4053,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4059,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4077,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4094,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4118,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4147,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4170,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4199,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4211,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4229,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4252,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4281,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4299,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4310,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4316,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4322,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4328,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4334,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4340,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4351,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4369,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 4375,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 4380,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4404,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4410,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4416,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4421,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4433,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4439,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 4439,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 4439,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4497,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4509,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4515,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4521,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4526,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4532,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4538,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4562,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4573,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 4573,
+      "action": "jump",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 580,
+  "source_end_frame": 5500,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "5db6995cd58d81da3a47e655656044d07570e6dfa036b09b181ae1dc8206ac60",
+  "source_frame_count": 5600,
+  "source_fps": 70.086304,
+  "character": "boy",
+  "original_level_start": {
+    "x": 48,
+    "y": 128,
+    "gx": 3,
+    "gy": 46,
+    "camera_x": 0,
+    "camera_y": 34,
+    "phase": 16,
+    "sprite": 0,
+    "facing": 0,
+    "background_frame": 1,
+    "idle_ticks": 6,
+    "left_index": -1,
+    "right_index": -1,
+    "score": 0,
+    "words": [
+      "hat",
+      "dog",
+      "arm",
+      "bat",
+      "ant",
+      "car",
+      "run"
+    ],
+    "word_cursor": 56,
+    "mystery_index": 2,
+    "active_index": 255,
+    "word_offset": 1,
+    "picture_offset": 2,
+    "entrance_timer": 55,
+    "drips": []
+  },
+  "original_entity_start": {
+    "rng": 1309330346,
+    "gruzzles": [
+      {
+        "gx": 60,
+        "gy": 18,
+        "type": 1,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 21
+      },
+      {
+        "gx": 29,
+        "gy": 39,
+        "type": 1,
+        "state": -1,
+        "animation_index": 5,
+        "jump_phase": -1,
+        "move_timer": 1
+      }
+    ],
+    "entity_timer": 21,
+    "gruzzle_difficulty": 6,
+    "gruzzle_cadence": 2,
+    "slime_used": 0,
+    "slime_ever_used": 0,
+    "render_page": 1,
+    "miss_timer": 0,
+    "miss_x": 0,
+    "miss_y": 0,
+    "gruzzle_move_timers": [
+      21,
+      1,
+      8,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "original_picture_start": {
+    "picture_timers": [
+      5,
+      0,
+      2,
+      4,
+      4,
+      4,
+      4
+    ],
+    "picture_frames": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "picture_animation_enabled": 1
+  },
+  "original_video_start": {
+    "page": 1,
+    "period": 0.014268064195485,
+    "retrace": 0.013092353525323,
+    "part_period": 0.00317775571003,
+    "frame_start": -0.012718370378017426
+  },
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.0009890781514186528,
+  "original_clock_phase_seconds": 0.039331416910613246,
+  "synchronization_note": "One initial state at post-load counter 580; clock phase from idle counters 549..619. No loading-duration requirement, later state injection or resynchronization.",
+  "instruction_trace_sha256": "407e015b70b8b6d87c28da9c007ce280b02e278111c0028f6054053260999f60"
+}

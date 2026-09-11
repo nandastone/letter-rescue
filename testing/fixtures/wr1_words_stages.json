@@ -1,0 +1,666 @@
+{
+  "trace_sha256": "8d3c6e7803f7f9e9b28927a081c5695b9503367518cdb70ef2c589586470765e",
+  "replay_sha256": "63093736e02820b56445e3e63a2196dd4b19e8486f1695ffc7b5412e6a0d3c57",
+  "input": "Original Z+L selector alternating14 and1, sixteen loads; no guest memory edits.",
+  "initial": {
+    "launch_call": 292,
+    "pic_ms": 4215.880555559,
+    "rng": 1178738697,
+    "word_cursor": 28,
+    "words": [
+      "toe",
+      "pot",
+      "pen",
+      "rat",
+      "gun",
+      "cup",
+      "cop"
+    ],
+    "level_index": 0,
+    "word_offset": 5,
+    "picture_offset": 0,
+    "mystery_index": 5
+  },
+  "loads": [
+    {
+      "begin": {
+        "launch_call": 475,
+        "pic_ms": 6825.311407417,
+        "rng": 1178738697,
+        "word_cursor": 28,
+        "words": [
+          "toe",
+          "pot",
+          "pen",
+          "rat",
+          "gun",
+          "cup",
+          "cop"
+        ],
+        "level_index": 13,
+        "word_offset": 5,
+        "picture_offset": 0,
+        "mystery_index": 5
+      },
+      "end": {
+        "launch_call": 483,
+        "pic_ms": 6939.527111102,
+        "rng": 3171112115,
+        "word_cursor": 56,
+        "words": [
+          "hat",
+          "dog",
+          "arm",
+          "bat",
+          "ant",
+          "car",
+          "run"
+        ],
+        "level_index": 13,
+        "word_offset": 4,
+        "picture_offset": 0,
+        "mystery_index": 5
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 575,
+        "pic_ms": 8252.311037034,
+        "rng": 3171112115,
+        "word_cursor": 56,
+        "words": [
+          "hat",
+          "dog",
+          "arm",
+          "bat",
+          "ant",
+          "car",
+          "run"
+        ],
+        "level_index": 0,
+        "word_offset": 4,
+        "picture_offset": 0,
+        "mystery_index": 5
+      },
+      "end": {
+        "launch_call": 581,
+        "pic_ms": 8344.927148152,
+        "rng": 619218304,
+        "word_cursor": 91,
+        "words": [
+          "can",
+          "sit",
+          "gas",
+          "one",
+          "purple",
+          "horse",
+          "spoon"
+        ],
+        "level_index": 0,
+        "word_offset": 6,
+        "picture_offset": 0,
+        "mystery_index": 0
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 675,
+        "pic_ms": 9679.311407417,
+        "rng": 619218304,
+        "word_cursor": 91,
+        "words": [
+          "can",
+          "sit",
+          "gas",
+          "one",
+          "purple",
+          "horse",
+          "spoon"
+        ],
+        "level_index": 13,
+        "word_offset": 6,
+        "picture_offset": 0,
+        "mystery_index": 0
+      },
+      "end": {
+        "launch_call": 683,
+        "pic_ms": 9795.122481484,
+        "rng": 3179069675,
+        "word_cursor": 133,
+        "words": [
+          "watch",
+          "money",
+          "bottle",
+          "camera",
+          "bell",
+          "flag",
+          "clown"
+        ],
+        "level_index": 13,
+        "word_offset": 1,
+        "picture_offset": 0,
+        "mystery_index": 2
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 775,
+        "pic_ms": 11105.311037034,
+        "rng": 3179069675,
+        "word_cursor": 133,
+        "words": [
+          "watch",
+          "money",
+          "bottle",
+          "camera",
+          "bell",
+          "flag",
+          "clown"
+        ],
+        "level_index": 0,
+        "word_offset": 1,
+        "picture_offset": 0,
+        "mystery_index": 2
+      },
+      "end": {
+        "launch_call": 781,
+        "pic_ms": 11198.081259262,
+        "rng": 3310485272,
+        "word_cursor": 175,
+        "words": [
+          "sign",
+          "fence",
+          "heart",
+          "nurse",
+          "arrow",
+          "turtle",
+          "cross"
+        ],
+        "level_index": 0,
+        "word_offset": 4,
+        "picture_offset": 1,
+        "mystery_index": 1
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 875,
+        "pic_ms": 12532.311407417,
+        "rng": 3310485272,
+        "word_cursor": 175,
+        "words": [
+          "sign",
+          "fence",
+          "heart",
+          "nurse",
+          "arrow",
+          "turtle",
+          "cross"
+        ],
+        "level_index": 13,
+        "word_offset": 4,
+        "picture_offset": 1,
+        "mystery_index": 1
+      },
+      "end": {
+        "launch_call": 883,
+        "pic_ms": 12647.631888915,
+        "rng": 729317850,
+        "word_cursor": 214,
+        "words": [
+          "anchor",
+          "read",
+          "jail",
+          "snow",
+          "rock",
+          "dance",
+          "joker"
+        ],
+        "level_index": 13,
+        "word_offset": 4,
+        "picture_offset": 0,
+        "mystery_index": 6
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 975,
+        "pic_ms": 13959.311037034,
+        "rng": 729317850,
+        "word_cursor": 214,
+        "words": [
+          "anchor",
+          "read",
+          "jail",
+          "snow",
+          "rock",
+          "dance",
+          "joker"
+        ],
+        "level_index": 0,
+        "word_offset": 4,
+        "picture_offset": 0,
+        "mystery_index": 6
+      },
+      "end": {
+        "launch_call": 981,
+        "pic_ms": 14053.743148137,
+        "rng": 1932343507,
+        "word_cursor": 254,
+        "words": [
+          "wine",
+          "five",
+          "eight",
+          "scale",
+          "ghost",
+          "music",
+          "acorn"
+        ],
+        "level_index": 0,
+        "word_offset": 6,
+        "picture_offset": 2,
+        "mystery_index": 3
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1075,
+        "pic_ms": 15386.311407417,
+        "rng": 1932343507,
+        "word_cursor": 254,
+        "words": [
+          "wine",
+          "five",
+          "eight",
+          "scale",
+          "ghost",
+          "music",
+          "acorn"
+        ],
+        "level_index": 13,
+        "word_offset": 6,
+        "picture_offset": 2,
+        "mystery_index": 3
+      },
+      "end": {
+        "launch_call": 1083,
+        "pic_ms": 15502.730777789,
+        "rng": 595828621,
+        "word_cursor": 298,
+        "words": [
+          "teepee",
+          "factory",
+          "trike",
+          "crown",
+          "bulb",
+          "tomato",
+          "dive"
+        ],
+        "level_index": 13,
+        "word_offset": 4,
+        "picture_offset": 0,
+        "mystery_index": 1
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1175,
+        "pic_ms": 16813.311037034,
+        "rng": 595828621,
+        "word_cursor": 298,
+        "words": [
+          "teepee",
+          "factory",
+          "trike",
+          "crown",
+          "bulb",
+          "tomato",
+          "dive"
+        ],
+        "level_index": 0,
+        "word_offset": 4,
+        "picture_offset": 0,
+        "mystery_index": 1
+      },
+      "end": {
+        "launch_call": 1181,
+        "pic_ms": 16909.454148162,
+        "rng": 1812686370,
+        "word_cursor": 333,
+        "words": [
+          "head",
+          "fork",
+          "bear",
+          "bird",
+          "claw",
+          "duck",
+          "frog"
+        ],
+        "level_index": 0,
+        "word_offset": 1,
+        "picture_offset": 2,
+        "mystery_index": 4
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1275,
+        "pic_ms": 18240.311407417,
+        "rng": 1812686370,
+        "word_cursor": 333,
+        "words": [
+          "head",
+          "fork",
+          "bear",
+          "bird",
+          "claw",
+          "duck",
+          "frog"
+        ],
+        "level_index": 13,
+        "word_offset": 1,
+        "picture_offset": 2,
+        "mystery_index": 4
+      },
+      "end": {
+        "launch_call": 1283,
+        "pic_ms": 18354.042777777,
+        "rng": 344646900,
+        "word_cursor": 375,
+        "words": [
+          "kite",
+          "orange",
+          "rabbit",
+          "shoe",
+          "sock",
+          "stand",
+          "banana"
+        ],
+        "level_index": 13,
+        "word_offset": 1,
+        "picture_offset": 6,
+        "mystery_index": 3
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1375,
+        "pic_ms": 19666.311037034,
+        "rng": 344646900,
+        "word_cursor": 375,
+        "words": [
+          "kite",
+          "orange",
+          "rabbit",
+          "shoe",
+          "sock",
+          "stand",
+          "banana"
+        ],
+        "level_index": 0,
+        "word_offset": 1,
+        "picture_offset": 6,
+        "mystery_index": 3
+      },
+      "end": {
+        "launch_call": 1381,
+        "pic_ms": 19761.236222226,
+        "rng": 613945013,
+        "word_cursor": 421,
+        "words": [
+          "bucket",
+          "balloon",
+          "flower",
+          "pink",
+          "skunk",
+          "stair",
+          "ladder"
+        ],
+        "level_index": 0,
+        "word_offset": 2,
+        "picture_offset": 5,
+        "mystery_index": 6
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1475,
+        "pic_ms": 21093.311407417,
+        "rng": 613945013,
+        "word_cursor": 421,
+        "words": [
+          "bucket",
+          "balloon",
+          "flower",
+          "pink",
+          "skunk",
+          "stair",
+          "ladder"
+        ],
+        "level_index": 13,
+        "word_offset": 2,
+        "picture_offset": 5,
+        "mystery_index": 6
+      },
+      "end": {
+        "launch_call": 1482,
+        "pic_ms": 21205.875592578,
+        "rng": 1018165567,
+        "word_cursor": 458,
+        "words": [
+          "log",
+          "twig",
+          "jump",
+          "saddle",
+          "hammer",
+          "seal",
+          "hut"
+        ],
+        "level_index": 13,
+        "word_offset": 3,
+        "picture_offset": 5,
+        "mystery_index": 6
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1575,
+        "pic_ms": 22520.311037034,
+        "rng": 1018165567,
+        "word_cursor": 458,
+        "words": [
+          "log",
+          "twig",
+          "jump",
+          "saddle",
+          "hammer",
+          "seal",
+          "hut"
+        ],
+        "level_index": 0,
+        "word_offset": 3,
+        "picture_offset": 5,
+        "mystery_index": 6
+      },
+      "end": {
+        "launch_call": 1581,
+        "pic_ms": 22616.15666667,
+        "rng": 1152926588,
+        "word_cursor": 497,
+        "words": [
+          "igloo",
+          "home",
+          "car",
+          "spoon",
+          "acorn",
+          "bird",
+          "rabbit"
+        ],
+        "level_index": 0,
+        "word_offset": 6,
+        "picture_offset": 0,
+        "mystery_index": 1
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1675,
+        "pic_ms": 23947.311407417,
+        "rng": 1152926588,
+        "word_cursor": 497,
+        "words": [
+          "igloo",
+          "home",
+          "car",
+          "spoon",
+          "acorn",
+          "bird",
+          "rabbit"
+        ],
+        "level_index": 13,
+        "word_offset": 6,
+        "picture_offset": 0,
+        "mystery_index": 1
+      },
+      "end": {
+        "launch_call": 1683,
+        "pic_ms": 24061.533407379,
+        "rng": 1960515620,
+        "word_cursor": 40,
+        "words": [
+          "rat",
+          "gun",
+          "cup",
+          "cop",
+          "hat",
+          "dog",
+          "arm"
+        ],
+        "level_index": 13,
+        "word_offset": 2,
+        "picture_offset": 6,
+        "mystery_index": 3
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1775,
+        "pic_ms": 25374.311037034,
+        "rng": 1960515620,
+        "word_cursor": 40,
+        "words": [
+          "rat",
+          "gun",
+          "cup",
+          "cop",
+          "hat",
+          "dog",
+          "arm"
+        ],
+        "level_index": 0,
+        "word_offset": 2,
+        "picture_offset": 6,
+        "mystery_index": 3
+      },
+      "end": {
+        "launch_call": 1781,
+        "pic_ms": 25469.868111122,
+        "rng": 3880590245,
+        "word_cursor": 68,
+        "words": [
+          "bat",
+          "ant",
+          "car",
+          "run",
+          "can",
+          "sit",
+          "gas"
+        ],
+        "level_index": 0,
+        "word_offset": 3,
+        "picture_offset": 1,
+        "mystery_index": 4
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1875,
+        "pic_ms": 26800.311407417,
+        "rng": 3880590245,
+        "word_cursor": 68,
+        "words": [
+          "bat",
+          "ant",
+          "car",
+          "run",
+          "can",
+          "sit",
+          "gas"
+        ],
+        "level_index": 13,
+        "word_offset": 3,
+        "picture_offset": 1,
+        "mystery_index": 4
+      },
+      "end": {
+        "launch_call": 1882,
+        "pic_ms": 26912.631444443,
+        "rng": 417154991,
+        "word_cursor": 110,
+        "words": [
+          "one",
+          "purple",
+          "horse",
+          "spoon",
+          "watch",
+          "money",
+          "bottle"
+        ],
+        "level_index": 13,
+        "word_offset": 1,
+        "picture_offset": 6,
+        "mystery_index": 2
+      }
+    },
+    {
+      "begin": {
+        "launch_call": 1975,
+        "pic_ms": 28227.311037034,
+        "rng": 417154991,
+        "word_cursor": 110,
+        "words": [
+          "one",
+          "purple",
+          "horse",
+          "spoon",
+          "watch",
+          "money",
+          "bottle"
+        ],
+        "level_index": 0,
+        "word_offset": 1,
+        "picture_offset": 6,
+        "mystery_index": 2
+      },
+      "end": {
+        "launch_call": 1981,
+        "pic_ms": 28320.728037048,
+        "rng": 1253057708,
+        "word_cursor": 150,
+        "words": [
+          "camera",
+          "bell",
+          "flag",
+          "clown",
+          "sign",
+          "fence",
+          "heart"
+        ],
+        "level_index": 0,
+        "word_offset": 6,
+        "picture_offset": 3,
+        "mystery_index": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,2477 @@
+{
+  "actions": [
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "down": true
+    },
+    {
+      "down": true
+    },
+    {
+      "down": true
+    },
+    {
+      "down": true
+    },
+    {
+      "down": true
+    },
+    {
+      "down": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "down": true,
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "down": true,
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "down": true,
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "left": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true,
+      "up": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    },
+    {
+      "right": true
+    }
+  ],
+  "level": 3,
+  "scope": "Offline collision-only plan; no future native state input",
+  "waypoints": [
+    {
+      "distance": 2.0,
+      "goal": [
+        56,
+        36
+      ],
+      "reached": [
+        56,
+        38
+      ],
+      "step": 9
+    },
+    {
+      "distance": 1.41421353816986,
+      "goal": [
+        26,
+        30
+      ],
+      "reached": [
+        27,
+        31
+      ],
+      "step": 38
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        6,
+        32
+      ],
+      "reached": [
+        6,
+        30
+      ],
+      "step": 65
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        25,
+        17
+      ],
+      "reached": [
+        25,
+        19
+      ],
+      "step": 94
+    },
+    {
+      "distance": 1.0,
+      "goal": [
+        73,
+        26
+      ],
+      "reached": [
+        74,
+        26
+      ],
+      "step": 175
+    },
+    {
+      "distance": 1.0,
+      "goal": [
+        75,
+        14
+      ],
+      "reached": [
+        75,
+        15
+      ],
+      "step": 186
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        108,
+        30
+      ],
+      "reached": [
+        106,
+        30
+      ],
+      "step": 217
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        110,
+        34
+      ],
+      "reached": [
+        110,
+        32
+      ],
+      "step": 221
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        110,
+        34
+      ],
+      "reached": [
+        110,
+        32
+      ],
+      "step": 221
+    },
+    {
+      "distance": 1.41421353816986,
+      "goal": [
+        108,
+        30
+      ],
+      "reached": [
+        109,
+        31
+      ],
+      "step": 222
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        75,
+        14
+      ],
+      "reached": [
+        75,
+        16
+      ],
+      "step": 279
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        73,
+        26
+      ],
+      "reached": [
+        73,
+        24
+      ],
+      "step": 287
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        25,
+        17
+      ],
+      "reached": [
+        25,
+        19
+      ],
+      "step": 352
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        6,
+        32
+      ],
+      "reached": [
+        6,
+        30
+      ],
+      "step": 382
+    },
+    {
+      "distance": 1.0,
+      "goal": [
+        26,
+        30
+      ],
+      "reached": [
+        25,
+        30
+      ],
+      "step": 402
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        56,
+        36
+      ],
+      "reached": [
+        54,
+        36
+      ],
+      "step": 431
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        56,
+        36
+      ],
+      "reached": [
+        54,
+        36
+      ],
+      "step": 431
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        26,
+        30
+      ],
+      "reached": [
+        28,
+        30
+      ],
+      "step": 459
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        6,
+        32
+      ],
+      "reached": [
+        6,
+        30
+      ],
+      "step": 487
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        25,
+        17
+      ],
+      "reached": [
+        25,
+        19
+      ],
+      "step": 516
+    },
+    {
+      "distance": 1.0,
+      "goal": [
+        73,
+        26
+      ],
+      "reached": [
+        74,
+        26
+      ],
+      "step": 597
+    },
+    {
+      "distance": 1.0,
+      "goal": [
+        75,
+        14
+      ],
+      "reached": [
+        75,
+        15
+      ],
+      "step": 608
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        108,
+        30
+      ],
+      "reached": [
+        106,
+        30
+      ],
+      "step": 639
+    },
+    {
+      "distance": 2.0,
+      "goal": [
+        110,
+        34
+      ],
+      "reached": [
+        110,
+        32
+      ],
+      "step": 643
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "fps": 70,
+  "level": 1,
+  "difficulty": 0,
+  "total_frames": 602,
+  "events": [
+    {
+      "frame": 5,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 6,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 82,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 152,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 180,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 262,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 282,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 286,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 292,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 302,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 306,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 362,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 512,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 516,
+      "action": "use_slime",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 338,
+  "source_end_frame": 940,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "dcf9c5f0aaf9773cd423c4e6572e9b48126629f0e30245497704349aca1ee1c4",
+  "source_frame_count": 940,
+  "source_fps": 70.086304,
+  "original_start_background_frame": 0,
+  "original_entity_start": {
+    "rng": 1178738697,
+    "gruzzles": [
+      {
+        "gx": 52,
+        "gy": 17,
+        "type": 0,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 0
+      }
+    ],
+    "entity_timer": 0,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_used": 0
+  },
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.00011917832048857236,
+  "original_clock_phase_seconds": 0.014123993657296247,
+  "synchronization_note": "Frame and IRQ phases calibrated only from idle native counters 350..419. Millisecond handoff clock; no movement states or future update schedule copied.",
+  "instruction_trace_sha256": "39a4b12a4b436c26ef91828c610d619c1b2f8332565024535ad7176278cdf2af"
+}

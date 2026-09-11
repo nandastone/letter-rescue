@@ -1,0 +1,189 @@
+{
+  "cases": [
+    {
+      "source_exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+      "source_replay_sha256": "bfaf405c17d941eb0e1fcf810f0065b945257751c79a785b1c698f24565b4ff4",
+      "instruction_trace_sha256": "5cd26db3376952bb3b79f14fc520cf766dec0a794799622bcd0488fbd7f2f968",
+      "native_counter": 15446,
+      "boundary": "First ordinary update entry 0096:0444; before its update executes",
+      "seed": 20716,
+      "seed_provenance": "Inferred by reversing the original LCG through the 17 source-derived fresh-load calls; not a captured seed call.",
+      "level": 1,
+      "difficulty": 0,
+      "expected": {
+        "rng": 3342764813,
+        "word_offset": 5,
+        "picture_offset": 6,
+        "mystery_index": 6,
+        "gruzzle_count": 1,
+        "gruzzle_difficulty": 14,
+        "gruzzle_cadence": 6,
+        "word_cursor": 28,
+        "words": [
+          "toe",
+          "pot",
+          "pen",
+          "rat",
+          "gun",
+          "cup",
+          "cop"
+        ],
+        "gruzzles": [
+          {
+            "gx": 52,
+            "gy": 17,
+            "type": 3,
+            "state": -1,
+            "animation_index": 0,
+            "jump_phase": -1,
+            "move_timer": 0
+          }
+        ]
+      }
+    },
+    {
+      "source_exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+      "source_replay_sha256": "8888a85852f5a03502fef037a525c4e559346cadfecec00d54a37c666ce8d45c",
+      "instruction_trace_sha256": "c1c977badc30e69c6d7fba4dfee18a1e020be4480681c832c736217deb6bf8a9",
+      "native_counter": 15446,
+      "boundary": "First ordinary update entry 0096:0444; before its update executes",
+      "seed": 20716,
+      "seed_provenance": "Same untouched initial BSV snapshot as Easy; only difficulty-selector Down controls added. Seed 20716 inferred from Easy, then independently checked here.",
+      "level": 1,
+      "difficulty": 1,
+      "control_provenance": {
+        "parent_sha256": "bfaf405c17d941eb0e1fcf810f0065b945257751c79a785b1c698f24565b4ff4",
+        "sha256": "8888a85852f5a03502fef037a525c4e559346cadfecec00d54a37c666ce8d45c",
+        "changes": "Only add Down controls in the initial difficulty selector; truncate after startup. No game-state edits.",
+        "added_down_windows": [
+          [
+            12000,
+            12012
+          ]
+        ]
+      },
+      "expected": {
+        "rng": 1038270386,
+        "word_offset": 5,
+        "picture_offset": 6,
+        "mystery_index": 6,
+        "gruzzle_count": 2,
+        "gruzzle_difficulty": 6,
+        "gruzzle_cadence": 2,
+        "word_cursor": 28,
+        "words": [
+          "toe",
+          "pot",
+          "pen",
+          "rat",
+          "gun",
+          "cup",
+          "cop"
+        ],
+        "gruzzles": [
+          {
+            "gx": 52,
+            "gy": 17,
+            "type": 3,
+            "state": -1,
+            "animation_index": 0,
+            "jump_phase": -1,
+            "move_timer": 0
+          },
+          {
+            "gx": 52,
+            "gy": 2,
+            "type": 0,
+            "state": -1,
+            "animation_index": 0,
+            "jump_phase": -1,
+            "move_timer": 1
+          }
+        ]
+      }
+    },
+    {
+      "source_exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+      "source_replay_sha256": "c33c51d377846a0120a2e97ce6a694f19f019048aabdabf6100a146cf3a398d0",
+      "instruction_trace_sha256": "38102b6244f397a5b3cabfe441efd584df66126bc30cc9583331abb84e4ef57f",
+      "native_counter": 15446,
+      "boundary": "First ordinary update entry 0096:0444; before its update executes",
+      "seed": 20716,
+      "seed_provenance": "Same untouched initial BSV snapshot as Easy; only difficulty-selector Down controls added. Seed 20716 inferred from Easy, then independently checked here.",
+      "level": 1,
+      "difficulty": 2,
+      "control_provenance": {
+        "parent_sha256": "bfaf405c17d941eb0e1fcf810f0065b945257751c79a785b1c698f24565b4ff4",
+        "sha256": "c33c51d377846a0120a2e97ce6a694f19f019048aabdabf6100a146cf3a398d0",
+        "changes": "Only add Down controls in the initial difficulty selector; truncate after startup. No game-state edits.",
+        "added_down_windows": [
+          [
+            12000,
+            12012
+          ],
+          [
+            12100,
+            12112
+          ]
+        ]
+      },
+      "expected": {
+        "rng": 3342764813,
+        "word_offset": 5,
+        "picture_offset": 6,
+        "mystery_index": 6,
+        "gruzzle_count": 4,
+        "gruzzle_difficulty": 2,
+        "gruzzle_cadence": 1,
+        "word_cursor": 28,
+        "words": [
+          "toe",
+          "pot",
+          "pen",
+          "rat",
+          "gun",
+          "cup",
+          "cop"
+        ],
+        "gruzzles": [
+          {
+            "gx": 52,
+            "gy": 17,
+            "type": 3,
+            "state": -1,
+            "animation_index": 0,
+            "jump_phase": -1,
+            "move_timer": 0
+          },
+          {
+            "gx": 52,
+            "gy": 2,
+            "type": 0,
+            "state": -1,
+            "animation_index": 0,
+            "jump_phase": -1,
+            "move_timer": 1
+          },
+          {
+            "gx": 62,
+            "gy": 6,
+            "type": 2,
+            "state": -1,
+            "animation_index": 0,
+            "jump_phase": -1,
+            "move_timer": 2
+          },
+          {
+            "gx": 102,
+            "gy": 6,
+            "type": 1,
+            "state": -1,
+            "animation_index": 0,
+            "jump_phase": -1,
+            "move_timer": 3
+          }
+        ]
+      }
+    }
+  ]
+}

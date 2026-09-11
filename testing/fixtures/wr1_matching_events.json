@@ -1,0 +1,29 @@
+{
+  "source": "Live memory from wr1_matching.replay, paused snapshots; revealed slot0 and wrong targetslot4",
+  "events": [
+    {
+      "slot": 0,
+      "replay_frame": 501,
+      "expected": {
+        "active_word": 1,
+        "active_index": 5,
+        "matched_count": 0,
+        "mistakes": 0,
+        "word_offset": 5,
+        "picture_offset": 0
+      }
+    },
+    {
+      "slot": 4,
+      "replay_frame": 631,
+      "expected": {
+        "active_word": 0,
+        "active_index": 5,
+        "matched_count": 0,
+        "mistakes": 1,
+        "word_offset": 5,
+        "picture_offset": 0
+      }
+    }
+  ]
+}

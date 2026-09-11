@@ -43,7 +43,15 @@
       20.0
     ]
   ],
-  "words": [],
+  "words": [
+    "igloo",
+    "home",
+    "car",
+    "spoon",
+    "acorn",
+    "bird",
+    "rabbit"
+  ],
   "gruzzles": [
     [
       4.0,
@@ -171,7 +179,7 @@
       11.0
     ]
   ],
-  "mystery_word": "",
+  "mystery_word": "bird",
   "mystery_letters": [
     [
       32.0,

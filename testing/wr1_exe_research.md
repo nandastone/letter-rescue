@@ -214,6 +214,12 @@ start.y_px − 32)`** or centered-anchor at `(start.x_px + 12, start.y_px −
 
 ## 5. Start / exit door rendering
 
+**Superseded by direct evidence:** the [ninth pass](wr1_ninth_slice.md) identifies
+the entrance blit at `0xb4b1..0xb5f6`, its start-grid coordinates at
+`0x6540..0x654d`, and the 60-render countdown at `DS:c3dd` initialized at
+`0x4e77`. It blinks during its final ten renders. The early hypotheses below
+are retained as investigation history, not the current conclusion.
+
 **Inconclusive.** I found **no dedicated door-sprite blit at the
 player-start position**. The wiki's phrasing about "bottom-middle of where
 the door image is drawn" is about the **exit** door, not entry. The start

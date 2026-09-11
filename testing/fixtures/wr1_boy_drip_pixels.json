@@ -1,0 +1,40 @@
+{
+  "source_sha256": "f33a50e2016ecc6cde4745e6b73da5bb3f1aeaab30f5d0ac30f37af420d38c93",
+  "instruction_trace_sha256": "01e4fc17f861ce776956ac959269a6c8f7ce2d5379883cad78e7da0397f2e50f",
+  "capture_file": "testing\\output\\wr1_boy_drip_pixels_native.json",
+  "capture_sha256": "4bf5ab93d5a5bd8d4ae4bc56bb8dc57c9836d11163c738b426aeead152af52b5",
+  "initial_file": "wr1_boy_drip_start.png",
+  "pairs": [
+    {
+      "native_counter": 800,
+      "clone_source_frame": 799,
+      "native_file": "wr1_boy_drip_counter_000800.png",
+      "sha256": "bfdccfb4dfd7f7f4c2721397b8b45fc7a8d53abd9ec132e81f341b4b34649ebc"
+    },
+    {
+      "native_counter": 900,
+      "clone_source_frame": 899,
+      "native_file": "wr1_boy_drip_counter_000900.png",
+      "sha256": "22dc953d3731b224180de5d8b8099b32cc6fc643f5e2a6a1cf1c0e07548c8232"
+    },
+    {
+      "native_counter": 964,
+      "clone_source_frame": 963,
+      "native_file": "wr1_boy_drip_counter_000964.png",
+      "sha256": "6c6751f00fef2b6102aca517ae5710b10c50b5b2d7ac8bda9ad0404c53de86e3"
+    },
+    {
+      "native_counter": 1010,
+      "clone_source_frame": 1009,
+      "native_file": "wr1_boy_drip_counter_001010.png",
+      "sha256": "f8e2e88ba77d33d8c90c064d47169024910dcead20e2ac17969fd215f715f647"
+    },
+    {
+      "native_counter": 1100,
+      "clone_source_frame": 1099,
+      "native_file": "wr1_boy_drip_counter_001100.png",
+      "sha256": "d38284f2efc9022003d7a2d3f501e39bab68622bfa9ca7accf9eba02f4f3df99"
+    }
+  ],
+  "initial_sha256": "26bc33e5f167073e4a9e084e776cc15d2b0770e91a56988a9f76f40bdc29e3ea"
+}

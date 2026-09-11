@@ -6,6 +6,38 @@ var state: State = State.IDLE
 var word: String = ""
 var picture_texture: Texture2D = null
 var block_index: int = 0
+var original_rules: bool = false
+var original_word_sprite: Sprite2D
+var original_picture_frames: Array[Texture2D] = []
+
+func set_original_picture(picture_word: String) -> void:
+	picture_texture = preload("res://scripts/wr1_pictures.gd").load_picture(picture_word)
+	original_picture_frames.assign([picture_texture, preload("res://scripts/wr1_pictures.gd").load_picture(picture_word, 1)])
+	$PictureSprite.centered = false
+	$PictureSprite.position = Vector2.ZERO
+	var card := Image.create(72, 18, false, Image.FORMAT_RGBA8)
+	card.fill(Color.BLACK)
+	card.fill_rect(Rect2i(2, 1, 69, 15), Color.WHITE)
+	preload("res://scripts/wr1_text.gd").draw(card, word.to_lower(), Vector2i(32 - 4 * word.length(), 4), Color.BLACK, Color.WHITE)
+	if original_word_sprite == null:
+		original_word_sprite = Sprite2D.new()
+		original_word_sprite.centered = false
+		original_word_sprite.z_index = 2
+		add_child(original_word_sprite)
+	original_word_sprite.texture = ImageTexture.create_from_image(card)
+	original_word_sprite.hide()
+	preload("res://scripts/wr1_clear_text.gd").sprite_text(original_word_sprite, card, [
+		{"erase":Rect2(2,1,69,15), "rect":Rect2(2,1,69,15), "text":word.to_lower(), "background":Color.WHITE, "pixels":12, "baseline_adjustment":0.75}])
+	if preload("res://scripts/wr1_clear_text.gd").enabled():
+		var question: Image = $Sprite2D.texture.get_image()
+		question.convert(Image.FORMAT_RGBA8)
+		preload("res://scripts/wr1_clear_text.gd").sprite_text($Sprite2D, question, [
+			{"erase":Rect2(6,4,13,15), "rect":Rect2(5,3,15,17), "text":"?", "background":Color.WHITE, "pixels":14}])
+
+func set_original_picture_frame(frame: int) -> void:
+	if original_picture_frames.size() == 2:
+		picture_texture = original_picture_frames[frame]
+		$PictureSprite.texture = picture_texture
 
 signal block_touched(block: Area2D)
 
@@ -26,6 +58,8 @@ func setup(word_text: String, index: int) -> void:
 	update_visual()
 
 func _on_body_entered(body: Node2D) -> void:
+	if original_rules:
+		return
 	if body is CharacterBody2D and body.has_method("die") and state != State.MATCHED:
 		block_touched.emit(self)
 
@@ -50,6 +84,8 @@ func mark_matched() -> void:
 	update_visual()
 
 func update_visual() -> void:
+	if original_word_sprite != null:
+		original_word_sprite.hide()
 	match state:
 		State.IDLE:
 			$Sprite2D.modulate = Color.WHITE
@@ -64,6 +100,9 @@ func update_visual() -> void:
 			$Label.modulate = Color.WHITE
 			if has_node("PictureSprite"):
 				$PictureSprite.visible = false
+			if original_rules and original_word_sprite != null:
+				$Label.hide()
+				original_word_sprite.show()
 		State.SHOWING_PICTURE:
 			$Label.visible = false
 			$Sprite2D.visible = false
@@ -80,3 +119,6 @@ func update_visual() -> void:
 			$Sprite2D.visible = false
 			if has_node("PictureSprite"):
 				$PictureSprite.visible = false
+	if original_word_sprite != null:
+		preload("res://scripts/wr1_clear_text.gd").sync_sprite(original_word_sprite)
+	preload("res://scripts/wr1_clear_text.gd").sync_sprite($Sprite2D)

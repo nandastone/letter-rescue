@@ -1,0 +1,78 @@
+{
+  "fps": 70,
+  "level": 1,
+  "difficulty": 0,
+  "total_frames": 432,
+  "events": [
+    {
+      "frame": 5,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 6,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 82,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 152,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 180,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 262,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 292,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 362,
+      "action": "move_left",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 338,
+  "source_end_frame": 770,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "924b9beb1d96bc88e41bc7aace380696ae5b58a1a76242b2abe3d4abc090db8c",
+  "source_frame_count": 770,
+  "original_start_background_frame": 0,
+  "synchronization_note": "Frame and IRQ phases calibrated only from idle native counters 350..419. Millisecond handoff clock; no movement states or future update schedule copied.",
+  "original_clock_phase_seconds": 0.014123993657296247,
+  "source_fps": 70.086304,
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.00011917832048857236,
+  "instruction_trace_sha256": "aef48252a6c36c3e67b9b077b0a534dbddc64060e460a0b4cbe88cdbd4192b87",
+  "original_entity_start": {
+    "rng": 1178738697,
+    "gruzzles": [
+      {
+        "gx": 52,
+        "gy": 17,
+        "type": 0,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 0
+      }
+    ],
+    "entity_timer": 0,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "provenance": "WR1 initial update entry, before movement; wr1_actor_probe.jsonl and controlled boundary tick1"
+  }
+}

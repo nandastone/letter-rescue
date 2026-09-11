@@ -1,0 +1,28 @@
+{
+  "source_sha256": "dcf9c5f0aaf9773cd423c4e6572e9b48126629f0e30245497704349aca1ee1c4",
+  "samples": [
+    {
+      "native_counter": 620,
+      "clone_source_input": 619,
+      "size": [
+        320,
+        200
+      ],
+      "mismatched_pixels": 0,
+      "native_sha256": "4192c6ea6825002850e2a11425ccfc3816571a1fba352722a6e1310f98a5a5c2",
+      "clone_sha256": "343ce22a3860ce6ef5714f0d71e855767bd14a9ec37c95faf8fd1028f5e04b22"
+    },
+    {
+      "native_counter": 628,
+      "clone_source_input": 627,
+      "size": [
+        320,
+        200
+      ],
+      "mismatched_pixels": 0,
+      "native_sha256": "476b2621c2db5d99f5c208620f6bde16ff2f108762087a7cba5ac3f3b94cbc8a",
+      "clone_sha256": "5fe7333b1134aca49aa0e776e17cb1af4a407de65d200fbb6e355feb27c108ce"
+    }
+  ],
+  "scope": "Two complete 320x200 frontend images, before and immediately after slime. Counter660 excluded: native returned video predates paused memory; raw capture retained."
+}

@@ -44,13 +44,13 @@
     ]
   ],
   "words": [
-    "acorn",
-    "teepee",
-    "factory",
-    "trike",
-    "crown",
-    "bulb",
-    "tomato"
+    "wine",
+    "five",
+    "eight",
+    "scale",
+    "ghost",
+    "music",
+    "acorn"
   ],
   "gruzzles": [
     [
@@ -231,7 +231,7 @@
       3.0
     ]
   ],
-  "mystery_word": "dive",
+  "mystery_word": "music",
   "mystery_letters": [
     [
       1.0,

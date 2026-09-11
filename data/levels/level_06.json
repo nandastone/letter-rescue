@@ -44,13 +44,13 @@
     ]
   ],
   "words": [
+    "anchor",
+    "read",
+    "jail",
+    "snow",
+    "rock",
     "dance",
-    "joker",
-    "wine",
-    "five",
-    "eight",
-    "scale",
-    "ghost"
+    "joker"
   ],
   "gruzzles": [
     [
@@ -187,7 +187,7 @@
       10.0
     ]
   ],
-  "mystery_word": "music",
+  "mystery_word": "dance",
   "mystery_letters": [
     [
       13.0,

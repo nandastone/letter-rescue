@@ -1,0 +1,192 @@
+{
+  "source_sha256": "14cb182d68ad78b1b5c49b2ad14e905a513a863462bda198f17f3e7323cefbc3",
+  "instruction_trace_sha256": "a0631add30f3112e083308873d5ac3785e695d36b760caa977912394ac7ea6ae",
+  "pairs": [
+    {
+      "native_counter": 640,
+      "clone_source_frame": 639,
+      "native_file": "wr1_demo_level13_counter_000640.png",
+      "sha256": "43489db1fc131122c7af7b5f72063f29ed0e4d7431a2a69d09399cdb199988cd"
+    },
+    {
+      "native_counter": 1000,
+      "clone_source_frame": 999,
+      "native_file": "wr1_demo_level13_counter_001000.png",
+      "sha256": "eeab550ffacb03644b5e4e3182bc8f1d180cfdd449ac5c91d2bca1a14d7c6b2f"
+    },
+    {
+      "native_counter": 2000,
+      "clone_source_frame": 1999,
+      "native_file": "wr1_demo_level13_counter_002000.png",
+      "sha256": "1e77d78d86031cd2a882236656a6f3c9947956138f6fee3d8aacfea3e147281a"
+    },
+    {
+      "native_counter": 3000,
+      "clone_source_frame": 2999,
+      "native_file": "wr1_demo_level13_counter_003000.png",
+      "sha256": "323067c5042625ebc3a7a7a6363223665240856f59dff4865e7ef69d47531f61"
+    },
+    {
+      "native_counter": 4000,
+      "clone_source_frame": 3999,
+      "native_file": "wr1_demo_level13_counter_004000.png",
+      "sha256": "30551282622a2c7e4870c9340c0bcfbb3389a63b210c547c843a4114c62b53ad"
+    },
+    {
+      "native_counter": 4494,
+      "clone_source_frame": 4493,
+      "native_file": "wr1_demo_level13_counter_004494.png",
+      "sha256": "04305192a6f667a3452eb8257c60eebdee7acd881e5e51e2c8e0230b855ff809",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 4495,
+      "clone_source_frame": 4494,
+      "native_file": "wr1_demo_level13_counter_004495.png",
+      "sha256": "04305192a6f667a3452eb8257c60eebdee7acd881e5e51e2c8e0230b855ff809",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 4496,
+      "clone_source_frame": 4495,
+      "native_file": "wr1_demo_level13_counter_004496.png",
+      "sha256": "04305192a6f667a3452eb8257c60eebdee7acd881e5e51e2c8e0230b855ff809",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 4497,
+      "clone_source_frame": 4496,
+      "native_file": "wr1_demo_level13_counter_004497.png",
+      "sha256": "04305192a6f667a3452eb8257c60eebdee7acd881e5e51e2c8e0230b855ff809",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 4498,
+      "clone_source_frame": 4497,
+      "native_file": "wr1_demo_level13_counter_004498.png",
+      "sha256": "04305192a6f667a3452eb8257c60eebdee7acd881e5e51e2c8e0230b855ff809",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 4499,
+      "clone_source_frame": 4498,
+      "native_file": "wr1_demo_level13_counter_004499.png",
+      "sha256": "b7dba73f97d0544c08a167b38bbc7f64237d46e42b7e23b736539d12160a7ab9",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 4500,
+      "clone_source_frame": 4499,
+      "native_file": "wr1_demo_level13_counter_004500.png",
+      "sha256": "b7dba73f97d0544c08a167b38bbc7f64237d46e42b7e23b736539d12160a7ab9",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 5000,
+      "clone_source_frame": 4999,
+      "native_file": "wr1_demo_level13_counter_005000.png",
+      "sha256": "6f222ecb12d440bf52a4e4e5c39a00abb1352d60005ed204d0f068204b526718"
+    },
+    {
+      "native_counter": 6000,
+      "clone_source_frame": 5999,
+      "native_file": "wr1_demo_level13_counter_006000.png",
+      "sha256": "bffca2f9fff0538cdad33112018be4e9da421bdd07a2bb019faad98ab61817bb"
+    },
+    {
+      "native_counter": 6211,
+      "clone_source_frame": 6210,
+      "native_file": "wr1_demo_level13_counter_006211.png",
+      "sha256": "bd75d662213ac41ebb322595fb19f399c61b88d45687ddcc9dbb60c004125df5",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 6212,
+      "clone_source_frame": 6211,
+      "native_file": "wr1_demo_level13_counter_006212.png",
+      "sha256": "bd75d662213ac41ebb322595fb19f399c61b88d45687ddcc9dbb60c004125df5",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 6213,
+      "clone_source_frame": 6212,
+      "native_file": "wr1_demo_level13_counter_006213.png",
+      "sha256": "bd75d662213ac41ebb322595fb19f399c61b88d45687ddcc9dbb60c004125df5",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 6214,
+      "clone_source_frame": 6213,
+      "native_file": "wr1_demo_level13_counter_006214.png",
+      "sha256": "bd75d662213ac41ebb322595fb19f399c61b88d45687ddcc9dbb60c004125df5",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 6215,
+      "clone_source_frame": 6214,
+      "native_file": "wr1_demo_level13_counter_006215.png",
+      "sha256": "bd75d662213ac41ebb322595fb19f399c61b88d45687ddcc9dbb60c004125df5",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 6216,
+      "clone_source_frame": 6215,
+      "native_file": "wr1_demo_level13_counter_006216.png",
+      "sha256": "743d3b5165249408b984ed0011bde70fb69f7e0a010e2edd4d217db17056857e",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 6217,
+      "clone_source_frame": 6216,
+      "native_file": "wr1_demo_level13_counter_006217.png",
+      "sha256": "743d3b5165249408b984ed0011bde70fb69f7e0a010e2edd4d217db17056857e",
+      "capture_file": "wr1_demo_level13_admission_capture.json",
+      "capture_sha256": "be2330b76c477c05e2e130da0f8797a1b91b3cd5338c9ed2c861b843e656660e"
+    },
+    {
+      "native_counter": 7000,
+      "clone_source_frame": 6999,
+      "native_file": "wr1_demo_level13_counter_007000.png",
+      "sha256": "a78587e438e47fe362330474561f5fa5d12535d90057df84660d4c82dcddbad3"
+    },
+    {
+      "native_counter": 8000,
+      "clone_source_frame": 7999,
+      "native_file": "wr1_demo_level13_counter_008000.png",
+      "sha256": "0ad1855980813d85679a7becbc15051fffa568e3796a47be6d553141d45521c4"
+    },
+    {
+      "native_counter": 9000,
+      "clone_source_frame": 8999,
+      "native_file": "wr1_demo_level13_counter_009000.png",
+      "sha256": "446480609a418f5cf71ecfe2cf12157cc5eee827a12396bdbed33f7e56a73890"
+    },
+    {
+      "native_counter": 10000,
+      "clone_source_frame": 9999,
+      "native_file": "wr1_demo_level13_counter_010000.png",
+      "sha256": "cf4f6929532e60b8d9ef6df005b1744b889016a64f7bd7ce1716a5d34c473917"
+    },
+    {
+      "native_counter": 11000,
+      "clone_source_frame": 10999,
+      "native_file": "wr1_demo_level13_counter_011000.png",
+      "sha256": "c4e204ba5ccc76f5ab6532bfc676b8bca20b36443987fd41b747e6923dae4509"
+    }
+  ],
+  "initial_file": "wr1_demo_level13_counter_000635.png",
+  "initial_sha256": "43489db1fc131122c7af7b5f72063f29ed0e4d7431a2a69d09399cdb199988cd"
+}

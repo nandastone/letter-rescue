@@ -44,13 +44,13 @@
     ]
   ],
   "words": [
+    "can",
+    "sit",
     "gas",
     "one",
     "purple",
     "horse",
-    "spoon",
-    "watch",
-    "money"
+    "spoon"
   ],
   "gruzzles": [
     [
@@ -163,7 +163,7 @@
       9.0
     ]
   ],
-  "mystery_word": "bottle",
+  "mystery_word": "horse",
   "mystery_letters": [
     [
       37.0,

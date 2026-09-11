@@ -1,0 +1,12 @@
+{
+  "source_sha256": "924b9beb1d96bc88e41bc7aace380696ae5b58a1a76242b2abe3d4abc090db8c",
+  "source_fps": 70.086304,
+  "source_start_frame": 338,
+  "calibration_start_counter": 350,
+  "calibration_end_counter_exclusive": 420,
+  "samples": 70,
+  "phase_lower_seconds": 0.013850430395288327,
+  "phase_upper_seconds_exclusive": 0.013985784392049894,
+  "original_clock_phase_seconds": 0.01391810739366911,
+  "scope": "IRQ phase under ordinary idle-update assumptions; not a render-completion phase"
+}

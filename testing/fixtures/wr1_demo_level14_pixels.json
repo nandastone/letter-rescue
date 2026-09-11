@@ -1,0 +1,68 @@
+{
+  "source_sha256": "7fc039d23d541138db1bb2177c0a230403d5dd1f14fbfa5921d8d90d375a52e4",
+  "instruction_trace_sha256": "e0189c5b4f6e5702353ddffc660aa0f78d8451d2550a2e1d59f1c4084fde76f6",
+  "pairs": [
+    {
+      "native_counter": 630,
+      "clone_source_frame": 629,
+      "native_file": "wr1_demo_level14_counter_000630.png",
+      "sha256": "34f3e8ba69104f310494e4adcaf03f2ed45828bdc3f12fb4d4f03911268cdc12"
+    },
+    {
+      "native_counter": 635,
+      "clone_source_frame": 634,
+      "native_file": "wr1_demo_level14_counter_000635.png",
+      "sha256": "34f3e8ba69104f310494e4adcaf03f2ed45828bdc3f12fb4d4f03911268cdc12"
+    },
+    {
+      "native_counter": 640,
+      "clone_source_frame": 639,
+      "native_file": "wr1_demo_level14_counter_000640.png",
+      "sha256": "0b1fdf456fbad91759272a44d092443e4f3ecb850ba0d01e7c47998f820936a6"
+    },
+    {
+      "native_counter": 1000,
+      "clone_source_frame": 999,
+      "native_file": "wr1_demo_level14_counter_001000.png",
+      "sha256": "5acbf3e3095cddf7a23d261f766636736717cfa31aae27c94c5c648e2c974c45"
+    },
+    {
+      "native_counter": 2000,
+      "clone_source_frame": 1999,
+      "native_file": "wr1_demo_level14_counter_002000.png",
+      "sha256": "b8a8e7082e6e5048dbfdc84e3a04de1bd48d79bc6ab5bd4650d66f9e87345a18"
+    },
+    {
+      "native_counter": 3000,
+      "clone_source_frame": 2999,
+      "native_file": "wr1_demo_level14_counter_003000.png",
+      "sha256": "89b697115290f2840e2c868d2811029cc5b1211f5dc5e296aa801634b7310df0"
+    },
+    {
+      "native_counter": 4000,
+      "clone_source_frame": 3999,
+      "native_file": "wr1_demo_level14_counter_004000.png",
+      "sha256": "dabf37f04336f8472fd524d02ab4293c347c651d7e24b3c69c2e7121e450cdd2"
+    },
+    {
+      "native_counter": 5000,
+      "clone_source_frame": 4999,
+      "native_file": "wr1_demo_level14_counter_005000.png",
+      "sha256": "964c82173221369c8ee28f97a6ddebca300809e5b80d4868ccd7d05eb94aafa1"
+    },
+    {
+      "native_counter": 6000,
+      "clone_source_frame": 5999,
+      "native_file": "wr1_demo_level14_counter_006000.png",
+      "sha256": "fecb738cc5ea27eca72d045177633692c0dceaecb87546516ff5a3cab4493221"
+    },
+    {
+      "native_counter": 7000,
+      "clone_source_frame": 6999,
+      "native_file": "wr1_demo_level14_counter_007000.png",
+      "sha256": "e722b287951abe4c21425212d0fb6271112176de377a7dc60a18301013a16507"
+    }
+  ],
+  "initial_file": "wr1_demo_level14_counter_000625.png",
+  "initial_sha256": "71f0531432d63fe3aefe53e95fab3b5aaf5bb048b795a735978ce8ff0adc9335"
+}

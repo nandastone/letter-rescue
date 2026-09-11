@@ -1,0 +1,137 @@
+[
+  {
+    "sha256": "79bdd93987d28659c21efc36110b5f7406f85a6ac0c0891a0dde3f350655e8cd",
+    "size": 1879,
+    "updates": 1878,
+    "terminator_offset": 1878,
+    "trailing_bytes": 0,
+    "file": "WR1.D0",
+    "level": 1
+  },
+  {
+    "sha256": "4bb973c2f1223f4188deade0e37b9cc8292077bb728b660ccfa9da43a7b33a4b",
+    "size": 2004,
+    "updates": 2003,
+    "terminator_offset": 2003,
+    "trailing_bytes": 0,
+    "file": "WR1.D1",
+    "level": 2
+  },
+  {
+    "sha256": "80ea0dddd1c91a9d7217f6e4aa04f5026f6de4db1c013e36bd9bcec3f97151b7",
+    "size": 1355,
+    "updates": 1354,
+    "terminator_offset": 1354,
+    "trailing_bytes": 0,
+    "file": "WR1.D2",
+    "level": 3
+  },
+  {
+    "sha256": "5bd580c29de9f0e10ef1865ef7a4437ea30325e3c3e74a11e35fed964cff47aa",
+    "size": 1634,
+    "updates": 1633,
+    "terminator_offset": 1633,
+    "trailing_bytes": 0,
+    "file": "WR1.D3",
+    "level": 4
+  },
+  {
+    "sha256": "3f6e3ed9a64bf7d42a82e3f948fa5bfee50741a095d6b64851351a8fd17e7638",
+    "size": 1664,
+    "updates": 1663,
+    "terminator_offset": 1663,
+    "trailing_bytes": 0,
+    "file": "WR1.D4",
+    "level": 5
+  },
+  {
+    "sha256": "8c605149862aa9ee8e36dd1ec460189d074058ef8ed83ee046c232104bed12cf",
+    "size": 2393,
+    "updates": 2392,
+    "terminator_offset": 2392,
+    "trailing_bytes": 0,
+    "file": "WR1.D5",
+    "level": 6
+  },
+  {
+    "sha256": "296eb1784b9f16ca24998156f76cbf8166756efb02fbb036eb619d29278b34f7",
+    "size": 1396,
+    "updates": 1395,
+    "terminator_offset": 1395,
+    "trailing_bytes": 0,
+    "file": "WR1.D6",
+    "level": 7
+  },
+  {
+    "sha256": "f3f2343e3da1e15a4bab2e000f155a87bf109568c1e2c5fdcaa428f8fcabf3a7",
+    "size": 1379,
+    "updates": 1378,
+    "terminator_offset": 1378,
+    "trailing_bytes": 0,
+    "file": "WR1.D7",
+    "level": 8
+  },
+  {
+    "sha256": "1a393fe38d2cfafa31143295809be99c662e291687f654ba28ec40359914780b",
+    "size": 1910,
+    "updates": 1838,
+    "terminator_offset": 1838,
+    "trailing_bytes": 71,
+    "file": "WR1.D8",
+    "level": 9
+  },
+  {
+    "sha256": "3891bf164e6c7a5787ad4db099ce40c437b60bb91ecf6e0c8b55c4bb12017b3c",
+    "size": 1586,
+    "updates": 1585,
+    "terminator_offset": 1585,
+    "trailing_bytes": 0,
+    "file": "WR1.D9",
+    "level": 10
+  },
+  {
+    "sha256": "0e532578ecd3e8d78e2512310ce227bd6431049d9af6a06759904a281a6d426e",
+    "size": 463,
+    "updates": 462,
+    "terminator_offset": 462,
+    "trailing_bytes": 0,
+    "file": "WR1.D10",
+    "level": 11
+  },
+  {
+    "sha256": "c3381bc2b224bcd04ca4c123cfe7a744655eb5e60e3a6c3697394f7b7be8eded",
+    "size": 1279,
+    "updates": 1278,
+    "terminator_offset": 1278,
+    "trailing_bytes": 0,
+    "file": "WR1.D11",
+    "level": 12
+  },
+  {
+    "sha256": "0998659ed58c4573a959257e79aa8602f259995995a5ba96f679cb2034ac19c6",
+    "size": 1633,
+    "updates": 1632,
+    "terminator_offset": 1632,
+    "trailing_bytes": 0,
+    "file": "WR1.D12",
+    "level": 13
+  },
+  {
+    "sha256": "17110411d8781a1143bfe9ad71d70980200d7f0f35da8b55b43d9d2ff93bea97",
+    "size": 1223,
+    "updates": 1222,
+    "terminator_offset": 1222,
+    "trailing_bytes": 0,
+    "file": "WR1.D13",
+    "level": 14
+  },
+  {
+    "sha256": "d4529491c4b844c45214311d5280d6c202b409b7743a2b97a00c180796b21e67",
+    "size": 859,
+    "updates": 858,
+    "terminator_offset": 858,
+    "trailing_bytes": 0,
+    "file": "WR1.D14",
+    "level": 15
+  }
+]

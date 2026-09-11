@@ -43,7 +43,15 @@
       28.0
     ]
   ],
-  "words": [],
+  "words": [
+    "head",
+    "ant",
+    "purple",
+    "skunk",
+    "toe",
+    "pot",
+    "pen"
+  ],
   "gruzzles": [
     [
       36.0,
@@ -185,7 +193,7 @@
       7.0
     ]
   ],
-  "mystery_word": "",
+  "mystery_word": "pot",
   "mystery_letters": [
     [
       39.0,

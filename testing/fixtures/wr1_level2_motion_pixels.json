@@ -1,0 +1,110 @@
+{
+  "source_sha256": "bcf2011a131ec53e1a9b8de6d420c7b7f94d179b35bc68c736ab3c1daea0d7d9",
+  "instruction_trace_sha256": "136fde61e9f219f483a269f6967ef405d72602b8955103c505de98a2bab634af",
+  "initial_counter": 6379,
+  "initial_file": "wr1_level2_start.png",
+  "pairs": [
+    {
+      "native_counter": 6380,
+      "clone_source_frame": 6379,
+      "native_file": "wr1_level2_motion_6380.png",
+      "sha256": "f82d217841889378d5e13347c9db005e460052edd9ea69f845c82d63f3171d66"
+    },
+    {
+      "native_counter": 6450,
+      "clone_source_frame": 6449,
+      "native_file": "wr1_level2_motion_6450.png",
+      "sha256": "8d63608adc75f258663ec3c49b846bf7be77a29cd09f5d4f42a20cbf2ed17188"
+    },
+    {
+      "native_counter": 6540,
+      "clone_source_frame": 6539,
+      "native_file": "wr1_level2_motion_6540.png",
+      "sha256": "fa22433358c05085aab31a7b74ac6a32fd2fa36cd756b419c3766e00adc77938"
+    },
+    {
+      "native_counter": 6620,
+      "clone_source_frame": 6619,
+      "native_file": "wr1_level2_motion_6620.png",
+      "sha256": "10af0120b1dbb5a6e6b3823efcd69423bdce24f050e32eeee1ca27d76acb3e44"
+    },
+    {
+      "native_counter": 6666,
+      "clone_source_frame": 6665,
+      "native_file": "wr1_level2_motion_6666.png",
+      "sha256": "12b2076e98f7aae986557e0a55fefbb4d43c55e623fb5ec4df872d58fe9db811"
+    },
+    {
+      "native_counter": 6672,
+      "clone_source_frame": 6671,
+      "native_file": "wr1_level2_motion_6672.png",
+      "sha256": "437a5fbd1ddf29a6a68aabfacef7253c2df9e23edbf4153f1b601f495a768818"
+    },
+    {
+      "native_counter": 6677,
+      "clone_source_frame": 6676,
+      "native_file": "wr1_level2_motion_6677.png",
+      "sha256": "d24f99ee04ab9644c8a8fb1b938bfd3010d8d4c5c35617b33be63a7b21555a60"
+    },
+    {
+      "native_counter": 6683,
+      "clone_source_frame": 6682,
+      "native_file": "wr1_level2_motion_6683.png",
+      "sha256": "614d6eaf3ac7799d46269e1917919246f5632d122cbb627785b69af73f9abb89"
+    },
+    {
+      "native_counter": 6718,
+      "clone_source_frame": 6717,
+      "native_file": "wr1_level2_motion_6718.png",
+      "sha256": "48f11c3fbba0a940b7b487ae09202420d1c24abae24b3f4752e6b793e7b22d14"
+    },
+    {
+      "native_counter": 6724,
+      "clone_source_frame": 6723,
+      "native_file": "wr1_level2_motion_6724.png",
+      "sha256": "5ff96aec8a461fd7e6dfe7091b73bee6a6a4ba388363a08ae2113f1c085057ac"
+    },
+    {
+      "native_counter": 6800,
+      "clone_source_frame": 6799,
+      "native_file": "wr1_level2_motion_6800.png",
+      "sha256": "b9faf145908e692dadd36311a6cca20bdc675da0b7f2480450002cb9b8218f9a"
+    }
+  ],
+  "initial_sha256": "f82d217841889378d5e13347c9db005e460052edd9ea69f845c82d63f3171d66",
+  "scope": "One pre-input checkpoint screenshot, then fixed native counter N / clone input frame N-1 pairs; no adjacent-frame search.",
+  "native_capture_traces": {
+    "wr1_level2_start_native": "d15d362ac22e639e479b3a89a23f5385e850ec84daf061dd6c45f9030abf3bd8",
+    "wr1_entrance_native": "e94306d3cb2e212d88702b836b24bc42c51e1d60f074bdade94535a424968dcc",
+    "wr1_level2_final_native": "136fde61e9f219f483a269f6967ef405d72602b8955103c505de98a2bab634af"
+  },
+  "native_pixel_captures": [
+    {
+      "capture_file": "wr1_level2_first_video_native.json",
+      "capture_sha256": "20a5455cbc4130bc83e5755a811594b169bccdb8cc8e0f53ea11a01d0624f6d0",
+      "core_sha256": "3a7c6efbb7995c7c15e562c42f0e4b52c3c0348f6190aa20a30d972dae27d2cb",
+      "exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+      "source_sha256": "bcf2011a131ec53e1a9b8de6d420c7b7f94d179b35bc68c736ab3c1daea0d7d9",
+      "start_frame": 6378,
+      "end_frame": 6380
+    },
+    {
+      "capture_file": "wr1_level2_start_native.json",
+      "capture_sha256": "e872378b3cf36daf451a975b1a3ea0a70ea3ad9b5d892820bc7e656c5a1e32b7",
+      "core_sha256": "3a7c6efbb7995c7c15e562c42f0e4b52c3c0348f6190aa20a30d972dae27d2cb",
+      "exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+      "source_sha256": "bcf2011a131ec53e1a9b8de6d420c7b7f94d179b35bc68c736ab3c1daea0d7d9",
+      "start_frame": 6372,
+      "end_frame": 6802
+    },
+    {
+      "capture_file": "wr1_entrance_settled_native.json",
+      "capture_sha256": "1e1601d744d8c0ad2817c1ebc8d039bba3b832975cb080d3044fc22b798278c2",
+      "core_sha256": "1a9b52d100718578c0410d7e705179a5eaee1fc3bb99d0fb0e0fed06081a3795",
+      "exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+      "source_sha256": "bcf2011a131ec53e1a9b8de6d420c7b7f94d179b35bc68c736ab3c1daea0d7d9",
+      "start_frame": 6666,
+      "end_frame": 6724
+    }
+  ]
+}

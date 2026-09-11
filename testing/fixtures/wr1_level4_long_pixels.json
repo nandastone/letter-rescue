@@ -1,0 +1,74 @@
+{
+  "source_sha256": "5db6995cd58d81da3a47e655656044d07570e6dfa036b09b181ae1dc8206ac60",
+  "instruction_trace_sha256": "407e015b70b8b6d87c28da9c007ce280b02e278111c0028f6054053260999f60",
+  "pairs": [
+    {
+      "native_counter": 900,
+      "clone_source_frame": 899,
+      "native_file": "wr1_level4_long_counter_000900.png",
+      "sha256": "f0da356b0d4e5c48b581be7463f7d210715b735cdfa76e333ab57eadb2b1cc45"
+    },
+    {
+      "native_counter": 1200,
+      "clone_source_frame": 1199,
+      "native_file": "wr1_level4_long_counter_001200.png",
+      "sha256": "2077e077313397b26642e08de3ca4697cd7e3ae893cb42e535e9c3f0f1c9bc05"
+    },
+    {
+      "native_counter": 1600,
+      "clone_source_frame": 1599,
+      "native_file": "wr1_level4_long_counter_001600.png",
+      "sha256": "9d14c7c8f625da700c61119ea7d75e11fd56c4e10bd198ff3bb962810a7de4f9"
+    },
+    {
+      "native_counter": 2000,
+      "clone_source_frame": 1999,
+      "native_file": "wr1_level4_long_counter_002000.png",
+      "sha256": "6964ecf3f461adaee35e96012af1e86e005e239626d48c78b95927d6e4a76aef"
+    },
+    {
+      "native_counter": 2500,
+      "clone_source_frame": 2499,
+      "native_file": "wr1_level4_long_counter_002500.png",
+      "sha256": "a36b0226bf778334c7176ea475466917467ef63d9cd76b6b778ee17c733d44b4"
+    },
+    {
+      "native_counter": 3000,
+      "clone_source_frame": 2999,
+      "native_file": "wr1_level4_long_counter_003000.png",
+      "sha256": "36c3eb5b657834b7260c51435b8a6643400abfe1ab5effac807f4fa38a04b327"
+    },
+    {
+      "native_counter": 3500,
+      "clone_source_frame": 3499,
+      "native_file": "wr1_level4_long_counter_003500.png",
+      "sha256": "d1ce0ffd37c4239125f285c2b4cbd698a1d8618d5d591284e7ba1cfa954b90c5"
+    },
+    {
+      "native_counter": 4000,
+      "clone_source_frame": 3999,
+      "native_file": "wr1_level4_long_counter_004000.png",
+      "sha256": "e7568cb14e615650efe95ba5ff286b19119e504e92f5412cdaedae9cb8481084"
+    },
+    {
+      "native_counter": 4500,
+      "clone_source_frame": 4499,
+      "native_file": "wr1_level4_long_counter_004500.png",
+      "sha256": "8467807a64287f6c80c208e4237318f7abaa1b6a1e30b9e51e5ff3710a6e4e8d"
+    },
+    {
+      "native_counter": 5000,
+      "clone_source_frame": 4999,
+      "native_file": "wr1_level4_long_counter_005000.png",
+      "sha256": "8f34405f3f318d5f3d4d689abb9b79b74e744ac393fc6959e9dd5448f89ba252"
+    },
+    {
+      "native_counter": 5500,
+      "clone_source_frame": 5499,
+      "native_file": "wr1_level4_long_counter_005500.png",
+      "sha256": "1d31e8f08d0b881a5bf0cd0870555648b27637d5dab3ab0c7db52767a2fa0074"
+    }
+  ],
+  "initial_file": "wr1_level4_long_counter_000580.png",
+  "initial_sha256": "0df1ac484e4e3a0b727379b1067c4bdeecbe29308459d6b6175be2be2b0a0b2f"
+}

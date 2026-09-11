@@ -1,0 +1,579 @@
+{
+  "fps": 70,
+  "level": 1,
+  "difficulty": 0,
+  "total_frames": 7764,
+  "events": [
+    {
+      "frame": 5,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 6,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 82,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 82,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 210,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 216,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 282,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 286,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 432,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 438,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 444,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 444,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 450,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 450,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 520,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 520,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 549,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 561,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 689,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 695,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 905,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 905,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 958,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 958,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 964,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 964,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 999,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1005,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1086,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1092,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1320,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 1326,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 1349,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1378,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1425,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 1425,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 1752,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 1752,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 1863,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1869,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1875,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1875,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 1881,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1881,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 1939,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1939,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 1945,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 1957,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 1963,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 1974,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2062,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2073,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2091,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2103,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2360,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2395,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 2395,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 2395,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2488,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2494,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2792,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2798,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2885,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2891,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 2897,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 2903,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3002,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3037,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 3037,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 3037,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3644,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3679,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 3679,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 3679,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3773,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3779,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3942,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3954,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3960,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3977,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 3983,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 3995,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4077,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4088,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4106,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4123,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4147,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4153,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4269,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4281,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4299,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4304,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4404,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4415,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 4421,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 4427,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 4427,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 4427,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4666,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 4701,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 4707,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 4707,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 4725,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 4725,
+      "action": "jump",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 338,
+  "source_end_frame": 8102,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "575fc498e48f788d9073d0a4bb00f6eadf3b41038d0e82ca99352536ae2efaf6",
+  "source_frame_count": 8500,
+  "source_fps": 70.086304,
+  "original_entity_start": {
+    "rng": 1178738697,
+    "gruzzles": [
+      {
+        "gx": 52,
+        "gy": 17,
+        "type": 0,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 0
+      }
+    ],
+    "entity_timer": 0,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_used": 0
+  },
+  "original_picture_start": {
+    "picture_timers": [
+      0,
+      3,
+      5,
+      8,
+      10,
+      13,
+      15
+    ],
+    "picture_frames": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_animation_enabled": 1
+  },
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.00011917832048857236,
+  "original_clock_phase_seconds": 0.014123993657296247,
+  "synchronization_note": "Frame and IRQ phases calibrated only from idle native counters 350..419. Millisecond handoff clock; no movement states or future update schedule copied.",
+  "instruction_trace_sha256": "59744be30abd7f7f91723a9e2104aa7c635b5efa42f92447e98b33326bb996dd",
+  "original_start_background_frame": 0
+}

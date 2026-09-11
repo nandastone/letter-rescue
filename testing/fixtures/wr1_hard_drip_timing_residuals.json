@@ -1,0 +1,70 @@
+{
+  "note": "Known one-frame admission differences; state and inputs must still match. No offsets applied to comparison.",
+  "residuals": [
+    {
+      "tick": 68,
+      "native_entry_counter": 1080,
+      "clone_entry_counter": 1079
+    },
+    {
+      "tick": 74,
+      "native_entry_counter": 1115,
+      "clone_entry_counter": 1114
+    },
+    {
+      "tick": 97,
+      "native_entry_counter": 1347,
+      "clone_entry_counter": 1346
+    },
+    {
+      "tick": 100,
+      "native_entry_counter": 1364,
+      "clone_entry_counter": 1363
+    },
+    {
+      "tick": 101,
+      "native_entry_counter": 1370,
+      "clone_entry_counter": 1369
+    },
+    {
+      "tick": 102,
+      "native_entry_counter": 1376,
+      "clone_entry_counter": 1375
+    },
+    {
+      "tick": 103,
+      "native_entry_counter": 1382,
+      "clone_entry_counter": 1381
+    },
+    {
+      "tick": 106,
+      "native_entry_counter": 1399,
+      "clone_entry_counter": 1398
+    },
+    {
+      "tick": 107,
+      "native_entry_counter": 1405,
+      "clone_entry_counter": 1404
+    },
+    {
+      "tick": 108,
+      "native_entry_counter": 1411,
+      "clone_entry_counter": 1410
+    },
+    {
+      "tick": 109,
+      "native_entry_counter": 1417,
+      "clone_entry_counter": 1416
+    },
+    {
+      "tick": 110,
+      "native_entry_counter": 1423,
+      "clone_entry_counter": 1422
+    },
+    {
+      "tick": 113,
+      "native_entry_counter": 1440,
+      "clone_entry_counter": 1439
+    }
+  ]
+}

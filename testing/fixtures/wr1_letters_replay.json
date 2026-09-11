@@ -1,0 +1,88 @@
+{
+  "fps": 70,
+  "level": 1,
+  "difficulty": 0,
+  "total_frames": 602,
+  "events": [
+    {
+      "frame": 5,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 6,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 82,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 82,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 252,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 258,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 282,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 286,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 397,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 397,
+      "action": "jump",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 338,
+  "source_end_frame": 940,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "dabac934e0fc62d8051406e5bf4c65bb98d54137e68e64b16e00f3a7de642dad",
+  "source_frame_count": 940,
+  "source_fps": 70.086304,
+  "original_start_background_frame": 0,
+  "original_entity_start": {
+    "rng": 1178738697,
+    "gruzzles": [
+      {
+        "gx": 52,
+        "gy": 17,
+        "type": 0,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 0
+      }
+    ],
+    "entity_timer": 0,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_used": 0
+  },
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.00011917832048857236,
+  "original_clock_phase_seconds": 0.014123993657296247,
+  "synchronization_note": "Frame and IRQ phases calibrated only from idle native counters 350..419. Millisecond handoff clock; no movement states or future update schedule copied.",
+  "instruction_trace_sha256": "19bc569fc36b6512fb77eca215c42eb545a781c2b0a580d01d9f63706e58cac9"
+}

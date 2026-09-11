@@ -1,0 +1,22 @@
+{
+  "replay": "wr1_letters_complete_replay.json",
+  "native_capture": "testing/output/wr1_letters_roof_pixels.json",
+  "frames": [
+    {
+      "native_counter": 1317,
+      "clone_source_frame": 1316,
+      "file": "wr1_roof_frame_1317.png",
+      "sha256": "3870209c5d4a47cfcda31e51ddf42f18b92362f7a0c1c53dd4b166ac66052327",
+      "different_pixels": 0,
+      "total_pixels": 64000
+    },
+    {
+      "native_counter": 1323,
+      "clone_source_frame": 1322,
+      "file": "wr1_roof_frame_1323.png",
+      "sha256": "ebac6f6cd5ff4d966a6b7b0487a5e4bca48e3009a8dbcff080ddffabc2e3a012",
+      "different_pixels": 0,
+      "total_pixels": 64000
+    }
+  ]
+}

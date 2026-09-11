@@ -1,0 +1,62 @@
+{
+  "source_sha256": "00a1ebcf40477f3c031659ba387d46caf4f297037be99e0747bbb8e2bff00e77",
+  "instruction_trace_sha256": "d043a0e2107b71e345e4b421aa0afeeb63d3d9f40a2fd9aedd3e37e16f663577",
+  "pairs": [
+    {
+      "native_counter": 640,
+      "clone_source_frame": 639,
+      "native_file": "wr1_demo_level8_counter_000640.png",
+      "sha256": "bb8a534b3f2fe618c9779885c3325f503964253958673d55e3db472b0e93554f"
+    },
+    {
+      "native_counter": 1000,
+      "clone_source_frame": 999,
+      "native_file": "wr1_demo_level8_counter_001000.png",
+      "sha256": "5ce08998b52bfb21549d0be9d24cc5393acb26a96a46c56a7ba1e8e0effbd830"
+    },
+    {
+      "native_counter": 2000,
+      "clone_source_frame": 1999,
+      "native_file": "wr1_demo_level8_counter_002000.png",
+      "sha256": "1f55f20c87aaf684c48a519e837ab35a0022b3e03e28b19cd59649c45a225941"
+    },
+    {
+      "native_counter": 3000,
+      "clone_source_frame": 2999,
+      "native_file": "wr1_demo_level8_counter_003000.png",
+      "sha256": "950d9542bfc8e7cb00c841ebe340f059c4d22fb58dc3805c5c89410bf4ca5866"
+    },
+    {
+      "native_counter": 4000,
+      "clone_source_frame": 3999,
+      "native_file": "wr1_demo_level8_counter_004000.png",
+      "sha256": "ff07985a9dc5103d2a61dc9320a72e475edcd40bbd2962d579cc36e930b08371"
+    },
+    {
+      "native_counter": 5000,
+      "clone_source_frame": 4999,
+      "native_file": "wr1_demo_level8_counter_005000.png",
+      "sha256": "0fde4c25ea59e12314ca224f47baea4bdb41c72c5cbc3c090fd756ce6107a0e1"
+    },
+    {
+      "native_counter": 6000,
+      "clone_source_frame": 5999,
+      "native_file": "wr1_demo_level8_counter_006000.png",
+      "sha256": "f7f2c3988135b0f233499699f3c428cb62bcf79c1b3dfb0f25ecc305e0bf9139"
+    },
+    {
+      "native_counter": 7000,
+      "clone_source_frame": 6999,
+      "native_file": "wr1_demo_level8_counter_007000.png",
+      "sha256": "f7a9cb05a875aca63f7c476abdbc663a85df727d553eb228fe94a1ad4e8c669c"
+    },
+    {
+      "native_counter": 8000,
+      "clone_source_frame": 7999,
+      "native_file": "wr1_demo_level8_counter_008000.png",
+      "sha256": "5c2c4cda1655894960af53756bf2583c9a995d3cfdbad9f5f9e5f08df8aaf1ab"
+    }
+  ],
+  "initial_file": "wr1_demo_level8_counter_000635.png",
+  "initial_sha256": "69ae60be9437082e93a2983d3653590ae83ec996fc4f2d2e2e7cb7628323d78c"
+}

@@ -16,6 +16,19 @@ var slime_refill := { Difficulty.EASY: 99, Difficulty.MEDIUM: 3, Difficulty.HARD
 
 # Save data.
 var levels_completed := {}
+var progress_path := "user://save.json"
+
+# Original frontend profile/options are independent of the simplified game save.
+var original_player_name := ""
+var original_character := 1
+var original_scancodes: Array = [77, 75, 72, 80, 57]
+var original_custom_keys := false
+var original_joystick := false
+var original_sound := 0
+var original_speed_ticks := 8
+var original_joystick_center := Vector2.ZERO
+var original_pending_profile: Dictionary = {}
+var original_demo_host: Node
 
 func get_gruzzle_count() -> int:
 	return gruzzle_counts[current_difficulty]
@@ -53,14 +66,14 @@ func save_progress() -> void:
 		"high_score": high_score,
 		"levels_completed": levels_completed,
 	}
-	var file := FileAccess.open("user://save.json", FileAccess.WRITE)
+	var file := FileAccess.open(progress_path, FileAccess.WRITE)
 	if file:
 		file.store_string(JSON.stringify(save_data))
 
 func load_progress() -> void:
-	if not FileAccess.file_exists("user://save.json"):
+	if not FileAccess.file_exists(progress_path):
 		return
-	var file := FileAccess.open("user://save.json", FileAccess.READ)
+	var file := FileAccess.open(progress_path, FileAccess.READ)
 	if file:
 		var json := JSON.new()
 		if json.parse(file.get_as_text()) == OK:

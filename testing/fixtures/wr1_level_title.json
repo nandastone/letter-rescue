@@ -1,0 +1,12 @@
+{
+  "image": "wr1_level_title_02.png",
+  "image_sha256": "c3bc1e32e76f6865f885a5ed17cac3c1c1fafc383cf0a09148e504ad0e98a846",
+  "source_exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+  "source_replay": "testing/output/normal-play-20260909/native.replay",
+  "source_replay_sha256": "bfaf405c17d941eb0e1fcf810f0065b945257751c79a785b1c698f24565b4ff4",
+  "source_capture": "testing/output/normal-play-20260909/WORD-260909-085723.png",
+  "core_sha256": "c28f7bc568f3607c32640f5fa208d2ba1c72cb9334822b0b276487f1e6c23728",
+  "capture_description": "Unmodified 320x200 RetroArch screenshot of ordinary Easy girl play entering level 2 after two deaths and completing all seven level-1 matches. No teleports, cheats or memory writes. Copied byte-for-byte; not a reconstructed image.",
+  "draw_routine_file_offset": "0x8361",
+  "title_pointer_table_file_offset": "0x2500e"
+}

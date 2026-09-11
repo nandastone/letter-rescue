@@ -1,0 +1,46 @@
+{
+  "source_sha256": "4d8f16483e314a69eee9dc671f8a5a267eba6869aad7060b6bd3a81d8c18eafe",
+  "instruction_trace_sha256": "b2d4c13dd0e72d39fccc8c510afa1d0ed1d8a567922095166fcf757a9274da18",
+  "capture_file": "testing\\output\\wr1_medium_drip_pit_native.json",
+  "capture_sha256": "20e7c2cbef7260204a8ae357fc3e947b7d543716e4e5036d06dbbae21cfcd0b4",
+  "initial_file": "wr1_medium_drip_start.png",
+  "pairs": [
+    {
+      "native_counter": 800,
+      "clone_source_frame": 799,
+      "native_file": "wr1_medium_drip_counter_000800.png",
+      "sha256": "a1e8f01cb5c130c3ff223be2fc3208e2caaa6e406f544adb15f9ed5cb1ce47c5"
+    },
+    {
+      "native_counter": 900,
+      "clone_source_frame": 899,
+      "native_file": "wr1_medium_drip_counter_000900.png",
+      "sha256": "6bda1ab428670c0a7917c0aedd151db481f6014d8059b84cd33c4c5662c65323"
+    },
+    {
+      "native_counter": 964,
+      "clone_source_frame": 963,
+      "native_file": "wr1_medium_drip_counter_000964.png",
+      "sha256": "ab4ff24d613e1a823b01e20dbd0d9c34a1c711e67cc1fdcf74366a03f3b5ce93"
+    },
+    {
+      "native_counter": 1010,
+      "clone_source_frame": 1009,
+      "native_file": "wr1_medium_drip_counter_001010.png",
+      "sha256": "f52d5c9fd1d8db0cbd5d229f7f762762f5e81d662d261538bf82d3424d5fc3b1"
+    },
+    {
+      "native_counter": 1100,
+      "clone_source_frame": 1099,
+      "native_file": "wr1_medium_drip_counter_001100.png",
+      "sha256": "35c604c8f90d7e457e4b4ad1115d0ffcbbd4aadc4eeae59dce6c0d7d701a8b1b"
+    },
+    {
+      "native_counter": 1445,
+      "clone_source_frame": 1444,
+      "native_file": "wr1_medium_drip_counter_001445.png",
+      "sha256": "43f6aa84c181151ab3df851e84cff233b19e3d420755ed299a8be92f4ab4de19"
+    }
+  ],
+  "initial_sha256": "956735c85b8411cf6d9bfc359b3b6351a3e5bccfd47566541a5a9de5e01d3717"
+}

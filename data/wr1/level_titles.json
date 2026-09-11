@@ -1,0 +1,67 @@
+{
+  "source_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+  "table_file_offset": 151566,
+  "draw_routine_file_offset": 33633,
+  "titles": [
+    {
+      "heading": "Level 1",
+      "name": "Main Street: Gruzzleville"
+    },
+    {
+      "heading": "Level 2",
+      "name": "Gruzzleville Waterworks"
+    },
+    {
+      "heading": "Level 3",
+      "name": "Rock Climbing"
+    },
+    {
+      "heading": "Level 4",
+      "name": "Castle MacGruzzle: Entrance"
+    },
+    {
+      "heading": "Level 5",
+      "name": "The Island Castle"
+    },
+    {
+      "heading": "Level 6",
+      "name": "Castle Complex"
+    },
+    {
+      "heading": "Level 7",
+      "name": "Dungeon Entrance"
+    },
+    {
+      "heading": "Level 8",
+      "name": "Dungeon"
+    },
+    {
+      "heading": "Level 9",
+      "name": "The Waterfall"
+    },
+    {
+      "heading": "Level 10",
+      "name": "The Outskirts of Gruzzleville"
+    },
+    {
+      "heading": "Level 11",
+      "name": "The Pueblo 1"
+    },
+    {
+      "heading": "Level 12",
+      "name": "The Pueblo 2"
+    },
+    {
+      "heading": "Level 13",
+      "name": "Construction Site"
+    },
+    {
+      "heading": "Level 14",
+      "name": "Slime Factory: Bottling"
+    },
+    {
+      "heading": "Level 15",
+      "name": "The Tank Room"
+    }
+  ]
+}

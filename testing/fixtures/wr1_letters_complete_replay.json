@@ -1,0 +1,159 @@
+{
+  "fps": 70,
+  "level": 1,
+  "difficulty": 0,
+  "total_frames": 1962,
+  "events": [
+    {
+      "frame": 5,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 6,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 82,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 82,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 257,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 282,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 286,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 286,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 479,
+      "action": "jump",
+      "pressed": false
+    },
+    {
+      "frame": 485,
+      "action": "jump",
+      "pressed": true
+    },
+    {
+      "frame": 662,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 666,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 981,
+      "action": "move_left",
+      "pressed": true
+    },
+    {
+      "frame": 981,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 1062,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 1066,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 1462,
+      "action": "use_slime",
+      "pressed": true
+    },
+    {
+      "frame": 1466,
+      "action": "use_slime",
+      "pressed": false
+    },
+    {
+      "frame": 1653,
+      "action": "move_left",
+      "pressed": false
+    },
+    {
+      "frame": 1653,
+      "action": "jump",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 338,
+  "source_end_frame": 2300,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "6134172a7250e2c712e312932ee871ffc9f46c5eecba83a217ae0da47cd598b9",
+  "source_frame_count": 2300,
+  "source_fps": 70.086304,
+  "original_start_background_frame": 0,
+  "original_entity_start": {
+    "rng": 1178738697,
+    "gruzzles": [
+      {
+        "gx": 52,
+        "gy": 17,
+        "type": 0,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 0
+      }
+    ],
+    "entity_timer": 0,
+    "gruzzle_difficulty": 14,
+    "gruzzle_cadence": 6,
+    "slime_used": 0
+  },
+  "original_picture_start": {
+    "picture_timers": [
+      0,
+      3,
+      5,
+      8,
+      10,
+      13,
+      15
+    ],
+    "picture_frames": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_animation_enabled": 1
+  },
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.00011917832048857236,
+  "original_clock_phase_seconds": 0.014123993657296247,
+  "synchronization_note": "Frame and IRQ phases calibrated only from idle native counters 350..419. Millisecond handoff clock; no movement states or future update schedule copied.",
+  "instruction_trace_sha256": "0250e8c9836363ca9687c1447f07d6d2a39db090e0ea4387fcae9d2774ca4d12"
+}

@@ -1,0 +1,260 @@
+{
+  "note": "Known one-frame admission differences; state and inputs must still match. No offsets applied to comparison.",
+  "residuals": [
+    {
+      "tick": 61,
+      "native_entry_counter": 915,
+      "clone_entry_counter": 914
+    },
+    {
+      "tick": 66,
+      "native_entry_counter": 1068,
+      "clone_entry_counter": 1067
+    },
+    {
+      "tick": 67,
+      "native_entry_counter": 1074,
+      "clone_entry_counter": 1073
+    },
+    {
+      "tick": 68,
+      "native_entry_counter": 1080,
+      "clone_entry_counter": 1079
+    },
+    {
+      "tick": 70,
+      "native_entry_counter": 1091,
+      "clone_entry_counter": 1090
+    },
+    {
+      "tick": 71,
+      "native_entry_counter": 1097,
+      "clone_entry_counter": 1096
+    },
+    {
+      "tick": 72,
+      "native_entry_counter": 1103,
+      "clone_entry_counter": 1102
+    },
+    {
+      "tick": 73,
+      "native_entry_counter": 1109,
+      "clone_entry_counter": 1108
+    },
+    {
+      "tick": 74,
+      "native_entry_counter": 1115,
+      "clone_entry_counter": 1114
+    },
+    {
+      "tick": 76,
+      "native_entry_counter": 1126,
+      "clone_entry_counter": 1125
+    },
+    {
+      "tick": 77,
+      "native_entry_counter": 1132,
+      "clone_entry_counter": 1131
+    },
+    {
+      "tick": 78,
+      "native_entry_counter": 1138,
+      "clone_entry_counter": 1137
+    },
+    {
+      "tick": 79,
+      "native_entry_counter": 1144,
+      "clone_entry_counter": 1143
+    },
+    {
+      "tick": 80,
+      "native_entry_counter": 1150,
+      "clone_entry_counter": 1149
+    },
+    {
+      "tick": 82,
+      "native_entry_counter": 1161,
+      "clone_entry_counter": 1160
+    },
+    {
+      "tick": 83,
+      "native_entry_counter": 1167,
+      "clone_entry_counter": 1166
+    },
+    {
+      "tick": 84,
+      "native_entry_counter": 1173,
+      "clone_entry_counter": 1172
+    },
+    {
+      "tick": 85,
+      "native_entry_counter": 1179,
+      "clone_entry_counter": 1178
+    },
+    {
+      "tick": 86,
+      "native_entry_counter": 1185,
+      "clone_entry_counter": 1184
+    },
+    {
+      "tick": 89,
+      "native_entry_counter": 1202,
+      "clone_entry_counter": 1201
+    },
+    {
+      "tick": 90,
+      "native_entry_counter": 1208,
+      "clone_entry_counter": 1207
+    },
+    {
+      "tick": 91,
+      "native_entry_counter": 1214,
+      "clone_entry_counter": 1213
+    },
+    {
+      "tick": 92,
+      "native_entry_counter": 1220,
+      "clone_entry_counter": 1219
+    },
+    {
+      "tick": 95,
+      "native_entry_counter": 1237,
+      "clone_entry_counter": 1236
+    },
+    {
+      "tick": 96,
+      "native_entry_counter": 1243,
+      "clone_entry_counter": 1242
+    },
+    {
+      "tick": 97,
+      "native_entry_counter": 1249,
+      "clone_entry_counter": 1248
+    },
+    {
+      "tick": 98,
+      "native_entry_counter": 1255,
+      "clone_entry_counter": 1254
+    },
+    {
+      "tick": 101,
+      "native_entry_counter": 1272,
+      "clone_entry_counter": 1271
+    },
+    {
+      "tick": 102,
+      "native_entry_counter": 1278,
+      "clone_entry_counter": 1277
+    },
+    {
+      "tick": 103,
+      "native_entry_counter": 1284,
+      "clone_entry_counter": 1283
+    },
+    {
+      "tick": 104,
+      "native_entry_counter": 1290,
+      "clone_entry_counter": 1289
+    },
+    {
+      "tick": 105,
+      "native_entry_counter": 1296,
+      "clone_entry_counter": 1295
+    },
+    {
+      "tick": 107,
+      "native_entry_counter": 1307,
+      "clone_entry_counter": 1306
+    },
+    {
+      "tick": 108,
+      "native_entry_counter": 1313,
+      "clone_entry_counter": 1312
+    },
+    {
+      "tick": 109,
+      "native_entry_counter": 1319,
+      "clone_entry_counter": 1318
+    },
+    {
+      "tick": 110,
+      "native_entry_counter": 1325,
+      "clone_entry_counter": 1324
+    },
+    {
+      "tick": 111,
+      "native_entry_counter": 1331,
+      "clone_entry_counter": 1330
+    },
+    {
+      "tick": 113,
+      "native_entry_counter": 1342,
+      "clone_entry_counter": 1341
+    },
+    {
+      "tick": 114,
+      "native_entry_counter": 1348,
+      "clone_entry_counter": 1347
+    },
+    {
+      "tick": 115,
+      "native_entry_counter": 1354,
+      "clone_entry_counter": 1353
+    },
+    {
+      "tick": 116,
+      "native_entry_counter": 1360,
+      "clone_entry_counter": 1359
+    },
+    {
+      "tick": 117,
+      "native_entry_counter": 1366,
+      "clone_entry_counter": 1365
+    },
+    {
+      "tick": 120,
+      "native_entry_counter": 1383,
+      "clone_entry_counter": 1382
+    },
+    {
+      "tick": 121,
+      "native_entry_counter": 1389,
+      "clone_entry_counter": 1388
+    },
+    {
+      "tick": 122,
+      "native_entry_counter": 1395,
+      "clone_entry_counter": 1394
+    },
+    {
+      "tick": 123,
+      "native_entry_counter": 1401,
+      "clone_entry_counter": 1400
+    },
+    {
+      "tick": 126,
+      "native_entry_counter": 1418,
+      "clone_entry_counter": 1417
+    },
+    {
+      "tick": 127,
+      "native_entry_counter": 1424,
+      "clone_entry_counter": 1423
+    },
+    {
+      "tick": 128,
+      "native_entry_counter": 1430,
+      "clone_entry_counter": 1429
+    },
+    {
+      "tick": 129,
+      "native_entry_counter": 1436,
+      "clone_entry_counter": 1435
+    },
+    {
+      "tick": 130,
+      "native_entry_counter": 1442,
+      "clone_entry_counter": 1441
+    }
+  ]
+}

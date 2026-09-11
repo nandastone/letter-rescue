@@ -43,7 +43,15 @@
       1.0
     ]
   ],
-  "words": [],
+  "words": [
+    "rat",
+    "gun",
+    "cup",
+    "cop",
+    "hat",
+    "dog",
+    "arm"
+  ],
   "gruzzles": [
     [
       36.0,
@@ -423,7 +431,7 @@
       10.0
     ]
   ],
-  "mystery_word": "",
+  "mystery_word": "dog",
   "mystery_letters": [
     [
       50.0,

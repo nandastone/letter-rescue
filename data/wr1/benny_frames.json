@@ -1,0 +1,221 @@
+{
+  "exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+  "frames": [
+    {
+      "file": "wr1_benny_0.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1366,
+      "record": [
+        36497,
+        8789,
+        41734,
+        8789,
+        48,
+        72,
+        0,
+        0,
+        47,
+        71,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_1.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1388,
+      "record": [
+        36625,
+        8789,
+        41862,
+        8789,
+        56,
+        64,
+        48,
+        0,
+        103,
+        63,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_2.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1410,
+      "record": [
+        36753,
+        8789,
+        41990,
+        8789,
+        48,
+        64,
+        104,
+        0,
+        151,
+        63,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_3.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1432,
+      "record": [
+        36881,
+        8789,
+        42118,
+        8789,
+        48,
+        64,
+        160,
+        0,
+        207,
+        63,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_4.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1454,
+      "record": [
+        37009,
+        8789,
+        42246,
+        8789,
+        56,
+        64,
+        208,
+        0,
+        263,
+        63,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_5.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1476,
+      "record": [
+        37137,
+        8789,
+        42374,
+        8789,
+        56,
+        64,
+        0,
+        80,
+        55,
+        143,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_6.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1498,
+      "record": [
+        37265,
+        8789,
+        42502,
+        8789,
+        64,
+        64,
+        64,
+        72,
+        127,
+        135,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_7.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1520,
+      "record": [
+        37393,
+        8789,
+        42630,
+        8789,
+        64,
+        64,
+        128,
+        72,
+        191,
+        135,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_8.png",
+      "sheet": "BENNY1.WR.png",
+      "table_offset": 1542,
+      "record": [
+        37521,
+        8789,
+        42758,
+        8789,
+        88,
+        64,
+        192,
+        72,
+        279,
+        135,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_9.png",
+      "sheet": "BENNY2.WR.png",
+      "table_offset": 1564,
+      "record": [
+        37649,
+        8789,
+        42886,
+        8789,
+        88,
+        64,
+        0,
+        0,
+        87,
+        63,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_10.png",
+      "sheet": "BENNY2.WR.png",
+      "table_offset": 1586,
+      "record": [
+        37777,
+        8789,
+        43014,
+        8789,
+        88,
+        64,
+        88,
+        0,
+        175,
+        63,
+        2
+      ]
+    },
+    {
+      "file": "wr1_benny_11.png",
+      "sheet": "BENNY2.WR.png",
+      "table_offset": 1608,
+      "record": [
+        37905,
+        8789,
+        43142,
+        8789,
+        72,
+        80,
+        184,
+        0,
+        255,
+        79,
+        2
+      ]
+    }
+  ]
+}

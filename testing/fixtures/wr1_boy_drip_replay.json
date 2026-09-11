@@ -1,0 +1,202 @@
+{
+  "fps": 70,
+  "level": 14,
+  "difficulty": 1,
+  "total_frames": 886,
+  "events": [
+    {
+      "frame": 113,
+      "action": "move_right",
+      "pressed": true
+    },
+    {
+      "frame": 113,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 119,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 125,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 131,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 247,
+      "action": "move_right",
+      "pressed": false
+    },
+    {
+      "frame": 253,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 259,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 288,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 294,
+      "action": "move_down",
+      "pressed": false
+    },
+    {
+      "frame": 347,
+      "action": "move_down",
+      "pressed": true
+    },
+    {
+      "frame": 352,
+      "action": "move_down",
+      "pressed": false
+    }
+  ],
+  "source_start_frame": 560,
+  "source_end_frame": 1446,
+  "input_mapping": "DOSBox Pure Generic Keyboard Bindings, port0; frame-boundary OR",
+  "source_sha256": "f33a50e2016ecc6cde4745e6b73da5bb3f1aeaab30f5d0ac30f37af420d38c93",
+  "source_frame_count": 1900,
+  "source_fps": 70.086304,
+  "character": "boy",
+  "original_level_start": {
+    "x": 64,
+    "y": 128,
+    "gx": 5,
+    "gy": 14,
+    "camera_x": 0,
+    "camera_y": 2,
+    "phase": 16,
+    "sprite": 0,
+    "facing": 0,
+    "background_frame": 1,
+    "idle_ticks": 2,
+    "left_index": -1,
+    "right_index": -1,
+    "score": 0,
+    "words": [
+      "hat",
+      "dog",
+      "arm",
+      "bat",
+      "ant",
+      "car",
+      "run"
+    ],
+    "word_cursor": 56,
+    "mystery_index": 1,
+    "active_index": 255,
+    "word_offset": 5,
+    "picture_offset": 4,
+    "entrance_timer": 59,
+    "drips": [
+      {
+        "x": 30,
+        "y": 57,
+        "origin_y": 54,
+        "max_y": 68,
+        "frame": 1
+      },
+      {
+        "x": 50,
+        "y": 57,
+        "origin_y": 54,
+        "max_y": 68,
+        "frame": 1
+      },
+      {
+        "x": 102,
+        "y": 47,
+        "origin_y": 44,
+        "max_y": 68,
+        "frame": 1
+      }
+    ]
+  },
+  "original_entity_start": {
+    "rng": 2706979014,
+    "gruzzles": [
+      {
+        "gx": 72,
+        "gy": 20,
+        "type": 2,
+        "state": -1,
+        "animation_index": 0,
+        "jump_phase": -1,
+        "move_timer": 17
+      },
+      {
+        "gx": 31,
+        "gy": 13,
+        "type": 2,
+        "state": -1,
+        "animation_index": 1,
+        "jump_phase": -1,
+        "move_timer": 0
+      }
+    ],
+    "entity_timer": 17,
+    "gruzzle_difficulty": 6,
+    "gruzzle_cadence": 2,
+    "slime_used": 0,
+    "slime_ever_used": 0,
+    "render_page": 1,
+    "miss_timer": 0,
+    "miss_x": 0,
+    "miss_y": 0,
+    "gruzzle_move_timers": [
+      17,
+      0,
+      8,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "original_picture_start": {
+    "picture_timers": [
+      1,
+      4,
+      6,
+      0,
+      0,
+      0,
+      0
+    ],
+    "picture_frames": [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    "picture_animation_enabled": 1
+  },
+  "source_clock_quantum_seconds": 0.001,
+  "source_clock_phase_seconds": 0.0006301001690717385,
+  "original_clock_phase_seconds": 0.032476207262613244,
+  "synchronization_note": "One initial state at post-load counter 560; clock phase from idle counters 553..669. No loading-duration requirement, later state injection or resynchronization.",
+  "instruction_trace_sha256": "01e4fc17f861ce776956ac959269a6c8f7ce2d5379883cad78e7da0397f2e50f",
+  "original_video_start": {
+    "page": 1
+  }
+}

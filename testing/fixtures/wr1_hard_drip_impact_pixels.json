@@ -1,0 +1,90 @@
+{
+  "source_sha256": "89dd948d7b6158e61122f06d45b1eeceec58ad1082ab49f66c0aa8fdfcf150eb",
+  "instruction_trace_sha256": "b877ab17b8450d936f649375114c50bfa848a835f79a52df1c5fa4e58227b8b2",
+  "exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+  "core_sha256": "c28f7bc568f3607c32640f5fa208d2ba1c72cb9334822b0b276487f1e6c23728",
+  "capture_file": "testing\\output\\wr1_hard_drip_impact_complete_native.json",
+  "capture_sha256": "7e13af6c64338667489d1fbd1b6f37aff39210a906e092c965a77f90d98fd709",
+  "pairs": [
+    {
+      "native_counter": 760,
+      "clone_source_frame": 759,
+      "native_file": "wr1_hard_drip_impact_counter_000760.png",
+      "sha256": "d065710653eb3543194351d3733db452780404526cd19e4ea37901743f1b26c2"
+    },
+    {
+      "native_counter": 900,
+      "clone_source_frame": 899,
+      "native_file": "wr1_hard_drip_impact_counter_000900.png",
+      "sha256": "b2a3f041d39668e44bb2639fab6e1a574c32d7c8b4dffcf622a50a4bccf21599"
+    },
+    {
+      "native_counter": 937,
+      "clone_source_frame": 936,
+      "native_file": "wr1_hard_drip_impact_counter_000937.png",
+      "sha256": "4e631af880b829b7ab31994a2321a1c7ffbbfe62e2807922a973dade01d89eb3"
+    },
+    {
+      "native_counter": 938,
+      "clone_source_frame": 937,
+      "native_file": "wr1_hard_drip_impact_counter_000938.png",
+      "sha256": "4e631af880b829b7ab31994a2321a1c7ffbbfe62e2807922a973dade01d89eb3"
+    },
+    {
+      "native_counter": 939,
+      "clone_source_frame": 938,
+      "native_file": "wr1_hard_drip_impact_counter_000939.png",
+      "sha256": "4e631af880b829b7ab31994a2321a1c7ffbbfe62e2807922a973dade01d89eb3"
+    },
+    {
+      "native_counter": 940,
+      "clone_source_frame": 939,
+      "native_file": "wr1_hard_drip_impact_counter_000940.png",
+      "sha256": "e7a9f2ceba73c60c5c3677ae136a722a89982581f8fa13420539dbcb01e782b8"
+    },
+    {
+      "native_counter": 945,
+      "clone_source_frame": 944,
+      "native_file": "wr1_hard_drip_impact_counter_000945.png",
+      "sha256": "3a73aa1e99d6cae0c933b4626205cf91e24f98fd74d1c60d397dab4c953b2758"
+    },
+    {
+      "native_counter": 960,
+      "clone_source_frame": 959,
+      "native_file": "wr1_hard_drip_impact_counter_000960.png",
+      "sha256": "b1237842f42095249b7708ac2d22bf04b8a8f7b5bd8599aa0fe23fe1eb112e90"
+    },
+    {
+      "native_counter": 1000,
+      "clone_source_frame": 999,
+      "native_file": "wr1_hard_drip_impact_counter_001000.png",
+      "sha256": "66434c87f33e6044a3afa73bfd244aa168664423a76443108ff7b464b9a65ccb"
+    },
+    {
+      "native_counter": 1050,
+      "clone_source_frame": 1049,
+      "native_file": "wr1_hard_drip_impact_counter_001050.png",
+      "sha256": "9ddb9f7b1c3b6fa0df4880e47a5018a97d3b102b6218537c7e7418cba492d493"
+    },
+    {
+      "native_counter": 1100,
+      "clone_source_frame": 1099,
+      "native_file": "wr1_hard_drip_impact_counter_001100.png",
+      "sha256": "bd8277259604c6b0ab208deee0f465cf67b4abaae28c0eb510fe345e3bbcdab3"
+    },
+    {
+      "native_counter": 1200,
+      "clone_source_frame": 1199,
+      "native_file": "wr1_hard_drip_impact_counter_001200.png",
+      "sha256": "be18c2ccecd1a676041853dec433a519fd45850bd0211adbff2fce8f52519d59"
+    },
+    {
+      "native_counter": 1400,
+      "clone_source_frame": 1399,
+      "native_file": "wr1_hard_drip_impact_counter_001400.png",
+      "sha256": "ebaf4db15b07f040eca859c3d4609277508bc475a5c2c1ecaabea3cd500c2a2d"
+    }
+  ],
+  "initial_file": "wr1_hard_drip_impact_counter_000560.png",
+  "initial_sha256": "b4ab542d12134094f94f619d17e9f824b51c1cf2ae36f276a2e2c2c4afde397a"
+}

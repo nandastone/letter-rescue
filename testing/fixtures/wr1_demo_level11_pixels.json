@@ -1,0 +1,44 @@
+{
+  "source_sha256": "286c6760ed47c631e512face97b25145619d0c95bf4bc80c2e54b89e13a32174",
+  "instruction_trace_sha256": "33891bbee6b7b421589c309636232d207dfea4f4abfb81704834deae74564065",
+  "pairs": [
+    {
+      "native_counter": 640,
+      "clone_source_frame": 639,
+      "native_file": "wr1_demo_level11_counter_000640.png",
+      "sha256": "b6bf6c92797c90ab9d6d5952c5062b660679b74839e2ffba654da3fbb328fee6"
+    },
+    {
+      "native_counter": 1000,
+      "clone_source_frame": 999,
+      "native_file": "wr1_demo_level11_counter_001000.png",
+      "sha256": "29a9d8df3614d02c71007a56cae61680d1555e13c0319fdbc45da476a6b66300"
+    },
+    {
+      "native_counter": 1500,
+      "clone_source_frame": 1499,
+      "native_file": "wr1_demo_level11_counter_001500.png",
+      "sha256": "8a2b357f518a4e3f2a16f43546770a7a92aa4dacde83f0daf071f7f200cc61a8"
+    },
+    {
+      "native_counter": 2000,
+      "clone_source_frame": 1999,
+      "native_file": "wr1_demo_level11_counter_002000.png",
+      "sha256": "fd4b9e7ec87894d0d1cd3e24c25b94788d2eec0e0709325403df742018b931fc"
+    },
+    {
+      "native_counter": 2500,
+      "clone_source_frame": 2499,
+      "native_file": "wr1_demo_level11_counter_002500.png",
+      "sha256": "217b50ba94de1500cc5fec4e7411ff4068eedc60209000ae3b55dd8b0c05cd69"
+    },
+    {
+      "native_counter": 3000,
+      "clone_source_frame": 2999,
+      "native_file": "wr1_demo_level11_counter_003000.png",
+      "sha256": "7038f7586c20913ed6d0bc5d6bbf76c6b21111b06e4774484484a7381bc55e71"
+    }
+  ],
+  "initial_file": "wr1_demo_level11_counter_000635.png",
+  "initial_sha256": "b6bf6c92797c90ab9d6d5952c5062b660679b74839e2ffba654da3fbb328fee6"
+}

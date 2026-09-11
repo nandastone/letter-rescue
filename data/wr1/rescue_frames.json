@@ -1,0 +1,38 @@
+{
+  "exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+  "frames": [
+    {
+      "file": "wr1_rescue_down.png",
+      "page": 5,
+      "bounds_exclusive": [
+        208,
+        72,
+        272,
+        136
+      ],
+      "render_width": 64
+    },
+    {
+      "file": "wr1_rescue_girl.png",
+      "page": 2,
+      "bounds_exclusive": [
+        72,
+        128,
+        144,
+        200
+      ],
+      "render_width": 72
+    },
+    {
+      "file": "wr1_rescue_boy.png",
+      "page": 2,
+      "bounds_exclusive": [
+        0,
+        128,
+        73,
+        200
+      ],
+      "render_width": 72
+    }
+  ]
+}

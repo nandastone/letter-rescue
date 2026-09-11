@@ -1,0 +1,1529 @@
+{
+  "source_trace_sha256": "203ae48a8504810156fc7dde62a759c6e523333f9a936d5c8ca6b0e8ca85d666",
+  "cycles_per_ms": 27000,
+  "scope": "Median drawing-work estimate for this DOSBox configuration; no input frames or future update schedule.",
+  "work": {
+    "helper": {
+      "seconds": 0.002550666688999627,
+      "minimum": 0.0025490740540117258,
+      "maximum": 0.002904407412002911,
+      "samples": 33
+    },
+    "panel": {
+      "seconds": 0.0032898147999949287,
+      "minimum": 0.0032879999879951356,
+      "maximum": 0.003290037036000285,
+      "samples": 7
+    },
+    "transfer": {
+      "seconds": 0.02712166669299768,
+      "minimum": 0.027103592597006353,
+      "maximum": 0.02800240745401243,
+      "samples": 7
+    },
+    "dissolve": {
+      "seconds": 0.004351222206001693,
+      "minimum": 0.004120037034008419,
+      "maximum": 0.004366518556998926,
+      "samples": 140
+    }
+  },
+  "observations": [
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 68449.845851839,
+      "end_ms": 68452.748962939,
+      "seconds": 0.0029031111000076635
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 68532.510666668,
+      "end_ms": 68535.41507408,
+      "seconds": 0.002904407412002911
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 68615.83740741,
+      "end_ms": 68618.741814792,
+      "seconds": 0.0029044073819968616
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 68699.164592594,
+      "end_ms": 68702.068259262,
+      "seconds": 0.002903666668004007
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 68782.490999997,
+      "end_ms": 68785.330777764,
+      "seconds": 0.0028397777670033974
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 68865.818148136,
+      "end_ms": 68868.58048147,
+      "seconds": 0.002762333334001596
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 68949.149851859,
+      "end_ms": 68951.913407385,
+      "seconds": 0.0027635555260058027
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69032.471481472,
+      "end_ms": 69035.234370366,
+      "seconds": 0.002762888893994386
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69115.798148155,
+      "end_ms": 69118.562148154,
+      "seconds": 0.002763999999006046
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69199.124888889,
+      "end_ms": 69201.888888896,
+      "seconds": 0.0027640000070095995
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69282.451592594,
+      "end_ms": 69285.215333328,
+      "seconds": 0.0027637407339934725
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69365.778592587,
+      "end_ms": 69368.542259276,
+      "seconds": 0.0027636666890030028
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69449.105296299,
+      "end_ms": 69451.869296312,
+      "seconds": 0.0027640000129904364
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69532.432370365,
+      "end_ms": 69535.195629627,
+      "seconds": 0.0027632592619920614
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69615.7588889,
+      "end_ms": 69618.598407388,
+      "seconds": 0.0028395184879918814
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69699.307962954,
+      "end_ms": 69702.147666663,
+      "seconds": 0.0028397037090035155
+    },
+    {
+      "kind": "panel",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 69782.412703693,
+      "end_ms": 69785.700703681,
+      "seconds": 0.0032879999879951356
+    },
+    {
+      "kind": "panel",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 71761.422629625,
+      "end_ms": 71764.712592602,
+      "seconds": 0.003289962976996321
+    },
+    {
+      "kind": "panel",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 73740.433777779,
+      "end_ms": 73743.723074079,
+      "seconds": 0.003289296299990383
+    },
+    {
+      "kind": "panel",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 75719.443592578,
+      "end_ms": 75722.733037055,
+      "seconds": 0.0032894444770063275
+    },
+    {
+      "kind": "panel",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 77698.455370367,
+      "end_ms": 77701.745407403,
+      "seconds": 0.003290037036000285
+    },
+    {
+      "kind": "panel",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 79677.465407401,
+      "end_ms": 79680.755222201,
+      "seconds": 0.0032898147999949287
+    },
+    {
+      "kind": "panel",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 81667.554148138,
+      "end_ms": 81670.843999982,
+      "seconds": 0.003289851843990618
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 83645.902555585,
+      "end_ms": 83648.452333331,
+      "seconds": 0.002549777746011387
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 83729.229370371,
+      "end_ms": 83731.779592574,
+      "seconds": 0.0025502222030045233
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 83813.879777789,
+      "end_ms": 83816.429814816,
+      "seconds": 0.002550037027001963
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 83896.545555532,
+      "end_ms": 83899.095481485,
+      "seconds": 0.0025499259530042764
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 83979.432259262,
+      "end_ms": 83981.982814789,
+      "seconds": 0.002550555526991957
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84062.536259234,
+      "end_ms": 84065.086703703,
+      "seconds": 0.002550444469001377
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84145.863148153,
+      "end_ms": 84148.412925929,
+      "seconds": 0.002549777776002884
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84229.851148129,
+      "end_ms": 84232.401814818,
+      "seconds": 0.002550666688999627
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84312.516814828,
+      "end_ms": 84315.06611111,
+      "seconds": 0.002549296281998977
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84395.843777776,
+      "end_ms": 84398.393925935,
+      "seconds": 0.0025501481590035836
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84479.175703704,
+      "end_ms": 84481.724777758,
+      "seconds": 0.0025490740540117258
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84562.497222215,
+      "end_ms": 84565.046407409,
+      "seconds": 0.002549185194002348
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84645.823814809,
+      "end_ms": 84648.373333335,
+      "seconds": 0.002549518525993335
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84729.150555551,
+      "end_ms": 84731.700592577,
+      "seconds": 0.002550037026012433
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84812.477518529,
+      "end_ms": 84815.026703704,
+      "seconds": 0.0025491851749975467
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84895.803888917,
+      "end_ms": 84898.354518533,
+      "seconds": 0.00255062961600197
+    },
+    {
+      "kind": "helper",
+      "entry_ip": 6525,
+      "return_ip": 6786,
+      "begin_ms": 84979.794296324,
+      "end_ms": 84982.344851851,
+      "seconds": 0.002550555526991957
+    },
+    {
+      "kind": "transfer",
+      "entry_ip": 5783,
+      "return_ip": 6025,
+      "begin_ms": 69785.700999975,
+      "end_ms": 69813.053555556,
+      "seconds": 0.027352555581004707
+    },
+    {
+      "kind": "transfer",
+      "entry_ip": 5783,
+      "return_ip": 6025,
+      "begin_ms": 71764.712888896,
+      "end_ms": 71791.847407423,
+      "seconds": 0.02713451852700382
+    },
+    {
+      "kind": "transfer",
+      "entry_ip": 5783,
+      "return_ip": 6025,
+      "begin_ms": 73743.723370373,
+      "end_ms": 73770.845037066,
+      "seconds": 0.02712166669299768
+    },
+    {
+      "kind": "transfer",
+      "entry_ip": 5783,
+      "return_ip": 6025,
+      "begin_ms": 75722.733333349,
+      "end_ms": 75749.846148156,
+      "seconds": 0.02711281480699836
+    },
+    {
+      "kind": "transfer",
+      "entry_ip": 5783,
+      "return_ip": 6025,
+      "begin_ms": 77701.745703697,
+      "end_ms": 77728.849296294,
+      "seconds": 0.027103592597006353
+    },
+    {
+      "kind": "transfer",
+      "entry_ip": 5783,
+      "return_ip": 6025,
+      "begin_ms": 79680.755518496,
+      "end_ms": 79708.75792595,
+      "seconds": 0.02800240745401243
+    },
+    {
+      "kind": "transfer",
+      "entry_ip": 5783,
+      "return_ip": 6025,
+      "begin_ms": 81670.844296277,
+      "end_ms": 81697.952074073,
+      "seconds": 0.027107777795987203
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 69990.730185211,
+      "end_ms": 69994.85440743,
+      "seconds": 0.004124222219004878
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70074.723666668,
+      "end_ms": 70078.848999977,
+      "seconds": 0.004125333308998961
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70157.383555561,
+      "end_ms": 70161.735111117,
+      "seconds": 0.004351555556000676
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70240.710111082,
+      "end_ms": 70245.061814815,
+      "seconds": 0.004351703733002068
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70324.041555557,
+      "end_ms": 70328.393555552,
+      "seconds": 0.004351999994993094
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70407.363925934,
+      "end_ms": 70411.488703698,
+      "seconds": 0.004124777764009196
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70490.690222204,
+      "end_ms": 70494.814925909,
+      "seconds": 0.004124703705005232
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70574.017037038,
+      "end_ms": 70578.369074076,
+      "seconds": 0.004352037038013804
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70657.56570369,
+      "end_ms": 70661.932222247,
+      "seconds": 0.004366518556998926
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70740.673074067,
+      "end_ms": 70745.02525926,
+      "seconds": 0.004352185192998149
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70823.997222245,
+      "end_ms": 70828.132333338,
+      "seconds": 0.004135111092997249
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70907.323703706,
+      "end_ms": 70911.448814809,
+      "seconds": 0.004125111102999654
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 70991.313185185,
+      "end_ms": 70995.665222228,
+      "seconds": 0.0043520370429905595
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 71074.197518513,
+      "end_ms": 71078.54981482,
+      "seconds": 0.004352296306999051
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 71157.304074079,
+      "end_ms": 71161.655629635,
+      "seconds": 0.004351555556000676
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 71240.630814791,
+      "end_ms": 71244.754703701,
+      "seconds": 0.004123888909991365
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 71323.957370341,
+      "end_ms": 71328.081740744,
+      "seconds": 0.004124370403005741
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 71407.506481469,
+      "end_ms": 71411.859370351,
+      "seconds": 0.004352888882000115
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 71490.611333311,
+      "end_ms": 71494.964148164,
+      "seconds": 0.004352814853002201
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 71573.938111126,
+      "end_ms": 71578.289925933,
+      "seconds": 0.004351814806999755
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 71969.962111115,
+      "end_ms": 71974.08603704,
+      "seconds": 0.004123925924999639
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72053.071740739,
+      "end_ms": 72057.196111113,
+      "seconds": 0.004124370373989223
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72136.393148154,
+      "end_ms": 72140.74444443,
+      "seconds": 0.0043512962759996296
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72220.380777776,
+      "end_ms": 72224.732407391,
+      "seconds": 0.00435162961500464
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72303.052074075,
+      "end_ms": 72307.403592587,
+      "seconds": 0.004351518511990435
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72386.373370379,
+      "end_ms": 72390.496962965,
+      "seconds": 0.004123592585994629
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72469.70351851,
+      "end_ms": 72473.828481495,
+      "seconds": 0.004124962985006277
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72553.027037038,
+      "end_ms": 72557.378962964,
+      "seconds": 0.004351925925991963
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72636.353222221,
+      "end_ms": 72640.705518544,
+      "seconds": 0.004352296322991606
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72719.680037022,
+      "end_ms": 72724.032555554,
+      "seconds": 0.00435251853200316
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72803.006814815,
+      "end_ms": 72807.130222216,
+      "seconds": 0.004123407400998986
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72886.333666652,
+      "end_ms": 72890.458185196,
+      "seconds": 0.0041245185439911436
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 72969.660481453,
+      "end_ms": 72974.011851852,
+      "seconds": 0.004351370399002917
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 73052.987555563,
+      "end_ms": 73057.339148134,
+      "seconds": 0.004351592570994399
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 73136.314111114,
+      "end_ms": 73140.665222228,
+      "seconds": 0.004351111113996012
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 73219.641037047,
+      "end_ms": 73223.766296268,
+      "seconds": 0.004125259221007582
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 73302.967851877,
+      "end_ms": 73307.092407405,
+      "seconds": 0.004124555528003839
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 73386.294111103,
+      "end_ms": 73390.646666646,
+      "seconds": 0.004352555543009657
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 73469.620925903,
+      "end_ms": 73473.973481476,
+      "seconds": 0.0043525555730011545
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 73553.167185187,
+      "end_ms": 73557.517962992,
+      "seconds": 0.004350777804997051
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 73948.750925899,
+      "end_ms": 73952.876037061,
+      "seconds": 0.004125111161993118
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74032.083259262,
+      "end_ms": 74036.208111107,
+      "seconds": 0.0041248518450011035
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74115.405000001,
+      "end_ms": 74119.756740749,
+      "seconds": 0.004351740747995791
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74198.731333315,
+      "end_ms": 74203.084111109,
+      "seconds": 0.004352777794003487
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74282.062962964,
+      "end_ms": 74286.412925929,
+      "seconds": 0.004349962965003215
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74365.384962976,
+      "end_ms": 74369.507333338,
+      "seconds": 0.004122370362005313
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74448.711629629,
+      "end_ms": 74452.834851861,
+      "seconds": 0.004123222231995897
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74532.699962974,
+      "end_ms": 74537.052148148,
+      "seconds": 0.004352185173993348
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74615.365037024,
+      "end_ms": 74619.717740715,
+      "seconds": 0.004352703690994531
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74698.691481471,
+      "end_ms": 74703.040185187,
+      "seconds": 0.004348703715993906
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74782.018814815,
+      "end_ms": 74786.143296301,
+      "seconds": 0.004124481485996511
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74865.345333338,
+      "end_ms": 74869.469407409,
+      "seconds": 0.004124074070990901
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 74948.894259274,
+      "end_ms": 74953.246000007,
+      "seconds": 0.004351740732992766
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 75031.99862963,
+      "end_ms": 75036.350666672,
+      "seconds": 0.00435203704200103
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 75115.548111141,
+      "end_ms": 75119.900333345,
+      "seconds": 0.004352222203990095
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 75198.652074099,
+      "end_ms": 75202.776666641,
+      "seconds": 0.004124592542008031
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 75281.979296267,
+      "end_ms": 75286.103370368,
+      "seconds": 0.00412407410099695
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 75365.969333351,
+      "end_ms": 75370.320444435,
+      "seconds": 0.004351111084004515
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 75448.632703722,
+      "end_ms": 75452.984851837,
+      "seconds": 0.004352148114994634
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 75531.959592581,
+      "end_ms": 75536.311555564,
+      "seconds": 0.004351962982997066
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 75927.761407435,
+      "end_ms": 75931.886333346,
+      "seconds": 0.004124925911004539
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76011.315148145,
+      "end_ms": 76015.440148145,
+      "seconds": 0.004125
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76094.414481491,
+      "end_ms": 76098.766296268,
+      "seconds": 0.004351814777008258
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76177.741222203,
+      "end_ms": 76182.093592592,
+      "seconds": 0.004352370389009593
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76261.072999999,
+      "end_ms": 76265.425481468,
+      "seconds": 0.004352481469002668
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76344.394925922,
+      "end_ms": 76348.519851863,
+      "seconds": 0.004124925941010588
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76427.72214812,
+      "end_ms": 76431.847111106,
+      "seconds": 0.0041249629860103595
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76511.048333332,
+      "end_ms": 76515.399666667,
+      "seconds": 0.004351333334998344
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76594.374666661,
+      "end_ms": 76598.726481497,
+      "seconds": 0.0043518148360017226
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76677.70155555,
+      "end_ms": 76682.05248148,
+      "seconds": 0.0043509259300044505
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76761.028740741,
+      "end_ms": 76765.153148144,
+      "seconds": 0.004124407402996439
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76844.354962975,
+      "end_ms": 76848.480074078,
+      "seconds": 0.004125111102999654
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 76927.681777775,
+      "end_ms": 76932.033888888,
+      "seconds": 0.004352111113010324
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77011.008925926,
+      "end_ms": 77015.360703707,
+      "seconds": 0.0043517777810047845
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77094.55792594,
+      "end_ms": 77098.910925925,
+      "seconds": 0.004352999984999769
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77177.662148178,
+      "end_ms": 77181.786333323,
+      "seconds": 0.004124185145003139
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77260.989296317,
+      "end_ms": 77265.113703705,
+      "seconds": 0.004124407388007967
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77344.315925926,
+      "end_ms": 77348.667962968,
+      "seconds": 0.00435203704200103
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77427.642740726,
+      "end_ms": 77431.995740712,
+      "seconds": 0.0043529999859892995
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77511.19044444,
+      "end_ms": 77515.542592585,
+      "seconds": 0.0043521481450006835
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77906.994777799,
+      "end_ms": 77911.118296295,
+      "seconds": 0.004123518495995086
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 77990.104185186,
+      "end_ms": 77994.228037044,
+      "seconds": 0.004123851857992122
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78073.42592594,
+      "end_ms": 78077.776666641,
+      "seconds": 0.004350740701003815
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78156.752703726,
+      "end_ms": 78161.104999997,
+      "seconds": 0.004352296270997613
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78240.084851854,
+      "end_ms": 78244.43599999,
+      "seconds": 0.004351148136003758
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78323.406296283,
+      "end_ms": 78327.530962944,
+      "seconds": 0.00412466666099499
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78407.393999994,
+      "end_ms": 78411.517962992,
+      "seconds": 0.004123962997997296
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78490.059962962,
+      "end_ms": 78494.411777765,
+      "seconds": 0.004351814802997979
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78573.386148155,
+      "end_ms": 78577.735444427,
+      "seconds": 0.004349296272004722
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78656.713296294,
+      "end_ms": 78661.065370373,
+      "seconds": 0.0043520740790118
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78740.70129627,
+      "end_ms": 78744.826111138,
+      "seconds": 0.004124814868002431
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78823.366777778,
+      "end_ms": 78827.491037041,
+      "seconds": 0.004124259263000567
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78906.693296313,
+      "end_ms": 78911.045185186,
+      "seconds": 0.0043518888730031905
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 78990.02,
+      "end_ms": 78994.37166667,
+      "seconds": 0.004351666670001577
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 79073.346740752,
+      "end_ms": 79077.699222207,
+      "seconds": 0.004352481455003727
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 79156.673740745,
+      "end_ms": 79160.798555553,
+      "seconds": 0.004124814808004885
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 79240.00037037,
+      "end_ms": 79244.125185192,
+      "seconds": 0.004124814821989275
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 79323.327555567,
+      "end_ms": 79327.679814816,
+      "seconds": 0.004352259249004419
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 79406.654111087,
+      "end_ms": 79411.006740741,
+      "seconds": 0.004352629653993063
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 79489.9807778,
+      "end_ms": 79494.331444442,
+      "seconds": 0.004350666641999851
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 79896.19877778,
+      "end_ms": 79900.323111117,
+      "seconds": 0.004124333337007556
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 79979.752148151,
+      "end_ms": 79983.87637037,
+      "seconds": 0.004124222218990326
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80062.851888895,
+      "end_ms": 80067.201407403,
+      "seconds": 0.004349518507995526
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80146.17874074,
+      "end_ms": 80150.530629635,
+      "seconds": 0.004351888895005686
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80229.510481477,
+      "end_ms": 80233.861259282,
+      "seconds": 0.004350777804997051
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80312.832518518,
+      "end_ms": 80316.957814813,
+      "seconds": 0.004125296294994769
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80396.159444451,
+      "end_ms": 80400.283888876,
+      "seconds": 0.004124444425004185
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80479.485333323,
+      "end_ms": 80483.838148177,
+      "seconds": 0.004352814854006283
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80562.812185168,
+      "end_ms": 80567.16451852,
+      "seconds": 0.004352333351998822
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80646.138925925,
+      "end_ms": 80650.491296291,
+      "seconds": 0.004352370366003015
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80729.465555549,
+      "end_ms": 80733.589296281,
+      "seconds": 0.004123740732000442
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80812.792777777,
+      "end_ms": 80816.917962968,
+      "seconds": 0.004125185191005585
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80896.341518521,
+      "end_ms": 80900.693518519,
+      "seconds": 0.004351999997990788
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 80979.667999983,
+      "end_ms": 80984.020555556,
+      "seconds": 0.0043525555730011545
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 81062.772629619,
+      "end_ms": 81067.125185192,
+      "seconds": 0.0043525555730011545
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 81146.099703707,
+      "end_ms": 81150.223111108,
+      "seconds": 0.004123407400998986
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 81230.087629631,
+      "end_ms": 81234.211666673,
+      "seconds": 0.004124037041998235
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 81312.752925932,
+      "end_ms": 81317.105666667,
+      "seconds": 0.004352740735004772
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 81396.079999998,
+      "end_ms": 81400.42985186,
+      "seconds": 0.0043498518620035615
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 81479.406333327,
+      "end_ms": 81483.758666694,
+      "seconds": 0.004352333367001847
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 81875.212185189,
+      "end_ms": 81879.332222223,
+      "seconds": 0.004120037034008419
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 81958.541111112,
+      "end_ms": 81962.665222228,
+      "seconds": 0.0041241111159906725
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82041.862518489,
+      "end_ms": 82046.213370368,
+      "seconds": 0.00435085187900404
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82126.294,
+      "end_ms": 82130.646333337,
+      "seconds": 0.00435233333701035
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82208.52118516,
+      "end_ms": 82212.873777807,
+      "seconds": 0.004352592647002894
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82291.842888892,
+      "end_ms": 82295.968185186,
+      "seconds": 0.0041252962939906865
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82375.170148149,
+      "end_ms": 82379.294888884,
+      "seconds": 0.0041247407350019786
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82458.496370375,
+      "end_ms": 82462.848074079,
+      "seconds": 0.0043517037040001014
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82542.483666658,
+      "end_ms": 82546.835037053,
+      "seconds": 0.0043513703950011405
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82625.149925932,
+      "end_ms": 82629.50137037,
+      "seconds": 0.0043514444379979976
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82708.476296306,
+      "end_ms": 82712.600777805,
+      "seconds": 0.004124481498991372
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82791.805740714,
+      "end_ms": 82795.930259287,
+      "seconds": 0.004124518572993111
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82875.13029629,
+      "end_ms": 82879.482296288,
+      "seconds": 0.0043519999980053395
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 82958.456962973,
+      "end_ms": 82962.80929631,
+      "seconds": 0.00435233333701035
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 83041.783518493,
+      "end_ms": 83046.135592595,
+      "seconds": 0.004352074102003826
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 83125.332370371,
+      "end_ms": 83129.457518518,
+      "seconds": 0.004125148146995343
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 83208.437296301,
+      "end_ms": 83212.560555577,
+      "seconds": 0.004123259276006138
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 83291.763999999,
+      "end_ms": 83296.116592593,
+      "seconds": 0.0043525925939902664
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 83375.753296316,
+      "end_ms": 83380.106074072,
+      "seconds": 0.004352777755993884
+    },
+    {
+      "kind": "dissolve",
+      "entry_ip": 6109,
+      "return_ip": 6320,
+      "begin_ms": 83458.417555541,
+      "end_ms": 83462.77059257,
+      "seconds": 0.004353037028995459
+    }
+  ]
+}

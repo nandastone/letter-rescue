@@ -1,6 +1,13 @@
 extends Control
 
 func _ready() -> void:
+	if "--original-rules" in OS.get_cmdline_user_args() and InputReplay.mode != InputReplay.Mode.REPLAYING:
+		$Background.hide()
+		$VBoxContainer.hide()
+		var frontend := preload("res://scripts/wr1_frontend.gd").new()
+		add_child(frontend)
+		frontend.begin()
+		return
 	$VBoxContainer/PlayButton.pressed.connect(_on_play)
 	$VBoxContainer/DifficultyButton.pressed.connect(_on_cycle_difficulty)
 	_update_difficulty_label()

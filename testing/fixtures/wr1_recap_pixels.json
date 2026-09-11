@@ -1,0 +1,26 @@
+{
+  "source_replay_sha256": "575fc498e48f788d9073d0a4bb00f6eadf3b41038d0e82ca99352536ae2efaf6",
+  "pairs": [
+    {
+      "native_counter": 4887,
+      "clone_source_frame": 4886,
+      "native_file": "wr1_recap_frame_4887.png",
+      "sha256": "9afaa9800975e8bb0085fbfc527c41db2fca071a03c14929dc863ddea31109a6",
+      "differing_pixels": 0
+    },
+    {
+      "native_counter": 4894,
+      "clone_source_frame": 4893,
+      "native_file": "wr1_recap_frame_4894.png",
+      "sha256": "61d46ddb291d54d1843b74eb015151272e0e568bfddab5aac2d0896188a5a9a8",
+      "differing_pixels": 0
+    },
+    {
+      "native_counter": 4905,
+      "clone_source_frame": 4904,
+      "native_file": "wr1_recap_frame_4905.png",
+      "sha256": "1bb866890e5c52a07dce4ad4732bed56b561f6c67069833e4c78d3b4e15d51d0",
+      "differing_pixels": 0
+    }
+  ]
+}

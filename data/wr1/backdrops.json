@@ -1,0 +1,14 @@
+[
+  {
+    "index": 3,
+    "source": "assets/extracted/wr1_1_png/DROP3.WR.png",
+    "source_sha256": "e5185176710c10c44c925325c8934eddbe99cb7c2af0bca617dae4361fbbdcc0",
+    "output": "assets/tiles/backdrop_3.png"
+  },
+  {
+    "index": 4,
+    "source": "assets/extracted/wr1_1_png/DROP4.WR.png",
+    "source_sha256": "47b22874e8b8d58a2ac29bb950c7bd09b5233d9d0544d8c6465dc355ad18178d",
+    "output": "assets/tiles/backdrop_4.png"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "source_replay_sha256": "fefeaa9937fdb0d6909af70b91e7b78c9792b63b2d21e6601c33184419b187b2",
+  "native_counter": 6500,
+  "clone_source_frame": 6499,
+  "native_file": "wr1_level2_frame_6500.png",
+  "sha256": "66381ae7c709e0ff383498885a3aee01c179784a19f0fe3b629db792a3b286c3",
+  "differing_pixels": 0,
+  "scope": "Same input-frame screenshot; scene is stable at adjacent samples. Does not imply map-loader timing parity."
+}

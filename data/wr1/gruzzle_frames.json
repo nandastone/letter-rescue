@@ -1,0 +1,537 @@
+{
+  "exe_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+  "frames": [
+    {
+      "kind": "gruzzle",
+      "index": 0,
+      "table_offset": 1828,
+      "record": [
+        44940,
+        8789,
+        47499,
+        8789,
+        24,
+        24,
+        16,
+        120,
+        39,
+        143,
+        5
+      ],
+      "file": "wr1_gruzzle_0.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 1,
+      "table_offset": 1850,
+      "record": [
+        45068,
+        8789,
+        47627,
+        8789,
+        24,
+        24,
+        40,
+        120,
+        63,
+        143,
+        5
+      ],
+      "file": "wr1_gruzzle_1.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 2,
+      "table_offset": 1872,
+      "record": [
+        45196,
+        8789,
+        47755,
+        8789,
+        24,
+        24,
+        64,
+        120,
+        87,
+        143,
+        5
+      ],
+      "file": "wr1_gruzzle_2.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 3,
+      "table_offset": 1894,
+      "record": [
+        45324,
+        8789,
+        47883,
+        8789,
+        24,
+        24,
+        88,
+        120,
+        111,
+        143,
+        5
+      ],
+      "file": "wr1_gruzzle_3.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 4,
+      "table_offset": 1916,
+      "record": [
+        45452,
+        8789,
+        48011,
+        8789,
+        24,
+        24,
+        112,
+        120,
+        135,
+        143,
+        5
+      ],
+      "file": "wr1_gruzzle_4.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 5,
+      "table_offset": 1938,
+      "record": [
+        45580,
+        8789,
+        48139,
+        8789,
+        24,
+        24,
+        136,
+        120,
+        159,
+        143,
+        5
+      ],
+      "file": "wr1_gruzzle_5.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 6,
+      "table_offset": 1960,
+      "record": [
+        45708,
+        8789,
+        48267,
+        8789,
+        24,
+        24,
+        160,
+        120,
+        183,
+        143,
+        5
+      ],
+      "file": "wr1_gruzzle_6.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 7,
+      "table_offset": 1982,
+      "record": [
+        45836,
+        8789,
+        48395,
+        8789,
+        24,
+        24,
+        184,
+        120,
+        207,
+        143,
+        5
+      ],
+      "file": "wr1_gruzzle_7.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 8,
+      "table_offset": 2004,
+      "record": [
+        45964,
+        8789,
+        48523,
+        8789,
+        24,
+        24,
+        16,
+        144,
+        39,
+        167,
+        5
+      ],
+      "file": "wr1_gruzzle_8.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 9,
+      "table_offset": 2026,
+      "record": [
+        46092,
+        8789,
+        48651,
+        8789,
+        24,
+        24,
+        40,
+        144,
+        63,
+        167,
+        5
+      ],
+      "file": "wr1_gruzzle_9.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 10,
+      "table_offset": 2048,
+      "record": [
+        46220,
+        8789,
+        48779,
+        8789,
+        24,
+        24,
+        64,
+        144,
+        87,
+        167,
+        5
+      ],
+      "file": "wr1_gruzzle_10.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 11,
+      "table_offset": 2070,
+      "record": [
+        46348,
+        8789,
+        48907,
+        8789,
+        24,
+        24,
+        88,
+        144,
+        131,
+        167,
+        5
+      ],
+      "file": "wr1_gruzzle_11.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 12,
+      "table_offset": 2092,
+      "record": [
+        46476,
+        8789,
+        49035,
+        8789,
+        24,
+        24,
+        112,
+        144,
+        135,
+        167,
+        5
+      ],
+      "file": "wr1_gruzzle_12.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 13,
+      "table_offset": 2114,
+      "record": [
+        46604,
+        8789,
+        49163,
+        8789,
+        24,
+        24,
+        136,
+        144,
+        159,
+        167,
+        5
+      ],
+      "file": "wr1_gruzzle_13.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 14,
+      "table_offset": 2136,
+      "record": [
+        46732,
+        8789,
+        49291,
+        8789,
+        24,
+        24,
+        160,
+        144,
+        183,
+        167,
+        5
+      ],
+      "file": "wr1_gruzzle_14.png"
+    },
+    {
+      "kind": "gruzzle",
+      "index": 15,
+      "table_offset": 2158,
+      "record": [
+        46860,
+        8789,
+        49419,
+        8789,
+        24,
+        24,
+        184,
+        144,
+        207,
+        167,
+        5
+      ],
+      "file": "wr1_gruzzle_15.png"
+    },
+    {
+      "kind": "slime",
+      "index": 0,
+      "table_offset": 1630,
+      "record": [
+        34451,
+        8789,
+        40582,
+        8789,
+        32,
+        40,
+        0,
+        80,
+        31,
+        119,
+        2
+      ],
+      "file": "wr1_slime_0.png"
+    },
+    {
+      "kind": "slime",
+      "index": 1,
+      "table_offset": 1652,
+      "record": [
+        34579,
+        8789,
+        40710,
+        8789,
+        32,
+        40,
+        32,
+        80,
+        63,
+        119,
+        2
+      ],
+      "file": "wr1_slime_1.png"
+    },
+    {
+      "kind": "slime",
+      "index": 2,
+      "table_offset": 1674,
+      "record": [
+        34707,
+        8789,
+        40838,
+        8789,
+        32,
+        56,
+        64,
+        80,
+        95,
+        135,
+        2
+      ],
+      "file": "wr1_slime_2.png"
+    },
+    {
+      "kind": "slime",
+      "index": 3,
+      "table_offset": 1696,
+      "record": [
+        34835,
+        8789,
+        40966,
+        8789,
+        32,
+        72,
+        96,
+        80,
+        127,
+        151,
+        2
+      ],
+      "file": "wr1_slime_3.png"
+    },
+    {
+      "kind": "slime",
+      "index": 4,
+      "table_offset": 1718,
+      "record": [
+        34963,
+        8789,
+        41094,
+        8789,
+        32,
+        80,
+        128,
+        80,
+        159,
+        159,
+        2
+      ],
+      "file": "wr1_slime_4.png"
+    },
+    {
+      "kind": "slime",
+      "index": 5,
+      "table_offset": 1740,
+      "record": [
+        35091,
+        8789,
+        41222,
+        8789,
+        32,
+        88,
+        160,
+        80,
+        191,
+        167,
+        2
+      ],
+      "file": "wr1_slime_5.png"
+    },
+    {
+      "kind": "slime",
+      "index": 6,
+      "table_offset": 1762,
+      "record": [
+        35219,
+        8789,
+        41350,
+        8789,
+        32,
+        88,
+        192,
+        80,
+        223,
+        167,
+        2
+      ],
+      "file": "wr1_slime_6.png"
+    },
+    {
+      "kind": "slime",
+      "index": 7,
+      "table_offset": 1784,
+      "record": [
+        35347,
+        8789,
+        41478,
+        8789,
+        32,
+        24,
+        224,
+        80,
+        255,
+        103,
+        2
+      ],
+      "file": "wr1_slime_7.png"
+    },
+    {
+      "kind": "slime",
+      "index": 8,
+      "table_offset": 1806,
+      "record": [
+        35475,
+        8789,
+        41606,
+        8789,
+        40,
+        40,
+        256,
+        80,
+        295,
+        119,
+        2
+      ],
+      "file": "wr1_slime_8.png"
+    },
+    {
+      "kind": "drip",
+      "index": 0,
+      "table_offset": 3324,
+      "record": [
+        34067,
+        8789,
+        43398,
+        8789,
+        16,
+        24,
+        304,
+        16,
+        319,
+        39,
+        2
+      ],
+      "file": "wr1_drip_0.png"
+    },
+    {
+      "kind": "drip",
+      "index": 1,
+      "table_offset": 3346,
+      "record": [
+        34195,
+        8789,
+        43526,
+        8789,
+        16,
+        16,
+        304,
+        0,
+        319,
+        15,
+        2
+      ],
+      "file": "wr1_drip_1.png"
+    },
+    {
+      "kind": "drip",
+      "index": 2,
+      "table_offset": 3368,
+      "record": [
+        34323,
+        8789,
+        43654,
+        8789,
+        16,
+        16,
+        288,
+        0,
+        303,
+        15,
+        2
+      ],
+      "file": "wr1_drip_2.png"
+    }
+  ]
+}

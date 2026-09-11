@@ -1,0 +1,751 @@
+{
+  "WR1.7": [
+    {
+      "rect": [
+        72,
+        48,
+        177,
+        39
+      ],
+      "background": "000000",
+      "text": "APOGEE",
+      "color": "aa0000",
+      "pixels": 29
+    },
+    {
+      "rect": [
+        118,
+        89,
+        91,
+        15
+      ],
+      "background": "000000",
+      "text": "PRESENTS",
+      "color": "aa0000",
+      "pixels": 10
+    },
+    {
+      "rect": [
+        54,
+        191,
+        210,
+        9
+      ],
+      "background": "000000",
+      "text": "MEMBER SOFTWARE PUBLISHERS ASSOCIATION (SPA)",
+      "pixels": 6
+    }
+  ],
+  "WR1.20": [
+    {
+      "rect": [
+        29,
+        53,
+        145,
+        52
+      ],
+      "background": "5555ff",
+      "text": "This is a\nKaren Crowther\nBud Pembroke\nProduction",
+      "pixels": 10
+    }
+  ],
+  "WR1.21": [
+    {
+      "rect": [
+        134,
+        0,
+        186,
+        152
+      ],
+      "background": "55ffff",
+      "text": ""
+    },
+    {
+      "rect": [
+        134,
+        25,
+        176,
+        127
+      ],
+      "background": "5555ff",
+      "text": ""
+    },
+    {
+      "rect": [
+        130,
+        0,
+        4,
+        19
+      ],
+      "background": "55ffff",
+      "text": ""
+    },
+    {
+      "rect": [
+        130,
+        25,
+        4,
+        7
+      ],
+      "background": "5555ff",
+      "text": ""
+    },
+    {
+      "rect": [
+        130,
+        19,
+        185,
+        1
+      ],
+      "background": "00aaaa",
+      "text": ""
+    },
+    {
+      "rect": [
+        130,
+        20,
+        185,
+        1
+      ],
+      "background": "ffffff",
+      "text": ""
+    },
+    {
+      "rect": [
+        130,
+        21,
+        185,
+        1
+      ],
+      "background": "000000",
+      "text": ""
+    },
+    {
+      "rect": [
+        130,
+        22,
+        185,
+        1
+      ],
+      "background": "aaaaaa",
+      "text": ""
+    },
+    {
+      "rect": [
+        130,
+        23,
+        185,
+        1
+      ],
+      "background": "00aaaa",
+      "text": ""
+    },
+    {
+      "rect": [
+        130,
+        24,
+        185,
+        1
+      ],
+      "background": "0000aa",
+      "text": ""
+    },
+    {
+      "rect": [
+        310,
+        25,
+        1,
+        127
+      ],
+      "background": "55ffff",
+      "text": ""
+    },
+    {
+      "rect": [
+        311,
+        25,
+        1,
+        127
+      ],
+      "background": "ffffff",
+      "text": ""
+    },
+    {
+      "rect": [
+        312,
+        25,
+        1,
+        127
+      ],
+      "background": "000000",
+      "text": ""
+    },
+    {
+      "rect": [
+        313,
+        25,
+        1,
+        127
+      ],
+      "background": "aaaaaa",
+      "text": ""
+    },
+    {
+      "rect": [
+        314,
+        25,
+        1,
+        127
+      ],
+      "background": "000000",
+      "text": ""
+    },
+    {
+      "rect": [
+        140,
+        27,
+        165,
+        102
+      ],
+      "background": "5555ff",
+      "text": "Word\nRescue",
+      "color": "ffff55",
+      "pixels": 33
+    },
+    {
+      "rect": [
+        143,
+        133,
+        167,
+        18
+      ],
+      "background": "ffff55",
+      "text": "Part 1",
+      "color": "aa0000",
+      "pixels": 14
+    }
+  ],
+  "WR1.22": [
+    {
+      "rect": [
+        24,
+        51,
+        203,
+        16
+      ],
+      "background": "5555ff",
+      "text": "Word Rescue",
+      "color": "55ffff",
+      "pixels": 12
+    },
+    {
+      "rect": [
+        24,
+        67,
+        204,
+        83
+      ],
+      "background": "5555ff",
+      "text": "Program copyright © Karen Crowther 1992\nArt copyright © Bud Pembroke 1992\nPortions © copyright Genus Micro-\nprogramming, Inc. 1988–1991\nMusic copyright © 1992 Voyetra\nTechnologies\nAll rights reserved",
+      "pixels": 8,
+      "align": "left"
+    }
+  ],
+  "WR1.23": [
+    {
+      "rect": [
+        45,
+        58,
+        111,
+        39
+      ],
+      "background": "5555ff",
+      "text": "One moment\nplease",
+      "pixels": 12
+    }
+  ],
+  "WR1.24": [
+    {
+      "rect": [
+        32,
+        58,
+        137,
+        26
+      ],
+      "background": "aa0000",
+      "text": "Hello, I'm Benny\nBookworm.",
+      "pixels": 10,
+      "align": "left"
+    },
+    {
+      "rect": [
+        32,
+        100,
+        131,
+        17
+      ],
+      "background": "aa0000",
+      "text": "What is your name?",
+      "pixels": 10,
+      "align": "left"
+    }
+  ],
+  "WR1.25": [
+    {
+      "rect": [
+        17,
+        9,
+        128,
+        13
+      ],
+      "background": "aa0000",
+      "text": "Nice to meet you.",
+      "pixels": 9
+    },
+    {
+      "rect": [
+        17,
+        26,
+        128,
+        13
+      ],
+      "background": "aa0000",
+      "text": "Pick your character.",
+      "pixels": 9
+    },
+    {
+      "rect": [
+        59,
+        55,
+        43,
+        17
+      ],
+      "background": "aa0000",
+      "text": "←   →",
+      "pixels": 10
+    },
+    {
+      "rect": [
+        17,
+        89,
+        128,
+        17
+      ],
+      "background": "aa0000",
+      "text": "(Then press enter.)",
+      "pixels": 9
+    }
+  ],
+  "WR1.26": [
+    {
+      "rect": [
+        61,
+        5,
+        49,
+        20
+      ],
+      "background": "aa0000",
+      "text": "Hi!",
+      "pixels": 16
+    },
+    {
+      "rect": [
+        32,
+        24,
+        113,
+        25
+      ],
+      "background": "aa0000",
+      "text": "I remember you.\nYou have",
+      "pixels": 9
+    },
+    {
+      "rect": [
+        41,
+        68,
+        91,
+        14
+      ],
+      "background": "aa0000",
+      "text": "points at level",
+      "pixels": 9
+    }
+  ],
+  "WR1.30": [
+    {
+      "rect": [
+        58,
+        10,
+        208,
+        28
+      ],
+      "background": "ff5555",
+      "text": "The Story",
+      "pixels": 20
+    },
+    {
+      "rect": [
+        62,
+        36,
+        208,
+        66
+      ],
+      "background": "ff5555",
+      "text": "The mean ol' Gruzzles can't read,\nand they don't want anyone else\nto be able to read. They are\nstealing the words out of all\nthe books.",
+      "pixels": 10,
+      "align": "left",
+      "erase": [
+        [
+          62,
+          36,
+          208,
+          49
+        ],
+        [
+          62,
+          85,
+          180,
+          17
+        ]
+      ]
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "background": "aa0000",
+      "text": "Press a key",
+      "pixels": 8
+    }
+  ],
+  "WR1.31": [
+    {
+      "rect": [
+        54,
+        10,
+        215,
+        92
+      ],
+      "background": "ff5555",
+      "text": "Benny Bookworm needs your help\nto stop the Gruzzles. He needs you\nto reunite the words with their\nmeanings. Once you join all the\nwords with their pictures, Benny\nwill magically put them back into\nthe books.",
+      "pixels": 10,
+      "align": "left"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "background": "aa0000",
+      "text": "Press a key",
+      "pixels": 8
+    },
+    {
+      "rect": [
+        111,
+        123,
+        40,
+        10
+      ],
+      "background": "ffffff",
+      "text": "duck",
+      "color": "000000",
+      "pixels": 8
+    }
+  ],
+  "WR1.32": [
+    {
+      "rect": [
+        53,
+        8,
+        217,
+        42
+      ],
+      "background": "ff5555",
+      "text": "Then Benny will reveal a key\nthat will open the door to the next\nlevel - but you must find the door.",
+      "pixels": 10,
+      "align": "left"
+    },
+    {
+      "rect": [
+        122,
+        59,
+        145,
+        40
+      ],
+      "background": "ff5555",
+      "text": "Benny is your friend,\nand he will protect\nyou. But...",
+      "pixels": 10,
+      "align": "left"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "background": "aa0000",
+      "text": "Press a key",
+      "pixels": 8
+    }
+  ],
+  "WR1.33": [
+    {
+      "rect": [
+        53,
+        8,
+        217,
+        96
+      ],
+      "background": "ff5555",
+      "text": "Stay away from the Gruzzles. If\nthey catch you, they will take any\nwords you have. If you get close\nto a Gruzzle, point him out to Benny\nby pressing the SPACEBAR. Benny\nwill slime him for you, and\nthen - NO PROBLEM.",
+      "pixels": 10,
+      "align": "left"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "background": "aa0000",
+      "text": "Press a key",
+      "pixels": 8
+    }
+  ],
+  "WR1.34": [
+    {
+      "rect": [
+        53,
+        8,
+        217,
+        96
+      ],
+      "background": "ff5555",
+      "text": "Be careful. Benny only has a few\nbuckets of slime. Each time you\nmake a mistake and try to join\nthe wrong picture with a word,\na new Gruzzle will appear.\n\nPress the W to see a list of words\nand their pictures or H for help.",
+      "pixels": 9,
+      "align": "left"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "background": "aa0000",
+      "text": "Press a key",
+      "pixels": 8
+    }
+  ],
+  "WR1.10": [
+    {
+      "rect": [
+        71,
+        14,
+        185,
+        28
+      ],
+      "background": "ff5555",
+      "text": "Great Work!",
+      "pixels": 19
+    },
+    {
+      "rect": [
+        76,
+        44,
+        172,
+        55
+      ],
+      "background": "ff5555",
+      "text": "You have rescued all\nthe words and saved\nthe books.",
+      "pixels": 12,
+      "align": "left"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "background": "aa0000",
+      "text": "Press a key",
+      "pixels": 8
+    },
+    {
+      "rect": [
+        11,
+        123,
+        47,
+        20
+      ],
+      "background": "ffffff",
+      "text": "Thank\nyou!",
+      "color": "000000",
+      "pixels": 8
+    }
+  ],
+  "WR1.11": [
+    {
+      "rect": [
+        180,
+        14,
+        127,
+        126
+      ],
+      "background": "ffffff",
+      "text": "Oh oh! More stolen\nwords have been\nfound in the\nGRUZZLED CAVES.\nAre you brave\nenough to enter the\ncaves in part 2?\nDon't miss:\nnew words,\nnew levels,\nnew fun.",
+      "color": "0000aa",
+      "pixels": 9
+    },
+    {
+      "rect": [
+        145,
+        170,
+        30,
+        7
+      ],
+      "background": "ffffff",
+      "text": "DANGER",
+      "color": "aa0000",
+      "pixels": 5
+    }
+  ],
+  "WR1.12": [
+    {
+      "rect": [
+        20,
+        16,
+        165,
+        86
+      ],
+      "background": "ffffff",
+      "text": "But wait! The Gruzzles\nare hiding out in the old\nHAUNTED HOUSE.\n\nDo you dare face the\nspooky ghosts in part 3?\n\nMore words. More levels.\nEVEN MORE FUN!",
+      "color": "000000",
+      "pixels": 7
+    }
+  ],
+  "MENU.WR": [
+    {
+      "rect": [
+        7,
+        4,
+        181,
+        15
+      ],
+      "background": "ff5555",
+      "text": "Menu",
+      "pixels": 11
+    }
+  ],
+  "HEADING_DIFFICULTY": [
+    {
+      "rect": [
+        1,
+        4,
+        143,
+        15
+      ],
+      "background": "ff5555",
+      "text": "Pick Difficulty",
+      "pixels": 11
+    }
+  ],
+  "HEADING_REDEFINE": [
+    {
+      "rect": [
+        1,
+        4,
+        143,
+        15
+      ],
+      "background": "ff5555",
+      "text": "Redefine Keys",
+      "pixels": 11
+    }
+  ],
+  "HELP.WR": [
+    {
+      "rect": [
+        7,
+        4,
+        153,
+        15
+      ],
+      "background": "ff5555",
+      "text": "Help Screen",
+      "pixels": 11
+    },
+    {
+      "rect": [
+        9,
+        26,
+        147,
+        137
+      ],
+      "background": "ffffff",
+      "text": "",
+      "pixels": 8
+    },
+    {
+      "rect": [
+        9,
+        26,
+        64,
+        13
+      ],
+      "background": "ffffff",
+      "text": "Key",
+      "color": "ff5555",
+      "pixels": 9,
+      "align": "left"
+    },
+    {
+      "rect": [
+        85,
+        26,
+        72,
+        13
+      ],
+      "background": "ffffff",
+      "text": "Action",
+      "color": "ff5555",
+      "pixels": 9,
+      "align": "left"
+    },
+    {
+      "rect": [
+        9,
+        39,
+        76,
+        123
+      ],
+      "background": "ffffff",
+      "text": "→\n←\n↓\n↑ / Ctrl\nSpace / Alt\n+\n−\nS\nW\nH\nEsc\nQ",
+      "color": "aa0000",
+      "pixels": 8,
+      "align": "left"
+    },
+    {
+      "rect": [
+        85,
+        39,
+        73,
+        123
+      ],
+      "background": "ffffff",
+      "text": "go right\ngo left\ngo down\njump, climb\nslime\nspeed up\nslow down\nsound\nword list\nhelp\nmenu / return\nquit",
+      "color": "000000",
+      "pixels": 8,
+      "align": "left"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "note": "Known one-frame admission differences; state and inputs must still match. No offsets applied to comparison.",
+  "residuals": [
+    {
+      "tick": 61,
+      "native_entry_counter": 915,
+      "clone_entry_counter": 914
+    },
+    {
+      "tick": 66,
+      "native_entry_counter": 1142,
+      "clone_entry_counter": 1141
+    },
+    {
+      "tick": 67,
+      "native_entry_counter": 1148,
+      "clone_entry_counter": 1147
+    },
+    {
+      "tick": 68,
+      "native_entry_counter": 1154,
+      "clone_entry_counter": 1153
+    },
+    {
+      "tick": 69,
+      "native_entry_counter": 1160,
+      "clone_entry_counter": 1159
+    },
+    {
+      "tick": 70,
+      "native_entry_counter": 1166,
+      "clone_entry_counter": 1165
+    },
+    {
+      "tick": 73,
+      "native_entry_counter": 1183,
+      "clone_entry_counter": 1182
+    }
+  ]
+}

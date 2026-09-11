@@ -1,0 +1,31 @@
+{
+  "source_trace_sha256": "203ae48a8504810156fc7dde62a759c6e523333f9a936d5c8ca6b0e8ca85d666",
+  "cycles_per_ms": 27000,
+  "scope": "Median drawing-work estimate for this DOSBox configuration; no input frames or future update schedule.",
+  "work": {
+    "helper": {
+      "seconds": 0.002550666688999627,
+      "minimum": 0.0025490740540117258,
+      "maximum": 0.002904407412002911,
+      "samples": 33
+    },
+    "panel": {
+      "seconds": 0.0032898147999949287,
+      "minimum": 0.0032879999879951356,
+      "maximum": 0.003290037036000285,
+      "samples": 7
+    },
+    "transfer": {
+      "seconds": 0.02712166669299768,
+      "minimum": 0.027103592597006353,
+      "maximum": 0.02800240745401243,
+      "samples": 7
+    },
+    "dissolve": {
+      "seconds": 0.004351222206001693,
+      "minimum": 0.004120037034008419,
+      "maximum": 0.004366518556998926,
+      "samples": 140
+    }
+  }
+}

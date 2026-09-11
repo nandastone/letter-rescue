@@ -1,0 +1,25 @@
+{
+  "source_trace_sha256": "a0631add30f3112e083308873d5ac3785e695d36b760caa977912394ac7ea6ae",
+  "cycles_per_ms": 27000,
+  "scope": "IRQ-free workload after world rendering, excluding two Benny blits. One common estimate per operation, independent of level and demo. Dissolve pixel writes and outlined panel drawing are estimates; world, text and Benny work come from recovered routines.",
+  "work": {
+    "helper": {
+      "seconds": 1.2962962966412306e-05,
+      "minimum": 1.2962902954313905e-05,
+      "maximum": 1.2963023007614539e-05,
+      "samples": 33
+    },
+    "panel": {
+      "seconds": 0.0006011481579917018,
+      "minimum": 0.0006008888740034309,
+      "maximum": 0.0006012592570041306,
+      "samples": 7
+    },
+    "dissolve": {
+      "seconds": 0.0014356296115001898,
+      "minimum": 0.0014323333490174263,
+      "maximum": 0.0014360370619979222,
+      "samples": 140
+    }
+  }
+}
