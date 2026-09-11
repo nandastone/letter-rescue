@@ -32,8 +32,9 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
 
 Every push to `main` that touches the game publishes a web build to
 <https://nandastone.github.io/letter-rescue/> (see `.github/workflows/web.yml`).
-It always runs the original rules; add URL flags for the other options, e.g.
-`?clear-text`, `?skip-intro` or `?mute-original-audio` (combine with `&`).
+It always runs the original rules with Clear Text (see below). URL flags:
+`?pixel-text` for the original pixel display, `?skip-intro`, or
+`?mute-original-audio` (combine with `&`).
 In Chrome, the install icon in the address bar adds it as an app. `just web`
 builds the same thing locally into `build/web/`.
 
