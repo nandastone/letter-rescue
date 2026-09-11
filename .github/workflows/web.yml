@@ -31,6 +31,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       # testing/ holds ~300 MB of parity evidence the game never loads; tools/
       # is needed only for the smoke test, which does not ship.
@@ -71,8 +72,9 @@ jobs:
       # The demo parity suite covers legacy only (it needs testing/ and a GPU).
       # This is the default game's gate: it runs, and motion is drawn smoothly.
       - name: Smoke-test the default game
+        timeout-minutes: 5
         run: |
-          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd
+          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd -- --original-seed 20716
           "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd -- --replay data/wr1/demos/level1.json
 
       - name: Export

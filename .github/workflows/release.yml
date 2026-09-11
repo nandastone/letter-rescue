@@ -16,6 +16,7 @@ env:
 jobs:
   desktop:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
         with:
@@ -55,8 +56,9 @@ jobs:
           "$RUNNER_TEMP/godot" --headless --import
 
       - name: Smoke-test the default game
+        timeout-minutes: 5
         run: |
-          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd
+          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd -- --original-seed 20716
 
       # Desktop ships both games: it starts the default one, and `--legacy`
       # (after a bare `--`) runs the pixel-exact original.
