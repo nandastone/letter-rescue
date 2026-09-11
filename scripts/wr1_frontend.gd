@@ -43,8 +43,10 @@ func begin(kind: String = "startup", live_game: Node = null) -> void:
 	game = live_game
 	first_player = kind == "startup"
 	if game != null:
-		if game.original_presentation != null and game.original_presentation.output_texture != null:
-			backdrop = game.original_presentation.output_texture.get_image()
+		if game.original_presentation != null:
+			var frame: Image = game.original_presentation.frame_image()
+			if frame != null:
+				backdrop = frame
 		was_ready = game.replay_ready
 		old_process_mode = game.process_mode
 		game.replay_ready = false

@@ -81,7 +81,9 @@ func _ready() -> void:
 	player.original_presented.connect(_on_original_presented)
 	player.original_moved.connect(_on_original_moved)
 
-	original_presentation = preload("res://scripts/wr1_presentation.gd").new()
+	var presentation := preload("res://scripts/wr1_presentation.gd") if LaunchArgs.legacy() \
+		else preload("res://scripts/game_presentation.gd")
+	original_presentation = presentation.new()
 	add_child(original_presentation)
 	if not LaunchArgs.legacy():
 		add_child(preload("res://scripts/smooth_motion.gd").new())
