@@ -186,6 +186,8 @@ func _start_replay(path: String = "") -> void:
 	replay_sha256 = FileAccess.get_sha256(replay_path)
 
 	var replay_fps: int = int(data.get("fps", 70))
+	if not LaunchArgs.legacy():
+		Engine.physics_ticks_per_second = replay_fps
 	if Engine.physics_ticks_per_second != replay_fps:
 		push_error("[InputReplay] Physics tick rate mismatch: engine=%d Hz, replay=%d Hz. Set physics/common/physics_ticks_per_second=%d in project.godot." % [Engine.physics_ticks_per_second, replay_fps, replay_fps])
 		get_tree().quit(1)
@@ -257,6 +259,7 @@ func _auto_start_game(expected_path: String = "", expected_hash: String = "") ->
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 func finish_original_demo() -> void:
+	GameManager.apply_default_tick_rate()
 	if GameManager.original_demo_host != null:
 		GameManager.original_demo_host.next_demo.call_deferred()
 	else:
@@ -410,6 +413,7 @@ func _replay_frame() -> void:
 		if not replay_finished:
 			replay_finished = true
 			mode = Mode.DISABLED
+			GameManager.apply_default_tick_rate()
 			print("[InputReplay] Replay duration reached (%d frames). Quitting." % replay_total_frames)
 		get_tree().quit()
 

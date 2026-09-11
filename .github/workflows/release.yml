@@ -1,0 +1,81 @@
+# Build the desktop versions and attach them to a GitHub release.
+# Tag a release with: git tag v0.1.0 && git push origin v0.1.0
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GODOT_VERSION: 4.6.1
+
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            assets
+            data
+            scenes
+            scripts
+            tools
+
+      - name: Install Godot
+        run: |
+          curl -fsSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip && mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" "$RUNNER_TEMP/godot" && rm godot.zip
+
+      - name: Cache desktop export templates
+        id: templates
+        uses: actions/cache@v6
+        with:
+          path: ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
+          key: godot-desktop-templates-${{ env.GODOT_VERSION }}
+
+      - name: Install desktop export templates
+        if: steps.templates.outputs.cache-hit != 'true'
+        run: |
+          dest="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          curl -fsSL -o templates.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          mkdir -p "$dest"
+          # Godot validates the debug templates too, even for a release export.
+          unzip -j templates.tpz templates/version.txt \
+            templates/linux_release.x86_64 templates/linux_debug.x86_64 \
+            templates/windows_release_x86_64.exe templates/windows_debug_x86_64.exe -d "$dest"
+          rm templates.tpz
+
+      - name: Import
+        run: "$RUNNER_TEMP/godot" --headless --import
+
+      - name: Smoke-test the default game
+        run: "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd
+
+      # Desktop ships both games: it starts the default one, and `--legacy`
+      # (after a bare `--`) runs the pixel-exact original.
+      - name: Export
+        run: |
+          mkdir -p build/linux build/windows
+          "$RUNNER_TEMP/godot" --headless --export-release "Linux" build/linux/letter-rescue.x86_64
+          "$RUNNER_TEMP/godot" --headless --export-release "Windows" build/windows/letter-rescue.exe
+          (cd build/linux && zip -qr ../letter-rescue-linux.zip .)
+          (cd build/windows && zip -qr ../letter-rescue-windows.zip .)
+
+      - uses: actions/upload-artifact@v5
+        with:
+          name: desktop-builds
+          path: build/letter-rescue-*.zip
+
+      - name: Attach to the release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1 \
+            && gh release upload "${GITHUB_REF_NAME}" build/letter-rescue-*.zip --clobber \
+            || gh release create "${GITHUB_REF_NAME}" build/letter-rescue-*.zip --generate-notes

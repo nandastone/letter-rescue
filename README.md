@@ -32,13 +32,23 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
 
 ### In a browser
 
-Every push to `main` that touches the game publishes a web build to
-<https://nandastone.github.io/letter-rescue/> (see `.github/workflows/web.yml`).
-It runs Letter Rescue. URL flags: `?legacy` for the original game, which keeps
-Clear Text unless you also add `?pixel-text`; `?skip-intro`; and
-`?mute-original-audio` (combine with `&`). In Chrome, the install icon in the
-address bar adds it as an app. `just web` builds the same thing locally into
-`build/web/`.
+Every push to `main` that touches the game publishes to GitHub Pages
+(`.github/workflows/web.yml`):
+
+- <https://nandastone.github.io/letter-rescue/> — Letter Rescue (11 MB pack)
+- <https://nandastone.github.io/letter-rescue/legacy/> — the original (59 MB)
+
+URL flags: `?skip-intro`, `?mute-original-audio`, and `?pixel-text` on the
+legacy build for its original pixel display (combine with `&`). In Chrome, the
+install icon in the address bar adds it as an app. `just web` builds the
+default game locally into `build/web/`.
+
+### Desktop
+
+Tagging a release (`git tag v0.1.0 && git push origin v0.1.0`) builds Windows
+and Linux versions and attaches them to the GitHub release
+(`.github/workflows/release.yml`). Desktop builds contain both games: they
+start Letter Rescue, and `-- --legacy` runs the original.
 
 ### The recovered frontend
 
@@ -99,6 +109,11 @@ Fresh games now use the recovered random initialization; recordings preserve
 their initial seed, loaded profile, and speed/difficulty changes. See
 [startup verification](testing/wr1_startup_research.md).
 
+The default game has its own gate, run in CI and locally with
+`godot --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd`
+(add `-- --replay data/wr1/demos/level1.json` for the attract path). It plays
+headlessly and checks that updates run and that motion is drawn between them.
+
 Supplemental frontend, attract and audio checks use the real Godot scene and
 retained native screen fixtures. Set `GODOT`, then run
 `python -m unittest testing.test_wr1_frontend testing.test_wr1_attract testing.test_wr1_audio testing.test_input_replay`.
@@ -108,9 +123,13 @@ These include visible-window and mixer tests; they supplement the fifteen demos.
 
 ```
 scenes/          Scene files (.tscn)
-scripts/         GDScript source files
+scripts/core/    Simulation, frontend and HUD shared by both games
+scripts/legacy/  The DOS hardware and timing model (VGA scanout, OPL, clocks)
+scripts/game/    Letter Rescue's presentation (direct drawing, smooth motion)
 assets/
   audio/original/  Original music (CMF + rendered WAV) and speaker effects
+  audio/original/ogg/  The same audio compressed for the default build
+                   (tools/compress_original_audio.py; 55 MB -> 5 MB)
   extracted/       Graphics extracted from the WR1 data files
   fonts/andika/    Clear Text font
   sprites/         Character and object sprites

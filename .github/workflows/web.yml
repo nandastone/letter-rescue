@@ -1,4 +1,5 @@
-# Export the Godot web build and publish it to GitHub Pages.
+# Smoke-test the default game, export both web builds and publish them to
+# GitHub Pages: the default game at the root, legacy under /legacy/.
 name: Web build
 
 on:
@@ -9,6 +10,7 @@ on:
       - data/**
       - scenes/**
       - scripts/**
+      - tools/smoke_*.gd
       - project.godot
       - export_presets.cfg
       - .github/workflows/web.yml
@@ -30,7 +32,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # testing/ and tools/ hold ~300 MB of parity evidence the game never loads.
+      # testing/ holds ~300 MB of parity evidence the game never loads; tools/
+      # is needed only for the smoke test, which does not ship.
       - uses: actions/checkout@v7
         with:
           sparse-checkout: |
@@ -38,6 +41,7 @@ jobs:
             data
             scenes
             scripts
+            tools
 
       - name: Install Godot
         run: |
@@ -60,12 +64,22 @@ jobs:
           unzip -j templates.tpz templates/version.txt templates/web_nothreads_release.zip -d "$dest"
           rm templates.tpz
 
+      - name: Import
+        run: "$RUNNER_TEMP/godot" --headless --import
+
+      # The demo parity suite covers legacy only (it needs testing/ and a GPU).
+      # This is the default game's gate: it runs, and motion is drawn smoothly.
+      - name: Smoke-test the default game
+        run: |
+          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd
+          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd -- --replay data/wr1/demos/level1.json
+
       - name: Export
         run: |
-          "$RUNNER_TEMP/godot" --headless --import
-          mkdir -p build/web
+          mkdir -p build/web/legacy
           "$RUNNER_TEMP/godot" --headless --export-release "Web" build/web/index.html
-          test -s build/web/index.pck
+          "$RUNNER_TEMP/godot" --headless --export-release "Web Legacy" build/web/legacy/index.html
+          test -s build/web/index.pck && test -s build/web/legacy/index.pck
 
       - uses: actions/upload-pages-artifact@v5
         with:

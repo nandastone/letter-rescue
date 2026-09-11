@@ -59,7 +59,13 @@ func _phase() -> float:
 	if not game.replay_ready or player.is_dead or player.original_recap != null \
 			or player.original_rescue != null or player.original_exit != null:
 		return 1.0
-	return clampf((ticks_since + Engine.get_physics_interpolation_fraction()) / ticks_needed, 0.0, 1.0)
+	var fraction := Engine.get_physics_interpolation_fraction()
+	if InputReplay.mode == InputReplay.Mode.REPLAYING:
+		# A replay advances the gate by its recorded source frame times, not by
+		# the physics tick, so count the phase in simulated time instead.
+		var elapsed: float = player.original_elapsed + fraction / Engine.physics_ticks_per_second
+		return clampf(elapsed / _step_seconds(), 0.0, 1.0)
+	return clampf((ticks_since + fraction) / ticks_needed, 0.0, 1.0)
 
 func _draw_offsets(remaining: float) -> void:
 	for drawn in lag:
