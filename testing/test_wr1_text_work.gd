@@ -1,7 +1,7 @@
 extends "res://testing/test_wr1_hardware.gd"
 
 func _initialize() -> void:
-	var text = preload("res://scripts/wr1_text_work.gd").new()
+	var text = preload("res://scripts/legacy/wr1_text_work.gd").new()
 	text.configure()
 	for item in [["wr1_contact_graphics", 7], ["wr1_text_matching_graphics", 151], ["wr1_reward_graphics", 237]]:
 		var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/%s.json.gz" % item[0])
@@ -26,7 +26,7 @@ func _initialize() -> void:
 				compare(result.font, case.expected_text_state, "font state")
 			else:
 				result = text.string(case)
-			var model = preload("res://scripts/wr1_hardware.gd").new()
+			var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 			model.configure(case.initial, fixture.event_names)
 			model.run_driver(result.work)
 			compare(roundi(model.observed_time() * 27000.0), case.end_cycle, kind + " cycle")

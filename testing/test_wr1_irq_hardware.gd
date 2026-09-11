@@ -9,9 +9,9 @@ func _check_irq(name: String, count: int) -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/%s.json.gz" % name)
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(64 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
 	var bytes := FileAccess.get_file_as_bytes("res://" + fixture.music_file)
-	var music = preload("res://scripts/wr1_music.gd").new()
-	var opl = preload("res://scripts/wr1_opl.gd").new()
-	var work = preload("res://scripts/wr1_irq_work.gd").new()
+	var music = preload("res://scripts/legacy/wr1_music.gd").new()
+	var opl = preload("res://scripts/legacy/wr1_opl.gd").new()
+	var work = preload("res://scripts/legacy/wr1_irq_work.gd").new()
 	music.configure(bytes, fixture.initial_music)
 	opl.configure(bytes, fixture.initial_opl)
 	work.configure(bool(fixture.dispatcher_use_dx), int(fixture.external_timer))
@@ -19,7 +19,7 @@ func _check_irq(name: String, count: int) -> void:
 	for i in range(fixture.cases.size()):
 		var case: Dictionary = fixture.cases[i]
 		var result: Dictionary = work.body(music, opl, case.initial_game)
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		model.run_driver(result.work)
 		compare(roundi(model.observed_time() * 27000.0), case.end_cycle, "%d.end_cycle" % i)

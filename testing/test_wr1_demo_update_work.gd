@@ -12,11 +12,11 @@ func _initialize() -> void:
 	instructions = fixture.instructions
 	var cases: Array = fixture.cases
 	for case in cases:
-		var move=preload("res://scripts/wr1_movement_work.gd").new();move.configure()
-		var contact=preload("res://scripts/wr1_contact_work.gd").new();contact.configure()
-		var world=preload("res://scripts/wr1_renderer_work.gd").new();world.configure()
-		var graphics=preload("res://scripts/wr1_graphics_work.gd").new();graphics.configure()
-		var cpu=preload("res://scripts/wr1_hardware.gd").new();cpu.configure(case.begin,case.names)
+		var move=preload("res://scripts/legacy/wr1_movement_work.gd").new();move.configure()
+		var contact=preload("res://scripts/legacy/wr1_contact_work.gd").new();contact.configure()
+		var world=preload("res://scripts/legacy/wr1_renderer_work.gd").new();world.configure()
+		var graphics=preload("res://scripts/legacy/wr1_graphics_work.gd").new();graphics.configure()
+		var cpu=preload("res://scripts/legacy/wr1_hardware.gd").new();cpu.configure(case.begin,case.names)
 		var movement: Dictionary=move.step(case.begin.movement,case.begin.movement_attributes)
 		path=movement.work
 		span(0x3d7e,0x3d7e)
@@ -68,7 +68,7 @@ func _check_idle(case: Dictionary, completed_cpu: RefCounted) -> void:
 	checkpoint.initial.cpu_ip = 0xd72
 	checkpoint.initial.clock_state.timer = 0
 	assert(int(checkpoint.initial.clock_state.speaker_index) == -1)
-	var clock = preload("res://scripts/wr1_music_clock.gd").new()
+	var clock = preload("res://scripts/legacy/wr1_music_clock.gd").new()
 	clock.configure(checkpoint)
 	var idle = clock.idle
 	var cpu = idle.hardware

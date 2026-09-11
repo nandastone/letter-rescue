@@ -1,6 +1,6 @@
 extends SceneTree
 
-const Matching = preload("res://scripts/wr1_matching.gd")
+const Matching = preload("res://scripts/core/wr1_matching.gd")
 var failures: int = 0
 var checks: int = 0
 

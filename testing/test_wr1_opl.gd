@@ -12,8 +12,8 @@ func _check_fixture(name: String) -> int:
 	if name.ends_with(".gz"):
 		raw = raw.decompress_dynamic(32 * 1024 * 1024, FileAccess.COMPRESSION_GZIP)
 	var fixture: Dictionary = JSON.parse_string(raw.get_string_from_utf8())
-	var music = preload("res://scripts/wr1_music.gd").new()
-	var opl = preload("res://scripts/wr1_opl.gd").new()
+	var music = preload("res://scripts/legacy/wr1_music.gd").new()
+	var opl = preload("res://scripts/legacy/wr1_opl.gd").new()
 	var bytes := FileAccess.get_file_as_bytes("res://" + fixture.music_file)
 	music.configure(bytes, fixture.initial)
 	opl.configure(bytes, fixture.initial_opl)

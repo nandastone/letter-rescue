@@ -13,9 +13,9 @@ func capture(name: String) -> void:
 func run() -> void:
 	var args := OS.get_cmdline_user_args()
 	output = args[args.find("--clear-output") + 1]
-	var clear := preload("res://scripts/wr1_clear_text.gd").enabled()
+	var clear := preload("res://scripts/core/wr1_clear_text.gd").enabled()
 	root.get_node("GameManager").progress_path = output + "/progress.json"
-	preload("res://scripts/wr1_profiles.gd").directory = output + "/profiles/"
+	preload("res://scripts/core/wr1_profiles.gd").directory = output + "/profiles/"
 	var replay := root.get_node("InputReplay")
 	replay.mode = replay.Mode.REPLAYING # Fixtures begin after loading.
 	paused = true
@@ -108,7 +108,7 @@ func run() -> void:
 	game.original_presentation.rasterize().save_png(output + "/cards_reference.png")
 	await capture("cards")
 	block.reset_to_idle()
-	var recap := preload("res://scripts/wr1_recap_view.gd").new()
+	var recap := preload("res://scripts/core/wr1_recap_view.gd").new()
 	game.add_child(recap)
 	recap.configure(game.hud, ["gypqj"])
 	recap.present({"kind":"helper", "frame":0, "order":0, "word_index":0, "position":Vector2(64,100)})
@@ -128,13 +128,13 @@ func run() -> void:
 		var longest := 0
 		for i in range(titles.titles.size()):
 			if titles.titles[i].name.length() > titles.titles[longest].name.length(): longest = i
-		var title := preload("res://scripts/wr1_level_title.gd").new()
+		var title := preload("res://scripts/core/wr1_level_title.gd").new()
 		game.add_child(title)
 		title.configure(longest + 1)
 		await capture("level_title")
 		title.free()
-		preload("res://scripts/wr1_profiles.gd").update_high_score("gypqj Reader",12345)
-	var frontend = load("res://scripts/wr1_frontend.gd").new()
+		preload("res://scripts/core/wr1_profiles.gd").update_high_score("gypqj Reader",12345)
+	var frontend = load("res://scripts/core/wr1_frontend.gd").new()
 	game.add_child(frontend)
 	frontend.begin("words", game)
 	await capture("words")
@@ -148,7 +148,7 @@ func run() -> void:
 		frontend.set_art_visible(true)
 		for kind in ["apogee", "startup", "name", "character", "resume", "difficulty", "instructions", "ordering", "about", "bbs", "story", "ending", "redefine", "joystick", "joystick_center", "high_scores", "help", "sound", "quit"]:
 			var count := 1
-			var metadata: Dictionary = preload("res://scripts/wr1_frontend_render.gd").metadata()
+			var metadata: Dictionary = preload("res://scripts/core/wr1_frontend_render.gd").metadata()
 			if metadata.pages.has(kind): count = metadata.pages[kind].size()
 			elif kind in ["startup", "story", "ending"]: count = metadata[kind].screens.size()
 			frontend.state = kind

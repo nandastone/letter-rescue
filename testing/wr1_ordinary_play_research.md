@@ -58,7 +58,7 @@ flag. With PIT reload 12428 and clock 1193182 Hz this is about 3.125 seconds.
 Later fresh-map cards cover loading without an added delay. Cached death resets
 do not call the fresh loader and do not show a card.
 
-`scripts/wr1_level_title.gd` renders the card in the presentation layer while
+`scripts/core/wr1_level_title.gd` renders the card in the presentation layer while
 gameplay physics is disabled. The game hides it after the new gameplay page is
 ready. Native-input replays skip this UI: their measurements still start after
 loading. Loading time is not a fidelity target.

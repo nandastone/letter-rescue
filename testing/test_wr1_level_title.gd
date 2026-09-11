@@ -1,6 +1,6 @@
 extends SceneTree
 ## UI lifecycle integration, independent of the post-load demo clocks.
-const Title = preload("res://scripts/wr1_level_title.gd")
+const Title = preload("res://scripts/core/wr1_level_title.gd")
 
 func _initialize() -> void:
 	_run.call_deferred()

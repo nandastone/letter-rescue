@@ -8,7 +8,7 @@ func _initialize() -> void:
 
 func run_audit() -> void:
 	var level = JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/level_01.json"))
-	var manager = load("res://scripts/word_manager.gd").new()
+	var manager = load("res://scripts/core/word_manager.gd").new()
 	root.add_child(manager)
 	var nodes: Array = []
 	for i in range(level.words.size()):

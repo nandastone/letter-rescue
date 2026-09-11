@@ -33,7 +33,7 @@ func check_recording(name: String) -> void:
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(32 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
 	for i in range(fixture.cases.size()):
 		var case: Dictionary = fixture.cases[i]
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		compare(model.opl(), case.cycles, "%d.cycles" % i)
 		compare(model.snapshot(), case.expected, str(i))
@@ -42,13 +42,13 @@ func check_recording(name: String) -> void:
 func check_driver() -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_driver_hardware.json.gz")
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(32 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_driver_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_driver_work.gd").new()
 	work.configure()
-	var opl = preload("res://scripts/wr1_opl.gd").new()
+	var opl = preload("res://scripts/legacy/wr1_opl.gd").new()
 	opl.configure(FileAccess.get_file_as_bytes("res://" + fixture.music_file), fixture.initial_opl)
 	for i in range(fixture.cases.size()):
 		var case: Dictionary = fixture.cases[i]
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		var path: Array = work.event(case.midi, opl.state)
 		compare(path, case.work, "%d.work" % i)

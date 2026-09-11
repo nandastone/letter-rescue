@@ -18,9 +18,9 @@ func _initialize() -> void:
 			continue
 		var fixture := read_fixture(recording.source)
 		var bytes := FileAccess.get_file_as_bytes("res://" + fixture.music_file)
-		var music = preload("res://scripts/wr1_music.gd").new()
-		var opl = preload("res://scripts/wr1_opl.gd").new()
-		var work = preload("res://scripts/wr1_driver_work.gd").new()
+		var music = preload("res://scripts/legacy/wr1_music.gd").new()
+		var opl = preload("res://scripts/legacy/wr1_opl.gd").new()
+		var work = preload("res://scripts/legacy/wr1_driver_work.gd").new()
 		music.configure(bytes, fixture.initial)
 		opl.configure(bytes, fixture.initial_opl)
 		work.configure()
@@ -42,10 +42,10 @@ func _initialize() -> void:
 		if index != recording.events.size():
 			failures += 1
 		print("WR1 live driver work: %s, %d event paths, %d failures" % [recording.source, index, failures])
-	var work = preload("res://scripts/wr1_driver_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_driver_work.gd").new()
 	work.configure()
 	for case in all_work.constructed_cases:
-		var opl = preload("res://scripts/wr1_opl.gd").new()
+		var opl = preload("res://scripts/legacy/wr1_opl.gd").new()
 		opl.configure(FileAccess.get_file_as_bytes("res://" + all_work.constructed_music_file), case.initial_opl)
 		var actual: Array = work.event(case.midi, opl.state)
 		var writes: Array = opl.event(case.midi)

@@ -1,5 +1,5 @@
 extends SceneTree
-const Video = preload("res://scripts/wr1_video_clock.gd")
+const Video = preload("res://scripts/legacy/wr1_video_clock.gd")
 var failures := 0
 var checks := 0
 

@@ -13,7 +13,7 @@ func _check_original_idle_fixture() -> void:
 	var residuals := 0
 	var differences := {669:-4, 675:-10, 681:-12, 687:14, 804:-14, 809:12, 815:-2, 845:15, 850:-9, 903:13, 909:-3}
 	for case in fixture.cases:
-		var model = preload("res://scripts/wr1_idle_clock.gd").new()
+		var model = preload("res://scripts/legacy/wr1_idle_clock.gd").new()
 		model.configure(cmf, case.initial, fixture.event_names)
 		compare(roundi(model.hardware.observed_time() * 27000.0), case.start_cycle, "start")
 		var admission: int = model.until_admission()
@@ -39,7 +39,7 @@ func _check_keyboard_idle_fixture() -> void:
 	var cmf := FileAccess.get_file_as_bytes("res://" + fixture.music_file)
 	compare(fixture.cases.size(), 65, "keyboard wait count")
 	for case in fixture.cases:
-		var model = preload("res://scripts/wr1_idle_clock.gd").new()
+		var model = preload("res://scripts/legacy/wr1_idle_clock.gd").new()
 		model.configure(cmf, case.initial, fixture.event_names)
 		compare(model.until_admission(2000000, case.input_events), case.end_cycle, "admission")
 		compare(model.hardware.snapshot(), case.expected, "hardware")

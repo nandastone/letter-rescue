@@ -37,7 +37,7 @@ func run() -> void:
 	game.entities.process_mode = Node.PROCESS_MODE_DISABLED
 	var state = player.original_state
 	check(state.attributes[20][10] == 0x84, "Loader stamps book marker")
-	var font = preload("res://scripts/wr1_text.gd")
+	var font = preload("res://scripts/core/wr1_text.gd")
 	var zero := Image.create(8, 8, false, Image.FORMAT_RGB8)
 	font.draw(zero, "0", Vector2i.ZERO, Color.BLACK, Color8(0, 170, 170))
 	var native: Image = load("res://assets/extracted/hud_top.png").get_image().get_region(Rect2i(89, 19, 8, 8))

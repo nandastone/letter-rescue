@@ -1,6 +1,6 @@
 extends SceneTree
-const Render = preload("res://scripts/wr1_frontend_render.gd")
-const Profiles = preload("res://scripts/wr1_profiles.gd")
+const Render = preload("res://scripts/core/wr1_frontend_render.gd")
+const Profiles = preload("res://scripts/core/wr1_profiles.gd")
 
 func _initialize() -> void:
 	_run.call_deferred()
@@ -50,7 +50,7 @@ func _run() -> void:
 	await process_frame
 	while current_scene == null: await process_frame
 	var frontend: CanvasLayer = current_scene.get_child(current_scene.get_child_count()-1)
-	assert(frontend.get_script().resource_path == "res://scripts/wr1_frontend.gd")
+	assert(frontend.get_script().resource_path == "res://scripts/core/wr1_frontend.gd")
 	# Preserve a sparse native file's row positions when displaying scores.
 	Profiles.directory = output+"/native_scores/"
 	DirAccess.make_dir_recursive_absolute(Profiles.directory)
@@ -167,11 +167,11 @@ func _run() -> void:
 		event.pressed = false
 		Input.parse_input_event(event)
 		Input.flush_buffered_events()
-	preload("res://scripts/wr1_controls.gd").apply([17,30,17,31,57])
+	preload("res://scripts/core/wr1_controls.gd").apply([17,30,17,31,57])
 	var duplicate := InputEventKey.new()
 	duplicate.physical_keycode = KEY_W
 	assert(duplicate.is_action("jump") and not duplicate.is_action("move_right"),"Duplicate keys lost original ISR priority")
-	preload("res://scripts/wr1_controls.gd").apply(gm.original_scancodes)
+	preload("res://scripts/core/wr1_controls.gd").apply(gm.original_scancodes)
 	gm.score = 1234
 	gm.current_level = 15
 	game.original_door_state = 2

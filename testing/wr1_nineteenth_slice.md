@@ -12,7 +12,7 @@ into one continuous gameplay clock.
 
 ## Recovered path
 
-`tools/wr1_graphics_work.py` and `scripts/wr1_graphics_work.gd` now include:
+`tools/wr1_graphics_work.py` and `scripts/legacy/wr1_graphics_work.gd` now include:
 
 - Copy setup at file `138D8..13ADC`, including device lookup, source/destination
   bounds calculations, bit alignment and byte counts.

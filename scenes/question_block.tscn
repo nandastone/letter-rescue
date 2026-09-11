@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://qblock001"]
 
-[ext_resource type="Script" path="res://scripts/question_block.gd" id="1_qblock"]
+[ext_resource type="Script" path="res://scripts/core/question_block.gd" id="1_qblock"]
 [ext_resource type="Texture2D" path="res://assets/sprites/question_block.png" id="2_sprite"]
 
 ; Entity origin = TOP-LEFT of the 24x24 q-block sprite at world px

@@ -26,7 +26,7 @@ and the hash-checked fixture `testing/fixtures/wr1_display_work.json.gz`.
 
 ## Renderer opening
 
-`tools/wr1_renderer_work.py` and `scripts/wr1_renderer_work.gd` generate original
+`tools/wr1_renderer_work.py` and `scripts/legacy/wr1_renderer_work.gd` generate original
 instruction paths from file `AB25` through the return from drawing-page
 selection at `ACC5`. The model preserves signed word comparisons, animation
 counter wrap, camera thresholds and the original one-eight-pixel-step-per-axis

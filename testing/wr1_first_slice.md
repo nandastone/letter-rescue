@@ -33,15 +33,15 @@ function's earlier facing write.
 
 ## Implementation
 
-- [wr1_motion.gd](../scripts/wr1_motion.gd) owns integer movement, original animation
+- [wr1_motion.gd](../scripts/core/wr1_motion.gd) owns integer movement, original animation
   state and camera/render steps. Input axes remain separate; vertical decisions
   precede left and right attempts. There is no gravity integration or
   move_and_slide in this mode.
-- [player.gd](../scripts/player.gd) samples input at the nominal original rate,
+- [player.gd](../scripts/core/player.gd) samples input at the nominal original rate,
   applies the state to the existing player node, and optionally writes JSONL.
-- [camera.gd](../scripts/camera.gd) projects world coordinates with the recovered
+- [camera.gd](../scripts/core/camera.gd) projects world coordinates with the recovered
   offsets and no smoothing in original mode.
-- [game.gd](../scripts/game.gd) loads original attributes and updates animated
+- [game.gd](../scripts/core/game.gd) loads original attributes and updates animated
   background cells at the original render point. The background phase carries
   across reloads of the same player instance; full restart/transition parity is
   still outside this slice.

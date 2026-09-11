@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://game001"]
 
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_game"]
-[ext_resource type="Script" path="res://scripts/camera.gd" id="2_camera"]
-[ext_resource type="Script" path="res://scripts/word_manager.gd" id="3_wordmgr"]
-[ext_resource type="Script" path="res://scripts/mystery_word.gd" id="5_mystery"]
+[ext_resource type="Script" path="res://scripts/core/game.gd" id="1_game"]
+[ext_resource type="Script" path="res://scripts/core/camera.gd" id="2_camera"]
+[ext_resource type="Script" path="res://scripts/core/word_manager.gd" id="3_wordmgr"]
+[ext_resource type="Script" path="res://scripts/core/mystery_word.gd" id="5_mystery"]
 [ext_resource type="PackedScene" uid="uid://player001" path="res://scenes/player.tscn" id="6_player"]
 [ext_resource type="PackedScene" uid="uid://hud001" path="res://scenes/hud.tscn" id="7_hud"]
 [ext_resource type="Texture2D" path="res://assets/tiles/tileset_back3.png" id="11_back3"]

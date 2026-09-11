@@ -1,6 +1,6 @@
 extends SceneTree
 
-const Motion = preload("res://scripts/wr1_motion.gd")
+const Motion = preload("res://scripts/core/wr1_motion.gd")
 var failures: int = 0
 var checks: int = 0
 

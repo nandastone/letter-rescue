@@ -3,7 +3,7 @@ extends SceneTree
 
 func _initialize() -> void:
 	var fixture: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://testing/fixtures/wr1_music_ticks.json"))
-	var model = preload("res://scripts/wr1_music.gd").new()
+	var model = preload("res://scripts/legacy/wr1_music.gd").new()
 	var bytes := FileAccess.get_file_as_bytes("res://" + fixture.music_file)
 	model.configure(bytes, fixture.initial)
 	var checks := 0

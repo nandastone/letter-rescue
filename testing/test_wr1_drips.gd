@@ -11,7 +11,7 @@ func check(ok: bool, message: String) -> void:
 func _initialize() -> void:
 	var fixture: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://testing/fixtures/wr1_drips_stages.json"))
 	var level: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/levels/level_14.json"))
-	var model = preload("res://scripts/wr1_drips.gd").new()
+	var model = preload("res://scripts/core/wr1_drips.gd").new()
 	model.configure(level.drips)
 	check(JSON.parse_string(JSON.stringify(model.snapshot())) == fixture.begin.drips, "Native drip initialization")
 	for state in fixture.updates:
@@ -21,12 +21,12 @@ func _initialize() -> void:
 	for difficulty in range(3):
 		for gx in range(26,33):
 			for gy in range(56,63):
-				var drop = preload("res://scripts/wr1_drips.gd").new()
+				var drop = preload("res://scripts/core/wr1_drips.gd").new()
 				drop.configure([level.drips[0]]) # first release is x30,y57
 				var expected := difficulty > 0 and gx in [28,29] and gy in [59,60]
 				check(drop.step(gx,gy,difficulty) == expected, "Strict lethal contact %d,%d/%d" % [gx,gy,difficulty])
 				check(drop.drips[0].frame == (2 if expected else 1), "Impact uses frame2")
-	var drop = preload("res://scripts/wr1_drips.gd").new()
+	var drop = preload("res://scripts/core/wr1_drips.gd").new()
 	drop.configure([level.drips[0]])
 	drop.step(28,60,1)
 	check(drop.draws(29,56).size() == 1, "Impact frame can be drawn")

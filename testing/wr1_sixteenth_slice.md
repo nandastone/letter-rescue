@@ -12,7 +12,7 @@ admission continuously from the first playable frame.
 
 ## Recovered outer work
 
-`tools/wr1_irq_work.py` and `scripts/wr1_irq_work.gd` recover the timer increment,
+`tools/wr1_irq_work.py` and `scripts/legacy/wr1_irq_work.gd` recover the timer increment,
 32-bit speaker elapsed counter, signed speaker duration comparison, advancing
 at most one speaker entry, stopping/programming the speaker, BIOS countdown,
 interrupt acknowledgement, and register restore. The work executor models the

@@ -15,7 +15,7 @@ so the complete exit route does not yet have continuous same-input parity.
 
 ### Benny recap
 
-`scripts/wr1_recap.gd` follows executable offsets `594c..5eb7`. The seventh match
+`scripts/core/wr1_recap.gd` follows executable offsets `594c..5eb7`. The seventh match
 sets a pending flag; the next grounded admission starts the recap. The player
 stops while the original renderer continues advancing its animation counters.
 The helper's approach, seven transfers in completion order, dissolves, and
@@ -118,7 +118,7 @@ and before the discarded map-enemy type choices. A cached restart keeps the
 current words and cursor.
 
 `data/wr1/word_list.json` preserves the source bytes, including line endings,
-with their SHA-256. `scripts/wr1_words.gd` implements that stream. Original mode
+with their SHA-256. `scripts/core/wr1_words.gd` implements that stream. Original mode
 uses it during transitions; static level JSON now supplies seven nonempty,
 cyclic defaults for modern mode. Those static defaults are not represented as
 the native random EOF sequence.

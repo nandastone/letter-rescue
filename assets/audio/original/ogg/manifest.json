@@ -1,0 +1,66 @@
+{
+  "sample_rate": 48000,
+  "source_manifest_sha256": "b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f",
+  "music": {
+    "4": {
+      "file": "music_4.ogg",
+      "loop_offset": 92.52395833333334,
+      "loop_end_seconds": 185.04791666666668,
+      "source_frames": 8882300
+    },
+    "5": {
+      "file": "music_5.ogg",
+      "loop_offset": 96.867375,
+      "loop_end_seconds": 193.73472916666665,
+      "source_frames": 9299267
+    },
+    "6": {
+      "file": "music_6.ogg",
+      "loop_offset": 64.005375,
+      "loop_end_seconds": 128.01075,
+      "source_frames": 6144516
+    }
+  },
+  "effects": {
+    "book": {
+      "file": "book.ogg",
+      "logical_duration_samples": 6499
+    },
+    "correct": {
+      "file": "correct.ogg",
+      "logical_duration_samples": 4500
+    },
+    "death": {
+      "file": "death.ogg",
+      "logical_duration_samples": 170487
+    },
+    "jump": {
+      "file": "jump.ogg",
+      "logical_duration_samples": 10499
+    },
+    "mystery_complete": {
+      "file": "mystery_complete.ogg",
+      "logical_duration_samples": 83993
+    },
+    "recap": {
+      "file": "recap.ogg",
+      "logical_duration_samples": 31498
+    },
+    "slime": {
+      "file": "slime.ogg",
+      "logical_duration_samples": 9499
+    },
+    "slime_miss": {
+      "file": "slime_miss.ogg",
+      "logical_duration_samples": 20498
+    },
+    "step": {
+      "file": "step.ogg",
+      "logical_duration_samples": 1000
+    },
+    "wrong": {
+      "file": "wrong.ogg",
+      "logical_duration_samples": 89993
+    }
+  }
+}

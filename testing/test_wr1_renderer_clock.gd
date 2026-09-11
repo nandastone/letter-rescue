@@ -7,7 +7,7 @@ func _initialize() -> void:
 	compare(fixture.cases.size(), 64, "renderer-to-admission count")
 	compare(fixture.excluded.size(), 11, "explicit transition exclusions")
 	for case in fixture.cases:
-		var model = preload("res://scripts/wr1_renderer_clock.gd").new()
+		var model = preload("res://scripts/legacy/wr1_renderer_clock.gd").new()
 		model.configure(cmf, case.initial, fixture.event_names)
 		model.finish_render(case.renderer, case.post, case.display_state, int(case.return_cs))
 		var renderer: Dictionary = case.renderer

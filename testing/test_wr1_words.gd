@@ -10,10 +10,10 @@ func check(ok: bool, message: String) -> void:
 
 func _initialize() -> void:
 	var fixture: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://testing/fixtures/wr1_words_stages.json"))
-	var stream = preload("res://scripts/wr1_words.gd").new()
+	var stream = preload("res://scripts/core/wr1_words.gd").new()
 	stream.next_words()
 	check(stream.words == fixture.initial.words and stream.offset == int(fixture.initial.word_cursor), "Initial seven words and cursor")
-	var actors = preload("res://scripts/wr1_gruzzles.gd").new()
+	var actors = preload("res://scripts/core/wr1_gruzzles.gd").new()
 	actors.configure([],0)
 	var wraps := 0
 	for stage in fixture.loads:

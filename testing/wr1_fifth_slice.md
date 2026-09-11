@@ -23,7 +23,7 @@ No future tick schedule or expected actor states are fed into the clone.
 
 ## Recovered behavior
 
-`scripts/wr1_gruzzles.gd` implements entity/action function file50e8..585c and
+`scripts/core/wr1_gruzzles.gd` implements entity/action function file50e8..585c and
 renderer ba38..bf50 from the pinned WR1.EXE hash recorded in earlier reports.
 It uses the same logical update as the player, after word/book contacts and
 before camera/rendering. Normal rendering increments the animation index only

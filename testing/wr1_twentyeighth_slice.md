@@ -46,7 +46,7 @@ from rendered pixels or assumed to match a static level file after contacts.
 
 ## Implementation
 
-`tools/wr1_movement_work.py` and `scripts/wr1_movement_work.gd` implement the
+`tools/wr1_movement_work.py` and `scripts/legacy/wr1_movement_work.gd` implement the
 same source-derived paths. The instruction catalogue now includes two aligned
 movement ranges, excluding the idle jump table bytes, and the original left,
 right and facing-dependent pose tables.

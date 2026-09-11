@@ -8,7 +8,7 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
 
 - **Letter Rescue** (the default, `just run`) runs on the recovered Word Rescue
   engine with Clear Text and smooth motion: the original still updates about
-  12 times a second in 8-pixel steps, and `scripts/smooth_motion.gd` draws the
+  12 times a second in 8-pixel steps, and `scripts/game/smooth_motion.gd` draws the
   movement in between at the display's refresh rate. This is the game that
   changes from here; the demo parity suite does not check it.
 - **Legacy** (`just legacy`, or `-- --legacy`) is the pixel-exact Word Rescue

@@ -62,7 +62,7 @@ profile. This is not evidence that the death/restart interval has been modeled.
 
 ## Recovered shared work
 
-`tools/wr1_graphics_work.py` and `scripts/wr1_graphics_work.gd` recover:
+`tools/wr1_graphics_work.py` and `scripts/legacy/wr1_graphics_work.gd` recover:
 
 - Active device lookup, file `1934E..19377`.
 - Handle-record search, `190EF..19137`, including the observed slot count.

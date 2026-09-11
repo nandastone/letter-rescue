@@ -30,7 +30,7 @@ state is still initialized separately at each MIDI entry.
 
 ## Runtime instruction-work planner
 
-`scripts/wr1_driver_work.gd` and `tools/wr1_driver_work.py` recover the handler's
+`scripts/legacy/wr1_driver_work.gd` and `tools/wr1_driver_work.py` recover the handler's
 control flow using current voice, channel, controller, and note state. They do
 not interpret the original binary. `driver_work.json` contains only static
 instruction addresses, mnemonics, and following addresses; no operands, guest

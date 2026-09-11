@@ -17,7 +17,7 @@ func _initialize() -> void:
 	if level < 1 or level > 15 or count < 1 or FileAccess.file_exists(output):
 		fail("Require level 1..15, positive update count, and a new output file")
 		return
-	var candidate: String = args[3] if args.size() == 4 else "res://scripts/wr1_music_clock.gd"
+	var candidate: String = args[3] if args.size() == 4 else "res://scripts/legacy/wr1_music_clock.gd"
 	var prefix := "res://testing/fixtures/wr1_demo_level%d" % level
 	var replay_path := prefix + "_replay.json"
 	var fixture_path := prefix + "_boundaries.json.gz"
@@ -41,7 +41,7 @@ func _initialize() -> void:
 		if float(interrupted.begin.pic_ms) <= float(fixture.updates[count-1].begin.pic_ms):
 			fail("Requested prefix crosses an interrupted admission; use actual-game parity")
 			return
-	var frontend = preload("res://scripts/wr1_frontend_clock.gd").new()
+	var frontend = preload("res://scripts/legacy/wr1_frontend_clock.gd").new()
 	var clock = load(candidate).new()
 	frontend.configure(replay.original_music_clock)
 	clock.configure(replay.original_music_clock)

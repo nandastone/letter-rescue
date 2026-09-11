@@ -3,8 +3,8 @@ extends SceneTree
 func _initialize() -> void:
 	var replay: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://testing/fixtures/wr1_demo_level4_replay.json"))
 	var fixture: Dictionary = read_evidence("res://testing/fixtures/wr1_demo_level4_boundaries.json")
-	var frontend = preload("res://scripts/wr1_frontend_clock.gd").new()
-	var clock = preload("res://scripts/wr1_music_clock.gd").new()
+	var frontend = preload("res://scripts/legacy/wr1_frontend_clock.gd").new()
+	var clock = preload("res://scripts/legacy/wr1_music_clock.gd").new()
 	frontend.configure(replay.original_music_clock)
 	clock.configure(replay.original_music_clock)
 	var cursor := 0

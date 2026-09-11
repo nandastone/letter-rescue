@@ -8,7 +8,7 @@ func _run() -> void:
 	var session_dir := "res://testing/output/attract-session-%d/" % OS.get_process_id()
 	DirAccess.make_dir_recursive_absolute(session_dir)
 	gm.progress_path = session_dir + "progress.json"
-	preload("res://scripts/wr1_profiles.gd").directory = session_dir + "profiles/"
+	preload("res://scripts/core/wr1_profiles.gd").directory = session_dir + "profiles/"
 	gm.current_level = 10 # The original permutation begins with short demo11.
 	change_scene_to_file("res://scenes/game.tscn")
 	await process_frame

@@ -15,7 +15,7 @@ func _initialize() -> void:
 		grid.append([0,0,0,0,0,0,0,0])
 		bg.append([255,255,255,255])
 	var data := {"attributes":grid,"background_tiles":bg}
-	var letters = preload("res://scripts/wr1_letters.gd").new()
+	var letters = preload("res://scripts/core/wr1_letters.gd").new()
 	letters.configure(data, [[0,1],[1,1],[2,1],[3,1]], "cup")
 	check(grid[2] == [123,0,124,0,125,0,32,0], "Stamp only the mystery word's length")
 	var wrong: Dictionary = letters.collect_cell(4,2)

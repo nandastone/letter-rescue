@@ -11,13 +11,13 @@ func _initialize() -> void:
 func _check_page() -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_graphics_profile.json.gz")
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(16 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_graphics_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_graphics_work.gd").new()
 	work.configure()
 	var count := 0
 	for case in fixture.cases:
 		if case.kind != "draw_page":
 			continue
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		var result: Dictionary = work.draw_page(case)
 		model.run_driver(result.work)
@@ -32,13 +32,13 @@ func _check_page() -> void:
 func _check_copy() -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_copy_bios.json.gz")
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(32 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_graphics_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_graphics_work.gd").new()
 	work.configure()
 	var count := 0
 	for case in fixture.cases:
 		if case.kind != "copy_rect":
 			continue
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		var result: Dictionary = work.copy_rect(case)
 		model.run_driver(result.work)
@@ -54,13 +54,13 @@ func _check_copy() -> void:
 func _check_masked() -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_masked_work.json.gz")
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(32 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_graphics_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_graphics_work.gd").new()
 	work.configure()
 	var count := 0
 	for case in fixture.cases:
 		if case.kind != "masked_sprite":
 			continue
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		model.run_driver(work.masked_sprite(case))
 		compare(roundi(model.observed_time() * 27000.0), case.end_cycle, "sprite completion")
@@ -75,13 +75,13 @@ func _check_masked() -> void:
 func _check_display() -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_display_work.json.gz")
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(32 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_graphics_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_graphics_work.gd").new()
 	work.configure()
 	var count := 0
 	for case in fixture.cases:
 		if case.kind != "display_page":
 			continue
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		var result: Dictionary = work.display_page(case)
 		model.run_driver(result.work)
@@ -96,13 +96,13 @@ func _check_display() -> void:
 func _check_fills() -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_fill_work.json.gz")
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(32 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_graphics_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_graphics_work.gd").new()
 	work.configure()
 	var counts := {"fill_style":0, "fill_rect":0, "fill_raw":0}
 	for case in fixture.cases:
 		if not counts.has(case.kind):
 			continue
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		var result: Dictionary = work.call(case.kind, case)
 		model.run_driver(result.work)

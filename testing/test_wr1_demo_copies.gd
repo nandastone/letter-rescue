@@ -3,13 +3,13 @@ extends "res://testing/test_wr1_hardware.gd"
 func _initialize() -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_demo_hud_copies.json.gz")
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(32*1024*1024,FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_graphics_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_graphics_work.gd").new()
 	work.configure()
 	var forward := 0
 	var backward := 0
 	for case in fixture.cases:
 		var result: Dictionary = work.copy_rect(case.entry)
-		var hardware = preload("res://scripts/wr1_hardware.gd").new()
+		var hardware = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		hardware.configure(case.entry,fixture.event_names)
 		hardware.run_driver(result.work)
 		compare(roundi(hardware.observed_time()*27000),roundi(float(case.expected.pic_ms)*27000),"HUD copy return cycle")

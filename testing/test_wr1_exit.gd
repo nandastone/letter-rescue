@@ -12,16 +12,16 @@ func check(ok: bool, message: String) -> void:
 func _initialize() -> void:
 	var fixture: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://testing/fixtures/wr1_exit_stages.json"))
 	var start: Dictionary = fixture.begin
-	var transition = preload("res://scripts/wr1_exit.gd").new()
+	var transition = preload("res://scripts/core/wr1_exit.gd").new()
 	for x in range(75, 81):
 		for y in range(20, 24):
 			check(transition.touches(x,y,Vector2i(78,17)) == (x in [77,78] and y == 22), "Exact original door contact")
-	var p = preload("res://scripts/wr1_motion.gd").new()
+	var p = preload("res://scripts/core/wr1_motion.gd").new()
 	p.configure(JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/level_01.json")))
 	for key in ["x", "y", "gx", "gy", "camera_x", "camera_y", "phase", "facing", "background_frame"]:
 		p.set(key, int(start[key]))
 	p.frame = int(start.sprite)
-	var actors = preload("res://scripts/wr1_gruzzles.gd").new()
+	var actors = preload("res://scripts/core/wr1_gruzzles.gd").new()
 	actors.configure([],0,start)
 	actors.render_page = int(start.render_page)
 	actors.actors.clear()
@@ -46,7 +46,7 @@ func _initialize() -> void:
 	check(reset == {"word_offset":5,"picture_offset":6,"mystery_index":4}, "New-level random choices")
 	check(actors.rng == int(fixture.reset_end.rng), "17 loader random calls, including four overwritten types")
 	check(JSON.parse_string(JSON.stringify(actors.snapshot().gruzzles)) == fixture.reset_end.gruzzles, "New-level actors and retained slot timers")
-	var spawn = preload("res://scripts/wr1_motion.gd").new()
+	var spawn = preload("res://scripts/core/wr1_motion.gd").new()
 	spawn.configure(JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/level_02.json")))
 	for key in ["x","y","gx","gy","camera_x","camera_y"]:
 		check(spawn.get(key) == int(fixture.reset_end[key]), "Fresh-level spawn: " + key)

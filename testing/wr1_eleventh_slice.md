@@ -41,7 +41,7 @@ reloads, so it is retained as a diagnostic rather than used for fixture states.
 
 ## Recovered logic
 
-`scripts/wr1_opl.gd` and `tools/wr1_opl_reference.py` implement the embedded
+`scripts/legacy/wr1_opl.gd` and `tools/wr1_opl_reference.py` implement the embedded
 driver's MIDI dispatcher and note handlers, EXE1ec59..1f26a. They reproduce
 channel/program voice assignment, silent-voice reuse, note release, instrument
 operator writes, pitch calculation, volume scaling and rhythm-bit toggling.

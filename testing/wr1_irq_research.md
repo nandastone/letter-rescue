@@ -82,7 +82,7 @@ These are driver-relative offsets, not the game's DS offsets.
 
 `testing/output/wr1_music_state_native.jsonl` records the driver state before
 and after IRQ calls, plus the initial frontend handoff. Starting once at
-counter 560, both `scripts/wr1_music.gd` and the independent Python reference
+counter 560, both `scripts/legacy/wr1_music.gd` and the independent Python reference
 `tools/wr1_music_reference.py` match **487 consecutive native IRQ ticks**,
 emitting **71 MIDI events**. The correct source is **WR1.5**; trying WR1.4 or
 WR1.6 produces 474 mismatching states in either case. No later track state is

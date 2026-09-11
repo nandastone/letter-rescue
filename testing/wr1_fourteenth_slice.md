@@ -12,7 +12,7 @@ validates a whole service routine, not yet the continuous gameplay clock.
 
 ## Work recovered
 
-`tools/wr1_music_work.py` and `scripts/wr1_music_work.gd` recover the software
+`tools/wr1_music_work.py` and `scripts/legacy/wr1_music_work.gd` recover the software
 interrupt dispatcher, CMF track traversal, counter/delay arithmetic, running
 status, event argument reads, MIDI handler calls, and variable-length delays.
 They use the static instruction catalogue plus live CMF/music/voice state.

@@ -16,7 +16,7 @@ func _check_renderer(kind: String, fixture_name: String = "", expected_count: in
 	var label := kind if fixture_name.is_empty() else fixture_name
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_renderer_%s.json.gz" % label)
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(32 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_renderer_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_renderer_work.gd").new()
 	work.configure()
 	var count := 0
 	for case in fixture.cases:
@@ -48,7 +48,7 @@ func _check_renderer(kind: String, fixture_name: String = "", expected_count: in
 			compare(result.doors, case.expected_doors, "entrance countdown and door state")
 			compare(case.matching, case.expected_matching, "unchanged matching state")
 			compare(case.player, case.expected_player, "unchanged player frame and image headers")
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		model.run_driver(result.work)
 		compare(roundi(model.observed_time() * 27000.0), case.end_cycle, "prefix completion")
@@ -62,7 +62,7 @@ func _check_renderer(kind: String, fixture_name: String = "", expected_count: in
 			compare(call.kind, expected.kind, "generated call kind")
 			compare(call.args, expected.args, "generated call arguments")
 			for boundary in [["start", "entry_cycle", "initial"], ["return", "return_cycle", "expected"]]:
-				model = preload("res://scripts/wr1_hardware.gd").new()
+				model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 				model.configure(case.initial, fixture.event_names)
 				model.run_driver(result.work.slice(0, int(call[boundary[0]])))
 				compare(roundi(model.observed_time() * 27000.0), expected[boundary[1]], "child boundary cycle")

@@ -54,9 +54,9 @@ func run() -> void:
 	game.original_presentation.frame_start = 0.0
 	game.original_presentation.frame_end = 0.1
 	game.player.original_elapsed = 0.001
-	game.player.original_recap = preload("res://scripts/wr1_recap.gd").new()
+	game.player.original_recap = preload("res://scripts/core/wr1_recap.gd").new()
 	game.player.original_recap.begin(game.player.original_state, [0,1,2,3,4,5,6], 0.0, true)
-	game.original_recap_view = preload("res://scripts/wr1_recap_view.gd").new()
+	game.original_recap_view = preload("res://scripts/core/wr1_recap_view.gd").new()
 	game.add_child(game.original_recap_view)
 	game.original_recap_view.configure(game.hud, game.word_manager.words)
 	game.player.original_recap.advance(0.1, game.player.original_state,

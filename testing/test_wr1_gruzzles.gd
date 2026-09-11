@@ -10,7 +10,7 @@ func check(condition: bool, message: String) -> void:
 		push_error(message)
 
 func _initialize() -> void:
-	var p = preload("res://scripts/wr1_motion.gd").new()
+	var p = preload("res://scripts/core/wr1_motion.gd").new()
 	var grid: Array = []
 	for y in range(40):
 		var row: Array = []
@@ -22,7 +22,7 @@ func _initialize() -> void:
 	p.camera_y = 10
 	p.gx = 10
 	p.gy = 30
-	var model = preload("res://scripts/wr1_gruzzles.gd").new()
+	var model = preload("res://scripts/core/wr1_gruzzles.gd").new()
 	model.configure([[15,12]],0)
 	model.entity_timer = 7
 	model.slime_request = true

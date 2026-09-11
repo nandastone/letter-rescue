@@ -15,15 +15,15 @@ func _initialize() -> void:
 	var fixture: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://testing/fixtures/wr1_rescue_stages.json"))
 	var start: Dictionary = fixture.begin
 	var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/level_01.json"))
-	p = preload("res://scripts/wr1_motion.gd").new()
+	p = preload("res://scripts/core/wr1_motion.gd").new()
 	p.configure(data)
 	for key in ["x", "y", "gx", "gy", "camera_x", "camera_y", "phase", "facing", "background_frame"]:
 		p.set(key, int(start[key]))
 	p.frame = int(start.sprite)
-	actors = preload("res://scripts/wr1_gruzzles.gd").new()
+	actors = preload("res://scripts/core/wr1_gruzzles.gd").new()
 	actors.configure([], 0, start)
 	actors.death = true
-	var rescue = preload("res://scripts/wr1_rescue.gd").new()
+	var rescue = preload("res://scripts/core/wr1_rescue.gd").new()
 	rescue.begin(p, Vector2i(start.destination_x, start.destination_y), 0.0)
 	var done := false
 	for tick in range(194):

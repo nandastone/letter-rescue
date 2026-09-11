@@ -1,7 +1,7 @@
 extends SceneTree
 ## Offline input planning against recovered collision rules. Outputs only held
 ## controls; native captures independently determine whether the route succeeds.
-const Motion = preload("res://scripts/wr1_motion.gd")
+const Motion = preload("res://scripts/core/wr1_motion.gd")
 const FIELDS = ["width","height","x","y","gx","gy","camera_x","camera_y","phase","frame","facing","idle_ticks","left_index","right_index","background_frame"]
 const CONTROLS = [{"left":true},{"right":true},{"up":true,"left":true},
 	{"up":true,"right":true},{"up":true},{"down":true},{"down":true,"left":true},{"down":true,"right":true},{}]

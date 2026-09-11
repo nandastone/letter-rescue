@@ -12,7 +12,7 @@ func _run() -> void:
 	assert(input.physics_frame == 0)
 	if "--profile-settings" in OS.get_cmdline_user_args():
 		var gm := root.get_node("GameManager")
-		var words := preload("res://scripts/wr1_words.gd").new()
+		var words := preload("res://scripts/core/wr1_words.gd").new()
 		words.next_words()
 		words.next_words()
 		gm.current_level = 5

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://hud001"]
 
-[ext_resource type="Script" path="res://scripts/hud.gd" id="1_hud"]
+[ext_resource type="Script" path="res://scripts/core/hud.gd" id="1_hud"]
 [ext_resource type="Texture2D" path="res://assets/extracted/hud_top.png" id="2_hud_top"]
 [ext_resource type="Texture2D" path="res://assets/extracted/hud_bottom.png" id="3_hud_bot"]
 [ext_resource type="Texture2D" path="res://assets/extracted/hud_left.png" id="4_hud_left"]

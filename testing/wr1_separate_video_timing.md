@@ -5,7 +5,7 @@ states match with VGA scanout on every scenario**. There are still 533 admission
 timing differences. See `testing/output/parity/recap-clock-fixed-all/` and
 [the diagnosis](wr1_recap_video_diagnosis.md). Earlier runs below are historical.
 
-`scripts/wr1_presentation.gd` now owns displayed images. Gameplay still executes
+`scripts/legacy/wr1_presentation.gd` now owns displayed images. Gameplay still executes
 the recovered motion, actor, animation, and interaction updates in their existing
 order. Each logical drawing call submits an owned image; displaying it does not
 run those updates again. Rescue, recap, exit, and level-reset drawing also submit

@@ -3,9 +3,9 @@ extends "res://testing/test_wr1_hardware.gd"
 func _initialize() -> void:
 	var raw := FileAccess.get_file_as_bytes("res://testing/fixtures/wr1_contact_graphics.json.gz")
 	var fixture: Dictionary = JSON.parse_string(raw.decompress_dynamic(64 * 1024 * 1024, FileAccess.COMPRESSION_GZIP).get_string_from_utf8())
-	var work = preload("res://scripts/wr1_contact_work.gd").new()
+	var work = preload("res://scripts/legacy/wr1_contact_work.gd").new()
 	work.configure()
-	var text = preload("res://scripts/wr1_text_work.gd").new()
+	var text = preload("res://scripts/legacy/wr1_text_work.gd").new()
 	text.configure()
 	var contacts := 0
 	var primitives := 0
@@ -24,7 +24,7 @@ func _initialize() -> void:
 				result.state = case.graphics_state
 			else:
 				result = text.string(case)
-			var model = preload("res://scripts/wr1_hardware.gd").new()
+			var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 			model.configure(case.initial, fixture.event_names)
 			model.run_driver(result.work)
 			compare(roundi(model.observed_time() * 27000.0), case.end_cycle, kind + " cycle")
@@ -41,7 +41,7 @@ func _initialize() -> void:
 		compare(result.state, case.expected_contact, "contact state")
 		compare(result.graphics_state, case.expected_graphics_state, "contact graphics")
 		compare(result.attributes, case.expected_contact_attributes, "contact attributes")
-		var model = preload("res://scripts/wr1_hardware.gd").new()
+		var model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 		model.configure(case.initial, fixture.event_names)
 		model.run_driver(result.work)
 		compare(roundi(model.observed_time() * 27000.0), case.end_cycle, "contact cycle")
@@ -58,7 +58,7 @@ func _initialize() -> void:
 			compare(child.kind, expected.kind, "child kind")
 			compare(child.args, expected.args, "child args")
 			for item in [["start", "start_cycle", "initial"], ["return", "end_cycle", "expected"]]:
-				model = preload("res://scripts/wr1_hardware.gd").new()
+				model = preload("res://scripts/legacy/wr1_hardware.gd").new()
 				model.configure(case.initial, fixture.event_names)
 				model.run_driver(result.work.slice(0, int(child[item[0]])))
 				compare(roundi(model.observed_time() * 27000.0), expected[item[1]], "child " + item[0])

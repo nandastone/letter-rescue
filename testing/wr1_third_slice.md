@@ -58,7 +58,7 @@ Evidence: [native samples](fixtures/wr1_controlled_native.json),
   polled values within a frame are rejected. Callback pulses entirely within one
   native frame are still reduced to the final held state; this is a frame-boundary
   converter, not an emulator keyboard-controller model.
-* `scripts/input_replay.gd` waits for level construction before consuming frame 0,
+* `scripts/core/input_replay.gd` waits for level construction before consuming frame 0,
   runs before Player, and flushes injected events before that physics iteration.
   An engine test caught and now guards against losing a press on the final frame.
 * Original-rule replays can specify measured `source_fps`,

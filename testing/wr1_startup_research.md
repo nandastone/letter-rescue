@@ -10,7 +10,7 @@ Existing native demo checkpoints and older recording defaults are unchanged.
 Source executable SHA256:
 `b8395fab1e0341e1398790b986c8cf8bf2393dcfdb5d492e7d7dd910d2589d0f`.
 
-`scripts/wr1_startup.gd` implements the original C runtime conversion at file
+`scripts/core/wr1_startup.gd` implements the original C runtime conversion at file
 `0x247ae..0x248e0`, timezone parsing at `0x24b67..0x24d4b`, and daylight selection
 at `0x24d4c..0x24e23`. The game passes only the low 16 bits of the converted
 timestamp to its seed routine at `0x23f5f`. Hundredths are ignored.

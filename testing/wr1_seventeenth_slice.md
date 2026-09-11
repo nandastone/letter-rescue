@@ -16,7 +16,7 @@ not yet across rendering and gameplay updates between the waits.
 
 ## Idle loop
 
-`tools/wr1_idle_clock.py` and `scripts/wr1_idle_clock.gd` recover the ordinary
+`tools/wr1_idle_clock.py` and `scripts/legacy/wr1_idle_clock.gd` recover the ordinary
 polling path at file 034BA..037A4, with the preceding update return at 040D2.
 The ordinary loop contains 25 instructions. It compares the original control
 flags, then compares the 16-bit timer and threshold as unsigned values.

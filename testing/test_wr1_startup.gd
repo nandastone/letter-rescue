@@ -1,5 +1,5 @@
 extends SceneTree
-const Startup = preload("res://scripts/wr1_startup.gd")
+const Startup = preload("res://scripts/core/wr1_startup.gd")
 
 func _initialize() -> void:
 	var evidence: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://testing/fixtures/wr1_startup_seed.json"))

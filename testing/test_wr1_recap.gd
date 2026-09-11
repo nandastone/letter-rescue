@@ -17,22 +17,22 @@ func check(ok: bool, message: String) -> void:
 func _initialize() -> void:
 	var fixture: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://testing/fixtures/wr1_recap_stages.json"))
 	var start: Dictionary = fixture.begin
-	p = preload("res://scripts/wr1_motion.gd").new()
+	p = preload("res://scripts/core/wr1_motion.gd").new()
 	p.configure(JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/level_01.json")))
 	for key in ["x", "y", "gx", "gy", "camera_x", "camera_y", "phase", "facing", "background_frame"]:
 		p.set(key, int(start[key]))
 	p.frame = int(start.sprite)
-	actors = preload("res://scripts/wr1_gruzzles.gd").new()
+	actors = preload("res://scripts/core/wr1_gruzzles.gd").new()
 	actors.configure([], 0, start)
 	actors.render_page = int(start.render_page)
-	pictures = preload("res://scripts/wr1_picture_animation.gd").new()
+	pictures = preload("res://scripts/core/wr1_picture_animation.gd").new()
 	pictures.configure(start)
 	pictures.enabled = false
-	reward = preload("res://scripts/wr1_reward_popup.gd").new()
+	reward = preload("res://scripts/core/wr1_reward_popup.gd").new()
 	reward.ticks = int(start.reward_timer)
 	reward.grid = Vector2i(start.reward_x, start.reward_y)
 	reward.bonus = int(start.reward_bonus)
-	recap = preload("res://scripts/wr1_recap.gd").new()
+	recap = preload("res://scripts/core/wr1_recap.gd").new()
 	recap.begin(p, fixture.completion_order, 0.0)
 	var irqs := 0
 	while not recap.finished and irqs < 4000:
