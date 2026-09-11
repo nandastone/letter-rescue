@@ -6,6 +6,16 @@ extends "res://scripts/core/scene_capture.gd"
 ## frozen frame to draw over.
 var initialized := true
 
+func _ready() -> void:
+	super()
+	if not enabled:
+		return
+	# Pixel snapping rounds drawing to whole game pixels, which would put the
+	# smooth sub-pixel motion back into 1 px steps. The reference viewport the
+	# base class owns keeps its own settings for the frozen menu backdrop.
+	get_viewport().snap_2d_transforms_to_pixel = false
+	get_viewport().snap_2d_vertices_to_pixel = false
+
 func initialize() -> void:
 	pass
 
