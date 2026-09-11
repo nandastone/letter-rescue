@@ -1,4 +1,7 @@
-extends Area2D
+extends Node2D
+
+# One of a level's seven word/picture slots. word_manager.gd drives its state
+# from the original matching model.
 
 enum State { IDLE, SHOWING_WORD, SHOWING_PICTURE, MATCHED }
 
@@ -6,7 +9,6 @@ var state: State = State.IDLE
 var word: String = ""
 var picture_texture: Texture2D = null
 var block_index: int = 0
-var original_rules: bool = false
 var original_word_sprite: Sprite2D
 var original_picture_frames: Array[Texture2D] = []
 
@@ -39,86 +41,26 @@ func set_original_picture_frame(frame: int) -> void:
 		picture_texture = original_picture_frames[frame]
 		$PictureSprite.texture = picture_texture
 
-signal block_touched(block: Area2D)
-
 func _ready() -> void:
-	body_entered.connect(_on_body_entered)
 	update_visual()
 
 func setup(word_text: String, index: int) -> void:
 	word = word_text
 	block_index = index
 	state = State.IDLE
-
-	# Load word picture if available.
-	var pic_path := "res://assets/pictures/%s.png" % word.to_lower()
-	if ResourceLoader.exists(pic_path):
-		picture_texture = load(pic_path)
-
-	update_visual()
-
-func _on_body_entered(body: Node2D) -> void:
-	if original_rules:
-		return
-	if body is CharacterBody2D and body.has_method("die") and state != State.MATCHED:
-		block_touched.emit(self)
-
-func show_word() -> void:
-	state = State.SHOWING_WORD
-	update_visual()
-
-func show_picture() -> void:
-	if state == State.MATCHED:
-		return
-	state = State.SHOWING_PICTURE
-	update_visual()
-
-func reset_to_idle() -> void:
-	if state == State.MATCHED:
-		return
-	state = State.IDLE
-	update_visual()
-
-func mark_matched() -> void:
-	state = State.MATCHED
 	update_visual()
 
 func update_visual() -> void:
 	if original_word_sprite != null:
 		original_word_sprite.hide()
-	match state:
-		State.IDLE:
-			$Sprite2D.modulate = Color.WHITE
-			$Sprite2D.visible = true
-			$Label.visible = false
-			if has_node("PictureSprite"):
-				$PictureSprite.visible = false
-		State.SHOWING_WORD:
-			$Sprite2D.visible = false
-			$Label.text = word.to_upper()
-			$Label.visible = true
-			$Label.modulate = Color.WHITE
-			if has_node("PictureSprite"):
-				$PictureSprite.visible = false
-			if original_rules and original_word_sprite != null:
-				$Label.hide()
-				original_word_sprite.show()
-		State.SHOWING_PICTURE:
-			$Label.visible = false
-			$Sprite2D.visible = false
-			if picture_texture and has_node("PictureSprite"):
-				$PictureSprite.texture = picture_texture
-				$PictureSprite.visible = true
-			else:
-				$Sprite2D.visible = true
-				$Label.text = word.to_upper()
-				$Label.visible = true
-				$Label.modulate = Color.WHITE
-		State.MATCHED:
-			$Label.visible = false
-			$Sprite2D.visible = false
-			if has_node("PictureSprite"):
-				$PictureSprite.visible = false
+	$Sprite2D.visible = state == State.IDLE or (state == State.SHOWING_PICTURE and picture_texture == null)
+	$PictureSprite.visible = state == State.SHOWING_PICTURE and picture_texture != null
+	if $PictureSprite.visible:
+		$PictureSprite.texture = picture_texture
+	if state == State.IDLE:
+		$Sprite2D.modulate = Color.WHITE
+	if state == State.SHOWING_WORD and original_word_sprite != null:
+		original_word_sprite.show()
 	if original_word_sprite != null:
 		preload("res://scripts/wr1_clear_text.gd").sync_sprite(original_word_sprite)
 	preload("res://scripts/wr1_clear_text.gd").sync_sprite($Sprite2D)

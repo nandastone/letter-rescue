@@ -10,8 +10,7 @@ var score: Control
 const CHROME = preload("res://assets/extracted/hud_top.png")
 
 static func enabled() -> bool:
-	var args := LaunchArgs.user_args()
-	return "--original-rules" in args and "--clear-text" in args
+	return "--clear-text" in LaunchArgs.user_args()
 
 static func configure_window(window: Window) -> void:
 	if enabled():

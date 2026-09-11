@@ -1,15 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://game001"]
+[gd_scene load_steps=10 format=3 uid="uid://game001"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_game"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="2_camera"]
 [ext_resource type="Script" path="res://scripts/word_manager.gd" id="3_wordmgr"]
-[ext_resource type="Script" path="res://scripts/slime_system.gd" id="4_slime"]
 [ext_resource type="Script" path="res://scripts/mystery_word.gd" id="5_mystery"]
 [ext_resource type="PackedScene" uid="uid://player001" path="res://scenes/player.tscn" id="6_player"]
 [ext_resource type="PackedScene" uid="uid://hud001" path="res://scenes/hud.tscn" id="7_hud"]
-[ext_resource type="PackedScene" uid="uid://lvlcomp01" path="res://scenes/level_complete.tscn" id="8_lvlcomp"]
-[ext_resource type="Texture2D" path="res://assets/tiles/collision8.png" id="9_ground"]
-[ext_resource type="Texture2D" path="res://assets/tiles/platform8.png" id="10_platform"]
 [ext_resource type="Texture2D" path="res://assets/tiles/tileset_back3.png" id="11_back3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bg"]
@@ -260,33 +256,6 @@ texture_region_size = Vector2i(16, 16)
 tile_size = Vector2i(16, 16)
 sources/0 = SubResource("TileSetAtlasSource_bg")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_solid"]
-texture = ExtResource("9_ground")
-texture_region_size = Vector2i(8, 8)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
-
-[sub_resource type="TileSet" id="TileSet_solid"]
-tile_size = Vector2i(8, 8)
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_solid")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_platform"]
-texture = ExtResource("10_platform")
-texture_region_size = Vector2i(8, 8)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, -2, -4, -2)
-0:0/0/physics_layer_0/polygon_0/one_way = true
-
-[sub_resource type="TileSet" id="TileSet_platform"]
-tile_size = Vector2i(8, 8)
-physics_layer_0/collision_layer = 16
-physics_layer_0/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_platform")
-
 [node name="Game" type="Node2D"]
 script = ExtResource("1_game")
 
@@ -304,14 +273,6 @@ tile_set = SubResource("TileSet_bg")
 z_index = 5
 tile_set = SubResource("TileSet_bg")
 
-[node name="CollisionTileMapLayer" type="TileMapLayer" parent="."]
-modulate = Color(1, 1, 1, 0)
-tile_set = SubResource("TileSet_solid")
-
-[node name="PlatformTileMapLayer" type="TileMapLayer" parent="."]
-modulate = Color(1, 1, 1, 0)
-tile_set = SubResource("TileSet_platform")
-
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("6_player")]
@@ -320,17 +281,11 @@ position = Vector2(64, 64)
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(160, 100)
 script = ExtResource("2_camera")
-target = NodePath("../Player")
 
 [node name="HUD" parent="." instance=ExtResource("7_hud")]
 
-[node name="LevelCompleteUI" parent="." instance=ExtResource("8_lvlcomp")]
-
 [node name="WordManager" type="Node" parent="."]
 script = ExtResource("3_wordmgr")
-
-[node name="SlimeSystem" type="Node" parent="."]
-script = ExtResource("4_slime")
 
 [node name="MysteryWord" type="Node" parent="."]
 script = ExtResource("5_mystery")

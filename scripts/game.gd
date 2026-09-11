@@ -6,22 +6,10 @@ const TILE_SIZE := 16
 const TILESET_COLS := 20
 
 # Wiki: animated tiles cycle through the BG tile at (tx,ty) plus the next
-# three tiles to the right of it in the tileset image. Frame rate was not
-# pinned down in disassembly; tune against reference if needed.
-const ANIM_FRAMES_PER_CYCLE := 4
-# 6 physics ticks per animation frame — verified against DOSBox ref frame
-# transitions at ref 324/330/336/342 (interval of 6 at 70Hz). Was 8 before,
-# which gave a visibly slower cycle than the engine.
-const ANIM_TICKS_PER_FRAME := 6
-# At level load the WR1 engine has the animated tile already cycled forward
-# by ~7 ticks worth (cycle-frame 1, with 1 tick-of-6 remaining before next
-# advance). Mirror that so captured frame 0 shows base+1 and the first
-# advance happens at capture frame ~5, matching ref frames 319→324.
-const ANIM_TICKS_INITIAL := 7
-
+# three tiles to the right of it in the tileset image. The original renderer
+# advances them (WR1Motion.background_frame) on each presented update.
 var anim_cells: Array = []  # list of Vector2i tile-grid coords (16x16)
 var anim_base_atlas: Array[Vector2i] = []  # atlas cell for frame 0 at each anim index
-var anim_tick_count: int = 0
 var original_backdrop: Sprite2D
 
 # Standard EGA 16-colour palette, matching DOSBox's VGA output for EGA content.
@@ -34,30 +22,22 @@ const EGA_PALETTE: Array[Color] = [
 	Color8(255, 85, 85),   Color8(255, 85, 255),    Color8(255, 255, 85),    Color8(255, 255, 255),
 ]
 
-@onready var player: CharacterBody2D = $Player
+@onready var player: Node2D = $Player
 @onready var camera: Camera2D = $Camera
 @onready var hud: CanvasLayer = $HUD
 @onready var bg_tilemap: TileMapLayer = $BackgroundTileMapLayer
 @onready var fg_tilemap: TileMapLayer = $ForegroundTileMapLayer
-@onready var tilemap: TileMapLayer = $CollisionTileMapLayer
-@onready var platform_tilemap: TileMapLayer = $PlatformTileMapLayer
 @onready var background: ColorRect = $Background
 @onready var entities: Node2D = $Entities
 @onready var word_manager: Node = $WordManager
-@onready var slime_system: Node = $SlimeSystem
 @onready var mystery_word: Node = $MysteryWord
-@onready var level_complete_ui: Control = $LevelCompleteUI
 
 var question_block_scene: PackedScene
-var gruzzle_scene: PackedScene
 var collectible_scene: PackedScene
 var exit_door_scene: PackedScene
-var drip_scene: PackedScene
 
-var spawn_position: Vector2 = Vector2.ZERO
 var level_data: Dictionary = {}
-var exit_door: Area2D = null
-var is_level_ending: bool = false
+var exit_door: Node2D = null
 var original_books: RefCounted
 var original_gruzzles: RefCounted
 var original_slime_pickups: RefCounted
@@ -91,33 +71,18 @@ func is_replay_ready() -> bool:
 
 func _ready() -> void:
 	question_block_scene = load("res://scenes/question_block.tscn")
-	gruzzle_scene = load("res://scenes/gruzzle.tscn")
 	collectible_scene = load("res://scenes/collectible.tscn")
 	exit_door_scene = load("res://scenes/exit_door.tscn")
-	drip_scene = load("res://scenes/drip_hazard.tscn")
 
-	# Connect signals.
-	player.died.connect(_on_player_died)
 	word_manager.correct_match.connect(_on_correct_match)
 	word_manager.wrong_match.connect(_on_wrong_match)
 	word_manager.all_words_matched.connect(_on_all_words_matched)
 	word_manager.word_revealed.connect(_on_word_revealed)
-	slime_system.slime_used.connect(hud.update_slime)
-	slime_system.slime_collected.connect(hud.update_slime)
-	mystery_word.letter_collected.connect(_on_mystery_letter_collected)
-	mystery_word.word_completed.connect(_on_mystery_word_completed)
 	player.original_presented.connect(_on_original_presented)
 	player.original_moved.connect(_on_original_moved)
-	level_complete_ui.next_level_requested.connect(_on_next_level)
 
-	# Camera follows player.
-	camera.target = camera.get_path_to(player)
-
-	# Show level number.
-	hud.update_level(GameManager.current_level)
-	if player.original_rules_enabled:
-		original_presentation = preload("res://scripts/wr1_presentation.gd").new()
-		add_child(original_presentation)
+	original_presentation = preload("res://scripts/wr1_presentation.gd").new()
+	add_child(original_presentation)
 	load_current_level()
 
 func queue_original_video(elapsed_after_event: float = 0.0, ordinary_draw: bool = false) -> void:
@@ -127,24 +92,20 @@ func queue_original_video(elapsed_after_event: float = 0.0, ordinary_draw: bool 
 
 func load_current_level() -> void:
 	replay_ready = false
-	is_level_ending = false
-	var path := LevelLoader.get_level_path(GameManager.current_level)
+	var path :=LevelLoader.get_level_path(GameManager.current_level)
 	level_data = LevelLoader.load_level(path)
 
 	if level_data.is_empty():
-		push_warning("No level data found, using test layout.")
-		_setup_test_level()
-		replay_ready = true
+		push_error("No level data found: " + path)
 		return
 
 	_prepare_original_initialization()
-	if player.original_rules_enabled:
-		AudioManager.begin_original_level(GameManager.current_level)
+	AudioManager.begin_original_level(GameManager.current_level)
 	await _show_original_level_title(true)
 	_build_level_from_data()
 
 func _prepare_original_initialization() -> void:
-	if not player.original_rules_enabled or original_words != null:
+	if original_words != null:
 		return
 	# Existing native replays start at a measured post-load checkpoint. Older
 	# recordings without a seed also retain their historical deterministic start.
@@ -177,7 +138,7 @@ func _prepare_original_initialization() -> void:
 
 func _show_original_level_title(initial: bool) -> void:
 	# Native-input replays begin after loading; their frame zero excludes this UI.
-	if not player.original_rules_enabled or InputReplay.mode == InputReplay.Mode.REPLAYING:
+	if InputReplay.mode == InputReplay.Mode.REPLAYING:
 		return
 	replay_ready = false
 	player.set_physics_process(false)
@@ -213,20 +174,19 @@ func _build_level_from_data() -> void:
 	replay_ready = false
 	original_recap_pending = false
 	original_door_state = 0
-	if player.original_rules_enabled:
-		player.set_physics_process(false)
-		# Renderer order: player BA1C, enemies BA38, drips BBA0, then
-		# foreground at BC5E. Keep each layer distinct as actors are spawned.
-		$ForegroundTileMapLayer.z_index = 6
-		original_books = null
-		original_gruzzles = null
-		original_slime_pickups = null
-		original_letters = null
-		original_reward = null
-		original_reward_sprite = null
-		original_actor_sprites.clear()
-		original_drip_sprites.clear()
-		hud.reset_original_chrome()
+	player.set_physics_process(false)
+	# Renderer order: player BA1C, enemies BA38, drips BBA0, then
+	# foreground at BC5E. Keep each layer distinct as actors are spawned.
+	$ForegroundTileMapLayer.z_index = 6
+	original_books = null
+	original_gruzzles = null
+	original_slime_pickups = null
+	original_letters = null
+	original_reward = null
+	original_reward_sprite = null
+	original_actor_sprites.clear()
+	original_drip_sprites.clear()
+	hud.reset_original_chrome()
 	# Clear existing entities.
 	for child in entities.get_children():
 		if not original_restart.is_empty():
@@ -241,110 +201,80 @@ func _build_level_from_data() -> void:
 	var bg_idx: int = int(level_data.get("bg_colour_ega", 0))
 	if bg_idx >= 0 and bg_idx < EGA_PALETTE.size():
 		background.color = EGA_PALETTE[bg_idx]
-	if player.original_rules_enabled:
-		if original_backdrop == null:
-			original_backdrop = Sprite2D.new()
-			original_backdrop.centered = false
-			original_backdrop.z_index = -9
-			add_child(original_backdrop)
-		var backdrop_index: int = int(level_data.get("backdrop", 0))
-		original_backdrop.visible = backdrop_index != 0
-		if backdrop_index != 0:
-			original_backdrop.texture = load("res://assets/tiles/backdrop_%d.png" % backdrop_index)
+	if original_backdrop == null:
+		original_backdrop = Sprite2D.new()
+		original_backdrop.centered = false
+		original_backdrop.z_index = -9
+		add_child(original_backdrop)
+	var backdrop_index: int = int(level_data.get("backdrop", 0))
+	original_backdrop.visible = backdrop_index != 0
+	if backdrop_index != 0:
+		original_backdrop.texture = load("res://assets/tiles/backdrop_%d.png" % backdrop_index)
 
-	# Player spawn. player_idle.png is extracted from STATIC.WR(253, 40) — the
-	# engine's girl-in-doorway sprite (eyes at internal col 9, vs idle from
-	# CHARS(0,64) which had eyes at col 11). Eye screen x must match ref's
-	# x=54,55 and x=59,60; with sprite_tl = player.x + 4 (centered 24-wide
-	# sprite, camera clamped at limit_left=-16), we need sprite_tl = 45, so
-	# player.x = 41 = start.x_px + 9. But measured offset is +6 not +4 (cause
-	# unknown — likely camera-follow + pixel snap); empirical test shows
-	# start.x_px + 7 lands sprite_tl at 45 = eye at 54.
-	var start = level_data.get("player_start", [2, 10])
-	var spawn_tile_y: float = ceil(float(start[1]))
-	spawn_position = Vector2(start[0] * TILE_SIZE + 7, spawn_tile_y * TILE_SIZE)
-	player.global_position = spawn_position
 	player.is_dead = false
-	player.velocity = Vector2.ZERO
 
-	# Spawn doorway backdrop — the decorative 32x40 pink-checker frame with
+	# Spawn doorway backdrop: the decorative 32x40 pink-checker frame with
 	# dark-red outer trim and black inner frame. Extracted from STATIC.WR at
-	# (16, 73) — frame 0 (empty) of the girl's doorway-animation row.
+	# (16, 73), frame 0 (empty) of the girl doorway-animation row.
 	# Top-left offset (-8, -32) from raw player_start aligns it pixel-exact
-	# with the DOSBox reference. (Raw start, not the ground-snapped spawn.)
+	# with the DOSBox reference.
+	var start = level_data.get("player_start", [2, 10])
 	var raw_start := Vector2(float(start[0]) * TILE_SIZE, float(start[1]) * TILE_SIZE)
 	var doorway_sprite := Sprite2D.new()
 	doorway_sprite.texture = preload("res://assets/sprites/spawn_doorway.png")
 	doorway_sprite.centered = false
 	doorway_sprite.position = raw_start + Vector2(-8, -32)
 	entities.add_child(doorway_sprite)
-	if player.original_rules_enabled:
-		original_entrance = doorway_sprite
-		original_entrance_timer = 60 # WR1.EXE 4e77: reset on both fresh and cached loads.
-		if original_restart.is_empty() and not InputReplay.original_level_start.is_empty():
-			original_entrance_timer = int(InputReplay.original_level_start.entrance_timer)
+	original_entrance = doorway_sprite
+	original_entrance_timer = 60 # WR1.EXE 4e77: reset on both fresh and cached loads.
+	if original_restart.is_empty() and not InputReplay.original_level_start.is_empty():
+		original_entrance_timer = int(InputReplay.original_level_start.entrance_timer)
 
 	# Build tilemaps. WR1 engine overwrites bg cells at level-load with
 	# entity-specific tile indices (per wr1.exe disassembly at 0x6e6a/0x6eea):
 	#   books -> tile 239, letters -> tile 238
-	if player.original_rules_enabled:
-		var texture: Texture2D = load("res://assets/tiles/tileset_back%d.png" % int(level_data.tileset))
-		for layer in [bg_tilemap, fg_tilemap]:
-			# Keep the scene's tile definitions and give each map its own atlas.
-			layer.tile_set = layer.tile_set.duplicate(true)
-			(layer.tile_set.get_source(0) as TileSetAtlasSource).texture = texture
-	if level_data.has("collision"):
-		_build_tilemap(level_data["collision"])
+	var texture: Texture2D = load("res://assets/tiles/tileset_back%d.png" % int(level_data.tileset))
+	for layer in [bg_tilemap, fg_tilemap]:
+		# Keep the scene tile definitions and give each map its own atlas.
+		layer.tile_set = layer.tile_set.duplicate(true)
+		(layer.tile_set.get_source(0) as TileSetAtlasSource).texture = texture
 	if level_data.has("background_tiles"):
 		_build_background(level_data["background_tiles"])
 	_build_foreground(level_data.get("fg_tiles", []), level_data.get("background_tiles", []))
 	_setup_animations(level_data.get("animations", []), level_data.get("background_tiles", []))
 
-	# Spawn exit door.
 	var door_pos = level_data.get("exit_door", [10, 10])
-	exit_door = exit_door_scene.instantiate() as Area2D
+	exit_door = exit_door_scene.instantiate() as Node2D
 	exit_door.global_position = Vector2(door_pos[0] * TILE_SIZE, door_pos[1] * TILE_SIZE)
-	exit_door.player_entered_door.connect(_on_door_entered)
 	entities.add_child(exit_door)
 
-	# Question blocks: extracted STATIC.WR sprite, with the inner Sprite2D
-	# offset (+26, +18) inside the entity scene (sprite-center = entity_pos
-	# + (26, 18)). Derived from template-matching the extracted sprite
-	# against reference frame 325, which lands the QB at world center
-	# (entity_pos.x + 26, entity_pos.y + 18) = level data position +
-	# (1 tile, 0.5 tile) + sprite-half = (16+10, 8+10) = (26, 18) world.
-	var blocks: Array[Area2D] = []
-	var block_positions = level_data.get("question_blocks", [])
-	for pos in block_positions:
-		var block := question_block_scene.instantiate() as Area2D
+	# Word/picture slots at their raw attr-cell positions; word_manager
+	# resolves slot identity from these coordinates.
+	var blocks: Array[Node2D] = []
+	for pos in level_data.get("question_blocks", []):
+		var block := question_block_scene.instantiate() as Node2D
 		block.global_position = Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE)
 		entities.add_child(block)
 		blocks.append(block)
 
-	# Setup word manager.
-	var words = level_data.get("words", ["cat", "dog", "hat", "sun", "cup", "bed", "pen"])
-	if player.original_rules_enabled:
-		if original_words == null:
-			original_words = preload("res://scripts/wr1_words.gd").new()
-			if InputReplay.original_level_start.is_empty():
-				original_words.next_words()
-			else:
-				original_words.words.assign(InputReplay.original_level_start.words)
-				original_words.offset = int(InputReplay.original_level_start.word_cursor)
-		words = original_words.words
+	if original_words == null:
+		original_words = preload("res://scripts/wr1_words.gd").new()
+		if InputReplay.original_level_start.is_empty():
+			original_words.next_words()
+		else:
+			original_words.words.assign(InputReplay.original_level_start.words)
+			original_words.offset = int(InputReplay.original_level_start.word_cursor)
+	var words: Array = original_words.words
 	word_manager.setup(words, blocks)
 
-	# Setup mystery word from level data.
-	var mystery: String = level_data.get("mystery_word", "word")
-	if player.original_rules_enabled:
-		mystery = words[5] # Recorded initial session; later loads use the RNG index.
+	var mystery: String = words[5] # Recorded initial session; later loads use the RNG index.
 	if not original_restart.is_empty():
 		mystery = words[original_restart.mystery_index]
 	elif not original_initialization.is_empty():
 		mystery = words[original_initialization.mystery_index]
-	elif player.original_rules_enabled and not InputReplay.original_level_start.is_empty():
+	elif not InputReplay.original_level_start.is_empty():
 		mystery = words[int(InputReplay.original_level_start.mystery_index)]
-	elif player.original_rules_enabled:
+	else:
 		var user_args := LaunchArgs.user_args()
 		var mystery_arg := user_args.find("--mystery-word")
 		if mystery_arg >= 0 and mystery_arg + 1 < user_args.size():
@@ -354,32 +284,10 @@ func _build_level_from_data() -> void:
 	mystery_word.setup(mystery)
 	hud.setup_mystery_word(mystery.to_upper(), mystery_word.next_index)
 
-	# Spawn gruzzles (limited by difficulty).
-	var gruzzle_positions = level_data.get("gruzzles", [])
-	var max_gruzzles := GameManager.get_gruzzle_count()
-	if not player.original_rules_enabled:
-		for i in range(min(gruzzle_positions.size(), max_gruzzles)):
-			_spawn_gruzzle(Vector2(gruzzle_positions[i][0] * TILE_SIZE, gruzzle_positions[i][1] * TILE_SIZE))
-
-	# Spawn drip hazards.
-	for drip_data in level_data.get("drips", []):
-		if player.original_rules_enabled:
-			continue
-		var drip_pos = drip_data.get("pos", [0, 0])
-		var drip_node := drip_scene.instantiate() as Node2D
-		drip_node.global_position = Vector2(drip_pos[0] * TILE_SIZE, drip_pos[1] * TILE_SIZE)
-		drip_node.setup(drip_data.get("max_y", 10))
-		entities.add_child(drip_node)
-
-	# Spawn slime buckets.
 	for pos in level_data.get("slime_buckets", []):
 		_spawn_collectible(Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE), "slime_bucket")
-
-	# Books re-enabled with reference-cropped sprite + (+24, +6) offset.
 	for pos in level_data.get("books", []):
 		_spawn_collectible(Vector2(pos[0] * TILE_SIZE, pos[1] * TILE_SIZE), "book")
-
-	# Spawn mystery letters.
 	var mystery_upper = mystery.to_upper()
 	var letter_positions = level_data.get("mystery_letters", [])
 	for i in range(min(mystery_upper.length(), letter_positions.size())):
@@ -389,129 +297,96 @@ func _build_level_from_data() -> void:
 			mystery_upper[i]
 		)
 
-	# Reset slime.
-	slime_system.reset()
-	hud.update_slime(slime_system.slime_count)
 	# Fresh loader prints the score at 6d13; cached death reset skips that path.
-	if not player.original_rules_enabled or original_restart.is_empty() or original_restart.get("advancing", false):
+	if original_restart.is_empty() or original_restart.get("advancing", false):
 		hud.update_score(GameManager.score)
-	hud.update_level(GameManager.current_level)
 
-	# Set camera limits. The reference engine has a (+16, +40) viewport
-	# offset — playfield starts at screen (16, 40). Mirror this by pulling
-	# limit_left to -16 so the camera center can sit at world x=144 when the
-	# player is at spawn (x=32), placing world x=0 at screen x=16.
-	var map_width = level_data.get("width", 30)
-	var map_height = level_data.get("height", 20)
-	camera.limit_left = -16
-	camera.limit_top = 0
-	camera.limit_right = map_width * TILE_SIZE
-	camera.limit_bottom = map_height * TILE_SIZE + 16
-	if player.original_rules_enabled:
-		var rules := LevelLoader.load_level("res://data/wr1/level_%02d.json" % GameManager.current_level)
-		if rules.is_empty():
-			push_error("Original rules require extracted WR1 map data")
-			return
-		player.configure_original(rules, not original_restart.is_empty(), original_restart.get("advancing", false))
-		original_books = preload("res://scripts/wr1_books.gd").new()
-		original_books.configure(rules)
-		original_slime_pickups = preload("res://scripts/wr1_slime_pickups.gd").new()
-		original_slime_pickups.configure(rules, level_data.get("slime_buckets", []))
-		original_letters = preload("res://scripts/wr1_letters.gd").new()
-		original_letters.configure(rules, letter_positions, mystery)
-		if original_drips == null:
-			original_drips = preload("res://scripts/wr1_drips.gd").new()
-			original_drips.configure(level_data.get("drips", []))
-			if not InputReplay.original_level_start.is_empty():
-				original_drips.drips.assign(InputReplay.original_level_start.get("drips", []))
-				for i in range(original_drips.drips.size()):
-					original_drips.frames[i] = int(original_drips.drips[i].frame)
-		elif original_restart.get("advancing", false):
-			original_drips.configure(level_data.get("drips", []))
-		original_reward = original_restart.get("reward")
-		if original_reward == null:
-			original_reward = preload("res://scripts/wr1_reward_popup.gd").new()
-		original_reward_sprite = Sprite2D.new()
-		original_reward_sprite.centered = false
-		original_reward_sprite.z_index = 10
-		entities.add_child(original_reward_sprite)
-		# Recorded reference session defaults; explicit rotations allow other
-		# native saves to be reproduced without pretending RNG is synchronized.
-		var args := LaunchArgs.user_args()
-		var rotations := [5, 0]
-		for i in range(2):
-			var option := args.find(["--word-offset", "--picture-offset"][i])
-			if option >= 0 and option + 1 < args.size():
-				rotations[i] = posmod(int(args[option + 1]), 7)
-		if rotations[0] == rotations[1]:
-			push_error("Word and picture rotations must differ")
-			rotations = [5, 0]
-		if not original_restart.is_empty():
-			rotations = [original_restart.word_offset, original_restart.picture_offset]
-		elif not original_initialization.is_empty():
-			rotations = [original_initialization.word_offset, original_initialization.picture_offset]
-		elif not InputReplay.original_level_start.is_empty():
-			rotations = [int(InputReplay.original_level_start.word_offset), int(InputReplay.original_level_start.picture_offset)]
-			word_manager.original_last_index = int(InputReplay.original_level_start.active_index)
-		word_manager.configure_original(rules, rotations[0], rotations[1])
-		word_manager.original_model.mistakes = int(original_restart.get("mistakes", 0))
-		if original_picture_animation == null:
-			original_picture_animation = preload("res://scripts/wr1_picture_animation.gd").new()
-			original_picture_animation.configure(InputReplay.original_picture_start)
-		elif not original_restart.is_empty():
-			original_picture_animation.enabled = true
-		if original_restart.is_empty():
-			if not original_initialization.is_empty():
-				original_gruzzles = original_initialization.actors
-			else:
-				original_gruzzles = preload("res://scripts/wr1_gruzzles.gd").new()
-				original_gruzzles.demo_mode = InputReplay.demo_mode
-				var starts: Array = []
-				for pos in gruzzle_positions:
-					starts.append([int(pos[0] * 2), int(pos[1] * 2)])
-				original_gruzzles.configure(starts, GameManager.current_difficulty, InputReplay.original_entity_start)
-			if not InputReplay.original_level_start.is_empty():
-				original_gruzzles.present_checkpoint(player.original_state)
-				_present_original_gruzzles()
-				_present_original_drips(player.original_state)
+	var rules := LevelLoader.load_level("res://data/wr1/level_%02d.json" % GameManager.current_level)
+	if rules.is_empty():
+		push_error("Original rules require extracted WR1 map data")
+		return
+	player.configure_original(rules, not original_restart.is_empty(), original_restart.get("advancing", false))
+	original_books = preload("res://scripts/wr1_books.gd").new()
+	original_books.configure(rules)
+	original_slime_pickups = preload("res://scripts/wr1_slime_pickups.gd").new()
+	original_slime_pickups.configure(rules, level_data.get("slime_buckets", []))
+	original_letters = preload("res://scripts/wr1_letters.gd").new()
+	original_letters.configure(rules, letter_positions, mystery)
+	if original_drips == null:
+		original_drips = preload("res://scripts/wr1_drips.gd").new()
+		original_drips.configure(level_data.get("drips", []))
+		if not InputReplay.original_level_start.is_empty():
+			original_drips.drips.assign(InputReplay.original_level_start.get("drips", []))
+			for i in range(original_drips.drips.size()):
+				original_drips.frames[i] = int(original_drips.drips[i].frame)
+	elif original_restart.get("advancing", false):
+		original_drips.configure(level_data.get("drips", []))
+	original_reward = original_restart.get("reward")
+	if original_reward == null:
+		original_reward = preload("res://scripts/wr1_reward_popup.gd").new()
+	original_reward_sprite = Sprite2D.new()
+	original_reward_sprite.centered = false
+	original_reward_sprite.z_index = 10
+	entities.add_child(original_reward_sprite)
+	# Recorded reference session defaults; explicit rotations allow other
+	# native saves to be reproduced without pretending RNG is synchronized.
+	var args := LaunchArgs.user_args()
+	var rotations := [5, 0]
+	for i in range(2):
+		var option := args.find(["--word-offset", "--picture-offset"][i])
+		if option >= 0 and option + 1 < args.size():
+			rotations[i] = posmod(int(args[option + 1]), 7)
+	if rotations[0] == rotations[1]:
+		push_error("Word and picture rotations must differ")
+		rotations = [5, 0]
+	if not original_restart.is_empty():
+		rotations = [original_restart.word_offset, original_restart.picture_offset]
+	elif not original_initialization.is_empty():
+		rotations = [original_initialization.word_offset, original_initialization.picture_offset]
+	elif not InputReplay.original_level_start.is_empty():
+		rotations = [int(InputReplay.original_level_start.word_offset), int(InputReplay.original_level_start.picture_offset)]
+		word_manager.original_last_index = int(InputReplay.original_level_start.active_index)
+	word_manager.configure_original(rules, rotations[0], rotations[1])
+	word_manager.original_model.mistakes = int(original_restart.get("mistakes", 0))
+	if original_picture_animation == null:
+		original_picture_animation = preload("res://scripts/wr1_picture_animation.gd").new()
+		original_picture_animation.configure(InputReplay.original_picture_start)
+	elif not original_restart.is_empty():
+		original_picture_animation.enabled = true
+	if original_restart.is_empty():
+		if not original_initialization.is_empty():
+			original_gruzzles = original_initialization.actors
 		else:
-			original_gruzzles = original_restart.actors
-		hud.update_original_slime(original_gruzzles.slime_used, true)
-		spawn_position = player.global_position
-		if original_restart.is_empty():
-			player._record_original({})
-		player.set_physics_process(true)
+			original_gruzzles = preload("res://scripts/wr1_gruzzles.gd").new()
+			original_gruzzles.demo_mode = InputReplay.demo_mode
+			var starts: Array = []
+			for pos in level_data.get("gruzzles", []):
+				starts.append([int(pos[0] * 2), int(pos[1] * 2)])
+			original_gruzzles.configure(starts, GameManager.current_difficulty, InputReplay.original_entity_start)
+		if not InputReplay.original_level_start.is_empty():
+			original_gruzzles.present_checkpoint(player.original_state)
+			_present_original_gruzzles()
+			_present_original_drips(player.original_state)
+	else:
+		original_gruzzles = original_restart.actors
+	hud.update_original_slime(original_gruzzles.slime_used, true)
+	if original_restart.is_empty():
+		player._record_original({})
+	player.set_physics_process(true)
 	original_restart = {}
 	original_initialization = {}
 	replay_ready = true
-	if original_presentation != null:
-		if original_presentation.initialized:
-			queue_original_video(player.original_elapsed)
-			_hide_original_level_title()
-		else:
-			replay_ready = false
-			_finish_original_video_start.call_deferred()
+	if original_presentation.initialized:
+		queue_original_video(player.original_elapsed)
+		_hide_original_level_title()
+	else:
+		replay_ready = false
+		_finish_original_video_start.call_deferred()
 
 func _finish_original_video_start() -> void:
 	original_presentation.initialize()
 	replay_ready = true
 	_hide_original_level_title()
-
-func _build_tilemap(collision_data: Array) -> void:
-	# Collision at 8x8 resolution. Data in the JSON is the full mapWidth*2
-	# wide attr grid in row-major 8x8 order. No padding/shift — disk byte 0
-	# is world 8x8 cell (0, 0). Verified against DOSBox q-block positions
-	# for level 1.
-	tilemap.clear()
-	platform_tilemap.clear()
-
-	for y in range(collision_data.size()):
-		var row = collision_data[y]
-		for x in range(row.size()):
-			if row[x] == 1:
-				tilemap.set_cell(Vector2i(x, y), 0, Vector2i(0, 0))
-			elif row[x] == 2:
-				platform_tilemap.set_cell(Vector2i(x, y), 0, Vector2i(0, 0))
 
 func _build_foreground(fg_coords: Array, bg_data: Array) -> void:
 	# Wiki: fg_tiles are (x,y) pairs in 16x16 tile units. The drawn tile is
@@ -536,11 +411,10 @@ func _build_foreground(fg_coords: Array, bg_data: Array) -> void:
 
 func _setup_animations(coords: Array, bg_data: Array) -> void:
 	# Wiki: animated tile cycles through the BG tile at (tx,ty) plus the next
-	# three tiles to the right in the tileset image. Physics tick drives it.
+	# three tiles to the right in the tileset image. _on_original_presented
+	# sets each cell's frame from the renderer's background phase.
 	anim_cells = []
 	anim_base_atlas = []
-	anim_tick_count = ANIM_TICKS_INITIAL
-	var initial_frame: int = (anim_tick_count / ANIM_TICKS_PER_FRAME) % ANIM_FRAMES_PER_CYCLE
 	for coord in coords:
 		var tx: int = int(coord[0])
 		var ty: int = int(coord[1])
@@ -552,25 +426,8 @@ func _setup_animations(coords: Array, bg_data: Array) -> void:
 		var tile_idx: int = row[tx]
 		if tile_idx == 0xFF or tile_idx == 255:
 			continue
-		var base := Vector2i(tile_idx % TILESET_COLS, tile_idx / TILESET_COLS)
 		anim_cells.append(Vector2i(tx, ty))
-		anim_base_atlas.append(base)
-		# Override the base-tile rendering _build_background left in place so
-		# the very first captured frame is on the correct cycle frame.
-		bg_tilemap.set_cell(Vector2i(tx, ty), 0, Vector2i(base.x + initial_frame, base.y))
-
-
-func _physics_process(_delta: float) -> void:
-	if player.original_rules_enabled:
-		return
-	if anim_cells.is_empty():
-		return
-	anim_tick_count += 1
-	var frame: int = (anim_tick_count / ANIM_TICKS_PER_FRAME) % ANIM_FRAMES_PER_CYCLE
-	for i in range(anim_cells.size()):
-		var cell: Vector2i = anim_cells[i]
-		var base: Vector2i = anim_base_atlas[i]
-		bg_tilemap.set_cell(cell, 0, Vector2i(base.x + frame, base.y))
+		anim_base_atlas.append(Vector2i(tile_idx % TILESET_COLS, tile_idx / TILESET_COLS))
 
 func _on_original_presented(state: RefCounted) -> void:
 	if original_backdrop != null and original_backdrop.visible:
@@ -744,8 +601,6 @@ func finish_original_exit(held: Dictionary, source_frame: int) -> void:
 		return
 	GameManager.advance_level()
 	player._record_original(held, source_frame)
-	if InputReplay.mode != InputReplay.Mode.REPLAYING:
-		GameManager.save_progress()
 	if GameManager.current_level > GameManager.MAX_LEVELS:
 		open_original_frontend("ending")
 		return
@@ -823,70 +678,10 @@ func _build_background(bg_data: Array) -> void:
 			var atlas_y: int = tile_idx / TILESET_COLS
 			bg_tilemap.set_cell(Vector2i(x, y), 0, Vector2i(atlas_x, atlas_y))
 
-func _setup_test_level() -> void:
-	tilemap.clear()
-	platform_tilemap.clear()
-
-	# Simple test level.
-	for x in range(40):
-		tilemap.set_cell(Vector2i(x, 18), 0, Vector2i(0, 0))
-		tilemap.set_cell(Vector2i(x, 19), 0, Vector2i(0, 0))
-
-	for y in range(20):
-		tilemap.set_cell(Vector2i(0, y), 0, Vector2i(0, 0))
-		tilemap.set_cell(Vector2i(39, y), 0, Vector2i(0, 0))
-
-	# Platforms.
-	for x in range(5, 10):
-		platform_tilemap.set_cell(Vector2i(x, 15), 0, Vector2i(0, 0))
-	for x in range(15, 20):
-		platform_tilemap.set_cell(Vector2i(x, 12), 0, Vector2i(0, 0))
-
-	spawn_position = Vector2(2 * TILE_SIZE, 17 * TILE_SIZE)
-	player.global_position = spawn_position
-
-	# Exit door.
-	exit_door = exit_door_scene.instantiate() as Area2D
-	exit_door.global_position = Vector2(35 * TILE_SIZE, 17 * TILE_SIZE)
-	exit_door.player_entered_door.connect(_on_door_entered)
-	entities.add_child(exit_door)
-
-	var test_words := ["cat", "dog", "hat", "sun", "cup", "bed", "pen"]
-	var block_positions := [
-		Vector2(6, 14), Vector2(12, 17), Vector2(18, 11),
-		Vector2(25, 17), Vector2(30, 17), Vector2(8, 17), Vector2(16, 17)
-	]
-
-	var blocks: Array[Area2D] = []
-	for i in range(test_words.size()):
-		var block := question_block_scene.instantiate() as Area2D
-		block.global_position = block_positions[i] * TILE_SIZE
-		entities.add_child(block)
-		blocks.append(block)
-
-	word_manager.setup(test_words, blocks)
-	mystery_word.setup("star")
-	hud.setup_mystery_word(mystery_word.word, mystery_word.next_index)
-	_spawn_gruzzle(Vector2(20 * TILE_SIZE, 17 * TILE_SIZE))
-	slime_system.reset()
-	hud.update_slime(slime_system.slime_count)
-	hud.update_score(GameManager.score)
-	hud.update_level(GameManager.current_level)
-	camera.limit_left = 0
-	camera.limit_top = 0
-	camera.limit_right = 40 * TILE_SIZE
-	camera.limit_bottom = 20 * TILE_SIZE
-
-func _spawn_gruzzle(pos: Vector2) -> void:
-	var gruzzle := gruzzle_scene.instantiate() as CharacterBody2D
-	gruzzle.global_position = pos
-	gruzzle.set_player_reference(player)
-	entities.add_child(gruzzle)
-
 func _spawn_collectible(pos: Vector2, type: String, data: String = "") -> void:
-	var collectible := collectible_scene.instantiate() as Area2D
+	var collectible := collectible_scene.instantiate() as Node2D
 	collectible.global_position = pos
-	if player.original_rules_enabled and type == "slime_bucket":
+	if type == "slime_bucket":
 		# Tile 238 belongs to this level's atlas, including its opaque surround.
 		collectible.original_tileset = bg_tilemap.tile_set.get_source(0).texture
 	collectible.setup(type, data)
@@ -898,10 +693,10 @@ func _input(event: InputEvent) -> void:
 			player.original_recap_skip_requested = true
 			hud.clear_original_matches()
 		return
-	if player.original_rules_enabled and InputReplay.mode != InputReplay.Mode.REPLAYING and event is InputEventKey and event.pressed and not event.echo:
+	if InputReplay.mode != InputReplay.Mode.REPLAYING and event is InputEventKey and event.pressed and not event.echo:
 		var scan := preload("res://scripts/wr1_controls.gd").scan_for_key(event.physical_keycode if event.physical_keycode != 0 else event.keycode)
 		if GameManager.original_custom_keys and scan in GameManager.original_scancodes:
-			if event.is_action_pressed("use_slime") and not player.is_dead and not is_level_ending:
+			if event.is_action_pressed("use_slime") and not player.is_dead:
 				_try_use_slime()
 			get_viewport().set_input_as_handled()
 			return
@@ -917,12 +712,11 @@ func _input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 			open_original_frontend(pages[event.keycode])
 			return
-	if player.original_rules_enabled and GameManager.original_joystick and event is InputEventJoypadButton and event.pressed and event.button_index in [JOY_BUTTON_A,JOY_BUTTON_B]:
+	if GameManager.original_joystick and event is InputEventJoypadButton and event.pressed and event.button_index in [JOY_BUTTON_A,JOY_BUTTON_B]:
 		_try_use_slime()
 		return
-	if event.is_action_pressed("use_slime") and not player.is_dead and not is_level_ending:
+	if event.is_action_pressed("use_slime") and not player.is_dead:
 		_try_use_slime()
-	# Return to menu on Escape.
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
@@ -932,7 +726,7 @@ func open_original_frontend(kind: String = "menu") -> void:
 	frontend.begin(kind,self)
 
 func save_original_profile() -> void:
-	if not is_instance_valid(player) or not player.original_rules_enabled or original_words == null or InputReplay.mode == InputReplay.Mode.REPLAYING or has_meta("frontend_replaced"):
+	if not is_instance_valid(player) or original_words == null or InputReplay.mode == InputReplay.Mode.REPLAYING or has_meta("frontend_replaced"):
 		return
 	var profile := {"level":clampi(GameManager.current_level,1,15), "character":GameManager.original_character,
 		"score":GameManager.score,"word_cursor":original_words.offset,"words":original_words.words,
@@ -957,107 +751,30 @@ func draw_original_word_list(image: Image) -> void:
 		renderer.illustration(image,{"kind":"word_panel","slot":i,"destination":[200,10+i*26]}, {"words":original_words.words})
 
 func _try_use_slime() -> void:
-	if player.original_rules_enabled:
-		if original_gruzzles != null:
-			original_gruzzles.slime_request = true
-		return
-	var nearest_dist := 64.0
-	var nearest_gruzzle: CharacterBody2D = null
-
-	for child in entities.get_children():
-		if child is CharacterBody2D and child.has_method("get_slimed") and not child.is_slimed:
-			var dist := player.global_position.distance_to(child.global_position)
-			if dist < nearest_dist:
-				var dir: float = child.global_position.x - player.global_position.x
-				if (dir > 0 and player.facing_right) or (dir < 0 and not player.facing_right):
-					nearest_dist = dist
-					nearest_gruzzle = child
-
-	if nearest_gruzzle and slime_system.use_slime():
-		nearest_gruzzle.get_slimed()
-		AudioManager.play("slime")
-		GameManager.add_score(25)
-		hud.update_score(GameManager.score)
-
-func _on_player_died() -> void:
-	AudioManager.play("death")
-	hud.show_message("Oops! Try again!")
-	await get_tree().create_timer(1.5).timeout
-	word_manager.reset()
-	load_current_level()
+	if original_gruzzles != null:
+		original_gruzzles.slime_request = true
 
 func _on_word_revealed(word: String) -> void:
-	AudioManager.play("reveal")
 	hud.show_current_word(word)
 
 func _on_correct_match(word: String) -> void:
-	AudioManager.play("correct")
+	AudioManager.play_original("correct")
 	hud.hide_current_word()
-	GameManager.add_score(20 if player.original_rules_enabled else 50)
-	if player.original_rules_enabled:
-		original_reward.start(20, word_manager.original_contact_grid + Vector2i(0,-2))
+	GameManager.add_score(20)
+	original_reward.start(20, word_manager.original_contact_grid + Vector2i(0,-2))
 	hud.update_score(GameManager.score)
-	hud.add_matched_word(word, word_manager.matched_count - (1 if player.original_rules_enabled else 0))
-	hud.show_message("Great! You found: %s" % word.to_upper())
+	hud.add_matched_word(word, word_manager.matched_count - 1)
 
 func _on_wrong_match(pos: Vector2) -> void:
-	AudioManager.play("wrong")
+	AudioManager.play_original("wrong")
 	hud.hide_current_word()
-	if player.original_rules_enabled and original_gruzzles != null:
+	if original_gruzzles != null:
 		original_gruzzles.spawn(Vector2i(pos / 8.0))
-	else:
-		_spawn_gruzzle(pos)
-	hud.show_message("Not quite! Try again!")
 
 func _on_all_words_matched() -> void:
-	if player.original_rules_enabled:
-		original_recap_pending = true
-		original_door_state = 1
-	if player.original_rules_enabled and word_manager.original_model.mistakes == 0:
+	original_recap_pending = true
+	original_door_state = 1
+	if word_manager.original_model.mistakes == 0:
 		GameManager.add_score(500)
 		original_reward.start(500, word_manager.original_contact_grid + Vector2i(0,-2), 3)
 		hud.update_score(GameManager.score)
-	AudioManager.play("unlock")
-	hud.show_message("All words rescued! Find the exit door!")
-	if exit_door:
-		exit_door.unlock()
-
-func _on_door_entered() -> void:
-	if is_level_ending:
-		return
-	is_level_ending = true
-	AudioManager.play("level_complete")
-	GameManager.add_score(200)
-	hud.update_score(GameManager.score)
-	GameManager.save_progress()
-	player.is_dead = true
-	player.velocity = Vector2.ZERO
-	level_complete_ui.show_results(
-		GameManager.current_level,
-		GameManager.score,
-		word_manager.matched_count
-	)
-
-func _on_next_level() -> void:
-	if GameManager.current_level >= 15:
-		# All levels complete. Return to menu.
-		hud.show_message("Congratulations! All levels complete!")
-		await get_tree().create_timer(2.0).timeout
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-		return
-	GameManager.advance_level()
-	load_current_level()
-
-func _on_mystery_letter_collected(_letter: String, index: int) -> void:
-	AudioManager.play("collect")
-	GameManager.add_score(5)
-	hud.update_score(GameManager.score)
-	hud.update_mystery_letter(index)
-
-func _on_mystery_word_completed(_word: String) -> void:
-	AudioManager.play("correct")
-	GameManager.add_score(100)
-	hud.update_score(GameManager.score)
-	slime_system.refill()
-	hud.update_slime(slime_system.slime_count)
-	hud.show_message("Mystery word complete! Slime refilled!")

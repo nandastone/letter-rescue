@@ -1,7 +1,5 @@
 extends Node
 
-# Preloaded sound effects.
-var sounds := {}
 var original: Node
 
 func begin_original_level(level_number: int) -> void:
@@ -25,29 +23,3 @@ func end_original_session() -> void:
 func play_original(name: String, only_if_idle: bool = false) -> void:
 	if original != null:
 		original.play_effect(name, only_if_idle)
-
-func _ready() -> void:
-	var sfx_path := "res://assets/audio/sfx/"
-	var sfx_names := [
-		"jump", "correct", "wrong", "death", "slime",
-		"collect", "level_complete", "reveal", "unlock",
-	]
-	for sfx_name in sfx_names:
-		var path: String = sfx_path + sfx_name + ".wav"
-		if ResourceLoader.exists(path):
-			sounds[sfx_name] = load(path)
-
-func play(sfx_name: String) -> void:
-	if original != null:
-		# Reveal/unlock UI has no matching speaker trigger in the original.
-		if sfx_name in ["correct", "wrong"]:
-			play_original(sfx_name)
-		return
-	if sfx_name not in sounds:
-		return
-	var player := AudioStreamPlayer.new()
-	player.stream = sounds[sfx_name]
-	player.bus = "Master"
-	add_child(player)
-	player.play()
-	player.finished.connect(player.queue_free)
