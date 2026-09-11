@@ -20,6 +20,10 @@ run-original *args:
 run-clear *args:
     & "{{godot}}" --path . -- --original-rules --clear-text {{args}}
 
+# Export the browser build to build/web (needs Godot's web export templates).
+web:
+    New-Item -ItemType Directory -Force build/web | Out-Null; & "{{godot}}" --headless --export-release "Web" build/web/index.html
+
 # Maintained suite: all 15 original demos, sequentially, against native captures.
 # Override PYTHON if Python with Pillow is not on PATH.
 parity *args:

@@ -55,7 +55,7 @@ func begin(kind: String = "startup", live_game: Node = null) -> void:
 	if kind == "startup":
 		AudioManager.begin_original_level(1)
 		apply_sound()
-		if "--skip-intro" in OS.get_cmdline_user_args():
+		if "--skip-intro" in LaunchArgs.user_args():
 			kind = "name"
 		else:
 			kind = "apogee"

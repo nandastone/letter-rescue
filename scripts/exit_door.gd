@@ -19,8 +19,8 @@ func lock() -> void:
 	update_visual()
 
 func update_visual() -> void:
-	if "--original-rules" in OS.get_cmdline_user_args():
-		var args := OS.get_cmdline_user_args()
+	if "--original-rules" in LaunchArgs.user_args():
+		var args := LaunchArgs.user_args()
 		var option := args.find("--character")
 		var boy: bool = option >= 0 and option + 1 < args.size() and args[option + 1] == "boy"
 		var atlas := AtlasTexture.new()
@@ -44,7 +44,7 @@ func update_visual() -> void:
 		tween.tween_property($Sprite2D, "modulate:a", 1.0, 0.5)
 
 func _on_body_entered(body: Node2D) -> void:
-	if "--original-rules" in OS.get_cmdline_user_args():
+	if "--original-rules" in LaunchArgs.user_args():
 		return # Raw 8px contact runs in the original gameplay update.
 	if body is CharacterBody2D and body.has_method("die") and not is_locked:
 		player_entered_door.emit()

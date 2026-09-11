@@ -1,7 +1,7 @@
 extends Control
 
 func _ready() -> void:
-	if "--original-rules" in OS.get_cmdline_user_args() and InputReplay.mode != InputReplay.Mode.REPLAYING:
+	if "--original-rules" in LaunchArgs.user_args() and InputReplay.mode != InputReplay.Mode.REPLAYING:
 		$Background.hide()
 		$VBoxContainer.hide()
 		var frontend := preload("res://scripts/wr1_frontend.gd").new()

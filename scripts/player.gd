@@ -20,7 +20,7 @@ signal died
 
 # Opt-in while the original rules are being verified against native traces.
 const WR1Motion = preload("res://scripts/wr1_motion.gd")
-var original_rules_enabled: bool = "--original-rules" in OS.get_cmdline_user_args()
+var original_rules_enabled: bool = "--original-rules" in LaunchArgs.user_args()
 var original_state
 var original_sprite: Sprite2D
 var original_elapsed: float = 0.0
@@ -90,7 +90,7 @@ func configure_original(data: Dictionary, restarting: bool = false, advancing: b
 			original_music_clock.configure(InputReplay.original_music_clock)
 	if original_sprite == null:
 		original_sprite = Sprite2D.new()
-		var user_args := OS.get_cmdline_user_args()
+		var user_args := LaunchArgs.user_args()
 		var character_arg := user_args.find("--character")
 		var character := InputReplay.replay_character
 		if character_arg >= 0 and character_arg + 1 < user_args.size() and user_args[character_arg + 1] in ["boy", "girl"]:
@@ -103,7 +103,7 @@ func configure_original(data: Dictionary, restarting: bool = false, advancing: b
 	$AnimatedSprite2D.stop()
 	$AnimatedSprite2D.hide()
 	_present_original()
-	var args := OS.get_cmdline_user_args()
+	var args := LaunchArgs.user_args()
 	var trace_arg := args.find("--state-trace")
 	if original_trace == null and trace_arg >= 0 and trace_arg + 1 < args.size():
 		original_trace = FileAccess.open(args[trace_arg + 1], FileAccess.WRITE)

@@ -6,6 +6,9 @@
 
 # Imported translations (Godot 3)
 *.import
+# Except the raw original-audio WAVs: wr1_audio.gd reads their bytes directly,
+# so they ship unimported ("keep") rather than as lossy QOA samples.
+!assets/audio/original/playback/*.wav.import
 
 # Mono-specific ignores
 .mono/

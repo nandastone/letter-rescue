@@ -6,7 +6,7 @@ extends CanvasLayer
 @onready var message_label: Label = $MessageLabel
 const WR1Text = preload("res://scripts/wr1_text.gd")
 const CYAN := Color8(0, 170, 170)
-var original_rules: bool = "--original-rules" in OS.get_cmdline_user_args()
+var original_rules: bool = "--original-rules" in LaunchArgs.user_args()
 var original_top: Image
 var original_top_texture: ImageTexture
 var original_bottom: Image

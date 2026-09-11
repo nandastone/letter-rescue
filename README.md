@@ -28,6 +28,17 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
 2. Open the project in the Godot editor
 3. Press F5 to run
 
+### In a browser
+
+Every push to `main` that touches the game publishes a web build to
+<https://nandastone.github.io/letter-rescue/> (see `.github/workflows/web.yml`).
+It always runs the original rules; add URL flags for the other options, e.g.
+`?clear-text`, `?skip-intro` or `?mute-original-audio` (combine with `&`).
+In Chrome, the install icon in the address bar adds it as an app. `just web`
+builds the same thing locally into `build/web/`.
+
+### Original mode
+
 Use `just run-original` for recovered Word Rescue gameplay and artwork, now
 including the original startup, menus, player profiles, ending, music and
 PC-speaker effects. Add `--skip-intro` to go straight to name entry, or `--mute-original-audio`

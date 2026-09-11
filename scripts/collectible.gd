@@ -10,7 +10,7 @@ signal collected(collectible: Area2D)
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
-	if "--original-rules" in OS.get_cmdline_user_args():
+	if "--original-rules" in LaunchArgs.user_args():
 		return
 	# Gentle bobbing animation.
 	var tween := create_tween().set_loops()
@@ -26,7 +26,7 @@ func update_visual() -> void:
 	match type:
 		"slime_bucket":
 			$Sprite2D.texture = preload("res://assets/sprites/slime_bucket.png")
-			if "--original-rules" in OS.get_cmdline_user_args():
+			if "--original-rules" in LaunchArgs.user_args():
 				# Native level loader stamps opaque tile238 at the raw tile origin.
 				var atlas := AtlasTexture.new()
 				atlas.atlas = original_tileset
@@ -53,7 +53,7 @@ func update_visual() -> void:
 				add_child(cover)
 				preload("res://scripts/wr1_clear_text.gd").label(cover, Rect2(-1,-2,14,10), "book", Color8(255,255,85), 5)
 		"letter":
-			if "--original-rules" in OS.get_cmdline_user_args():
+			if "--original-rules" in LaunchArgs.user_args():
 				var atlas := AtlasTexture.new()
 				atlas.atlas = preload("res://assets/sprites/wr1_letters.png")
 				var index: int = data.to_lower().unicode_at(0) - 97
@@ -74,7 +74,7 @@ func update_visual() -> void:
 			$Label.add_theme_font_size_override("font_size", 16)
 
 func _on_body_entered(body: Node2D) -> void:
-	if "--original-rules" in OS.get_cmdline_user_args():
+	if "--original-rules" in LaunchArgs.user_args():
 		return # Raw-grid contact is handled at the original logical update.
 	if body is CharacterBody2D and body.has_method("die"):
 		AudioManager.play("collect")

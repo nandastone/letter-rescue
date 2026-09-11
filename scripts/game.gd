@@ -150,7 +150,7 @@ func _prepare_original_initialization() -> void:
 	# recordings without a seed also retain their historical deterministic start.
 	if InputReplay.mode == InputReplay.Mode.REPLAYING and InputReplay.original_start_seed < 0:
 		return
-	var args := OS.get_cmdline_user_args()
+	var args := LaunchArgs.user_args()
 	for override_option in ["--word-offset", "--picture-offset", "--mystery-word"]:
 		if override_option in args:
 			if InputReplay.original_start_seed >= 0:
@@ -345,7 +345,7 @@ func _build_level_from_data() -> void:
 	elif player.original_rules_enabled and not InputReplay.original_level_start.is_empty():
 		mystery = words[int(InputReplay.original_level_start.mystery_index)]
 	elif player.original_rules_enabled:
-		var user_args := OS.get_cmdline_user_args()
+		var user_args := LaunchArgs.user_args()
 		var mystery_arg := user_args.find("--mystery-word")
 		if mystery_arg >= 0 and mystery_arg + 1 < user_args.size():
 			var override_word: String = user_args[mystery_arg + 1].to_lower()
@@ -437,7 +437,7 @@ func _build_level_from_data() -> void:
 		entities.add_child(original_reward_sprite)
 		# Recorded reference session defaults; explicit rotations allow other
 		# native saves to be reproduced without pretending RNG is synchronized.
-		var args := OS.get_cmdline_user_args()
+		var args := LaunchArgs.user_args()
 		var rotations := [5, 0]
 		for i in range(2):
 			var option := args.find(["--word-offset", "--picture-offset"][i])

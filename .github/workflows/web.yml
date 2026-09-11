@@ -1,0 +1,82 @@
+# Export the Godot web build and publish it to GitHub Pages.
+name: Web build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - assets/**
+      - data/**
+      - scenes/**
+      - scripts/**
+      - project.godot
+      - export_presets.cfg
+      - .github/workflows/web.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  GODOT_VERSION: 4.6.1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # testing/ and tools/ hold ~300 MB of parity evidence the game never loads.
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            assets
+            data
+            scenes
+            scripts
+
+      - name: Install Godot
+        run: |
+          curl -fsSL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip"
+          unzip -q godot.zip && mv "Godot_v${GODOT_VERSION}-stable_linux.x86_64" "$RUNNER_TEMP/godot" && rm godot.zip
+
+      - name: Cache web export templates
+        id: templates
+        uses: actions/cache@v6
+        with:
+          path: ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
+          key: godot-web-templates-${{ env.GODOT_VERSION }}
+
+      - name: Install web export templates
+        if: steps.templates.outputs.cache-hit != 'true'
+        run: |
+          dest="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          curl -fsSL -o templates.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          mkdir -p "$dest"
+          unzip -j templates.tpz templates/version.txt templates/web_nothreads_release.zip -d "$dest"
+          rm templates.tpz
+
+      - name: Export
+        run: |
+          "$RUNNER_TEMP/godot" --headless --import
+          mkdir -p build/web
+          "$RUNNER_TEMP/godot" --headless --export-release "Web" build/web/index.html
+          test -s build/web/index.pck
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: build/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

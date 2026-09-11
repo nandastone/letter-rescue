@@ -71,7 +71,7 @@ func _ready() -> void:
 	process_physics_priority = -100 # Supply this frame's inputs before Player runs.
 
 	# Parse CLI args (everything after "--").
-	var args := OS.get_cmdline_user_args()
+	var args := LaunchArgs.user_args()
 	var i := 0
 	while i < args.size():
 		match args[i]:
@@ -148,7 +148,7 @@ func _start_replay(path: String = "") -> void:
 	demo_mode = not demo_inputs.is_empty()
 	demo_input_offset = int(data.get("demo_input_offset", 0))
 	if demo_mode:
-		assert("--original-rules" in OS.get_cmdline_user_args())
+		assert("--original-rules" in LaunchArgs.user_args())
 		demo_sha256 = data.demo_provenance.sha256
 		for entry in demo_inputs:
 			assert(entry is Dictionary and entry.size() == 5)

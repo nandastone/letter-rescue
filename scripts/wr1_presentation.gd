@@ -29,7 +29,7 @@ func display_mask() -> int:
 func _ready() -> void:
 	game = get_parent()
 	preload("res://scripts/wr1_clear_text.gd").configure_window(get_window())
-	var args := OS.get_cmdline_user_args()
+	var args := LaunchArgs.user_args()
 	# Use the same presentation policy in live play and replay. Older recordings
 	# lack measured VGA phase; the parity report explicitly marks that assumption.
 	scanout_enabled = not "--snapshot-video" in args

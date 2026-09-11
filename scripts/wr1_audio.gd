@@ -28,8 +28,8 @@ func _ready() -> void:
 	speaker.volume_db = 0.0
 	speaker.finished.connect(func(): effect = "")
 	# Accelerated state/image tests do not run an audible presentation clock.
-	enabled = DisplayServer.get_name() != "headless" or "--original-audio" in OS.get_cmdline_user_args()
-	if "--mute-original-audio" in OS.get_cmdline_user_args():
+	enabled = DisplayServer.get_name() != "headless" or "--original-audio" in LaunchArgs.user_args()
+	if "--mute-original-audio" in LaunchArgs.user_args():
 		enabled = false
 
 func _stream(filename: String) -> AudioStreamWAV:
