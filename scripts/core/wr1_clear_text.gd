@@ -2,6 +2,10 @@ extends RefCounted
 ## Optional display adapter. Original assets and simulation work stay intact.
 const ReadingLabel = preload("res://scripts/core/wr1_reading_label.gd")
 const CYAN := Color8(0, 170, 170)
+# Centre the visible Andika question mark, accounting for its unequal side
+# bearings, inside the source box's white interior (5,4,15,15).
+const QUESTION_MARK_RECT := Rect2(5, 3, 15, 17)
+const QUESTION_MARK_INK_OFFSET := Vector2(0.625, 0.125)
 var top: Sprite2D
 var bottom: Sprite2D
 var current: Control
@@ -116,6 +120,7 @@ static func sprite_text(source: Sprite2D, raster: Image, runs: Array) -> void:
 		item.modulate.a = run.get("alpha", 1.0)
 		item.outline = run.get("outline", false)
 		item.baseline_adjustment = run.get("baseline_adjustment", 1.5)
+		item.ink_offset = run.get("ink_offset", Vector2.ZERO)
 	view.texture = ImageTexture.create_from_image(clean)
 	sync_sprite(source)
 
@@ -161,3 +166,4 @@ static func frontend_labels(frontend: CanvasLayer, runs: Array) -> void:
 		var item := label(page, run.rect, run.text, run.get("color", Color.BLACK), run.get("pixels", 10))
 		item.alignment = run.get("align", HORIZONTAL_ALIGNMENT_CENTER)
 		item.caret_index = run.get("caret", -1)
+		item.ink_offset = run.get("ink_offset", Vector2.ZERO)

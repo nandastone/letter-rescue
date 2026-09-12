@@ -201,7 +201,9 @@ static func illustration(image: Image, command: Dictionary, context: Dictionary)
 		if reading and command.kind == "atlas":
 			if command.sheet == "STATIC.WR" and int(command.source_inclusive[0]) == 208:
 				image.fill_rect(Rect2i(destination+Vector2i(6,4),Vector2i(13,15)), Color.WHITE)
-				reading_runs.append({"rect":Rect2(Vector2(destination+Vector2i(5,3)),Vector2(15,17)), "text":"?", "color":Color.BLACK, "pixels":14})
+				var question_rect: Rect2 = preload("res://scripts/core/wr1_clear_text.gd").QUESTION_MARK_RECT
+				question_rect.position += Vector2(destination)
+				reading_runs.append({"rect":question_rect, "text":"?", "color":Color.BLACK, "pixels":14, "ink_offset":preload("res://scripts/core/wr1_clear_text.gd").QUESTION_MARK_INK_OFFSET})
 			elif command.sheet == "current_BACKn.WR" and int(command.source_inclusive[0]) == 304:
 				image.fill_rect(Rect2i(destination+Vector2i(1,5),Vector2i(12,6)), PALETTE[13])
 				reading_runs.append({"rect":Rect2(Vector2(destination+Vector2i(0,3)),Vector2(14,10)), "text":"book", "color":PALETTE[14], "pixels":5})

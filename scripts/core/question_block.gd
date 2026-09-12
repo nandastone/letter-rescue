@@ -34,7 +34,7 @@ func set_original_picture(picture_word: String) -> void:
 		var question: Image = $Sprite2D.texture.get_image()
 		question.convert(Image.FORMAT_RGBA8)
 		preload("res://scripts/core/wr1_clear_text.gd").sprite_text($Sprite2D, question, [
-			{"erase":Rect2(6,4,13,15), "rect":Rect2(5,3,15,17), "text":"?", "background":Color.WHITE, "pixels":14}])
+			{"erase":Rect2(6,4,13,15), "rect":preload("res://scripts/core/wr1_clear_text.gd").QUESTION_MARK_RECT, "text":"?", "background":Color.WHITE, "pixels":14, "ink_offset":preload("res://scripts/core/wr1_clear_text.gd").QUESTION_MARK_INK_OFFSET}])
 
 func set_original_picture_frame(frame: int) -> void:
 	if original_picture_frames.size() == 2:

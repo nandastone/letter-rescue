@@ -13,6 +13,9 @@ var outline_size := 1
 var alignment := HORIZONTAL_ALIGNMENT_CENTER
 var baseline_adjustment := 1.5
 var caret_index := -1
+# Fine optical adjustment for a symbol. Keep it in the drawing coordinates:
+# the pixel-art viewport snaps Control positions to whole game pixels.
+var ink_offset := Vector2.ZERO
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -38,7 +41,7 @@ func layout() -> Dictionary:
 	# Andika's visible letters sit high against the original panel frames.
 	# This optical adjustment is shared by HUD, cards, symbols and page text.
 	baseline += baseline_adjustment
-	return {"pixels":pixels, "pen":Vector2(_left(width), baseline)}
+	return {"pixels":pixels, "pen":Vector2(_left(width), baseline) + ink_offset}
 
 func _width(lines: PackedStringArray, pixels: int) -> float:
 	var width := 0.0
