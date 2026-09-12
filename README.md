@@ -11,10 +11,11 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
   12 times a second in 8-pixel steps, and `scripts/game/smooth_motion.gd` draws the
   movement in between at the display's refresh rate. This is the game that
   changes from here; the demo parity suite does not check it.
-  It also draws with the original's 4:3 pixel aspect: 320x200 filled a 4:3
-  monitor, so its pixels were 1.2x taller than wide, and the art suits that
-  (a trike wheel is 7x5, a dial 9x7, a tomato 16x12 — round only when
-  stretched). `--square-pixels` / `?square-pixels` turns that off.
+  `--aspect-43` / `?aspect-43` draws with the original's 4:3 pixel aspect:
+  320x200 filled a 4:3 monitor, so its pixels were 1.2x taller than wide, and
+  the organic art suits that (a trike wheel is 7x5, a dial 9x7, a tomato
+  16x12 — round only when stretched). The geometric art does not: it turns the
+  24x24 question blocks into tall rectangles, so square pixels are the default.
 - **Legacy** (`just legacy`, or `-- --legacy`) is the pixel-exact Word Rescue
   Part 1 that `just parity` verifies against DOSBox. `just legacy-clear` adds
   Clear Text. Keep it unchanged: changes to shared scripts must keep
@@ -52,7 +53,7 @@ fallback text server instead of ICU, which takes it from 35.9 MB to 24.7 MB —
 Cloudflare Pages rejects files over 25 MiB. Both web builds also use the
 compressed audio, so a first load is about 35 MB rather than 100 MB.
 
-URL flags: `?skip-intro`, `?mute-original-audio`, `?square-pixels` (see
+URL flags: `?skip-intro`, `?mute-original-audio`, `?aspect-43` (see
 below), and `?pixel-text` on the legacy build for its original pixel display
 (combine with `&`). In Chrome, the
 install icon in the address bar adds it as an app. `just web` builds the
