@@ -10,11 +10,12 @@ func _ready() -> void:
 	super()
 	if not enabled:
 		return
-	# Pixel snapping rounds drawing to whole game pixels, which would put the
-	# smooth sub-pixel motion back into 1 px steps. The reference viewport the
-	# base class owns keeps its own settings for the frozen menu backdrop.
-	get_viewport().snap_2d_transforms_to_pixel = false
-	get_viewport().snap_2d_vertices_to_pixel = false
+	# Pixel snapping stays on. Drawing the art at sub-pixel positions makes it
+	# shimmer: measured frame by frame while walking, a question block's drawn
+	# width oscillated between 62 and 63 device pixels. Snapped, it holds 62,
+	# and the smoothing still moves in 1-pixel steps rather than 8-pixel jumps.
+	get_viewport().snap_2d_transforms_to_pixel = true
+	get_viewport().snap_2d_vertices_to_pixel = true
 
 func initialize() -> void:
 	pass
