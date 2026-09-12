@@ -125,7 +125,21 @@ Fresh games now use the recovered random initialization; recordings preserve
 their initial seed, loaded profile, and speed/difficulty changes. See
 [startup verification](testing/wr1_startup_research.md).
 
-The default game has its own gate, run in CI and locally with
+Rendering changes need looking at, not just measuring: play it. To check the
+one thing a screenshot cannot show -- whether the art holds its shape while
+moving -- capture consecutive frames from a build and measure them:
+
+```
+npm install playwright-core
+node tools/capture_web_frames.mjs build/web out/frames
+python tools/check_drawn_stability.py out/frames
+```
+
+It walks the character at a deliberately non-integer window scale (a round one
+hides the problem) and fails if the question block's drawn size changes
+between frames, which is what shimmering art looks like to a measurement.
+
+The default game also has a code-level gate, run in CI and locally with
 `godot --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd`
 (add `-- --replay data/wr1/demos/level1.json` for the attract path). It plays
 headlessly and checks that updates run and that motion is drawn between them.
