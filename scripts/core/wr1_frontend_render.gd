@@ -20,9 +20,13 @@ static func align_reading(rect: Rect2, alignment: int = HORIZONTAL_ALIGNMENT_CEN
 	reading_runs.back().align = alignment
 	reading_runs.back().pixels = pixels
 
-static func reading_asset(image: Image, name: String, x: int, y: int) -> void:
+static func reading_asset(name: String, x: int, y: int) -> void:
 	if reading:
-		reading_runs.append_array(preload("res://scripts/core/wr1_clear_pages.gd").apply(image, name, Vector2i(x,y)))
+		reading_runs.append_array(preload("res://scripts/core/wr1_clear_pages.gd").labels(name, Vector2i(x,y)))
+
+static func display_asset(name: String) -> Image:
+	var source := asset(name)
+	return preload("res://scripts/core/wr1_clear_artwork.gd").background(source, name) if reading else source
 
 static func metadata() -> Dictionary:
 	if data.is_empty():
@@ -59,7 +63,8 @@ static func outline(image: Image, rect: Rect2i, color: int) -> void:
 
 static func text(image: Image, value: String, x: int, y: int, fg: int = 0, bg: int = 15) -> void:
 	if reading and image.get_width() == 320:
-		image.fill_rect(Rect2i(x,y,value.length()*8,8), PALETTE[bg])
+		# The page already supplies its background. A transparent font run must
+		# not repaint a BIOS-sized box over the artwork beneath it.
 		# BIOS spaces also position columns around the illustrations. Preserve
 		# that indentation before handing the visible text to a proportional font.
 		var trimmed := value.strip_edges()
@@ -69,12 +74,12 @@ static func text(image: Image, value: String, x: int, y: int, fg: int = 0, bg: i
 	Text.draw(image, value, Vector2i(x,y), PALETTE[fg], PALETTE[bg])
 
 static func picture(image: Image, name: String, x: int, y: int) -> void:
-	var source := asset(name)
+	var source := display_asset(name)
 	image.blit_rect(source, Rect2i(Vector2i.ZERO, source.get_size()), Vector2i(x,y))
 	if reading:
 		var bounds := Rect2(Vector2(x,y),Vector2(source.get_size()))
 		reading_runs = reading_runs.filter(func(run: Dictionary) -> bool: return not bounds.intersects(run.rect))
-		reading_asset(image,name,x,y)
+		reading_asset(name,x,y)
 
 static func screen(entry: Dictionary) -> Image:
 	var result := blank()
@@ -103,8 +108,8 @@ static func selector(kind: String, selected: int) -> Image:
 	result.fill_rect(Rect2i(67,36,183,144), PALETTE[15])
 	var region: Dictionary = metadata().atlas_regions[kind+"_heading"]
 	var r: Array = region.source_inclusive
-	result.blit_rect(asset("MENU.WR"), Rect2i(int(r[0]),int(r[1]),int(r[2]-r[0]+1),int(r[3]-r[1]+1)),Vector2i(80,10))
-	reading_asset(result,"HEADING_"+kind.to_upper(),80,10)
+	result.blit_rect(display_asset("MENU.WR"), Rect2i(int(r[0]),int(r[1]),int(r[2]-r[0]+1),int(r[3]-r[1]+1)),Vector2i(80,10))
+	reading_asset("HEADING_"+kind.to_upper(),80,10)
 	if kind == "difficulty":
 		for entry in metadata().difficulty.entries:
 			text(result,entry.text,int(entry.x),int(entry.y))

@@ -1,0 +1,79 @@
+{
+  "WR1.7": [
+    {"rect": [72, 48, 177, 39], "ink": ["aa0000", "555555"], "background": "000000"},
+    {"rect": [118, 89, 91, 15], "ink": ["aa0000", "ff5555", "ffffff"], "background": "000000"},
+    {"rect": [54, 191, 210, 9], "ink": ["ffffff"], "background": "000000"}
+  ],
+  "WR1.20": [
+    {"rect": [29, 55, 145, 50], "ink": ["ffffff", "55ffff", "0000aa", "00aaaa"], "background": "5555ff"}
+  ],
+  "WR1.22": [
+    {"rect": [68, 51, 105, 16], "ink": ["55ffff", "000000"], "background": "5555ff", "preserve": [[82, 51, 13, 1], [83, 52, 11, 1], [86, 53, 7, 1], [88, 54, 4, 1]]},
+    {"rect": [24, 67, 204, 83], "ink": ["ffffff"], "background": "5555ff"}
+  ],
+  "WR1.23": [
+    {"rect": [45, 58, 111, 39], "ink": ["ffffff"], "background": "5555ff"}
+  ],
+  "WR1.24": [
+    {"rect": [32, 58, 137, 26], "ink": ["ffffff"], "background": "aa0000"},
+    {"rect": [32, 100, 131, 17], "ink": ["ffffff"], "background": "aa0000"}
+  ],
+  "WR1.25": [
+    {"rect": [17, 9, 128, 13], "ink": ["ffffff"], "background": "aa0000"},
+    {"rect": [17, 26, 128, 13], "ink": ["ffffff"], "background": "aa0000"},
+    {"rect": [59, 55, 43, 17], "ink": ["ffffff"], "background": "aa0000"},
+    {"rect": [17, 89, 128, 17], "ink": ["ffffff"], "background": "aa0000"}
+  ],
+  "WR1.26": [
+    {"rect": [61, 6, 49, 19], "ink": ["ffffff", "000000"], "background": "aa0000"},
+    {"rect": [32, 24, 113, 25], "ink": ["ffffff", "000000"], "background": "aa0000"},
+    {"rect": [41, 68, 91, 14], "ink": ["ffffff", "000000"], "background": "aa0000"}
+  ],
+  "WR1.30": [
+    {"rect": [58, 10, 208, 28], "ink": ["ffffff", "000000"], "background": "ff5555"},
+    {"rect": [62, 36, 208, 49], "ink": ["ffffff"], "background": "ff5555"},
+    {"rect": [62, 85, 180, 17], "ink": ["ffffff"], "background": "ff5555"},
+    {"rect": [119, 109, 82, 12], "ink": ["ffffff"], "background": "aa0000"}
+  ],
+  "WR1.31": [
+    {"rect": [54, 10, 215, 92], "ink": ["ffffff"], "background": "ff5555"},
+    {"rect": [119, 109, 82, 12], "ink": ["ffffff"], "background": "aa0000"},
+    {"rect": [111, 123, 40, 9], "ink": ["000000"], "background": "ffffff"}
+  ],
+  "WR1.32": [
+    {"rect": [53, 8, 217, 42], "ink": ["ffffff"], "background": "ff5555"},
+    {"rect": [122, 59, 145, 40], "ink": ["ffffff"], "background": "ff5555"},
+    {"rect": [119, 109, 82, 12], "ink": ["ffffff"], "background": "aa0000"}
+  ],
+  "WR1.33": [
+    {"rect": [53, 9, 217, 79], "ink": ["ffffff", "000000"], "background": "ff5555"},
+    {"rect": [53, 88, 140, 16], "ink": ["ffffff", "000000"], "background": "ff5555"},
+    {"rect": [119, 109, 82, 12], "ink": ["ffffff"], "background": "aa0000"}
+  ],
+  "WR1.34": [
+    {"rect": [53, 9, 217, 95], "ink": ["ffffff", "000000"], "background": "ff5555"},
+    {"rect": [119, 109, 82, 12], "ink": ["ffffff"], "background": "aa0000"}
+  ],
+  "WR1.10": [
+    {"rect": [71, 14, 185, 28], "ink": ["ffffff", "000000"], "background": "ff5555"},
+    {"rect": [76, 44, 172, 55], "ink": ["ffffff"], "background": "ff5555"},
+    {"rect": [119, 109, 82, 12], "ink": ["ffffff"], "background": "aa0000"},
+    {"rect": [11, 123, 47, 20], "ink": ["000000"], "background": "ffffff"}
+  ],
+  "WR1.11": [
+    {"rect": [180, 14, 127, 126], "ink": ["0000aa", "aa0000", "000000"], "background": "ffffff"},
+    {"rect": [145, 170, 30, 7], "ink": ["0000aa", "aa0000"], "background": "ffffff"}
+  ],
+  "WR1.12": [
+    {"rect": [20, 16, 165, 86], "ink": ["000000", "aaaaaa"], "background": "ffffff"}
+  ],
+  "MENU.WR": [
+    {"rect": [7, 6, 181, 13], "ink": ["ffffff", "000000"], "background": "ff5555"},
+    {"rect": [27, 100, 143, 13], "ink": ["ffffff", "000000"], "background": "ff5555"},
+    {"rect": [27, 133, 143, 13], "ink": ["ffffff", "000000"], "background": "ff5555"}
+  ],
+  "HELP.WR": [
+    {"rect": [7, 6, 153, 13], "ink": ["ffffff", "000000"], "background": "ff5555"},
+    {"rect": [9, 26, 147, 137], "ink": ["000000", "aa0000", "ff5555"], "background": "ffffff"}
+  ]
+}

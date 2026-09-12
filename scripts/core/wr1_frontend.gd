@@ -343,8 +343,8 @@ func redraw() -> void:
 					Render.align_reading(Rect2(248-value.length()*8,43+i*10,value.length()*8,10), HORIZONTAL_ALIGNMENT_RIGHT, 8)
 		"help", "instructions_help":
 			result = backdrop.duplicate() if state == "help" and backdrop != null else Render.blank()
-			result.blit_rect(Render.asset("HELP.WR"),Rect2i(0,0,168,176),Vector2i(72,16))
-			Render.reading_asset(result,"HELP.WR",72,16)
+			result.blit_rect(Render.display_asset("HELP.WR"),Rect2i(0,0,168,176),Vector2i(72,16))
+			Render.reading_asset("HELP.WR",72,16)
 		"sound":
 			result = Render.sound(selection,backdrop)
 		"words":

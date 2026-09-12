@@ -1,7 +1,7 @@
 # Clear Text presentation
 
-Launch with `just run-clear` or `just run-original --clear-text`. The original
-display remains the default. This is a presentation adapter, not a new ruleset
+Launch with `just run` or `just legacy-clear`. Clear Text is the default;
+`just legacy` retains the original display. This is a presentation adapter, not a new ruleset
 or a general executable plugin framework.
 
 ## Scope
@@ -15,10 +15,14 @@ The font is [designed for beginning readers](https://software.sil.org/andika/des
 That design purpose is the basis for choosing it, not evidence that a typeface
 alone improves reading outcomes. Keep `OFL.txt` with any distributed build.
 
-The adapter erases lettering within the original panels and draws font controls
-at window resolution. `data/wr1/clear_text_pages.json` contains transcribed baked
-lettering and local erase/layout rectangles; it never overwrites source assets.
-The title logo has a readable Word Rescue treatment inside the original frame.
+Frontend artwork is cleaned once before composition, then transparent font
+controls are drawn at window resolution. `data/wr1/clear_artwork.json` identifies
+original ink colours and source regions independently from the label positions
+in `data/wr1/clear_text_pages.json`. Cleanup preserves overlapping characters,
+panel edges and illustrations. The title board is reconstructed from its surviving
+edges while retaining the episode strip and foreground characters. The original
+assets remain available for the legacy renderer. Moving or resizing modern text
+cannot repaint its background.
 The help screen corrects the original artwork's reversed Ctrl/Alt descriptions
 to match the recovered input behavior. Tiny decorative marks on illustrated
 books and the artist's logo remain part of the pictures. Changing vocabulary or
@@ -78,6 +82,7 @@ Run with `GODOT` set:
 
 ```text
 python -m unittest testing.test_wr1_clear_text testing.test_wr1_frontend testing.test_wr1_parity_runner
+python -m unittest testing.test_wr1_clean_art
 python -m unittest testing.test_wr1_attract
 just parity --clear-text
 ```

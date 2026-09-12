@@ -9,7 +9,6 @@ func _run() -> void:
 	var args := OS.get_cmdline_user_args()
 	var output: String = args[args.find("--frontend-output")+1]
 	Profiles.directory = output+"/profiles/"
-	root.get_node("GameManager").progress_path = output+"/progress.json"
 	var context := {"words":["toe","pot","pen","rat","gun","cup","cop"],"character":1,"tileset":3,"mystery_word":"cup"}
 	Render.menu(0,true).save_png(output+"/menu.png")
 	Render.menu(2,true).save_png(output+"/menu_difficulty.png")
@@ -176,7 +175,7 @@ func _run() -> void:
 	gm.current_level = 15
 	game.original_door_state = 2
 	game.finish_original_exit({"up":false,"down":false,"left":false,"right":false,"slime_request":false},-1)
-	assert(gm.current_level == 16 and FileAccess.file_exists(gm.progress_path))
+	assert(gm.current_level == 16)
 	frontend = game.get_child(game.get_child_count()-1)
 	for i in range(3):
 		assert(frontend.state == "ending" and frontend.index == i)

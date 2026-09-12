@@ -14,7 +14,6 @@ func run() -> void:
 	var args := OS.get_cmdline_user_args()
 	output = args[args.find("--clear-output") + 1]
 	var clear := preload("res://scripts/core/wr1_clear_text.gd").enabled()
-	root.get_node("GameManager").progress_path = output + "/progress.json"
 	preload("res://scripts/core/wr1_profiles.gd").directory = output + "/profiles/"
 	var replay := root.get_node("InputReplay")
 	replay.mode = replay.Mode.REPLAYING # Fixtures begin after loading.
@@ -103,11 +102,13 @@ func run() -> void:
 	# Exercise the actual world-card and reward/recap presentation paths as well
 	# as the HUD. Their reference pixels must remain identical in both modes.
 	var block = game.word_manager.blocks[0]
-	block.show_word()
+	block.state = block.State.SHOWING_WORD
+	block.update_visual()
 	game.hud.update_score(12345)
 	game.original_presentation.rasterize().save_png(output + "/cards_reference.png")
 	await capture("cards")
-	block.reset_to_idle()
+	block.state = block.State.IDLE
+	block.update_visual()
 	var recap := preload("res://scripts/core/wr1_recap_view.gd").new()
 	game.add_child(recap)
 	recap.configure(game.hud, ["gypqj"])
