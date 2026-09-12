@@ -81,9 +81,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cp godot/bin/*.nothreads.zip web_nothreads_release.zip
-          gh release view engine-slim >/dev/null 2>&1 \
-            && gh release upload engine-slim web_nothreads_release.zip --clobber \
-            || gh release create engine-slim web_nothreads_release.zip \
+          gh release view engine-slim -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 \
+            && gh release upload engine-slim -R "$GITHUB_REPOSITORY" web_nothreads_release.zip --clobber \
+            || gh release create engine-slim web_nothreads_release.zip -R "$GITHUB_REPOSITORY" \
                  --title "Slim web engine ${GODOT_VERSION}" \
                  --notes "Godot ${GODOT_VERSION} web template, no 3D, size-optimised. Built by .github/workflows/engine.yml."
 
