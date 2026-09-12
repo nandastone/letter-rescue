@@ -38,22 +38,26 @@ jobs:
           path: ~/.cache/scons
           key: scons-web-${{ env.GODOT_VERSION }}-${{ hashFiles('.github/workflows/engine.yml') }}
 
-      # 2D game: no 3D, no XR, no video or networking modules, no advanced GUI
-      # (it uses Control/ColorRect/TextureRect only), and the fallback text
-      # server, since the text is Latin drawn with draw_string -- that drops
-      # ICU, the single biggest chunk. Vorbis stays: the web builds play Ogg.
+      # 2D game: no 3D, no XR, no video, and the fallback text server (the text
+      # is Latin drawn with draw_string), which drops ICU -- the single biggest
+      # chunk. Vorbis stays: the web builds play Ogg.
+      #
+      # Stripping further broke script loading: with deprecated=no,
+      # disable_advanced_gui, module_multiplayer and module_regex also removed,
+      # wr1_frontend_render.gd failed to compile in the browser and took the
+      # frontend with it. Those four are left in; the engine still fits.
       - name: Build
         working-directory: godot
         run: |
           scons platform=web target=template_release production=yes threads=no \
-            optimize=size lto=full disable_3d=yes deprecated=no disable_advanced_gui=yes \
+            optimize=size lto=full disable_3d=yes \
             module_text_server_adv_enabled=no module_text_server_fb_enabled=yes \
             module_openxr_enabled=no module_webxr_enabled=no module_csg_enabled=no \
             module_gridmap_enabled=no module_noise_enabled=no module_raycast_enabled=no \
             module_lightmapper_rd_enabled=no module_xatlas_unwrap_enabled=no \
             module_theora_enabled=no module_webrtc_enabled=no module_websocket_enabled=no \
-            module_upnp_enabled=no module_camera_enabled=no module_multiplayer_enabled=no \
-            module_mobile_vr_enabled=no module_minimp3_enabled=no module_regex_enabled=no \
+            module_upnp_enabled=no module_camera_enabled=no \
+            module_mobile_vr_enabled=no module_minimp3_enabled=no \
             module_basis_universal_enabled=no module_ktx_enabled=no module_svg_enabled=no \
             module_jpg_enabled=no module_dds_enabled=no module_hdr_enabled=no \
             module_tinyexr_enabled=no module_gltf_enabled=no module_fbx_enabled=no \
