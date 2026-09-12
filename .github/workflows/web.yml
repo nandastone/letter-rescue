@@ -1,5 +1,5 @@
-# Smoke-test the default game, export both web builds and publish them to
-# GitHub Pages: the default game at the root, legacy under /legacy/.
+# Smoke-test the default game, export both web builds and deploy them to
+# Cloudflare Pages: the default game at the root, legacy under /legacy/.
 name: Web build
 
 on:
@@ -18,11 +18,9 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: true
 
 env:
@@ -103,8 +101,8 @@ jobs:
           # Cross-origin isolation and cache rules for Cloudflare Pages.
           cp web/_headers build/web/_headers
 
-      # wr.polarquake.com. Needs CLOUDFLARE_API_TOKEN (Pages:Edit) and
-      # CLOUDFLARE_ACCOUNT_ID repo secrets; infra/ creates the project.
+      # wr.polarquake.com. Uses the CLOUDFLARE_API_TOKEN (Pages:Edit) and
+      # CLOUDFLARE_ACCOUNT_ID secrets; infra/ creates the project.
       - name: Deploy to Cloudflare Pages
         if: ${{ vars.CLOUDFLARE_PROJECT != '' }}
         uses: cloudflare/wrangler-action@v3
@@ -112,17 +110,3 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy build/web --project-name=${{ vars.CLOUDFLARE_PROJECT }} --branch=main
-
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: build/web
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5

@@ -37,18 +37,20 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
 ### In a browser
 
 Every push to `main` that touches the game builds both web versions
-(`.github/workflows/web.yml`) and deploys them to Cloudflare Pages at
-<https://wr.polarquake.com/> (legacy at `/legacy/`). `infra/` holds the
-OpenTofu config for the Pages project, its custom domain and DNS; deploys need
-`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets and a
-`CLOUDFLARE_PROJECT` variable. `web/_headers` sends the cross-origin isolation
-headers, which let the engine use threads.
+(`.github/workflows/web.yml`) and deploys them to Cloudflare Pages:
 
-The same build also still publishes to GitHub Pages, to be retired once the
-Cloudflare domain is confirmed:
+- <https://wr.polarquake.com/> — Letter Rescue
+- <https://wr.polarquake.com/legacy/> — the pixel-exact original
 
-- <https://nandastone.github.io/letter-rescue/> — Letter Rescue (11 MB pack)
-- <https://nandastone.github.io/letter-rescue/legacy/> — the original (59 MB)
+`infra/` holds the OpenTofu config for the Pages project, its custom domain
+and DNS. Deploys use the `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`
+secrets and the `CLOUDFLARE_PROJECT` variable. `web/_headers` sends the
+cross-origin isolation headers, which let the engine use threads.
+
+The engine is a slim build (`.github/workflows/engine.yml`): no 3D and the
+fallback text server instead of ICU, which takes it from 35.9 MB to 24.7 MB —
+Cloudflare Pages rejects files over 25 MiB. Both web builds also use the
+compressed audio, so a first load is about 35 MB rather than 100 MB.
 
 URL flags: `?skip-intro`, `?mute-original-audio`, `?square-pixels` (see
 below), and `?pixel-text` on the legacy build for its original pixel display
