@@ -1,0 +1,9 @@
+# Copy to terraform.tfvars and fill in. Both IDs are on the Cloudflare
+# dashboard: the account ID on any account page, the zone ID on the
+# polarquake.com overview page.
+#
+# Keep the token out of this file if you prefer: export TF_VAR_cloudflare_api_token=...
+
+cloudflare_api_token = ""
+account_id           = ""
+zone_id              = ""

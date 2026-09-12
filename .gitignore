@@ -48,3 +48,9 @@ assets/extracted/wr1_2/
 # Python bytecode cache
 __pycache__/
 .claude/
+
+# OpenTofu working directory and local state (infra/ holds only the config).
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars

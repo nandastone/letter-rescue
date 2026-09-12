@@ -1,0 +1,20 @@
+# Cloudflare Pages headers. Cross-origin isolation lets the engine use threads
+# (SharedArrayBuffer), which keeps audio mixing off the main thread.
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+# The engine and data files are rebuilt under the same names every deploy, so
+# they must revalidate rather than being served stale from a browser cache.
+/index.html
+  Cache-Control: no-cache
+/index.wasm
+  Cache-Control: no-cache
+/index.pck
+  Cache-Control: no-cache
+/legacy/index.html
+  Cache-Control: no-cache
+/legacy/index.wasm
+  Cache-Control: no-cache
+/legacy/index.pck
+  Cache-Control: no-cache

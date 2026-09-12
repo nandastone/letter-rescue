@@ -36,8 +36,16 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
 
 ### In a browser
 
-Every push to `main` that touches the game publishes to GitHub Pages
-(`.github/workflows/web.yml`):
+Every push to `main` that touches the game builds both web versions
+(`.github/workflows/web.yml`) and deploys them to Cloudflare Pages at
+<https://wr.polarquake.com/> (legacy at `/legacy/`). `infra/` holds the
+OpenTofu config for the Pages project, its custom domain and DNS; deploys need
+`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets and a
+`CLOUDFLARE_PROJECT` variable. `web/_headers` sends the cross-origin isolation
+headers, which let the engine use threads.
+
+The same build also still publishes to GitHub Pages, to be retired once the
+Cloudflare domain is confirmed:
 
 - <https://nandastone.github.io/letter-rescue/> — Letter Rescue (11 MB pack)
 - <https://nandastone.github.io/letter-rescue/legacy/> — the original (59 MB)

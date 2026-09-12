@@ -43,6 +43,7 @@ jobs:
             scenes
             scripts
             tools
+            web
 
       - name: Install Godot
         run: |
@@ -54,7 +55,7 @@ jobs:
         uses: actions/cache@v6
         with:
           path: ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
-          key: godot-web-templates-${{ env.GODOT_VERSION }}
+          key: godot-web-templates-${{ env.GODOT_VERSION }}-threads
 
       - name: Install web export templates
         if: steps.templates.outputs.cache-hit != 'true'
@@ -62,7 +63,9 @@ jobs:
           dest="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
           curl -fsSL -o templates.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
           mkdir -p "$dest"
-          unzip -j templates.tpz templates/version.txt templates/web_nothreads_release.zip -d "$dest"
+          # Both variants: the threaded one is used once the host sends the
+          # cross-origin isolation headers (Cloudflare does; GitHub Pages cannot).
+          unzip -j templates.tpz templates/version.txt \n            templates/web_nothreads_release.zip templates/web_release.zip -d "$dest"
           rm templates.tpz
 
       - name: Import
@@ -83,6 +86,18 @@ jobs:
           "$RUNNER_TEMP/godot" --headless --export-release "Web" build/web/index.html
           "$RUNNER_TEMP/godot" --headless --export-release "Web Legacy" build/web/legacy/index.html
           test -s build/web/index.pck && test -s build/web/legacy/index.pck
+          # Cross-origin isolation and cache rules for Cloudflare Pages.
+          cp web/_headers build/web/_headers
+
+      # wr.polarquake.com. Needs CLOUDFLARE_API_TOKEN (Pages:Edit) and
+      # CLOUDFLARE_ACCOUNT_ID repo secrets; infra/ creates the project.
+      - name: Deploy to Cloudflare Pages
+        if: ${{ vars.CLOUDFLARE_PROJECT != '' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy build/web --project-name=${{ vars.CLOUDFLARE_PROJECT }} --branch=main
 
       - uses: actions/upload-pages-artifact@v5
         with:
