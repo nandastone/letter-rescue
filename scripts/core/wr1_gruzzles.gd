@@ -116,6 +116,25 @@ func spawn(grid: Vector2i) -> void:
 func refill(mode: int) -> void:
 	slime_used = maxi(0, slime_used - [5, 3, 2][mode])
 
+## Default game's hidden shotgun. The legacy game never calls this, so its
+## actor timing, RNG and rendering remain untouched.
+func berserker_blast(p: RefCounted, range_cells: int = 34) -> Array[Vector2]:
+	var hits: Array[Vector2] = []
+	var direction: int = -1 if p.facing == 1 else 1
+	for i in range(actors.size() - 1, -1, -1):
+		var actor: Dictionary = actors[i]
+		var forward: int = (int(actor.gx) - p.gx) * direction
+		if forward < -1 or forward > range_cells or absi(int(actor.gy) - p.gy) > 7:
+			continue
+		hits.append(Vector2(int(actor.gx) * 8 + 16, int(actor.gy) * 8 - 12))
+		actors.remove_at(i)
+		# Match the engine's actor removal: cadence counters belong to the ten
+		# fixed slots and are deliberately not compacted with the actor array.
+	# The end-of-level slime-free bonus should not reward a weapon cheat.
+	if not hits.is_empty():
+		slime_ever_used = true
+	return hits
+
 func restart(positions: Array, mode: int, fresh_level: bool = false, select_words: Callable = Callable()) -> Dictionary:
 	slime_ever_used = false
 	# 4eb5: rotations; 70b1 -> 730a: mystery selection; 5060: all ten

@@ -61,6 +61,7 @@ var original_level_title: CanvasLayer
 var original_start_seed: int = -1
 var original_initialization: Dictionary = {}
 var original_loaded_profile: Dictionary = {}
+var berserker_mode: Node
 
 func _exit_tree() -> void:
 	save_original_profile()
@@ -87,6 +88,9 @@ func _ready() -> void:
 	add_child(original_presentation)
 	if not LaunchArgs.legacy():
 		add_child(load("res://scripts/game/smooth_motion.gd").new())
+		berserker_mode = load("res://scripts/game/berserker_mode.gd").new()
+		add_child(berserker_mode)
+		berserker_mode.configure(self)
 	load_current_level()
 
 func queue_original_video(elapsed_after_event: float = 0.0, ordinary_draw: bool = false) -> void:
@@ -529,6 +533,8 @@ func _on_original_moved(state: RefCounted) -> void:
 		var slime_before: int = original_gruzzles.slime_used
 		var miss_before: int = original_gruzzles.miss_timer
 		original_gruzzles.step(state, _step_original_drips)
+		if berserker_mode != null and berserker_mode.active:
+			original_gruzzles.death = false
 		if original_gruzzles.slime_used > slime_before:
 			AudioManager.play_original("slime")
 		elif original_gruzzles.miss_timer > miss_before:
@@ -537,7 +543,7 @@ func _on_original_moved(state: RefCounted) -> void:
 
 func _step_original_drips() -> void:
 	if original_drips != null and original_drips.step(player.original_state.gx, player.original_state.gy, GameManager.current_difficulty):
-		original_gruzzles.death = true
+		original_gruzzles.death = berserker_mode == null or not berserker_mode.active
 
 func original_interaction_snapshot() -> Dictionary:
 	var result := {"score": GameManager.score, "level_index":GameManager.current_level - 1,
@@ -701,6 +707,9 @@ func _input(event: InputEvent) -> void:
 			hud.clear_original_matches()
 		return
 	if InputReplay.mode != InputReplay.Mode.REPLAYING and event is InputEventKey and event.pressed and not event.echo:
+		if berserker_mode != null and berserker_mode.handle_key(event):
+			get_viewport().set_input_as_handled()
+			return
 		var scan := preload("res://scripts/core/wr1_controls.gd").scan_for_key(event.physical_keycode if event.physical_keycode != 0 else event.keycode)
 		if GameManager.original_custom_keys and scan in GameManager.original_scancodes:
 			if event.is_action_pressed("use_slime") and not player.is_dead:
@@ -758,7 +767,18 @@ func draw_original_word_list(image: Image) -> void:
 		renderer.illustration(image,{"kind":"word_panel","slot":i,"destination":[200,10+i*26]}, {"words":original_words.words})
 
 func _try_use_slime() -> void:
-	if original_gruzzles != null:
+	if original_gruzzles == null:
+		return
+	if berserker_mode != null and berserker_mode.active:
+		if not berserker_mode.can_fire():
+			return
+		var hits: Array[Vector2] = original_gruzzles.berserker_blast(player.original_state)
+		berserker_mode.fire(hits)
+		if not hits.is_empty():
+			GameManager.add_score(hits.size() * 50)
+			hud.update_score(GameManager.score)
+		_present_original_gruzzles()
+	else:
 		original_gruzzles.slime_request = true
 
 func _on_word_revealed(word: String) -> void:
