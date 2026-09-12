@@ -24,7 +24,10 @@ func _event(value: Dictionary) -> void:
 		events.pop_front()
 
 func _ready() -> void:
-	directory = DIRECTORY if LaunchArgs.legacy() else OGG_DIRECTORY
+	# Web builds always use the compressed copies: Cloudflare Pages rejects files
+	# over 25 MiB, and the raw renders alone are 55 MB. Desktop and the parity
+	# suite keep the raw renders.
+	directory = OGG_DIRECTORY if OS.has_feature("web") or not LaunchArgs.legacy() else DIRECTORY
 	manifest = JSON.parse_string(FileAccess.get_file_as_string(directory + "manifest.json"))
 	add_child(music)
 	add_child(speaker)

@@ -68,6 +68,20 @@ jobs:
           unzip -j templates.tpz templates/version.txt templates/web_nothreads_release.zip templates/web_release.zip -d "$dest"
           rm templates.tpz
 
+      # Built by .github/workflows/engine.yml: no 3D, size-optimised, so the
+      # engine fits under Cloudflare Pages' 25 MiB per-file limit.
+      - name: Use the slim engine if published
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          dest="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          if gh release download engine-slim --pattern web_nothreads_release.zip --output slim.zip --clobber; then
+            mv slim.zip "$dest/web_nothreads_release.zip"
+            echo "using the slim engine"
+          else
+            echo "slim engine not published yet; using the stock template"
+          fi
+
       - name: Import
         run: |
           "$RUNNER_TEMP/godot" --headless --import

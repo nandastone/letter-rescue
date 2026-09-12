@@ -6,8 +6,10 @@
 ##   cp terraform.tfvars.example terraform.tfvars   # fill in your IDs
 ##   tofu init && tofu apply
 ##
-## The API token needs: Account > Cloudflare Pages > Edit, and
-## Zone > DNS > Edit on polarquake.com.
+## Permissions needed: Account > Cloudflare Pages > Edit, and Zone > DNS > Edit
+## on polarquake.com. One token can hold both; if yours are separate (an
+## account-scoped cfat_ token cannot always carry zone permissions), set
+## cloudflare_dns_api_token as well.
 
 terraform {
   required_version = ">= 1.6"
@@ -23,10 +25,23 @@ provider "cloudflare" {
   api_token = var.cloudflare_api_token
 }
 
+# DNS may need a different token; defaults to the one above.
+provider "cloudflare" {
+  alias     = "dns"
+  api_token = coalesce(var.cloudflare_dns_api_token, var.cloudflare_api_token)
+}
+
 variable "cloudflare_api_token" {
-  description = "Cloudflare API token with Pages:Edit and DNS:Edit"
+  description = "Cloudflare API token with Account > Cloudflare Pages > Edit"
   type        = string
   sensitive   = true
+}
+
+variable "cloudflare_dns_api_token" {
+  description = "Token with Zone > DNS > Edit; omit if the token above has it too"
+  type        = string
+  sensitive   = true
+  default     = null
 }
 
 variable "account_id" {
@@ -65,12 +80,13 @@ resource "cloudflare_pages_domain" "game" {
 
 # Pages serves the custom domain through this CNAME; proxying is required.
 resource "cloudflare_dns_record" "game" {
-  zone_id = var.zone_id
-  name    = var.hostname
-  type    = "CNAME"
-  content = cloudflare_pages_project.game.subdomain
-  ttl     = 1 # Automatic; required when proxied.
-  proxied = true
+  provider = cloudflare.dns
+  zone_id  = var.zone_id
+  name     = var.hostname
+  type     = "CNAME"
+  content  = cloudflare_pages_project.game.subdomain
+  ttl      = 1 # Automatic; required when proxied.
+  proxied  = true
 }
 
 output "pages_subdomain" {

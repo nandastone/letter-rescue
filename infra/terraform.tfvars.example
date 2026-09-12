@@ -5,5 +5,7 @@
 # Keep the token out of this file if you prefer: export TF_VAR_cloudflare_api_token=...
 
 cloudflare_api_token = ""
+# Only if a second token holds Zone > DNS > Edit:
+# cloudflare_dns_api_token = ""
 account_id           = ""
 zone_id              = ""

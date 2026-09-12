@@ -1,0 +1,87 @@
+# Build a slim Godot web export template: no 3D, no modules this game does not
+# use, optimised for size. The stock template's engine is 35.9 MB, which exceeds
+# Cloudflare Pages' 25 MiB per-file limit.
+#
+# Run manually (Actions > Slim engine > Run workflow). The result is attached to
+# the "engine-slim" release, which the web build downloads instead of the stock
+# template. Rerun it when GODOT_VERSION or the flags below change.
+name: Slim engine
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GODOT_VERSION: 4.6.1
+  EMSCRIPTEN_VERSION: 4.0.20 # Matches the official 4.6.1 web build.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Fetch the engine source
+        run: git clone --depth 1 --branch ${{ env.GODOT_VERSION }}-stable https://github.com/godotengine/godot.git
+
+      - uses: mymindstorm/setup-emsdk@v14
+        with:
+          version: ${{ env.EMSCRIPTEN_VERSION }}
+          actions-cache-folder: emsdk-cache
+
+      - name: Install scons
+        run: python -m pip install --upgrade pip scons
+
+      - uses: actions/cache@v6
+        with:
+          path: ~/.cache/scons
+          key: scons-web-${{ env.GODOT_VERSION }}-${{ hashFiles('.github/workflows/engine.yml') }}
+
+      # 2D game: no 3D, no XR, no physics/rendering extras, no video or
+      # networking modules. Text server and vorbis stay: Clear Text needs font
+      # rendering and the web builds play Ogg audio.
+      - name: Build
+        working-directory: godot
+        run: |
+          scons platform=web target=template_release production=yes threads=no \
+            optimize=size lto=full disable_3d=yes deprecated=no \
+            module_openxr_enabled=no module_webxr_enabled=no module_csg_enabled=no \
+            module_gridmap_enabled=no module_noise_enabled=no module_raycast_enabled=no \
+            module_lightmapper_rd_enabled=no module_xatlas_unwrap_enabled=no \
+            module_theora_enabled=no module_webrtc_enabled=no module_websocket_enabled=no \
+            module_upnp_enabled=no module_camera_enabled=no module_multiplayer_enabled=no \
+            module_mobile_vr_enabled=no module_minimp3_enabled=no \
+            module_basis_universal_enabled=no module_ktx_enabled=no \
+            cache_path=~/.cache/scons
+          ls -la bin/
+
+      - name: Report size
+        working-directory: godot
+        run: |
+          template=$(ls bin/*.nothreads.zip)
+          unzip -l "$template"
+          python - "$template" <<'PY'
+          import sys, zipfile
+          with zipfile.ZipFile(sys.argv[1]) as z:
+              for info in z.infolist():
+                  print(f'{info.filename}: {info.file_size/1048576:.1f} MB')
+                  if info.filename.endswith('.wasm') and info.file_size > 25 * 1024 * 1024:
+                      sys.exit(f'engine is still over the 25 MiB limit')
+          PY
+
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp godot/bin/*.nothreads.zip web_nothreads_release.zip
+          gh release view engine-slim >/dev/null 2>&1 \
+            && gh release upload engine-slim web_nothreads_release.zip --clobber \
+            || gh release create engine-slim web_nothreads_release.zip \
+                 --title "Slim web engine ${GODOT_VERSION}" \
+                 --notes "Godot ${GODOT_VERSION} web template, no 3D, size-optimised. Built by .github/workflows/engine.yml."
+
+      - uses: actions/upload-artifact@v5
+        with:
+          name: slim-web-template
+          path: web_nothreads_release.zip
