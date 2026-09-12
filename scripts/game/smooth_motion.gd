@@ -14,7 +14,7 @@ var game: Node
 var logical := {} # drawn node -> position when it last moved
 var lag := {} # drawn node -> previous minus current logical position
 var moved_at := {} # drawn node -> physics tick when it last moved
-var interval := {} # drawn node -> ticks the previous move took
+var interval := {} # drawn node -> fixed duration of its current interpolation
 var ticks: int = 0
 
 func _ready() -> void:
@@ -36,7 +36,7 @@ func _tracked() -> Array:
 		pairs.append([sprite, sprite])
 	return pairs
 
-## Record any node the tick just moved, and how long its previous move took.
+## Record moved nodes and fix the duration of each new interpolation.
 func _sample() -> void:
 	var seen := {}
 	for pair in _tracked():
@@ -55,6 +55,15 @@ func _sample() -> void:
 		logical[drawn] = source.position
 		interval[drawn] = clampi(ticks - int(moved_at.get(drawn, ticks)), 1, MAX_INTERVAL_TICKS)
 		moved_at[drawn] = ticks
+		if drawn == game.player.original_sprite or drawn == game.camera:
+			var player: Node2D = game.player
+			var ordinary: bool = game.replay_ready and not player.is_dead and player.original_recap == null \
+				and player.original_rescue == null and player.original_exit == null
+			if ordinary and InputReplay.mode != InputReplay.Mode.REPLAYING:
+				# Fix the deadline when the move happens. Recomputing it every frame
+				# extends the last move at each idle update, making its offset rebound
+				# and decay long after the player and camera have stopped.
+				interval[drawn] = _step_ticks()
 		if drawn.is_visible_in_tree() and previous.distance_to(source.position) <= SNAP_DISTANCE:
 			lag[drawn] = previous - source.position
 		else:
@@ -71,13 +80,6 @@ func _step_ticks() -> int:
 ## How far through its current move each node should be drawn.
 func _weight(drawn: Node2D) -> float:
 	var expected: int = int(interval.get(drawn, 1))
-	if drawn == game.player.original_sprite or drawn == game.camera:
-		var player: Node2D = game.player
-		var ordinary: bool = game.replay_ready and not player.is_dead and player.original_recap == null \
-			and player.original_rescue == null and player.original_exit == null
-		if ordinary and InputReplay.mode != InputReplay.Mode.REPLAYING:
-			# Live play: the next update lands a known number of ticks away.
-			expected = _step_ticks() + ticks - int(moved_at.get(drawn, ticks))
 	var elapsed: float = ticks - int(moved_at.get(drawn, ticks)) + Engine.get_physics_interpolation_fraction()
 	return clampf(elapsed / maxf(1.0, float(expected)), 0.0, 1.0)
 

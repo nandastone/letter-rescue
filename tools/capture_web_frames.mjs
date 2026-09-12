@@ -1,4 +1,4 @@
-// Capture consecutive frames from a web build while the character walks, for
+// Capture consecutive frames from a web build while the character walks and stops, for
 // check_drawn_stability.py. Rendering problems (shimmer, wobble, tearing) only
 // show up between frames, so a single screenshot cannot find them.
 //
@@ -6,11 +6,11 @@
 //   node tools/capture_web_frames.mjs build/web out/frames
 //   python tools/check_drawn_stability.py out/frames
 //
-// CHROME overrides the browser path.
+// CHROME overrides the browser path. PLAYWRIGHT_MODULE can name a module URL.
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
-import { chromium } from 'playwright-core';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright-core');
 
 const [buildDir, outDir, query = '?skip-intro'] = process.argv.slice(2);
 if (!buildDir || !outDir) {
@@ -62,8 +62,17 @@ for (let i = 0; i < FRAMES; i++) {
   await page.waitForTimeout(60);
 }
 await page.keyboard.up('ArrowRight');
+const releasedAt = performance.now();
+const stopped = [];
+for (let i = 0; i < 24; i++) {
+  const file = `stopped_${String(i).padStart(2, '0')}.png`;
+  stopped.push({ file, elapsed_ms: performance.now() - releasedAt });
+  await page.screenshot({ path: path.join(outDir, file) });
+  await page.waitForTimeout(60);
+}
+fs.writeFileSync(path.join(outDir, 'stopped.json'), JSON.stringify(stopped, null, 2));
 
-console.log(`captured ${FRAMES} frames into ${outDir}`);
+console.log(`captured ${FRAMES} moving and ${stopped.length} stopped frames into ${outDir}`);
 if (problems.length) console.error('page errors: ' + problems.join(' | '));
 await browser.close();
 server.close();

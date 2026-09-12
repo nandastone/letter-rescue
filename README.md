@@ -138,11 +138,17 @@ python tools/check_drawn_stability.py out/frames
 It walks the character at a deliberately non-integer window scale (a round one
 hides the problem) and fails if the question block's drawn size changes
 between frames, which is what shimmering art looks like to a measurement.
+It also captures after releasing movement and checks that the block's screen
+position and size stay fixed once the final movement has finished.
 
 The default game also has a code-level gate, run in CI and locally with
 `godot --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd`
 (add `-- --replay data/wr1/demos/level1.json` for the attract path). It plays
 headlessly and checks that updates run and that motion is drawn between them.
+The stop-and-restart regression runs with
+`godot --headless --fixed-fps 120 --path . --script tools/smoke_motion_settling.gd -- --original-seed 20716`.
+It checks that player and camera drawing offsets reach zero within one update
+after their logical positions stop, then stay there. Both CI workflows run it.
 
 Supplemental frontend, attract and audio checks use the real Godot scene and
 retained native screen fixtures. Set `GODOT`, then run
