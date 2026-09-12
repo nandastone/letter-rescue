@@ -7,7 +7,7 @@ class_name LaunchArgs
 # Web builds have no command line, so they read ?legacy, ?pixel-text,
 # ?skip-intro and ?mute-original-audio from the page URL.
 
-const WEB_FLAGS := ["legacy", "skip-intro", "mute-original-audio"]
+const WEB_FLAGS := ["legacy", "skip-intro", "mute-original-audio", "square-pixels"]
 
 static var _args: PackedStringArray = _read()
 
@@ -17,6 +17,12 @@ static func user_args() -> PackedStringArray:
 ## True for the pixel-exact original game, which the demo parity suite checks.
 static func legacy() -> bool:
 	return "--legacy" in _args
+
+## The original's 320x200 filled a 4:3 monitor, so its pixels were 1.2x taller
+## than wide, and its round objects are drawn wider than tall to suit. The
+## default game reproduces that; legacy keeps the square pixels its captures use.
+static func square_pixels() -> bool:
+	return legacy() or "--square-pixels" in _args
 
 static func _read() -> PackedStringArray:
 	var args := OS.get_cmdline_user_args()

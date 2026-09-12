@@ -13,9 +13,26 @@ static func enabled() -> bool:
 	return "--clear-text" in LaunchArgs.user_args()
 
 static func configure_window(window: Window) -> void:
-	if enabled():
-		window.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
+	if not enabled():
+		return
+	window.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
+	if LaunchArgs.square_pixels():
 		window.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_KEEP
+		return
+	# IGNORE stretches the 320x200 canvas to fill the drawing area, so a 4:3
+	# area reproduces the original 1.2x-taller pixels. The browser page sizes
+	# its canvas to 4:3 (html/head_include); a desktop window is kept 4:3 here.
+	window.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_IGNORE
+	if OS.has_feature("web"):
+		return
+	if not window.size_changed.is_connected(_keep_43):
+		window.size_changed.connect(_keep_43.bind(window))
+	_keep_43(window)
+
+static func _keep_43(window: Window) -> void:
+	var height := roundi(window.size.x * 3.0 / 4.0)
+	if absi(window.size.y - height) > 1:
+		window.size = Vector2i(window.size.x, height)
 
 static func label(parent: Node, rect: Rect2, value: String, color: Color = Color.WHITE, pixels: int = 14) -> Control:
 	var item := ReadingLabel.new()

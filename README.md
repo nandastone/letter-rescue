@@ -11,6 +11,10 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
   12 times a second in 8-pixel steps, and `scripts/game/smooth_motion.gd` draws the
   movement in between at the display's refresh rate. This is the game that
   changes from here; the demo parity suite does not check it.
+  It also draws with the original's 4:3 pixel aspect: 320x200 filled a 4:3
+  monitor, so its pixels were 1.2x taller than wide, and the art suits that
+  (a trike wheel is 7x5, a dial 9x7, a tomato 16x12 — round only when
+  stretched). `--square-pixels` / `?square-pixels` turns that off.
 - **Legacy** (`just legacy`, or `-- --legacy`) is the pixel-exact Word Rescue
   Part 1 that `just parity` verifies against DOSBox. `just legacy-clear` adds
   Clear Text. Keep it unchanged: changes to shared scripts must keep
@@ -38,8 +42,9 @@ Every push to `main` that touches the game publishes to GitHub Pages
 - <https://nandastone.github.io/letter-rescue/> — Letter Rescue (11 MB pack)
 - <https://nandastone.github.io/letter-rescue/legacy/> — the original (59 MB)
 
-URL flags: `?skip-intro`, `?mute-original-audio`, and `?pixel-text` on the
-legacy build for its original pixel display (combine with `&`). In Chrome, the
+URL flags: `?skip-intro`, `?mute-original-audio`, `?square-pixels` (see
+below), and `?pixel-text` on the legacy build for its original pixel display
+(combine with `&`). In Chrome, the
 install icon in the address bar adds it as an app. `just web` builds the
 default game locally into `build/web/`.
 
