@@ -65,7 +65,7 @@ jobs:
           mkdir -p "$dest"
           # Both variants: the threaded one is used once the host sends the
           # cross-origin isolation headers (Cloudflare does; GitHub Pages cannot).
-          unzip -j templates.tpz templates/version.txt \n            templates/web_nothreads_release.zip templates/web_release.zip -d "$dest"
+          unzip -j templates.tpz templates/version.txt templates/web_nothreads_release.zip templates/web_release.zip -d "$dest"
           rm templates.tpz
 
       - name: Import
