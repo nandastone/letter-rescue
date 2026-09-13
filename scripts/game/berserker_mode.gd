@@ -1,46 +1,63 @@
 extends Node
-
-## A deliberately non-canonical, default-game-only easter egg.  Keeping this
-## outside scripts/core means the recovered Legacy presentation never sees it.
-
+## Default-game power-up. Art, firing timeline and sound share one paused clock.
 const CHEAT_CODES: Array[String] = ["IDKFA", "IDGAF"]
-const BUFFER_LENGTH := 8
-const SHOT_COOLDOWN_MS := 180
-
+const SHOT_SECONDS := 0.62
+const EJECT_SECONDS := 0.18
+const ART = preload("res://scripts/game/berserker_art.gd")
 var game: Node2D
 var active := false
 var typed := ""
-var last_shot_ms := -SHOT_COOLDOWN_MS
-var flash_seconds := 0.0
+var shot_age := SHOT_SECONDS
+var shell_ejected := true
 var banner_seconds := 0.0
-var particles: Array[Dictionary] = []
 var last_viewport_size := Vector2.ZERO
-
 var overlay: CanvasLayer
 var tint: ColorRect
 var banner: Label
-var weapon: Sprite2D
 var effects: Node2D
 var shot_player: AudioStreamPlayer
-var spark_textures: Array[Texture2D] = []
-
+var pump_player: AudioStreamPlayer
+var gib_player: AudioStreamPlayer
+var particles: Array[Dictionary] = []
+var shot_direction := 1.0
+var shot_origin := Vector2.ZERO
+var flash: Sprite2D
+var shell_texture: Texture2D
+var smoke_texture: Texture2D
+var rng := RandomNumberGenerator.new()
 
 func configure(host: Node2D) -> void:
 	game = host
+	process_priority = 1100 # After the character's smoothing.
 	_build_overlay()
-	_build_weapon()
-	_build_audio()
-	set_process(true)
-
+	effects = Node2D.new()
+	effects.z_index = 8
+	game.add_child(effects)
+	flash = Sprite2D.new()
+	flash.texture = ART.muzzle_flash()
+	effects.add_child(flash)
+	flash.hide()
+	shell_texture = ART.shell()
+	smoke_texture = ART.smoke()
+	shot_player = _audio("dsshotgn", -5.0)
+	pump_player = _audio("dssgcock", -7.0)
+	gib_player = _audio("dsslop", -11.0)
+	rng.seed = 7291
 
 func handle_key(event: InputEventKey) -> bool:
-	if event.unicode <= 0:
+	if event.echo or not event.pressed:
 		return false
-	var letter := String.chr(event.unicode).to_upper()
+	if not game.replay_ready or game.player.is_dead or event.ctrl_pressed or event.alt_pressed or event.meta_pressed:
+		typed = ""
+		return false
+	var key := event.unicode
+	if key == 0:
+		key = event.keycode
+	var letter := String.chr(key).to_upper()
 	if letter.length() != 1 or letter < "A" or letter > "Z":
 		typed = ""
 		return false
-	typed = (typed + letter).right(BUFFER_LENGTH)
+	typed = (typed + letter).right(8)
 	for code in CHEAT_CODES:
 		if typed.ends_with(code):
 			typed = ""
@@ -48,72 +65,167 @@ func handle_key(event: InputEventKey) -> bool:
 			return true
 	return false
 
-
 func set_active(enabled: bool) -> void:
 	active = enabled
-	tint.visible = active
-	weapon.visible = active
+	shot_age = SHOT_SECONDS
+	shell_ejected = true
+	flash.hide()
 	banner.text = "BERSERKER MODE\nRIP AND SPELL" if active else "BERSERKER MODE OFF"
 	banner.modulate = Color.WHITE
 	banner.show()
 	banner_seconds = 1.8
-	flash_seconds = 0.0
+	tint.visible = active
+	present_player()
 	if active and game.original_gruzzles != null:
-		# Clear a collision registered on the same slow, original-engine tick.
 		game.original_gruzzles.death = false
+		game.original_gruzzles.slime_request = false
+	if not active:
+		_clear_particles()
 
+func _ordinary() -> bool:
+	return game.replay_ready and not game.player.is_dead and game.player.original_recap == null and game.player.original_rescue == null and game.player.original_exit == null
+
+func present_player() -> void:
+	var sprite: Sprite2D = game.player.original_sprite
+	if sprite == null:
+		return
+	var armed := active and _ordinary()
+	var character: String = game.player.original_character
+	var texture: Texture2D = ART.player(character) if armed else load("res://assets/sprites/wr1_%s.png" % character)
+	if sprite.texture != texture:
+		sprite.texture = texture
+		sprite.hframes = ART.frame_count(character) if armed else 26
+	sprite.position = Vector2(0, -20 if armed else -16)
+	sprite.frame = game.player.original_state.frame
+	sprite.flip_h = armed and ART.flip_player(character, sprite.frame, game.player.original_state.facing == 1)
+	if armed and character == "boy" and shot_age < EJECT_SECONDS:
+		# No generated firing poses: keep the authored movement pose and kick
+		# it back briefly. Position is reset above on every presentation pass.
+		sprite.position.x = -shot_direction * 2.0 * (1.0 - shot_age / EJECT_SECONDS)
+	elif armed and character != "boy" and shot_age < 0.42:
+		sprite.frame = 26 if shot_age < EJECT_SECONDS else 27
 
 func can_fire() -> bool:
-	return active and Time.get_ticks_msec() - last_shot_ms >= SHOT_COOLDOWN_MS
+	return active and _ordinary() and shot_age >= SHOT_SECONDS
 
-
-func fire(hit_positions: Array) -> void:
+func fire(hits: Array) -> void:
 	if not can_fire():
 		return
-	last_shot_ms = Time.get_ticks_msec()
-	flash_seconds = 0.13
-	if GameManager.original_sound < 2:
-		shot_player.play()
+	shot_age = 0.0
+	shell_ejected = false
+	shot_direction = -1.0 if game.player.original_state.facing == 1 else 1.0
+	_play(shot_player)
+	present_player()
+	shot_origin = _muzzle()
+	for hit in hits:
+		_explode(hit)
+	if not hits.is_empty():
+		_play(gib_player)
 
-	var direction := -1.0 if game.player.original_state.facing == 1 else 1.0
-	var muzzle := weapon.global_position + Vector2(direction * 15.0, -1.0)
-	_spawn_burst(muzzle, direction, false)
-	for position in hit_positions:
-		_spawn_burst(Vector2(position), direction, true)
-
+func _muzzle() -> Vector2:
+	var sprite: Sprite2D = game.player.original_sprite
+	return sprite.to_global(sprite.offset + ART.muzzle_offset(game.player.original_character, sprite.frame, sprite.flip_h))
 
 func _process(delta: float) -> void:
-	if game == null or not is_instance_valid(game.player) or game.player.original_state == null:
+	if game == null or game.player.original_state == null:
 		return
 	var viewport_size := get_viewport().get_visible_rect().size
 	if viewport_size != last_viewport_size:
 		_layout_overlay(viewport_size)
+	var ordinary := _ordinary()
+	present_player()
+	tint.visible = active and ordinary
+	flash.visible = active and ordinary and shot_age < 0.075
+	if flash.visible:
+		shot_origin = _muzzle()
+		flash.position = shot_origin
+		flash.flip_h = shot_direction < 0.0
+		flash.scale = Vector2.ONE * (1.0 if shot_age < 0.035 else 0.7)
+	if not ordinary:
+		banner.hide()
+		_clear_particles()
+		shot_age = SHOT_SECONDS
+		return
 	if active:
-		var facing_left: bool = game.player.original_state.facing == 1
-		weapon.flip_h = facing_left
-		weapon.position = Vector2(-10.0 if facing_left else 10.0, -18.0)
-		var pulse := (sin(Time.get_ticks_msec() / 125.0) + 1.0) * 0.012
-		tint.color = Color(0.72, 0.0, 0.0, 0.18 + pulse + (0.12 if flash_seconds > 0.0 else 0.0))
-	if flash_seconds > 0.0:
-		flash_seconds -= delta
+		shot_age += delta
+		if not shell_ejected and shot_age >= EJECT_SECONDS:
+			shell_ejected = true
+			_play(pump_player)
+			var eject_at := _muzzle() - Vector2(shot_direction * 13, 1)
+			_particle(shell_texture, eject_at, Vector2(-shot_direction * 65, -100), 1.25, 230.0, 13.0, true)
+		tint.color = Color(0.65, 0, 0, 0.16 + (0.05 if shot_age < 0.08 else 0.0))
+		if shot_age < 0.11:
+			_particle(smoke_texture, shot_origin, Vector2(shot_direction * 25, -20), 0.32, -5, 0, false)
 	if banner_seconds > 0.0:
 		banner_seconds -= delta
+		banner.visible = true
 		banner.modulate.a = clampf(banner_seconds * 2.0, 0.0, 1.0)
 	else:
 		banner.hide()
+	_advance_particles(delta)
 
-	for i in range(particles.size() - 1, -1, -1):
-		var particle: Dictionary = particles[i]
-		particle.life = float(particle.life) - delta
-		if particle.life <= 0.0 or not is_instance_valid(particle.node):
-			if is_instance_valid(particle.node):
-				particle.node.queue_free()
+func _particle(texture: Texture2D, at: Vector2, velocity: Vector2, duration: float, gravity: float, spin: float, bounce: bool) -> void:
+	if particles.size() >= 160:
+		particles[0].node.queue_free()
+		particles.pop_front()
+	var sprite := Sprite2D.new()
+	sprite.texture = texture
+	sprite.position = at
+	effects.add_child(sprite)
+	particles.append({"node":sprite, "velocity":velocity, "life":duration, "duration":duration, "gravity":gravity, "spin":spin, "bounce":bounce})
+
+func _explode(hit: Dictionary) -> void:
+	var texture: Texture2D = load("res://assets/sprites/wr1_gruzzle_%d.png" % (int(hit.type) * 4 + int(hit.frame)))
+	var source := texture.get_image()
+	# Gibs retain the enemy's skin, eyes and teeth instead of generic sparks.
+	for y in range(0, source.get_height(), 6):
+		for x in range(0, source.get_width(), 6):
+			var rect := Rect2i(x, y, mini(6, source.get_width()-x), mini(6, source.get_height()-y))
+			var fragment := source.get_region(rect)
+			if fragment.is_invisible():
+				continue
+			var at := Vector2(hit.position) + Vector2(x+3, y+3)
+			var velocity := Vector2(rng.randf_range(-110, 110) + shot_direction * 45, rng.randf_range(-150, -35))
+			_particle(ImageTexture.create_from_image(fragment), at, velocity, rng.randf_range(0.7, 1.3), 260, rng.randf_range(-12,12), true)
+	for i in range(10):
+		_particle(ART.gore(int(hit.type), i), Vector2(hit.position) + Vector2(16, 12), Vector2(rng.randf_range(-95,95), rng.randf_range(-100,25)), 0.65, 210, 5, true)
+
+func _advance_particles(delta: float) -> void:
+	for i in range(particles.size()-1, -1, -1):
+		var p: Dictionary = particles[i]
+		p.life -= delta
+		if p.life <= 0:
+			p.node.queue_free()
 			particles.remove_at(i)
 			continue
-		particle.velocity.y += 45.0 * delta
-		particle.node.position += Vector2(particle.velocity) * delta
-		particle.node.modulate.a = clampf(float(particle.life) / float(particle.duration), 0.0, 1.0)
+		p.velocity.y += float(p.gravity) * delta
+		var next: Vector2 = p.node.position + Vector2(p.velocity) * delta
+		var state: RefCounted = game.player.original_state
+		if p.bounce and p.velocity.y > 0 and state.attr(floori(next.x/8), floori(next.y/8)) in [0x73,0x74]:
+			p.velocity.y *= -0.35
+			p.velocity.x *= 0.65
+			p.spin *= 0.6
+		else:
+			p.node.position = next
+		p.node.rotation += float(p.spin) * delta
+		p.node.modulate.a = minf(1.0, float(p.life) * 3)
 
+func _clear_particles() -> void:
+	for p in particles:
+		if is_instance_valid(p.node):
+			p.node.queue_free()
+	particles.clear()
+
+func _audio(name: String, volume: float) -> AudioStreamPlayer:
+	var player := AudioStreamPlayer.new()
+	player.stream = load("res://assets/audio/berserker/%s.wav" % name)
+	player.volume_db = volume
+	add_child(player)
+	return player
+
+func _play(player: AudioStreamPlayer) -> void:
+	if GameManager.original_sound < 2 and "--mute-original-audio" not in LaunchArgs.user_args() and DisplayServer.get_name() != "headless":
+		player.play()
 
 func _build_overlay() -> void:
 	overlay = CanvasLayer.new()
@@ -151,74 +263,3 @@ func _layout_overlay(viewport_size: Vector2) -> void:
 	banner.add_theme_font_size_override("font_size", maxi(12, roundi(18.0 * scale_factor)))
 	banner.add_theme_constant_override("shadow_offset_x", maxi(1, roundi(2.0 * scale_factor)))
 	banner.add_theme_constant_override("shadow_offset_y", maxi(1, roundi(2.0 * scale_factor)))
-
-
-func _build_weapon() -> void:
-	effects = Node2D.new()
-	effects.z_index = 12
-	game.add_child(effects)
-	weapon = Sprite2D.new()
-	weapon.texture = _shotgun_texture()
-	weapon.centered = true
-	weapon.z_index = 8
-	weapon.hide()
-	game.player.add_child(weapon)
-	for color in [Color8(255, 255, 85), Color8(255, 85, 85), Color8(170, 0, 0)]:
-		var image := Image.create(2, 2, false, Image.FORMAT_RGBA8)
-		image.fill(color)
-		spark_textures.append(ImageTexture.create_from_image(image))
-
-
-func _shotgun_texture() -> Texture2D:
-	var image := Image.create(30, 12, false, Image.FORMAT_RGBA8)
-	image.fill(Color.TRANSPARENT)
-	# Chunky EGA-ish side view: twin steel barrels, dark receiver and stock.
-	image.fill_rect(Rect2i(12, 3, 18, 2), Color8(170, 170, 170))
-	image.fill_rect(Rect2i(12, 5, 17, 2), Color8(85, 85, 85))
-	image.fill_rect(Rect2i(10, 2, 5, 7), Color8(30, 30, 30))
-	image.fill_rect(Rect2i(4, 5, 8, 5), Color8(170, 85, 0))
-	image.fill_rect(Rect2i(0, 7, 7, 4), Color8(85, 45, 0))
-	image.fill_rect(Rect2i(11, 8, 3, 4), Color8(85, 45, 0))
-	image.set_pixel(29, 3, Color8(255, 255, 255))
-	return ImageTexture.create_from_image(image)
-
-
-func _spawn_burst(origin: Vector2, direction: float, impact: bool) -> void:
-	var count := 12 if impact else 7
-	for i in range(count):
-		var sprite := Sprite2D.new()
-		sprite.texture = spark_textures[i % spark_textures.size()]
-		sprite.position = origin
-		sprite.z_index = 12
-		effects.add_child(sprite)
-		var spread := float((i * 37) % 11 - 5)
-		var speed := 35.0 + float((i * 19) % 55)
-		var velocity := Vector2(direction * speed, spread * (7.0 if impact else 4.0))
-		if impact:
-			velocity.x *= -1.0 if i % 3 == 0 else 0.45
-		var duration := 0.28 + float(i % 4) * 0.035
-		particles.append({"node": sprite, "velocity": velocity, "life": duration, "duration": duration})
-
-
-func _build_audio() -> void:
-	shot_player = AudioStreamPlayer.new()
-	shot_player.volume_db = -4.0
-	game.add_child(shot_player)
-	var wave := AudioStreamWAV.new()
-	wave.format = AudioStreamWAV.FORMAT_8_BITS
-	wave.mix_rate = 11025
-	wave.stereo = false
-	var sample_count := 2200
-	var data := PackedByteArray()
-	data.resize(sample_count)
-	var noise := 0x1d872b41
-	var filtered := 0.0
-	for i in range(sample_count):
-		noise = int((noise * 1103515245 + 12345) & 0x7fffffff)
-		var raw := float((noise >> 16) & 255) - 128.0
-		filtered = filtered * 0.62 + raw * 0.38
-		var envelope := pow(1.0 - float(i) / sample_count, 2.4)
-		var thump := sin(float(i) * 0.075) * 34.0 * maxf(0.0, 1.0 - float(i) / 520.0)
-		data[i] = clampi(int(128.0 + filtered * envelope * 0.72 + thump), 0, 255)
-	wave.data = data
-	shot_player.stream = wave

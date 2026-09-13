@@ -30,6 +30,17 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
 - **Collect** mystery letters to uncover bonus words
 - **Progress** through the 15 recovered WR1 levels at Easy, Medium, or Hard difficulty
 
+Hidden default-game cheat: type `IDKFA` or `IDGAF` during play to toggle
+berserker mode. Run at three times normal horizontal speed; use the slime/fire
+button to shoot. The boy uses 26 hand-edited Pixelorama shotgun poses that retain
+his original animation, with a short recoil kick and pose-aligned muzzle flash.
+The girl retains her existing shotgun atlas and recoil/pump poses. Both have
+muzzle smoke, bouncing shells and exploding Gruzzle gibs. Editable boy artwork
+and export instructions live in `tools/art/pixelorama/`.
+The activation banner fades after 1.8 seconds. Legacy mode is unchanged.
+Shotgun, pump and splatter samples are from [Freedoom](https://freedoom.github.io/),
+under its BSD license; see `assets/audio/berserker/LICENSE.txt`.
+
 ## Running
 
 1. Install [Godot 4.6](https://godotengine.org/download) and [just](https://github.com/casey/just)

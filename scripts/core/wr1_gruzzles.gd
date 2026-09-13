@@ -118,15 +118,18 @@ func refill(mode: int) -> void:
 
 ## Default game's hidden shotgun. The legacy game never calls this, so its
 ## actor timing, RNG and rendering remain untouched.
-func berserker_blast(p: RefCounted, range_cells: int = 34) -> Array[Vector2]:
-	var hits: Array[Vector2] = []
+func berserker_blast(p: RefCounted, range_cells: int = 34) -> Array[Dictionary]:
+	var hits: Array[Dictionary] = []
 	var direction: int = -1 if p.facing == 1 else 1
 	for i in range(actors.size() - 1, -1, -1):
 		var actor: Dictionary = actors[i]
 		var forward: int = (int(actor.gx) - p.gx) * direction
-		if forward < -1 or forward > range_cells or absi(int(actor.gy) - p.gy) > 7:
+		if actor.state != -1 or forward < -1 or forward > range_cells or absi(int(actor.gy) - p.gy) > 7:
 			continue
-		hits.append(Vector2(int(actor.gx) * 8 + 16, int(actor.gy) * 8 - 12))
+		var at := Vector2(int(actor.gx) * 8, int(actor.gy) * 8 - 23)
+		hits.append({"position": at, "type": int(actor.type), "frame": WALK[actor.animation_index]})
+		# Remove the cached draw immediately; no ghost waiting for the next tick.
+		draws = draws.filter(func(draw: Dictionary) -> bool: return not (draw.kind == "gruzzle" and Vector2(draw.position) == at))
 		actors.remove_at(i)
 		# Match the engine's actor removal: cadence counters belong to the ten
 		# fixed slots and are deliberately not compacted with the actor array.

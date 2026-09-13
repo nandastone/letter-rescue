@@ -770,9 +770,11 @@ func _try_use_slime() -> void:
 	if original_gruzzles == null:
 		return
 	if berserker_mode != null and berserker_mode.active:
+		if not replay_ready or player.is_dead or player.original_recap != null or player.original_exit != null:
+			return
 		if not berserker_mode.can_fire():
 			return
-		var hits: Array[Vector2] = original_gruzzles.berserker_blast(player.original_state)
+		var hits: Array[Dictionary] = original_gruzzles.berserker_blast(player.original_state)
 		berserker_mode.fire(hits)
 		if not hits.is_empty():
 			GameManager.add_score(hits.size() * 50)

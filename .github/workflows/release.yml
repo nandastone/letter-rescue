@@ -60,6 +60,7 @@ jobs:
         run: |
           "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd -- --original-seed 20716
           "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_motion_settling.gd -- --original-seed 20716
+          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_motion_settling.gd -- --original-seed 20716 --berserker
           "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_berserker_mode.gd -- --replay data/wr1/demos/level1.json
 
       # Desktop ships both games: it starts the default one, and `--legacy`

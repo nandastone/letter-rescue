@@ -26,6 +26,7 @@ var right_index: int = -1
 var climbing: bool = false
 var ticks: int = 0
 var background_frame: int = 0
+var horizontal_steps: int = 1 # Default-game power-up; legacy always uses one.
 
 func configure(data: Dictionary) -> void:
 	attributes = data["attributes"]
@@ -46,6 +47,7 @@ func configure(data: Dictionary) -> void:
 	left_index = -1
 	right_index = -1
 	ticks = 0
+	horizontal_steps = 1
 
 func attr(cx: int, cy: int) -> int:
 	# Safe world boundary for the clone; original out-of-map memory is undefined.
@@ -55,7 +57,8 @@ func attr(cx: int, cy: int) -> int:
 		return 0
 	return int(attributes[cy][cx])
 
-func step(up: bool, down: bool, left: bool, right: bool) -> void:
+func step(up: bool, down: bool, left: bool, right: bool, stride: int = 1) -> void:
+	horizontal_steps = stride
 	var old_y: int = y
 	if frame == 9:
 		frame = 0
@@ -103,6 +106,11 @@ func step(up: bool, down: bool, left: bool, right: bool) -> void:
 	phase = mini(phase + 1, 16)
 	if not (up or down or left or right):
 		_idle(support)
+	for unused in range(horizontal_steps):
+		_move_horizontal(left, right, old_y)
+	ticks += 1
+
+func _move_horizontal(left: bool, right: bool, old_y: int) -> void:
 	if left:
 		idle_ticks = 0
 		x -= 8
@@ -131,7 +139,6 @@ func step(up: bool, down: bool, left: bool, right: bool) -> void:
 		right_index = (right_index + 1) % 8
 		if y == old_y and frame != 9:
 			frame = RIGHT_WALK[right_index]
-	ticks += 1
 
 func _idle(support: int) -> void:
 	idle_ticks += 1
@@ -162,18 +169,22 @@ func _idle(support: int) -> void:
 
 func scroll_camera() -> void:
 	# Called at the normal original render point, not on each Godot draw frame.
-	if camera_x > 0 and x < 144:
-		camera_x -= 1
-		x += 8
-	elif camera_x < width - 36 and x > 144:
-		camera_x += 1
-		x -= 8
+	for unused in range(horizontal_steps):
+		_scroll_horizontal()
 	if camera_y > 0 and y < 108:
 		camera_y -= 1
 		y += 8
 	elif camera_y < height - 19 and y > 132:
 		camera_y += 1
 		y -= 8
+
+func _scroll_horizontal() -> void:
+	if camera_x > 0 and x < 144:
+		camera_x -= 1
+		x += 8
+	elif camera_x < width - 36 and x > 144:
+		camera_x += 1
+		x -= 8
 
 func render_step() -> void:
 	scroll_camera()

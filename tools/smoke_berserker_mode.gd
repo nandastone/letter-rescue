@@ -21,21 +21,27 @@ func _check() -> void:
 			_fail("game never became ready")
 		return
 	process_frame.disconnect(_check)
+	if not _speed_check():
+		return
 	var mode: Node = game.berserker_mode
 	if mode == null or mode.active:
 		_fail("default game did not create an inactive berserker mode")
 		return
+	var initial_character: String = game.player.original_character
+	game.player.original_character = "girl" # Retain coverage of the legacy 28-frame sheet.
 	_type_code(mode, "IDKFA")
-	if not mode.active or not mode.tint.visible or not mode.weapon.visible:
+	if not mode.active or not mode.tint.visible or game.player.original_sprite.hframes != 28:
 		_fail("IDKFA did not enable the visuals")
 		return
 
 	var p: RefCounted = game.player.original_state
 	var direction := -1 if p.facing == 1 else 1
-	var target_x: int = p.gx + direction * 2
+	var target_x: int = p.gx + direction * 10
 	var timer_count: int = game.original_gruzzles.timers.size()
 	game.original_gruzzles.actors.append({"gx": target_x, "gy": p.gy, "type": 0,
 		"state": -1, "animation_index": 0, "jump_phase": -1})
+	var target_at := Vector2(target_x * 8, p.gy * 8 - 23)
+	game.original_gruzzles.draws.append({"kind":"gruzzle", "type":0, "frame":0, "position":target_at})
 	var manager := root.get_node("GameManager")
 	var score_before: int = manager.score
 	var sound_before: int = manager.original_sound
@@ -52,7 +58,58 @@ func _check() -> void:
 	if game.original_gruzzles.timers.size() != timer_count:
 		_fail("shotgun compacted the engine's fixed actor cadence slots")
 		return
+	if mode.can_fire() or mode.particles.size() < 10 or game.player.original_sprite.frame != 26:
+		_fail("shot did not produce recoil, gibs and cooldown")
+		return
+	for draw in game.original_gruzzles.draws:
+		if draw.position == target_at:
+			_fail("dead Gruzzle remained in the cached draw list")
+			return
+	mode._process(0.19)
+	mode._process(0.0)
+	var shells := 0
+	for particle in mode.particles:
+		if particle.node.texture == mode.shell_texture:
+			shells += 1
+	if shells != 1 or game.player.original_sprite.frame != 27:
+		_fail("pump pose and exactly one ejected shell were not synchronized")
+		return
+	mode._process(0.45)
+	if not mode.can_fire():
+		_fail("shotgun never finished its pump cycle")
+		return
+	if not _boy_pose_check(mode):
+		return
+	var facing: int = p.facing
+	p.facing = 1
+	p.frame = 0
+	mode.present_player()
+	if not game.player.original_sprite.flip_h:
+		_fail("idle shotgun pose ignored left-facing direction")
+		return
+	p.facing = facing
+	mode.present_player()
+	mode.banner_seconds = 0
+	mode._process(0.0)
+	if mode.banner.visible:
+		_fail("activation banner stayed visible")
+		return
+	game.player.is_dead = true
+	mode._process(0.0)
+	if mode.can_fire() or mode.tint.visible or game.player.original_sprite.hframes != 26:
+		_fail("rescue state retained armed visuals or allowed shooting")
+		return
+	game.player.is_dead = false
+	game.player.original_character = initial_character
+	mode.present_player()
+	# A fresh shot gives optional visual QA a recoil/fragment frame.
+	mode.fire([{"type":0,"frame":0,"position":target_at}])
+	mode._process(0.04)
 	var args := OS.get_cmdline_user_args()
+	if "--capture-ready" in args:
+		mode._clear_particles()
+		mode.shot_age = mode.SHOT_SECONDS
+		mode._process(0.0)
 	var screenshot_arg := args.find("--screenshot")
 	if screenshot_arg >= 0 and screenshot_arg + 1 < args.size():
 		var screenshot_path: String = args[screenshot_arg + 1]
@@ -68,12 +125,13 @@ func _check() -> void:
 
 func _finish(mode: Node) -> void:
 	_type_code(mode, "IDKFA")
-	if mode.active or mode.tint.visible or mode.weapon.visible:
+	if mode.active or mode.tint.visible or current_scene.player.original_sprite.hframes != 26 or not mode.particles.is_empty():
 		_fail("second IDKFA did not disable the mode")
 		return
-	print("berserker smoke: code, visuals, blast and toggle passed")
-	mode.shot_player.stop()
-	mode.shot_player.stream = null
+	print("berserker smoke: speed, walls, both atlases, all 26 native boy poses in both directions, muzzle alignment, recoil, shell, gibs, cooldown, banner and restoration passed")
+	for player in [mode.shot_player, mode.pump_player, mode.gib_player]:
+		player.stop()
+		player.stream = null
 	current_scene.queue_free()
 	process_frame.connect(_quit_after_cleanup, CONNECT_ONE_SHOT)
 
@@ -88,6 +146,112 @@ func _type_code(mode: Node, code: String) -> void:
 		event.unicode = letter.unicode_at(0)
 		event.pressed = true
 		mode.handle_key(event)
+		event.pressed = false
+		mode.handle_key(event)
+
+
+func _boy_pose_check(mode: Node) -> bool:
+	var player: Node = current_scene.player
+	var state: RefCounted = player.original_state
+	var saved_frame: int = state.frame
+	var saved_facing: int = state.facing
+	player.original_character = "boy"
+	mode.present_player()
+	var sprite: Sprite2D = player.original_sprite
+	if sprite.hframes != 26 or not sprite.texture.resource_path.ends_with("berserker_boy_handdrawn.png"):
+		_fail("boy did not receive the native 26-frame sheet")
+		return false
+	var sheet := sprite.texture.get_image()
+	var source: Image = load("res://tools/art/pixelorama/boy-shotgun-all-poses.png").get_image()
+	sheet.convert(Image.FORMAT_RGBA8)
+	source.convert(Image.FORMAT_RGBA8)
+	if sheet.get_size() != Vector2i(1248,40) or sheet.get_data() != source.get_data():
+		_fail("runtime boy sheet differs from the approved Pixelorama export")
+		return false
+	var original: Image = load("res://assets/sprites/wr1_boy.png").get_image()
+	for frame in range(26):
+		# Derive the gun bounds from the actual exported pixels, independently
+		# of the runtime muzzle table. Body pixels outside the gun are unchanged.
+		var low := Vector2i(48,40)
+		var high := Vector2i(-1,-1)
+		for y in range(40):
+			for x in range(48):
+				var baseline := original.get_pixel(frame*24+x-12,y-8) if x >= 12 and x < 36 and y >= 8 else Color.TRANSPARENT
+				var pixel := sheet.get_pixel(frame*48+x,y)
+				if pixel == baseline or (pixel.a == 0 and baseline.a == 0):
+					continue
+				low = Vector2i(mini(low.x,x),mini(low.y,y))
+				high = Vector2i(maxi(high.x,x),maxi(high.y,y))
+		var native_left := frame >= 12 and frame <= 21 or frame == 24
+		var tip := Vector2(low.x if native_left else high.x+1,low.y+1.5) - Vector2(24,20)
+		for facing in range(2):
+			state.frame = frame
+			state.facing = facing
+			var flipped := (facing == 1) != native_left
+			for age in [0.0, 0.19, mode.SHOT_SECONDS]:
+				mode.shot_age = age
+				mode.shot_direction = -1.0 if facing == 1 else 1.0
+				mode.present_player()
+				if sprite.frame != frame or sprite.flip_h != flipped or sprite.position.y != -20:
+					_fail("boy pose/direction/anchor changed during firing: %d" % frame)
+					return false
+				var expected_tip := Vector2(-tip.x if flipped else tip.x,tip.y)
+				if not mode._muzzle().is_equal_approx(sprite.to_global(sprite.offset + expected_tip)):
+					_fail("boy muzzle is detached from gun in frame %d" % frame)
+					return false
+				var recoil: float = -mode.shot_direction*2 if age == 0 else 0
+				if not is_equal_approx(sprite.position.x,recoil):
+					_fail("boy recoil did not reset")
+					return false
+	# Boy firing still uses the shared shell/pump clock without invalid frames.
+	mode._clear_particles()
+	mode.fire([])
+	mode._process(0.19)
+	mode._process(0.0)
+	var shells := 0
+	for particle in mode.particles:
+		if particle.node.texture == mode.shell_texture:
+			shells += 1
+	if shells != 1 or not mode.shell_ejected or sprite.frame != state.frame:
+		_fail("boy firing lost its native pose or shell ejection")
+		return false
+	mode.set_active(false)
+	if sprite.hframes != 26 or sprite.flip_h or sprite.position != Vector2(0,-16) or not sprite.texture.resource_path.ends_with("wr1_boy.png"):
+		_fail("boy did not restore the unarmed sprite")
+		return false
+	player.original_character = "girl"
+	state.frame = saved_frame
+	state.facing = saved_facing
+	mode.set_active(true)
+	return true
+
+
+func _speed_check() -> bool:
+	var rows: Array = []
+	for y in range(30):
+		var row: Array = []
+		row.resize(100)
+		row.fill(0x73 if y == 10 else 0)
+		rows.append(row)
+	var data := {"attributes":rows,"start":[8,9]}
+	var normal = load("res://scripts/core/wr1_motion.gd").new()
+	var fast = load("res://scripts/core/wr1_motion.gd").new()
+	normal.configure(data)
+	fast.configure(data)
+	var start: int = normal.gx
+	normal.step(false,false,false,true)
+	fast.step(false,false,false,true,3)
+	if normal.gx-start != 1 or fast.gx-start != 3:
+		_fail("boost was not exactly three horizontal steps")
+		return false
+	fast.configure(data)
+	for y in range(6,10):
+		rows[y][start+4] = 0x73
+	fast.step(false,false,false,true,3)
+	if fast.gx != start+1:
+		_fail("boost skipped an intermediate wall collision")
+		return false
+	return true
 
 
 func _fail(message: String) -> void:

@@ -37,6 +37,8 @@ class SettlingSampler extends Node:
 	var checked_seconds := {}
 
 	func _ready() -> void:
+		if "--berserker" in OS.get_cmdline_user_args():
+			get_parent().berserker_mode.set_active(true)
 		Input.action_press(direction)
 
 	func _process(delta: float) -> void:

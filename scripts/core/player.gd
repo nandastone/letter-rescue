@@ -93,6 +93,8 @@ func _present_original(queue_video: bool = true) -> void:
 	# Godot's player anchor is bottom-center; WR1 uses sprite left/bottom.
 	global_position = Vector2(original_state.world_position()) + Vector2(-4, -32)
 	original_sprite.frame = original_state.frame
+	if get_parent().berserker_mode != null:
+		get_parent().berserker_mode.present_player()
 	get_node("../Camera").apply_original(original_state)
 	original_presented.emit(original_state)
 	if queue_video and get_parent().has_method("queue_original_video"):
@@ -211,7 +213,8 @@ func _original_physics(delta: float) -> void:
 	held["slime_request"] = get_parent().original_gruzzles.slime_request
 	if AudioManager.original != null:
 		AudioManager.original.movement_before(original_state, held.up)
-	original_state.step(held.up, held.down, held.left, held.right)
+	var stride: int = 3 if get_parent().berserker_mode != null and get_parent().berserker_mode.active else 1
+	original_state.step(held.up, held.down, held.left, held.right, stride)
 	if AudioManager.original != null:
 		AudioManager.original.movement_after(original_state)
 	original_moved.emit(original_state)

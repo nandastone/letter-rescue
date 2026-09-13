@@ -64,7 +64,10 @@ func _sample() -> void:
 				# extends the last move at each idle update, making its offset rebound
 				# and decay long after the player and camera have stopped.
 				interval[drawn] = _step_ticks()
-		if drawn.is_visible_in_tree() and previous.distance_to(source.position) <= SNAP_DISTANCE:
+		var snap_distance := SNAP_DISTANCE
+		if game.berserker_mode != null and game.berserker_mode.active and drawn in [game.player.original_sprite, game.camera]:
+			snap_distance = 32.0
+		if drawn.is_visible_in_tree() and previous.distance_to(source.position) <= snap_distance:
 			lag[drawn] = previous - source.position
 		else:
 			lag.erase(drawn) # Teleport, reused pool sprite, or a hidden node.
