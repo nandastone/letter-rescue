@@ -178,6 +178,35 @@ func restart_original_level() -> void:
 	original_restart["mistakes"] = word_manager.original_model.mistakes
 	_build_level_from_data()
 
+func warp_to_original_level(level: int) -> void:
+	if InputReplay.mode == InputReplay.Mode.REPLAYING or not replay_ready:
+		return
+	var target := clampi(level, 1, GameManager.MAX_LEVELS)
+	if target == GameManager.current_level:
+		restart_original_level()
+		return
+	replay_ready = false
+	player.set_physics_process(false)
+	GameManager.current_level = target
+	level_data = LevelLoader.load_level(LevelLoader.get_level_path(target))
+	if level_data.is_empty():
+		push_error("No level data found for warp target: %d" % target)
+		player.set_physics_process(true)
+		return
+	if AudioManager.original != null:
+		AudioManager.original.stop_effect()
+	AudioManager.begin_original_level(target)
+	var starts: Array = []
+	for pos in level_data.get("gruzzles", []):
+		starts.append([int(pos[0] * 2), int(pos[1] * 2)])
+	# A warp to a different map follows the same fresh-load path as the exit:
+	# advance the word stream and initialize every map-specific system again.
+	original_restart = original_gruzzles.restart(starts, GameManager.current_difficulty, true, original_words.next_words)
+	original_restart["actors"] = original_gruzzles
+	original_restart["advancing"] = true
+	await _show_original_level_title(false)
+	_build_level_from_data()
+
 func _build_level_from_data() -> void:
 	replay_ready = false
 	original_recap_pending = false
@@ -706,10 +735,11 @@ func _input(event: InputEvent) -> void:
 			player.original_recap_skip_requested = true
 			hud.clear_original_matches()
 		return
-	if InputReplay.mode != InputReplay.Mode.REPLAYING and event is InputEventKey and event.pressed and not event.echo:
+	if InputReplay.mode != InputReplay.Mode.REPLAYING and event is InputEventKey:
 		if berserker_mode != null and berserker_mode.handle_key(event):
 			get_viewport().set_input_as_handled()
 			return
+	if InputReplay.mode != InputReplay.Mode.REPLAYING and event is InputEventKey and event.pressed and not event.echo:
 		var scan := preload("res://scripts/core/wr1_controls.gd").scan_for_key(event.physical_keycode if event.physical_keycode != 0 else event.keycode)
 		if GameManager.original_custom_keys and scan in GameManager.original_scancodes:
 			if event.is_action_pressed("use_slime") and not player.is_dead:

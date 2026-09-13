@@ -103,8 +103,11 @@ available. The preserved original help artwork swaps the Ctrl/Alt labels;
 the controls above follow the measured executable behavior.
 The Joystick menu enables a connected gamepad's left stick/D-pad and A/B slime.
 
-There is also one deliberately undocumented-in-game easter egg for grown-ups:
-type `IDKFA` during normal Letter Rescue play. The same code toggles it off.
+The original cheat codes work during normal Letter Rescue play: hold `L+Z`,
+release them, type a level from 1–15, and press Enter to warp; hold `P+S` to
+refill slime. Escape cancels level entry. There is also one deliberately
+undocumented-in-game easter egg for grown-ups: type `IDKFA`. The same code
+toggles it off.
 
 Enter a name of up to eight letters, digits or underscores, then select the girl
 or boy. Returning names load native-format `.wr1` profiles from Godot's

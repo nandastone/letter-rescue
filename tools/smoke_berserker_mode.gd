@@ -1,11 +1,14 @@
 extends SceneTree
-## Focused smoke test for the default game's hidden mode.
+## Focused smoke test for the default game's cheat codes and hidden mode.
 ##
 ##   godot --headless --fixed-fps 120 --path . \
 ##     --script tools/smoke_berserker_mode.gd -- \
-##     --replay data/wr1/demos/level1.json
+##     --original-seed 20716
 
 var waited := 0
+var warp_waited := 0
+var warp_game: Node
+var warp_mode: Node
 
 
 func _initialize() -> void:
@@ -128,8 +131,48 @@ func _finish(mode: Node) -> void:
 	if mode.active or mode.tint.visible or current_scene.player.original_sprite.hframes != 26 or not mode.particles.is_empty():
 		_fail("second IDKFA did not disable the mode")
 		return
-	print("berserker smoke: speed, walls, both atlases, all 26 native boy poses in both directions, muzzle alignment, recoil, shell, gibs, cooldown, banner and restoration passed")
-	for player in [mode.shot_player, mode.pump_player, mode.gib_player]:
+	var game := current_scene
+	game.original_gruzzles.slime_used = 5
+	game.hud.update_original_slime(5)
+	_chord(mode, KEY_P, KEY_S)
+	if game.original_gruzzles.slime_used != 0 or game.hud.original_slime_used != 0:
+		_fail("P+S did not refill slime")
+		return
+	_chord(mode, KEY_L, KEY_Z)
+	if not mode.warp_entry or game.player.is_physics_processing():
+		_fail("L+Z did not pause play for level entry")
+		return
+	_key(mode, KEY_ESCAPE)
+	if mode.warp_entry or not game.player.is_physics_processing():
+		_fail("Escape did not cancel level entry")
+		return
+	_chord(mode, KEY_L, KEY_Z)
+	_key(mode, KEY_1, 49)
+	_key(mode, KEY_4, 52)
+	_key(mode, KEY_ENTER)
+	var manager := root.get_node("GameManager")
+	if mode.warp_entry or manager.current_level != 14 or game.replay_ready:
+		_fail("level 14 warp did not begin a fresh load")
+		return
+	warp_game = game
+	warp_mode = mode
+	process_frame.connect(_check_warp)
+
+
+func _check_warp() -> void:
+	warp_waited += 1
+	if warp_game.original_level_title != null and warp_game.original_level_title.waiting:
+		warp_game.original_level_title._dismiss()
+	if not warp_game.replay_ready:
+		if warp_waited > 2400:
+			_fail("level warp never became ready")
+		return
+	process_frame.disconnect(_check_warp)
+	if warp_game.level_data.get("name") != "Level 14":
+		_fail("level warp loaded the wrong map")
+		return
+	print("cheat smoke: berserker art/effects, slime refill, cancel and level warp passed")
+	for player in [warp_mode.shot_player, warp_mode.pump_player, warp_mode.gib_player]:
 		player.stop()
 		player.stream = null
 	current_scene.queue_free()
@@ -142,10 +185,25 @@ func _quit_after_cleanup() -> void:
 
 func _type_code(mode: Node, code: String) -> void:
 	for letter in code:
-		var event := InputEventKey.new()
-		event.unicode = letter.unicode_at(0)
-		event.pressed = true
-		mode.handle_key(event)
+		_key(mode, letter.unicode_at(0), letter.unicode_at(0))
+
+
+func _chord(mode: Node, first: Key, second: Key) -> void:
+	_key(mode, first, first, true, false)
+	_key(mode, second, second, true, false)
+	_key(mode, first, 0, false, false)
+	_key(mode, second, 0, false, false)
+
+
+func _key(mode: Node, key: Key, unicode: int = 0, pressed: bool = true, release: bool = true) -> void:
+	var event := InputEventKey.new()
+	event.keycode = key
+	event.physical_keycode = key
+	event.unicode = unicode
+	event.pressed = pressed
+	mode.handle_key(event)
+	if pressed and release:
+		event = event.duplicate()
 		event.pressed = false
 		mode.handle_key(event)
 

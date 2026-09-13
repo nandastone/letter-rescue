@@ -7,6 +7,9 @@ const ART = preload("res://scripts/game/berserker_art.gd")
 var game: Node2D
 var active := false
 var typed := ""
+var held_keys := {}
+var warp_entry := false
+var warp_digits := ""
 var shot_age := SHOT_SECONDS
 var shell_ejected := true
 var banner_seconds := 0.0
@@ -45,15 +48,33 @@ func configure(host: Node2D) -> void:
 	rng.seed = 7291
 
 func handle_key(event: InputEventKey) -> bool:
-	if event.echo or not event.pressed:
-		return false
+	var physical := event.physical_keycode if event.physical_keycode != 0 else event.keycode
+	if not event.pressed:
+		held_keys.erase(physical)
+		return warp_entry
+	if event.echo:
+		return warp_entry
+	held_keys[physical] = true
+	if warp_entry:
+		_handle_warp_key(event, physical)
+		return true
 	if not game.replay_ready or game.player.is_dead or event.ctrl_pressed or event.alt_pressed or event.meta_pressed:
 		typed = ""
 		return false
-	var key := event.unicode
-	if key == 0:
-		key = event.keycode
-	var letter := String.chr(key).to_upper()
+	if _held(KEY_L) and _held(KEY_Z):
+		held_keys.clear()
+		typed = ""
+		_begin_warp()
+		return true
+	if _held(KEY_P) and _held(KEY_S):
+		held_keys.clear()
+		typed = ""
+		_refill_slime()
+		return true
+	var text_key := event.unicode
+	if text_key == 0:
+		text_key = event.keycode
+	var letter := String.chr(text_key).to_upper()
 	if letter.length() != 1 or letter < "A" or letter > "Z":
 		typed = ""
 		return false
@@ -64,17 +85,80 @@ func handle_key(event: InputEventKey) -> bool:
 			set_active(not active)
 			return true
 	return false
+func _held(key: Key) -> bool:
+	return held_keys.has(key)
+
+
+func _begin_warp() -> void:
+	warp_entry = true
+	warp_digits = ""
+	game.player.set_physics_process(false)
+	_update_warp_banner()
+
+
+func _handle_warp_key(event: InputEventKey, key: int) -> void:
+	if key == KEY_ESCAPE:
+		_cancel_warp()
+		return
+	if key == KEY_BACKSPACE:
+		warp_digits = warp_digits.left(maxi(0, warp_digits.length() - 1))
+		_update_warp_banner()
+		return
+	if key in [KEY_ENTER, KEY_KP_ENTER]:
+		if warp_digits.is_empty():
+			_cancel_warp()
+			return
+		var level := int(warp_digits)
+		if level < 1 or level > GameManager.MAX_LEVELS:
+			_show_banner("LEVEL WARP\nCHOOSE 1-%d" % GameManager.MAX_LEVELS, 1.4)
+			warp_digits = ""
+			return
+		warp_entry = false
+		warp_digits = ""
+		banner.hide()
+		game.warp_to_original_level(level)
+		return
+	if event.unicode >= 48 and event.unicode <= 57 and warp_digits.length() < 2:
+		warp_digits += String.chr(event.unicode)
+		_update_warp_banner()
+
+
+func _update_warp_banner() -> void:
+	var value := warp_digits if not warp_digits.is_empty() else "_"
+	_show_banner("LEVEL WARP: %s\nTYPE 1-%d, ENTER" % [value, GameManager.MAX_LEVELS], -1.0)
+
+
+func _cancel_warp() -> void:
+	warp_entry = false
+	warp_digits = ""
+	held_keys.clear()
+	_show_banner("LEVEL WARP CANCELLED", 1.0)
+	if game.replay_ready:
+		game.player.set_physics_process(true)
+
+
+func _refill_slime() -> void:
+	if game.original_gruzzles == null:
+		return
+	game.original_gruzzles.slime_used = 0
+	game.hud.update_original_slime(0, true)
+	_show_banner("SLIME REFILLED", 1.4)
+
+
+func _show_banner(message: String, duration: float) -> void:
+	banner.text = message
+	banner.modulate = Color.WHITE
+	banner.show()
+	banner_seconds = duration
+
 
 func set_active(enabled: bool) -> void:
 	active = enabled
 	shot_age = SHOT_SECONDS
 	shell_ejected = true
 	flash.hide()
-	banner.text = "BERSERKER MODE\nRIP AND SPELL" if active else "BERSERKER MODE OFF"
-	banner.modulate = Color.WHITE
-	banner.show()
-	banner_seconds = 1.8
 	tint.visible = active
+	_show_banner("BERSERKER MODE\nRIP AND SPELL" if active else "BERSERKER MODE OFF", 1.8)
 	present_player()
 	if active and game.original_gruzzles != null:
 		game.original_gruzzles.death = false
@@ -156,7 +240,10 @@ func _process(delta: float) -> void:
 		tint.color = Color(0.65, 0, 0, 0.16 + (0.05 if shot_age < 0.08 else 0.0))
 		if shot_age < 0.11:
 			_particle(smoke_texture, shot_origin, Vector2(shot_direction * 25, -20), 0.32, -5, 0, false)
-	if banner_seconds > 0.0:
+	if warp_entry:
+		banner.visible = true
+		banner.modulate.a = 1.0
+	elif banner_seconds > 0.0:
 		banner_seconds -= delta
 		banner.visible = true
 		banner.modulate.a = clampf(banner_seconds * 2.0, 0.0, 1.0)
