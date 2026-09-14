@@ -301,7 +301,7 @@ func _build_level_from_data() -> void:
 		else:
 			original_words.words.assign(InputReplay.original_level_start.words)
 			original_words.offset = int(InputReplay.original_level_start.word_cursor)
-	var words: Array = original_words.words
+	var words: Array = preload("res://scripts/core/vocabulary.gd").display_words(original_words.words)
 	word_manager.setup(words, blocks)
 
 	var mystery: String = words[5] # Recorded initial session; later loads use the RNG index.
@@ -790,11 +790,12 @@ func draw_original_word_list(image: Image) -> void:
 	if original_words == null:
 		return
 	var renderer = preload("res://scripts/core/wr1_frontend_render.gd")
+	var words := preload("res://scripts/core/vocabulary.gd").display_words(original_words.words)
 	image.blit_rect(renderer.asset("HELP.WR"),Rect2i(192,0,128,192),Vector2i(192,0))
 	for i in range(7):
-		var picture: Texture2D = preload("res://scripts/core/wr1_pictures.gd").load_picture(original_words.words[i])
+		var picture: Texture2D = preload("res://scripts/core/vocabulary.gd").load_picture(words[i])
 		image.blit_rect(picture.get_image(),Rect2i(0,0,24,24),Vector2i(287,7+i*26))
-		renderer.illustration(image,{"kind":"word_panel","slot":i,"destination":[200,10+i*26]}, {"words":original_words.words})
+		renderer.illustration(image,{"kind":"word_panel","slot":i,"destination":[200,10+i*26]}, {"words":words})
 
 func _try_use_slime() -> void:
 	if original_gruzzles == null:

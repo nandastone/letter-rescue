@@ -1,4 +1,6 @@
-# Hand-edited boy shotgun artwork — all 26 poses
+# Editable Pixelorama artwork
+
+## Hand-edited boy shotgun artwork — all 26 poses
 
 Authored in Pixelorama 1.2.2 through desktop computer use. No image model or
 scripted pixel-writing API was used. Original clean projects remain in
@@ -67,3 +69,52 @@ alignment against the actual gun pixels, shell timing and unarmed restoration.
 The earlier `tools/build_berserker_assets.gd` builds image-generated artwork and
 is not the source of this hand-edited project. Its legacy output filenames are
 separate and cannot overwrite the runtime hand-drawn boy sheet.
+
+## Krsna vocabulary artwork
+
+`krsna-words.pxo` is the editable Pixelorama 1.2.2 source. It has nineteen 24×24
+frames in this order:
+
+1. cow
+2. calf
+3. milk
+4. gopi
+5. flute
+6. radha
+7. lotus
+8. krsna
+9. butter
+10. altar
+11. peacock
+12. garland
+13. boy
+14. conch
+15. beads
+16. tulsi
+17. pot
+18. crown
+19. kirtan
+
+The second batch replaces gun → boy, ghost → conch, scale → beads,
+and teepee → tulsi. The last is deliberately one letter shorter. Camera → kirtan
+uses the centered dancer. Pot and crown retain their existing words and override
+only the default-mode art. Milk replaces wine (not flag). Music, dance and flag
+use the original WR1 words and pictures; ghee has been removed. Tulsi shows a manjari flower/bud spike
+with two small basal leaves. Beads is a close-up of four separated wooden beads
+on a drooping cord. The conch uses the elongated shankha silhouette on its side,
+with a narrow aperture and tapered end.
+Botanical and museum references and drawing notes are in `reference-notes.md`.
+Cow is a face-on portrait with broad ears and a wide muzzle, without a hanging
+bell or chin detail. `cow-preview.png` provides an enlarged nearest-neighbour view.
+
+The game loads the horizontal runtime atlas at
+`assets/sprites/krsna_words.png`. After hand-editing the project in desktop
+Pixelorama, export all frames as a horizontal spritesheet at 100% scale to that
+path. Keep every frame exactly 24×24 and preserve the frame order.
+
+The pixel sketches are in `krsna_pixels.gd`, used by
+`tools/build_krsna_word_art.gd` to seed the local source and atlas. These are
+code-authored pixel clusters, not strokes drawn through the editor UI.
+Pixelorama opens and exports the resulting `.pxo`; it is the editable source
+for subsequent manual refinement. The builder is a bootstrap tool: running it
+again overwrites later hand edits.

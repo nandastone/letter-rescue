@@ -13,8 +13,8 @@ var original_word_sprite: Sprite2D
 var original_picture_frames: Array[Texture2D] = []
 
 func set_original_picture(picture_word: String) -> void:
-	picture_texture = preload("res://scripts/core/wr1_pictures.gd").load_picture(picture_word)
-	original_picture_frames.assign([picture_texture, preload("res://scripts/core/wr1_pictures.gd").load_picture(picture_word, 1)])
+	picture_texture = preload("res://scripts/core/vocabulary.gd").load_picture(picture_word)
+	original_picture_frames.assign([picture_texture, preload("res://scripts/core/vocabulary.gd").load_picture(picture_word, 1)])
 	$PictureSprite.centered = false
 	$PictureSprite.position = Vector2.ZERO
 	var card := Image.create(72, 18, false, Image.FORMAT_RGBA8)

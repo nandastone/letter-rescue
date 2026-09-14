@@ -380,6 +380,7 @@ func page_context() -> Dictionary:
 		var initial := preload("res://scripts/core/wr1_words.gd").new()
 		initial.next_words()
 		words = initial.words
+	words = preload("res://scripts/core/vocabulary.gd").display_words(words)
 	return {"words":words,"tileset":tileset,"character":GameManager.original_character,
 		"mystery_word":game.original_letters.word if game != null and game.original_letters != null else words[0],
 		"background_color":int(game.level_data.bg_colour_ega) if game != null else 11}

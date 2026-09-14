@@ -93,7 +93,7 @@ func _draw_mystery(reveal_hidden: bool = false) -> void:
 
 
 func add_matched_word(word: String, match_index: int, frame: int = 0) -> void:
-	var picture: Texture2D = preload("res://scripts/core/wr1_pictures.gd").load_picture(word, frame)
+	var picture: Texture2D = preload("res://scripts/core/vocabulary.gd").load_picture(word, frame)
 	if picture != null:
 		original_top.blit_rect(picture.get_image(), Rect2i(0, 0, 24, 24), Vector2i(144 + 23 * match_index, 5))
 		original_top_texture.update(original_top)

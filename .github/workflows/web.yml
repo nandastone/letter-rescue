@@ -89,6 +89,10 @@ jobs:
       - name: Smoke-test the default game
         timeout-minutes: 5
         run: |
+          "$RUNNER_TEMP/godot" --headless --path . --script tools/smoke_krsna_vocabulary.gd
+          "$RUNNER_TEMP/godot" --headless --path . --script tools/smoke_krsna_vocabulary.gd -- --legacy
+          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_krsna_game.gd
+          "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_krsna_game.gd -- --legacy
           "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd -- --original-seed 20716
           "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_motion_settling.gd -- --original-seed 20716
           "$RUNNER_TEMP/godot" --headless --fixed-fps 120 --path . --script tools/smoke_motion_settling.gd -- --original-seed 20716 --berserker

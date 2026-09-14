@@ -187,7 +187,7 @@ static func illustration(image: Image, command: Dictionary, context: Dictionary)
 			rect = Rect2i(0,0,72,18)
 		"picture":
 			var word: String = context.get("words",["toe","pot"])[int(command.slot)]
-			source = preload("res://scripts/core/wr1_pictures.gd").load_picture(word).get_image()
+			source = preload("res://scripts/core/vocabulary.gd").load_picture(word).get_image()
 			rect = Rect2i(0,0,24,24)
 	if source != null:
 		if masked: image.blend_rect(source,rect,destination)

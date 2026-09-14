@@ -41,6 +41,17 @@ The activation banner fades after 1.8 seconds. Legacy mode is unchanged.
 Shotgun, pump and splatter samples are from [Freedoom](https://freedoom.github.io/),
 under its BSD license; see `assets/audio/berserker/LICENSE.txt`.
 
+The default game introduces seventeen Krsna-related words and locally authored
+24×24 pictures: cow, calf, milk, gopi, flute, Radha, lotus, Krsna, butter,
+altar, peacock, garland, boy, conch, beads, tulsi and kirtan. Tulsi is pictured
+as a manjari spike. Pot and crown also have new pictures without changing their
+words; milk replaces wine, while music, dance and flag retain
+their original art. Substitutions retain
+the original word lengths except the deliberately shorter teepee → tulsi;
+the mystery uses five letter pickups. Legacy retains the recovered WR1 vocabulary and art.
+The editable Pixelorama source and export instructions live in
+`tools/art/pixelorama/`.
+
 ## Running
 
 1. Install [Godot 4.6](https://godotengine.org/download) and [just](https://github.com/casey/just)
