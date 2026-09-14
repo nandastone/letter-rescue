@@ -26,20 +26,22 @@ func _initialize() -> void:
 	if source.PICTURE_WORDS.size() != 19:
 		failures.append("expected 19 picture frames")
 	var atlas: Texture2D = load(source.ATLAS_PATH)
-	if atlas.get_width() != 19 * 24 or atlas.get_height() != 24:
-		failures.append("atlas dimensions do not match 19 frames")
+	if atlas.get_width() != 19 * 2 * 24 or atlas.get_height() != 24:
+		failures.append("atlas dimensions do not match 19 two-frame pictures")
+	_check_card_style(source, failures)
 	for word: String in source.PICTURE_WORDS:
 		if source.load_picture(word) == null:
 			failures.append("missing custom picture: " + word)
-	for word: String in ["pot", "crown", "teepee", "gun", "wine", "ghost", "scale", "camera"]:
+	for word: String in source.REPLACEMENTS.keys() + ["pot", "crown"]:
 		var vocabulary := preload("res://scripts/core/vocabulary.gd")
 		var expected_word: String = word if LaunchArgs.legacy() else source.display_word(word)
 		if vocabulary.display_word(word) != expected_word:
 			failures.append("mode isolation failed for " + word)
-		var actual: Texture2D = vocabulary.load_picture(word)
-		var expected_picture: Texture2D = preload("res://scripts/core/wr1_pictures.gd").load_picture(word) if LaunchArgs.legacy() else source.load_picture(expected_word)
-		if actual == null or expected_picture == null or actual.get_image().get_data() != expected_picture.get_image().get_data():
-			failures.append("wrong mode picture for " + word)
+		for frame in range(2):
+			var actual: Texture2D = vocabulary.load_picture(word, frame)
+			var expected_picture: Texture2D = preload("res://scripts/core/wr1_pictures.gd").load_picture(word, frame) if LaunchArgs.legacy() else source.load_picture(expected_word, frame)
+			if actual == null or expected_picture == null or actual.get_image().get_data() != expected_picture.get_image().get_data():
+				failures.append("wrong mode picture for %s frame %d" % [word, frame])
 	if source.load_picture("ghee") != null:
 		failures.append("ghee picture must be removed")
 	for word: String in ["music", "dance", "flag"]:
@@ -65,8 +67,72 @@ func _initialize() -> void:
 			printerr("Krsna vocabulary FAILED: " + failure)
 		quit(1)
 	else:
-		print("Krsna vocabulary: 17 replacements, 19 pictures; wine -> milk, music/dance/flag restored, shorter tulsi mystery and mode isolation verified")
+		print("Krsna vocabulary: 17 replacements, 19 bordered colour cards, 6 animations; shorter tulsi mystery and both-frame mode isolation verified")
 		quit()
+
+
+func _check_card_style(source, failures: Array[String]) -> void:
+	var backgrounds := {}
+	var vocabulary := preload("res://scripts/core/vocabulary.gd")
+	var animated := ["cow", "calf", "altar", "peacock", "garland", "kirtan"]
+	if source.ANIMATED_WORDS != animated:
+		failures.append("expected six selected animated pictures")
+	for word: String in source.PICTURE_WORDS:
+		var frames: Array[Image] = []
+		for frame in range(2):
+			var image: Image = source.load_picture(word, frame).get_image()
+			image.convert(Image.FORMAT_RGBA8)
+			frames.append(image)
+			# Original 24px page: 21px artwork at (2,1), a black outer frame.
+			for y in range(24):
+				for x in range(24):
+					if not Rect2i(2, 1, 21, 21).has_point(Vector2i(x, y)) and image.get_pixel(x, y) != Color.BLACK:
+						failures.append("broken black card border: " + word)
+			if not LaunchArgs.legacy():
+				var actual := vocabulary.load_picture(word, frame).get_image()
+				actual.convert(Image.FORMAT_RGBA8)
+				if actual.get_data() != image.get_data():
+					failures.append("requested animation frame not forwarded: " + word)
+		var differs := frames[0].get_data() != frames[1].get_data()
+		if differs != (word in animated):
+			failures.append("unexpected animation/static frames: " + word)
+		_check_coloured_area_centre(word, frames, failures)
+		backgrounds[frames[0].get_pixel(2, 1).to_html()] = true
+	if backgrounds.size() < 5 or backgrounds.has("000000ff"):
+		failures.append("cards need varied non-black background colours")
+
+
+func _check_coloured_area_centre(word: String, frames: Array[Image], failures: Array[String]) -> void:
+	var background := frames[0].get_pixel(2, 1)
+	var first := Vector2i(24, 24)
+	var last := Vector2i.ZERO
+	var ink_sum := Vector2.ZERO
+	var count := 0
+	for image in frames:
+		for y in range(1, 22):
+			for x in range(2, 23):
+				if image.get_pixel(x, y) != background:
+					first = first.min(Vector2i(x, y))
+					last = last.max(Vector2i(x, y))
+					ink_sum += Vector2(x, y)
+					count += 1
+	if count == 0:
+		failures.append("empty card: " + word)
+		return
+	var ink_centre := ink_sum / count
+	var panel_start := Vector2i(2, 1)
+	var panel_end := Vector2i(22, 21)
+	var panel_centre := Vector2(12, 11)
+	for axis in range(2):
+		var low_margin: int = first[axis] - panel_start[axis]
+		var high_margin: int = panel_end[axis] - last[axis]
+		if absi(low_margin - high_margin) > 1:
+			failures.append("animation envelope not centred in coloured area: " + word)
+		for shift in [-1, 1]:
+			if mini(low_margin + shift, high_margin - shift) < 0 or absi(low_margin - high_margin + 2 * shift) > 1:
+				continue
+			if absf(ink_centre[axis] + shift - panel_centre[axis]) + 0.0001 < absf(ink_centre[axis] - panel_centre[axis]):
+				failures.append("rounding biases ink away from coloured-area centre: " + word)
 
 
 func _check_shorter_mystery(failures: Array[String]) -> void:

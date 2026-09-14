@@ -73,7 +73,7 @@ separate and cannot overwrite the runtime hand-drawn boy sheet.
 ## Krsna vocabulary artwork
 
 `krsna-words.pxo` is the editable Pixelorama 1.2.2 source. It has nineteen 24×24
-frames in this order:
+pictures, with **two adjacent frames per picture** (38 frames total), in this order:
 
 1. cow
 2. calf
@@ -107,10 +107,38 @@ Botanical and museum references and drawing notes are in `reference-notes.md`.
 Cow is a face-on portrait with broad ears and a wide muzzle, without a hanging
 bell or chin detail. `cow-preview.png` provides an enlarged nearest-neighbour view.
 
+Every card uses WR1's black border and 21×21 coloured inset at (2,1) inside
+the 24×24 page. Backgrounds are individually chosen to contrast with the existing
+drawings. Most silhouettes are simply positioned within that inset; gopi, Radha
+and Krsna omit one redundant row, and conch and beads omit one column, avoiding
+resampling or cutting into the frame. The source grids remain intact.
+Placement centres the combined two-frame silhouette inside the coloured area,
+excluding the black border. When odd/even pixel dimensions leave a one-pixel
+margin difference, visible ink balance chooses the closer whole-pixel position.
+Both frames use the same anchor, so tail motion never shifts the whole animal.
+
+Six pictures animate: cow blinks, calf swishes its tail, altar lamps flicker,
+peacock eye-spots catch the light, garland sways, and kirtan sways over planted
+feet. The peacock's head and neck do not move. The other thirteen pictures have
+identical frame pairs. Runtime uses the existing picture clock (eight updates
+per frame); neither Legacy art nor animation timing is changed. Pixelorama's
+preview is set to 1.5 fps, approximately the default game speed.
+
 The game loads the horizontal runtime atlas at
 `assets/sprites/krsna_words.png`. After hand-editing the project in desktop
 Pixelorama, export all frames as a horizontal spritesheet at 100% scale to that
-path. Keep every frame exactly 24×24 and preserve the frame order.
+path. Keep every frame exactly 24×24 and preserve the adjacent-pair order:
+cow 0, cow 1, calf 0, calf 1, and so on. The atlas is 912×24.
+`krsna-words-preview.png` and `krsna-words-preview-2.png` show the two phases;
+`krsna-words-animated-preview.gif` loops between them for review.
+
+To rebuild that review GIF after exporting the two contact sheets:
+
+```powershell
+Copy-Item tools/art/pixelorama/krsna-words-preview.png build/word-card-0.png
+Copy-Item tools/art/pixelorama/krsna-words-preview-2.png build/word-card-1.png
+ffmpeg -y -framerate 3/2 -i 'build/word-card-%d.png' -filter_complex '[0:v]split[a][b];[a]palettegen[p];[b][p]paletteuse=dither=none' -loop 0 -final_delay 67 tools/art/pixelorama/krsna-words-animated-preview.gif
+```
 
 The pixel sketches are in `krsna_pixels.gd`, used by
 `tools/build_krsna_word_art.gd` to seed the local source and atlas. These are

@@ -30,6 +30,8 @@ const PICTURE_WORDS: Array[String] = [
 ]
 
 const PICTURE_SIZE := 24
+const FRAME_COUNT := 2
+const ANIMATED_WORDS: Array[String] = ["cow", "calf", "altar", "peacock", "garland", "kirtan"]
 const ATLAS_PATH := "res://assets/sprites/krsna_words.png"
 
 
@@ -37,11 +39,11 @@ static func display_word(original_word: String) -> String:
 	return REPLACEMENTS.get(original_word.to_lower(), original_word.to_lower())
 
 
-static func load_picture(word: String) -> Texture2D:
+static func load_picture(word: String, frame: int = 0) -> Texture2D:
 	var index := PICTURE_WORDS.find(word.to_lower())
 	if index < 0 or not ResourceLoader.exists(ATLAS_PATH):
 		return null
 	var texture := AtlasTexture.new()
 	texture.atlas = load(ATLAS_PATH)
-	texture.region = Rect2(index * PICTURE_SIZE, 0, PICTURE_SIZE, PICTURE_SIZE)
+	texture.region = Rect2((index * FRAME_COUNT + posmod(frame, FRAME_COUNT)) * PICTURE_SIZE, 0, PICTURE_SIZE, PICTURE_SIZE)
 	return texture

@@ -3,6 +3,7 @@ extends SceneTree
 ## The .pxo file is the editable source after this script has been run once.
 
 const WORDS = preload("res://scripts/game/krsna_vocabulary.gd").PICTURE_WORDS
+const FRAME_COUNT := 2
 const SIZE := 24
 const ATLAS_PATH := "res://assets/sprites/krsna_words.png"
 const SOURCE_PATH := "res://tools/art/pixelorama/krsna-words.pxo"
@@ -14,10 +15,12 @@ var black := Color8(0, 0, 0)
 func _initialize() -> void:
 	var images: Array[Image] = []
 	for word in WORDS:
-		var image := Image.create(SIZE, SIZE, false, Image.FORMAT_RGBA8)
-		image.fill(black)
-		preload("res://tools/art/pixelorama/krsna_pixels.gd").draw_picture(word, image)
-		images.append(image)
+		for frame in range(FRAME_COUNT):
+			var image := Image.create(SIZE, SIZE, false, Image.FORMAT_RGBA8)
+			if not preload("res://tools/art/pixelorama/krsna_pixels.gd").draw_picture(word, image, frame):
+				quit(1)
+				return
+			images.append(image)
 
 	var atlas := Image.create(SIZE * images.size(), SIZE, false, Image.FORMAT_RGBA8)
 	atlas.fill(black)
@@ -30,34 +33,40 @@ func _initialize() -> void:
 		quit(1)
 		return
 
-	var preview_height := ceili(images.size() / 4.0) * 48
-	var preview := Image.create(288, preview_height, false, Image.FORMAT_RGBA8)
-	preview.fill(Color("121722"))
-	for i in range(images.size()):
-		var origin := Vector2i((i % 4) * 72, (i / 4) * 48)
-		preview.blit_rect(images[i], Rect2i(0, 0, 24, 24), origin + Vector2i(24, 5))
-		preload("res://scripts/core/wr1_text.gd").draw(preview, WORDS[i], origin + Vector2i(36 - WORDS[i].length() * 4, 34), Color("e6e4df"), Color("121722"))
-	preview.resize(1152, preview_height * 4, Image.INTERPOLATE_NEAREST)
-	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(PREVIEW_PATH.get_base_dir()))
-	preview.save_png(PREVIEW_PATH)
-	var cow_preview := images[WORDS.find("cow")].duplicate()
+	for frame in range(FRAME_COUNT):
+		_write_preview(images, frame)
+	var cow_preview := images[WORDS.find("cow") * FRAME_COUNT].duplicate()
 	cow_preview.resize(192, 192, Image.INTERPOLATE_NEAREST)
 	cow_preview.save_png(PREVIEW_PATH.get_base_dir() + "/cow-preview.png")
 	if not _write_pixelorama_project(images):
 		quit(1)
 		return
-	print("Wrote %s, %s and %s" % [ATLAS_PATH, SOURCE_PATH, PREVIEW_PATH])
+	print("Wrote %s, %s and both preview frames" % [ATLAS_PATH, SOURCE_PATH])
 	quit()
+
+
+func _write_preview(images: Array[Image], frame: int) -> void:
+	var preview_height := ceili(WORDS.size() / 4.0) * 48
+	var preview := Image.create(288, preview_height, false, Image.FORMAT_RGBA8)
+	preview.fill(Color("121722"))
+	for i in range(WORDS.size()):
+		var origin := Vector2i((i % 4) * 72, (i / 4) * 48)
+		preview.blit_rect(images[i * FRAME_COUNT + frame], Rect2i(0, 0, 24, 24), origin + Vector2i(24, 5))
+		preload("res://scripts/core/wr1_text.gd").draw(preview, WORDS[i], origin + Vector2i(36 - WORDS[i].length() * 4, 34), Color("e6e4df"), Color("121722"))
+	preview.resize(1152, preview_height * 4, Image.INTERPOLATE_NEAREST)
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(PREVIEW_PATH.get_base_dir()))
+	preview.save_png(PREVIEW_PATH if frame == 0 else PREVIEW_PATH.replace(".png", "-2.png"))
 
 
 func _new_project_data() -> Dictionary:
 	var frames: Array[Dictionary] = []
 	for word in WORDS:
-		frames.append({
-			"cels": [{"metadata": {"word": word}, "opacity": 1.0, "ui_color": "(0.0, 0.0, 0.0, 0.0)", "z_index": 0}],
-			"duration": 1.0,
-			"metadata": {"word": word},
-		})
+		for frame in range(FRAME_COUNT):
+			frames.append({
+				"cels": [{"metadata": {"word": word, "animation_frame": frame}, "opacity": 1.0, "ui_color": "(0.0, 0.0, 0.0, 0.0)", "z_index": 0}],
+				"duration": 1.0,
+				"metadata": {"word": word, "animation_frame": frame},
+			})
 	return {
 		"author_company": "",
 		"author_contact": "",
@@ -74,11 +83,11 @@ func _new_project_data() -> Dictionary:
 			"file_format": "0", "file_name": "\"krsna_words\"", "frame_current_tag": "0",
 			"include_tag_in_filename": "false", "interpolation": "0", "lines_count": "1",
 			"new_dir_for_each_frame_tag": "false", "number_of_digits": "4",
-			"number_of_frames": str(WORDS.size()), "orientation": "0", "repeat_count": "0",
+			"number_of_frames": str(WORDS.size() * FRAME_COUNT), "orientation": "0", "repeat_count": "0",
 			"resize": "100", "save_quality": "0.75", "separator_character": "\"_\"",
 			"sheet_layers_as_separate_files": "false", "split_layers": "false",
 		},
-		"fps": 6.0,
+		"fps": 1.5,
 		"frames": frames,
 		"guides": [],
 		"layers": [{
@@ -89,7 +98,7 @@ func _new_project_data() -> Dictionary:
 			"ui_color": "(0.0, 0.0, 0.0, 0.0)", "visible": true,
 		}],
 		"license": "",
-		"metadata": {"frame_order": WORDS},
+		"metadata": {"frame_order": WORDS, "frames_per_word": FRAME_COUNT},
 		"next_keyframe_id": 0,
 		"palettes": [],
 		"pixelorama_version": "v1.2.2-stable",
@@ -105,7 +114,7 @@ func _new_project_data() -> Dictionary:
 		"tile_mode_y_basis_x": 0,
 		"tile_mode_y_basis_y": SIZE,
 		"tilesets": [],
-		"user_data": "Frame order: %s" % ", ".join(WORDS),
+		"user_data": "Two adjacent frames per word: %s" % ", ".join(WORDS),
 		"vanishing_points": [],
 	}
 

@@ -1,6 +1,17 @@
 extends RefCounted
 ## Pixel-cluster sketches used to seed the editable desktop Pixelorama source.
-## One character is one pixel; dots are the black card background.
+## One character is one pixel; dots reveal the coloured card background.
+## Preserve the approved silhouettes; only three full-height portraits and
+## two full-width objects lose a redundant row/column to fit WR1's 21px inset.
+const BACKGROUNDS := {
+	"cow": "587da2", "calf": "a25c60", "milk": "78618f",
+	"gopi": "95556f", "flute": "547c83", "radha": "527d87",
+	"lotus": "4f7f9b", "krsna": "95616b", "butter": "697aa0",
+	"altar": "6d5c88", "peacock": "b17a61", "garland": "607f92",
+	"boy": "647d9e", "conch": "61759a", "beads": "657d8c",
+	"tulsi": "a17b99", "pot": "597e8a", "crown": "825f8a",
+	"kirtan": "65838a",
+}
 const PALETTE := {
 	".": "000000", "K": "282432", "H": "302735", "h": "574052",
 	"W": "fff7e8", "w": "d4dfdf", "s": "94adb9", "S": "577e94",
@@ -473,10 +484,120 @@ otnnno..........oTTtno
 """,
 }
 
-static func draw_picture(word: String, image: Image) -> void:
-	var rows: PackedStringArray = str(PATTERNS[word]).strip_edges().split("\n")
-	assert(rows.size() == 22, "%s: expected 22 rows" % word)
+static func _picture_rows(word: String, frame: int) -> PackedStringArray:
+	var rows: PackedStringArray = str(PATTERNS[word]).replace("\r", "").strip_edges().split("\n")
+	if rows.size() != 22:
+		push_error("%s: expected 22 rows" % word)
+		return PackedStringArray()
 	for y in range(rows.size()):
-		assert(rows[y].length() == 22, "%s row %d: expected 22 pixels, got %d" % [word, y, rows[y].length()])
+		if rows[y].length() != 22:
+			push_error("%s row %d: expected 22 pixels, got %d" % [word, y, rows[y].length()])
+			return PackedStringArray()
+	if frame == 1:
+		_animate(word, rows)
+	# These are deliberate removals of redundant pixels, not scaled artwork.
+	if word in ["gopi", "radha", "krsna"]:
+		rows.remove_at({"gopi": 4, "radha": 18, "krsna": 20}[word])
+	if word in ["conch", "beads"]:
+		var column: int = 11 if word == "conch" else 8
+		for y in range(rows.size()):
+			rows[y] = rows[y].substr(0, column) + rows[y].substr(column + 1)
+	return rows
+
+
+static func draw_picture(word: String, image: Image, frame: int = 0) -> bool:
+	var phases := [_picture_rows(word, 0), _picture_rows(word, 1)]
+	if phases[0].is_empty() or phases[1].is_empty():
+		return false
+	var rows: PackedStringArray = phases[frame]
+	var left := 22
+	var right := 0
+	var top := 22
+	var bottom := 0
+	var ink_sum := Vector2.ZERO
+	var ink_count := 0
+	# Centre the entire animation envelope within the COLOURED area, not the
+	# 24px page. Both phases share this anchor, including the calf's tail swing.
+	for bounds_rows: PackedStringArray in phases:
+		for y in range(bounds_rows.size()):
+			for x in range(bounds_rows[y].length()):
+				if bounds_rows[y][x] != ".":
+					left = mini(left, x)
+					right = maxi(right, x)
+					top = mini(top, y)
+					bottom = maxi(bottom, y)
+					ink_sum += Vector2(x, y)
+					ink_count += 1
+	if right - left >= 21 or bottom - top >= 21:
+		push_error("%s does not fit card inset" % word)
+		return false
+	var ink_centre := ink_sum / ink_count
+	var offset := Vector2i(
+		_centred_offset(2, 21, left, right, ink_centre.x),
+		_centred_offset(1, 21, top, bottom, ink_centre.y))
+	image.fill(Color.BLACK)
+	image.fill_rect(Rect2i(2, 1, 21, 21), Color(BACKGROUNDS[word]))
+	for y in range(rows.size()):
 		for x in range(rows[y].length()):
-			image.set_pixel(x + 1, y + 1, Color(PALETTE[rows[y][x]]))
+			if rows[y][x] == ".":
+				continue
+			var destination := Vector2i(x, y) + offset
+			if not Rect2i(2, 1, 21, 21).has_point(destination):
+				push_error("%s pixel crosses card border" % word)
+				return false
+			image.set_pixelv(destination, Color(PALETTE[rows[y][x]]))
+	return true
+
+
+static func _centred_offset(start: int, size: int, first: int, last: int, ink_centre: float) -> int:
+	var panel_centre := start + (size - 1) / 2.0
+	var ideal := panel_centre - (first + last) / 2.0
+	var low := floori(ideal)
+	var high := ceili(ideal)
+	# An even-width drawing cannot have equal integer margins in a 21px panel.
+	# Pick the nearest whole-pixel placement by visible ink balance instead of
+	# always rounding left/up. No resampling, half-pixels or altered silhouettes.
+	if absf(ink_centre + high - panel_centre) < absf(ink_centre + low - panel_centre):
+		return high
+	return low
+
+
+static func _set_pixel(rows: PackedStringArray, x: int, y: int, colour: String) -> void:
+	var row := rows[y]
+	row[x] = colour
+	rows[y] = row
+
+
+static func _animate(word: String, rows: PackedStringArray) -> void:
+	match word:
+		"cow":
+			# Close each eye to a two-pixel lid without moving the face.
+			for x in range(21):
+				if rows[9][x] == "K":
+					_set_pixel(rows, x, 9, "H")
+					_set_pixel(rows, x + 1, 9, "H")
+		"calf":
+			_set_pixel(rows, 2, 15, ".")
+			_set_pixel(rows, 2, 16, ".")
+			_set_pixel(rows, 1, 15, "w")
+			_set_pixel(rows, 1, 16, "s")
+		"altar":
+			_set_pixel(rows, 3, 9, ".")
+			_set_pixel(rows, 2, 9, "Y")
+			_set_pixel(rows, 18, 9, ".")
+			_set_pixel(rows, 19, 9, "Y")
+			_set_pixel(rows, 3, 10, "Y")
+			_set_pixel(rows, 18, 10, "Y")
+		"peacock":
+			# Light catches the eye-spots; head and straight neck stay untouched.
+			for y in [4, 7, 11]:
+				for x in range(14):
+					if rows[y][x] == "C":
+						_set_pixel(rows, x, y, "Y")
+		"garland":
+			for y in range(9, 20):
+				rows[y] = "." + rows[y].substr(0, 21)
+		"kirtan":
+			# Small upper-body sway over planted feet, not a bouncing whole card.
+			for y in range(17):
+				rows[y] = "." + rows[y].substr(0, 21)

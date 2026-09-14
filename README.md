@@ -51,6 +51,9 @@ the original word lengths except the deliberately shorter teepee → tulsi;
 the mystery uses five letter pickups. Legacy retains the recovered WR1 vocabulary and art.
 The editable Pixelorama source and export instructions live in
 `tools/art/pixelorama/`.
+The pictures use coloured backgrounds and the original black card border.
+Cow, calf, altar, peacock, garland and kirtan have subtle two-frame animations;
+the other custom pictures remain static.
 
 ## Running
 

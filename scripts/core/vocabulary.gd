@@ -17,7 +17,7 @@ static func display_words(original_words: Array) -> Array[String]:
 
 static func load_picture(word: String, frame: int = 0) -> Texture2D:
 	if not LaunchArgs.legacy():
-		var custom: Texture2D = load("res://scripts/game/krsna_vocabulary.gd").load_picture(display_word(word))
+		var custom: Texture2D = load("res://scripts/game/krsna_vocabulary.gd").load_picture(display_word(word), frame)
 		if custom != null:
 			return custom
 	return preload("res://scripts/core/wr1_pictures.gd").load_picture(word, frame)

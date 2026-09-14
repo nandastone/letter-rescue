@@ -57,6 +57,9 @@ func _check_level(game, originals: Array) -> bool:
 		for frame in range(2):
 			if not _same(block.original_picture_frames[frame].get_image(), Vocabulary.load_picture(expected_picture, frame).get_image()):
 				failures.append("wrong card picture: " + expected_picture)
+			block.set_original_picture_frame(frame)
+			if not _same(block.get_node("PictureSprite").texture.get_image(), Vocabulary.load_picture(expected_picture, frame).get_image()):
+				failures.append("card did not display animation frame: " + expected_picture)
 	if game.original_letters.word not in displayed:
 		failures.append("mystery word was not translated")
 	var help := Image.create(320, 200, false, Image.FORMAT_RGBA8)
@@ -66,9 +69,10 @@ func _check_level(game, originals: Array) -> bool:
 		var expected: Image = Vocabulary.load_picture(displayed[i]).get_image()
 		if not _same(help.get_region(Rect2i(287, 7 + i * 26, 24, 24)), expected):
 			failures.append("wrong help picture: " + displayed[i])
-		game.hud.add_matched_word(displayed[i], i)
-		if not _same(game.hud.original_top.get_region(Rect2i(144 + 23 * i, 5, 24, 24)), expected):
-			failures.append("wrong matched HUD picture: " + displayed[i])
+		for frame in range(2):
+			game.hud.add_matched_word(displayed[i], i, frame)
+			if not _same(game.hud.original_top.get_region(Rect2i(144 + 23 * i, 5, 24, 24)), Vocabulary.load_picture(displayed[i], frame).get_image()):
+				failures.append("wrong matched HUD picture frame: " + displayed[i])
 	var frontend = load("res://scripts/core/wr1_frontend.gd").new()
 	game.add_child(frontend)
 	frontend.game = game
