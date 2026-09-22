@@ -3,7 +3,7 @@ extends RefCounted
 ## Some decoded files omit a final border column/row; the page starts black.
 
 static func load_picture(word: String, frame: int = 0) -> Texture2D:
-	var path := "res://assets/extracted/wr1_2_png/%s%s.WR1.png" % [word.to_upper(), "2" if frame == 1 else ""]
+	var path := Episode.picture(word, frame)
 	if frame == 1 and not ResourceLoader.exists(path):
 		return load_picture(word, 0) # 62fe..6337 copies frame0 when WORD2 is absent.
 	if not ResourceLoader.exists(path):

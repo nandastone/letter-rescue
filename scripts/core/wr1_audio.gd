@@ -27,8 +27,13 @@ func _ready() -> void:
 	# Web builds always use the compressed copies: Cloudflare Pages rejects files
 	# over 25 MiB, and the raw renders alone are 55 MB. Desktop and the parity
 	# suite keep the raw renders.
-	directory = OGG_DIRECTORY if OS.has_feature("web") or not LaunchArgs.legacy() else DIRECTORY
+	directory = OGG_DIRECTORY if OS.has_feature("web") or not LaunchArgs.legacy() or Episode.current != 1 else DIRECTORY
 	manifest = JSON.parse_string(FileAccess.get_file_as_string(directory + "manifest.json"))
+	if Episode.current != 1:
+		var shared: Dictionary = manifest.music.duplicate(true)
+		for key in Episode.manifest().music_tracks:
+			var track_source = Episode.manifest().music_tracks[key]
+			manifest.music[key] = null if track_source == null else shared[str(int(track_source))]
 	add_child(music)
 	add_child(speaker)
 	# DOSBox adlib.cpp channel scale is 1.5; the speaker mixer uses unity.
@@ -41,6 +46,8 @@ func _ready() -> void:
 		enabled = false
 
 func _stream(filename: String) -> AudioStream:
+	if filename.begins_with("res://"):
+		return load(filename)
 	if directory == DIRECTORY:
 		return AudioStreamWAV.load_from_buffer(FileAccess.get_file_as_bytes(directory + filename))
 	return load(directory + filename)
@@ -51,6 +58,10 @@ func level(level_number: int) -> void:
 		return # Cached death loads leave the current song playing.
 	track = selected
 	if not enabled:
+		return
+	if manifest.music[str(track)] == null:
+		music.stop()
+		_event({"kind":"music_unavailable", "track":track})
 		return
 	if not tracks.has(track):
 		var info: Dictionary = manifest.music[str(track)]

@@ -15,12 +15,15 @@ static func load_player(player_name: String) -> Dictionary:
 	var name := normalized_name(player_name)
 	if name.is_empty():
 		return {}
-	for extension in [".wr1", ".wr2", ".wr3"]:
+	var extensions := [Episode.save_extension()]
+	for other in [".wr1", ".wr2", ".wr3"]:
+		if other not in extensions: extensions.append(other)
+	for extension in extensions:
 		var path: String = directory + name.to_lower() + extension
 		if FileAccess.file_exists(path):
-			var result := decode(FileAccess.get_file_as_bytes(path))
+			var result := decode(FileAccess.get_file_as_bytes(path), 15 if extension == ".wr1" else 20)
 			if not result.is_empty():
-				if extension != ".wr1":
+				if extension != Episode.save_extension():
 					var words := preload("res://scripts/core/wr1_words.gd").new()
 					words.next_words()
 					result.level = 1
@@ -30,12 +33,13 @@ static func load_player(player_name: String) -> Dictionary:
 				return result
 	return {}
 
-static func decode(bytes: PackedByteArray) -> Dictionary:
+static func decode(bytes: PackedByteArray, max_levels: int = -1) -> Dictionary:
+	if max_levels < 0: max_levels = Episode.level_count()
 	if bytes.size() < 25:
 		return {}
 	var result := {"level":bytes.decode_u16(0) + 1, "character":bytes.decode_u16(2),
 		"word_cursor":bytes.decode_u32(4), "score":bytes.decode_u32(8), "words":[]}
-	if result.level > 15 or result.character > 1:
+	if result.level > max_levels or result.character > 1:
 		return {}
 	var cursor := 12
 	for i in range(7):
@@ -90,13 +94,13 @@ static func save_player(player_name: String, profile: Dictionary) -> void:
 	if name.is_empty() or profile.get("words", []).size() != 7:
 		return
 	DirAccess.make_dir_recursive_absolute(directory)
-	var file := FileAccess.open(directory + name.to_lower() + ".wr1", FileAccess.WRITE)
+	var file := FileAccess.open(directory + name.to_lower() + Episode.save_extension(), FileAccess.WRITE)
 	if file != null:
 		file.store_buffer(encode(profile))
 
 static func high_scores() -> Array[Dictionary]:
 	var result: Array[Dictionary] = []
-	var bytes := FileAccess.get_file_as_bytes(directory + "high.wr1") if FileAccess.file_exists(directory + "high.wr1") else PackedByteArray()
+	var bytes := FileAccess.get_file_as_bytes(directory + "high" + Episode.save_extension()) if FileAccess.file_exists(directory + "high" + Episode.save_extension()) else PackedByteArray()
 	var cursor := 0
 	for i in range(10):
 		var start := cursor
@@ -140,6 +144,6 @@ static func update_high_score(player_name: String, score: int) -> void:
 		value.encode_u32(0, int(entry.score))
 		bytes.append_array(value)
 	DirAccess.make_dir_recursive_absolute(directory)
-	var file := FileAccess.open(directory + "high.wr1", FileAccess.WRITE)
+	var file := FileAccess.open(directory + "high" + Episode.save_extension(), FileAccess.WRITE)
 	if file != null:
 		file.store_buffer(bytes)

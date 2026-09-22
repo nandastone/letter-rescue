@@ -1,0 +1,85 @@
+{
+  "source_sha256": "6bd51a4c199bee7ebe18f8b6da040a9a1e4dd10ffcc9ed2e8367d28187329ab1",
+  "titles": [
+    {
+      "heading": "Level 1",
+      "name": "You enter the Cave"
+    },
+    {
+      "heading": "Level 2",
+      "name": "The Maze Cave"
+    },
+    {
+      "heading": "Level 3",
+      "name": "The Slime Cave"
+    },
+    {
+      "heading": "Level 4",
+      "name": "Gruzzlebad Cavern"
+    },
+    {
+      "heading": "Level 5",
+      "name": "The Miner's Cave"
+    },
+    {
+      "heading": "Level 6",
+      "name": "The Mushroom Cave"
+    },
+    {
+      "heading": "Level 7",
+      "name": "The Platform Cave"
+    },
+    {
+      "heading": "Level 8",
+      "name": "The Cave of Rubble"
+    },
+    {
+      "heading": "Level 9",
+      "name": "A Neighbor's Castle"
+    },
+    {
+      "heading": "Level 10",
+      "name": "The Tower Castle"
+    },
+    {
+      "heading": "Level 11",
+      "name": "The Slime Factory"
+    },
+    {
+      "heading": "Level 12",
+      "name": "Cooking in the Slime Factory"
+    },
+    {
+      "heading": "Level 13",
+      "name": "The Forest House"
+    },
+    {
+      "heading": "Level 14",
+      "name": "The Hill Houses"
+    },
+    {
+      "heading": "Level 15",
+      "name": "The Tree Houses"
+    },
+    {
+      "heading": "Level 16",
+      "name": "The Waterfalls"
+    },
+    {
+      "heading": "Level 17",
+      "name": "Table Rock Desert"
+    },
+    {
+      "heading": "Level 18",
+      "name": "Hole-in-the-Wall"
+    },
+    {
+      "heading": "Level 19",
+      "name": "New Mexico Pueblo"
+    },
+    {
+      "heading": "Level 20",
+      "name": "Flash Flood"
+    }
+  ]
+}

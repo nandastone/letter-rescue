@@ -6,6 +6,7 @@ const PALETTE := [Color8(0,0,0),Color8(0,0,170),Color8(0,170,0),Color8(0,170,170
 	Color8(85,85,85),Color8(85,85,255),Color8(85,255,85),Color8(85,255,255),
 	Color8(255,85,85),Color8(255,85,255),Color8(255,255,85),Color8(255,255,255)]
 static var data: Dictionary = {}
+static var content_episode: int = 0
 static var assets: Dictionary = {}
 static var reading := false
 static var reading_runs: Array = []
@@ -29,14 +30,19 @@ static func display_asset(name: String) -> Image:
 	return preload("res://scripts/core/wr1_clear_artwork.gd").background(source, name) if reading else source
 
 static func metadata() -> Dictionary:
+	if content_episode != Episode.current:
+		content_episode = Episode.current
+		data.clear()
+		assets.clear()
 	if data.is_empty():
-		data = JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/frontend.json"))
+		data = JSON.parse_string(FileAccess.get_file_as_string(Episode.data_path("frontend.json")))
 	return data
 
 static func asset(name: String) -> Image:
+	metadata() # Invalidate image caches when the episode changes.
 	name = name.to_upper()
 	if not assets.has(name):
-		var result: Image = (load("res://assets/extracted/wr1_1_png/" + name + ".png") as Texture2D).get_image()
+		var result: Image = (load(Episode.art(name)) as Texture2D).get_image()
 		result.convert(Image.FORMAT_RGBA8)
 		# PCX six-bit palette expansion in Pillow yields 87/171. The original
 		# EGA registers select exact 85/170 DAC values instead.

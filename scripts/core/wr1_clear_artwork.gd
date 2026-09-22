@@ -1,11 +1,16 @@
 extends RefCounted
 ## Prepare text-free source pictures once, before page composition. Cleanup
 ## coordinates describe original ink, never the replacement label's bounds.
-static var masks: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/clear_artwork.json"))
+static var masks: Dictionary = {}
+static var content_episode: int = 0
 static var backgrounds: Dictionary = {}
 
 static func background(source: Image, name: String) -> Image:
-	name = name.to_upper()
+	if content_episode != Episode.current:
+		content_episode = Episode.current
+		masks = JSON.parse_string(FileAccess.get_file_as_string(Episode.data_path("clear_artwork.json")))
+		backgrounds.clear()
+	name = name.to_upper().replace("WR1.", "WR%d." % Episode.current)
 	if backgrounds.has(name): return backgrounds[name]
 	var clean := source.duplicate()
 	if name == "WR1.21":

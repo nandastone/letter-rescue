@@ -1,0 +1,82 @@
+{
+  "episode": 2,
+  "level_count": 20,
+  "source_exe_sha256": "6bd51a4c199bee7ebe18f8b6da040a9a1e4dd10ffcc9ed2e8367d28187329ab1",
+  "sources": {
+    "wr2.1": "a8444429ffe489e3bf88a0e65350994d55bde705b8c39347783f5a46a81a0c86",
+    "wr2.2": "c9be82445d6434e91892a9d83a6d0b8ad200ddbbc0a0c589690694b6e3d5c844",
+    "wr2.s0": "ae6cc10aad7f6d43c277f08f63868c867e252a0887c6317bf704f536feaacba6",
+    "wr2.s1": "a930df5ae9dfd8bdbad7011d2f5aaeadd38c15b5256a6f2ddd4d60c49f614726",
+    "wr2.s2": "3779be946d71871cd747b9c62d2b3deca2b4264e9f13b7537433f71afc78dfc3",
+    "wr2.s3": "afaf09cd8642c9250697f288a5add0c348fe00d6b06a44384ad4cb07c95b8472",
+    "wr2.s4": "a75e2d2041674f78407dda22bed773435744b4602c294d84a738fd912629fd85",
+    "wr2.s5": "345e7d230121b1f4f9aa90f69b481ff9e696477a0c4d7122bd8f36f9a5bbdd6b",
+    "wr2.s6": "3bebe4a5315054c0b30918aae24c09f734280ba7561db098d30f198eccdee2e5",
+    "wr2.s7": "a7b9688adaa7f86a4fd708da6108afffa39341bd42667aa2b11575767acc5d1e",
+    "wr2.s8": "6ebf9ffeef2856d19ea9b64d8a281df02222e3a84d24db3e451a69e94fa827b6",
+    "wr2.s9": "e937b3cdc4abe19c9e89ba9c81ff3e0d67973c0aa5f062c3124e2da13c1258cf",
+    "wr2.s10": "4f04fe22df0f8e1fe7aef8c8ed85ec7d2cbd6cc1e15ec1e991f8ba9f44dae125",
+    "wr2.s11": "8cc00e0c80ce1409c72c364824da5e7aa899a8c3c2329f18b0bc90fb9575445c",
+    "wr2.s12": "709ddb93a2eb2a726a85a3b2e7f0a865f6fe990c661543995c8ce6f207894be6",
+    "wr2.s13": "d3f52b71f18d939e14e8ede1a35607ffca7c673e0cddf5a5be67b8abed876923",
+    "wr2.s14": "958dfa4aabf44684a299274d3633d96f34e965420b23ff9e6d1e2f849fec3e81",
+    "wr2.s15": "9781629621e1d13a4b2719e8132233db0093652fbb6c533467da8540ff4685d6",
+    "wr2.s16": "19dd3333bdc68fd2839353501b224e320730c8812ccbcdad87fc660ce0e0443e",
+    "wr2.s17": "d5cdaf337305cf1c3d9a60862d02ec7de30a4f8f3d36c97fa02d08bdf82df823",
+    "wr2.s18": "f0160993f24e1c9ebcc402fc07152c9306353ba9311dd31d7b258b1d7b292496",
+    "wr2.s19": "85d4f807fb2bd0b72b8dbef42d8a5ede11b7a79ba7e2c70185de6c4405f171ff",
+    "wr2.5": "0acabe9727b784fc7b4b5e17b7ae1a82640b142e6bb94a112714cf34b9f933be"
+  },
+  "sprites": [
+    "wr1_gruzzle_0",
+    "wr1_gruzzle_1",
+    "wr1_gruzzle_2",
+    "wr1_gruzzle_3",
+    "wr1_gruzzle_4",
+    "wr1_gruzzle_5",
+    "wr1_gruzzle_6",
+    "wr1_gruzzle_7",
+    "wr1_gruzzle_8",
+    "wr1_gruzzle_9",
+    "wr1_gruzzle_10",
+    "wr1_gruzzle_11",
+    "wr1_gruzzle_12",
+    "wr1_gruzzle_13",
+    "wr1_gruzzle_14",
+    "wr1_gruzzle_15",
+    "wr1_boy",
+    "wr1_girl",
+    "spawn_doorway",
+    "wr1_rescue_down"
+  ],
+  "map_edge_markers": [
+    {
+      "level": 2,
+      "ignored_draw_location": {
+        "index": 0,
+        "pos_px": [
+          536,
+          440
+        ]
+      }
+    },
+    {
+      "level": 3,
+      "ignored_draw_location": {
+        "index": 0,
+        "pos_px": [
+          936,
+          536
+        ]
+      }
+    }
+  ],
+  "music_tracks": {
+    "4": 5,
+    "5": null,
+    "6": 4
+  },
+  "unavailable_music": {
+    "5": "Supplied wr2.5 lacks the CTMF header and is rejected by the original executable. This slot is silent."
+  }
+}

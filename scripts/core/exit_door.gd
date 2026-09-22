@@ -11,7 +11,7 @@ func update_visual() -> void:
 	var option := args.find("--character")
 	var boy: bool = option >= 0 and option + 1 < args.size() and args[option + 1] == "boy"
 	var atlas := AtlasTexture.new()
-	atlas.atlas = preload("res://assets/extracted/wr1_1_png/STATIC.WR.png")
+	atlas.atlas = load(Episode.art("STATIC.WR"))
 	atlas.region = Rect2(16 + 32 * original_frame, 33 if boy else 73, 32, 40)
 	$Sprite2D.texture = atlas
 	$Sprite2D.centered = false

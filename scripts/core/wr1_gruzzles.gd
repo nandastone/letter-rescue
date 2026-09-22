@@ -92,6 +92,19 @@ func configure(positions: Array, mode: int, initial: Dictionary = {}) -> void:
 			timers[i] = int(actors[i].move_timer)
 			actors[i].erase("move_timer")
 
+func start_content_demo(positions: Array) -> Dictionary:
+	# Registered demo entry: srand(200), Hard, fixed word/picture rotations
+	# and mystery index. The reset assigns all ten actor types, even inactive.
+	_reset(2)
+	demo_mode = true
+	rng = 200
+	for i in range(10):
+		var kind := random_word() % 4
+		if i < positions.size():
+			actors.append(_actor(int(positions[i][0]), int(positions[i][1]), kind, -1))
+	inactive_actors = actors.duplicate(true)
+	return {"word_offset":3, "picture_offset":2, "mystery_index":2, "actors":self}
+
 func present_checkpoint(p: RefCounted) -> void:
 	# Completed native state stores the animation index for the NEXT render.
 	# Drawing this initial frame must not advance the simulation or video page.

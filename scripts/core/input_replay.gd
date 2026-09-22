@@ -54,6 +54,8 @@ var demo_inputs: Array = [] # Original .D file controls, not observed outcomes.
 var demo_input_offset: int = 0
 var demo_sha256: String = ""
 var demo_mode: bool = false
+var content_demo: bool = false # Source-derived demo entry; no hardware checkpoint.
+var content_demo_start: Dictionary = {}
 
 # Auto-start: skip menu and jump straight into the game.
 var auto_start_level: int = -1
@@ -144,6 +146,13 @@ func _start_replay(path: String = "") -> void:
 		return
 
 	var data: Dictionary = json.data
+	var episode_number := int(data.get("episode", 1))
+	if episode_number < 1 or episode_number > 3:
+		push_error("Replay episode must be 1, 2 or 3")
+		get_tree().quit(1)
+		return
+	Episode.select(episode_number)
+	content_demo = bool(data.get("content_demo", false))
 	demo_inputs = data.get("original_demo_inputs", [])
 	demo_mode = not demo_inputs.is_empty()
 	demo_input_offset = int(data.get("demo_input_offset", 0))
@@ -231,6 +240,10 @@ func _start_replay(path: String = "") -> void:
 
 	# Configure game state to match the recording.
 	auto_start_level = data.get("level", 1)
+	if auto_start_level < 1 or auto_start_level > Episode.level_count():
+		push_error("Replay level is outside its episode")
+		get_tree().quit(1)
+		return
 	auto_start_difficulty = data.get("difficulty", 0)
 	GameManager.original_speed_ticks = clampi(int(data.get("original_speed_ticks",8)),0,65535)
 	GameManager.original_pending_profile = data.get("original_profile_start",{})
@@ -338,7 +351,7 @@ func _physics_process(_delta: float) -> void:
 func _record_frame() -> void:
 	if recording_start.is_empty():
 		# Save the starting level even if this recording later crosses an exit.
-		recording_start = {"level": GameManager.current_level,
+		recording_start = {"episode": Episode.current, "level": GameManager.current_level,
 			"difficulty": GameManager.current_difficulty, "character": replay_character}
 		var recorded_player := get_tree().current_scene.get_node_or_null("Player")
 		if recorded_player != null:
@@ -435,6 +448,7 @@ func _notification(what: int) -> void:
 func save_recording() -> void:
 	var data := {
 		"fps": Engine.physics_ticks_per_second,
+		"episode": recording_start.get("episode", Episode.current),
 		"level": recording_start.get("level", GameManager.current_level),
 		"difficulty": recording_start.get("difficulty", GameManager.current_difficulty),
 		"character": recording_start.get("character", replay_character),

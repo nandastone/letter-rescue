@@ -8,7 +8,7 @@ var remaining := 0.0
 var waiting := false
 
 static func render(level: int) -> Image:
-	var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/level_titles.json"))
+	var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(Episode.data_path("level_titles.json")))
 	assert(level >= 1 and level <= data.titles.size())
 	var title: Dictionary = data.titles[level - 1]
 	var result := Image.create(320, 200, false, Image.FORMAT_RGBA8)
@@ -30,7 +30,7 @@ func configure(level: int) -> void:
 	sprite.texture = ImageTexture.create_from_image(render(level))
 	add_child(sprite)
 	if preload("res://scripts/core/wr1_clear_text.gd").enabled():
-		var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/level_titles.json"))
+		var data: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(Episode.data_path("level_titles.json")))
 		var title: Dictionary = data.titles[level - 1]
 		var clean := render(level)
 		clean.fill_rect(Rect2i(41,59,238,25), Color8(85,255,255))

@@ -5,7 +5,7 @@ class_name LaunchArgs
 # The default is the new game, which always uses Clear Text. `--legacy` runs the
 # pixel-exact original; add `--clear-text` there for readable text.
 # Web builds have no command line, so they read ?legacy, ?pixel-text,
-# ?skip-intro and ?mute-original-audio from the page URL.
+# ?skip-intro, ?mute-original-audio and ?episode=1/2/3 from the page URL.
 
 const WEB_FLAGS := ["legacy", "skip-intro", "mute-original-audio", "aspect-43"]
 
@@ -34,6 +34,9 @@ static func _read() -> PackedStringArray:
 		args.append("--legacy")
 	var pixel_text := "--legacy" in args
 	if OS.has_feature("web"):
+		var episode := str(JavaScriptBridge.eval("new URLSearchParams(location.search).get('episode') || ''"))
+		if episode in ["1", "2", "3"]:
+			args.append_array(["--episode", episode])
 		var keys := str(JavaScriptBridge.eval("[...new URLSearchParams(location.search).keys()].join(' ')")).split(" ")
 		for flag in WEB_FLAGS:
 			if flag in keys:

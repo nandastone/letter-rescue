@@ -100,7 +100,7 @@ func _process(delta: float) -> void:
 	elif state == "demo_story" and timer >= 10.0:
 		index += 1
 		timer = 0.0
-		if index >= 5: launch_next_demo()
+		if index >= Render.metadata().story.screens.size(): launch_next_demo()
 		else: redraw()
 
 func advance_startup() -> void:
@@ -195,10 +195,10 @@ func press(key: int, unicode: int = 0) -> void:
 			open("menu" if key == KEY_ESCAPE else "instructions")
 		"story":
 			index += 1
-			if key == KEY_ESCAPE or index >= 5: open("menu")
+			if key == KEY_ESCAPE or index >= Render.metadata().story.screens.size(): open("menu")
 		"ending":
 			index += 1
-			if index >= 3:
+			if index >= Render.metadata().ending.screens.size():
 				Profiles.update_high_score(GameManager.original_player_name,GameManager.score)
 				GameManager.current_level = 1
 				GameManager.score = 0
@@ -206,7 +206,7 @@ func press(key: int, unicode: int = 0) -> void:
 					game.original_words.next_words(game.original_gruzzles.random_word)
 					game.save_original_profile()
 				GameManager.original_pending_profile = Profiles.load_player(GameManager.original_player_name)
-				open("ordering")
+				open("ordering" if Episode.current == 1 else "menu")
 		"high_scores": open("menu")
 		"help", "words": resume_game()
 		"joystick":
@@ -276,7 +276,7 @@ func accept_name() -> void:
 	else: open("resume" if first_player else "menu")
 
 func resume_game() -> void:
-	if game != null and not game.has_meta("frontend_replaced") and GameManager.current_level <= 15 and game.original_door_state != 2:
+	if game != null and not game.has_meta("frontend_replaced") and GameManager.current_level <= Episode.level_count() and game.original_door_state != 2:
 		game.process_mode = old_process_mode
 		game.replay_ready = was_ready
 		queue_free()
@@ -393,7 +393,8 @@ func begin_demos() -> void:
 			var value = InputReplay.get(property.name)
 			demo_backup[property.name] = value.duplicate(true) if value is Array or value is Dictionary else value
 	session_backup = {"level":GameManager.current_level,"difficulty":GameManager.current_difficulty,"score":GameManager.score,
-		"speed":GameManager.original_speed_ticks,"profile":GameManager.original_pending_profile.duplicate(true)}
+		"speed":GameManager.original_speed_ticks,"profile":GameManager.original_pending_profile.duplicate(true),
+		"physics_rate":Engine.physics_ticks_per_second}
 	if AudioManager.original != null:
 		session_backup.music_position = AudioManager.original.music.get_playback_position()
 	GameManager.original_demo_host = self
@@ -428,8 +429,14 @@ func launch_next_demo() -> void:
 	set_process(false)
 	state = "demo"
 	set_art_visible(false)
-	var level: int = int(Render.metadata().demo_order[demo_index % 15])
-	InputReplay._start_replay("res://data/wr1/demos/level%d.json" % level)
+	var order: Array = Render.metadata().demo_order
+	var level: int = int(order[demo_index % order.size()])
+	if Episode.current != 1:
+		if game != null and game.original_words != null:
+			InputReplay.content_demo_start = {"words":game.original_words.words.duplicate(), "word_cursor":game.original_words.offset}
+		elif not session_backup.profile.is_empty():
+			InputReplay.content_demo_start = {"words":session_backup.profile.words.duplicate(), "word_cursor":session_backup.profile.word_cursor}
+	InputReplay._start_replay(Episode.data_path("demos/level%d.json" % level))
 	demo_index += 1
 
 func launch_demo_game() -> void:
@@ -452,6 +459,7 @@ func finish_demos() -> void:
 	GameManager.score = session_backup.score
 	GameManager.original_speed_ticks = session_backup.speed
 	GameManager.original_pending_profile = session_backup.profile
+	Engine.physics_ticks_per_second = session_backup.physics_rate
 	get_tree().current_scene = game if game != null else get_parent()
 	if game != null:
 		game.show()

@@ -1,9 +1,14 @@
 extends RefCounted
 ## Text layout is independent of the clean source artwork. These rectangles
 ## position transparent labels; they never paint into a picture.
-static var pages: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/clear_text_pages.json"))
+static var pages: Dictionary = {}
+static var content_episode: int = 0
 
 static func labels(name: String, offset: Vector2i) -> Array:
+	if content_episode != Episode.current:
+		content_episode = Episode.current
+		pages = JSON.parse_string(FileAccess.get_file_as_string(Episode.data_path("clear_text_pages.json")))
+	name = name.to_upper().replace("WR1.", "WR%d." % Episode.current)
 	var runs: Array = []
 	for entry in pages.get(name.to_upper(), []):
 		var r: Array = entry.rect

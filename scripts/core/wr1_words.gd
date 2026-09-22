@@ -5,7 +5,7 @@ var offset: int = 0
 var words: Array[String] = []
 
 func _init() -> void:
-	text = JSON.parse_string(FileAccess.get_file_as_string("res://data/wr1/word_list.json")).text
+	text = JSON.parse_string(FileAccess.get_file_as_string(Episode.data_path("word_list.json"))).text
 
 func next_words(random_word: Callable = Callable()) -> void:
 	var skip := 0

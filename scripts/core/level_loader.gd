@@ -16,4 +16,4 @@ static func load_level(path: String) -> Dictionary:
 	return json.data
 
 static func get_level_path(level_number: int) -> String:
-	return "res://data/levels/level_%02d.json" % level_number
+	return Episode.level_path(level_number)

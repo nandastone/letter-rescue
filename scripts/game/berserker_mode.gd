@@ -175,7 +175,7 @@ func present_player() -> void:
 		return
 	var armed := active and _ordinary()
 	var character: String = game.player.original_character
-	var texture: Texture2D = ART.player(character) if armed else load("res://assets/sprites/wr1_%s.png" % character)
+	var texture: Texture2D = ART.player(character) if armed else load(Episode.sprite("wr1_%s" % character))
 	if sprite.texture != texture:
 		sprite.texture = texture
 		sprite.hframes = ART.frame_count(character) if armed else 26
@@ -262,7 +262,7 @@ func _particle(texture: Texture2D, at: Vector2, velocity: Vector2, duration: flo
 	particles.append({"node":sprite, "velocity":velocity, "life":duration, "duration":duration, "gravity":gravity, "spin":spin, "bounce":bounce})
 
 func _explode(hit: Dictionary) -> void:
-	var texture: Texture2D = load("res://assets/sprites/wr1_gruzzle_%d.png" % (int(hit.type) * 4 + int(hit.frame)))
+	var texture: Texture2D = load(Episode.sprite("wr1_gruzzle_%d" % (int(hit.type) * 4 + int(hit.frame))))
 	var source := texture.get_image()
 	# Gibs retain the enemy's skin, eyes and teeth instead of generic sparks.
 	for y in range(0, source.get_height(), 6):

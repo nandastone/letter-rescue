@@ -77,7 +77,7 @@ func configure_original(data: Dictionary, restarting: bool = false, advancing: b
 		if character_arg >= 0 and character_arg + 1 < user_args.size() and user_args[character_arg + 1] in ["boy", "girl"]:
 			character = user_args[character_arg + 1]
 		original_character = character
-		original_sprite.texture = load("res://assets/sprites/wr1_%s.png" % character)
+		original_sprite.texture = load(Episode.sprite("wr1_%s" % character))
 		original_sprite.hframes = 26
 		original_sprite.position = Vector2(0, -16)
 		add_child(original_sprite)
@@ -256,7 +256,7 @@ func _present_rescue(kind: String, at: Vector2i) -> void:
 		original_sprite.visible = kind == "descend"
 		original_rescue_backdrop.hide()
 		original_rescue_sprite.hframes = 1
-		original_rescue_sprite.texture = load("res://assets/sprites/wr1_rescue_%s.png" % ("down" if kind == "descend" else original_character))
+		original_rescue_sprite.texture = load(Episode.sprite("wr1_rescue_%s" % ("down" if kind == "descend" else original_character)))
 		original_rescue_sprite.position = at
 	else:
 		original_sprite.hide()

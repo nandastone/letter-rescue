@@ -1,0 +1,736 @@
+{
+  "WR3.7": [
+    {
+      "rect": [
+        72,
+        48,
+        177,
+        39
+      ],
+      "ink": [
+        "aa0000",
+        "555555"
+      ],
+      "background": "000000"
+    },
+    {
+      "rect": [
+        118,
+        89,
+        91,
+        15
+      ],
+      "ink": [
+        "aa0000",
+        "ff5555",
+        "ffffff"
+      ],
+      "background": "000000"
+    },
+    {
+      "rect": [
+        54,
+        191,
+        210,
+        9
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "000000"
+    }
+  ],
+  "WR3.20": [
+    {
+      "rect": [
+        29,
+        55,
+        145,
+        50
+      ],
+      "ink": [
+        "ffffff",
+        "55ffff",
+        "0000aa",
+        "00aaaa"
+      ],
+      "background": "5555ff"
+    }
+  ],
+  "WR3.22": [
+    {
+      "rect": [
+        68,
+        51,
+        105,
+        16
+      ],
+      "ink": [
+        "55ffff",
+        "000000"
+      ],
+      "background": "5555ff",
+      "preserve": [
+        [
+          82,
+          51,
+          13,
+          1
+        ],
+        [
+          83,
+          52,
+          11,
+          1
+        ],
+        [
+          86,
+          53,
+          7,
+          1
+        ],
+        [
+          88,
+          54,
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "rect": [
+        24,
+        67,
+        204,
+        83
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "5555ff"
+    }
+  ],
+  "WR3.23": [
+    {
+      "rect": [
+        45,
+        58,
+        111,
+        39
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "5555ff"
+    }
+  ],
+  "WR3.24": [
+    {
+      "rect": [
+        32,
+        58,
+        137,
+        26
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        32,
+        100,
+        131,
+        17
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "WR3.25": [
+    {
+      "rect": [
+        17,
+        9,
+        128,
+        13
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        17,
+        26,
+        128,
+        13
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        59,
+        55,
+        43,
+        17
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        17,
+        89,
+        128,
+        17
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "WR3.26": [
+    {
+      "rect": [
+        61,
+        6,
+        49,
+        19
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        32,
+        24,
+        113,
+        25
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        41,
+        68,
+        91,
+        14
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "WR3.30": [
+    {
+      "rect": [
+        58,
+        10,
+        208,
+        28
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        62,
+        36,
+        208,
+        49
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        62,
+        85,
+        180,
+        17
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "WR3.31": [
+    {
+      "rect": [
+        54,
+        10,
+        215,
+        92
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        111,
+        123,
+        40,
+        9
+      ],
+      "ink": [
+        "000000"
+      ],
+      "background": "ffffff"
+    }
+  ],
+  "WR3.32": [
+    {
+      "rect": [
+        53,
+        8,
+        217,
+        42
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        122,
+        59,
+        145,
+        40
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "WR3.33": [
+    {
+      "rect": [
+        53,
+        9,
+        217,
+        79
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        53,
+        88,
+        140,
+        16
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "WR3.34": [
+    {
+      "rect": [
+        53,
+        9,
+        217,
+        95
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "WR3.10": [
+    {
+      "rect": [
+        71,
+        14,
+        185,
+        28
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        76,
+        44,
+        172,
+        55
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        11,
+        123,
+        47,
+        20
+      ],
+      "ink": [
+        "000000"
+      ],
+      "background": "ffffff"
+    }
+  ],
+  "MENU.WR": [
+    {
+      "rect": [
+        7,
+        6,
+        181,
+        13
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        27,
+        100,
+        143,
+        13
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        27,
+        133,
+        143,
+        13
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    }
+  ],
+  "HELP.WR": [
+    {
+      "rect": [
+        7,
+        6,
+        153,
+        13
+      ],
+      "ink": [
+        "ffffff",
+        "000000"
+      ],
+      "background": "ff5555"
+    },
+    {
+      "rect": [
+        9,
+        26,
+        147,
+        137
+      ],
+      "ink": [
+        "000000",
+        "aa0000",
+        "ff5555"
+      ],
+      "background": "ffffff"
+    }
+  ],
+  "WR3.21": [
+    {
+      "rect": [
+        0,
+        0,
+        320,
+        115
+      ],
+      "ink": [
+        "000000",
+        "0000aa",
+        "00aa00",
+        "00aaaa",
+        "aa0000",
+        "aa00aa",
+        "aaaa00",
+        "aa5500",
+        "aaaaaa",
+        "555555",
+        "5555ff",
+        "55ff55",
+        "55ffff",
+        "ff5555",
+        "ff55ff",
+        "ffff55",
+        "ffffff"
+      ],
+      "background": "0000aa"
+    },
+    {
+      "rect": [
+        123,
+        122,
+        169,
+        20
+      ],
+      "ink": [
+        "aa0000",
+        "ff5555"
+      ],
+      "background": "ffff55"
+    },
+    {
+      "rect": [
+        5,
+        172,
+        72,
+        24
+      ],
+      "ink": [
+        "000000",
+        "0000aa",
+        "00aa00",
+        "00aaaa",
+        "aa0000",
+        "aa00aa",
+        "aaaa00",
+        "aa5500",
+        "aaaaaa",
+        "555555",
+        "5555ff",
+        "55ff55",
+        "55ffff",
+        "ff5555",
+        "ff55ff",
+        "ffff55",
+        "ffffff"
+      ],
+      "background": "000000"
+    }
+  ],
+  "FSTORY1.WR": [
+    {
+      "rect": [
+        51,
+        10,
+        218,
+        93
+      ],
+      "ink": [
+        "aa0000",
+        "ff5555"
+      ],
+      "background": "ffffff"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "FSTORY2.WR": [
+    {
+      "rect": [
+        51,
+        10,
+        218,
+        93
+      ],
+      "ink": [
+        "aa0000",
+        "ff5555"
+      ],
+      "background": "ffffff"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    }
+  ],
+  "FSTORY3.WR": [
+    {
+      "rect": [
+        51,
+        10,
+        218,
+        93
+      ],
+      "ink": [
+        "aa0000",
+        "ff5555"
+      ],
+      "background": "ffffff"
+    },
+    {
+      "rect": [
+        119,
+        109,
+        82,
+        12
+      ],
+      "ink": [
+        "ffffff"
+      ],
+      "background": "aa0000"
+    },
+    {
+      "rect": [
+        70,
+        128,
+        34,
+        9
+      ],
+      "ink": [
+        "0000aa",
+        "aa00aa"
+      ],
+      "background": "55ffff"
+    },
+    {
+      "rect": [
+        94,
+        143,
+        40,
+        9
+      ],
+      "ink": [
+        "0000aa"
+      ],
+      "background": "55ffff"
+    }
+  ]
+}

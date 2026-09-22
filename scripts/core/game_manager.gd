@@ -2,7 +2,8 @@ extends Node
 
 enum Difficulty { EASY, MEDIUM, HARD }
 
-const MAX_LEVELS := 15
+var MAX_LEVELS: int:
+	get: return Episode.level_count()
 
 var current_difficulty: Difficulty = Difficulty.EASY
 var current_level: int = 1

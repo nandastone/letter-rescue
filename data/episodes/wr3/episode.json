@@ -1,0 +1,68 @@
+{
+  "episode": 3,
+  "level_count": 20,
+  "source_exe_sha256": "551b40a25931b392980d49e2f61367536b614e42b1362aedd3693d16b973b236",
+  "sources": {
+    "wr3.1": "6c35c04b610fefb177fcbc1edd91199fdfe116e4cc9b353fffbd34efeb9127af",
+    "wr3.2": "bc67ed12a760c9b5ea60ccf7ee3fe04a2614a4d0baaa76b6a4962ff4b937bbb7",
+    "wr3.s0": "dac52444e1d1e18fb0153c9fd6983528ade6d2e4311734c71adb9a89809017b3",
+    "wr3.s1": "4c448cf8225d2876ce30af7f839f28a3121a44e58b55e9f33e1a27e663656431",
+    "wr3.s2": "580c851a9d8795621f545f14b2ff44f7aeded215daf853ee3f043c9b3ef1fa5e",
+    "wr3.s3": "c8dd5c57cf6adcd10e7edbc54963dad9e8cc79f42bd1172e5a23a8efd7b364fd",
+    "wr3.s4": "58a0aaae5fcda4a50b202f662522635b8ce3caed9755e51eca735a4663bbdcb3",
+    "wr3.s5": "f0ad74128bda16b6761d3b7f8241a7929c3e627c8690efb83ef2971226ae7247",
+    "wr3.s6": "1adc8e0f4daaab2e80192e8b997e713d2c3687ac85a1e011141b188aab7b5d77",
+    "wr3.s7": "b689fea026813a8c9a52e8356d241c252470cf60258e41523874d66aa77d6019",
+    "wr3.s8": "cbd83c9fb2bb9c99796edf69ee952c761027e0c1cbf81f5c02d88accbb72cd01",
+    "wr3.s9": "67b6a3fbf977cd7d07a26d310457fc685343922454705f66516e23300980e91c",
+    "wr3.s10": "f5946490c9bea7347dcd24383c1d30590b8d909fb1c46b8c23fc8e703281c06f",
+    "wr3.s11": "0ef1c0ef730fbdec96fc02682ac5735803f9b5d45196e2eebcca8646e45cb129",
+    "wr3.s12": "fc63575f7fdd686d8bfd32b9b8a8bd7ced266433520f6bf468dbdbd71ccf13b8",
+    "wr3.s13": "579fa4ef21e3f6ab72b0b1d2226e5afc08c0cda56c09f1d4dd18d5ef72957437",
+    "wr3.s14": "a94c0148dadaacb5dd6d2aa65799dada98232ede3d87b3ec71574a3c194c3562",
+    "wr3.s15": "10c0061c03e39e552c8daf70ebf838a05ac0215e423dda3b38cbb35a7dfbec28",
+    "wr3.s16": "8ce9d7099345283ce2a40ed68ed11b743ca1d1b619989dc38a72d19c648150b1",
+    "wr3.s17": "fd8d1acf454ee6508acb0c4722baeaf041d4255bdf009be90407160f37222806",
+    "wr3.s18": "1b5c9085a89fbfb44ed3c8c1c9c3ba95dbfb90be622decec5e5e0aaad6ae8068",
+    "wr3.s19": "aa2d46f38104379aa5d32cb03f6f24adb8b6a775de6cdaa7ed518d725278cd73"
+  },
+  "sprites": [
+    "wr1_gruzzle_0",
+    "wr1_gruzzle_1",
+    "wr1_gruzzle_2",
+    "wr1_gruzzle_3",
+    "wr1_gruzzle_4",
+    "wr1_gruzzle_5",
+    "wr1_gruzzle_6",
+    "wr1_gruzzle_7",
+    "wr1_gruzzle_8",
+    "wr1_gruzzle_9",
+    "wr1_gruzzle_10",
+    "wr1_gruzzle_11",
+    "wr1_gruzzle_12",
+    "wr1_gruzzle_13",
+    "wr1_gruzzle_14",
+    "wr1_gruzzle_15",
+    "wr1_boy",
+    "wr1_girl",
+    "spawn_doorway",
+    "wr1_rescue_down"
+  ],
+  "map_edge_markers": [
+    {
+      "level": 1,
+      "ignored_draw_location": {
+        "index": 3,
+        "pos_px": [
+          1000,
+          376
+        ]
+      }
+    }
+  ],
+  "music_tracks": {
+    "4": 6,
+    "5": 4,
+    "6": 5
+  }
+}

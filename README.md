@@ -28,7 +28,20 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
 - **Match** each word to the correct picture block
 - **Avoid** Gruzzles, or slime them!
 - **Collect** mystery letters to uncover bonus words
-- **Progress** through the 15 recovered WR1 levels at Easy, Medium, or Hard difficulty
+- **Progress** through 55 recovered levels across three episodes at Easy, Medium, or Hard difficulty
+
+Select the episode through its URL:
+
+- `/` — The Story Begins (15 levels)
+- `/?episode=2` — Gruzzled Caves (20 levels)
+- `/?episode=3` — The Haunted House (20 levels)
+
+Parts 2 and 3 bring their original maps, scenery, word/picture catalogs,
+enemy artwork, demos and endings into the modern game, including smooth motion,
+Clear Text and the existing vocabulary substitutions. These are content ports;
+the native frame/state parity suite continues to cover Part 1.
+One supplied Part 2 music file (`wr2.5`) is malformed and rejected by the original
+executable; its music slot is silent. The other tracks are available.
 
 Hidden default-game cheat: type `IDKFA` or `IDGAF` during play to toggle
 berserker mode. Run at three times normal horizontal speed; use the slime/fire
@@ -60,6 +73,8 @@ the other custom pictures remain static.
 1. Install [Godot 4.6](https://godotengine.org/download) and [just](https://github.com/casey/just)
 2. `just run` for Letter Rescue, or `just legacy` for the original
 
+Start a particular episode with `just run --episode 2` (or `3`).
+
 ### In a browser
 
 Every push to `main` that touches the game builds both web versions
@@ -78,7 +93,7 @@ fallback text server instead of ICU, which takes it from 35.9 MB to 24.7 MB —
 Cloudflare Pages rejects files over 25 MiB. Both web builds also use the
 compressed audio, so a first load is about 35 MB rather than 100 MB.
 
-URL flags: `?skip-intro`, `?mute-original-audio`, `?aspect-43` (see
+URL flags: `?episode=2` / `?episode=3`, `?skip-intro`, `?mute-original-audio`, `?aspect-43` (see
 below), and `?pixel-text` on the legacy build for its original pixel display
 (combine with `&`). In Chrome, the
 install icon in the address bar adds it as an app. `just web` builds the
@@ -118,16 +133,19 @@ the controls above follow the measured executable behavior.
 The Joystick menu enables a connected gamepad's left stick/D-pad and A/B slime.
 
 The original cheat codes work during normal Letter Rescue play: hold `L+Z`,
-release them, type a level from 1–15, and press Enter to warp; hold `P+S` to
+release them, type a level from 1–15 (1–20 in Parts 2 and 3), and press Enter to warp; hold `P+S` to
 refill slime. Escape cancels level entry. There is also one deliberately
 undocumented-in-game easter egg for grown-ups: type `IDKFA`. The same code
 toggles it off.
 
 Enter a name of up to eight letters, digits or underscores, then select the girl
-or boy. Returning names load native-format `.wr1` profiles from Godot's
+or boy. Returning names load native-format `.wr1`, `.wr2` or `.wr3` profiles from Godot's
 `user://wr1/` directory (Windows: `%APPDATA%/Godot/app_userdata/Letter Rescue/wr1/`).
 Profiles save the level, words, score and controls; they restart the saved level.
-Run Demo plays all fifteen original demos in sequence, with title/story
+Progress and high scores are separate for each episode. A name used in another
+episode carries its character and control options into a fresh level 1 game.
+Run Demo plays Part 1's fifteen original demos, or the registered episodes'
+twenty-entry sequence of six original recordings, with title/story
 interludes. Any key returns to the menu and preserves the suspended live game.
 See [frontend source and verification](testing/wr1_frontend_research.md).
 
@@ -181,6 +199,18 @@ The stop-and-restart regression runs with
 It checks that player and camera drawing offsets reach zero within one update
 after their logical positions stop, then stay there. Both CI workflows run it.
 
+The episode integration checks also run in both CI workflows:
+
+```
+godot --headless --fixed-fps 120 --path . --script tools/smoke_episodes.gd
+godot --headless --fixed-fps 120 --path . --script tools/smoke_episode_sessions.gd
+```
+
+They check all 55 maps, picture catalogs, matching, final exits, independent
+saves, warping, demo starts and restoration of a suspended game. See
+[episode implementation and verification](testing/wr2_wr3_implementation.md)
+for extraction commands, browser checks and the scope of native verification.
+
 Supplemental frontend, attract and audio checks use the real Godot scene and
 retained native screen fixtures. Set `GODOT`, then run
 `python -m unittest testing.test_wr1_frontend testing.test_wr1_attract testing.test_wr1_audio testing.test_input_replay`.
@@ -198,11 +228,13 @@ assets/
   audio/original/ogg/  The same audio compressed for the default build
                    (tools/compress_original_audio.py; 55 MB -> 5 MB)
   extracted/       Graphics extracted from the WR1 data files
+  episodes/        Registered episode artwork, pictures and sprite overrides
   fonts/andika/    Clear Text font
   sprites/         Character and object sprites
   tiles/           Tileset graphics
 data/levels/       Level layouts (JSON)
 data/wr1/          Recovered WR1 rules, demos and frontend data
+data/episodes/     WR2/WR3 levels, rules, words, demos and frontend data
 testing/           Parity suite, research notes and native fixtures
 tools/             Extraction, capture and parity tooling
 ```

@@ -115,6 +115,19 @@ func load_current_level() -> void:
 func _prepare_original_initialization() -> void:
 	if original_words != null:
 		return
+	if InputReplay.content_demo:
+		original_words = preload("res://scripts/core/wr1_words.gd").new()
+		if InputReplay.content_demo_start.is_empty():
+			original_words.next_words()
+		else:
+			original_words.words.assign(InputReplay.content_demo_start.words)
+			original_words.offset = int(InputReplay.content_demo_start.word_cursor)
+		var positions: Array = []
+		for pos in level_data.gruzzles:
+			positions.append([int(pos[0] * 2), int(pos[1] * 2)])
+		var actors = preload("res://scripts/core/wr1_gruzzles.gd").new()
+		original_initialization = actors.start_content_demo(positions)
+		return
 	# Existing native replays start at a measured post-load checkpoint. Older
 	# recordings without a seed also retain their historical deterministic start.
 	if InputReplay.mode == InputReplay.Mode.REPLAYING and InputReplay.original_start_seed < 0:
@@ -246,7 +259,7 @@ func _build_level_from_data() -> void:
 	var backdrop_index: int = int(level_data.get("backdrop", 0))
 	original_backdrop.visible = backdrop_index != 0
 	if backdrop_index != 0:
-		original_backdrop.texture = load("res://assets/tiles/backdrop_%d.png" % backdrop_index)
+		original_backdrop.texture = load(Episode.backdrop(backdrop_index))
 
 	player.is_dead = false
 
@@ -258,7 +271,7 @@ func _build_level_from_data() -> void:
 	var start = level_data.get("player_start", [2, 10])
 	var raw_start := Vector2(float(start[0]) * TILE_SIZE, float(start[1]) * TILE_SIZE)
 	var doorway_sprite := Sprite2D.new()
-	doorway_sprite.texture = preload("res://assets/sprites/spawn_doorway.png")
+	doorway_sprite.texture = load(Episode.sprite("spawn_doorway"))
 	doorway_sprite.centered = false
 	doorway_sprite.position = raw_start + Vector2(-8, -32)
 	entities.add_child(doorway_sprite)
@@ -270,7 +283,7 @@ func _build_level_from_data() -> void:
 	# Build tilemaps. WR1 engine overwrites bg cells at level-load with
 	# entity-specific tile indices (per wr1.exe disassembly at 0x6e6a/0x6eea):
 	#   books -> tile 239, letters -> tile 238
-	var texture: Texture2D = load("res://assets/tiles/tileset_back%d.png" % int(level_data.tileset))
+	var texture: Texture2D = load(Episode.tileset(int(level_data.tileset)))
 	for layer in [bg_tilemap, fg_tilemap]:
 		# Keep the scene tile definitions and give each map its own atlas.
 		layer.tile_set = layer.tile_set.duplicate(true)
@@ -338,9 +351,9 @@ func _build_level_from_data() -> void:
 	if original_restart.is_empty() or original_restart.get("advancing", false):
 		hud.update_score(GameManager.score)
 
-	var rules := LevelLoader.load_level("res://data/wr1/level_%02d.json" % GameManager.current_level)
+	var rules := LevelLoader.load_level(Episode.rules_path(GameManager.current_level))
 	if rules.is_empty():
-		push_error("Original rules require extracted WR1 map data")
+		push_error("Original rules require extracted episode map data")
 		return
 	player.configure_original(rules, not original_restart.is_empty(), original_restart.get("advancing", false))
 	original_books = preload("res://scripts/core/wr1_books.gd").new()
@@ -545,7 +558,7 @@ func _present_original_gruzzles() -> void:
 			sprite.z_index = 7 if draw.kind == "slime" else 4
 			sprite.modulate = Color.BLACK if draw.get("mask", false) else Color.WHITE
 			var index: int = draw.frame + (draw.type * 4 if draw.kind == "gruzzle" else 0)
-			sprite.texture = load("res://assets/sprites/wr1_%s_%d.png" % [draw.kind, index])
+			sprite.texture = load(Episode.sprite("wr1_%s_%d" % [draw.kind, index]))
 			sprite.position = draw.position
 
 func _on_original_moved(state: RefCounted) -> void:
@@ -774,7 +787,7 @@ func open_original_frontend(kind: String = "menu") -> void:
 func save_original_profile() -> void:
 	if not is_instance_valid(player) or original_words == null or InputReplay.mode == InputReplay.Mode.REPLAYING or has_meta("frontend_replaced"):
 		return
-	var profile := {"level":clampi(GameManager.current_level,1,15), "character":GameManager.original_character,
+	var profile := {"level":clampi(GameManager.current_level,1,Episode.level_count()), "character":GameManager.original_character,
 		"score":GameManager.score,"word_cursor":original_words.offset,"words":original_words.words,
 		"difficulty":GameManager.current_difficulty,"custom_keys":GameManager.original_custom_keys,
 		"scancodes":GameManager.original_scancodes,"joystick":GameManager.original_joystick}
