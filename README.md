@@ -16,6 +16,9 @@ Players explore side-scrolling levels, collect letters, and match words to pictu
   the organic art suits that (a trike wheel is 7x5, a dial 9x7, a tomato
   16x12 — round only when stretched). The geometric art does not: it turns the
   24x24 question blocks into tall rectangles, so square pixels are the default.
+  The default display scales by whole numbers (2×, 3×, 4×, etc.), with black
+  bars filling leftover space. Browser sizing uses physical pixels, including
+  high-DPI displays, so odd window sizes do not stretch the artwork unevenly.
 - **Legacy** (`just legacy`, or `-- --legacy`) is the pixel-exact Word Rescue
   Part 1 that `just parity` verifies against DOSBox. `just legacy-clear` adds
   Clear Text. Keep it unchanged: changes to shared scripts must keep
@@ -189,6 +192,18 @@ hides the problem) and fails if the question block's drawn size changes
 between frames, which is what shimmering art looks like to a measurement.
 It also captures after releasing movement and checks that the block's screen
 position and size stay fixed once the final movement has finished.
+
+The scrolling-player regression uses the real game at an awkward window size,
+with a solid texture replacing the character's changing poses for measurement:
+
+```
+godot --path . --rendering-method gl_compatibility --fixed-fps 120 --disable-vsync --script tools/smoke_scrolling_player.gd -- --original-seed 20716 --capture-scroll
+python tools/check_scrolling_player.py
+```
+
+The character's rendered position and width must stay constant while the camera
+follows at the same speed. This catches pixel jitter that coordinate-only
+smoothing checks cannot see.
 
 The default game also has a code-level gate, run in CI and locally with
 `godot --headless --fixed-fps 120 --path . --script tools/smoke_default_game.gd`

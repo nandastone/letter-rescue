@@ -22,6 +22,8 @@ static func configure_window(window: Window) -> void:
 	window.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	if LaunchArgs.square_pixels():
 		window.content_scale_aspect = Window.CONTENT_SCALE_ASPECT_KEEP
+		if not LaunchArgs.legacy():
+			window.content_scale_stretch = Window.CONTENT_SCALE_STRETCH_INTEGER
 		return
 	# IGNORE stretches the 320x200 canvas to fill the drawing area, so a 4:3
 	# area reproduces the original 1.2x-taller pixels. The browser page sizes
