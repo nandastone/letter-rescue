@@ -1,0 +1,764 @@
+{
+  "schema": 2,
+  "runtime": "Godot",
+  "build": {
+    "path": "testing/output/treehouse/godot-scanout-build-a/build.json",
+    "sha256": "9f5f4dc6f5848ff8b6173c25d80e703728e962011513541013abbecf69f465d0"
+  },
+  "requirements": {
+    "TH-001:1": {
+      "text": "General capture adapter holds the emulator worker before save and restore",
+      "reviewed": true,
+      "evidence": [
+        {
+          "path": "testing/output/treehouse/snapshot-protocol-a/report.json",
+          "sha256": "2d128b26dc68c9df4f68e259d4fd21abcf139ba55a417d88c142a4aad81b162a",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/nature-snapshot-general-comparison.json",
+          "sha256": "36819897316e05468ed57dd7f9e6c7c633fa5a643c84e4666af689470522b322",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/nature-snapshot-control-comparison.json",
+          "sha256": "d0ea4c2ee49b2eb552c77f284f2fc2efb57bd2b7a5a0818a34a2acd1b89e6747",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/resource-startup-control-proof-b.json",
+          "sha256": "bdf8d3ddc49812da77b692a1f4a40e623713476f36e2b53d610b914531ec6a9d",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/resource-startup-control-proof-c.json",
+          "sha256": "b63d92e640d64b022d8ef19f592c908bfe3c8d17152891ff82a09833b3ecd7b0",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/source/reference-startup-v2.json",
+          "sha256": "688e8fe3e287492d0f72f35c4dad8ed07b2ace1c408c665e684871f978bb0cfd",
+          "scope": "reference"
+        }
+      ],
+      "status": "accepted reference evidence"
+    },
+    "TH-001:2": {
+      "text": "Repeated ordinary captures and traced controls agree in pixels, PIT clocks and audio",
+      "reviewed": true,
+      "evidence": [
+        {
+          "path": "testing/output/treehouse/snapshot-protocol-a/report.json",
+          "sha256": "2d128b26dc68c9df4f68e259d4fd21abcf139ba55a417d88c142a4aad81b162a",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/nature-snapshot-general-comparison.json",
+          "sha256": "36819897316e05468ed57dd7f9e6c7c633fa5a643c84e4666af689470522b322",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/nature-snapshot-control-comparison.json",
+          "sha256": "d0ea4c2ee49b2eb552c77f284f2fc2efb57bd2b7a5a0818a34a2acd1b89e6747",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/resource-startup-control-proof-b.json",
+          "sha256": "bdf8d3ddc49812da77b692a1f4a40e623713476f36e2b53d610b914531ec6a9d",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/resource-startup-control-proof-c.json",
+          "sha256": "b63d92e640d64b022d8ef19f592c908bfe3c8d17152891ff82a09833b3ecd7b0",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/source/reference-startup-v2.json",
+          "sha256": "688e8fe3e287492d0f72f35c4dad8ed07b2ace1c408c665e684871f978bb0cfd",
+          "scope": "reference"
+        }
+      ],
+      "status": "accepted reference evidence"
+    },
+    "TH-001:3": {
+      "text": "Capture reports identify the snapshot protocol; historical reports remain unchanged",
+      "reviewed": true,
+      "evidence": [
+        {
+          "path": "testing/output/treehouse/snapshot-protocol-a/report.json",
+          "sha256": "2d128b26dc68c9df4f68e259d4fd21abcf139ba55a417d88c142a4aad81b162a",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/nature-snapshot-general-comparison.json",
+          "sha256": "36819897316e05468ed57dd7f9e6c7c633fa5a643c84e4666af689470522b322",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/nature-snapshot-control-comparison.json",
+          "sha256": "d0ea4c2ee49b2eb552c77f284f2fc2efb57bd2b7a5a0818a34a2acd1b89e6747",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/resource-startup-control-proof-b.json",
+          "sha256": "bdf8d3ddc49812da77b692a1f4a40e623713476f36e2b53d610b914531ec6a9d",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/resource-startup-control-proof-c.json",
+          "sha256": "b63d92e640d64b022d8ef19f592c908bfe3c8d17152891ff82a09833b3ecd7b0",
+          "scope": "reference"
+        },
+        {
+          "path": "testing/output/treehouse/source/reference-startup-v2.json",
+          "sha256": "688e8fe3e287492d0f72f35c4dad8ed07b2ace1c408c665e684871f978bb0cfd",
+          "scope": "reference"
+        }
+      ],
+      "status": "accepted reference evidence"
+    },
+    "TH-002:1": {
+      "text": "Recover resource loading, cache and draw costs from original code and pinned reference implementation",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-002:2": {
+      "text": "Ordered nature turn setup, question start, candidate painting and cleanup generate intermediate framebuffer states",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-002:3": {
+      "text": "Timing derives from operations and inputs, not recorded fixture timestamps",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-003:1": {
+      "text": "OriginalScanout consumes runtime-generated commits on an independent clock",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-003:2": {
+      "text": "Full robot nature turn matches all 984 unshifted reference callbacks",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-003:3": {
+      "text": "No missing native displays, dropped updates or browser errors",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-003:4": {
+      "text": "All existing gameplay and frame regressions continue to pass",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-004:1": {
+      "text": "Capture original RNG bounds, seeds and results through ordinary input journeys",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-004:2": {
+      "text": "Compare the single browser random stream across room events, board games, maze, theater and nature",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-004:3": {
+      "text": "Fix divergent call sites and retain reproducible journey evidence",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-005:1": {
+      "text": "Compare sound start, stop, rate and loop events against native traces",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-005:2": {
+      "text": "Recover reference DAC and mixer behavior from source",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-005:3": {
+      "text": "Verify representative speech, effects and instrument waveforms including release and replacement",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-005:4": {
+      "text": "Integrate the verified original audio path and retain readable controls",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-006:1": {
+      "text": "Create a finite coverage matrix of original activities, transitions, interruption rules, save/load and long-session behavior",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-006:2": {
+      "text": "Run ordinary-input reference and browser journeys for each matrix row",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-006:3": {
+      "text": "Include board partial counters, remaining object flights and maze branches",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-006:4": {
+      "text": "Document and resolve each mismatch without shifting frames or excluding partial draws",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-007:1": {
+      "text": "Completion gate rejects open issues and failed or stale evidence",
+      "reviewed": true,
+      "evidence": [
+        {
+          "path": "testing/output/treehouse/godot-scanout-gate-envelope-a/evidence.json",
+          "sha256": "5fa908177885791a406926c2e2f0d6c1cfd5c4cad3bd5b4a8cd7e1c12a2ea6d9"
+        }
+      ],
+      "status": "gate mechanics verified with 38 synthetic acceptance/rejection cases"
+    },
+    "TH-007:2": {
+      "text": "All gameplay, strict timing, input, persistence and audio checks pass on one immutable build",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-007:3": {
+      "text": "Promoted and HTTP-served HTML hashes equal that verified build",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-007:4": {
+      "text": "Completion report states exact coverage and remaining limitations accurately",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-008:1": {
+      "text": "Decode all pinned assets through a shared build-time exporter",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-008:2": {
+      "text": "Implement indexed graphics, bitmap text, SCR animation and original cursor in GDScript",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-008:3": {
+      "text": "Verify both character entrance journeys and initial room frames against the pinned original",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-008:4": {
+      "text": "Port original startup/title sequence and session RNG without introducing a JavaScript runtime dependency",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-008:5": {
+      "text": "Verify packaged-save and native missing-STATUS startup paths with title boot, including the separate SONGS file and legacy-profile migration; isolated fresh-default comparisons do not establish full startup integration.",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-009:1": {
+      "text": "Port complete room/yard/hollow interactions, original objects, needs and ambient state",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-009:2": {
+      "text": "Port chalk, calendar, telescope, rewards and all activity entry/return transitions",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-009:3": {
+      "text": "Replay original mouse, held-input, interruption and prize journeys in Godot",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-010:1": {
+      "text": "Port all instruments, songs, notation and editor operations",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-010:2": {
+      "text": "Preserve SONGS.DAT interchange and local creations",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-010:3": {
+      "text": "Port maze generation, challenges, difficulty, endings and transitions",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-010:4": {
+      "text": "Compare existing native music and maze routes in Godot",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-011:1": {
+      "text": "Port sentence editing, notebook, grammar, shuffle and drag behavior",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-011:2": {
+      "text": "Port animated scenes, speech, props, playback, curtain and rewards",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-011:3": {
+      "text": "Verify native theater journeys with Godot output",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-012:1": {
+      "text": "Port animal browser, filters, collages and definitions",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-012:2": {
+      "text": "Port human/robot guessing, hints, prizes and returns",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-012:3": {
+      "text": "Verify native nature journeys with Godot output",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-013:1": {
+      "text": "Port Money and Chip rules, options, human/robot choices, movement and animation",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-013:2": {
+      "text": "Integrate shared RNG and resource-dependent behavior from recovered code",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-013:3": {
+      "text": "Verify full winning/losing native routes; preserve all unresolved money-loss failures",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-014:1": {
+      "text": "Preserve STATUS.DAT and SONGS.DAT interchange and original settings",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-014:2": {
+      "text": "Port help, dialogs, confirmations and printing",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-014:3": {
+      "text": "Verify desktop and web persistence lifecycles",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-015:1": {
+      "text": "Port original pointer-keyboard controls and mouse/touch held-input behavior",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-015:2": {
+      "text": "Verify focus loss, resizing, integer scaling and cursor placement",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-015:3": {
+      "text": "Adapt native rendering and strict timing harnesses to the integrated Godot runtime; preserve existing unresolved comparisons",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-016:1": {
+      "text": "Port effective sample rates, looping, release, ownership and mixer behavior",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-016:2": {
+      "text": "Compare native sound events, timing and waveform from actual Godot output",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-016:3": {
+      "text": "Verify browser audio activation and focus handling",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-017:1": {
+      "text": "Export independent Godot desktop and Web builds from pinned resources",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-017:2": {
+      "text": "Replay complete integrated journeys in the same immutable Godot build",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-017:3": {
+      "text": "Record build hashes, launch instructions and served artifact identity; do not substitute JavaScript reference checks for Godot evidence",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    },
+    "TH-017:4": {
+      "text": "Completion gate must identify the current Godot export and its integrated evidence; the historical JavaScript gate cannot establish Godot completion.",
+      "reviewed": false,
+      "evidence": [],
+      "status": "integration review pending"
+    }
+  },
+  "suites": {
+    "startup": {
+      "path": "testing/output/treehouse/godot-scanout-title-b-envelope/evidence.json",
+      "sha256": "8e2fe259ff1420a9c325199fb1ac822171635cd241704c7540eefac91fcd65c6"
+    },
+    "room": null,
+    "objects": null,
+    "care": null,
+    "music": null,
+    "maze": {
+      "path": "testing/output/treehouse/godot-scanout-maze-c-envelope/evidence.json",
+      "sha256": "3b03ffa5b85552125733f0131769166645533252480deeef3d9b3a098c0aef39"
+    },
+    "theater": {
+      "path": "testing/output/treehouse/godot-resume-oct13-theater-a-envelope/evidence.json",
+      "sha256": "d20f8f015967e624beb9fdd95392ccec589f441a91707e99cce694a4b86fd6ad"
+    },
+    "nature": {
+      "path": "testing/output/treehouse/godot-resume-oct13-nature-c-envelope/evidence.json",
+      "sha256": "b7659f7d09eaf56cf46a10457e9f4fde8b08c1a67ed9d9c8ff09a6222290f237"
+    },
+    "board": {
+      "path": "testing/output/treehouse/godot-resume-oct13-board-b-envelope/evidence.json",
+      "sha256": "df0d67acf37184ceac386d8b5056aebe6b31e826dd97e5631d721b35550bd5c5"
+    },
+    "persistence": {
+      "path": "testing/output/treehouse/godot-scanout-status-a-envelope/evidence.json",
+      "sha256": "d4db7be9c90eefb222c0292f6fa6e69d6d8709137a384179a64559ac9ed9b38f"
+    },
+    "preferences": {
+      "path": "testing/output/treehouse/godot-resume-oct13-preferences-a-envelope/evidence.json",
+      "sha256": "41b60f56f93d8c5bb0cc61f51d64f5beacc1893ba33a5f0de87a2db59cf3f173"
+    },
+    "input": null,
+    "printing": {
+      "path": "testing/output/treehouse/godot-resume-oct13-print-a-envelope/evidence.json",
+      "sha256": "6b335eee7000fd75c463f06105a961596afa28e08debb7d4b5cfcf3e69526cfd"
+    },
+    "browser_audio": null,
+    "fresh_profile": {
+      "path": "testing/output/treehouse/godot-scanout-fresh-a-envelope/evidence.json",
+      "sha256": "85595f298242f5a1f34227eb529ba62ed29b9d46ac3523b86d77004799c64efa"
+    }
+  },
+  "native_journeys": {
+    "entrance_boy": null,
+    "entrance_girl": null,
+    "room_objects": null,
+    "room_return": null,
+    "music_edit": null,
+    "maze_tutorial": null,
+    "maze_skip": null,
+    "maze_victory": null,
+    "theater": null,
+    "nature_human": null,
+    "nature_robot": null,
+    "money_win": null,
+    "money_loss": null,
+    "chips": null
+  },
+  "strict_timing": null,
+  "native_audio": null,
+  "desktop": null,
+  "delivery": {
+    "path": "testing/output/treehouse/godot-resume-oct13-delivery-a.json",
+    "sha256": "2cbc9f376425e7e87b43cb17dc512d0bbf137e5e9b73ca32b3279cdd896d797b"
+  },
+  "full_clone_parity": false,
+  "known_failures": [
+    {
+      "id": "maze_tutorial",
+      "reason": "Two early RNG checkpoint differences; all 46 images now match.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-gate-native-maze-a/report.json",
+        "sha256": "fc4b415ec25374a359cb98c3ae22e7cda320601b99da0145a82905722e4d3f52"
+      },
+      "scope": "unresolved; older reports retained until reverified"
+    },
+    {
+      "id": "maze_skip",
+      "reason": "Early RNG at intro-05.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-maze-loading-skip-a/report.json",
+        "sha256": "8edb4a5b026e0a7be03ad15108e55bbca0d5f6ecf4580d9f3405ffc3b7d605da"
+      },
+      "scope": "unresolved; older reports retained until reverified"
+    },
+    {
+      "id": "money_loss",
+      "reason": "Direct-payment preparation misses resource-dependent second coin array/random calls.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-resume-oct13-money-loss-a/report.json",
+        "sha256": "4079c0c82cb7cc6241a014c0bb0446d5bcc2d35933a639bf3a06ff26838c029f"
+      },
+      "scope": "Current Godot component replay: 12/33 images and 11/33 states match; first divergence step-10 is RNG only (2527103840 versus 2204794019). Losing ending not reached.",
+      "historical_evidence": [
+        {
+          "path": "testing/output/treehouse/godot-board-loss-a/report.json",
+          "sha256": "b1df98b9f2b8ce6f991066d6e95ea99cdb66d3768debca2cc3e459c09e1b5d9e"
+        }
+      ]
+    },
+    {
+      "id": "chip_partial_clear",
+      "reason": "312-pixel mixed-band highlight at step-15 remains absent with production scanout. All 49 gameplay/RNG states and 48 images match; diagnostic composition proves needed pixels exist. Native operation time/video phase remain unreconstructed.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-chip-scanout-observe-a/report.json",
+        "sha256": "08b527b592c8199894e5e344495f1ec268a91c0ad574e924ba369283883aecf2"
+      },
+      "scope": "Godot headless component replay; unchanged 420-tick observation windows, no native timing claim"
+    },
+    {
+      "id": "nature_return",
+      "reason": "Final room return/balloon state differs.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-nature-return-current-a/report.json",
+        "sha256": "8e055ec133ccac49e06cfb04832c0f3bda4de63dcc8aa36b40b61b6671c64c40"
+      },
+      "scope": "unresolved; older reports retained until reverified"
+    },
+    {
+      "id": "robot_return",
+      "reason": "Room return state and images differ.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-robot-prize-a/report.json",
+        "sha256": "d33f723a8d1050bd3952f6923832be41d5db66ee50c447b32aa3af61e1d939f0"
+      },
+      "scope": "unresolved; older reports retained until reverified"
+    },
+    {
+      "id": "yard_balloon",
+      "reason": "Yard balloon state differs.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-yard-return-current-a/report.json",
+        "sha256": "b9083709182068eea19b95374dcd8adfd3fc096304bf2722eb0d34a6129fc150"
+      },
+      "scope": "unresolved; older reports retained until reverified"
+    }
+  ],
+  "component_results": [
+    {
+      "path": "testing/output/treehouse/godot-scanout-native-b-envelope/evidence.json",
+      "sha256": "81021b90480c63e1fd4b83ec7aa85ed8ffb0d680f57f4ea0980f21237b79e863"
+    },
+    {
+      "path": "testing/output/treehouse/godot-scanout-presenter-envelope-a/evidence.json",
+      "sha256": "b35d25ca6ab40fd7c67629c4dfc7f71de32dc5acd75471b38eb282e55d1610a2"
+    },
+    {
+      "path": "testing/output/treehouse/godot-scanout-batching-a-envelope/evidence.json",
+      "sha256": "1eefc4add18842ac4e1ab5183a315ccf7b15706b99c9c392c048aa884166819a"
+    },
+    {
+      "path": "testing/output/treehouse/godot-scanout-input-envelope-a/evidence.json",
+      "sha256": "6d062a1943737f014a389086b0eb1817d7333de268b4d4dd3e94f00eadedbc06"
+    },
+    {
+      "path": "testing/output/treehouse/godot-scanout-gate-envelope-a/evidence.json",
+      "sha256": "5fa908177885791a406926c2e2f0d6c1cfd5c4cad3bd5b4a8cd7e1c12a2ea6d9"
+    }
+  ],
+  "historical_js_verification": {
+    "path": "testing/treehouse/completion_verification.legacy-js.json",
+    "sha256": "32243ec4260f0124a3aba3f0ac10ec29bec9cd9549be6185b8513f4a839e1a28"
+  },
+  "verification_note": "Godot acceptance index. Every ledger acceptance statement is represented verbatim. Pending means unproven by reviewed evidence on this export, not necessarily unimplemented. Browser smoke suites are bounded regression evidence; headless native checkpoints remain component evidence. Complete ordinary-input Web/native journeys, strict presentation, waveform/timing and desktop coverage remain required. No historical JavaScript result can establish Godot completion.",
+  "resolved_failures": [
+    {
+      "id": "music_erase_rng",
+      "reason": "Erase-No route random state differs.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-music-room-a/report.json",
+        "sha256": "d375d72122792b4d48a06f90b08df70bef2cb49680f64196bd133578e99c681b"
+      },
+      "scope": "unresolved; older reports retained until reverified",
+      "resolution": {
+        "path": "testing/output/treehouse/godot-room-idle-room-b-envelope/evidence.json",
+        "sha256": "1aa13699bfff41f236ab66d67c538d113286d0bfaa5ff190afc0f439cd9f5382"
+      },
+      "resolution_scope": "Native input replay from one initial fixture; full checkpoint pixels and compared state including cloudX. Strict presentation timing and full Web/native journey remain unproven."
+    },
+    {
+      "id": "egg_final_image",
+      "reason": "Final route image differs.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-objects-egg-final-a/report.json",
+        "sha256": "8072a866f7e195ca6c71cf2d28af748c4e14470f0fb2e6cea3ef2a2a5ab93b3a"
+      },
+      "scope": "unresolved; older reports retained until reverified",
+      "resolution": {
+        "path": "testing/output/treehouse/godot-room-idle-egg-b-envelope/evidence.json",
+        "sha256": "cd28a5b403f87731e5104e1671b64378c6bb546c3a947106777c92548f8efd27"
+      },
+      "resolution_scope": "Native input replay from one initial fixture; full checkpoint pixels and compared state including cloudX. Strict presentation timing and full Web/native journey remain unproven."
+    },
+    {
+      "id": "browser_hollow_intermittent",
+      "reason": "Actual export route failed at squirrel nut throw and later navigation in the concurrent title/maze run. Unchanged candidate passes all 22 checks alone; previous-build concurrent control passes. Cause remains unproven; a passing retry does not close it.",
+      "evidence": {
+        "path": "testing/output/treehouse/godot-scanout-maze-a/report.json",
+        "sha256": "074257b9f8c8ce73a6008d6c37572db1a2926ddc75936f72f79c5b0c892d67fe"
+      },
+      "retry": {
+        "path": "testing/output/treehouse/godot-scanout-maze-b/report.json",
+        "sha256": "0ec913d90e188ee30d1d13cbdb4dc5fd83b9e45b2ceb82390f28036d57961c4d"
+      },
+      "control": {
+        "path": "testing/output/treehouse/godot-scanout-control-maze-a/report.json",
+        "sha256": "dbb78ae1b9a2455aa408003fc4c762b755fa8aa02d24c5e1779ba12c646c97b1"
+      },
+      "scope": "Actual Web integration; intermittent input/wait/host scheduling cause under investigation",
+      "resolution": {
+        "path": "testing/output/treehouse/godot-hollow-stall-bound-a-envelope/evidence.json",
+        "sha256": "105cb1ea09e363df091a1a9ccb99778fc758108b63a4b48aec8b1d03954b74a5"
+      },
+      "resolution_scope": "Functional verifier fixed: wait for exact native landing pixels before exit, then wait for yard/room pixels. A controlled 900ms host stall reproduced the same two failures on both old and current exports; revised verifier passes both without changing game source or native timing checks. The original spontaneous run did not log frame gaps, so its exact scheduling cause remains an inference.",
+      "full_route": {
+        "path": "testing/output/treehouse/godot-scanout-maze-c-envelope/evidence.json",
+        "sha256": "3b03ffa5b85552125733f0131769166645533252480deeef3d9b3a098c0aef39"
+      },
+      "controlled_red": [
+        {
+          "path": "testing/output/treehouse/godot-hollow-stall-red-a/scanout/report.json",
+          "sha256": "6a77c7264b770ebd3c091949acf6e25c7f613aed9143e1d69d77355456f4a469"
+        },
+        {
+          "path": "testing/output/treehouse/godot-hollow-stall-red-a/window-focus/report.json",
+          "sha256": "4250d79bd64473cb2dd5b73009d095a32fac6972e52baba8a15915bbbb8e92de"
+        }
+      ],
+      "controlled_green": [
+        {
+          "path": "testing/output/treehouse/godot-hollow-stall-green-a/scanout/report.json",
+          "sha256": "f959ae757ab6ab8711cb348b0989c4737099d88af2cc98f74385f2af797bf1f2"
+        },
+        {
+          "path": "testing/output/treehouse/godot-hollow-stall-green-a/window-focus/report.json",
+          "sha256": "9a62a0a47694749b9919cea6a046996305952964afc496fee697bc2dd6204759"
+        }
+      ]
+    }
+  ],
+  "historical_component_results": [
+    {
+      "path": "testing/output/treehouse/godot-gate-native-maze-envelope-a/evidence.json",
+      "sha256": "f5d2c847e89d22aa0f09efdcd2513c463b90058d67978c51a1e9c0f36d4b7688"
+    },
+    {
+      "path": "testing/output/treehouse/godot-gate-tests-envelope-d/evidence.json",
+      "sha256": "329cf66514da3fae247df8b13faa1c76071da35b2aaf1f74fa972cba34d27dcb"
+    },
+    {
+      "path": "testing/output/treehouse/godot-room-idle-egg-b-envelope/evidence.json",
+      "sha256": "cd28a5b403f87731e5104e1671b64378c6bb546c3a947106777c92548f8efd27"
+    },
+    {
+      "path": "testing/output/treehouse/godot-room-idle-room-b-envelope/evidence.json",
+      "sha256": "1aa13699bfff41f236ab66d67c538d113286d0bfaa5ff190afc0f439cd9f5382"
+    },
+    {
+      "path": "testing/output/treehouse/godot-room-idle-input-envelope-a/evidence.json",
+      "sha256": "307343c9acac9420a3b1fd32e2cc35e7f097aa2d716f80b2fa07a6f888040654"
+    },
+    {
+      "path": "testing/output/treehouse/godot-room-idle-care-envelope-a/evidence.json",
+      "sha256": "82d441672587ebb950074c53a171bb9b4cdd34d12db9e9fe653b58de5c3dc314"
+    },
+    {
+      "path": "testing/output/treehouse/godot-room-idle-gate-envelope-a/evidence.json",
+      "sha256": "8009a48f836832b5f437859921da259fbcdafe63b552636f2d29b55d16485681"
+    },
+    {
+      "path": "testing/output/treehouse/godot-songs-only-fresh-b-envelope/evidence.json",
+      "sha256": "4d38846f5305b9459fb1279f5d3fefae1b1ba5f79ef4e91e1474dca75dc4b8d8"
+    },
+    {
+      "path": "testing/output/treehouse/godot-songs-only-status-b-envelope/evidence.json",
+      "sha256": "bd6106cc00eca8ccf3f68b36811080ffdbbe48897985abc3c0317da419933a2c"
+    },
+    {
+      "path": "testing/output/treehouse/godot-songs-only-gate-b-envelope/evidence.json",
+      "sha256": "921d61fca636c0379a91fdc75bc80c0995cb4fe61b0a0be5d49324820ce4aa8f"
+    },
+    {
+      "path": "testing/output/treehouse/godot-window-focus-input-envelope-a/evidence.json",
+      "sha256": "45cb28ec11309ced5d6b2c33007b3765e5f973d2da1cd8d6dc709fc889d6ace8"
+    },
+    {
+      "path": "testing/output/treehouse/godot-window-focus-gate-envelope-a/evidence.json",
+      "sha256": "db9b7fcb8f47f2bb4c5c0f668747926394ed605e422659ac201cf35ab6829ed4"
+    }
+  ],
+  "supplemental_web_results": [
+    {
+      "path": "testing/output/treehouse/godot-scanout-cold-envelope-a/evidence.json",
+      "sha256": "cfe39627b33551282700d7db263019d5ebb3a3e0a514f70859993d6d0002b7d2"
+    },
+    {
+      "path": "testing/output/treehouse/godot-hollow-stall-bound-a-envelope/evidence.json",
+      "sha256": "105cb1ea09e363df091a1a9ccb99778fc758108b63a4b48aec8b1d03954b74a5"
+    }
+  ]
+}

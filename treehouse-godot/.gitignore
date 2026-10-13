@@ -1,0 +1,7 @@
+.godot/
+data/original.json
+data/original.build.json
+build/
+
+# Preserve lossless import settings for generated music.
+!data/*.wav.import

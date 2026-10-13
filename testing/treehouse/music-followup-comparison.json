@@ -1,0 +1,32 @@
+{
+  "source": "original DOS1.1 ordinary-input captures; independent resource rendering",
+  "comparisons": [
+    {
+      "name": "instrument-families",
+      "recipe": "testing\\output\\treehouse\\research-music-followup\\menu-render.py",
+      "recipe_sha256": "fe568d0ca35354660e7458092c5c244d2ae2d29e502c141b3122b12be1a13bb2",
+      "reference": "testing\\output\\treehouse\\research-music-followup\\ensemble\\state\\click-0.png",
+      "reference_sha256": "90b96470145875e61ee44a7445191701db204b19545b279d614e98cd4c06d498",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0
+    },
+    {
+      "name": "animals-category",
+      "recipe": "testing\\output\\treehouse\\research-music-followup\\category-render.py",
+      "recipe_sha256": "b4d9d0ddc09bdf238f9b5b4368cfbb4057d2d9c061adbda747de909822ee1c4b",
+      "reference": "testing\\output\\treehouse\\research-music-followup\\ensemble\\state\\click-1.png",
+      "reference_sha256": "74618d23cb15a054f0e720b184bce431402b0b9ebf0cedc0d8f9d8e1092754f7",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0
+    },
+    {
+      "name": "advanced-lion-score",
+      "recipe": "testing\\output\\treehouse\\research-music-followup\\advanced-score.py",
+      "recipe_sha256": "0597549f66ebb5b92f3d16509cc604ec29cac61b63b94d59cf7ee1d0dc4d060e",
+      "reference": "testing\\output\\treehouse\\research-music-followup\\menus\\state\\click-1.png",
+      "reference_sha256": "5486e518789268c137efcf258ffbf461312c25c64e17ffc1fa1521311d4507e0",
+      "compared_pixels": 15900,
+      "mismatched_pixels": 0
+    }
+  ]
+}

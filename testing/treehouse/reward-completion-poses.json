@@ -1,0 +1,1626 @@
+{
+  "html_sha256": "65ad84205be751674ef020229f7234aa2be4f0d05702dbfd26e5e1efb1c64a5f",
+  "branches": {
+    "robot": [
+      {
+        "name": "present",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 1988,
+        "native_tick": 128656,
+        "native_image": "frames/320x200-aa41597e617e619cd0f164be240d661ea0e0ef9b2df7d5ca22103e6ee2948ada.png",
+        "first_run": 1849,
+        "last_run": 1988,
+        "first_tick": 128537,
+        "last_tick": 128656,
+        "model": {
+          "phase": "present",
+          "hold": 120
+        }
+      },
+      {
+        "name": "flight-0-258-142",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 1991,
+        "native_tick": 128659,
+        "native_image": "frames/320x200-a302b163a86b310a0b22fe12752caa9aad0dd2f3c3e84c21fc0f20065c15c00e.png",
+        "first_run": 1989,
+        "last_run": 1991,
+        "first_tick": 128657,
+        "last_tick": 128659,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 258,
+            "y": 142
+          },
+          "step": 0,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-8-259-135",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 1995,
+        "native_tick": 128662,
+        "native_image": "frames/320x200-a67de1a3240dcd216e5673219524cc1f374f1553790d7cdf39d03a4334626dfb.png",
+        "first_run": 1992,
+        "last_run": 1995,
+        "first_tick": 128660,
+        "last_tick": 128662,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 259,
+            "y": 135
+          },
+          "step": 8,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-16-259-127",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 1998,
+        "native_tick": 128665,
+        "native_image": "frames/320x200-b49fa8fb631e54f15d5393f26d73f578b2cd98280dab5824c3755efaedb87ec1.png",
+        "first_run": 1996,
+        "last_run": 1998,
+        "first_tick": 128663,
+        "last_tick": 128665,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 259,
+            "y": 127
+          },
+          "step": 16,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-24-259-119",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2002,
+        "native_tick": 128668,
+        "native_image": "frames/320x200-a5c41b1536a7cb778395f32c9d7ecf0acc3f29e76a02f881b8350b73ae14f48d.png",
+        "first_run": 2000,
+        "last_run": 2002,
+        "first_tick": 128667,
+        "last_tick": 128668,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 259,
+            "y": 119
+          },
+          "step": 24,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-32-259-111",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2006,
+        "native_tick": 128672,
+        "native_image": "frames/320x200-228c73261c4699ed9ecd55356b4c681dc924d3dd1061858044ec5b6452fe5eba.png",
+        "first_run": 2003,
+        "last_run": 2006,
+        "first_tick": 128669,
+        "last_tick": 128672,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 259,
+            "y": 111
+          },
+          "step": 32,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-40-260-104",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2009,
+        "native_tick": 128674,
+        "native_image": "frames/320x200-b8f8cfa73c6c3cf5f60dcf0fed891a54f06aaf9f242ab86f17f99aaecc8e553c.png",
+        "first_run": 2007,
+        "last_run": 2009,
+        "first_tick": 128673,
+        "last_tick": 128674,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 260,
+            "y": 104
+          },
+          "step": 40,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-48-260-96",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2013,
+        "native_tick": 128678,
+        "native_image": "frames/320x200-5cba47e21ce01ebc1bb6e1b41eca43d058fc840df979af37d73345c77544aefa.png",
+        "first_run": 2010,
+        "last_run": 2013,
+        "first_tick": 128675,
+        "last_tick": 128678,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 260,
+            "y": 96
+          },
+          "step": 48,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-56-260-88",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2016,
+        "native_tick": 128680,
+        "native_image": "frames/320x200-6adfb44af71dca56b6da6675fa626e22f9dbcb6c5b2985174528ba9941aec421.png",
+        "first_run": 2014,
+        "last_run": 2016,
+        "first_tick": 128679,
+        "last_tick": 128680,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 260,
+            "y": 88
+          },
+          "step": 56,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-64-260-80",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2020,
+        "native_tick": 128684,
+        "native_image": "frames/320x200-d7f76fcf07daf218964bf45f7db6aa1e3822c8854fd3729ceb87ca7b2f0e07b3.png",
+        "first_run": 2017,
+        "last_run": 2020,
+        "first_tick": 128681,
+        "last_tick": 128684,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 260,
+            "y": 80
+          },
+          "step": 64,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-72-261-73",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2023,
+        "native_tick": 128686,
+        "native_image": "frames/320x200-a89c060aba4a195fa4bce0bb964ab9f8eb9fdba97f1a4bd5bd01519c084427f8.png",
+        "first_run": 2021,
+        "last_run": 2023,
+        "first_tick": 128685,
+        "last_tick": 128686,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 261,
+            "y": 73
+          },
+          "step": 72,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-80-261-65",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2027,
+        "native_tick": 128690,
+        "native_image": "frames/320x200-cc49a0d4a8a1492093ad18d73a4567a06cda1aa529ed17dbfa48d1c3aa766ba1.png",
+        "first_run": 2024,
+        "last_run": 2027,
+        "first_tick": 128687,
+        "last_tick": 128690,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 261,
+            "y": 65
+          },
+          "step": 80,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-88-261-57",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2030,
+        "native_tick": 128692,
+        "native_image": "frames/320x200-8e619fbbad32292fc57c4f80f0dc69dd89576271e83982aa154fc75267873afe.png",
+        "first_run": 2028,
+        "last_run": 2030,
+        "first_tick": 128691,
+        "last_tick": 128692,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 261,
+            "y": 57
+          },
+          "step": 88,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-96-261-49",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2034,
+        "native_tick": 128696,
+        "native_image": "frames/320x200-0e413b6747eb738aaeec0269430c4fcb65296d963211022bf01ab655a27c7d1d.png",
+        "first_run": 2031,
+        "last_run": 2034,
+        "first_tick": 128693,
+        "last_tick": 128696,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 261,
+            "y": 49
+          },
+          "step": 96,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-104-261-41",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2037,
+        "native_tick": 128698,
+        "native_image": "frames/320x200-e35687f1c164ac5e64fc71cc5c4766c5b9a6e234b2756f7f0815a2b27ed147d0.png",
+        "first_run": 2035,
+        "last_run": 2037,
+        "first_tick": 128697,
+        "last_tick": 128698,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 261,
+            "y": 41
+          },
+          "step": 104,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-112-262-34",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2041,
+        "native_tick": 128702,
+        "native_image": "frames/320x200-cfb0879bf8859eea4ba99fd7f8de1039a915becef14dfe2c528d9718bc9c7c3f.png",
+        "first_run": 2038,
+        "last_run": 2041,
+        "first_tick": 128699,
+        "last_tick": 128702,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 262,
+            "y": 34
+          },
+          "step": 112,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-120-262-26",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2044,
+        "native_tick": 128704,
+        "native_image": "frames/320x200-365f0f71b57165b53820a7d41ad81fae4a9183bf6a69e22d3f43be952817d741.png",
+        "first_run": 2042,
+        "last_run": 2044,
+        "first_tick": 128703,
+        "last_tick": 128704,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 262,
+            "y": 26
+          },
+          "step": 120,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-128-262-18",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2048,
+        "native_tick": 128708,
+        "native_image": "frames/320x200-786f27897623b366dbdf5768ac64ec07c554d99dc2c48794697a1ae93ceb62c4.png",
+        "first_run": 2046,
+        "last_run": 2048,
+        "first_tick": 128706,
+        "last_tick": 128708,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 262,
+            "y": 18
+          },
+          "step": 128,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-136-262-10",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2052,
+        "native_tick": 128711,
+        "native_image": "frames/320x200-1c321ea7b1dd146b4d8214c2e67228f5c36b480d56b02148a9f5d4805a60123f.png",
+        "first_run": 2049,
+        "last_run": 2052,
+        "first_tick": 128709,
+        "last_tick": 128711,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 262,
+            "y": 10
+          },
+          "step": 136,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-142-262-4",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2055,
+        "native_tick": 128714,
+        "native_image": "frames/320x200-d8d8efc8877db5ce4273371346a60aba145e32b1116edae36268efc79afb6e4d.png",
+        "first_run": 2053,
+        "last_run": 2055,
+        "first_tick": 128712,
+        "last_tick": 128714,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 967,
+            "palette": 960,
+            "x": 262,
+            "y": 4
+          },
+          "step": 142,
+          "hold": 3
+        }
+      },
+      {
+        "name": "burst-923",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2060,
+        "native_tick": 128718,
+        "native_image": "frames/320x200-0e8dd9ca139d8b36598f2ee625e12d5080870b30f667a12f5442ff5c27f1cd5a.png",
+        "first_run": 2056,
+        "last_run": 2060,
+        "first_tick": 128715,
+        "last_tick": 128718,
+        "model": {
+          "phase": "burst-923",
+          "hold": 4
+        }
+      },
+      {
+        "name": "burst-924",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2064,
+        "native_tick": 128721,
+        "native_image": "frames/320x200-278c378172ab5f8d26c411f9a6dae0f8d363404475268730672fc9577711e7ed.png",
+        "first_run": 2061,
+        "last_run": 2064,
+        "first_tick": 128719,
+        "last_tick": 128721,
+        "model": {
+          "phase": "burst-924",
+          "hold": 4
+        }
+      },
+      {
+        "name": "burst-925",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2069,
+        "native_tick": 128726,
+        "native_image": "frames/320x200-50416115ebea45835afb98fcc1fe67ba564fe026e2c4026f85d5d5fc9347bd80.png",
+        "first_run": 2065,
+        "last_run": 2069,
+        "first_tick": 128722,
+        "last_tick": 128726,
+        "model": {
+          "phase": "burst-925",
+          "hold": 4
+        }
+      },
+      {
+        "name": "settle",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2139,
+        "native_tick": 128786,
+        "native_image": "frames/320x200-3b417e22b5df44c2de4a5008d89c697a5d29d53fe74f0ac1a30a7850fda81169.png",
+        "first_run": 1845,
+        "last_run": 2139,
+        "first_tick": 128534,
+        "last_tick": 128786,
+        "model": {
+          "phase": "settle",
+          "hold": 60
+        }
+      }
+    ],
+    "human": [
+      {
+        "name": "present",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2429,
+        "native_tick": 11681,
+        "native_image": "frames/320x200-5249d911c7fac84293d640d070aa4f311187ddce6ae8171421b44d0579d279d8.png",
+        "first_run": 2290,
+        "last_run": 2429,
+        "first_tick": 11562,
+        "last_tick": 11681,
+        "model": {
+          "phase": "present",
+          "hold": 120
+        }
+      },
+      {
+        "name": "flight-0-71-54",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2433,
+        "native_tick": 11685,
+        "native_image": "frames/320x200-32279541d35b7911417df6b779080c90e011b4b7cc795435081ed6aad8309f56.png",
+        "first_run": 2430,
+        "last_run": 2433,
+        "first_tick": 11682,
+        "last_tick": 11685,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 71,
+            "y": 54
+          },
+          "step": 0,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-8-78-53",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2436,
+        "native_tick": 11687,
+        "native_image": "frames/320x200-c01613df10d8ea92925497facccae7188c830f3d38bcf74612c2371ff6456600.png",
+        "first_run": 2434,
+        "last_run": 2436,
+        "first_tick": 11686,
+        "last_tick": 11687,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 78,
+            "y": 53
+          },
+          "step": 8,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-16-84-51",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2440,
+        "native_tick": 11691,
+        "native_image": "frames/320x200-f92fcac83fde7fe226cd94be595b022c35e200c082939f236be8dd048f45cd5f.png",
+        "first_run": 2437,
+        "last_run": 2440,
+        "first_tick": 11688,
+        "last_tick": 11691,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 84,
+            "y": 51
+          },
+          "step": 16,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-24-91-50",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2443,
+        "native_tick": 11693,
+        "native_image": "frames/320x200-8bf14f7e6a99d8f27139eb6f6f8b6b00612ab378b7ba6aab83406e5509fa7fbc.png",
+        "first_run": 2441,
+        "last_run": 2443,
+        "first_tick": 11692,
+        "last_tick": 11693,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 91,
+            "y": 50
+          },
+          "step": 24,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-32-98-49",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2447,
+        "native_tick": 11697,
+        "native_image": "frames/320x200-e4ecb65acf028787c0770191b3c4b80eefde63cb9a085cc010455c2da3b79c2c.png",
+        "first_run": 2444,
+        "last_run": 2447,
+        "first_tick": 11694,
+        "last_tick": 11697,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 98,
+            "y": 49
+          },
+          "step": 32,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-40-104-47",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2450,
+        "native_tick": 11699,
+        "native_image": "frames/320x200-3b6eabde401a3d12ba8305c7adf352276538f1abfeb60f51aaee5bef6af6e056.png",
+        "first_run": 2448,
+        "last_run": 2450,
+        "first_tick": 11698,
+        "last_tick": 11699,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 104,
+            "y": 47
+          },
+          "step": 40,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-48-111-46",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2454,
+        "native_tick": 11703,
+        "native_image": "frames/320x200-42656888fb758645825ab9937310af59d1a4df394a770c50e0fd620c4e36ba28.png",
+        "first_run": 2451,
+        "last_run": 2454,
+        "first_tick": 11700,
+        "last_tick": 11703,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 111,
+            "y": 46
+          },
+          "step": 48,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-56-117-44",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2457,
+        "native_tick": 11705,
+        "native_image": "frames/320x200-0f9fc19bbf619971cdb2bbd96b2d0ef510f3d8ce6e4b67fb89dd4f48a679d68c.png",
+        "first_run": 2455,
+        "last_run": 2457,
+        "first_tick": 11704,
+        "last_tick": 11705,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 117,
+            "y": 44
+          },
+          "step": 56,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-64-124-43",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2461,
+        "native_tick": 11709,
+        "native_image": "frames/320x200-5b4bad589056176b34c5203e5bb3685ecbecc05fa45aa6b43fa370140d61e664.png",
+        "first_run": 2458,
+        "last_run": 2461,
+        "first_tick": 11706,
+        "last_tick": 11709,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 124,
+            "y": 43
+          },
+          "step": 64,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-72-131-42",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2464,
+        "native_tick": 11711,
+        "native_image": "frames/320x200-e8a5d03655d5d476fb3a66ba396fc396c9e2de9d273897d96f81c67294a09861.png",
+        "first_run": 2462,
+        "last_run": 2464,
+        "first_tick": 11710,
+        "last_tick": 11711,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 131,
+            "y": 42
+          },
+          "step": 72,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-80-137-40",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2468,
+        "native_tick": 11715,
+        "native_image": "frames/320x200-07d468a55715ba62444a2b0b25790877684187203b16614006611c7aeffb2f65.png",
+        "first_run": 2465,
+        "last_run": 2468,
+        "first_tick": 11712,
+        "last_tick": 11715,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 137,
+            "y": 40
+          },
+          "step": 80,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-88-144-39",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2471,
+        "native_tick": 11717,
+        "native_image": "frames/320x200-e36623240652096d633503ad82894464732ab3c138dd7ec3413cd52ff34537aa.png",
+        "first_run": 2469,
+        "last_run": 2471,
+        "first_tick": 11716,
+        "last_tick": 11717,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 144,
+            "y": 39
+          },
+          "step": 88,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-96-150-37",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2475,
+        "native_tick": 11721,
+        "native_image": "frames/320x200-0778f1d9f96e9b1fab14105724dcebe0ed43e534b0ea9cc85d7e538a44f7ac52.png",
+        "first_run": 2472,
+        "last_run": 2475,
+        "first_tick": 11718,
+        "last_tick": 11721,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 150,
+            "y": 37
+          },
+          "step": 96,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-104-157-36",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2478,
+        "native_tick": 11723,
+        "native_image": "frames/320x200-fc8a34175a3dc9b0dd47f8f9e13c83f07540bac428703842162a6fab9f189760.png",
+        "first_run": 2476,
+        "last_run": 2478,
+        "first_tick": 11722,
+        "last_tick": 11723,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 157,
+            "y": 36
+          },
+          "step": 104,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-112-164-35",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2482,
+        "native_tick": 11727,
+        "native_image": "frames/320x200-555b9e593258481d7287a523f210f35468e4d009eac87b9d0ffe7264d6104aba.png",
+        "first_run": 2479,
+        "last_run": 2482,
+        "first_tick": 11724,
+        "last_tick": 11727,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 164,
+            "y": 35
+          },
+          "step": 112,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-120-170-33",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2485,
+        "native_tick": 11729,
+        "native_image": "frames/320x200-53c9159593803c591f5cd99d47a103d464fedc754e1d9aff736e6079941f6e61.png",
+        "first_run": 2483,
+        "last_run": 2485,
+        "first_tick": 11728,
+        "last_tick": 11729,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 170,
+            "y": 33
+          },
+          "step": 120,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-128-177-32",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2489,
+        "native_tick": 11733,
+        "native_image": "frames/320x200-22ddd6e0b5242b4cd2b42b9f85c39e647a0539b7462b98dee574e40038b8977e.png",
+        "first_run": 2486,
+        "last_run": 2489,
+        "first_tick": 11730,
+        "last_tick": 11733,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 177,
+            "y": 32
+          },
+          "step": 128,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-136-183-30",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2492,
+        "native_tick": 11735,
+        "native_image": "frames/320x200-a06f3292690f14e0cf923f7b2cd5d279111f3e1cbd9a0ae1200882f453a3b7da.png",
+        "first_run": 2490,
+        "last_run": 2492,
+        "first_tick": 11734,
+        "last_tick": 11735,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 183,
+            "y": 30
+          },
+          "step": 136,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-144-190-29",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2496,
+        "native_tick": 11739,
+        "native_image": "frames/320x200-db05a7c223dbe1d49e946f2aa28fc78bbbfaf41c16a78b5fa2b41da919e870bb.png",
+        "first_run": 2493,
+        "last_run": 2496,
+        "first_tick": 11736,
+        "last_tick": 11739,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 190,
+            "y": 29
+          },
+          "step": 144,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-152-197-28",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2499,
+        "native_tick": 11741,
+        "native_image": "frames/320x200-0a032d99e5f4ecc35312c54e8cd6b8b17e24085a4cfd6501194791e460027340.png",
+        "first_run": 2497,
+        "last_run": 2499,
+        "first_tick": 11740,
+        "last_tick": 11741,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 197,
+            "y": 28
+          },
+          "step": 152,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-160-203-26",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2503,
+        "native_tick": 11745,
+        "native_image": "frames/320x200-2dfefe53444cf051cb71e3ad987755a1131b1b2dd73126f84b2f20d137ddc801.png",
+        "first_run": 2500,
+        "last_run": 2503,
+        "first_tick": 11742,
+        "last_tick": 11745,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 203,
+            "y": 26
+          },
+          "step": 160,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-168-210-25",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2506,
+        "native_tick": 11747,
+        "native_image": "frames/320x200-0e41c0aa2835764c966e0795667a95c4dec3de103c31f4a3ef51891f0b8d2f22.png",
+        "first_run": 2504,
+        "last_run": 2506,
+        "first_tick": 11746,
+        "last_tick": 11747,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 210,
+            "y": 25
+          },
+          "step": 168,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-176-217-24",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2510,
+        "native_tick": 11751,
+        "native_image": "frames/320x200-20f39475590542a99c2b958458eec64e97b026b1cdaf83daf4b93abf0982c380.png",
+        "first_run": 2507,
+        "last_run": 2510,
+        "first_tick": 11748,
+        "last_tick": 11751,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 217,
+            "y": 24
+          },
+          "step": 176,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-184-223-22",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2513,
+        "native_tick": 11753,
+        "native_image": "frames/320x200-b6c46462a3363ef98b25b097feb15be55696ae11cf653dce11a8f699b4223697.png",
+        "first_run": 2511,
+        "last_run": 2513,
+        "first_tick": 11752,
+        "last_tick": 11753,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 223,
+            "y": 22
+          },
+          "step": 184,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-192-230-21",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2517,
+        "native_tick": 11757,
+        "native_image": "frames/320x200-0d8437e2ee37ac5426148d211897ddd6250dc94725b540fe1ba4b65f19758279.png",
+        "first_run": 2514,
+        "last_run": 2517,
+        "first_tick": 11754,
+        "last_tick": 11757,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 230,
+            "y": 21
+          },
+          "step": 192,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-200-236-19",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2520,
+        "native_tick": 11759,
+        "native_image": "frames/320x200-416d93d142f027a472165e097517d47b43ba767458b34633f9480610919b3c77.png",
+        "first_run": 2518,
+        "last_run": 2520,
+        "first_tick": 11758,
+        "last_tick": 11759,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 236,
+            "y": 19
+          },
+          "step": 200,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-208-243-18",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2524,
+        "native_tick": 11763,
+        "native_image": "frames/320x200-22e83b767316afd1111d6e5c37b1f42aa40e035084e25debc4c787be49cef16b.png",
+        "first_run": 2521,
+        "last_run": 2524,
+        "first_tick": 11760,
+        "last_tick": 11763,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 243,
+            "y": 18
+          },
+          "step": 208,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-216-250-17",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2527,
+        "native_tick": 11765,
+        "native_image": "frames/320x200-70337723e6e65efbd2f33709230315610e10bd519bb5f2686e3138119ab68e5e.png",
+        "first_run": 2525,
+        "last_run": 2527,
+        "first_tick": 11764,
+        "last_tick": 11765,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 250,
+            "y": 17
+          },
+          "step": 216,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-224-256-15",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2531,
+        "native_tick": 11769,
+        "native_image": "frames/320x200-4c878e10e7485fbb4724eb0b80aa902e135608cd79949ca05bb8e5c0cc78fbf9.png",
+        "first_run": 2528,
+        "last_run": 2531,
+        "first_tick": 11766,
+        "last_tick": 11769,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 256,
+            "y": 15
+          },
+          "step": 224,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-232-263-14",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2534,
+        "native_tick": 11771,
+        "native_image": "frames/320x200-bbcbd5cad6d49e7881bfcfd13453c220790209e3824fdf7a7dd3295ea388dfa1.png",
+        "first_run": 2532,
+        "last_run": 2534,
+        "first_tick": 11770,
+        "last_tick": 11771,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 263,
+            "y": 14
+          },
+          "step": 232,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-240-269-12",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2538,
+        "native_tick": 11775,
+        "native_image": "frames/320x200-3463bc134971d8abfcc0a356f35b84b36f337754b75801ee527dc33c3fe0da04.png",
+        "first_run": 2535,
+        "last_run": 2538,
+        "first_tick": 11772,
+        "last_tick": 11775,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 269,
+            "y": 12
+          },
+          "step": 240,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-248-276-11",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2541,
+        "native_tick": 11777,
+        "native_image": "frames/320x200-5f9b58236b7d497cc199174d6583d917a6f9cf30d7ea4d1674836bf5abee271a.png",
+        "first_run": 2539,
+        "last_run": 2541,
+        "first_tick": 11776,
+        "last_tick": 11777,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 276,
+            "y": 11
+          },
+          "step": 248,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-256-283-10",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2545,
+        "native_tick": 11781,
+        "native_image": "frames/320x200-51e0fc29e83aefe740184af1609a589231395cf858f5f0072bd180e0940360a5.png",
+        "first_run": 2542,
+        "last_run": 2545,
+        "first_tick": 11778,
+        "last_tick": 11781,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 283,
+            "y": 10
+          },
+          "step": 256,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-264-289-8",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2548,
+        "native_tick": 11783,
+        "native_image": "frames/320x200-2359d56a0245590a979a613a372a3296a92c11b9c5654d43ed5cec5168e7be1a.png",
+        "first_run": 2546,
+        "last_run": 2548,
+        "first_tick": 11782,
+        "last_tick": 11783,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 289,
+            "y": 8
+          },
+          "step": 264,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-272-296-7",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2552,
+        "native_tick": 11787,
+        "native_image": "frames/320x200-27e6dcc52127a5a40cb171e888eacbf0c424528786ba0c697feb1cd165ee67e1.png",
+        "first_run": 2549,
+        "last_run": 2552,
+        "first_tick": 11784,
+        "last_tick": 11787,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 296,
+            "y": 7
+          },
+          "step": 272,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-280-302-5",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2555,
+        "native_tick": 11789,
+        "native_image": "frames/320x200-9b785285b6ddf3dffed6c7a11a91b447ebe85ce084e1344e80ffde685396aadc.png",
+        "first_run": 2553,
+        "last_run": 2555,
+        "first_tick": 11788,
+        "last_tick": 11789,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 302,
+            "y": 5
+          },
+          "step": 280,
+          "hold": 3
+        }
+      },
+      {
+        "name": "flight-282-304-5",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2559,
+        "native_tick": 11793,
+        "native_image": "frames/320x200-d4759355fe36013df402ecc5e6147b50549471d677c32f8c2861d7944628df59.png",
+        "first_run": 2556,
+        "last_run": 2559,
+        "first_tick": 11790,
+        "last_tick": 11793,
+        "model": {
+          "phase": "transfer",
+          "sprite": {
+            "id": 879,
+            "palette": 870,
+            "x": 304,
+            "y": 5
+          },
+          "step": 282,
+          "hold": 3
+        }
+      },
+      {
+        "name": "burst-923",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2564,
+        "native_tick": 11797,
+        "native_image": "frames/320x200-bf0d249236edf6339a0fbf6fa4cfd2ec23501459b428c3dfec8d545821faac29.png",
+        "first_run": 2560,
+        "last_run": 2564,
+        "first_tick": 11794,
+        "last_tick": 11797,
+        "model": {
+          "phase": "burst-923",
+          "hold": 4
+        }
+      },
+      {
+        "name": "burst-924",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2568,
+        "native_tick": 11800,
+        "native_image": "frames/320x200-7d90283e65640bc12ce4f5fc059fa562aff62360cf4bdf75eccb175e6110c597.png",
+        "first_run": 2565,
+        "last_run": 2568,
+        "first_tick": 11798,
+        "last_tick": 11800,
+        "model": {
+          "phase": "burst-924",
+          "hold": 4
+        }
+      },
+      {
+        "name": "burst-925",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2573,
+        "native_tick": 11805,
+        "native_image": "frames/320x200-68b5308ac88314c1296fe4c2ed1964722139557ac0fec2a93c3ec2538b5d335d.png",
+        "first_run": 2569,
+        "last_run": 2573,
+        "first_tick": 11801,
+        "last_tick": 11805,
+        "model": {
+          "phase": "burst-925",
+          "hold": 4
+        }
+      },
+      {
+        "name": "settle",
+        "different_pixels": 0,
+        "bounds": null,
+        "native_run": 2578,
+        "native_tick": 11809,
+        "native_image": "frames/320x200-66a85ee50f9c8671ea98b06a6c8389f03f957f0e2cd0b1175b4e537d5d7bea46.png",
+        "first_run": 2285,
+        "last_run": 2578,
+        "first_tick": 11558,
+        "last_tick": 11809,
+        "model": {
+          "phase": "settle",
+          "hold": 0
+        }
+      }
+    ]
+  },
+  "branch_inputs": {
+    "robot": {
+      "activity": "boardgame",
+      "mode": 0,
+      "role": 2,
+      "pointer": [
+        241,
+        165
+      ],
+      "choices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "selected": 0,
+      "presentation": [
+        105,
+        222,
+        198,
+        312
+      ],
+      "destination": [
+        1,
+        261,
+        26,
+        282
+      ],
+      "large": 961,
+      "small": 967,
+      "palette": 960
+    },
+    "human": {
+      "activity": "nature",
+      "mode": "quiz",
+      "role": 0,
+      "pointer": [
+        47,
+        65
+      ],
+      "choices": [
+        2,
+        6,
+        7,
+        0,
+        3,
+        4
+      ],
+      "selected": 0,
+      "presentation": [
+        6,
+        30,
+        116,
+        128
+      ],
+      "destination": [
+        1,
+        304,
+        23,
+        320
+      ],
+      "large": 873,
+      "small": 879,
+      "palette": 870
+    }
+  },
+  "audio": [
+    {
+      "id": 1050,
+      "samples": 1125,
+      "stored_rate": 11000,
+      "requested_rate": 11000,
+      "reference_rate": 11111,
+      "seconds": 0.1012510125101251,
+      "ticks": 6.07517276520447,
+      "loop": false,
+      "pcm_sha256": "e4c8593597cdce5ebfe7f93c5a81887ab446eab7689e92c114742d7f4bc8f96e"
+    },
+    {
+      "id": 1051,
+      "samples": 1168,
+      "stored_rate": 11000,
+      "requested_rate": 11000,
+      "reference_rate": 11111,
+      "seconds": 0.1051210512105121,
+      "ticks": 6.307379368674507,
+      "loop": false,
+      "pcm_sha256": "14ea5a33fd867ce9e9c123ed383d83c6a1e5f04b70f07e87fa9cc9f4091c9672"
+    },
+    {
+      "id": 1052,
+      "samples": 1352,
+      "stored_rate": 11000,
+      "requested_rate": 11000,
+      "reference_rate": 11111,
+      "seconds": 0.12168121681216812,
+      "ticks": 7.301007625383504,
+      "loop": false,
+      "pcm_sha256": "1eac4c5f4b0bb606b2b9b7d0da430f847b19a484ab564d8ade43dce1f0e9d95d"
+    },
+    {
+      "id": 1053,
+      "samples": 1280,
+      "stored_rate": 11000,
+      "requested_rate": 11000,
+      "reference_rate": 11111,
+      "seconds": 0.11520115201152012,
+      "ticks": 6.91219656841042,
+      "loop": false,
+      "pcm_sha256": "ac9564ea9e66da59cf2ae7b6a25c62cea8e465f0aa27febcdcdc7dc86ca89d85"
+    },
+    {
+      "id": 1054,
+      "samples": 1184,
+      "stored_rate": 11000,
+      "requested_rate": 11000,
+      "reference_rate": 11111,
+      "seconds": 0.1065610656106561,
+      "ticks": 6.393781825779638,
+      "loop": false,
+      "pcm_sha256": "3ae24d4184c59451218d6d87082834feda7fe2851dbf856f59d7e1680f729b05"
+    },
+    {
+      "id": 1055,
+      "samples": 1157,
+      "stored_rate": 11000,
+      "requested_rate": 11000,
+      "reference_rate": 11111,
+      "seconds": 0.1041310413104131,
+      "ticks": 6.24797767941473,
+      "loop": false,
+      "pcm_sha256": "45f83af7de8837ec108b2d3bb9141cb4f36d5fb34e1386f129d5c6012030a126"
+    },
+    {
+      "id": 10024,
+      "samples": 9440,
+      "stored_rate": 11000,
+      "requested_rate": 22050,
+      "reference_rate": 22222,
+      "seconds": 0.4248042480424804,
+      "ticks": 25.48872484601342,
+      "loop": false,
+      "pcm_sha256": "ca20744973dce3d7185051cd2671c55e06da5dd38d1d7dde0717207ee080eb37"
+    },
+    {
+      "id": 10034,
+      "samples": 16248,
+      "stored_rate": 11000,
+      "requested_rate": 11000,
+      "reference_rate": 11111,
+      "seconds": 1.4623346233462335,
+      "ticks": 87.74169519025976,
+      "loop": false,
+      "pcm_sha256": "34e53ac886f60bf0823c6cf61acdb2fd06fc5dde742b2024accd158e730d35a7"
+    },
+    {
+      "id": 10035,
+      "samples": 11584,
+      "stored_rate": 11000,
+      "requested_rate": 11000,
+      "reference_rate": 11111,
+      "seconds": 1.042570425704257,
+      "ticks": 62.55537894411429,
+      "loop": false,
+      "pcm_sha256": "f4a93fd7363d7fb0db297a24ee4e35a517ddad0fd9d60b6dff2f946928913785"
+    }
+  ]
+}

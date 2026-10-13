@@ -1,0 +1,119 @@
+[
+  {
+    "frames": 1800,
+    "capture": "title"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -128,
+      "dy": 90
+    },
+    "capture": "mouse-moved"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "after-click"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 78,
+      "dy": -74
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 600,
+    "capture": "nature"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 52,
+      "dy": -176
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "night"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -94,
+      "dy": -2
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "food"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "plants"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -200,
+      "dy": 76
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "mammals"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 4,
+      "dy": 112
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "animal"
+  }
+]

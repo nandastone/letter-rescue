@@ -1,0 +1,123 @@
+[
+  {
+    "frames": 1800,
+    "capture": "title"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -128,
+      "dy": 90
+    },
+    "capture": "mouse-moved"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "after-click"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -30,
+      "dy": -102
+    },
+    "capture": "chalk-pointer"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 30,
+    "capture": "chalk-picked"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 0,
+      "dy": -48
+    },
+    "capture": "chalk-position"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 30,
+    "capture": "chalk-dot"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 70,
+      "dy": 0,
+      "left": true
+    }
+  },
+  {
+    "frames": 30,
+    "capture": "chalk-stroke"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 116,
+      "dy": 50
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 60,
+    "capture": "eraser-picked"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -120,
+      "dy": -50
+    },
+    "capture": "eraser-position"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -4,
+      "dy": -4,
+      "left": true
+    }
+  },
+  {
+    "frames": 30,
+    "capture": "erased"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 180,
+      "dy": 100
+    },
+    "capture": "tool-returned"
+  }
+]

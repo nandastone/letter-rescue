@@ -1,0 +1,512 @@
+{
+  "schema": 1,
+  "recipe": "testing\\output\\treehouse\\research-maze-completion\\render-drawer.py",
+  "recipe_sha256": "eea60da2a38554535d25dda4e09a966d69f504083dadc617c8a7286fd16d3bce",
+  "method": "Independent source/resource renderer, compared by exact RGB SHA-256 with original DOS callback frames; no native pixels are used to construct frames.",
+  "positions": [
+    {
+      "bar_y": 106,
+      "independent_rgb_sha256": "5a4aff503f15c51971347590360949c3e34237966ec9bb55b17fa2031470222f",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1839,
+          "original_tick": 8075,
+          "image": "frames/320x200-5a4aff503f15c51971347590360949c3e34237966ec9bb55b17fa2031470222f.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1840,
+          "original_tick": 8076,
+          "image": "frames/320x200-5a4aff503f15c51971347590360949c3e34237966ec9bb55b17fa2031470222f.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 104,
+      "independent_rgb_sha256": "73d62531f5de84861e929d9efff894d3051c1a8f0d6dc05b0166031393f7c270",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 6,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1841,
+          "original_tick": 8077,
+          "image": "frames/320x200-73d62531f5de84861e929d9efff894d3051c1a8f0d6dc05b0166031393f7c270.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1842,
+          "original_tick": 8078,
+          "image": "frames/320x200-73d62531f5de84861e929d9efff894d3051c1a8f0d6dc05b0166031393f7c270.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 102,
+      "independent_rgb_sha256": "7a4fecf61f12e7291fe6091ecfbbec8f4fa3a4ab9fc779c4c4d1b4c1f119bd27",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1844,
+          "original_tick": 8079,
+          "image": "frames/320x200-7a4fecf61f12e7291fe6091ecfbbec8f4fa3a4ab9fc779c4c4d1b4c1f119bd27.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1845,
+          "original_tick": 8080,
+          "image": "frames/320x200-7a4fecf61f12e7291fe6091ecfbbec8f4fa3a4ab9fc779c4c4d1b4c1f119bd27.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 100,
+      "independent_rgb_sha256": "cc962feafad443b5a77b723f4de1331aeee83132d1f9eaf5e018defcd71095ad",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 5,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1846,
+          "original_tick": 8081,
+          "image": "frames/320x200-cc962feafad443b5a77b723f4de1331aeee83132d1f9eaf5e018defcd71095ad.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1847,
+          "original_tick": 8082,
+          "image": "frames/320x200-cc962feafad443b5a77b723f4de1331aeee83132d1f9eaf5e018defcd71095ad.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 98,
+      "independent_rgb_sha256": "76860a4b585010985026dcc9167724c80dfdd3e03133ebb66adfe0dd11bb5e94",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1849,
+          "original_tick": 8084,
+          "image": "frames/320x200-76860a4b585010985026dcc9167724c80dfdd3e03133ebb66adfe0dd11bb5e94.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1850,
+          "original_tick": 8085,
+          "image": "frames/320x200-76860a4b585010985026dcc9167724c80dfdd3e03133ebb66adfe0dd11bb5e94.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 96,
+      "independent_rgb_sha256": "c194d5539a6ef13233bc88be313f2a212ba90225bf867f1b13d56dc162097ea0",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1851,
+          "original_tick": 8085,
+          "image": "frames/320x200-c194d5539a6ef13233bc88be313f2a212ba90225bf867f1b13d56dc162097ea0.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1852,
+          "original_tick": 8086,
+          "image": "frames/320x200-c194d5539a6ef13233bc88be313f2a212ba90225bf867f1b13d56dc162097ea0.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 94,
+      "independent_rgb_sha256": "c73025575b14e70ea0d9422c46ca31de7131fb64a2db6eb04b7acb15a3e54ae7",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 5,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1853,
+          "original_tick": 8087,
+          "image": "frames/320x200-c73025575b14e70ea0d9422c46ca31de7131fb64a2db6eb04b7acb15a3e54ae7.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1854,
+          "original_tick": 8088,
+          "image": "frames/320x200-c73025575b14e70ea0d9422c46ca31de7131fb64a2db6eb04b7acb15a3e54ae7.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 92,
+      "independent_rgb_sha256": "9f072a13dc0fbf1bcbe5d0cad65106e39f34c951e0ffcdbf2c75130d3f74f662",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1856,
+          "original_tick": 8090,
+          "image": "frames/320x200-9f072a13dc0fbf1bcbe5d0cad65106e39f34c951e0ffcdbf2c75130d3f74f662.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1857,
+          "original_tick": 8091,
+          "image": "frames/320x200-9f072a13dc0fbf1bcbe5d0cad65106e39f34c951e0ffcdbf2c75130d3f74f662.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 90,
+      "independent_rgb_sha256": "7106a416a8bc0e03fa7b1a6892c7152988e86aee3f9215bb30adf47e9e8cc7ee",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1858,
+          "original_tick": 8091,
+          "image": "frames/320x200-7106a416a8bc0e03fa7b1a6892c7152988e86aee3f9215bb30adf47e9e8cc7ee.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1859,
+          "original_tick": 8092,
+          "image": "frames/320x200-7106a416a8bc0e03fa7b1a6892c7152988e86aee3f9215bb30adf47e9e8cc7ee.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 88,
+      "independent_rgb_sha256": "a6100e54cfb6b1c827a2eb7b464f2af881824927418b64b1a0fb986ca1ed9697",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 5,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1860,
+          "original_tick": 8093,
+          "image": "frames/320x200-a6100e54cfb6b1c827a2eb7b464f2af881824927418b64b1a0fb986ca1ed9697.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1861,
+          "original_tick": 8094,
+          "image": "frames/320x200-a6100e54cfb6b1c827a2eb7b464f2af881824927418b64b1a0fb986ca1ed9697.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 86,
+      "independent_rgb_sha256": "c712c60fc74778b54a19fc75beaca6bb0a0bbe4e4778a78eaeffaa757a2ef7c0",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1863,
+          "original_tick": 8096,
+          "image": "frames/320x200-c712c60fc74778b54a19fc75beaca6bb0a0bbe4e4778a78eaeffaa757a2ef7c0.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1864,
+          "original_tick": 8097,
+          "image": "frames/320x200-c712c60fc74778b54a19fc75beaca6bb0a0bbe4e4778a78eaeffaa757a2ef7c0.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 84,
+      "independent_rgb_sha256": "ee0dd3b1c79e3a6f312f42b73c8576007d27cff1ff4b5c92e5493aeb13eb3e12",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1865,
+          "original_tick": 8097,
+          "image": "frames/320x200-ee0dd3b1c79e3a6f312f42b73c8576007d27cff1ff4b5c92e5493aeb13eb3e12.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1866,
+          "original_tick": 8098,
+          "image": "frames/320x200-ee0dd3b1c79e3a6f312f42b73c8576007d27cff1ff4b5c92e5493aeb13eb3e12.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 82,
+      "independent_rgb_sha256": "b39b6e96685c664a9c845c88ae31ac26a25665e3d5368a346523963d0fe1e10b",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 5,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1867,
+          "original_tick": 8099,
+          "image": "frames/320x200-b39b6e96685c664a9c845c88ae31ac26a25665e3d5368a346523963d0fe1e10b.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1868,
+          "original_tick": 8100,
+          "image": "frames/320x200-b39b6e96685c664a9c845c88ae31ac26a25665e3d5368a346523963d0fe1e10b.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 80,
+      "independent_rgb_sha256": "c3352c415897fc1b48672ffa7869c95ce4a064dbb4feac07c3b61177ee150978",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1870,
+          "original_tick": 8102,
+          "image": "frames/320x200-c3352c415897fc1b48672ffa7869c95ce4a064dbb4feac07c3b61177ee150978.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1871,
+          "original_tick": 8103,
+          "image": "frames/320x200-c3352c415897fc1b48672ffa7869c95ce4a064dbb4feac07c3b61177ee150978.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 78,
+      "independent_rgb_sha256": "60b0c0686f6ae69c279553b18b81d428928dd6e16ed5dcb4f0e113186281db1b",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1872,
+          "original_tick": 8103,
+          "image": "frames/320x200-60b0c0686f6ae69c279553b18b81d428928dd6e16ed5dcb4f0e113186281db1b.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1873,
+          "original_tick": 8104,
+          "image": "frames/320x200-60b0c0686f6ae69c279553b18b81d428928dd6e16ed5dcb4f0e113186281db1b.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 76,
+      "independent_rgb_sha256": "56bdd0e5d5709416a5b57e806c878a84146d095420e14248ef03f7163bf55faa",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 5,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1874,
+          "original_tick": 8105,
+          "image": "frames/320x200-56bdd0e5d5709416a5b57e806c878a84146d095420e14248ef03f7163bf55faa.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1875,
+          "original_tick": 8106,
+          "image": "frames/320x200-56bdd0e5d5709416a5b57e806c878a84146d095420e14248ef03f7163bf55faa.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 74,
+      "independent_rgb_sha256": "6f67f2948fc23a46980a2683d6b2531b9d38a0e5afa86cd6ee7a87f0caf788a7",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1877,
+          "original_tick": 8108,
+          "image": "frames/320x200-6f67f2948fc23a46980a2683d6b2531b9d38a0e5afa86cd6ee7a87f0caf788a7.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1878,
+          "original_tick": 8109,
+          "image": "frames/320x200-6f67f2948fc23a46980a2683d6b2531b9d38a0e5afa86cd6ee7a87f0caf788a7.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 72,
+      "independent_rgb_sha256": "217b3924dcb9ef2973a77de8ec47b7d961a1bf1db05c21203205728f25ebb304",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1879,
+          "original_tick": 8109,
+          "image": "frames/320x200-217b3924dcb9ef2973a77de8ec47b7d961a1bf1db05c21203205728f25ebb304.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1880,
+          "original_tick": 8110,
+          "image": "frames/320x200-217b3924dcb9ef2973a77de8ec47b7d961a1bf1db05c21203205728f25ebb304.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 70,
+      "independent_rgb_sha256": "0ff75a7bf516db9dd429f30396fda5855fafbdae6ddd8b649ad935d78c697ef4",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 5,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1881,
+          "original_tick": 8111,
+          "image": "frames/320x200-0ff75a7bf516db9dd429f30396fda5855fafbdae6ddd8b649ad935d78c697ef4.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1882,
+          "original_tick": 8112,
+          "image": "frames/320x200-0ff75a7bf516db9dd429f30396fda5855fafbdae6ddd8b649ad935d78c697ef4.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 68,
+      "independent_rgb_sha256": "e2402038df4dab5d205b78842851e997611fe422009c25b8b23e89240bf34cb5",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1884,
+          "original_tick": 8114,
+          "image": "frames/320x200-e2402038df4dab5d205b78842851e997611fe422009c25b8b23e89240bf34cb5.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1885,
+          "original_tick": 8114,
+          "image": "frames/320x200-e2402038df4dab5d205b78842851e997611fe422009c25b8b23e89240bf34cb5.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 66,
+      "independent_rgb_sha256": "d8c610ca2ceedf92862b7c7fc2b9cb90d925869caa74b6f450f15bc282b86e1c",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1886,
+          "original_tick": 8115,
+          "image": "frames/320x200-d8c610ca2ceedf92862b7c7fc2b9cb90d925869caa74b6f450f15bc282b86e1c.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1887,
+          "original_tick": 8116,
+          "image": "frames/320x200-d8c610ca2ceedf92862b7c7fc2b9cb90d925869caa74b6f450f15bc282b86e1c.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 64,
+      "independent_rgb_sha256": "26351039cfc45dddd1777bf1b6a6e7e8fc83b04f689c62c5fb4d446dfc7a71dd",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 5,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1888,
+          "original_tick": 8117,
+          "image": "frames/320x200-26351039cfc45dddd1777bf1b6a6e7e8fc83b04f689c62c5fb4d446dfc7a71dd.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1889,
+          "original_tick": 8118,
+          "image": "frames/320x200-26351039cfc45dddd1777bf1b6a6e7e8fc83b04f689c62c5fb4d446dfc7a71dd.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 62,
+      "independent_rgb_sha256": "fde2482b4d796b30c560acd0a7ad3af81e5f7e93378a2490b62f4a13fd953fbe",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 4,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1891,
+          "original_tick": 8120,
+          "image": "frames/320x200-fde2482b4d796b30c560acd0a7ad3af81e5f7e93378a2490b62f4a13fd953fbe.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1892,
+          "original_tick": 8120,
+          "image": "frames/320x200-fde2482b4d796b30c560acd0a7ad3af81e5f7e93378a2490b62f4a13fd953fbe.png"
+        }
+      ]
+    },
+    {
+      "bar_y": 60,
+      "independent_rgb_sha256": "30729c7ca0dfe7929a8318b512fbb1dd413654ee4789401850e799e7559e03f4",
+      "compared_pixels": 64000,
+      "mismatched_pixels": 0,
+      "matching_callbacks": 900,
+      "examples": [
+        {
+          "root": "early-win",
+          "callback": 1893,
+          "original_tick": 8121,
+          "image": "frames/320x200-30729c7ca0dfe7929a8318b512fbb1dd413654ee4789401850e799e7559e03f4.png"
+        },
+        {
+          "root": "early-win",
+          "callback": 1894,
+          "original_tick": 8122,
+          "image": "frames/320x200-30729c7ca0dfe7929a8318b512fbb1dd413654ee4789401850e799e7559e03f4.png"
+        }
+      ]
+    }
+  ]
+}

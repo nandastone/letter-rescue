@@ -1,0 +1,141 @@
+{
+  "source_image_sha256": "f2776b04a307996d1a7b4230d49b552b67ad787675b766a7b4c8577ad417973f",
+  "toc_rects": [
+    [
+      27,
+      88,
+      47,
+      193
+    ],
+    [
+      50,
+      88,
+      70,
+      193
+    ],
+    [
+      73,
+      88,
+      93,
+      193
+    ],
+    [
+      27,
+      194,
+      47,
+      299
+    ],
+    [
+      50,
+      194,
+      70,
+      299
+    ],
+    [
+      73,
+      194,
+      93,
+      299
+    ]
+  ],
+  "toc_heading_origin": [
+    137,
+    13
+  ],
+  "toc_roman_origin_y": 93,
+  "print_rects": [
+    [
+      80,
+      60,
+      134,
+      264
+    ],
+    [
+      68,
+      6,
+      166,
+      317
+    ]
+  ],
+  "physical_keys": [
+    90,
+    83,
+    88,
+    68,
+    67,
+    86,
+    71,
+    66,
+    72,
+    78,
+    74,
+    77,
+    44,
+    76,
+    46,
+    59,
+    47
+  ],
+  "physical_scancodes": [
+    44,
+    31,
+    45,
+    32,
+    46,
+    47,
+    34,
+    48,
+    35,
+    49,
+    36,
+    50,
+    51,
+    38,
+    52,
+    39,
+    53
+  ],
+  "yes_frames": [
+    86,
+    87
+  ],
+  "no_frames": [
+    88,
+    89,
+    90,
+    89
+  ],
+  "face_tick_duration": 12,
+  "recipe": "testing\\output\\treehouse\\research-music-completion\\render-toc.py",
+  "recipe_sha256": "766da053f68260be61df278a7404203b8a4ff47ecafe545cb871a6c2c4f210b6",
+  "comparisons": [
+    {
+      "name": "listening-toc1",
+      "reference": "testing\\output\\treehouse\\research-music-completion\\main-capture\\state\\listening-toc1.png",
+      "reference_sha256": "e2cbfa1a37fa0371f7b1fdfcbac4bd6cfebcad06e082c8c80fb709d900a9328c",
+      "compared_pixels": 17785,
+      "mismatched_pixels": 0
+    },
+    {
+      "name": "listening-toc2",
+      "reference": "testing\\output\\treehouse\\research-music-completion\\main-capture\\state\\listening-toc2.png",
+      "reference_sha256": "fc3e48dfbe3f3a260d1031c549832742ef84a44bca2632edc81d1e47860e158e",
+      "compared_pixels": 17785,
+      "mismatched_pixels": 0
+    },
+    {
+      "name": "listening-toc3",
+      "reference": "testing\\output\\treehouse\\research-music-completion\\main-capture\\state\\listening-toc3.png",
+      "reference_sha256": "c797d5a756c228b45043ce93e2779dc1c221c9de192d51f67d054ac892539f29",
+      "compared_pixels": 17785,
+      "mismatched_pixels": 0
+    },
+    {
+      "name": "listening-toc4",
+      "reference": "testing\\output\\treehouse\\research-music-completion\\main-capture\\state\\listening-toc4.png",
+      "reference_sha256": "20835550681f466ae74df9201b289b8efd00799c8911929b3ccbcf70d3f976e8",
+      "compared_pixels": 17785,
+      "mismatched_pixels": 0
+    }
+  ]
+}

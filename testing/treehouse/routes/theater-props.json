@@ -1,0 +1,313 @@
+[
+  {
+    "frames": 1800,
+    "capture": "title"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -128,
+      "dy": 90
+    },
+    "capture": "mouse-moved"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "after-click"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -62,
+      "dy": -22
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 700,
+    "capture": "theater"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 258,
+      "dy": 12
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 200,
+    "capture": "editor"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -316,
+      "dy": -196
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 150,
+    "capture": "actors"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 100,
+      "dy": -24
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 160,
+    "capture": "baby"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -100,
+      "dy": 84
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "actions"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 92,
+      "dy": -88
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 160,
+    "capture": "bubbles"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -92,
+      "dy": 152
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 120,
+    "capture": "places"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 178,
+      "dy": -152
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 160,
+    "capture": "jungle"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -178,
+      "dy": 216
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "times"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 187,
+      "dy": -216
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 200,
+    "capture": "night"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -93,
+      "dy": 290
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 500,
+    "capture": "performed"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 436,
+      "dy": -284
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 120,
+    "capture": "options"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -222,
+      "dy": 140
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 60,
+    "capture": "props-enabled"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 0,
+      "dy": -32
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 60,
+    "capture": "mix-enabled"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 10,
+      "dy": 112
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 250,
+    "capture": "editor-options"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -324,
+      "dy": 54
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "props-list"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 112,
+      "dy": -280
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 100,
+    "capture": "first-prop"
+  }
+]

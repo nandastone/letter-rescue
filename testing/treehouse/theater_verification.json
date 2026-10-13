@@ -1,0 +1,498 @@
+{
+  "demo_sha256": "6711f79b4a92547eabd43ca0f9109c347fee96e4c15bebbd887a74eb5c9eb43b",
+  "pixels": {
+    "intro": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "editor": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "actors": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "baby": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "actions": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "bubbles": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "places": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "jungle": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "times": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    },
+    "night": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounds": null
+    }
+  },
+  "checks": [
+    {
+      "name": "Readable options start the theater",
+      "passed": true
+    },
+    {
+      "name": "Readable selections form the sentence",
+      "passed": true
+    },
+    {
+      "name": "Perform button plays original narration",
+      "passed": true
+    },
+    {
+      "name": "Readable controls complete a performance",
+      "passed": true
+    },
+    {
+      "name": "Actor 0, action 0: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 0, action 1: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 0, action 2: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 0, action 3: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 0, action 4: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 0, action 5: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 0, action 6: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 0, action 7: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 1, action 0: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 1, action 1: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 1, action 2: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 1, action 3: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 1, action 4: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 1, action 5: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 1, action 6: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 1, action 7: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 2, action 0: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 2, action 1: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 2, action 2: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 2, action 3: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 2, action 4: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 2, action 5: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 2, action 6: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 2, action 7: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 3, action 0: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 3, action 1: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 3, action 2: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 3, action 3: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 3, action 4: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 3, action 5: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 3, action 6: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 3, action 7: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 4, action 0: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 4, action 1: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 4, action 2: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 4, action 3: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 4, action 4: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 4, action 5: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 4, action 6: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 4, action 7: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 5, action 0: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 5, action 1: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 5, action 2: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 5, action 3: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 5, action 4: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 5, action 5: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 5, action 6: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 5, action 7: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 6, action 0: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 6, action 1: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 6, action 2: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 6, action 3: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 6, action 4: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 6, action 5: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 6, action 6: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 6, action 7: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 7, action 0: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 7, action 1: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 7, action 2: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 7, action 3: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 7, action 4: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 7, action 5: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 7, action 6: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Actor 7, action 7: original script completes",
+      "passed": true
+    },
+    {
+      "name": "Place 0, time 0: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 0, time 1: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 0, time 2: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 0, time 3: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 1, time 0: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 1, time 1: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 1, time 2: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 1, time 3: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 2, time 0: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 2, time 1: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 2, time 2: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 2, time 3: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 3, time 0: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 3, time 1: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 3, time 2: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 3, time 3: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 4, time 0: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 4, time 1: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 4, time 2: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 4, time 3: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 5, time 0: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 5, time 1: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 5, time 2: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Place 5, time 3: palette and weather render",
+      "passed": true
+    },
+    {
+      "name": "Missing subject is rejected",
+      "passed": true
+    },
+    {
+      "name": "Missing action is rejected",
+      "passed": true
+    },
+    {
+      "name": "Action before subject is rejected",
+      "passed": true
+    },
+    {
+      "name": "Separated subject and action are rejected",
+      "passed": true
+    },
+    {
+      "name": "Time before subject is accepted",
+      "passed": true
+    },
+    {
+      "name": "Where and when are optional",
+      "passed": true
+    },
+    {
+      "name": "Decoration can be added",
+      "passed": true
+    },
+    {
+      "name": "Decoration can be dragged",
+      "passed": true
+    },
+    {
+      "name": "Original twenty-decoration limit is enforced",
+      "passed": true
+    },
+    {
+      "name": "Decoration can be removed",
+      "passed": true
+    },
+    {
+      "name": "Decorations are stored per place",
+      "passed": true
+    },
+    {
+      "name": "Theater mobile layout fits",
+      "passed": true
+    },
+    {
+      "name": "Back leaves the activity",
+      "passed": true
+    },
+    {
+      "name": "No browser exceptions",
+      "passed": true
+    },
+    {
+      "name": "All ten native theater reference screens match every pixel",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "behavior_passed": true,
+  "all_reference_frames_exact": true
+}

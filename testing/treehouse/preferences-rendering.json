@@ -1,0 +1,180 @@
+{
+  "font": {
+    "asset": "heading_font",
+    "resource": "FONT0",
+    "image_offset": 191168,
+    "byte_length": 1527,
+    "first": 27,
+    "last": 126,
+    "ascent": 7,
+    "descent": 2,
+    "line_gap": 1,
+    "character_gap": 1,
+    "trailing_gap_in_width": true
+  },
+  "panel": [
+    43,
+    32,
+    152,
+    288
+  ],
+  "panel_inner": [
+    44,
+    33,
+    151,
+    287
+  ],
+  "heading": {
+    "text": "PREFERENCES",
+    "rectangle": [
+      47,
+      32,
+      148,
+      288
+    ],
+    "top_aligned": true,
+    "color": 9
+  },
+  "rows": [
+    [
+      61,
+      34,
+      75,
+      286
+    ],
+    [
+      75,
+      34,
+      89,
+      286
+    ],
+    [
+      89,
+      34,
+      103,
+      286
+    ],
+    [
+      103,
+      34,
+      117,
+      286
+    ],
+    [
+      117,
+      34,
+      131,
+      286
+    ]
+  ],
+  "row_glyph_y": [
+    63,
+    77,
+    91,
+    105,
+    119
+  ],
+  "done": {
+    "hit": [
+      136,
+      242,
+      148,
+      282
+    ],
+    "shadow": [
+      [
+        138,
+        243,
+        148,
+        283
+      ],
+      [
+        137,
+        244,
+        149,
+        282
+      ]
+    ],
+    "face": [
+      [
+        137,
+        242,
+        147,
+        282
+      ],
+      [
+        136,
+        243,
+        148,
+        281
+      ]
+    ],
+    "text_rectangle": [
+      137,
+      242,
+      149,
+      282
+    ],
+    "glyph_y": 138
+  },
+  "palette": {
+    "0": [
+      0,
+      0,
+      0
+    ],
+    "9": [
+      85,
+      85,
+      255
+    ],
+    "12": [
+      255,
+      85,
+      85
+    ],
+    "14": [
+      255,
+      255,
+      85
+    ],
+    "15": [
+      255,
+      255,
+      255
+    ]
+  },
+  "compared_pixels_per_state": 27904,
+  "comparisons": [
+    {
+      "label": "preferences",
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "row-0",
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "row-1",
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "row-2",
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "row-3",
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "row-4",
+      "mismatch_pixels": 0,
+      "bounds": null
+    }
+  ]
+}

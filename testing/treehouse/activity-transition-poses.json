@@ -1,0 +1,2918 @@
+{
+  "source": "Original TH.DAT SCR/SHAP/SHPL, image main5204/530D/5442",
+  "rect_order": "top,left,bottom,right",
+  "scripts": [
+    {
+      "id": 980,
+      "palette": 980,
+      "bounds": [
+        162,
+        150,
+        174,
+        197
+      ],
+      "nominal_duration": 144,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 23,
+          "nominal_tick": 0,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 981,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 33,
+          "nominal_tick": 8,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 982,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 43,
+          "nominal_tick": 16,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 983,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 53,
+          "nominal_tick": 24,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 984,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 63,
+          "nominal_tick": 32,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 985,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 73,
+          "nominal_tick": 40,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 986,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 83,
+          "nominal_tick": 48,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 987,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 93,
+          "nominal_tick": 56,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 988,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 103,
+          "nominal_tick": 64,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 989,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 113,
+          "nominal_tick": 72,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 986,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 123,
+          "nominal_tick": 80,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 987,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 133,
+          "nominal_tick": 88,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 988,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 143,
+          "nominal_tick": 96,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 989,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "offset": 153,
+          "nominal_tick": 104,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 986,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "offset": 163,
+          "nominal_tick": 112,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 987,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "offset": 173,
+          "nominal_tick": 120,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 988,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "offset": 183,
+          "nominal_tick": 128,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 989,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "offset": 193,
+          "nominal_tick": 136,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 986,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        }
+      ],
+      "audio": [],
+      "callbacks": []
+    },
+    {
+      "id": 981,
+      "palette": 980,
+      "bounds": [
+        162,
+        150,
+        174,
+        197
+      ],
+      "nominal_duration": 144,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 23,
+          "nominal_tick": 0,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 986,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 33,
+          "nominal_tick": 8,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 989,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 43,
+          "nominal_tick": 16,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 988,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 53,
+          "nominal_tick": 24,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 987,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 63,
+          "nominal_tick": 32,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 986,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 73,
+          "nominal_tick": 40,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 989,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 83,
+          "nominal_tick": 48,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 988,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 93,
+          "nominal_tick": 56,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 987,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 103,
+          "nominal_tick": 64,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 986,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 113,
+          "nominal_tick": 72,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 989,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 123,
+          "nominal_tick": 80,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 988,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 133,
+          "nominal_tick": 88,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 987,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 143,
+          "nominal_tick": 96,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 986,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "offset": 153,
+          "nominal_tick": 104,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 985,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "offset": 163,
+          "nominal_tick": 112,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 984,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "offset": 173,
+          "nominal_tick": 120,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 983,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "offset": 183,
+          "nominal_tick": 128,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 982,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "offset": 193,
+          "nominal_tick": 136,
+          "duration": 8,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 981,
+              "x": 150,
+              "y": 162,
+              "width": 47,
+              "height": 12
+            }
+          ]
+        }
+      ],
+      "audio": [],
+      "callbacks": []
+    },
+    {
+      "id": 1100,
+      "palette": 1100,
+      "bounds": [
+        118,
+        38,
+        180,
+        187
+      ],
+      "nominal_duration": 91,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 23,
+          "nominal_tick": 0,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1101,
+              "x": 165,
+              "y": 125,
+              "width": 14,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 38,
+          "nominal_tick": 7,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1102,
+              "x": 160,
+              "y": 125,
+              "width": 20,
+              "height": 41
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 53,
+          "nominal_tick": 14,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1103,
+              "x": 159,
+              "y": 122,
+              "width": 24,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 72,
+          "nominal_tick": 21,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1104,
+              "x": 157,
+              "y": 120,
+              "width": 27,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 90,
+          "nominal_tick": 28,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1105,
+              "x": 155,
+              "y": 118,
+              "width": 32,
+              "height": 53
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 105,
+          "nominal_tick": 35,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1106,
+              "x": 160,
+              "y": 125,
+              "width": 19,
+              "height": 42
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 120,
+          "nominal_tick": 42,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1107,
+              "x": 163,
+              "y": 125,
+              "width": 16,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 135,
+          "nominal_tick": 49,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 163,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 149,
+          "nominal_tick": 56,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 148,
+              "y": 141,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 159,
+          "nominal_tick": 63,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 118,
+              "y": 138,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 169,
+          "nominal_tick": 70,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 83,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 179,
+          "nominal_tick": 77,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 53,
+              "y": 159,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 189,
+          "nominal_tick": 84,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 38,
+              "y": 173,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        }
+      ],
+      "audio": [
+        {
+          "offset": 69,
+          "nominal_tick": 21,
+          "id": 10034
+        },
+        {
+          "offset": 146,
+          "nominal_tick": 56,
+          "id": 10035
+        }
+      ],
+      "callbacks": [
+        {
+          "offset": 87,
+          "nominal_tick": 28,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 1101,
+      "palette": 1100,
+      "bounds": [
+        108,
+        135,
+        175,
+        187
+      ],
+      "nominal_duration": 117,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 23,
+          "nominal_tick": 0,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1101,
+              "x": 165,
+              "y": 125,
+              "width": 14,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 38,
+          "nominal_tick": 9,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1102,
+              "x": 160,
+              "y": 125,
+              "width": 20,
+              "height": 41
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 53,
+          "nominal_tick": 18,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1103,
+              "x": 159,
+              "y": 122,
+              "width": 24,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 72,
+          "nominal_tick": 27,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1104,
+              "x": 157,
+              "y": 120,
+              "width": 27,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 90,
+          "nominal_tick": 36,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1105,
+              "x": 155,
+              "y": 118,
+              "width": 32,
+              "height": 53
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 105,
+          "nominal_tick": 45,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1106,
+              "x": 160,
+              "y": 125,
+              "width": 19,
+              "height": 42
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 120,
+          "nominal_tick": 54,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1107,
+              "x": 163,
+              "y": 125,
+              "width": 16,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 135,
+          "nominal_tick": 63,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 163,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 149,
+          "nominal_tick": 72,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 158,
+              "y": 140,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 159,
+          "nominal_tick": 81,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 149,
+              "y": 128,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 169,
+          "nominal_tick": 90,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 140,
+              "y": 115,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 179,
+          "nominal_tick": 99,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 135,
+              "y": 108,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 189,
+          "nominal_tick": 108,
+          "duration": 9,
+          "actors": []
+        }
+      ],
+      "audio": [
+        {
+          "offset": 69,
+          "nominal_tick": 27,
+          "id": 10034
+        },
+        {
+          "offset": 146,
+          "nominal_tick": 72,
+          "id": 10035
+        }
+      ],
+      "callbacks": [
+        {
+          "offset": 87,
+          "nominal_tick": 36,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 1102,
+      "palette": 1100,
+      "bounds": [
+        118,
+        49,
+        175,
+        187
+      ],
+      "nominal_duration": 162,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 23,
+          "nominal_tick": 0,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1109,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 37,
+          "nominal_tick": 9,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1110,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 47,
+          "nominal_tick": 18,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 67,
+          "nominal_tick": 27,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1101,
+              "x": 165,
+              "y": 125,
+              "width": 14,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 82,
+          "nominal_tick": 36,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1102,
+              "x": 160,
+              "y": 125,
+              "width": 20,
+              "height": 41
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 97,
+          "nominal_tick": 45,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1103,
+              "x": 159,
+              "y": 122,
+              "width": 24,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 116,
+          "nominal_tick": 54,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1104,
+              "x": 157,
+              "y": 120,
+              "width": 27,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 134,
+          "nominal_tick": 63,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1105,
+              "x": 155,
+              "y": 118,
+              "width": 32,
+              "height": 53
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 149,
+          "nominal_tick": 72,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1106,
+              "x": 160,
+              "y": 125,
+              "width": 19,
+              "height": 42
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 164,
+          "nominal_tick": 81,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1107,
+              "x": 163,
+              "y": 125,
+              "width": 16,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 179,
+          "nominal_tick": 90,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1108,
+              "x": 163,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 193,
+          "nominal_tick": 99,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1108,
+              "x": 150,
+              "y": 141,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 203,
+          "nominal_tick": 108,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1108,
+              "x": 125,
+              "y": 135,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "offset": 213,
+          "nominal_tick": 117,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1108,
+              "x": 97,
+              "y": 131,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "offset": 223,
+          "nominal_tick": 126,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1108,
+              "x": 72,
+              "y": 130,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "offset": 233,
+          "nominal_tick": 135,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            },
+            {
+              "slot": 2,
+              "shape": 1108,
+              "x": 59,
+              "y": 130,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "offset": 262,
+          "nominal_tick": 144,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 59,
+              "y": 130,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 2,
+              "shape": 1110,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "offset": 272,
+          "nominal_tick": 153,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 59,
+              "y": 130,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 2,
+              "shape": 1109,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        }
+      ],
+      "audio": [
+        {
+          "offset": 34,
+          "nominal_tick": 9,
+          "id": 10032
+        },
+        {
+          "offset": 113,
+          "nominal_tick": 54,
+          "id": 10033
+        },
+        {
+          "offset": 190,
+          "nominal_tick": 99,
+          "id": 10035
+        },
+        {
+          "offset": 259,
+          "nominal_tick": 144,
+          "id": 10032
+        }
+      ],
+      "callbacks": [
+        {
+          "offset": 131,
+          "nominal_tick": 63,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 1103,
+      "palette": 1100,
+      "bounds": [
+        118,
+        150,
+        184,
+        187
+      ],
+      "nominal_duration": 91,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 23,
+          "nominal_tick": 0,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1101,
+              "x": 165,
+              "y": 125,
+              "width": 14,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 38,
+          "nominal_tick": 7,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1102,
+              "x": 160,
+              "y": 125,
+              "width": 20,
+              "height": 41
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 57,
+          "nominal_tick": 14,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1103,
+              "x": 159,
+              "y": 122,
+              "width": 24,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 72,
+          "nominal_tick": 21,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1104,
+              "x": 157,
+              "y": 120,
+              "width": 27,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 90,
+          "nominal_tick": 28,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1105,
+              "x": 155,
+              "y": 118,
+              "width": 32,
+              "height": 53
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 105,
+          "nominal_tick": 35,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1106,
+              "x": 160,
+              "y": 125,
+              "width": 19,
+              "height": 42
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 120,
+          "nominal_tick": 42,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1107,
+              "x": 163,
+              "y": 125,
+              "width": 16,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 135,
+          "nominal_tick": 49,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 163,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 145,
+          "nominal_tick": 56,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 163,
+              "y": 151,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 159,
+          "nominal_tick": 63,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 163,
+              "y": 160,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 169,
+          "nominal_tick": 70,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 162,
+              "y": 170,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 179,
+          "nominal_tick": 77,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 162,
+              "y": 177,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 189,
+          "nominal_tick": 84,
+          "duration": 7,
+          "actors": []
+        }
+      ],
+      "audio": [
+        {
+          "offset": 54,
+          "nominal_tick": 14,
+          "id": 10034
+        },
+        {
+          "offset": 156,
+          "nominal_tick": 63,
+          "id": 10035
+        }
+      ],
+      "callbacks": [
+        {
+          "offset": 87,
+          "nominal_tick": 28,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": 1104,
+      "palette": 1100,
+      "bounds": [
+        118,
+        38,
+        180,
+        192
+      ],
+      "nominal_duration": 91,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 27,
+          "nominal_tick": 0,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 38,
+              "y": 173,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 37,
+          "nominal_tick": 7,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 54,
+              "y": 159,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 47,
+          "nominal_tick": 14,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 85,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 57,
+          "nominal_tick": 21,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 120,
+              "y": 138,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 67,
+          "nominal_tick": 28,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 150,
+              "y": 141,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 77,
+          "nominal_tick": 35,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 165,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 92,
+          "nominal_tick": 42,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1107,
+              "x": 165,
+              "y": 125,
+              "width": 16,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 107,
+          "nominal_tick": 49,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1106,
+              "x": 162,
+              "y": 125,
+              "width": 19,
+              "height": 42
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 129,
+          "nominal_tick": 56,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1105,
+              "x": 157,
+              "y": 118,
+              "width": 32,
+              "height": 53
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 144,
+          "nominal_tick": 63,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1104,
+              "x": 159,
+              "y": 120,
+              "width": 27,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 159,
+          "nominal_tick": 70,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1103,
+              "x": 161,
+              "y": 122,
+              "width": 24,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 174,
+          "nominal_tick": 77,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1102,
+              "x": 162,
+              "y": 125,
+              "width": 20,
+              "height": 41
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 189,
+          "nominal_tick": 84,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1101,
+              "x": 167,
+              "y": 125,
+              "width": 14,
+              "height": 40
+            }
+          ]
+        }
+      ],
+      "audio": [
+        {
+          "offset": 24,
+          "nominal_tick": 0,
+          "id": 10035
+        },
+        {
+          "offset": 126,
+          "nominal_tick": 56,
+          "id": 10033
+        }
+      ],
+      "callbacks": [
+        {
+          "offset": 122,
+          "nominal_tick": 56,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": 1105,
+      "palette": 1100,
+      "bounds": [
+        106,
+        40,
+        172,
+        199
+      ],
+      "nominal_duration": 84,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 27,
+          "nominal_tick": 0,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 135,
+              "y": 108,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 37,
+          "nominal_tick": 7,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 142,
+              "y": 114,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 47,
+          "nominal_tick": 14,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 151,
+              "y": 128,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 57,
+          "nominal_tick": 21,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 160,
+              "y": 140,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 67,
+          "nominal_tick": 28,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 165,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 82,
+          "nominal_tick": 35,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1107,
+              "x": 165,
+              "y": 125,
+              "width": 16,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 97,
+          "nominal_tick": 42,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1106,
+              "x": 162,
+              "y": 125,
+              "width": 19,
+              "height": 42
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 119,
+          "nominal_tick": 49,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1105,
+              "x": 157,
+              "y": 118,
+              "width": 32,
+              "height": 53
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 134,
+          "nominal_tick": 56,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1104,
+              "x": 159,
+              "y": 120,
+              "width": 27,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 149,
+          "nominal_tick": 63,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1103,
+              "x": 161,
+              "y": 122,
+              "width": 24,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 164,
+          "nominal_tick": 70,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1102,
+              "x": 162,
+              "y": 125,
+              "width": 20,
+              "height": 41
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 179,
+          "nominal_tick": 77,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1101,
+              "x": 167,
+              "y": 125,
+              "width": 14,
+              "height": 40
+            }
+          ]
+        }
+      ],
+      "audio": [
+        {
+          "offset": 24,
+          "nominal_tick": 0,
+          "id": 10035
+        },
+        {
+          "offset": 116,
+          "nominal_tick": 49,
+          "id": 10033
+        }
+      ],
+      "callbacks": [
+        {
+          "offset": 112,
+          "nominal_tick": 49,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": 1106,
+      "palette": 1100,
+      "bounds": [
+        118,
+        38,
+        180,
+        197
+      ],
+      "nominal_duration": 162,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 42,
+          "nominal_tick": 0,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 59,
+              "y": 130,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 2,
+              "shape": 1109,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 52,
+          "nominal_tick": 9,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 59,
+              "y": 130,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 2,
+              "shape": 1110,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 77,
+          "nominal_tick": 18,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 59,
+              "y": 130,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 91,
+          "nominal_tick": 27,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 74,
+              "y": 130,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 101,
+          "nominal_tick": 36,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 99,
+              "y": 131,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 111,
+          "nominal_tick": 45,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 127,
+              "y": 135,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 121,
+          "nominal_tick": 54,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 152,
+              "y": 141,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 131,
+          "nominal_tick": 63,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1108,
+              "x": 165,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 146,
+          "nominal_tick": 72,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1107,
+              "x": 165,
+              "y": 125,
+              "width": 16,
+              "height": 40
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 161,
+          "nominal_tick": 81,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1106,
+              "x": 162,
+              "y": 125,
+              "width": 19,
+              "height": 42
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 183,
+          "nominal_tick": 90,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1105,
+              "x": 157,
+              "y": 118,
+              "width": 32,
+              "height": 53
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 198,
+          "nominal_tick": 99,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1104,
+              "x": 159,
+              "y": 120,
+              "width": 27,
+              "height": 49
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 213,
+          "nominal_tick": 108,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1103,
+              "x": 161,
+              "y": 122,
+              "width": 24,
+              "height": 46
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "offset": 228,
+          "nominal_tick": 117,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1102,
+              "x": 162,
+              "y": 125,
+              "width": 20,
+              "height": 41
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "offset": 243,
+          "nominal_tick": 126,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 1,
+              "shape": 1101,
+              "x": 167,
+              "y": 125,
+              "width": 14,
+              "height": 40
+            },
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "offset": 257,
+          "nominal_tick": 135,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1111,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "offset": 267,
+          "nominal_tick": 144,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1110,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "offset": 277,
+          "nominal_tick": 153,
+          "duration": 9,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1109,
+              "x": 49,
+              "y": 121,
+              "width": 29,
+              "height": 24
+            }
+          ]
+        }
+      ],
+      "audio": [
+        {
+          "offset": 39,
+          "nominal_tick": 0,
+          "id": 10032
+        },
+        {
+          "offset": 88,
+          "nominal_tick": 27,
+          "id": 10035
+        },
+        {
+          "offset": 180,
+          "nominal_tick": 90,
+          "id": 10033
+        },
+        {
+          "offset": 254,
+          "nominal_tick": 135,
+          "id": 10032
+        }
+      ],
+      "callbacks": [
+        {
+          "offset": 176,
+          "nominal_tick": 90,
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": 1107,
+      "palette": 1100,
+      "bounds": [
+        118,
+        38,
+        190,
+        197
+      ],
+      "nominal_duration": 91,
+      "poses": [
+        {
+          "index": 0,
+          "offset": 27,
+          "nominal_tick": 0,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 162,
+              "y": 183,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "offset": 37,
+          "nominal_tick": 7,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 163,
+              "y": 179,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "offset": 47,
+          "nominal_tick": 14,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 164,
+              "y": 170,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "offset": 57,
+          "nominal_tick": 21,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 165,
+              "y": 160,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "offset": 67,
+          "nominal_tick": 28,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 165,
+              "y": 151,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "offset": 77,
+          "nominal_tick": 35,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1108,
+              "x": 165,
+              "y": 147,
+              "width": 8,
+              "height": 7
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "offset": 92,
+          "nominal_tick": 42,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1107,
+              "x": 165,
+              "y": 125,
+              "width": 16,
+              "height": 40
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "offset": 107,
+          "nominal_tick": 49,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1106,
+              "x": 162,
+              "y": 125,
+              "width": 19,
+              "height": 42
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "offset": 129,
+          "nominal_tick": 56,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1105,
+              "x": 157,
+              "y": 118,
+              "width": 32,
+              "height": 53
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "offset": 144,
+          "nominal_tick": 63,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1104,
+              "x": 159,
+              "y": 120,
+              "width": 27,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "offset": 159,
+          "nominal_tick": 70,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1103,
+              "x": 161,
+              "y": 122,
+              "width": 24,
+              "height": 46
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "offset": 174,
+          "nominal_tick": 77,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1102,
+              "x": 162,
+              "y": 125,
+              "width": 20,
+              "height": 41
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "offset": 189,
+          "nominal_tick": 84,
+          "duration": 7,
+          "actors": [
+            {
+              "slot": 0,
+              "shape": 1101,
+              "x": 167,
+              "y": 125,
+              "width": 14,
+              "height": 40
+            }
+          ]
+        }
+      ],
+      "audio": [
+        {
+          "offset": 24,
+          "nominal_tick": 0,
+          "id": 10035
+        },
+        {
+          "offset": 126,
+          "nominal_tick": 56,
+          "id": 10033
+        }
+      ],
+      "callbacks": [
+        {
+          "offset": 122,
+          "nominal_tick": 56,
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

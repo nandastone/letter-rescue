@@ -1,0 +1,1017 @@
+{
+  "schema": 1,
+  "native_intro_observations": [
+    {
+      "name": "intro-00",
+      "run": 1960,
+      "original_tick": 3746,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-00.png",
+      "node": 0,
+      "phase": 0,
+      "notes": 0,
+      "actor0": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "actor1": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_intro": 1
+    },
+    {
+      "name": "intro-01",
+      "run": 2040,
+      "original_tick": 3814,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-01.png",
+      "node": 9,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        -1,
+        239,
+        40,
+        274
+      ],
+      "actor1": [
+        112,
+        25,
+        151,
+        60
+      ],
+      "first_intro": 1
+    },
+    {
+      "name": "intro-02",
+      "run": 2120,
+      "original_tick": 3883,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-02.png",
+      "node": 9,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        35,
+        239,
+        76,
+        274
+      ],
+      "actor1": [
+        112,
+        25,
+        151,
+        60
+      ],
+      "first_intro": 1
+    },
+    {
+      "name": "intro-03",
+      "run": 2200,
+      "original_tick": 3951,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-03.png",
+      "node": 9,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        76,
+        239,
+        117,
+        274
+      ],
+      "actor1": [
+        112,
+        25,
+        151,
+        60
+      ],
+      "first_intro": 1
+    },
+    {
+      "name": "intro-04",
+      "run": 2280,
+      "original_tick": 4020,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-04.png",
+      "node": 9,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        92,
+        199,
+        133,
+        234
+      ],
+      "actor1": [
+        112,
+        25,
+        151,
+        60
+      ],
+      "first_intro": 1
+    },
+    {
+      "name": "intro-05",
+      "run": 2360,
+      "original_tick": 4088,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-05.png",
+      "node": 9,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        161,
+        151,
+        196
+      ],
+      "actor1": [
+        112,
+        25,
+        151,
+        60
+      ],
+      "first_intro": 1
+    },
+    {
+      "name": "intro-06",
+      "run": 2440,
+      "original_tick": 4155,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-06.png",
+      "node": 9,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        112,
+        -23,
+        151,
+        12
+      ],
+      "first_intro": 1
+    },
+    {
+      "name": "intro-07",
+      "run": 2520,
+      "original_tick": 4224,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-07.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        293,
+        97,
+        328
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-08",
+      "run": 2600,
+      "original_tick": 4292,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-08.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        225,
+        97,
+        260
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-09",
+      "run": 2680,
+      "original_tick": 4361,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-09.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        155,
+        97,
+        190
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-10",
+      "run": 2760,
+      "original_tick": 4429,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-10.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-11",
+      "run": 2840,
+      "original_tick": 4498,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-11.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-12",
+      "run": 2920,
+      "original_tick": 4566,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-12.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-13",
+      "run": 3000,
+      "original_tick": 4635,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-13.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-14",
+      "run": 3080,
+      "original_tick": 4703,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-14.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-15",
+      "run": 3160,
+      "original_tick": 4771,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-15.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-16",
+      "run": 3240,
+      "original_tick": 4840,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-16.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-17",
+      "run": 3320,
+      "original_tick": 4908,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-17.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-18",
+      "run": 3400,
+      "original_tick": 4977,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-18.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-19",
+      "run": 3480,
+      "original_tick": 5045,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-19.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-20",
+      "run": 3560,
+      "original_tick": 5114,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-20.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-21",
+      "run": 3640,
+      "original_tick": 5182,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-21.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        143,
+        97,
+        178
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-22",
+      "run": 3720,
+      "original_tick": 5250,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-22.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        58,
+        83,
+        97,
+        118
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-23",
+      "run": 3800,
+      "original_tick": 5319,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-23.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        46,
+        35,
+        85,
+        70
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-24",
+      "run": 3880,
+      "original_tick": 5387,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-24.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        10,
+        23,
+        49,
+        58
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-25",
+      "run": 3960,
+      "original_tick": 5456,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-25.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        110,
+        145,
+        151,
+        180
+      ],
+      "actor1": [
+        -26,
+        11,
+        13,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-26",
+      "run": 4040,
+      "original_tick": 5524,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-26.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        285,
+        97,
+        320
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-27",
+      "run": 4120,
+      "original_tick": 5592,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-27.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        215,
+        97,
+        250
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-28",
+      "run": 4200,
+      "original_tick": 5660,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-28.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        147,
+        97,
+        182
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-29",
+      "run": 4280,
+      "original_tick": 5729,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-29.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-30",
+      "run": 4360,
+      "original_tick": 5797,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-30.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-31",
+      "run": 4440,
+      "original_tick": 5866,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-31.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-32",
+      "run": 4520,
+      "original_tick": 5934,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-32.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-33",
+      "run": 4600,
+      "original_tick": 6003,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-33.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-34",
+      "run": 4680,
+      "original_tick": 6071,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-34.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-35",
+      "run": 4760,
+      "original_tick": 6140,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-35.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-36",
+      "run": 4840,
+      "original_tick": 6208,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-36.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-37",
+      "run": 4920,
+      "original_tick": 6277,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-37.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-38",
+      "run": 5000,
+      "original_tick": 6345,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-38.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    },
+    {
+      "name": "intro-39",
+      "run": 5080,
+      "original_tick": 6414,
+      "reference": "testing\\output\\treehouse\\research-maze-completion\\intro-capture\\state\\intro-39.png",
+      "node": 2,
+      "phase": 8,
+      "notes": 0,
+      "actor0": [
+        56,
+        143,
+        97,
+        178
+      ],
+      "actor1": [
+        -46,
+        11,
+        -7,
+        46
+      ],
+      "first_intro": 0
+    }
+  ],
+  "pointing_projectile": {
+    "step_interval": 8,
+    "tick_delay": 1,
+    "shape_right_below": 22050,
+    "shape_right_above": 22051,
+    "shape_left_above": 22050,
+    "shape_left_below": 22051,
+    "offsets_yx": {
+      "right_below": [
+        -11,
+        10
+      ],
+      "right_above": [
+        -18,
+        8
+      ],
+      "left_above": [
+        -18,
+        -22
+      ],
+      "left_below": [
+        -10,
+        -21
+      ]
+    },
+    "sound_id": 1016
+  },
+  "intro": {
+    "sign_order": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "after_each_sign_ticks": 30,
+    "after_all_signs_ticks": 90,
+    "after_target_ticks": 30
+  },
+  "correct": {
+    "after_candidate_ticks": 12,
+    "after_reward_ticks": 24,
+    "after_frog_disappear_ticks": 60,
+    "after_song_ticks": 12,
+    "after_reaction_ticks": 12
+  },
+  "wrong": {
+    "frog_appearance_wait": 12,
+    "first_wait": 30,
+    "repeats": 2,
+    "response_pose_ids": [
+      15,
+      3,
+      16,
+      3
+    ],
+    "response_sounds": [
+      10051,
+      10052
+    ],
+    "pose_wait_ticks": 10,
+    "last_wait": 30,
+    "repeat_hint_count": 3,
+    "flash_ticks": 12
+  },
+  "chooser": {
+    "open_bar_y": [
+      106,
+      104,
+      102,
+      100,
+      98,
+      96,
+      94,
+      92,
+      90,
+      88,
+      86,
+      84,
+      82,
+      80,
+      78,
+      76,
+      74,
+      72,
+      70,
+      68,
+      66,
+      64,
+      62,
+      60
+    ],
+    "close_bar_y": [
+      62,
+      64,
+      66,
+      68,
+      70,
+      72,
+      74,
+      76,
+      78,
+      80,
+      82,
+      84,
+      86,
+      88,
+      90,
+      92,
+      94,
+      96,
+      98,
+      100,
+      102,
+      104,
+      106
+    ],
+    "frame_ticks": 2,
+    "content_y_relative": 4,
+    "clip_rect": [
+      60,
+      95,
+      112,
+      177
+    ],
+    "handle_xy": [
+      95,
+      107
+    ],
+    "open_sound": 1004,
+    "close_sound": 1003,
+    "success_sound": 1005
+  }
+}

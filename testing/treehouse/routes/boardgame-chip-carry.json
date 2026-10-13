@@ -1,0 +1,401 @@
+[
+  {
+    "frames": 1800,
+    "capture": "title"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -128,
+      "dy": 90
+    },
+    "capture": "mouse-moved"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "after-click"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 168,
+      "dy": 90
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 800,
+    "capture": "boardgame"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -52,
+      "dy": -300
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 150,
+    "capture": "chip-options"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dy": 32
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 150,
+    "capture": "friend-options"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 12,
+      "dy": 224
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 800,
+    "capture": "chip-started"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -132,
+      "dy": -220
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 900,
+    "capture": "roll-0"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 78,
+      "dy": 138
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "turn-0-move-0"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -88,
+      "dy": -2
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "turn-0-move-1"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 314,
+      "dy": -2
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1500,
+    "capture": "turn-0-chosen"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -304,
+      "dy": -134
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 900,
+    "capture": "roll-1"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -10,
+      "dy": 138
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "turn-1-move-0"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 314,
+      "dy": -4
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1500,
+    "capture": "turn-1-chosen"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -304,
+      "dy": -134
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 900,
+    "capture": "roll-2"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -10,
+      "dy": 138
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "turn-2-move-0"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 314,
+      "dy": -4
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1500,
+    "capture": "turn-2-chosen"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -304,
+      "dy": -134
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 900,
+    "capture": "roll-3"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -74,
+      "dy": 138
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "turn-3-move-0"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -88,
+      "dy": -2
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "turn-3-move-1"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 0,
+      "dy": -68
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "turn-3-move-2"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 466,
+      "dy": 68
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1500,
+    "capture": "turn-3-chosen"
+  },
+  {
+    "frames": 1,
+    "capture": "carry-wait"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 80,
+      "dy": -136
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 700,
+    "capture": "carry-unit-click"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -48,
+      "dy": 2
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 700,
+    "capture": "carry-tens-click"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -48,
+      "dy": 0
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 700,
+    "capture": "carry-hundreds-click"
+  }
+]

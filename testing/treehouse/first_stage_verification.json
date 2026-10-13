@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-25",
+  "scope": "Original DOS v1.1 startup-to-interior repeatability; not clone parity",
+  "route": "testing/treehouse/routes/enter-treehouse.json",
+  "original_repeatability_passed": true,
+  "video_callbacks_per_run": 3040,
+  "clock_samples_per_run": 3040,
+  "unique_images_per_run": 190,
+  "frame_mismatches": 0,
+  "audio_identical": true,
+  "capture_boundary_version": 1,
+  "sha256": {
+    "original_zip": "53ecb856cb6c49f28064ce22b9723eed9a8d19db139ae1bead9786f37a7eb78c",
+    "unpacked_image": "f2776b04a307996d1a7b4230d49b552b67ad787675b766a7b4c8577ad417973f",
+    "prepared_zip": "a6cda560d3a7abc0e601b1f19698de5cb3a1aeae2652be14df3492c456289a7c",
+    "capture_core": "51b29480c3f55ac7840a2009b87a6693693d7f3472718cf9b8e88f0f0ff19bd9",
+    "capture_tool": "6b796f1a1ef478fcc1083a35a22cec7715ad6f1047583a6984781d700ea62d3a",
+    "adapter": "f2e33e5393d892fe598d8ab3fc530b7762e214e339f0971c40bfbbb921fdf4a5",
+    "timeline": "b2dc7af1ffcbe121e351a7b9077be246f77f5faa462b6e16f971c2caa840ba5b",
+    "audio": "a45d01cfde9699e1ea50baf82bbdadf8a369751f78000e8e3ab54ec255995634",
+    "original_executable": "16c5623174f0e97ee928790fd6d3e638d5724f3fb2a7794c7d3a48274f1d82d9"
+  }
+}

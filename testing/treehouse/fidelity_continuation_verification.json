@@ -1,0 +1,2976 @@
+{
+  "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+  "source_sha256": "53ecb856cb6c49f28064ce22b9723eed9a8d19db139ae1bead9786f37a7eb78c",
+  "full_clone_parity": false,
+  "behavior_checks": 412,
+  "exact_full_frames": 68,
+  "exact_regions": 10,
+  "suites": {
+    "base": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "behavior_checks": [
+        {
+          "name": "Original interior matches every pixel",
+          "passed": true
+        },
+        {
+          "name": "Original title matches every pixel",
+          "passed": true
+        },
+        {
+          "name": "Original initial music score matches every pixel",
+          "passed": true
+        },
+        {
+          "name": "Original initial music room matches every pixel",
+          "passed": true
+        },
+        {
+          "name": "boy: character entry begins",
+          "passed": true
+        },
+        {
+          "name": "boy: original entry script reaches interior",
+          "passed": true
+        },
+        {
+          "name": "girl: character entry begins",
+          "passed": true
+        },
+        {
+          "name": "girl: original entry script reaches interior",
+          "passed": true
+        },
+        {
+          "name": "Music room opens",
+          "passed": true
+        },
+        {
+          "name": "Original key 'z': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 's': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'x': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'd': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'c': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'v': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'g': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'b': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'h': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'n': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'j': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'm': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key ',': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key 'l': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key '.': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key ';': note releases",
+          "passed": true
+        },
+        {
+          "name": "Original key '/': note releases",
+          "passed": true
+        },
+        {
+          "name": "Mouse presses the original canvas piano key",
+          "passed": true
+        },
+        {
+          "name": "Dragging outside the keyboard releases the note",
+          "passed": true
+        },
+        {
+          "name": "Window blur releases held keyboard notes",
+          "passed": true
+        },
+        {
+          "name": "All 35 individual instrument samples play",
+          "passed": true
+        },
+        {
+          "name": "Song 0: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 0: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 1: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 1: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 2: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 2: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 3: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 3: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 4: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 4: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 5: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 5: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 6: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 6: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 7: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 7: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 8: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 8: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 9: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 9: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 10: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 10: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 11: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 11: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 12: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 12: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 13: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 13: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 14: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 14: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 15: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 15: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 16: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 16: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 17: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 17: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 18: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 18: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 19: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 19: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 20: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 20: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 21: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 21: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 22: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 22: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Song 23: playback starts",
+          "passed": true
+        },
+        {
+          "name": "Song 23: playback completes",
+          "passed": true
+        },
+        {
+          "name": "Three-note melody saved locally",
+          "passed": true
+        },
+        {
+          "name": "Saved melody playback starts",
+          "passed": true
+        },
+        {
+          "name": "Saved melody playback completes",
+          "passed": true
+        },
+        {
+          "name": "Telescope: The planets runs",
+          "passed": true
+        },
+        {
+          "name": "Telescope: A little creature runs",
+          "passed": true
+        },
+        {
+          "name": "Telescope: The birdbath runs",
+          "passed": true
+        },
+        {
+          "name": "Telescope: The bird feeder runs",
+          "passed": true
+        },
+        {
+          "name": "Escape returns from telescope",
+          "passed": true
+        },
+        {
+          "name": "Large mobile piano key presses and releases",
+          "passed": true
+        },
+        {
+          "name": "Mobile layout has no horizontal overflow",
+          "passed": true
+        },
+        {
+          "name": "No browser exceptions during demo journey",
+          "passed": true
+        },
+        {
+          "name": "Real-time animation loop reaches the interior",
+          "passed": true
+        }
+      ],
+      "pixel_comparisons": {
+        "outside": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounding_box": null
+        },
+        "inside": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounding_box": null
+        },
+        "music": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounding_box": null
+        },
+        "music_score": {
+          "different_pixels": 0,
+          "total_pixels": 15900,
+          "exact": true
+        }
+      },
+      "errors": [],
+      "final_state": {
+        "scene": "music",
+        "character": "girl",
+        "tick": 278104,
+        "entering": false,
+        "instrument": 41,
+        "songId": 23,
+        "songPlaying": false,
+        "recording": false,
+        "held": 0,
+        "stats": {
+          "frames": 127,
+          "notesPlayed": 755,
+          "animationsCompleted": 9,
+          "errors": [],
+          "songCompletions": 25
+        },
+        "nature": null,
+        "theater": null
+      },
+      "behavior_passed": true,
+      "full_clone_parity": false
+    },
+    "theater": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "pixels": {
+        "intro": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "editor": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "actors": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "baby": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "actions": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "bubbles": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "places": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "jungle": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "times": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        },
+        "night": {
+          "different_pixels": 0,
+          "total_pixels": 64000,
+          "exact": true,
+          "bounds": null
+        }
+      },
+      "checks": [
+        {
+          "name": "Readable options start the theater",
+          "passed": true
+        },
+        {
+          "name": "Readable selections form the sentence",
+          "passed": true
+        },
+        {
+          "name": "Perform button plays original narration",
+          "passed": true
+        },
+        {
+          "name": "Readable controls complete a performance",
+          "passed": true
+        },
+        {
+          "name": "Actor 0, action 0: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 0, action 1: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 0, action 2: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 0, action 3: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 0, action 4: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 0, action 5: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 0, action 6: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 0, action 7: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 1, action 0: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 1, action 1: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 1, action 2: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 1, action 3: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 1, action 4: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 1, action 5: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 1, action 6: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 1, action 7: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 2, action 0: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 2, action 1: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 2, action 2: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 2, action 3: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 2, action 4: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 2, action 5: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 2, action 6: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 2, action 7: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 3, action 0: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 3, action 1: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 3, action 2: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 3, action 3: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 3, action 4: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 3, action 5: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 3, action 6: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 3, action 7: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 4, action 0: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 4, action 1: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 4, action 2: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 4, action 3: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 4, action 4: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 4, action 5: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 4, action 6: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 4, action 7: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 5, action 0: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 5, action 1: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 5, action 2: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 5, action 3: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 5, action 4: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 5, action 5: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 5, action 6: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 5, action 7: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 6, action 0: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 6, action 1: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 6, action 2: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 6, action 3: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 6, action 4: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 6, action 5: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 6, action 6: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 6, action 7: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 7, action 0: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 7, action 1: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 7, action 2: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 7, action 3: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 7, action 4: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 7, action 5: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 7, action 6: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Actor 7, action 7: original script completes",
+          "passed": true
+        },
+        {
+          "name": "Place 0, time 0: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 0, time 1: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 0, time 2: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 0, time 3: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 1, time 0: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 1, time 1: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 1, time 2: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 1, time 3: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 2, time 0: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 2, time 1: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 2, time 2: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 2, time 3: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 3, time 0: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 3, time 1: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 3, time 2: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 3, time 3: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 4, time 0: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 4, time 1: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 4, time 2: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 4, time 3: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 5, time 0: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 5, time 1: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 5, time 2: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Place 5, time 3: palette and weather render",
+          "passed": true
+        },
+        {
+          "name": "Missing subject is rejected",
+          "passed": true
+        },
+        {
+          "name": "Missing action is rejected",
+          "passed": true
+        },
+        {
+          "name": "Action before subject is rejected",
+          "passed": true
+        },
+        {
+          "name": "Separated subject and action are rejected",
+          "passed": true
+        },
+        {
+          "name": "Time before subject is accepted",
+          "passed": true
+        },
+        {
+          "name": "Where and when are optional",
+          "passed": true
+        },
+        {
+          "name": "Decoration can be added",
+          "passed": true
+        },
+        {
+          "name": "Decoration can be dragged",
+          "passed": true
+        },
+        {
+          "name": "Original twenty-decoration limit is enforced",
+          "passed": true
+        },
+        {
+          "name": "Decoration can be removed",
+          "passed": true
+        },
+        {
+          "name": "Decorations are stored per place",
+          "passed": true
+        },
+        {
+          "name": "Theater mobile layout fits",
+          "passed": true
+        },
+        {
+          "name": "Back leaves the activity",
+          "passed": true
+        },
+        {
+          "name": "No browser exceptions",
+          "passed": true
+        },
+        {
+          "name": "All ten native theater reference screens match every pixel",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "behavior_passed": true,
+      "all_reference_frames_exact": true
+    },
+    "nature": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "pixels": {
+        "nature": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "night": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "food": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "plants": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "mammals": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        }
+      },
+      "checks": [
+        {
+          "name": "Animal 0: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 1: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 2: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 3: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 4: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 5: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 6: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 7: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 8: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 9: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 10: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 11: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 12: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 13: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 14: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 15: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 16: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 17: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 18: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 19: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 20: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 21: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 22: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 23: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 24: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 25: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 26: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 27: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 28: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 29: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 30: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 31: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 32: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 33: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 34: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 35: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 36: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 37: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 38: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 39: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 40: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 41: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 42: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 43: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 44: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 45: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 46: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 47: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 48: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 49: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 50: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 51: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 52: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 53: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 54: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 55: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 56: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 57: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 58: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 59: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 60: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 61: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 62: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 63: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 64: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 65: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 66: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 67: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 68: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 69: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 70: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 71: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 72: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 73: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 74: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 75: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 76: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 77: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 78: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 79: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 80: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 81: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 82: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 83: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 84: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 85: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 86: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 87: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 88: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 89: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 90: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Animal 91: filter, facts, placement and ambient frames",
+          "passed": true
+        },
+        {
+          "name": "Forty animals per scene",
+          "passed": true
+        },
+        {
+          "name": "Day and night preserve separate collages",
+          "passed": true
+        },
+        {
+          "name": "Clear scene",
+          "passed": true
+        },
+        {
+          "name": "Undo clear",
+          "passed": true
+        },
+        {
+          "name": "Dragging an animal outside removes it",
+          "passed": true
+        },
+        {
+          "name": "Readable animal controls place an ant",
+          "passed": true
+        },
+        {
+          "name": "Mobile layout fits",
+          "passed": true
+        },
+        {
+          "name": "Back returns to treehouse",
+          "passed": true
+        },
+        {
+          "name": "No browser exceptions",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "all_reference_frames_exact": true
+    },
+    "continuation": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "pixels": {
+        "theater-options": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "props-enabled": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "mix-enabled": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "editor-options": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "props-list": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-swapped": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-invalid-order": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-corrected": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-separated": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-invalid-gap": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-gap-corrected": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-deleted": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-manually-corrected": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-success-feedback": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-empty-slot-gap": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-fill-before-action": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-notebook-add": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "token-stage-drop": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "invalid-empty": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "invalid-actor": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "animal-fact": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "quiz-options": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "quiz-ready": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "quiz-deal": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "definition-backbone": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "definition-legs": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "definition-active": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "inspect-first": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "inspect-second": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "quiz-answer": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "quiz-win": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        }
+      },
+      "checks": [
+        {
+          "name": "Held token swaps categories",
+          "passed": true
+        },
+        {
+          "name": "Dropping token left of x67 deletes category",
+          "passed": true
+        },
+        {
+          "name": "Manual correction retains previous validation",
+          "passed": true
+        },
+        {
+          "name": "Correction fills empty slot before action without moving leading words",
+          "passed": true
+        },
+        {
+          "name": "Dropping a token on the stage restores it",
+          "passed": true
+        },
+        {
+          "name": "Animated shuffle completes and preserves four unique categories",
+          "passed": true
+        },
+        {
+          "name": "Theater prop dragged outside is removed",
+          "passed": true
+        },
+        {
+          "name": "Partially overlapping theater prop clamps inside on release",
+          "passed": true
+        },
+        {
+          "name": "Actor drag waits fifteen original ticks",
+          "passed": true
+        },
+        {
+          "name": "Actor drag stays in original stage bounds",
+          "passed": true
+        },
+        {
+          "name": "Game 0: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 1: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 2: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 3: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 4: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 5: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 6: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 7: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 8: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 9: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 10: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 11: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 12: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 13: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 14: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 15: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 16: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 17: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 18: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 19: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 20: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 21: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 22: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 23: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 24: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 25: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 26: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 27: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 28: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Game 29: distinguishable candidates and completed winning journey",
+          "passed": true
+        },
+        {
+          "name": "Robot asks and waits for the player to roll, as in DOS",
+          "passed": true
+        },
+        {
+          "name": "Incorrect guess continues the game",
+          "passed": true
+        },
+        {
+          "name": "Readable controls start a guessing game",
+          "passed": true
+        },
+        {
+          "name": "Quiz mobile layout fits",
+          "passed": true
+        },
+        {
+          "name": "Back returns from quiz to nature",
+          "passed": true
+        },
+        {
+          "name": "No browser exceptions",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "all_reference_frames_exact": true
+    },
+    "chalkboard": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "pixels": {
+        "chalk-position-drawing": {
+          "different_pixels": 0,
+          "exact": true,
+          "region": [
+            60,
+            45,
+            154,
+            92
+          ],
+          "bounds": null
+        },
+        "chalk-position-tray": {
+          "different_pixels": 0,
+          "exact": true,
+          "region": [
+            63,
+            92,
+            149,
+            95
+          ],
+          "bounds": null
+        },
+        "chalk-dot-drawing": {
+          "different_pixels": 0,
+          "exact": true,
+          "region": [
+            60,
+            45,
+            154,
+            92
+          ],
+          "bounds": null
+        },
+        "chalk-dot-tray": {
+          "different_pixels": 0,
+          "exact": true,
+          "region": [
+            63,
+            92,
+            149,
+            95
+          ],
+          "bounds": null
+        },
+        "chalk-stroke-drawing": {
+          "different_pixels": 0,
+          "exact": true,
+          "region": [
+            60,
+            45,
+            154,
+            92
+          ],
+          "bounds": null
+        },
+        "chalk-stroke-tray": {
+          "different_pixels": 0,
+          "exact": true,
+          "region": [
+            63,
+            92,
+            149,
+            95
+          ],
+          "bounds": null
+        },
+        "erased-drawing": {
+          "different_pixels": 0,
+          "exact": true,
+          "region": [
+            60,
+            45,
+            154,
+            92
+          ],
+          "bounds": null
+        },
+        "erased-tray": {
+          "different_pixels": 0,
+          "exact": true,
+          "region": [
+            63,
+            92,
+            149,
+            95
+          ],
+          "bounds": null
+        }
+      },
+      "checks": [
+        {
+          "name": "Leaving board returns tool",
+          "passed": true
+        },
+        {
+          "name": "Brush clips to board edge",
+          "passed": true
+        },
+        {
+          "name": "Native movement clamps to two pixels",
+          "passed": true
+        },
+        {
+          "name": "Undo restores stroke backing bitmap",
+          "passed": true
+        },
+        {
+          "name": "Enlarged pad draws continuous strokes",
+          "passed": true
+        },
+        {
+          "name": "Drawing persists between activities",
+          "passed": true
+        },
+        {
+          "name": "Pointer input draws with selected green chalk",
+          "passed": true
+        },
+        {
+          "name": "Clear affects drawing bitmap",
+          "passed": true
+        },
+        {
+          "name": "Undo restores clear",
+          "passed": true
+        },
+        {
+          "name": "Enlarged drawing pad fits mobile",
+          "passed": true
+        },
+        {
+          "name": "No browser exceptions",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "all_reference_regions_exact": true
+    },
+    "boardgame": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "pixels": {
+        "entry-a-boardgame": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "start-b-started": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "roll-a-rolled": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "chip-a-chip-options": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "chip-a-friend-options": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "chip-a-chip-started": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "turn-b-move-2": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "turn-b-reward-chosen": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "turn-b-next-turn": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "chip-turn-a-move-1": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "chip-turn-a-reward-chosen": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "robot-settled-b-reward-chosen": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "robot-settled-b-next-turn": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "chip-carry-a-carry-wait": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        },
+        "chip-carry-a-carry-unit-click": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null
+        }
+      },
+      "checks": [
+        {
+          "name": "60 complete friend games: {'games': 60, 'turns': 484}",
+          "passed": true
+        },
+        {
+          "name": "Robot follows roads and leaves reward choice to child",
+          "passed": true
+        },
+        {
+          "name": "Invalid road destinations do not move car",
+          "passed": true
+        },
+        {
+          "name": "Directed graph finds exact-length routes",
+          "passed": true
+        },
+        {
+          "name": "Credit pauses with ten chips before carry",
+          "passed": true
+        },
+        {
+          "name": "Payment recursively borrows hundreds then tens",
+          "passed": true
+        },
+        {
+          "name": "Credit carries ones through tens into hundreds",
+          "passed": true
+        },
+        {
+          "name": "Readable controls start game",
+          "passed": true
+        },
+        {
+          "name": "Mobile controls fit",
+          "passed": true
+        },
+        {
+          "name": "No browser exceptions",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "delivery_reference_tick": 86,
+      "passed": true,
+      "all_reference_frames_exact": true,
+      "transient_gaps": [
+        "Delivery reference matches at sequence tick 86; exhaustive transfer/dashboard frame and native clock alignment comparisons remain."
+      ],
+      "all_settled_frames_exact": true
+    },
+    "music": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "pixels": {
+        "family-menu": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null,
+          "region": null
+        },
+        "animals": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null,
+          "region": null
+        },
+        "home-made": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null,
+          "region": null
+        },
+        "long-score": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null,
+          "region": [
+            88,
+            27,
+            300,
+            102
+          ]
+        },
+        "long-score-room": {
+          "different_pixels": 0,
+          "exact": true,
+          "bounds": null,
+          "region": null
+        }
+      },
+      "checks": [
+        {
+          "name": "Combined family 0",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 25",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 26",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 27",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 28",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 29",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 30",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 32",
+          "passed": true
+        },
+        {
+          "name": "Combined family 1",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 35",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 37",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 34",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 40",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 39",
+          "passed": true
+        },
+        {
+          "name": "Combined family 2",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 33",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 36",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 38",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 31",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 41",
+          "passed": true
+        },
+        {
+          "name": "Combined family 3",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 9",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 16",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 22",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 23",
+          "passed": true
+        },
+        {
+          "name": "Combined family 4",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 21",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 20",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 18",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 14",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 19",
+          "passed": true
+        },
+        {
+          "name": "Combined family 5",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 7",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 10",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 8",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 17",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 12",
+          "passed": true
+        },
+        {
+          "name": "Combined family 6",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 15",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 11",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 13",
+          "passed": true
+        },
+        {
+          "name": "Individual instrument 24",
+          "passed": true
+        },
+        {
+          "name": "Readable family buttons select Lamb",
+          "passed": true
+        },
+        {
+          "name": "Returns to piano with selected instrument",
+          "passed": true
+        },
+        {
+          "name": "Readable score control selects two staffs",
+          "passed": true
+        },
+        {
+          "name": "Family controls fit mobile width",
+          "passed": true
+        },
+        {
+          "name": "No browser exceptions",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "idle_reference_step": 5,
+      "passed": true,
+      "all_reference_frames_exact": true
+    },
+    "entrance": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "comparison": "Full RGB image membership; not timing parity",
+      "states": [
+        {
+          "tick": 0,
+          "key": "8000:1,8001:1",
+          "sha256": "c76e702512ce4ba645402b28efe2e48870039a0f9c76447dbc1544231bfe7f00",
+          "exact_native_image": true
+        },
+        {
+          "tick": 7,
+          "key": "8000:2,8001:1",
+          "sha256": "9af0bfeb2017b8a9c7f1b490db47fda63d794e43dc16fc83feb6da6cd80bbc96",
+          "exact_native_image": true
+        },
+        {
+          "tick": 14,
+          "key": "8000:3,8001:1",
+          "sha256": "9af0bfeb2017b8a9c7f1b490db47fda63d794e43dc16fc83feb6da6cd80bbc96",
+          "exact_native_image": true
+        },
+        {
+          "tick": 21,
+          "key": "8000:4,8001:1",
+          "sha256": "9af0bfeb2017b8a9c7f1b490db47fda63d794e43dc16fc83feb6da6cd80bbc96",
+          "exact_native_image": true
+        },
+        {
+          "tick": 28,
+          "key": "8000:5,8001:1",
+          "sha256": "708a4a27142ab58a7a4a1f3a78c150fabf67dd177085d2a17005a720f2bcc85a",
+          "exact_native_image": true
+        },
+        {
+          "tick": 35,
+          "key": "8000:6,8001:1",
+          "sha256": "c5bdb3bfd16e079222115d66d4c839fd62cdf92df63dd7e78abbac07b94202bf",
+          "exact_native_image": true
+        },
+        {
+          "tick": 42,
+          "key": "8000:7,8001:1",
+          "sha256": "53803de246336484635a4396319251821b6b4510b2d8d50fb14c32af8fdba980",
+          "exact_native_image": true
+        },
+        {
+          "tick": 49,
+          "key": "8000:8,8001:1",
+          "sha256": "28e0a68571d2f94a72d07b9aa9c6c8acd3580bcc9b61c3ebe9f302f65966c6e0",
+          "exact_native_image": true
+        },
+        {
+          "tick": 56,
+          "key": "8000:9,8001:1",
+          "sha256": "ff4d6f2ce61ad43ae8fa3ed191dccc74690e089b322d77e0938241afb9fc8f5b",
+          "exact_native_image": true
+        },
+        {
+          "tick": 63,
+          "key": "8000:10,8001:1",
+          "sha256": "ea82ed5b0c20639014f6b7021633defe5cd9e75e40fa40bf160f599130fcbc89",
+          "exact_native_image": true
+        },
+        {
+          "tick": 70,
+          "key": "8000:11,8001:1",
+          "sha256": "0ed91ac69c539a3a3aa00dce854cdef238f5403ab77e642e03b82483663e58b5",
+          "exact_native_image": true
+        },
+        {
+          "tick": 77,
+          "key": "8000:12,8001:1",
+          "sha256": "471c778439a59ba4cc655c38461499632ec73775cab5792dd436a22b5b15c3a4",
+          "exact_native_image": true
+        },
+        {
+          "tick": 84,
+          "key": "8000:13,8001:1",
+          "sha256": "066d294e1cb272ddc9dc0208d0123e04756cc686e507518ddfa843fd8b2a04a4",
+          "exact_native_image": true
+        },
+        {
+          "tick": 91,
+          "key": "8000:14,8001:1",
+          "sha256": "7c824408fa2a70780416d2b27f4115e55c47469010b5a4e8bcfb073396cc5303",
+          "exact_native_image": true
+        },
+        {
+          "tick": 98,
+          "key": "8000:15,8001:1",
+          "sha256": "7c824408fa2a70780416d2b27f4115e55c47469010b5a4e8bcfb073396cc5303",
+          "exact_native_image": true
+        },
+        {
+          "tick": 112,
+          "key": "8000:15,8001:2",
+          "sha256": "fb036bd61f60cef6566e6c7cc252751c0f0bafccb40dbe0ddc9331f78c6ca414",
+          "exact_native_image": true
+        },
+        {
+          "tick": 119,
+          "key": "8000:15,8001:3",
+          "sha256": "fb036bd61f60cef6566e6c7cc252751c0f0bafccb40dbe0ddc9331f78c6ca414",
+          "exact_native_image": true
+        },
+        {
+          "tick": 126,
+          "key": "8000:15,8001:4",
+          "sha256": "fb036bd61f60cef6566e6c7cc252751c0f0bafccb40dbe0ddc9331f78c6ca414",
+          "exact_native_image": true
+        },
+        {
+          "tick": 133,
+          "key": "8000:15,8001:5",
+          "sha256": "f8c57a129b37d760f192d4a595cddbf3c0e3f148a68af9f9cff1196a5a05888d",
+          "exact_native_image": true
+        },
+        {
+          "tick": 140,
+          "key": "8000:15,8001:6",
+          "sha256": "d4a78a6d5fa241f0f6e0868d052b7b12cfc59fb4addb4df4a8a59ffb0f5e2e84",
+          "exact_native_image": true
+        },
+        {
+          "tick": 147,
+          "key": "8000:15,8001:7",
+          "sha256": "a3b7ad5f13d9ec9df0853d7e5803f023953211c58ecf6f8b41f17aafcf10b5aa",
+          "exact_native_image": true
+        },
+        {
+          "tick": 154,
+          "key": "8000:15,8001:8",
+          "sha256": "08ba0275cca924e9b68b62937c1cd3a4d2090b2715e11779f4eb25707982811a",
+          "exact_native_image": true
+        },
+        {
+          "tick": 161,
+          "key": "8000:15,8001:9",
+          "sha256": "0371fc478cb676a9a6539d9a6a3318183f5ba84c6d910856545d64ad3d5f3868",
+          "exact_native_image": true
+        },
+        {
+          "tick": 168,
+          "key": "8000:15,8001:10",
+          "sha256": "d2de8bc6c8478c32ae378159b26e5f50a78a03dc1527fb9d8028a521861921fa",
+          "exact_native_image": true
+        },
+        {
+          "tick": 175,
+          "key": "8000:15,8001:11",
+          "sha256": "0d3e21e9f9ff1b2210ce02a2a4fdc213de9969f868a83e5012caa63582e4984d",
+          "exact_native_image": true
+        },
+        {
+          "tick": 182,
+          "key": "8000:15,8001:12",
+          "sha256": "de46965c6369e4f2f2bd4747bb88035c29fdbd23f44d18c296400d81df38438b",
+          "exact_native_image": true
+        },
+        {
+          "tick": 189,
+          "key": "8000:15,8001:13",
+          "sha256": "ceef53ed5af1cd9d3781b61ab39be9c4c7b4a145bc40900f103ad6e9083aaa4d",
+          "exact_native_image": true
+        },
+        {
+          "tick": 196,
+          "key": "8000:15,8001:14",
+          "sha256": "c3ab6f30bdd89ff9959631c1f5e3faa95586391926b036abac72b2b77a0108cc",
+          "exact_native_image": true
+        },
+        {
+          "tick": 203,
+          "key": "8000:15,8001:15",
+          "sha256": "c3ab6f30bdd89ff9959631c1f5e3faa95586391926b036abac72b2b77a0108cc",
+          "exact_native_image": true
+        },
+        {
+          "tick": 210,
+          "key": "8002:1,8001:15",
+          "sha256": "c3ab6f30bdd89ff9959631c1f5e3faa95586391926b036abac72b2b77a0108cc",
+          "exact_native_image": true
+        },
+        {
+          "tick": 217,
+          "key": "8002:2,8001:15",
+          "sha256": "957e0a1fa9a3404911765f183642f42bac10073db820bfa16e59c39d136f4695",
+          "exact_native_image": true
+        },
+        {
+          "tick": 224,
+          "key": "8002:3,8001:15",
+          "sha256": "66303daffa915f6a464f59993a50274a42836c3fd4fe6c6fa2927e16881a15ff",
+          "exact_native_image": true
+        },
+        {
+          "tick": 231,
+          "key": "8002:4,8001:15",
+          "sha256": "e68518577fb7a05e346a38d8459cddfec11b36ee522721f937f90be8ffb74cd6",
+          "exact_native_image": true
+        },
+        {
+          "tick": 238,
+          "key": "8002:5,8001:15",
+          "sha256": "b099e78c1bad412285b7b41ab18023bb4cdb4774ae28a6206f232aa52086136a",
+          "exact_native_image": true
+        },
+        {
+          "tick": 245,
+          "key": "8002:6,8001:15",
+          "sha256": "6cbb5e0d04accf6a566a4973203dca28b58b7bb703de411477b626afdd77f8ff",
+          "exact_native_image": true
+        },
+        {
+          "tick": 252,
+          "key": "8002:7,8001:15",
+          "sha256": "f79cc502ba45e57d571fb595b742ca8450fe5ece45fa0e3adee4a8d3296c989c",
+          "exact_native_image": true
+        },
+        {
+          "tick": 259,
+          "key": "8002:8,8001:15",
+          "sha256": "a08a595d1c5a08af0305a9f302e98b8237bb98731baf2ba61306e07af2803da8",
+          "exact_native_image": true
+        },
+        {
+          "tick": 266,
+          "key": "8002:9,8001:15",
+          "sha256": "d45ba93a7005578f105846f5fd4b7acc384e5c844304453bf7d00f83433e8e26",
+          "exact_native_image": true
+        },
+        {
+          "tick": 273,
+          "key": "8002:10,8001:15",
+          "sha256": "76fd3f74620ca2d9b05a68e1f08aecb8c7e199999cf23d13460e4e0377265d97",
+          "exact_native_image": true
+        },
+        {
+          "tick": 280,
+          "key": "8002:11,8001:15",
+          "sha256": "530718c81753884bc78143ccaaf3c6d4f0d58e8a8618d5dc9c2658d002d01682",
+          "exact_native_image": true
+        },
+        {
+          "tick": 287,
+          "key": "8002:12,8001:15",
+          "sha256": "89e2ecfc3f036d17d03ed49fc7fa9855ab9d70d2bf41a51695f2b6b979012686",
+          "exact_native_image": true
+        },
+        {
+          "tick": 294,
+          "key": "8002:13,8001:15",
+          "sha256": "b7f962d8f616fa581d7db505d87662cd937c8eb31307cbada086f7653776e629",
+          "exact_native_image": true
+        },
+        {
+          "tick": 301,
+          "key": "8002:14,8001:15",
+          "sha256": "42e531f2c81b880e58612ff006e89c78097b57189601d7880f79b1e843cf7354",
+          "exact_native_image": true
+        },
+        {
+          "tick": 308,
+          "key": "8002:15,8001:15",
+          "sha256": "036dc723ef12e8888b1b8cff91fd2db5c43023e08715b72e80855ca6422c05ae",
+          "exact_native_image": true
+        },
+        {
+          "tick": 315,
+          "key": "8002:16,8001:15",
+          "sha256": "fa22843191141f0e11c9047d30c620df649b625656c08355f86b24d2567f621f",
+          "exact_native_image": true
+        },
+        {
+          "tick": 322,
+          "key": "8002:17,8001:15",
+          "sha256": "39457162952b5cfb98ac36f125b26522036fde4c6010b10fd8ed735252941f4b",
+          "exact_native_image": true
+        },
+        {
+          "tick": 329,
+          "key": "8002:18,8001:15",
+          "sha256": "df65deca825d7a480bf9c65990a2846c4258305bc2216192d1684eb4a74e5f32",
+          "exact_native_image": true
+        },
+        {
+          "tick": 336,
+          "key": "8002:19,8001:15",
+          "sha256": "336362ed0f4e595114b28dfb509d0922df377492fc1c32f4911b8b7a2233a80c",
+          "exact_native_image": true
+        },
+        {
+          "tick": 343,
+          "key": "8002:20,8001:15",
+          "sha256": "0ae1756a35359935486675d3cdb49e46d8561ffbf8823e01838bfc6dc28c3fe0",
+          "exact_native_image": true
+        },
+        {
+          "tick": 350,
+          "key": "8002:21,8001:15",
+          "sha256": "35af34b501dd00e8c6ed73b1eb7a442eb4233d7f5f9f6e05ae5981829ec76e78",
+          "exact_native_image": true
+        },
+        {
+          "tick": 357,
+          "key": "8002:22,8001:15",
+          "sha256": "5362ad6718921a0b5a51a3f12f7769bd22d6739ab714cc8847ca39c5d07ec2e5",
+          "exact_native_image": true
+        },
+        {
+          "tick": 364,
+          "key": "8002:23,8001:15",
+          "sha256": "6f1a915aa475d6ca02ef8736ca03c158fb39fd5f40a0896cad1daeb067111aa8",
+          "exact_native_image": true
+        },
+        {
+          "tick": 371,
+          "key": "8002:24,8001:15",
+          "sha256": "f778f73694c9d785aada22e8f7b40b287d682b8c0fa2db6da4fffa938d2948b2",
+          "exact_native_image": true
+        },
+        {
+          "tick": 378,
+          "key": "8002:25,8001:15",
+          "sha256": "ab737cc1780e48c216170d30c52259440a16073a7127a220f2822b880f9b1827",
+          "exact_native_image": true
+        },
+        {
+          "tick": 385,
+          "key": "8002:26,8001:15",
+          "sha256": "101b8c5a8bc7c5315e0bb089dc508c35df8c851e334edc8307987d0cb65f430f",
+          "exact_native_image": true
+        },
+        {
+          "tick": 392,
+          "key": "8002:27,8001:15",
+          "sha256": "c574eddd046eade1cdb550ebf88a435c02e92c0449f3e928fe3959e1a8eb1c8e",
+          "exact_native_image": true
+        },
+        {
+          "tick": 399,
+          "key": "8002:28,8001:15",
+          "sha256": "d5d0b66d837436026a1f1882cad215021458f8e241fce99277d257ea66060703",
+          "exact_native_image": true
+        },
+        {
+          "tick": 406,
+          "key": "8002:29,8001:15",
+          "sha256": "7591c0c5f4db86f211070c5097bc0af72d359bd380cd7024500c0e87bea69efc",
+          "exact_native_image": true
+        },
+        {
+          "tick": 413,
+          "key": "8002:30,8001:15",
+          "sha256": "b123cdef302cb89a2b01ea507635d65ad5a52f72e1547469d03d1011acae6562",
+          "exact_native_image": true
+        },
+        {
+          "tick": 420,
+          "key": "8002:31,8001:15",
+          "sha256": "2f40cedbefc72c5a523ef4c0d831f1959cab7b7f9a1135d7bc6621fa115b42fb",
+          "exact_native_image": true
+        },
+        {
+          "tick": 427,
+          "key": "8002:32,8001:15",
+          "sha256": "4452dedf761878ffb44a91d256ad25c03d1d79653686477af0bbf43621e2f051",
+          "exact_native_image": true
+        },
+        {
+          "tick": 434,
+          "key": "8002:33,8001:15",
+          "sha256": "2b4cb510b63bc7273ca747176903baea7276f8f71e83bc59fdba3f16dd434ed3",
+          "exact_native_image": true
+        },
+        {
+          "tick": 441,
+          "key": "8002:34,8001:15",
+          "sha256": "abda5aa9fe448d29d751827f0078e294f8c2d77f5655cfce4eed5c27a109e60c",
+          "exact_native_image": true
+        },
+        {
+          "tick": 448,
+          "key": "8002:35,8001:15",
+          "sha256": "038aeb7e1e8724be7234e54eb13b878799e6a6f8889d18fa9cf255ba543cd480",
+          "exact_native_image": true
+        },
+        {
+          "tick": 455,
+          "key": "8002:36,8001:15",
+          "sha256": "038aeb7e1e8724be7234e54eb13b878799e6a6f8889d18fa9cf255ba543cd480",
+          "exact_native_image": true
+        },
+        {
+          "tick": 462,
+          "key": "8002:37,8001:15",
+          "sha256": "5fd1044855e9f7fa9d38692425c22833573ad0660c9c919a6a3e26f57af8c4ed",
+          "exact_native_image": true
+        },
+        {
+          "tick": 469,
+          "key": "8002:38,8001:15",
+          "sha256": "0f24c96f1795e5124cfe9e3812f5f72b34828a80abaf9333e4f200a8a9788808",
+          "exact_native_image": true
+        },
+        {
+          "tick": 476,
+          "key": "8002:39,8001:15",
+          "sha256": "669e3d5d58be6b91defea584fb9d21403eabad86c8b0b5783457a2e6ec7880fb",
+          "exact_native_image": true
+        },
+        {
+          "tick": 483,
+          "key": "8002:40,8001:15",
+          "sha256": "d1b7f80a2d925ba4dd4a107c5c709e0fb56017df6d2a0140aa6265b41d122978",
+          "exact_native_image": true
+        },
+        {
+          "tick": 490,
+          "key": "8002:41,8001:15",
+          "sha256": "6becbc8e14a68904f59a9737ab24d51e8ba378b44a60f04844fb00d87e2c72d8",
+          "exact_native_image": true
+        },
+        {
+          "tick": 497,
+          "key": "8002:42,8001:15",
+          "sha256": "1a86bc700549c7ff605a8a744da3c91dd7b39265f58833d946c80cbcde1f5e38",
+          "exact_native_image": true
+        },
+        {
+          "tick": 504,
+          "key": "8002:43,8001:15",
+          "sha256": "bf9231512374754e106b5c36e57d163d8773bec95af265565480b09bbde0c501",
+          "exact_native_image": true
+        },
+        {
+          "tick": 511,
+          "key": "8002:44,8001:15",
+          "sha256": "be0d8cde30e2bfd759a63ef712c3104bd120310653603d868cd8904ed51ac353",
+          "exact_native_image": true
+        }
+      ],
+      "exact": 73,
+      "total": 73,
+      "reached_inside": true
+    },
+    "performance": {
+      "demo_sha256": "295b74955d4b6a44308192976994fff5b11fe0e05c10c3d20fb7639ffa0c0c91",
+      "completed": true,
+      "comparison": "Full RGB display changes, ordered matching; callback timing parity not established",
+      "total": 38,
+      "exact": 38,
+      "ordered_exact": 38,
+      "states": [
+        {
+          "tick": 0,
+          "phase": "clap",
+          "category": -1,
+          "sha256": "39f7bfc7083a7e03bdd4b98a6444ad8694219042ae69dce58ff83df3e2c26b0b",
+          "exact_native_image": true,
+          "ordered_native_run": 5521
+        },
+        {
+          "tick": 16,
+          "phase": "pause",
+          "category": -1,
+          "sha256": "8975c8d117b6dd5de25a451dc782e2095ef515b5c366ccdc723dbc83fc5764a9",
+          "exact_native_image": true,
+          "ordered_native_run": 5541
+        },
+        {
+          "tick": 48,
+          "phase": "phrase",
+          "category": 0,
+          "sha256": "c4b6bc466433e7a4e49f742ed71897074cee84e6c2496034c612f100614af4ae",
+          "exact_native_image": true,
+          "ordered_native_run": 5579
+        },
+        {
+          "tick": 60,
+          "phase": "phrase",
+          "category": 0,
+          "sha256": "73c0f8caca8387d619d313bc71918ec1f34e76e422f49db4f0e2de4c27db6cf8",
+          "exact_native_image": true,
+          "ordered_native_run": 5592
+        },
+        {
+          "tick": 72,
+          "phase": "phrase",
+          "category": 0,
+          "sha256": "c4b6bc466433e7a4e49f742ed71897074cee84e6c2496034c612f100614af4ae",
+          "exact_native_image": true,
+          "ordered_native_run": 5606
+        },
+        {
+          "tick": 84,
+          "phase": "phrase",
+          "category": 0,
+          "sha256": "73c0f8caca8387d619d313bc71918ec1f34e76e422f49db4f0e2de4c27db6cf8",
+          "exact_native_image": true,
+          "ordered_native_run": 5620
+        },
+        {
+          "tick": 96,
+          "phase": "phrase",
+          "category": 0,
+          "sha256": "c4b6bc466433e7a4e49f742ed71897074cee84e6c2496034c612f100614af4ae",
+          "exact_native_image": true,
+          "ordered_native_run": 5634
+        },
+        {
+          "tick": 108,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "645f6d6d6645fd53ba3e598dbc01440e4ae74d46531a737a4c655a6366f08340",
+          "exact_native_image": true,
+          "ordered_native_run": 5651
+        },
+        {
+          "tick": 115,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "2225063e895a4416ff4e91ca109d6814f75a32854b5adb2834aef3911b9fb77d",
+          "exact_native_image": true,
+          "ordered_native_run": 5659
+        },
+        {
+          "tick": 122,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "34c65ac29874abb0400f8ec22583ace4e8e51c053ab7e253dabd1f9c49012514",
+          "exact_native_image": true,
+          "ordered_native_run": 5667
+        },
+        {
+          "tick": 129,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "73b4497756c18f8717f7eb38f24d0702db4af73ed423eeb6c76446a1b74e0922",
+          "exact_native_image": true,
+          "ordered_native_run": 5675
+        },
+        {
+          "tick": 136,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "c0e6da53fa66d009fd0567abcc3dc61b9c0035a46c4ce8e4df6c35fcd379518c",
+          "exact_native_image": true,
+          "ordered_native_run": 5683
+        },
+        {
+          "tick": 143,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "88e1ae9ce5623a760b3f98366129f2bc0fd2346803d3bafcf61c34d610c0c77a",
+          "exact_native_image": true,
+          "ordered_native_run": 5691
+        },
+        {
+          "tick": 150,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "a01a47f58632bc0dd4f46944e3a28c83f595a20017c53ae609a239f094bd90a0",
+          "exact_native_image": true,
+          "ordered_native_run": 5700
+        },
+        {
+          "tick": 157,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "99d427213962833c873189f01e91bcc41242b59eb5128ca75d101a866b72cc61",
+          "exact_native_image": true,
+          "ordered_native_run": 5708
+        },
+        {
+          "tick": 164,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "8e132abebc956db377c44c701e1e06e2a293818e0d7f2e8b8c5272dd89eddb06",
+          "exact_native_image": true,
+          "ordered_native_run": 5716
+        },
+        {
+          "tick": 171,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "d29726f868727c48533779ba1abb17771be710462754e0f911ee2fa0a95338ec",
+          "exact_native_image": true,
+          "ordered_native_run": 5724
+        },
+        {
+          "tick": 178,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "7fa1c9d39a7a56a4775e0a1b21dc16f7a9199bbe08b04c912b059ff2baf54087",
+          "exact_native_image": true,
+          "ordered_native_run": 5732
+        },
+        {
+          "tick": 185,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "2225063e895a4416ff4e91ca109d6814f75a32854b5adb2834aef3911b9fb77d",
+          "exact_native_image": true,
+          "ordered_native_run": 5741
+        },
+        {
+          "tick": 192,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "34c65ac29874abb0400f8ec22583ace4e8e51c053ab7e253dabd1f9c49012514",
+          "exact_native_image": true,
+          "ordered_native_run": 5749
+        },
+        {
+          "tick": 199,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "73b4497756c18f8717f7eb38f24d0702db4af73ed423eeb6c76446a1b74e0922",
+          "exact_native_image": true,
+          "ordered_native_run": 5757
+        },
+        {
+          "tick": 206,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "c0e6da53fa66d009fd0567abcc3dc61b9c0035a46c4ce8e4df6c35fcd379518c",
+          "exact_native_image": true,
+          "ordered_native_run": 5765
+        },
+        {
+          "tick": 213,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "88e1ae9ce5623a760b3f98366129f2bc0fd2346803d3bafcf61c34d610c0c77a",
+          "exact_native_image": true,
+          "ordered_native_run": 5773
+        },
+        {
+          "tick": 220,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "a01a47f58632bc0dd4f46944e3a28c83f595a20017c53ae609a239f094bd90a0",
+          "exact_native_image": true,
+          "ordered_native_run": 5781
+        },
+        {
+          "tick": 227,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "99d427213962833c873189f01e91bcc41242b59eb5128ca75d101a866b72cc61",
+          "exact_native_image": true,
+          "ordered_native_run": 5790
+        },
+        {
+          "tick": 234,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "8e132abebc956db377c44c701e1e06e2a293818e0d7f2e8b8c5272dd89eddb06",
+          "exact_native_image": true,
+          "ordered_native_run": 5798
+        },
+        {
+          "tick": 241,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "d29726f868727c48533779ba1abb17771be710462754e0f911ee2fa0a95338ec",
+          "exact_native_image": true,
+          "ordered_native_run": 5806
+        },
+        {
+          "tick": 248,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "7fa1c9d39a7a56a4775e0a1b21dc16f7a9199bbe08b04c912b059ff2baf54087",
+          "exact_native_image": true,
+          "ordered_native_run": 5814
+        },
+        {
+          "tick": 255,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "2225063e895a4416ff4e91ca109d6814f75a32854b5adb2834aef3911b9fb77d",
+          "exact_native_image": true,
+          "ordered_native_run": 5822
+        },
+        {
+          "tick": 262,
+          "phase": "phrase",
+          "category": 1,
+          "sha256": "645f6d6d6645fd53ba3e598dbc01440e4ae74d46531a737a4c655a6366f08340",
+          "exact_native_image": true,
+          "ordered_native_run": 5830
+        },
+        {
+          "tick": 269,
+          "phase": "phrase",
+          "category": 2,
+          "sha256": "5f484c3452eb4a16924740e7af2a9cb1af30de1996f14313a938fc25bf3f4ccc",
+          "exact_native_image": true,
+          "ordered_native_run": 5841
+        },
+        {
+          "tick": 281,
+          "phase": "phrase",
+          "category": 2,
+          "sha256": "9ec5e67266f18c7909dc8ce74eed71fa5d57a61d87049b2c19f95678336121c2",
+          "exact_native_image": true,
+          "ordered_native_run": 5855
+        },
+        {
+          "tick": 293,
+          "phase": "phrase",
+          "category": 2,
+          "sha256": "5f484c3452eb4a16924740e7af2a9cb1af30de1996f14313a938fc25bf3f4ccc",
+          "exact_native_image": true,
+          "ordered_native_run": 5869
+        },
+        {
+          "tick": 305,
+          "phase": "phrase",
+          "category": 2,
+          "sha256": "9ec5e67266f18c7909dc8ce74eed71fa5d57a61d87049b2c19f95678336121c2",
+          "exact_native_image": true,
+          "ordered_native_run": 5883
+        },
+        {
+          "tick": 317,
+          "phase": "phrase",
+          "category": 2,
+          "sha256": "5f484c3452eb4a16924740e7af2a9cb1af30de1996f14313a938fc25bf3f4ccc",
+          "exact_native_image": true,
+          "ordered_native_run": 5897
+        },
+        {
+          "tick": 329,
+          "phase": "phrase",
+          "category": 3,
+          "sha256": "d70472eb1f783d19ba3c55e043ea838c431dcb663d168d3713aa4a207720a947",
+          "exact_native_image": true,
+          "ordered_native_run": 5911
+        },
+        {
+          "tick": 359,
+          "phase": "phrase",
+          "category": 3,
+          "sha256": "6911697bf02610dd534faeea9d8feaafbb3f01dfc2178b4691bef279963deae0",
+          "exact_native_image": true,
+          "ordered_native_run": 5946
+        },
+        {
+          "tick": 394,
+          "phase": "idle",
+          "category": -1,
+          "sha256": "8975c8d117b6dd5de25a451dc782e2095ef515b5c366ccdc723dbc83fc5764a9",
+          "exact_native_image": true,
+          "ordered_native_run": 5986
+        }
+      ]
+    }
+  }
+}

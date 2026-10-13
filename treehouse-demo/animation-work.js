@@ -1,0 +1,156 @@
+"use strict";
+// Main C78A..CD3F. The caller executes resident graphics operations on the
+// same clock. Only instance state and intrinsic main-code work live here.
+class OriginalAnimationWork {
+  static *instructions(...addresses){for(const address of addresses)yield 'main:'+address.toString(16).padStart(4,'0');}
+  static view(state){
+    const m=state.memory,v=new DataView(m.buffer,m.byteOffset,m.byteLength);
+    return {m,word:o=>v.getUint16(o,true),signed:o=>v.getInt16(o,true),put:(o,n)=>v.setUint16(o,n&65535,true),dword:o=>v.getUint32(o,true),put32:(o,n)=>v.setUint32(o,n>>>0,true)};
+  }
+  static *bounds(state,slot){
+    const {word,signed,put}=this.view(state),emit=this.instructions,o=0x78+0x22*slot;
+    yield* emit(0xcc1e,0xcc1f,0xcc21,0xcc25,0xcc26,0xcc27,0xcc2a,0xcc2d);
+    if(!word(o))yield* emit(0xcc2f);
+    else{
+      const x=signed(o+0xc),y=signed(o+0x10),shape=word(o),handle=word(0x29a+2*shape);
+      yield* emit(0xcc32,0xcc35,0xcc38,0xcc3b,0xcc3e,0xcc40,0xcc42,0xcc45,0xcc49);
+      const horizontal=yield {call:'shape-header',handle,shape,state};
+      const right=((x+horizontal.width)<<16)>>16;
+      yield* emit(0xcc4e,0xcc50,0xcc52,0xcc56,0xcc59,0xcc5c,0xcc5f,0xcc62,0xcc65,0xcc68,0xcc6a,0xcc6c,0xcc6f,0xcc73);
+      const vertical=yield {call:'shape-header',handle,shape,state};
+      const bottom=((y+vertical.height)<<16)>>16;
+      yield* emit(0xcc78,0xcc7a,0xcc7c,0xcc7f,0xcc82,0xcc85,0xcc88,0xcc89,0xcc8a,0xcc8b,0xcc8c,0xcc8f,0xcc92,0xcc93,0xcc94);
+      const rect=[Math.max(y,signed(0x10)),Math.max(x,signed(0x12)),Math.min(bottom,signed(0x14)),Math.min(right,signed(0x16))];
+      yield {call:'rectangle-intersection',a:[0,2,4,6].map(i=>signed(0x10+i)),b:[y,x,bottom,right],state};
+      yield* emit(0xcc99,0xcc9c);
+      if(rect[1]>=rect[3]||rect[0]>=rect[2])yield* emit(0xcc9e);
+      else{
+        yield* emit(0xcca1,0xcca4,0xcca7,0xcca8,0xcca9);yield {call:'rectangle-empty',rect:[0,2,4,6].map(i=>signed(0x46+i)),state};
+        yield* emit(0xccae,0xccb1);
+        if(signed(0x48)>=signed(0x4c)||signed(0x46)>=signed(0x4a)){
+          yield* emit(0xccb6,0xccb9,0xccba,0xccbd,0xccbe,0xccc1,0xccc4,0xccc5);yield {call:'near-copy',bytes:8,words:rect,destination:state.instance+0x46,state};
+          for(let i=0;i<4;i++)put(0x46+2*i,rect[i]);yield* emit(0xccca,0xcccd);
+        }else{
+          yield* emit(0xccb3,0xccd0,0xccd3,0xccd6,0xccd7,0xccd8,0xccdb,0xccde,0xccdf,0xcce0,0xcce3,0xcce4,0xcce5);
+          yield {call:'rectangle-union',a:rect,b:[0,2,4,6].map(i=>signed(0x46+i)),state};
+          for(let i=0;i<4;i++)put(0x46+2*i,(i<2?Math.min:Math.max)(rect[i],signed(0x46+2*i)));
+        }
+      }
+    }
+    yield* emit(0xccea,0xcceb,0xccec,0xccee,0xccef);
+  }
+  static *slot(state,slot){
+    const {word,signed,m}=this.view(state),emit=this.instructions,o=0x78+0x22*slot;
+    yield* emit(0xcbd2,0xcbd3,0xcbd5,0xcbd9,0xcbda,0xcbdb,0xcbde,0xcbe1);
+    if(!word(o))yield* emit(0xcbe3);
+    else{
+      yield* emit(0xcbe6,0xcbe9,0xcbeb,0xcbed,0xcbf0,0xcbf4);yield {call:'shape-header',handle:word(0x29a+2*word(o)),shape:word(o),state};
+      yield* emit(0xcbf9,0xcbfa,0xcbfb,0xcbfe,0xcc01,0xcc04,0xcc07,0xcc0a,0xcc0d,0xcc10,0xcc11);
+      yield {call:'shape-draw',shape:word(o),x:signed(o+0xc),y:signed(o+0x10),mode:m[o+6]&15,state};
+    }
+    yield* emit(0xcc16,0xcc17,0xcc18,0xcc1a,0xcc1b);
+  }
+  static *compose(state){
+    const {word,dword,signed}=this.view(state),emit=this.instructions;
+    yield* emit(0xc9ed,0xc9ee,0xc9f0,0xc9f4,0xc9f5,0xc9f6,0xc9f9,0xc9fc,0xc9fd,0xc9fe);
+    yield {call:'clip-push',rect:[0,2,4,6].map(i=>signed(0x46+i)),state};
+    yield* emit(0xca03,0xca06,0xca09,0xca0c);
+    if(dword(0x2e)){
+      yield* emit(0xca11,0xca14,0xca17,0xca1a,0xca1b,0xca1e,0xca21,0xca22,0xca23,0xca26,0xca29,0xca2a,0xca2b,0xca2e,0xca2f);
+      yield {call:'background-restore',state};yield* emit(0xca34);
+    }else{
+      yield* emit(0xca0e,0xca37,0xca3a,0xca3d,0xca3e,0xca3f,0xca42,0xca45,0xca48);yield {call:'surface-clear',state};
+    }
+    yield* emit(0xca4d,0xca52);
+    for(let i=0;i<16;i++){
+      yield* emit(0xca58,0xca5c,0xca61,0xca64,0xca67,0xca6a,0xca6d,0xca70,0xca71);
+      yield* this.slot(state,i);yield* emit(0xca74,0xca55);
+    }
+    yield* emit(0xca58,0xca5c,0xca5e,0xca77,0xca7c);
+    if(state.drawing[0])throw new Error('Scene cursor composition remains uncomposed');yield* emit(0xca7e,0xca99,0xca9e);
+    if(state.drawing[1])throw new Error('Scene room objects remain uncomposed');yield* emit(0xcaa0,0xcb4a,0xcb4f);
+    if(state.drawing[2]){
+      yield* emit(0xcb54,0xcb57,0xcb58,0xcb59,0xcb5a,0xcb5b,0xcb5e,0xcb61,0xcb62,0xcb63,0xcb66,0xcb69,0xcb6c,0xcb6f);
+      const rect=[0,2,4,6].map((n,i)=>((signed(0x46+n)+signed(i%2?0x40:0x3e))<<16)>>16),caption=state.drawing.slice(4,8).map(n=>(n<<16)>>16);
+      if(caption.length!==4)throw new Error('Missing caption rectangle');
+      yield {call:'rectangle-offset',state};yield* emit(0xcb74,0xcb75,0xcb76,0xcb79,0xcb7a,0xcb7b);
+      yield {call:'rectangle-intersection',a:caption,b:rect,state};yield* emit(0xcb80,0xcb83);
+      if(Math.max(rect[0],caption[0])<Math.min(rect[2],caption[2])&&Math.max(rect[1],caption[1])<Math.min(rect[3],caption[3])){
+        yield* emit(0xcb88,0xcb8c,0xcb8f,0xcb90,0xcb93,0xcb96,0xcb99,0xcb9a,0xcb9d,0xcba0,0xcba3,0xcba4,0xcba7,0xcba8,0xcba9,0xcbaa);
+        yield {call:'caption-draw',paletteHandle:state.drawing[8],shape:3,x:caption[1]-signed(0x40),y:caption[0]-signed(0x3e),mode:10,state};
+      }else yield* emit(0xcb85);
+    }else yield* emit(0xcb51);
+    yield* emit(0xcbad,0xcbb2);
+    if(state.drawing[3])throw new Error('Scene activity overlay remains uncomposed');yield* emit(0xcbb4,0xcbbf);yield {call:'clip-pop',state};
+    yield* emit(0xcbc4,0xcbc7,0xcbca,0xcbcb,0xcbcc,0xcbce,0xcbcf);return state.instance;
+  }
+  static *frame(state,{readTick}){
+    const {m,word,signed,put,dword,put32}=this.view(state),emit=this.instructions;
+    yield* emit(0xc78a,0xc78b,0xc78d,0xc791,0xc792,0xc793,0xc796);put(0x58,word(0x58)+1);
+    yield* emit(0xc799);const low=readTick(0xc799)&65535;yield* emit(0xc79c);const high=readTick(0xc79c)>>>16;
+    yield* emit(0xc7a0,0xc7a3);put(0x5c,low);yield* emit(0xc7a6);put(0x5e,high);
+    yield* emit(0xc7a9,0xc7ac,0xc7b0);
+    if(word(0x56))yield* emit(0xc7b2);else{yield* emit(0xc7b5,0xc7b8);yield* this.compose(state);}
+    yield* emit(0xc7bb,0xc7be);put(0x56,0);
+    yield* emit(0xc7c3,0xc7c6,0xc7c7,0xc7c8,0xc7cb,0xc7ce,0xc7cf,0xc7d0,0xc7d3,0xc7d6,0xc7d9,0xc7dc);yield {call:'rectangle-offset',state};
+    yield* emit(0xc7e1,0xc7e4,0xc7e7,0xc7ea,0xc7ed,0xc7ee,0xc7ef,0xc7f2,0xc7f5,0xc7f6,0xc7f7,0xc7fa,0xc7fb);yield {call:'surface-display',state};
+    yield* emit(0xc800,0xc803,0xc804,0xc807,0xc808,0xc80b,0xc80e,0xc80f);yield {call:'near-fill',bytes:8,value:0,state};m.fill(0,0x46,0x4e);
+    yield* emit(0xc814,0xc817,0xc81c);
+    for(let slot=0;slot<16;slot++){
+      const o=0x78+slot*0x22;
+      yield* emit(0xc822,0xc826,0xc82b,0xc82e,0xc831,0xc833,0xc836,0xc839,0xc83c,0xc83f);
+      if(!word(o))yield* emit(0xc841);
+      else{
+        yield* emit(0xc844,0xc847,0xc84a,0xc84d,0xc850);
+        if(word(o+2)===word(o+4))yield* emit(0xc852);
+        else{
+          yield* emit(0xc855,0xc858);const old=m[o+9];yield* emit(0xc85b);m[o+9]++;
+          yield* emit(0xc85e,0xc861,0xc864,0xc865,0xc868,0xc86b,0xc86e,0xc870);
+          if((m[o+7]&15)>(((old<<24)>>24)&65535))yield* emit(0xc872);
+          else{
+            yield* emit(0xc875,0xc878);m[o+9]=0;yield* emit(0xc87c,0xc87f,0xc882);yield* this.bounds(state,slot);
+            yield* emit(0xc885,0xc888,0xc88b,0xc88e,0xc891,0xc893,0xc896,0xc899,0xc89c);put(o,word(o)+(m[o+7]&0x10?-1:1));
+            yield* emit(0xc89e,0xc8a1,0xc8a5);
+            if(m[o+7]&0x20){
+              yield* emit(0xc8aa,0xc8ad,0xc8af,0xc8b2,0xc8b5);
+              if(signed(o+2)>signed(o)){
+                yield* emit(0xc8ba,0xc8bd,0xc8c0,0xc8c1,0xc8c4);put(o,word(o+2)+1);yield* emit(0xc8c6,0xc8c9);put(o+6,word(o+6)&0xefff);yield* emit(0xc8ce);
+              }else{
+                yield* emit(0xc8b7,0xc8d1,0xc8d4,0xc8d6,0xc8d9,0xc8dc);
+                if(signed(o+4)<signed(o)){yield* emit(0xc8e1,0xc8e4,0xc8e7,0xc8e8,0xc8eb);put(o,word(o+4)-1);yield* emit(0xc8ed,0xc8f0);put(o+6,word(o+6)|0x1000);}
+                else yield* emit(0xc8de);
+              }
+              yield* emit(0xc8f5);
+            }else{
+              yield* emit(0xc8a7,0xc8f8,0xc8fb,0xc8fd,0xc900,0xc903);
+              if(signed(o+2)>signed(o)){yield* emit(0xc908,0xc90b,0xc90e,0xc911);put(o,word(o+4));yield* emit(0xc913);}
+              else{
+                yield* emit(0xc905,0xc916,0xc919,0xc91b,0xc91e,0xc921);
+                if(signed(o+4)<signed(o)){yield* emit(0xc926,0xc929,0xc92c,0xc92f);put(o,word(o+2));}else yield* emit(0xc923);
+              }
+            }
+            yield* emit(0xc931,0xc934,0xc937);yield* this.bounds(state,slot);
+          }
+        }
+        yield* emit(0xc93a,0xc93d);const old=m[o+8];yield* emit(0xc940);m[o+8]++;
+        yield* emit(0xc943,0xc946,0xc949,0xc94a,0xc94c,0xc94f,0xc952,0xc956,0xc958,0xc95a);
+        if(((m[o+6]&0xf0)>>>4)>(((old<<24)>>24)&65535))yield* emit(0xc95c);
+        else{
+          yield* emit(0xc95f,0xc962);m[o+8]=0;yield* emit(0xc966,0xc969,0xc96c,0xc96f);
+          const vx=dword(o+0x12),vy=dword(o+0x16);
+          if(vx)yield* emit(0xc971);else yield* emit(0xc974,0xc977,0xc97a,0xc97d);
+          if(vx||vy){
+            yield* emit(0xc982,0xc985,0xc988);yield* this.bounds(state,slot);
+            yield* emit(0xc98b,0xc98e,0xc991,0xc994,0xc997,0xc99a);put32(o+0xa,dword(o+0xa)+vx);
+            yield* emit(0xc99d,0xc9a0,0xc9a3,0xc9a6,0xc9a9,0xc9ac);put32(o+0xe,dword(o+0xe)+vy);
+            yield* emit(0xc9af,0xc9b2,0xc9b5);yield* this.bounds(state,slot);
+          }else yield* emit(0xc97f);
+          yield* emit(0xc9b8,0xc9bb,0xc9be,0xc9c1,0xc9c4,0xc9c7);put32(o+0x12,dword(o+0x12)+dword(o+0x1a));
+          yield* emit(0xc9ca,0xc9cd,0xc9d0,0xc9d3,0xc9d6,0xc9d9);put32(o+0x16,dword(o+0x16)+dword(o+0x1e));
+        }
+      }
+      yield* emit(0xc9dc,0xc81f);
+    }
+    yield* emit(0xc822,0xc826,0xc828,0xc9df,0xc9e2,0xc9e5,0xc9e6,0xc9e7,0xc9e9,0xc9ea);return state.instance;
+  }
+}

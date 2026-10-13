@@ -1,0 +1,183 @@
+{
+  "scope": "35 complete native shuffle frames whose stage matches the prior clone while the caption differs. Required comparison is full RGB without masks or tolerance. Other missing displays remain reported separately.",
+  "original_run_sha256": "1ed432cd4b1e1f0ab94ae2961f0d304f929cb1084c2e808b7953785d596d995d",
+  "source_sha256": "53ecb856cb6c49f28064ce22b9723eed9a8d19db139ae1bead9786f37a7eb78c",
+  "checkpoint": "shuffled",
+  "frames": [
+    {
+      "sha256": "94e40a4ee464baaa6f0bcb37020ce13b288a0d89ed0feae5c3ab3d0ed0457b27",
+      "image": "frames/320x200-94e40a4ee464baaa6f0bcb37020ce13b288a0d89ed0feae5c3ab3d0ed0457b27.png",
+      "tick": 23986
+    },
+    {
+      "sha256": "2b57a11e64e5179e45aeae22faccbb42f215ff1cedec1164b9f2e3daf8295896",
+      "image": "frames/320x200-2b57a11e64e5179e45aeae22faccbb42f215ff1cedec1164b9f2e3daf8295896.png",
+      "tick": 23990
+    },
+    {
+      "sha256": "8ec4d9a715231f793597d967b7e6c6be8de8f284cc85707b113eaf637a77fd1a",
+      "image": "frames/320x200-8ec4d9a715231f793597d967b7e6c6be8de8f284cc85707b113eaf637a77fd1a.png",
+      "tick": 23995
+    },
+    {
+      "sha256": "19ae95a313cae2896919f0d7c1bfffa0228d7b99bc25fa0477a4c2975a3f08cb",
+      "image": "frames/320x200-19ae95a313cae2896919f0d7c1bfffa0228d7b99bc25fa0477a4c2975a3f08cb.png",
+      "tick": 23998
+    },
+    {
+      "sha256": "1bc86d422d91fc73b40e668287700053b577990a9e7a6ff5ac098757eb8c7b3f",
+      "image": "frames/320x200-1bc86d422d91fc73b40e668287700053b577990a9e7a6ff5ac098757eb8c7b3f.png",
+      "tick": 24002
+    },
+    {
+      "sha256": "05c4c7681832de7fee7c6b90890ced029590451b11a34195759abf0cacc9d59c",
+      "image": "frames/320x200-05c4c7681832de7fee7c6b90890ced029590451b11a34195759abf0cacc9d59c.png",
+      "tick": 24007
+    },
+    {
+      "sha256": "a93b39a177e6de26a946195d6e2d8bd5b83d1806dae6f1d53a17889b92a267ca",
+      "image": "frames/320x200-a93b39a177e6de26a946195d6e2d8bd5b83d1806dae6f1d53a17889b92a267ca.png",
+      "tick": 24010
+    },
+    {
+      "sha256": "e34cd07244c74db85db634f8246e5034f9549aad9d0bb4d5e025193a29955a4e",
+      "image": "frames/320x200-e34cd07244c74db85db634f8246e5034f9549aad9d0bb4d5e025193a29955a4e.png",
+      "tick": 24043
+    },
+    {
+      "sha256": "22018d298137f53c9cbe63b1c1d23ca5f3ac8595e9590d8ce6dc54fc41e82392",
+      "image": "frames/320x200-22018d298137f53c9cbe63b1c1d23ca5f3ac8595e9590d8ce6dc54fc41e82392.png",
+      "tick": 24046
+    },
+    {
+      "sha256": "4e01b566806c0c4845ae3c766d35a6c31d3d17b34618974fff6dc95b938ece6f",
+      "image": "frames/320x200-4e01b566806c0c4845ae3c766d35a6c31d3d17b34618974fff6dc95b938ece6f.png",
+      "tick": 24050
+    },
+    {
+      "sha256": "f3fd7832166b2a6743f33a87e09107674ff82d32129c4cdacf20997689f5ca8c",
+      "image": "frames/320x200-f3fd7832166b2a6743f33a87e09107674ff82d32129c4cdacf20997689f5ca8c.png",
+      "tick": 24055
+    },
+    {
+      "sha256": "db93984520eb0a01b012fbb71ddf300937893874eb61d0103443a288c27062f0",
+      "image": "frames/320x200-db93984520eb0a01b012fbb71ddf300937893874eb61d0103443a288c27062f0.png",
+      "tick": 24059
+    },
+    {
+      "sha256": "449165d4eb61c19b79096e25aa8e5164918ea2d38f8f5b649942e026f7b96ef0",
+      "image": "frames/320x200-449165d4eb61c19b79096e25aa8e5164918ea2d38f8f5b649942e026f7b96ef0.png",
+      "tick": 24062
+    },
+    {
+      "sha256": "3da031eef86a33454bebab0d75d634640134c013f58cf2f37de5079aae14cbe2",
+      "image": "frames/320x200-3da031eef86a33454bebab0d75d634640134c013f58cf2f37de5079aae14cbe2.png",
+      "tick": 24067
+    },
+    {
+      "sha256": "2be3dccbd1d656f802e2d215e491bdc7357e74baaeffba89103acced63f2723e",
+      "image": "frames/320x200-2be3dccbd1d656f802e2d215e491bdc7357e74baaeffba89103acced63f2723e.png",
+      "tick": 24086
+    },
+    {
+      "sha256": "fe20841081948c4c48e3bc12d5de69ce36dc9407789862d2d21bd0dd15ed6502",
+      "image": "frames/320x200-fe20841081948c4c48e3bc12d5de69ce36dc9407789862d2d21bd0dd15ed6502.png",
+      "tick": 24091
+    },
+    {
+      "sha256": "9335e64ef8964b83159b2026fcb97a10c4babef6ec03446631eb618a0cc78118",
+      "image": "frames/320x200-9335e64ef8964b83159b2026fcb97a10c4babef6ec03446631eb618a0cc78118.png",
+      "tick": 24095
+    },
+    {
+      "sha256": "720b63c0ad9cd71f113fca95df2d896817ee167002e937b8ba198abf9936aa6d",
+      "image": "frames/320x200-720b63c0ad9cd71f113fca95df2d896817ee167002e937b8ba198abf9936aa6d.png",
+      "tick": 24098
+    },
+    {
+      "sha256": "b1d942b007dc690f2b4dec5cc0a8c07a2e9cc8ff75570c8c182e82986afd7c02",
+      "image": "frames/320x200-b1d942b007dc690f2b4dec5cc0a8c07a2e9cc8ff75570c8c182e82986afd7c02.png",
+      "tick": 24131
+    },
+    {
+      "sha256": "b8663a9d130da2eb70969ba0aa935ba814eb227eba53024a0313d8fc32613df7",
+      "image": "frames/320x200-b8663a9d130da2eb70969ba0aa935ba814eb227eba53024a0313d8fc32613df7.png",
+      "tick": 24134
+    },
+    {
+      "sha256": "ebfeb0a3ee3b4effd023f147540a72ea2f0288e0180c93814168ead0d7356d70",
+      "image": "frames/320x200-ebfeb0a3ee3b4effd023f147540a72ea2f0288e0180c93814168ead0d7356d70.png",
+      "tick": 24139
+    },
+    {
+      "sha256": "adb7bfe7f1a117371f8b1284b17b81d77c8d27b116bafff4267ee0b2e9381508",
+      "image": "frames/320x200-adb7bfe7f1a117371f8b1284b17b81d77c8d27b116bafff4267ee0b2e9381508.png",
+      "tick": 24143
+    },
+    {
+      "sha256": "5c8fac5845c7b0de9c26c44689675a20fb1c3baa421c96b1678241280bcba834",
+      "image": "frames/320x200-5c8fac5845c7b0de9c26c44689675a20fb1c3baa421c96b1678241280bcba834.png",
+      "tick": 24146
+    },
+    {
+      "sha256": "3251ba5bcad9254c1237eda54d793b78d289f1ea9e0b8fa6bc0cfb4b2d591d3b",
+      "image": "frames/320x200-3251ba5bcad9254c1237eda54d793b78d289f1ea9e0b8fa6bc0cfb4b2d591d3b.png",
+      "tick": 24151
+    },
+    {
+      "sha256": "1f48bc5cb69b2cf4e3db1a5da0e7bd3aa2f62ac630d4c62e70081b83f9e66af7",
+      "image": "frames/320x200-1f48bc5cb69b2cf4e3db1a5da0e7bd3aa2f62ac630d4c62e70081b83f9e66af7.png",
+      "tick": 24154
+    },
+    {
+      "sha256": "32404670d7a2751d5fcb513cb08b80a96ce5dfc544f42eb150f3caf7d4e57944",
+      "image": "frames/320x200-32404670d7a2751d5fcb513cb08b80a96ce5dfc544f42eb150f3caf7d4e57944.png",
+      "tick": 24198
+    },
+    {
+      "sha256": "3217ca50158e576275922f4e6cdc77232d2f359a15c2602576507cc49799913f",
+      "image": "frames/320x200-3217ca50158e576275922f4e6cdc77232d2f359a15c2602576507cc49799913f.png",
+      "tick": 24203
+    },
+    {
+      "sha256": "5bdf5c51ec9ed238dc5194e2321ff846e4d4df6e8202da5ed10cac2624aea96c",
+      "image": "frames/320x200-5bdf5c51ec9ed238dc5194e2321ff846e4d4df6e8202da5ed10cac2624aea96c.png",
+      "tick": 24206
+    },
+    {
+      "sha256": "5ffc6363f89764c3ff8eae16d27ae706ad5207158d32ef0f69758db6ce8f5390",
+      "image": "frames/320x200-5ffc6363f89764c3ff8eae16d27ae706ad5207158d32ef0f69758db6ce8f5390.png",
+      "tick": 24210
+    },
+    {
+      "sha256": "9037bb467b18102ff44cede633a7e9fbdc8cabbb2e1c8a50ff5ecb7234c35dee",
+      "image": "frames/320x200-9037bb467b18102ff44cede633a7e9fbdc8cabbb2e1c8a50ff5ecb7234c35dee.png",
+      "tick": 24215
+    },
+    {
+      "sha256": "f963b532074fb12bdfddc6c4ebaa932a3d798b454b20b496fff5bb0cbae34cc4",
+      "image": "frames/320x200-f963b532074fb12bdfddc6c4ebaa932a3d798b454b20b496fff5bb0cbae34cc4.png",
+      "tick": 24218
+    },
+    {
+      "sha256": "96710d2bb1a714ad60ea75ed7233eb1554e7e59dcd47f1b3711583af6a8b6d45",
+      "image": "frames/320x200-96710d2bb1a714ad60ea75ed7233eb1554e7e59dcd47f1b3711583af6a8b6d45.png",
+      "tick": 24222
+    },
+    {
+      "sha256": "dce3010ad50cf2040ecb020625b429e1aa53e82c15e6099f1d9e870dcdf71d0d",
+      "image": "frames/320x200-dce3010ad50cf2040ecb020625b429e1aa53e82c15e6099f1d9e870dcdf71d0d.png",
+      "tick": 24227
+    },
+    {
+      "sha256": "49f5ff12e38153607cfad8d678302e0e4ee81fd84893191c0a11da7933e9cf09",
+      "image": "frames/320x200-49f5ff12e38153607cfad8d678302e0e4ee81fd84893191c0a11da7933e9cf09.png",
+      "tick": 24230
+    },
+    {
+      "sha256": "dc478edbab3e6240c0ec2d7d15e2edcbe26b197246923cda7caef511d66debbc",
+      "image": "frames/320x200-dc478edbab3e6240c0ec2d7d15e2edcbe26b197246923cda7caef511d66debbc.png",
+      "tick": 24234
+    }
+  ]
+}

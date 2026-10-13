@@ -1,0 +1,1330 @@
+{
+  "layouts": [
+    {
+      "context": 0,
+      "resource_id": 1100,
+      "title": "MUSICAL KEYS",
+      "body": "The buttons on the left of the keyboard change the instrument and the way the song is played.\r\rTo change songs, choose a tab on the songbook or the page corner.  The buttons below the printer button choose short or long songs.\r\rChoose the songbook with the pencil to make your own songs, or copy this song to your songbook with the button next to the printer.\r\rFollow Look-A-Lot down the ladder to a game!",
+      "rectangle": [
+        16,
+        32,
+        184,
+        288
+      ],
+      "measured_lines": [
+        "The buttons on the left of the keyboard change the ",
+        "instrument and the way the song is played.\r",
+        "\r",
+        "To change songs, choose a tab on the songbook or the ",
+        "page corner.  The buttons below the printer button ",
+        "choose short or long songs.\r",
+        "\r",
+        "Choose the songbook with the pencil to make your own ",
+        "songs, or copy this song to your songbook with the button",
+        "next to the printer.\r",
+        "\r",
+        "Follow Look-A-Lot down the ladder to a game!"
+      ],
+      "body_lines": [
+        "The buttons on the left of the keyboard change ",
+        "the instrument and the way the song is played.\r",
+        "\r",
+        "To change songs, choose a tab on the songbook or",
+        "the page corner.  The buttons below the printer ",
+        "button choose short or long songs.\r",
+        "\r",
+        "Choose the songbook with the pencil to make ",
+        "your own songs, or copy this song to your ",
+        "songbook with the button next to the printer.\r",
+        "\r",
+        "Follow Look-A-Lot down the ladder to a game!"
+      ],
+      "body_glyph_top": 40,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 20,
+      "done_hit": [
+        168,
+        242,
+        180,
+        282
+      ]
+    },
+    {
+      "context": 1,
+      "resource_id": 1101,
+      "title": "ANIMAL ALBUM",
+      "body": "Click on one of the small trait buttons at the top of the machine to set a trait.  Then choose one of the animal group buttons below to select an animal group that has the trait you picked.\r\rClick on an animal and drag it into the scene.  Drag an animal out of the scene to send it home.  Choose the dog button below to remove all the animals.\r\rTo see a whole new set of animals, click on the sun or moon.\r\rClick the bush button to play Guess My Animal.",
+      "rectangle": [
+        11,
+        32,
+        189,
+        288
+      ],
+      "measured_lines": [
+        "Click on one of the small trait buttons at the top of the ",
+        "machine to set a trait.  Then choose one of the animal ",
+        "group buttons below to select an animal group that has ",
+        "the trait you picked.\r",
+        "\r",
+        "Click on an animal and drag it into the scene.  Drag an ",
+        "animal out of the scene to send it home.  Choose the dog ",
+        "button below to remove all the animals.\r",
+        "\r",
+        "To see a whole new set of animals, click on the sun or ",
+        "moon.\r",
+        "\r",
+        "Click the bush button to play Guess My Animal."
+      ],
+      "body_lines": [
+        "Click on one of the small trait buttons at the top ",
+        "of the machine to set a trait.  Then choose one of",
+        "the animal group buttons below to select an ",
+        "animal group that has the trait you picked.\r",
+        "\r",
+        "Click on an animal and drag it into the scene.  ",
+        "Drag an animal out of the scene to send it home.  ",
+        "Choose the dog button below to remove all the ",
+        "animals.\r",
+        "\r",
+        "To see a whole new set of animals, click on the ",
+        "sun or moon.\r",
+        "\r",
+        "Click the bush button to play Guess My Animal."
+      ],
+      "body_glyph_top": 30,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 15,
+      "done_hit": [
+        173,
+        242,
+        185,
+        282
+      ]
+    },
+    {
+      "context": 2,
+      "resource_id": 1102,
+      "title": "TREEHOUSE THEATER",
+      "body": "Choose sentence parts from the script at the left to build a sentence.  Then click on the 'possum to see your sentence animate.\r\rClick the sentence or scene to see what happens!",
+      "rectangle": [
+        51,
+        32,
+        149,
+        288
+      ],
+      "measured_lines": [
+        "Choose sentence parts from the script at the left to ",
+        "build a sentence.  Then click on the 'possum to see your ",
+        "sentence animate.\r",
+        "\r",
+        "Click the sentence or scene to see what happens!"
+      ],
+      "body_lines": [
+        "Choose sentence parts from the script at the ",
+        "left to build a sentence.  Then click on the ",
+        "'possum to see your sentence animate.\r",
+        "\r",
+        "Click the sentence or scene to see what happens!"
+      ],
+      "body_glyph_top": 75,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 55,
+      "done_hit": [
+        133,
+        242,
+        145,
+        282
+      ]
+    },
+    {
+      "context": 3,
+      "resource_id": 1103,
+      "title": "ROAD RALLY",
+      "body": "Be the first to reach your goal!  Click the die to see how many blocks you can drive.  Then choose an intersection to drive to.\r\rTry to finish in an intersection with a clover or a happy face.\r\rClick the button next to the tiny treehouse to change the game.  (This ends your game.)",
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": [
+        "Be the first to reach your goal!  Click the die to see how ",
+        "many blocks you can drive.  Then choose an intersection ",
+        "to drive to.\r",
+        "\r",
+        "Try to finish in an intersection with a clover or a happy ",
+        "face.\r",
+        "\r",
+        "Click the button next to the tiny treehouse to change the ",
+        "game.  (This ends your game.)"
+      ],
+      "body_lines": [
+        "Be the first to reach your goal!  Click the die to ",
+        "see how many blocks you can drive.  Then choose",
+        "an intersection to drive to.\r",
+        "\r",
+        "Try to finish in an intersection with a clover or ",
+        "a happy face.\r",
+        "\r",
+        "Click the button next to the tiny treehouse to ",
+        "change the game.  (This ends your game.)"
+      ],
+      "body_glyph_top": 55,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 35,
+      "done_hit": [
+        153,
+        242,
+        165,
+        282
+      ]
+    },
+    {
+      "context": 6,
+      "resource_id": 1106,
+      "title": "THE ORCHESTRA",
+      "body": "To choose an instrument for the 'possum, first click on a section of the orchestra or one of the special sections.\r\rClick on the 'possum to see and hear it play the instrument it is holding.\r\rChoose the tiny keyboard at the upper right to return to Musical Keys.",
+      "rectangle": [
+        36,
+        32,
+        164,
+        288
+      ],
+      "measured_lines": [
+        "To choose an instrument for the 'possum, first click on a",
+        "section of the orchestra or one of the special sections.\r",
+        "\r",
+        "Click on the 'possum to see and hear it play the ",
+        "instrument it is holding.\r",
+        "\r",
+        "Choose the tiny keyboard at the upper right to return to ",
+        "Musical Keys."
+      ],
+      "body_lines": [
+        "To choose an instrument for the 'possum, first ",
+        "click on a section of the orchestra or one of the ",
+        "special sections.\r",
+        "\r",
+        "Click on the 'possum to see and hear it play the ",
+        "instrument it is holding.\r",
+        "\r",
+        "Choose the tiny keyboard at the upper right to ",
+        "return to Musical Keys."
+      ],
+      "body_glyph_top": 55,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 40,
+      "done_hit": [
+        148,
+        242,
+        160,
+        282
+      ]
+    },
+    {
+      "context": 7,
+      "resource_id": 1107,
+      "title": "ORCHESTRA SECTION",
+      "body": "Click on an instrument to select it.  Click on the label at the top to choose this whole section.\r\rClick on the 'possum to see and hear it play the instrument it is holding.\r\rChoose the two signs for facts about these musical instruments.\r\rChoose the tiny keyboard at the upper right to return to Musical Keys.",
+      "rectangle": [
+        21,
+        32,
+        179,
+        288
+      ],
+      "measured_lines": [
+        "Click on an instrument to select it.  Click on the label at ",
+        "the top to choose this whole section.\r",
+        "\r",
+        "Click on the 'possum to see and hear it play the ",
+        "instrument it is holding.\r",
+        "\r",
+        "Choose the two signs for facts about these musical ",
+        "instruments.\r",
+        "\r",
+        "Choose the tiny keyboard at the upper right to return to ",
+        "Musical Keys."
+      ],
+      "body_lines": [
+        "Click on an instrument to select it.  Click on the ",
+        "label at the top to choose this whole section.\r",
+        "\r",
+        "Click on the 'possum to see and hear it play the ",
+        "instrument it is holding.\r",
+        "\r",
+        "Choose the two signs for facts about these ",
+        "musical instruments.\r",
+        "\r",
+        "Choose the tiny keyboard at the upper right to ",
+        "return to Musical Keys."
+      ],
+      "body_glyph_top": 45,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 25,
+      "done_hit": [
+        163,
+        242,
+        175,
+        282
+      ]
+    },
+    {
+      "context": 8,
+      "resource_id": 1108,
+      "title": "MUSICAL MAZE",
+      "body": "Try to guess the mystery song!  You earn a note of the song when you match the sound clue you hear with the correct sign.  To hear the clue again, click the 'possum.\r\rAfter you have earned some notes, click the ? to guess the song.  Click the small notes below the ? to hear the notes you've earned so far.\r\rClick the tiny keyboard to return to Musical Keys.",
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": [
+        "Try to guess the mystery song!  You earn a note of the ",
+        "song when you match the sound clue you hear with the ",
+        "correct sign.  To hear the clue again, click the 'possum.\r",
+        "\r",
+        "After you have earned some notes, click the ? to guess ",
+        "the song.  Click the small notes below the ? to hear the ",
+        "notes you've earned so far.\r",
+        "\r",
+        "Click the tiny keyboard to return to Musical Keys."
+      ],
+      "body_lines": [
+        "Try to guess the mystery song!  You earn a note ",
+        "of the song when you match the sound clue you ",
+        "hear with the correct sign.  To hear the clue ",
+        "again, click the 'possum.\r",
+        "\r",
+        "After you have earned some notes, click the ? to",
+        "guess the song.  Click the small notes below the ",
+        "? to hear the notes you've earned so far.\r",
+        "\r",
+        "Click the tiny keyboard to return to Musical ",
+        "Keys."
+      ],
+      "body_glyph_top": 45,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 35,
+      "done_hit": [
+        153,
+        242,
+        165,
+        282
+      ]
+    },
+    {
+      "context": 9,
+      "resource_id": 1109,
+      "title": "GUESS MY ANIMAL",
+      "body": "Pick one of the clues in the scene.  Or choose ? to guess your animal; then click on the animal you think is behind your bush.\r\rClick on an animal to see its traits.\r\rAfter you pick a clue, click the small hands to turn thumbs down to the animals that don't match the trait.  Click on the hand again to turn thumbs back up.\r\rClick the second button left of the tiny treehouse to change the game (this ends your game).  The first button returns you to the Animal Album.",
+      "rectangle": [
+        11,
+        32,
+        189,
+        288
+      ],
+      "measured_lines": [
+        "Pick one of the clues in the scene.  Or choose ? to guess ",
+        "your animal; then click on the animal you think is behind ",
+        "your bush.\r",
+        "\r",
+        "Click on an animal to see its traits.\r",
+        "\r",
+        "After you pick a clue, click the small hands to turn ",
+        "thumbs down to the animals that don't match the trait.  ",
+        "Click on the hand again to turn thumbs back up.\r",
+        "\r",
+        "Click the second button left of the tiny treehouse to ",
+        "change the game (this ends your game).  The first button ",
+        "returns you to the Animal Album."
+      ],
+      "body_lines": [
+        "Pick one of the clues in the scene.  Or choose ? ",
+        "to guess your animal; then click on the animal ",
+        "you think is behind your bush.\r",
+        "\r",
+        "Click on an animal to see its traits.\r",
+        "\r",
+        "After you pick a clue, click the small hands to ",
+        "turn thumbs down to the animals that don't ",
+        "match the trait.  Click on the hand again to turn ",
+        "thumbs back up.\r",
+        "\r",
+        "Click the second button left of the tiny treehouse",
+        "to change the game (this ends your game).  The ",
+        "first button returns you to the Animal Album."
+      ],
+      "body_glyph_top": 30,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 15,
+      "done_hit": [
+        173,
+        242,
+        185,
+        282
+      ]
+    },
+    {
+      "context": 10,
+      "resource_id": 1110,
+      "title": "ROAD RALLY",
+      "body": "Choose the chip game or money game.  (The money game is easiest.)\r\rChoose to play with a friend or Bonga Bot.\r\rChoose your game goal.  If you're playing with a friend (Look-A-Lot), choose Look-A-Lot's goal too.  The two goals can be different.  If you're playing with Bonga Bot, it will use the same goal as you.\r\rClick on PLAY to begin.",
+      "rectangle": [
+        21,
+        32,
+        179,
+        288
+      ],
+      "measured_lines": [
+        "Choose the chip game or money game.  (The money game ",
+        "is easiest.)\r",
+        "\r",
+        "Choose to play with a friend or Bonga Bot.\r",
+        "\r",
+        "Choose your game goal.  If you're playing with a friend ",
+        "(Look-A-Lot), choose Look-A-Lot's goal too.  The two ",
+        "goals can be different.  If you're playing with Bonga Bot, ",
+        "it will use the same goal as you.\r",
+        "\r",
+        "Click on PLAY to begin."
+      ],
+      "body_lines": [
+        "Choose the chip game or money game.  (The ",
+        "money game is easiest.)\r",
+        "\r",
+        "Choose to play with a friend or Bonga Bot.\r",
+        "\r",
+        "Choose your game goal.  If you're playing with a ",
+        "friend (Look-A-Lot), choose Look-A-Lot's goal ",
+        "too.  The two goals can be different.  If you're ",
+        "playing with Bonga Bot, it will use the same goal ",
+        "as you.\r",
+        "\r",
+        "Click on PLAY to begin."
+      ],
+      "body_glyph_top": 40,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 25,
+      "done_hit": [
+        163,
+        242,
+        175,
+        282
+      ]
+    },
+    {
+      "context": 11,
+      "resource_id": 1111,
+      "title": "GUESS MY ANIMAL",
+      "body": "Choose to play with a friend or Bonga Bot.\r\rSelect help if you want it.  If you're playing with a friend (Look-A-Lot), you can also get help for Look-A-Lot.\r\rClick on PLAY to begin.",
+      "rectangle": [
+        46,
+        32,
+        154,
+        288
+      ],
+      "measured_lines": [
+        "Choose to play with a friend or Bonga Bot.\r",
+        "\r",
+        "Select help if you want it.  If you're playing with a friend",
+        "(Look-A-Lot), you can also get help for Look-A-Lot.\r",
+        "\r",
+        "Click on PLAY to begin."
+      ],
+      "body_lines": [
+        "Choose to play with a friend or Bonga Bot.\r",
+        "\r",
+        "Select help if you want it.  If you're playing with ",
+        "a friend (Look-A-Lot), you can also get help for ",
+        "Look-A-Lot.\r",
+        "\r",
+        "Click on PLAY to begin."
+      ],
+      "body_glyph_top": 65,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 50,
+      "done_hit": [
+        138,
+        242,
+        150,
+        282
+      ]
+    },
+    {
+      "context": 13,
+      "resource_id": 1113,
+      "title": "TREEHOUSE THEATER",
+      "body": "Customize the theater.  For beginners, turn Mix Up and Props off.  Then press PLAY.\r\rChoose Mix Up if you want to scramble and unscramble sentences.\r\rChoose Props if you want to decorate your scene.\r\rClick on PLAY to begin.",
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": [
+        "Customize the theater.  For beginners, turn Mix Up and ",
+        "Props off.  Then press PLAY.\r",
+        "\r",
+        "Choose Mix Up if you want to scramble and unscramble ",
+        "sentences.\r",
+        "\r",
+        "Choose Props if you want to decorate your scene.\r",
+        "\r",
+        "Click on PLAY to begin."
+      ],
+      "body_lines": [
+        "Customize the theater.  For beginners, turn Mix ",
+        "Up and Props off.  Then press PLAY.\r",
+        "\r",
+        "Choose Mix Up if you want to scramble and ",
+        "unscramble sentences.\r",
+        "\r",
+        "Choose Props if you want to decorate your ",
+        "scene.\r",
+        "\r",
+        "Click on PLAY to begin."
+      ],
+      "body_glyph_top": 50,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 35,
+      "done_hit": [
+        153,
+        242,
+        165,
+        282
+      ]
+    },
+    {
+      "context": 15,
+      "resource_id": 1115,
+      "title": "MUSICAL KEYS",
+      "body": "Make your own songs.  Drag notes from the note palette onto the songbook or play notes on the keyboard.  Move notes up and down on the songbook to change the pitch.\r\rClick the song title to enter a name of your own.\r\rPlay and change songs with the buttons at the left of the keyboard and the songbook tabs.\r\rChoose the songbook with no pencil to return to the 'possum's songbook.\r\rFollow Look-A-Lot down the ladder to a game!",
+      "rectangle": [
+        11,
+        32,
+        189,
+        288
+      ],
+      "measured_lines": [
+        "Make your own songs.  Drag notes from the note palette ",
+        "onto the songbook or play notes on the keyboard.  Move ",
+        "notes up and down on the songbook to change the pitch.\r",
+        "\r",
+        "Click the song title to enter a name of your own.\r",
+        "\r",
+        "Play and change songs with the buttons at the left of the ",
+        "keyboard and the songbook tabs.\r",
+        "\r",
+        "Choose the songbook with no pencil to return to the ",
+        "'possum's songbook.\r",
+        "\r",
+        "Follow Look-A-Lot down the ladder to a game!"
+      ],
+      "body_lines": [
+        "Make your own songs.  Drag notes from the note ",
+        "palette onto the songbook or play notes on the ",
+        "keyboard.  Move notes up and down on the ",
+        "songbook to change the pitch.\r",
+        "\r",
+        "Click the song title to enter a name of your own.\r",
+        "\r",
+        "Play and change songs with the buttons at the ",
+        "left of the keyboard and the songbook tabs.\r",
+        "\r",
+        "Choose the songbook with no pencil to return to ",
+        "the 'possum's songbook.\r",
+        "\r",
+        "Follow Look-A-Lot down the ladder to a game!"
+      ],
+      "body_glyph_top": 30,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 15,
+      "done_hit": [
+        173,
+        242,
+        185,
+        282
+      ]
+    },
+    {
+      "context": 16,
+      "resource_id": 1116,
+      "title": "ROAD RALLY",
+      "body": "Click on the tray with the most money.  If you are playing with Bonga Bot, you get to choose its tray.\r\rClick the button next to the tiny treehouse to change the game.  (This ends your game.)",
+      "rectangle": [
+        51,
+        32,
+        149,
+        288
+      ],
+      "measured_lines": [
+        "Click on the tray with the most money.  If you are playing",
+        "with Bonga Bot, you get to choose its tray.\r",
+        "\r",
+        "Click the button next to the tiny treehouse to change the ",
+        "game.  (This ends your game.)"
+      ],
+      "body_lines": [
+        "Click on the tray with the most money.  If you ",
+        "are playing with Bonga Bot, you get to choose its ",
+        "tray.\r",
+        "\r",
+        "Click the button next to the tiny treehouse to ",
+        "change the game.  (This ends your game.)"
+      ],
+      "body_glyph_top": 70,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 55,
+      "done_hit": [
+        133,
+        242,
+        145,
+        282
+      ]
+    },
+    {
+      "context": 17,
+      "resource_id": 1117,
+      "title": "MUSICAL MAZE LOBBY",
+      "body": "Click on the song to hear it again.\r\rTo play another game, choose the maze sign on the left.\r\rChoose the ladder or keyboard sign to return to Musical Keys.",
+      "rectangle": [
+        46,
+        32,
+        154,
+        288
+      ],
+      "measured_lines": [
+        "Click on the song to hear it again.\r",
+        "\r",
+        "To play another game, choose the maze sign on the left.\r",
+        "\r",
+        "Choose the ladder or keyboard sign to return to Musical ",
+        "Keys."
+      ],
+      "body_lines": [
+        "Click on the song to hear it again.\r",
+        "\r",
+        "To play another game, choose the maze sign on ",
+        "the left.\r",
+        "\r",
+        "Choose the ladder or keyboard sign to return to ",
+        "Musical Keys."
+      ],
+      "body_glyph_top": 65,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 50,
+      "done_hit": [
+        138,
+        242,
+        150,
+        282
+      ]
+    },
+    {
+      "context": 18,
+      "resource_id": 1118,
+      "title": "WELCOME TO THE TREEHOUSE!",
+      "body": "To enter the treehouse, just move the cursor to the girl or boy 'possum and click.",
+      "rectangle": [
+        66,
+        32,
+        134,
+        288
+      ],
+      "measured_lines": [
+        "To enter the treehouse, just move the cursor to the girl ",
+        "or boy 'possum and click."
+      ],
+      "body_lines": [
+        "To enter the treehouse, just move the cursor to ",
+        "the girl or boy 'possum and click."
+      ],
+      "body_glyph_top": 90,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 70,
+      "done_hit": [
+        118,
+        242,
+        130,
+        282
+      ]
+    },
+    {
+      "context": 19,
+      "resource_id": 1119,
+      "title": "THE TREEHOUSE",
+      "body": "To play, just move the cursor to any object and click.  Explore and have fun!",
+      "rectangle": [
+        66,
+        32,
+        134,
+        288
+      ],
+      "measured_lines": [
+        "To play, just move the cursor to any object and click.  ",
+        "Explore and have fun!"
+      ],
+      "body_lines": [
+        "To play, just move the cursor to any object and ",
+        "click.  Explore and have fun!"
+      ],
+      "body_glyph_top": 90,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 70,
+      "done_hit": [
+        118,
+        242,
+        130,
+        282
+      ]
+    },
+    {
+      "context": 20,
+      "resource_id": 1120,
+      "title": "TREEHOUSE THEATER",
+      "body": "Choose sentence parts from the script at the left to build a sentence.  Then click on the 'possum to see your sentence animate.\r\rClick the sentence or scene to see what happens!\r\rClick on the Props box to see a set of props you can add to the scene.  Click again for more.  Drag a prop off the scene to remove it.\r\rTo scramble or unscramble your sentence, move the parts in the big filmstrip, or click the tiny filmstrips left and right of it.",
+      "rectangle": [
+        11,
+        32,
+        189,
+        288
+      ],
+      "measured_lines": [
+        "Choose sentence parts from the script at the left to ",
+        "build a sentence.  Then click on the 'possum to see your ",
+        "sentence animate.\r",
+        "\r",
+        "Click the sentence or scene to see what happens!\r",
+        "\r",
+        "Click on the Props box to see a set of props you can add ",
+        "to the scene.  Click again for more.  Drag a prop off the ",
+        "scene to remove it.\r",
+        "\r",
+        "To scramble or unscramble your sentence, move the ",
+        "parts in the big filmstrip, or click the tiny filmstrips ",
+        "left and right of it."
+      ],
+      "body_lines": [
+        "Choose sentence parts from the script at the ",
+        "left to build a sentence.  Then click on the ",
+        "'possum to see your sentence animate.\r",
+        "\r",
+        "Click the sentence or scene to see what happens!\r",
+        "\r",
+        "Click on the Props box to see a set of props you ",
+        "can add to the scene.  Click again for more.  Drag",
+        "a prop off the scene to remove it.\r",
+        "\r",
+        "To scramble or unscramble your sentence, move ",
+        "the parts in the big filmstrip, or click the tiny ",
+        "filmstrips left and right of it."
+      ],
+      "body_glyph_top": 35,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 15,
+      "done_hit": [
+        173,
+        242,
+        185,
+        282
+      ]
+    },
+    {
+      "context": 21,
+      "resource_id": 1121,
+      "title": "TREEHOUSE THEATER",
+      "body": "Choose sentence parts from the script at the left to build a sentence.  Then click on the 'possum to see your sentence animate.\r\rClick the sentence or scene to see what happens!\r\rClick on the Props box to see a set of props you can add to the scene.  Click again for more.  Drag a prop off the scene to remove it.",
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": [
+        "Choose sentence parts from the script at the left to ",
+        "build a sentence.  Then click on the 'possum to see your ",
+        "sentence animate.\r",
+        "\r",
+        "Click the sentence or scene to see what happens!\r",
+        "\r",
+        "Click on the Props box to see a set of props you can add ",
+        "to the scene.  Click again for more.  Drag a prop off the ",
+        "scene to remove it."
+      ],
+      "body_lines": [
+        "Choose sentence parts from the script at the ",
+        "left to build a sentence.  Then click on the ",
+        "'possum to see your sentence animate.\r",
+        "\r",
+        "Click the sentence or scene to see what happens!\r",
+        "\r",
+        "Click on the Props box to see a set of props you ",
+        "can add to the scene.  Click again for more.  Drag",
+        "a prop off the scene to remove it."
+      ],
+      "body_glyph_top": 55,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 35,
+      "done_hit": [
+        153,
+        242,
+        165,
+        282
+      ]
+    },
+    {
+      "context": 22,
+      "resource_id": 1122,
+      "title": "TREEHOUSE THEATER",
+      "body": "Choose sentence parts from the script at the left to build a sentence.  Then click on the 'possum to see your sentence animate.\r\rClick the sentence or scene to see what happens!\r\rTo scramble or unscramble your sentence, move the parts in the big filmstrip, or click the tiny filmstrips left and right of it.",
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": [
+        "Choose sentence parts from the script at the left to ",
+        "build a sentence.  Then click on the 'possum to see your ",
+        "sentence animate.\r",
+        "\r",
+        "Click the sentence or scene to see what happens!\r",
+        "\r",
+        "To scramble or unscramble your sentence, move the ",
+        "parts in the big filmstrip, or click the tiny filmstrips ",
+        "left and right of it."
+      ],
+      "body_lines": [
+        "Choose sentence parts from the script at the ",
+        "left to build a sentence.  Then click on the ",
+        "'possum to see your sentence animate.\r",
+        "\r",
+        "Click the sentence or scene to see what happens!\r",
+        "\r",
+        "To scramble or unscramble your sentence, move ",
+        "the parts in the big filmstrip, or click the tiny ",
+        "filmstrips left and right of it."
+      ],
+      "body_glyph_top": 55,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 35,
+      "done_hit": [
+        153,
+        242,
+        165,
+        282
+      ]
+    },
+    {
+      "context": 23,
+      "resource_id": 1123,
+      "title": "ROAD RALLY",
+      "body": "Click the blue ribbon to see the prizes.  Then pick a prize.\r\rIf you or Look-A-Lot won the prize, it will appear in the treehouse when you return there.\r\rBonga Bot's prizes will appear on its shelves.  Can you find them?",
+      "rectangle": [
+        41,
+        32,
+        159,
+        288
+      ],
+      "measured_lines": [
+        "Click the blue ribbon to see the prizes.  Then pick a prize.\r",
+        "\r",
+        "If you or Look-A-Lot won the prize, it will appear in the ",
+        "treehouse when you return there.\r",
+        "\r",
+        "Bonga Bot's prizes will appear on its shelves.  Can you ",
+        "find them?"
+      ],
+      "body_lines": [
+        "Click the blue ribbon to see the prizes.  Then pick",
+        "a prize.\r",
+        "\r",
+        "If you or Look-A-Lot won the prize, it will ",
+        "appear in the treehouse when you return there.\r",
+        "\r",
+        "Bonga Bot's prizes will appear on its shelves.  ",
+        "Can you find them?"
+      ],
+      "body_glyph_top": 60,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 45,
+      "done_hit": [
+        143,
+        242,
+        155,
+        282
+      ]
+    },
+    {
+      "context": 24,
+      "resource_id": 1124,
+      "title": "ROAD RALLY",
+      "body": "Click on the tray that will give you the most chips.  If you're playing with Bonga Bot, you get to choose its tray.\r\rIn the left tray, add the chips you already have (the number in the top machine) to the chips in the tray.  In the right tray, subtract the number of chips you already have from the total chips (the number at the bottom of the tray) to figure out how many chips are in the bag.",
+      "rectangle": [
+        36,
+        32,
+        164,
+        288
+      ],
+      "measured_lines": [
+        "Click on the tray that will give you the most chips.  If ",
+        "you're playing with Bonga Bot, you get to choose its tray.\r",
+        "\r",
+        "In the left tray, add the chips you already have (the ",
+        "number in the top machine) to the chips in the tray.  In ",
+        "the right tray, subtract the number of chips you already ",
+        "have from the total chips (the number at the bottom of ",
+        "the tray) to figure out how many chips are in the bag."
+      ],
+      "body_lines": [
+        "Click on the tray that will give you the most ",
+        "chips.  If you're playing with Bonga Bot, you get ",
+        "to choose its tray.\r",
+        "\r",
+        "In the left tray, add the chips you already have ",
+        "(the number in the top machine) to the chips in ",
+        "the tray.  In the right tray, subtract the number ",
+        "of chips you already have from the total chips ",
+        "(the number at the bottom of the tray) to figure ",
+        "out how many chips are in the bag."
+      ],
+      "body_glyph_top": 50,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 40,
+      "done_hit": [
+        148,
+        242,
+        160,
+        282
+      ]
+    },
+    {
+      "context": 25,
+      "resource_id": 1125,
+      "title": "ROAD RALLY",
+      "body": "You need to make change.  Click on the stack that is shrinking and growing.",
+      "rectangle": [
+        66,
+        32,
+        134,
+        288
+      ],
+      "measured_lines": [
+        "You need to make change.  Click on the stack that is ",
+        "shrinking and growing."
+      ],
+      "body_lines": [
+        "You need to make change.  Click on the stack that",
+        "is shrinking and growing."
+      ],
+      "body_glyph_top": 90,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 70,
+      "done_hit": [
+        118,
+        242,
+        130,
+        282
+      ]
+    },
+    {
+      "context": 26,
+      "resource_id": 1126,
+      "title": "GUESS MY ANIMAL",
+      "body": "Guess which animal is hidden behind your bush!\r\rClick the flashing button to see 3 clues in the scene.  Pick one to get a clue about your animal.\r\rClick the second button left of the tiny treehouse to change the game (this ends your game).  The first button returns you to the Animal Album.",
+      "rectangle": [
+        36,
+        32,
+        164,
+        288
+      ],
+      "measured_lines": [
+        "Guess which animal is hidden behind your bush!\r",
+        "\r",
+        "Click the flashing button to see 3 clues in the scene.  ",
+        "Pick one to get a clue about your animal.\r",
+        "\r",
+        "Click the second button left of the tiny treehouse to ",
+        "change the game (this ends your game).  The first button ",
+        "returns you to the Animal Album."
+      ],
+      "body_lines": [
+        "Guess which animal is hidden behind your bush!\r",
+        "\r",
+        "Click the flashing button to see 3 clues in the ",
+        "scene.  Pick one to get a clue about your animal.\r",
+        "\r",
+        "Click the second button left of the tiny treehouse",
+        "to change the game (this ends your game).  The ",
+        "first button returns you to the Animal Album."
+      ],
+      "body_glyph_top": 60,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 40,
+      "done_hit": [
+        148,
+        242,
+        160,
+        282
+      ]
+    },
+    {
+      "context": 27,
+      "resource_id": 1127,
+      "title": "GUESS MY ANIMAL",
+      "body": "Pick one of the clues in the scene.  Or choose ? to guess your animal; then click on the animal you think is behind your bush.\r\rClick on an animal to see its traits.\r\rClick the second button left of the tiny treehouse to change the game (this ends your game).  The first button returns you to the Animal Album.",
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": [
+        "Pick one of the clues in the scene.  Or choose ? to guess ",
+        "your animal; then click on the animal you think is behind ",
+        "your bush.\r",
+        "\r",
+        "Click on an animal to see its traits.\r",
+        "\r",
+        "Click the second button left of the tiny treehouse to ",
+        "change the game (this ends your game).  The first button ",
+        "returns you to the Animal Album."
+      ],
+      "body_lines": [
+        "Pick one of the clues in the scene.  Or choose ? ",
+        "to guess your animal; then click on the animal ",
+        "you think is behind your bush.\r",
+        "\r",
+        "Click on an animal to see its traits.\r",
+        "\r",
+        "Click the second button left of the tiny treehouse",
+        "to change the game (this ends your game).  The ",
+        "first button returns you to the Animal Album."
+      ],
+      "body_glyph_top": 55,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 35,
+      "done_hit": [
+        153,
+        242,
+        165,
+        282
+      ]
+    },
+    {
+      "context": 28,
+      "resource_id": 1128,
+      "title": "GUESS MY ANIMAL",
+      "body": "Click on the second bush to see the other player's mystery animal.\r\rTo pick a prize, first click the blue ribbon to see the prizes.  Then pick the one you want.\r\rIf you or Look-A-Lot won the prize, it will appear in the treehouse when you return there.\r\rBonga Bot's prizes will appear on its shelves.  Can you find them?",
+      "rectangle": [
+        21,
+        32,
+        179,
+        288
+      ],
+      "measured_lines": [
+        "Click on the second bush to see the other player's ",
+        "mystery animal.\r",
+        "\r",
+        "To pick a prize, first click the blue ribbon to see the ",
+        "prizes.  Then pick the one you want.\r",
+        "\r",
+        "If you or Look-A-Lot won the prize, it will appear in the ",
+        "treehouse when you return there.\r",
+        "\r",
+        "Bonga Bot's prizes will appear on its shelves.  Can you ",
+        "find them?"
+      ],
+      "body_lines": [
+        "Click on the second bush to see the other player's",
+        "mystery animal.\r",
+        "\r",
+        "To pick a prize, first click the blue ribbon to see ",
+        "the prizes.  Then pick the one you want.\r",
+        "\r",
+        "If you or Look-A-Lot won the prize, it will ",
+        "appear in the treehouse when you return there.\r",
+        "\r",
+        "Bonga Bot's prizes will appear on its shelves.  ",
+        "Can you find them?"
+      ],
+      "body_glyph_top": 45,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 25,
+      "done_hit": [
+        163,
+        242,
+        175,
+        282
+      ]
+    },
+    {
+      "context": 29,
+      "resource_id": 1129,
+      "title": "DEDICATED TO JANESE SWANSON",
+      "body": "This product was the culmination of the undying efforts of many individuals.  I would like to dedicate my contribution to the one who shined above all the rest for me.  To the lady who inspired me to undertake the project, drove me crazy throughout, and has made it so much more than worthwhile in the end.  Life will never be fair Janese.  Remember that the truly good people will come out ahead in the end.  I love you.\r\r                                           Lance",
+      "rectangle": [
+        26,
+        32,
+        174,
+        288
+      ],
+      "measured_lines": [
+        "This product was the culmination of the undying efforts ",
+        "of many individuals.  I would like to dedicate my ",
+        "contribution to the one who shined above all the rest for ",
+        "me.  To the lady who inspired me to undertake the ",
+        "project, drove me crazy throughout, and has made it so ",
+        "much more than worthwhile in the end.  Life will never ",
+        "be fair Janese.  Remember that the truly good people ",
+        "will come out ahead in the end.  I love you.\r",
+        "\r",
+        "                                           Lance"
+      ],
+      "body_lines": [
+        "This product was the culmination of the undying ",
+        "efforts of many individuals.  I would like to ",
+        "dedicate my contribution to the one who shined ",
+        "above all the rest for me.  To the lady who ",
+        "inspired me to undertake the project, drove me ",
+        "crazy throughout, and has made it so much more ",
+        "than worthwhile in the end.  Life will never be ",
+        "fair Janese.  Remember that the truly good ",
+        "people will come out ahead in the end.  I love you.\r",
+        "\r",
+        "                                           Lance"
+      ],
+      "body_glyph_top": 45,
+      "body_x": 50,
+      "body_line_step": 10,
+      "title_glyph_top": 30,
+      "done_hit": [
+        158,
+        242,
+        170,
+        282
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "label": "outdoor",
+      "context": 18,
+      "rectangle": [
+        66,
+        32,
+        134,
+        288
+      ],
+      "measured_lines": 2,
+      "rendered_lines": 2,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "room",
+      "context": 19,
+      "rectangle": [
+        66,
+        32,
+        134,
+        288
+      ],
+      "measured_lines": 2,
+      "rendered_lines": 2,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "music",
+      "context": 0,
+      "rectangle": [
+        16,
+        32,
+        184,
+        288
+      ],
+      "measured_lines": 12,
+      "rendered_lines": 12,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "compose",
+      "context": 15,
+      "rectangle": [
+        11,
+        32,
+        189,
+        288
+      ],
+      "measured_lines": 13,
+      "rendered_lines": 14,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "nature",
+      "context": 1,
+      "rectangle": [
+        11,
+        32,
+        189,
+        288
+      ],
+      "measured_lines": 13,
+      "rendered_lines": 14,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "theater",
+      "context": 2,
+      "rectangle": [
+        51,
+        32,
+        149,
+        288
+      ],
+      "measured_lines": 5,
+      "rendered_lines": 5,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "board",
+      "context": 10,
+      "rectangle": [
+        21,
+        32,
+        179,
+        288
+      ],
+      "measured_lines": 11,
+      "rendered_lines": 12,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "board-options",
+      "context": 10,
+      "rectangle": [
+        21,
+        32,
+        179,
+        288
+      ],
+      "measured_lines": 11,
+      "rendered_lines": 12,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "nature-quiz",
+      "context": 26,
+      "rectangle": [
+        36,
+        32,
+        164,
+        288
+      ],
+      "measured_lines": 8,
+      "rendered_lines": 8,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "maze",
+      "context": 8,
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": 9,
+      "rendered_lines": 11,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "board-active",
+      "context": 3,
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": 9,
+      "rendered_lines": 9,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "board-trays",
+      "status": "help_not_opened",
+      "context": 16
+    },
+    {
+      "label": "theater-options",
+      "context": 13,
+      "rectangle": [
+        31,
+        32,
+        169,
+        288
+      ],
+      "measured_lines": 9,
+      "rendered_lines": 10,
+      "mismatch_pixels": 0,
+      "bounds": null
+    },
+    {
+      "label": "version",
+      "rectangle": [
+        176,
+        108,
+        192,
+        212
+      ],
+      "mismatch_pixels": 0
+    },
+    {
+      "label": "sound-off",
+      "rectangle": [
+        176,
+        108,
+        192,
+        212
+      ],
+      "mismatch_pixels": 0
+    }
+  ]
+}

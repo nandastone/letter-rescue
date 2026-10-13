@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183e35">
+  <title>The Treehouse · Playable demo</title>
+  <style>/* DEMO_STYLE */</style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="leaf" aria-hidden="true">♧</span><div><h1>The Treehouse</h1><span class="eyebrow">A place to play, listen & explore</span></div></div>
+    <div class="toolbar">
+      <span class="badge">Playable demo</span>
+      <button id="home" title="Choose a character">Home</button>
+      <button id="back" disabled>Back</button>
+      <button id="preferences">Settings</button>
+      <button id="help">Help</button>
+      <button id="fullscreen" title="Full screen">Full screen</button>
+    </div>
+  </header>
+  <main>
+    <section class="game-column" aria-label="Treehouse game">
+      <div class="canvas-frame"><canvas id="game" width="320" height="200" tabindex="0" aria-label="The Treehouse. Choose a character using the buttons alongside the game."></canvas></div>
+      <div class="under-canvas"><span id="scene-label">Outside the treehouse</span><span>Original artwork · DOS 1.1</span></div>
+      <div id="touch-keys" aria-label="Music keyboard" hidden></div>
+      <p class="caption" id="caption">Choose a friend to visit the treehouse.</p>
+    </section>
+    <aside aria-label="Readable instructions and controls">
+      <div class="chapter" id="chapter">01 / WELCOME</div>
+      <h2 id="heading">Come on in.</h2>
+      <p class="reading" id="instructions">Choose a friend. Then come inside and make some music.</p>
+      <div id="controls"></div>
+      <div class="reading-card" id="fact-card" hidden><h3 id="fact-title">Did you know?</h3><p class="reading" id="fact"></p><button id="next-fact">Another fact</button></div>
+      <div class="reader-settings">
+        <label for="text-size">Text size</label><input id="text-size" type="range" min="18" max="30" value="22" aria-label="Reading text size">
+        <button id="read-aloud">Read aloud</button>
+        <label class="sound-label"><input id="sound" type="checkbox" checked> Sound</label>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </aside>
+  </main>
+  <footer><span>Reconstruction in progress</span><span>Explore music, nature, theater, drawing, board games, and telescope views.</span></footer>
+  <script>/* DEMO_ASSETS */</script>
+  <script>/* DEMO_ENGINE */</script>
+  <script>/* DEMO_THEATER */</script>
+  <script>/* DEMO_NATURE_QUIZ */</script>
+  <script>/* DEMO_NATURE */</script>
+  <script>/* DEMO_CHALKBOARD */</script>
+  <script>/* DEMO_MUSIC_SELECTOR */</script>
+  <script>/* DEMO_MUSIC_EDITOR */</script>
+  <script>/* DEMO_MUSIC_MAZE */</script>
+  <script>/* DEMO_ROOM */</script>
+  <script>/* DEMO_CHARACTER */</script>
+  <script>/* DEMO_ROOM_TRANSITION */</script>
+  <script>/* DEMO_EXTERIOR */</script>
+  <script>/* DEMO_REWARDS */</script>
+  <script>/* DEMO_BOARD_MOTION */</script>
+  <script>/* DEMO_BOARDGAME */</script>
+  <script>/* DEMO_SAVE */</script>
+  <script>/* DEMO_APP */</script>
+</body>
+</html>

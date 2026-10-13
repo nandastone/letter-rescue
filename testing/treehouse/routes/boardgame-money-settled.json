@@ -1,0 +1,143 @@
+[
+  {
+    "frames": 1800,
+    "capture": "title"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -128,
+      "dy": 90
+    },
+    "capture": "mouse-moved"
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "after-click"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 168,
+      "dy": 90
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 800,
+    "capture": "boardgame"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -40,
+      "dy": -44
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 600,
+    "capture": "started"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -132,
+      "dy": -220
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 500,
+    "capture": "rolled"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -162,
+      "dy": 138
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "move-0"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 0,
+      "dy": -70
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 1200,
+    "capture": "move-1"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": 508,
+      "dy": -62
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 5000,
+    "capture": "reward-chosen"
+  },
+  {
+    "frames": 30,
+    "mouse": {
+      "dx": -346,
+      "dy": -4
+    }
+  },
+  {
+    "frames": 10,
+    "mouse": {
+      "left": true
+    }
+  },
+  {
+    "frames": 6000,
+    "capture": "next-turn"
+  }
+]

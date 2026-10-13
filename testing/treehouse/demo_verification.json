@@ -1,0 +1,412 @@
+{
+  "demo_sha256": "47f4fa3b5ef469056266d2d9bb580a94bbb7ac2dcaf29df434abfe4f4d68a184",
+  "behavior_checks": [
+    {
+      "name": "Original title matches every pixel",
+      "passed": true
+    },
+    {
+      "name": "Original initial music score matches every pixel",
+      "passed": true
+    },
+    {
+      "name": "Original initial music room matches every pixel",
+      "passed": true
+    },
+    {
+      "name": "boy: character entry begins",
+      "passed": true
+    },
+    {
+      "name": "boy: original entry script reaches interior",
+      "passed": true
+    },
+    {
+      "name": "girl: character entry begins",
+      "passed": true
+    },
+    {
+      "name": "girl: original entry script reaches interior",
+      "passed": true
+    },
+    {
+      "name": "Music room opens",
+      "passed": true
+    },
+    {
+      "name": "Original key 'z': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 's': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'x': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'd': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'c': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'v': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'g': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'b': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'h': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'n': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'j': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'm': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key ',': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key 'l': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key '.': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key ';': note releases",
+      "passed": true
+    },
+    {
+      "name": "Original key '/': note releases",
+      "passed": true
+    },
+    {
+      "name": "Mouse presses the original canvas piano key",
+      "passed": true
+    },
+    {
+      "name": "Dragging outside the keyboard releases the note",
+      "passed": true
+    },
+    {
+      "name": "Window blur releases held keyboard notes",
+      "passed": true
+    },
+    {
+      "name": "All 35 individual instrument samples play",
+      "passed": true
+    },
+    {
+      "name": "Song 0: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 0: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 1: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 1: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 2: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 2: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 3: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 3: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 4: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 4: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 5: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 5: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 6: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 6: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 7: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 7: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 8: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 8: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 9: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 9: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 10: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 10: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 11: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 11: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 12: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 12: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 13: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 13: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 14: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 14: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 15: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 15: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 16: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 16: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 17: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 17: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 18: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 18: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 19: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 19: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 20: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 20: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 21: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 21: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 22: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 22: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Song 23: playback starts",
+      "passed": true
+    },
+    {
+      "name": "Song 23: playback completes",
+      "passed": true
+    },
+    {
+      "name": "Three-note melody saved locally",
+      "passed": true
+    },
+    {
+      "name": "Saved melody playback starts",
+      "passed": true
+    },
+    {
+      "name": "Saved melody playback completes",
+      "passed": true
+    },
+    {
+      "name": "Telescope: The planets runs",
+      "passed": true
+    },
+    {
+      "name": "Telescope: A little creature runs",
+      "passed": true
+    },
+    {
+      "name": "Telescope: The birdbath runs",
+      "passed": true
+    },
+    {
+      "name": "Telescope: The bird feeder runs",
+      "passed": true
+    },
+    {
+      "name": "Escape returns from telescope",
+      "passed": true
+    },
+    {
+      "name": "Large mobile piano key presses and releases",
+      "passed": true
+    },
+    {
+      "name": "Mobile layout has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "No browser exceptions during demo journey",
+      "passed": true
+    },
+    {
+      "name": "Real-time animation loop reaches the interior",
+      "passed": true
+    }
+  ],
+  "pixel_comparisons": {
+    "outside": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounding_box": null
+    },
+    "inside": {
+      "different_pixels": 1,
+      "total_pixels": 64000,
+      "exact": false,
+      "bounding_box": [
+        33,
+        152,
+        34,
+        153
+      ]
+    },
+    "music": {
+      "different_pixels": 0,
+      "total_pixels": 64000,
+      "exact": true,
+      "bounding_box": null
+    },
+    "music_score": {
+      "different_pixels": 0,
+      "total_pixels": 15900,
+      "exact": true
+    }
+  },
+  "errors": [],
+  "final_state": {
+    "scene": "music",
+    "character": "girl",
+    "tick": 274597,
+    "entering": false,
+    "instrument": 41,
+    "songId": 23,
+    "songPlaying": false,
+    "recording": false,
+    "held": 0,
+    "stats": {
+      "frames": 113,
+      "notesPlayed": 741,
+      "animationsCompleted": 7,
+      "errors": [],
+      "songCompletions": 25
+    }
+  },
+  "behavior_passed": true,
+  "full_clone_parity": false
+}

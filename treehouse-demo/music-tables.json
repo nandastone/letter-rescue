@@ -1,0 +1,638 @@
+{
+  "keys": [
+    {
+      "pitch": 0,
+      "rectangle": [
+        144,
+        86,
+        188,
+        103
+      ],
+      "keyboard": "Z",
+      "original_hotspot": 44,
+      "pressed_shape": 2202
+    },
+    {
+      "pitch": 1,
+      "rectangle": [
+        145,
+        99,
+        167,
+        108
+      ],
+      "keyboard": "S",
+      "original_hotspot": 31,
+      "pressed_shape": 2206
+    },
+    {
+      "pitch": 2,
+      "rectangle": [
+        144,
+        103,
+        188,
+        120
+      ],
+      "keyboard": "X",
+      "original_hotspot": 45,
+      "pressed_shape": 2204
+    },
+    {
+      "pitch": 3,
+      "rectangle": [
+        145,
+        116,
+        167,
+        125
+      ],
+      "keyboard": "D",
+      "original_hotspot": 32,
+      "pressed_shape": 2206
+    },
+    {
+      "pitch": 4,
+      "rectangle": [
+        144,
+        120,
+        188,
+        137
+      ],
+      "keyboard": "C",
+      "original_hotspot": 46,
+      "pressed_shape": 2205
+    },
+    {
+      "pitch": 5,
+      "rectangle": [
+        144,
+        137,
+        188,
+        154
+      ],
+      "keyboard": "V",
+      "original_hotspot": 47,
+      "pressed_shape": 2203
+    },
+    {
+      "pitch": 6,
+      "rectangle": [
+        145,
+        150,
+        167,
+        159
+      ],
+      "keyboard": "G",
+      "original_hotspot": 34,
+      "pressed_shape": 2206
+    },
+    {
+      "pitch": 7,
+      "rectangle": [
+        144,
+        154,
+        188,
+        171
+      ],
+      "keyboard": "B",
+      "original_hotspot": 48,
+      "pressed_shape": 2204
+    },
+    {
+      "pitch": 8,
+      "rectangle": [
+        145,
+        167,
+        167,
+        176
+      ],
+      "keyboard": "H",
+      "original_hotspot": 35,
+      "pressed_shape": 2206
+    },
+    {
+      "pitch": 9,
+      "rectangle": [
+        144,
+        171,
+        188,
+        188
+      ],
+      "keyboard": "N",
+      "original_hotspot": 49,
+      "pressed_shape": 2204
+    },
+    {
+      "pitch": 10,
+      "rectangle": [
+        145,
+        184,
+        167,
+        193
+      ],
+      "keyboard": "J",
+      "original_hotspot": 36,
+      "pressed_shape": 2206
+    },
+    {
+      "pitch": 11,
+      "rectangle": [
+        144,
+        188,
+        188,
+        205
+      ],
+      "keyboard": "M",
+      "original_hotspot": 50,
+      "pressed_shape": 2205
+    },
+    {
+      "pitch": 12,
+      "rectangle": [
+        144,
+        205,
+        188,
+        222
+      ],
+      "keyboard": ",",
+      "original_hotspot": 51,
+      "pressed_shape": 2203
+    },
+    {
+      "pitch": 13,
+      "rectangle": [
+        145,
+        218,
+        167,
+        227
+      ],
+      "keyboard": "L",
+      "original_hotspot": 38,
+      "pressed_shape": 2206
+    },
+    {
+      "pitch": 14,
+      "rectangle": [
+        144,
+        222,
+        188,
+        239
+      ],
+      "keyboard": ".",
+      "original_hotspot": 52,
+      "pressed_shape": 2204
+    },
+    {
+      "pitch": 15,
+      "rectangle": [
+        145,
+        235,
+        167,
+        244
+      ],
+      "keyboard": ";",
+      "original_hotspot": 39,
+      "pressed_shape": 2206
+    },
+    {
+      "pitch": 16,
+      "rectangle": [
+        144,
+        239,
+        188,
+        256
+      ],
+      "keyboard": "/",
+      "original_hotspot": 53,
+      "pressed_shape": 2205
+    }
+  ],
+  "playback_rates": [
+    6540,
+    6930,
+    7341,
+    7778,
+    8240,
+    8731,
+    9250,
+    9800,
+    10383,
+    11000,
+    11655,
+    12346,
+    13081,
+    13859,
+    14683,
+    15556,
+    16481
+  ],
+  "pitch_hz": [
+    262,
+    277,
+    294,
+    311,
+    330,
+    350,
+    370,
+    392,
+    415,
+    440,
+    466,
+    494,
+    523,
+    554,
+    587,
+    622,
+    659
+  ],
+  "tempo_factors": [
+    12,
+    10,
+    8,
+    6,
+    4
+  ],
+  "duration_factors": [
+    16,
+    12,
+    8,
+    6,
+    4,
+    3,
+    2,
+    1,
+    16,
+    12,
+    8,
+    6,
+    4,
+    3,
+    2,
+    1
+  ],
+  "instruments": [
+    {
+      "id": 0,
+      "name": "Animals",
+      "sound_id": 12000,
+      "animation_group": 10000
+    },
+    {
+      "id": 1,
+      "name": "Home Made",
+      "sound_id": 12001,
+      "animation_group": 10000
+    },
+    {
+      "id": 2,
+      "name": "Mixed Bag",
+      "sound_id": 12002,
+      "animation_group": 10000
+    },
+    {
+      "id": 3,
+      "name": "Percussion",
+      "sound_id": 12003,
+      "animation_group": 10000
+    },
+    {
+      "id": 4,
+      "name": "Brass",
+      "sound_id": 12004,
+      "animation_group": 10000
+    },
+    {
+      "id": 5,
+      "name": "Woodwinds",
+      "sound_id": 12005,
+      "animation_group": 10000
+    },
+    {
+      "id": 6,
+      "name": "Strings",
+      "sound_id": 12006,
+      "animation_group": 10000
+    },
+    {
+      "id": 7,
+      "name": "Clarinet",
+      "sound_id": 12007,
+      "animation_group": 10700
+    },
+    {
+      "id": 8,
+      "name": "Flute",
+      "sound_id": 12008,
+      "animation_group": 10800
+    },
+    {
+      "id": 9,
+      "name": "Piano",
+      "sound_id": 12009,
+      "animation_group": 10900
+    },
+    {
+      "id": 10,
+      "name": "Saxophone",
+      "sound_id": 12010,
+      "animation_group": 11000
+    },
+    {
+      "id": 11,
+      "name": "Bass",
+      "sound_id": 12011,
+      "animation_group": 11100
+    },
+    {
+      "id": 12,
+      "name": "Bassoon",
+      "sound_id": 12012,
+      "animation_group": 11200
+    },
+    {
+      "id": 13,
+      "name": "Cello",
+      "sound_id": 12013,
+      "animation_group": 11300
+    },
+    {
+      "id": 14,
+      "name": "French Horn",
+      "sound_id": 12014,
+      "animation_group": 11400
+    },
+    {
+      "id": 15,
+      "name": "Harp",
+      "sound_id": 12015,
+      "animation_group": 11500
+    },
+    {
+      "id": 16,
+      "name": "Marimba",
+      "sound_id": 12016,
+      "animation_group": 11600
+    },
+    {
+      "id": 17,
+      "name": "Oboe",
+      "sound_id": 12017,
+      "animation_group": 11700
+    },
+    {
+      "id": 18,
+      "name": "Trombone",
+      "sound_id": 12018,
+      "animation_group": 11800
+    },
+    {
+      "id": 19,
+      "name": "Trumpet",
+      "sound_id": 12019,
+      "animation_group": 11900
+    },
+    {
+      "id": 20,
+      "name": "Tuba",
+      "sound_id": 12020,
+      "animation_group": 12000
+    },
+    {
+      "id": 21,
+      "name": "Sousaphone",
+      "sound_id": 12020,
+      "animation_group": 12100
+    },
+    {
+      "id": 22,
+      "name": "Chimes",
+      "sound_id": 12022,
+      "animation_group": 12200
+    },
+    {
+      "id": 23,
+      "name": "Timpani",
+      "sound_id": 12023,
+      "animation_group": 12300
+    },
+    {
+      "id": 24,
+      "name": "Violin",
+      "sound_id": 12024,
+      "animation_group": 12400
+    },
+    {
+      "id": 25,
+      "name": "Bird",
+      "sound_id": 12025,
+      "animation_group": 12500
+    },
+    {
+      "id": 26,
+      "name": "Chicken",
+      "sound_id": 12026,
+      "animation_group": 12600
+    },
+    {
+      "id": 27,
+      "name": "Dog",
+      "sound_id": 12027,
+      "animation_group": 12700
+    },
+    {
+      "id": 28,
+      "name": "Duck",
+      "sound_id": 12028,
+      "animation_group": 12800
+    },
+    {
+      "id": 29,
+      "name": "Frog",
+      "sound_id": 12029,
+      "animation_group": 12900
+    },
+    {
+      "id": 30,
+      "name": "Lamb",
+      "sound_id": 12030,
+      "animation_group": 13000
+    },
+    {
+      "id": 31,
+      "name": "Synthesizer",
+      "sound_id": 12031,
+      "animation_group": 13100
+    },
+    {
+      "id": 32,
+      "name": "Whale",
+      "sound_id": 12032,
+      "animation_group": 13200
+    },
+    {
+      "id": 33,
+      "name": "Elec. Guitar",
+      "sound_id": 12033,
+      "animation_group": 13300
+    },
+    {
+      "id": 34,
+      "name": "Bottle",
+      "sound_id": 12034,
+      "animation_group": 13400
+    },
+    {
+      "id": 35,
+      "name": "Glass",
+      "sound_id": 12035,
+      "animation_group": 13500
+    },
+    {
+      "id": 36,
+      "name": "Harmonica",
+      "sound_id": 12036,
+      "animation_group": 13600
+    },
+    {
+      "id": 37,
+      "name": "Kazoo",
+      "sound_id": 12037,
+      "animation_group": 13700
+    },
+    {
+      "id": 38,
+      "name": "Koto",
+      "sound_id": 12038,
+      "animation_group": 13800
+    },
+    {
+      "id": 39,
+      "name": "Balloon",
+      "sound_id": 12039,
+      "animation_group": 13900
+    },
+    {
+      "id": 40,
+      "name": "Rubber Band",
+      "sound_id": 12040,
+      "animation_group": 14000
+    },
+    {
+      "id": 41,
+      "name": "Panpipe",
+      "sound_id": 12041,
+      "animation_group": 14100
+    }
+  ],
+  "notation": {
+    "normal_y_offsets": [
+      [
+        0,
+        0,
+        4,
+        4,
+        8,
+        12,
+        12,
+        16,
+        16,
+        20,
+        20,
+        24,
+        28,
+        28,
+        32,
+        32,
+        36
+      ],
+      [
+        0,
+        4,
+        4,
+        8,
+        8,
+        12,
+        16,
+        16,
+        20,
+        20,
+        24,
+        24,
+        28,
+        32,
+        32,
+        36,
+        36
+      ]
+    ],
+    "small_y_offsets": [
+      [
+        0,
+        0,
+        3,
+        3,
+        6,
+        9,
+        9,
+        12,
+        12,
+        15,
+        15,
+        18,
+        21,
+        21,
+        24,
+        24,
+        27
+      ],
+      [
+        0,
+        3,
+        3,
+        6,
+        6,
+        9,
+        12,
+        12,
+        15,
+        15,
+        18,
+        18,
+        21,
+        24,
+        24,
+        27,
+        27
+      ]
+    ],
+    "accidentals": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "simple": {
+      "base_x": 114,
+      "base_y": 78,
+      "spacing": 22,
+      "head_dx": 6,
+      "staff_rectangle": [
+        27,
+        88,
+        102,
+        300
+      ]
+    }
+  }
+}

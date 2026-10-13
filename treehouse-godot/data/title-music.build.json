@@ -1,0 +1,17 @@
+{
+  "source_sha256": "53ecb856cb6c49f28064ce22b9723eed9a8d19db139ae1bead9786f37a7eb78c",
+  "synth_sources": {
+    "dbopl.cpp": "53a8f2759a93f0d5252131f59812f60095a35e1db36f6ad97bdcacca6c3853aa",
+    "dbopl.h": "5177a45aa8efbf2f8bbbceb51a325f9b5d9af98457b131cdb2421699248e1da4"
+  },
+  "rate": 48000,
+  "title_source_sha256": "c500c118bbe3668d1bb432ed49b6d499a72fbb009dabcb27cb3f2754231de58a",
+  "frames": 354964,
+  "wav_sha256": "bd48c58e46e1dc6a68c46f02d7bd834c8e28019303bfb467987ad8ea098d1ee7",
+  "registers": 1142,
+  "end_irq": 1535,
+  "limitations": [
+    "Waveform/mixer parity unverified",
+    "Register writes within each timer interrupt share a sample boundary"
+  ]
+}
