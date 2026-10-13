@@ -1162,3 +1162,17 @@ All nine HTTP files match the bound manifest, served at
 http://127.0.0.1:8768/ by PID 29248. `completion-gate-ds.json` remains failed for
 seven known journey discrepancies and missing full fidelity/integration
 proofs. TH-015 and the overall goal remain in progress.
+
+### Godot resource ownership checkpoint — 2026-10-13
+
+Godot now implements the conventional allocator, near allocator and resource handle ownership directly in GDScript. Native component checks pass: 402 allocator checks (52 preparation calls, two cursor-moving packing operations, 104 near checkpoints, 237 returned pointers and six boundaries) and 668 continuous ownership checks (104 complete near/far checkpoints, 159 far allocations, 43 raw frees and ownership/resize boundaries). Offline initial RAM and request streams are diagnostic fixtures only. Generated startup/catalog/scene lifetimes and live board integration remain required; Money loss is unchanged. These modules are not yet called by the playable game.
+
+The source inventory now includes these unintegrated modules; the preview still serves `godot-scanout-build-a`. See the payment resource dependency notes for evidence and retained failed attempts.
+
+### Generated Godot startup resource state — 2026-10-13
+
+Godot now generates startup resource ownership from pinned executable/platform/archive inputs: DOS allocation and arena growth, source cache, converted fonts/cursors, saved surface, all seven startup catalogs, direct configuration copy and retained SND 0. All 98 native boundary-field comparisons, five boundary-count checks and five focused checks pass (108 total), including when loading the normal generated original.json bundle. The 668 continuous memory ownership regression checks still pass. Resource modules are not yet connected to live title/selection/room/board events; the Money loss and all seven native discrepancies remain open. Preview is the prior scanout export; source inventory is ahead of it.
+
+### Godot scene resource chain — 2026-10-13
+
+Godot resource ownership now continues from generated startup through all three title animations, selection previews/departures/climb, initial room construction, outgoing ring/bubble transfer and initial Money/robot board options. Normal built-asset comparisons pass 377 checks for the boy-to-board route (366 native boundary/state/payload comparisons plus 11 checks), 209 for girl-to-room (204 native comparisons plus five checks), and 108 startup regression checks. Transfer resource events are driven by the production Godot SCR interpreter; initial board state uses production BoardGame with one explicitly supplied native entry seed. Room time/cloud/objects and two visible credit changes remain explicit semantic fixture inputs. These resource modules are not connected to the live game event loop. Board start/turn/redraw lifetimes and payment integration remain open; no Money fix or native timing/audio parity is claimed. Preview remains the prior scanout export.

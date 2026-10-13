@@ -66,3 +66,54 @@ lifetime harness. Connect live rendering/input/RNG events, then verify a full
 money-loss game. Converted pixels and exact animation/audio timing are outside
 this resource check and remain required by the overall goal. The full-game
 completion gate must remain failed while those requirements are open.
+
+## Godot scene ownership through board options — 2026-10-13
+
+Added GDScript palette/shape/animation ownership and lifecycle modules for the
+title, child selection, initial room, board transition and initial board/options
+construction. The normal source extractor now includes the original EXE palette
+masks, rectangles, SCR code and child archives used by these modules. Palette
+byte updates explicitly preserve Godot PackedByteArray copy-on-write semantics.
+
+The sequence generates requests from these source structures and current game
+fields. It releases saved character backgrounds, animation objects, temporary
+screens, sound locks and source-cache links at the corresponding semantic
+boundaries. Board transition display/sound/callback events come from the actual
+Godot SCR interpreter: the ring completes 18 displays; the bubble completes 13
+displays, sounds 10034/10035 and callback [0,0]. Initial board layout is produced
+by the actual Godot BoardGame rules.
+
+Evidence under `testing/output/treehouse/`:
+
+- `godot-resource-board-c/report.json`: **377 checks pass**, including all 366
+  native allocator/DOS/catalog/source-payload comparisons through initial Money
+  options, and 11 gameplay/interpreter/ownership checks. Uses the normal asset
+  bundle for both resource metadata and board tables.
+- `godot-resource-room-girl-b/report.json`: **209 checks pass**, including all
+  204 native comparisons through girl selection and room construction, and
+  five ownership/cache checks, also using the normal asset bundle.
+- `godot-resource-startup-f/report.json`: all **108 startup checks** remain
+  passing after the shape/catalog integration.
+- `godot-resource-scene-assets-a.log`: normal asset generation succeeds with
+  all 2,337 shapes and 356 scripts. Current asset SHA-256 is
+  `a83014cbf1c508a975dfaed72b5451fab8ebf561b9b519ba9e51d14f8cbd1fb1`.
+
+Earlier passing title/room/transfer checkpoints remain as
+`godot-resource-title-boy-a`, `godot-resource-room-boy-a`,
+`godot-resource-transfer-a`, `godot-resource-board-a/b` and
+`godot-resource-room-girl-a`. They cover intermediate versions or direct
+extraction; the current reports above bind the final source and normal assets.
+
+Limits: these are headless resource ownership comparisons at semantic completion,
+not live browser gameplay or elapsed-time proof. The route supplies cloud 5,
+two visible credit changes, noon, the five source-defined room objects, and one
+native RNG seed at board entry. Those are explicit test inputs; they must not
+become runtime fixture schedules or seeds. Converted shape/surface pixels remain
+the graphics decoder's responsibility and are outside these resource comparisons.
+The modules are not yet hooked into the playable event loop. The preview remains
+the prior scanout build; full completion and its source/export check still fail.
+
+Next is generating board start, turn, sound and redraw resource events after
+options dismissal, then connecting the live lifecycle and deriving the payment's
+cursor-dependent second amount. The full losing Money replay, seven native
+discrepancies, timing and waveform work remain open.

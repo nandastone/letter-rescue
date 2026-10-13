@@ -55,7 +55,7 @@
         "Ordered nature turn setup, question start, candidate painting and cleanup generate intermediate framebuffer states",
         "Timing derives from operations and inputs, not recorded fixture timestamps"
       ],
-      "progress": "Delivered d7a51afab752 retains 614/984 strict nature callbacks and 12 missing displays. Required work is runtime-generated original presentation and timing. Earlier CPU/DMA/IRQ component research is preserved under historical_progress and progress_evidence; composing caller registers, lazy flags or instruction-equivalent paths is not an independent deliverable. Read-only paired balloon scheduling observation isolates the first maze return: original first movement tick 19681, browser 19647 (34 ticks early); both then move every 49 ticks. The room-reset deadline is set 31 ticks earlier in the browser. Observation/control images, audio and timelines agree in 359 checks, and browser comparison outcomes are unchanged. Do not alter ordinary balloon cadence or add a fixture-derived delay; room rebuild/return operation timing remains open. Rebuild-boundary observation and two controls pass 316 ordinary image/audio/timeline checks. The original spends 530.384 ms loading/drawing before return animation; there is no identified missing explicit pause. No runtime delay or instruction-equivalence implementation was added.",
+      "progress": "Godot resource ownership now continues from generated startup through all three title animations, selection previews/departures/climb, initial room construction, outgoing ring/bubble transfer and initial Money/robot board options. Normal built-asset comparisons pass 377 checks for the boy-to-board route (366 native boundary/state/payload comparisons plus 11 checks), 209 for girl-to-room (204 native comparisons plus five checks), and 108 startup regression checks. Transfer resource events are driven by the production Godot SCR interpreter; initial board state uses production BoardGame with one explicitly supplied native entry seed. Room time/cloud/objects and two visible credit changes remain explicit semantic fixture inputs. These resource modules are not connected to the live game event loop. Board start/turn/redraw lifetimes and payment integration remain open; no Money fix or native timing/audio parity is claimed. Preview remains the prior scanout export.",
       "progress_evidence": [
         {
           "path": "testing/output/treehouse/audio-dma-check-c/report.json",
@@ -1051,6 +1051,41 @@
           "path": "testing/output/treehouse/board-options-control-a.json",
           "sha256": "3dfc4d57a1f278ab281683f4335469ac1b912987139517016d3f154e9fcbbe63",
           "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-heap-b/report.json",
+          "sha256": "d4f1a00fc519eccf1182cd97b977eed45645c85fb204c0fcefe1df2e76d6fbcf",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-memory-c/report.json",
+          "sha256": "af734de3627f8f74f27e93f08a14c9bd3043058891b0908395f15a2bb0bbdd23",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-startup-e/report.json",
+          "sha256": "79b77f913b97034deadbf12f80518b129bcfde9f468cafaf60809fc15a8503e9",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-memory-d/report.json",
+          "sha256": "b4abfead66c032fc872a535957be8846cb5778d55252dd7bc299c50c6c753005",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-board-c/report.json",
+          "sha256": "18e302e21aa2450f4423e27e72477b6bd661e836782b35f805b2ad7c09e4e9e1",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-room-girl-b/report.json",
+          "sha256": "ae320f04630459245f0e09498d8c7285488b4f0891151b4d714d82a5616e53f7",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-startup-f/report.json",
+          "sha256": "004c851533c8a0d2a11ff4fbd32dd98d87a69184ef1bf36fc1c304fa80ed3a45",
+          "scope": "component"
         }
       ],
       "diagnostic_evidence": [
@@ -1242,7 +1277,10 @@
         }
       ],
       "historical_progress": [
-        "DMA consumption and mixer output now match all 6,011 native calls: 62,809 PCM bytes, 290,096 signed-32-bit mixer frames, all device/phase fields and 26 completion IRQs. Twenty-six focused PCM/DMA/mixer-clock checks pass. Continuous animation now generates 1,633 DMA calls and 105 interrupt admissions (99 timer, six sound), all vectors/timestamps matching, and reaches 16,360,637 instructions with 15,988 matching sparse samples before the uncomposed main 4E15 question-backdrop callback. The complete short span still passes all instructions/hash/RAM. Remaining: callback/overlay composition, complete continuous paths, caller registers/lazy flags, resource/startup coverage and live scanout. Live strict result remains 614/984 with 12 missing displays; new components remain unbundled."
+        "DMA consumption and mixer output now match all 6,011 native calls: 62,809 PCM bytes, 290,096 signed-32-bit mixer frames, all device/phase fields and 26 completion IRQs. Twenty-six focused PCM/DMA/mixer-clock checks pass. Continuous animation now generates 1,633 DMA calls and 105 interrupt admissions (99 timer, six sound), all vectors/timestamps matching, and reaches 16,360,637 instructions with 15,988 matching sparse samples before the uncomposed main 4E15 question-backdrop callback. The complete short span still passes all instructions/hash/RAM. Remaining: callback/overlay composition, complete continuous paths, caller registers/lazy flags, resource/startup coverage and live scanout. Live strict result remains 614/984 with 12 missing displays; new components remain unbundled.",
+        "Delivered d7a51afab752 retains 614/984 strict nature callbacks and 12 missing displays. Required work is runtime-generated original presentation and timing. Earlier CPU/DMA/IRQ component research is preserved under historical_progress and progress_evidence; composing caller registers, lazy flags or instruction-equivalent paths is not an independent deliverable. Read-only paired balloon scheduling observation isolates the first maze return: original first movement tick 19681, browser 19647 (34 ticks early); both then move every 49 ticks. The room-reset deadline is set 31 ticks earlier in the browser. Observation/control images, audio and timelines agree in 359 checks, and browser comparison outcomes are unchanged. Do not alter ordinary balloon cadence or add a fixture-derived delay; room rebuild/return operation timing remains open. Rebuild-boundary observation and two controls pass 316 ordinary image/audio/timeline checks. The original spends 530.384 ms loading/drawing before return animation; there is no identified missing explicit pause. No runtime delay or instruction-equivalence implementation was added.",
+        "Godot now implements the conventional allocator, near allocator and resource handle ownership directly in GDScript. Native component checks pass: 402 allocator checks (52 preparation calls, two cursor-moving packing operations, 104 near checkpoints, 237 returned pointers and six boundaries) and 668 continuous ownership checks (104 complete near/far checkpoints, 159 far allocations, 43 raw frees and ownership/resize boundaries). Offline initial RAM and request streams are diagnostic fixtures only. Generated startup/catalog/scene lifetimes and live board integration remain required; Money loss is unchanged. These modules are not yet called by the playable game. Previous playable status: Delivered d7a51afab752 retains 614/984 strict nature callbacks and 12 missing displays. Required work is runtime-generated original presentation and timing. Earlier CPU/DMA/IRQ component research is preserved under historical_progress and progress_evidence; composing caller registers, lazy flags or instruction-equivalent paths is not an independent deliverable. Read-only paired balloon scheduling observation isolates the first maze return: original first movement tick 19681, browser 19647 (34 ticks early); both then move every 49 ticks. The room-reset deadline is set 31 ticks earlier in the browser. Observation/control images, audio and timelines agree in 359 checks, and browser comparison outcomes are unchanged. Do not alter ordinary balloon cadence or add a fixture-derived delay; room rebuild/return operation timing remains open. Rebuild-boundary observation and two controls pass 316 ordinary image/audio/timeline checks. The original spends 530.384 ms loading/drawing before return animation; there is no identified missing explicit pause. No runtime delay or instruction-equivalence implementation was added.",
+        "Godot now generates startup resource ownership from pinned executable/platform/archive inputs: DOS allocation and arena growth, source cache, converted fonts/cursors, saved surface, all seven startup catalogs, direct configuration copy and retained SND 0. All 98 native boundary-field comparisons, five boundary-count checks and five focused checks pass (108 total), including when loading the normal generated original.json bundle. The 668 continuous memory ownership regression checks still pass. Resource modules are not yet connected to live title/selection/room/board events; the Money loss and all seven native discrepancies remain open. Preview is the prior scanout export; source inventory is ahead of it."
       ],
       "maze_decoder_progress": "All 94 regression suites and 183 environment states pass. Maze drawer first-use preparation now consumes intrinsic decoder work from original compressed assets; 36 fresh mouse/touch checks pass, with 18 failures on the prior build. The original-scheduled maze retains all 11 RGB/state checkpoints and 184 observed sources/rates. The ending song improves from 23 to 13 ticks early; exact timing remains failed. Original cache eviction, other load costs and scene drawing remain unintegrated. The activity tour remains 23/27 images with ten balloon-state differences. Strict nature remains 614/984 callbacks with 12 missing displays; theater remains 348/580 intermediate images. Historical supplemental reports retain their original hashes. Full fidelity is not established.",
       "theater_curtain_progress": "All 95 regression suites and 183 environment states pass. Theater small previews now hide the cursor; curtains preserve the prior stage/options, cover the rail, use the busy cursor and restore the director background. All 57 fresh mouse/touch checks pass; the previous build fails 32. Exact native theater image membership improves from 348/580 to 385/580, restoring 37 complete images without losing a previous match. All 29 endpoint/gameplay checkpoints and 73 observed sound sources/rates pass. The remaining 195 theater images and exact timing remain open. Strict nature remains 614/984 callbacks with 12 missing displays; the cross-activity tour retains 23/27 images and ten balloon-state differences. Money-loss RNG, resource lifetimes and whole-session audio/timing remain unresolved; full fidelity is not established.",
@@ -4358,7 +4396,7 @@
         "Verify packaged-save and native missing-STATUS startup paths with title boot, including the separate SONGS file and legacy-profile migration; isolated fresh-default comparisons do not establish full startup integration."
       ],
       "evidence": [],
-      "progress": "Godot now dispatches all remaining authored FM tracks (Home 20001 and frog 20100..20103) alongside the independent digital voice. Home sign and sleeping-child hotspot wait through source EOT and support interruption; incoming maze movement stops all channels at original overlay 1:7A93 while outgoing movement preserves accompaniment across the next entrance. All five imports retain exact generated PCM. Paired ordinary DOS maze capture/control timelines, audio and final RAM match; eight playback prefixes cover all four frog tracks with exact MIDI values/order/timer ordinals (66 combined native/component checks). Godot passes 48 activity audio controls, 66 maze controls, seven actual browser Home audio checks, ten title Web checks and startup/two full native frames/356 SCR checks. Full maze entry remains 45/46 images and 44/46 states with exactly the prior intro-05/15/25 failures. Nine served hashes match godot-activity-web-build-a at port 8768, PCK 87d6940b170922e351a246b0c1d9d437339041a43ba004dc7f36a4f177befd62. No full waveform, retained chip state or wall-clock equivalence claim; no issue closes.",
+      "progress": "Godot resource ownership now continues from generated startup through all three title animations, selection previews/departures/climb, initial room construction, outgoing ring/bubble transfer and initial Money/robot board options. Normal built-asset comparisons pass 377 checks for the boy-to-board route (366 native boundary/state/payload comparisons plus 11 checks), 209 for girl-to-room (204 native comparisons plus five checks), and 108 startup regression checks. Transfer resource events are driven by the production Godot SCR interpreter; initial board state uses production BoardGame with one explicitly supplied native entry seed. Room time/cloud/objects and two visible credit changes remain explicit semantic fixture inputs. These resource modules are not connected to the live game event loop. Board start/turn/redraw lifetimes and payment integration remain open; no Money fix or native timing/audio parity is claimed. Preview remains the prior scanout export.",
       "progress_evidence": [
         {
           "path": "testing/output/treehouse/activity-music-proof-a/report.json",
@@ -4393,6 +4431,41 @@
         {
           "path": "testing/output/treehouse/godot-activity-delivery-a.json",
           "sha256": "08c9915f2a402038fb80baa15b22d56c599f69caad77ab1036b950165f282078",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-heap-b/report.json",
+          "sha256": "d4f1a00fc519eccf1182cd97b977eed45645c85fb204c0fcefe1df2e76d6fbcf",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-memory-c/report.json",
+          "sha256": "af734de3627f8f74f27e93f08a14c9bd3043058891b0908395f15a2bb0bbdd23",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-startup-e/report.json",
+          "sha256": "79b77f913b97034deadbf12f80518b129bcfde9f468cafaf60809fc15a8503e9",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-memory-d/report.json",
+          "sha256": "b4abfead66c032fc872a535957be8846cb5778d55252dd7bc299c50c6c753005",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-board-c/report.json",
+          "sha256": "18e302e21aa2450f4423e27e72477b6bd661e836782b35f805b2ad7c09e4e9e1",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-room-girl-b/report.json",
+          "sha256": "ae320f04630459245f0e09498d8c7285488b4f0891151b4d714d82a5616e53f7",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-startup-f/report.json",
+          "sha256": "004c851533c8a0d2a11ff4fbd32dd98d87a69184ef1bf36fc1c304fa80ed3a45",
           "scope": "component"
         }
       ],
@@ -4546,7 +4619,10 @@
               "scope": "component"
             }
           ]
-        }
+        },
+        "Godot now dispatches all remaining authored FM tracks (Home 20001 and frog 20100..20103) alongside the independent digital voice. Home sign and sleeping-child hotspot wait through source EOT and support interruption; incoming maze movement stops all channels at original overlay 1:7A93 while outgoing movement preserves accompaniment across the next entrance. All five imports retain exact generated PCM. Paired ordinary DOS maze capture/control timelines, audio and final RAM match; eight playback prefixes cover all four frog tracks with exact MIDI values/order/timer ordinals (66 combined native/component checks). Godot passes 48 activity audio controls, 66 maze controls, seven actual browser Home audio checks, ten title Web checks and startup/two full native frames/356 SCR checks. Full maze entry remains 45/46 images and 44/46 states with exactly the prior intro-05/15/25 failures. Nine served hashes match godot-activity-web-build-a at port 8768, PCK 87d6940b170922e351a246b0c1d9d437339041a43ba004dc7f36a4f177befd62. No full waveform, retained chip state or wall-clock equivalence claim; no issue closes.",
+        "Godot now implements the conventional allocator, near allocator and resource handle ownership directly in GDScript. Native component checks pass: 402 allocator checks (52 preparation calls, two cursor-moving packing operations, 104 near checkpoints, 237 returned pointers and six boundaries) and 668 continuous ownership checks (104 complete near/far checkpoints, 159 far allocations, 43 raw frees and ownership/resize boundaries). Offline initial RAM and request streams are diagnostic fixtures only. Generated startup/catalog/scene lifetimes and live board integration remain required; Money loss is unchanged. These modules are not yet called by the playable game. Previous playable status: Godot now dispatches all remaining authored FM tracks (Home 20001 and frog 20100..20103) alongside the independent digital voice. Home sign and sleeping-child hotspot wait through source EOT and support interruption; incoming maze movement stops all channels at original overlay 1:7A93 while outgoing movement preserves accompaniment across the next entrance. All five imports retain exact generated PCM. Paired ordinary DOS maze capture/control timelines, audio and final RAM match; eight playback prefixes cover all four frog tracks with exact MIDI values/order/timer ordinals (66 combined native/component checks). Godot passes 48 activity audio controls, 66 maze controls, seven actual browser Home audio checks, ten title Web checks and startup/two full native frames/356 SCR checks. Full maze entry remains 45/46 images and 44/46 states with exactly the prior intro-05/15/25 failures. Nine served hashes match godot-activity-web-build-a at port 8768, PCK 87d6940b170922e351a246b0c1d9d437339041a43ba004dc7f36a4f177befd62. No full waveform, retained chip state or wall-clock equivalence claim; no issue closes.",
+        "Godot now generates startup resource ownership from pinned executable/platform/archive inputs: DOS allocation and arena growth, source cache, converted fonts/cursors, saved surface, all seven startup catalogs, direct configuration copy and retained SND 0. All 98 native boundary-field comparisons, five boundary-count checks and five focused checks pass (108 total), including when loading the normal generated original.json bundle. The 668 continuous memory ownership regression checks still pass. Resource modules are not yet connected to live title/selection/room/board events; the Money loss and all seven native discrepancies remain open. Preview is the prior scanout export; source inventory is ahead of it."
       ],
       "remaining_work": [
         "Full startup operation timing, RNG, packaged/fresh/SONGS-only profiles and interruption paths remain open.",
@@ -4851,9 +4927,24 @@
           "path": "testing/output/treehouse/godot-room-idle-care-envelope-a/evidence.json",
           "sha256": "82d441672587ebb950074c53a171bb9b4cdd34d12db9e9fe653b58de5c3dc314",
           "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-board-c/report.json",
+          "sha256": "18e302e21aa2450f4423e27e72477b6bd661e836782b35f805b2ad7c09e4e9e1",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-room-girl-b/report.json",
+          "sha256": "ae320f04630459245f0e09498d8c7285488b4f0891151b4d714d82a5616e53f7",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-startup-f/report.json",
+          "sha256": "004c851533c8a0d2a11ff4fbd32dd98d87a69184ef1bf36fc1c304fa80ed3a45",
+          "scope": "component"
         }
       ],
-      "progress": "Fixed missing room cloud servicing at the resident idle boundary and missing ambient scheduling after either chalk erase answer (original main 16F2 -> BC43). Full original room input route now matches all 24 checkpoint images/states; held egg route all four. Replay additionally checks cloudX. Original failing reports retained. Twelve room input and 22 care checks pass. Current Web export passes 22 ordinary input checks and 11 fresh-profile checks. Headless native replay is component evidence, not strict timing or complete browser/native parity. Yard/nature/robot returns, other activity and timing/audio requirements remain open.",
+      "progress": "Godot resource ownership now continues from generated startup through all three title animations, selection previews/departures/climb, initial room construction, outgoing ring/bubble transfer and initial Money/robot board options. Normal built-asset comparisons pass 377 checks for the boy-to-board route (366 native boundary/state/payload comparisons plus 11 checks), 209 for girl-to-room (204 native comparisons plus five checks), and 108 startup regression checks. Transfer resource events are driven by the production Godot SCR interpreter; initial board state uses production BoardGame with one explicitly supplied native entry seed. Room time/cloud/objects and two visible credit changes remain explicit semantic fixture inputs. These resource modules are not connected to the live game event loop. Board start/turn/redraw lifetimes and payment integration remain open; no Money fix or native timing/audio parity is claimed. Preview remains the prior scanout export.",
       "known_godot_failures": [
         {
           "path": "testing/output/treehouse/godot-yard-journey-c/report.json",
@@ -4893,7 +4984,8 @@
         "Godot music listening is playable through the original room hotspot and transition. Ported both scores, all piano keys, pitched original samples, complete original song playback/tempo/repeat, contents/pages, seven families and 42 instrument/fact/audition choices. 151 component image/event cases and four full native frames pass; all 330 generated ring/bubble frames match native order in eight isolated sequences. 47 production input checks, 22 care/nap checks and sixteen actual Edge checks pass. Composition/personal songbooks, copy/erase/random-song, printing and maze remain unported; strict presentation/audio fidelity and full integrated activity journeys remain open.",
         "Godot sentence theater is playable through the original room curtains: eight actors/actions, six places, four times, spoken performances, preview animations, grammar feedback/correction, token drag/removal/shuffle, movable props and per-place actor positions. All 29 checkpoints in the continuous room/theater/return DOS input journey match complete images and checked state/RNG. 1,390 port/native image and continuous state/sound cases, 52 mouse/boy and touch/girl checks, all 73 observed original PCM sources/effective rates, and ten real Edge export checks pass. Plays persist across browser reload. Exact native presentation/stop/waveform parity, shared rewards/help/printing and STATUS.DAT integration remain open.",
         "Godot nature now includes filters/facts, day/night collages and saves, original erase/print-preview dialogs, human/robot guessing, definitions/help, wrong guesses, victory, both reveals and shared prize selection/delivery. Passing: 2,559 rendering/behavior cases, 21 complete native collage checkpoints, ten native quiz checkpoints through both reveals, and 56 fresh mouse/boy and touch/girl controls including prize delivery, saves and room return. Telescope entry/return, four nonrepeating views, per-view replay/exit bounds and robot shelf are integrated; 72 controls and nine complete original-view/shelf images pass. The longer native robot route matches 33/35 images and 32/35 complete checkpoints; all recorded RNG/shelf/visited-mask fields match. Three room-return object states and two room-return images remain failed. Native human prize route matches all 14 checkpoint images but final balloon geometry and object storage order differ. STATUS.DAT/help integration, actual printing and strict presentation/audio remain unfinished. The delivered immutable Godot Web export passes 21 actual Edge checks, including nature save/reload and telescope entry/replay/return, with zero console errors; all nine served files match.",
-        "Money and Chip board games now run in Godot through original room transfers, options, independent human goals, robot paths, dice, road movement, rewards, payment hands, speech, money transfers, chip carrying/borrowing, endings and shared prizes. Board mode/opponent/six goal settings persist through reload. The complete Money winning route matches all 25 native image/state checkpoints. The complete Chip route matches all 49 gameplay/RNG states and 48/49 images; step-15 retains a 312-pixel exchange-highlight difference already present in the reference port. The losing Money route remains failed: 12/33 images, 11/33 complete states; first RNG mismatch step-10, and the recorded losing ending is not reached. All 39 fresh mouse/boy and touch/girl controls pass, including legal games to endings, exchange input, prize delivery, room return and persistence rejection. The candidate Web export passes 20 actual Edge checks for both modes, legal road movement, reload persistence and return. Native unshifted timing, output waveform, complete losing-route fidelity and shared STATUS.DAT/help integration remain required. The port passes 4,794 complete RGB/state/sound-dispatch comparisons with the preserved JavaScript reference. Theater retains all 29 native checkpoints, nature retains 56 controls, telescope retains 72 controls/nine native images, and startup retains two full images/all 356 SCR scripts. The verified Web build is delivered at 8768; all nine served hashes match."
+        "Money and Chip board games now run in Godot through original room transfers, options, independent human goals, robot paths, dice, road movement, rewards, payment hands, speech, money transfers, chip carrying/borrowing, endings and shared prizes. Board mode/opponent/six goal settings persist through reload. The complete Money winning route matches all 25 native image/state checkpoints. The complete Chip route matches all 49 gameplay/RNG states and 48/49 images; step-15 retains a 312-pixel exchange-highlight difference already present in the reference port. The losing Money route remains failed: 12/33 images, 11/33 complete states; first RNG mismatch step-10, and the recorded losing ending is not reached. All 39 fresh mouse/boy and touch/girl controls pass, including legal games to endings, exchange input, prize delivery, room return and persistence rejection. The candidate Web export passes 20 actual Edge checks for both modes, legal road movement, reload persistence and return. Native unshifted timing, output waveform, complete losing-route fidelity and shared STATUS.DAT/help integration remain required. The port passes 4,794 complete RGB/state/sound-dispatch comparisons with the preserved JavaScript reference. Theater retains all 29 native checkpoints, nature retains 56 controls, telescope retains 72 controls/nine native images, and startup retains two full images/all 356 SCR scripts. The verified Web build is delivered at 8768; all nine served hashes match.",
+        "Fixed missing room cloud servicing at the resident idle boundary and missing ambient scheduling after either chalk erase answer (original main 16F2 -> BC43). Full original room input route now matches all 24 checkpoint images/states; held egg route all four. Replay additionally checks cloudX. Original failing reports retained. Twelve room input and 22 care checks pass. Current Web export passes 22 ordinary input checks and 11 fresh-profile checks. Headless native replay is component evidence, not strict timing or complete browser/native parity. Yard/nature/robot returns, other activity and timing/audio requirements remain open."
       ],
       "resolved_historical_failures": [
         {
@@ -5434,7 +5526,7 @@
         "Verify full winning/losing native routes; preserve all unresolved money-loss failures"
       ],
       "evidence": [],
-      "progress": "Current export passes 21 real-browser board checks across money and chips, including dice, original car placement, legal road movement, options reload and room return. The verifier explicitly selects the robot through UI before comparing the robot fixture; fresh profiles correctly default to a friend. Failed first run retained. Complete native loss/RNG and Chip timing discrepancies remain open. Current-export loss replay reconfirms 12/33 images and 11/33 states, first RNG divergence at step-10, and no losing ending.",
+      "progress": "Godot resource ownership now continues from generated startup through all three title animations, selection previews/departures/climb, initial room construction, outgoing ring/bubble transfer and initial Money/robot board options. Normal built-asset comparisons pass 377 checks for the boy-to-board route (366 native boundary/state/payload comparisons plus 11 checks), 209 for girl-to-room (204 native comparisons plus five checks), and 108 startup regression checks. Transfer resource events are driven by the production Godot SCR interpreter; initial board state uses production BoardGame with one explicitly supplied native entry seed. Room time/cloud/objects and two visible credit changes remain explicit semantic fixture inputs. These resource modules are not connected to the live game event loop. Board start/turn/redraw lifetimes and payment integration remain open; no Money fix or native timing/audio parity is claimed. Preview remains the prior scanout export.",
       "progress_evidence": [
         {
           "path": "testing/output/treehouse/godot-board-money-a/report.json",
@@ -5485,6 +5577,41 @@
           "path": "testing/output/treehouse/godot-resume-oct13-board-b-envelope/evidence.json",
           "sha256": "df0d67acf37184ceac386d8b5056aebe6b31e826dd97e5631d721b35550bd5c5",
           "scope": "web"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-heap-b/report.json",
+          "sha256": "d4f1a00fc519eccf1182cd97b977eed45645c85fb204c0fcefe1df2e76d6fbcf",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-memory-c/report.json",
+          "sha256": "af734de3627f8f74f27e93f08a14c9bd3043058891b0908395f15a2bb0bbdd23",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-startup-e/report.json",
+          "sha256": "79b77f913b97034deadbf12f80518b129bcfde9f468cafaf60809fc15a8503e9",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-memory-d/report.json",
+          "sha256": "b4abfead66c032fc872a535957be8846cb5778d55252dd7bc299c50c6c753005",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-board-c/report.json",
+          "sha256": "18e302e21aa2450f4423e27e72477b6bd661e836782b35f805b2ad7c09e4e9e1",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-room-girl-b/report.json",
+          "sha256": "ae320f04630459245f0e09498d8c7285488b4f0891151b4d714d82a5616e53f7",
+          "scope": "component"
+        },
+        {
+          "path": "testing/output/treehouse/godot-resource-startup-f/report.json",
+          "sha256": "004c851533c8a0d2a11ff4fbd32dd98d87a69184ef1bf36fc1c304fa80ed3a45",
+          "scope": "component"
         }
       ],
       "known_failures": [
@@ -5511,7 +5638,10 @@
         "Verify native sound events, stops, output waveform and unshifted presentation timing."
       ],
       "historical_progress": [
-        "Money and Chip board games now run in Godot through original room transfers, options, independent human goals, robot paths, dice, road movement, rewards, payment hands, speech, money transfers, chip carrying/borrowing, endings and shared prizes. Board mode/opponent/six goal settings persist through reload. The complete Money winning route matches all 25 native image/state checkpoints. The complete Chip route matches all 49 gameplay/RNG states and 48/49 images; step-15 retains a 312-pixel exchange-highlight difference already present in the reference port. The losing Money route remains failed: 12/33 images, 11/33 complete states; first RNG mismatch step-10, and the recorded losing ending is not reached. All 39 fresh mouse/boy and touch/girl controls pass, including legal games to endings, exchange input, prize delivery, room return and persistence rejection. The candidate Web export passes 20 actual Edge checks for both modes, legal road movement, reload persistence and return. Native unshifted timing, output waveform, complete losing-route fidelity and shared STATUS.DAT/help integration remain required. The port passes 4,794 complete RGB/state/sound-dispatch comparisons with the preserved JavaScript reference. Theater retains all 29 native checkpoints, nature retains 56 controls, telescope retains 72 controls/nine native images, and startup retains two full images/all 356 SCR scripts. The verified Web build is delivered at 8768; all nine served hashes match."
+        "Money and Chip board games now run in Godot through original room transfers, options, independent human goals, robot paths, dice, road movement, rewards, payment hands, speech, money transfers, chip carrying/borrowing, endings and shared prizes. Board mode/opponent/six goal settings persist through reload. The complete Money winning route matches all 25 native image/state checkpoints. The complete Chip route matches all 49 gameplay/RNG states and 48/49 images; step-15 retains a 312-pixel exchange-highlight difference already present in the reference port. The losing Money route remains failed: 12/33 images, 11/33 complete states; first RNG mismatch step-10, and the recorded losing ending is not reached. All 39 fresh mouse/boy and touch/girl controls pass, including legal games to endings, exchange input, prize delivery, room return and persistence rejection. The candidate Web export passes 20 actual Edge checks for both modes, legal road movement, reload persistence and return. Native unshifted timing, output waveform, complete losing-route fidelity and shared STATUS.DAT/help integration remain required. The port passes 4,794 complete RGB/state/sound-dispatch comparisons with the preserved JavaScript reference. Theater retains all 29 native checkpoints, nature retains 56 controls, telescope retains 72 controls/nine native images, and startup retains two full images/all 356 SCR scripts. The verified Web build is delivered at 8768; all nine served hashes match.",
+        "Current export passes 21 real-browser board checks across money and chips, including dice, original car placement, legal road movement, options reload and room return. The verifier explicitly selects the robot through UI before comparing the robot fixture; fresh profiles correctly default to a friend. Failed first run retained. Complete native loss/RNG and Chip timing discrepancies remain open. Current-export loss replay reconfirms 12/33 images and 11/33 states, first RNG divergence at step-10, and no losing ending.",
+        "Godot now implements the conventional allocator, near allocator and resource handle ownership directly in GDScript. Native component checks pass: 402 allocator checks (52 preparation calls, two cursor-moving packing operations, 104 near checkpoints, 237 returned pointers and six boundaries) and 668 continuous ownership checks (104 complete near/far checkpoints, 159 far allocations, 43 raw frees and ownership/resize boundaries). Offline initial RAM and request streams are diagnostic fixtures only. Generated startup/catalog/scene lifetimes and live board integration remain required; Money loss is unchanged. These modules are not yet called by the playable game. Previous playable status: Current export passes 21 real-browser board checks across money and chips, including dice, original car placement, legal road movement, options reload and room return. The verifier explicitly selects the robot through UI before comparing the robot fixture; fresh profiles correctly default to a friend. Failed first run retained. Complete native loss/RNG and Chip timing discrepancies remain open. Current-export loss replay reconfirms 12/33 images and 11/33 states, first RNG divergence at step-10, and no losing ending.",
+        "Godot now generates startup resource ownership from pinned executable/platform/archive inputs: DOS allocation and arena growth, source cache, converted fonts/cursors, saved surface, all seven startup catalogs, direct configuration copy and retained SND 0. All 98 native boundary-field comparisons, five boundary-count checks and five focused checks pass (108 total), including when loading the normal generated original.json bundle. The 668 continuous memory ownership regression checks still pass. Resource modules are not yet connected to live title/selection/room/board events; the Money loss and all seven native discrepancies remain open. Preview is the prior scanout export; source inventory is ahead of it."
       ]
     },
     {
@@ -7637,7 +7767,7 @@
       ]
     }
   ],
-  "current_focus": "Money-game unused second coin preparation/shared random sequence; original resource ownership affects that preparation. Current browser board, theater, nature, preferences and print routes pass on the same immutable export. Keep strict native timing/audio failures explicit; no captured delays, phase offsets or checkpoint seeds become runtime input.",
+  "current_focus": "Generate board resource lifetimes after options dismissal through actual Money turns/payments, then join the new Godot resource modules to live title/selection/room/board events. The generated component chain now reaches board options with 366 native comparisons; its single supplied board-entry seed and room/credit semantic inputs must not become runtime fixtures. Use the generated cursor source address for direct-payment preparation and replay the complete losing game. Source/export/browser refresh remains required; old preview is unchanged.",
   "implementation_boundary": "Acceptance concerns observable rendering, input, gameplay, sound and timing. CPU instructions, registers, heap layout and interrupt execution are diagnostic evidence, not additional deliverables. Existing strict presentation failures remain open.",
   "delivery_target": "Independent Godot 4.6 project, with desktop play and Godot Web export. treehouse-demo is the preserved JavaScript reference during migration."
 }

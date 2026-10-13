@@ -2235,3 +2235,136 @@ but RNG is 2527103840 instead of 2204794019; later turns diverge and the losing
 ending is not reached. The resource-dependent second coin preparation remains
 open. Reports: `godot-resume-oct13-money-loss-a/report.json` and its bound
 `godot-resume-oct13-money-loss-a-envelope/evidence.json`.
+
+## Godot allocation and ownership port — 2026-10-13
+
+The recovered allocation semantics now have GDScript implementations in
+`resource_heap.gd`, `resource_near_heap.gd`, and `resource_memory.gd`. They
+implement first/last-fit allocation, forward packing, handle relocation, near
+allocation with explicit growth limits, locking, promotion, resize, discard,
+raw/handle ownership transfers and catalog backlink cleanup. No CPU instruction
+accounting or captured address schedule was added.
+
+- `godot-resource-heap-b/report.json`: 402 passing checks. All 52 original
+  preparation operations and both cursor-moving packing operations match,
+  preserving payload hashes, block geometry, handles and search cursors. The
+  operations make 171 moves in total. A continuous near-heap replay matches
+  all 104 checkpoints and 237 allocation returns through 206 frees. Six focused
+  checks cover padding, locking and bounded growth.
+- `godot-resource-memory-c/report.json`: 668 passing checks. From one initial
+  fixture, all 104 complete near/far structures and active/static handles match
+  through 159 far allocations and 43 raw frees. Return-pointer assertions and
+  eight focused ownership/resize checks also pass.
+
+The fixtures are hash-checked original RAM and observed semantic operation
+requests, used only by offline test drivers. This establishes the port of these
+components; generated live resource requests and a complete payment replay
+remain required. The game does not call these modules yet. The preview remains
+`godot-scanout-build-a`; the current source inventory has advanced beyond that
+export, so its browser evidence must not be described as testing these changes.
+
+Retained attempts: `godot-resource-heap-red-a` used the wrong reference filename;
+`godot-resource-heap-red-b` reports the missing Godot modules before implementation.
+The first ownership run matched every memory state but its final empty-stack
+assertion failed: the native window ends after preparation, inside one raw
+allocation. The corrected assertion requires exactly that pending raw allocation;
+its subsequent far allocation and return are present just beyond the observed
+window. `godot-resource-memory-a/report.json` preserves the failed assertion.
+
+Next: port generated startup/catalog loading into these Godot components, then
+generate board redraw ownership and connect the live payment dependency. The
+seven native fidelity discrepancies and all strict timing/audio requirements
+remain open.
+
+## Generated Godot startup resources — 2026-10-13
+
+The allocation port now has a generated starting state. New Godot modules model
+DOS conventional allocations and growth, startup near allocations, cached source
+resources, archive directories, font/cursor conversion, saved surfaces, direct
+raw copies, and digital-sound preparation. `resource_startup_assets.gd` composes
+these through all seven startup archives and the retained initial sound.
+
+`resource_startup_inputs.py` extracts the inputs from the pinned original EXE and
+DAT bytes plus the documented DOS/Sound Blaster launch profile. The normal
+`build_godot.py` now includes this compact base64 transport in
+`original.json.resource_ownership`. No captured RAM, allocator addresses, call
+stream, CPU instruction counts or native elapsed times enter this generation.
+
+Evidence under `testing/output/treehouse/`:
+
+- `godot-resource-startup-e/report.json`: all 108 checks pass using the normal
+  generated asset bundle. This includes 98 native boundary-field comparisons
+  (complete arena/near/DOS state, active payload hashes, files and catalog entries),
+  five boundary-count checks and five focused cache/conversion checks. Native
+  boundaries are comparison outputs only.
+- `godot-resource-startup-d/report.json`: all 108 checks pass with direct source
+  extraction; the normal bundle exercises the same production `from_data` entry.
+- `godot-resource-memory-d/report.json`: all 668 continuous ownership checks
+  still pass after the startup integration within the resource modules.
+- `godot-resource-startup-assets-a.log`: normal resource generation succeeds,
+  retaining all 2,337 shapes and 356 scripts. Asset bundle SHA-256:
+  `57a482dfbd65ef1f52a51a4c80ab1a83ea2411e19c72c5f66e8d06b441474f2b`.
+
+Early attempts A/B retain Godot identifier collisions (`Font` and global
+`convert`) and their compile failures. They were renamed; no native mismatch
+was waived. Attempt B's specific failed Godot child was stopped after its
+compilation errors; the successful later runs exited normally.
+
+This resource startup is still separate from the playable event loop. Title,
+selection, room and board lifetime hooks remain required before its cursor
+address can drive payment preparation. The preview still serves the previous
+scanout export, and completion correctly fails because source has advanced as
+well as because gameplay/timing/audio work remains open. Next is porting
+palette, shape and animation ownership through the existing native title
+boundaries, then continuing to board gameplay.
+
+## Godot scene ownership through board options — 2026-10-13
+
+Added GDScript palette/shape/animation ownership and lifecycle modules for the
+title, child selection, initial room, board transition and initial board/options
+construction. The normal source extractor now includes the original EXE palette
+masks, rectangles, SCR code and child archives used by these modules. Palette
+byte updates explicitly preserve Godot PackedByteArray copy-on-write semantics.
+
+The sequence generates requests from these source structures and current game
+fields. It releases saved character backgrounds, animation objects, temporary
+screens, sound locks and source-cache links at the corresponding semantic
+boundaries. Board transition display/sound/callback events come from the actual
+Godot SCR interpreter: the ring completes 18 displays; the bubble completes 13
+displays, sounds 10034/10035 and callback [0,0]. Initial board layout is produced
+by the actual Godot BoardGame rules.
+
+Evidence under `testing/output/treehouse/`:
+
+- `godot-resource-board-c/report.json`: **377 checks pass**, including all 366
+  native allocator/DOS/catalog/source-payload comparisons through initial Money
+  options, and 11 gameplay/interpreter/ownership checks. Uses the normal asset
+  bundle for both resource metadata and board tables.
+- `godot-resource-room-girl-b/report.json`: **209 checks pass**, including all
+  204 native comparisons through girl selection and room construction, and
+  five ownership/cache checks, also using the normal asset bundle.
+- `godot-resource-startup-f/report.json`: all **108 startup checks** remain
+  passing after the shape/catalog integration.
+- `godot-resource-scene-assets-a.log`: normal asset generation succeeds with
+  all 2,337 shapes and 356 scripts. Current asset SHA-256 is
+  `a83014cbf1c508a975dfaed72b5451fab8ebf561b9b519ba9e51d14f8cbd1fb1`.
+
+Earlier passing title/room/transfer checkpoints remain as
+`godot-resource-title-boy-a`, `godot-resource-room-boy-a`,
+`godot-resource-transfer-a`, `godot-resource-board-a/b` and
+`godot-resource-room-girl-a`. They cover intermediate versions or direct
+extraction; the current reports above bind the final source and normal assets.
+
+Limits: these are headless resource ownership comparisons at semantic completion,
+not live browser gameplay or elapsed-time proof. The route supplies cloud 5,
+two visible credit changes, noon, the five source-defined room objects, and one
+native RNG seed at board entry. Those are explicit test inputs; they must not
+become runtime fixture schedules or seeds. Converted shape/surface pixels remain
+the graphics decoder's responsibility and are outside these resource comparisons.
+The modules are not yet hooked into the playable event loop. The preview remains
+the prior scanout build; full completion and its source/export check still fail.
+
+Next is generating board start, turn, sound and redraw resource events after
+options dismissal, then connecting the live lifecycle and deriving the payment's
+cursor-dependent second amount. The full losing Money replay, seven native
+discrepancies, timing and waveform work remain open.

@@ -9,10 +9,12 @@ import zipfile
 from build_demo import ROOT, decode_assets
 from executable import unpack
 from midi import extract
+from resource_startup_inputs import extract as extract_resource_startup
 
 
 def build(source: Path, output: Path) -> dict:
     assets = decode_assets(source)
+    assets['resource_ownership'] = extract_resource_startup(source)
     midi = extract(source)
     title = midi['tracks']['midisnd:20200']
     with zipfile.ZipFile(source) as archive:
