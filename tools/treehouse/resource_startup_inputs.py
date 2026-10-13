@@ -23,9 +23,9 @@ def scene_inputs(archive, exe, image, metadata):
     data = archive.read('TheTreeh/th.dat')
     entries = parse_archive(data)
 
-    def script(identifier):
-        entry = next(r for r in entries if r['tag'] == 'SCR' and r['id'] == identifier)
-        decoded = disassemble_script(data[entry['payload_offset']:entry['payload_offset'] + entry['size']], image)
+    def script(identifier, source=data):
+        entry = next(r for r in parse_archive(source) if r['tag'] == 'SCR' and r['id'] == identifier)
+        decoded = disassemble_script(source[entry['payload_offset']:entry['payload_offset'] + entry['size']], image)
         return dict(bounds=decoded['bounds_words'], code=[[op['opcode'], list(bytes.fromhex(op['operand_hex']))]
                                                         for op in decoded['instructions']])
 
@@ -82,6 +82,13 @@ def scene_inputs(archive, exe, image, metadata):
     board = dict(palettes=board_palettes, screenBounds=entrance['screenBounds'],
                  backgroundPalette=dict(id=10*struct.unpack_from('<H', board_code, 0x694)[0], banks=struct.unpack_from('<H', board_code, 0x6a6)[0]),
                  optionsPalette=dict(id=struct.unpack_from('<H', board_code, 0xb1f)[0], banks=struct.unpack_from('<H', board_code, 0xb23)[0]))
+    board['clickSound'] = struct.unpack_from('<H', image, 0x5ba5)[0]
+    board['querySound'] = title['querySound']
+    board['dashboards'] = []
+    source = archive.read('TheTreeh/modules.dat')
+    for role in range(3):
+        identifier = (struct.unpack_from('<H', board_code, 0x39f1)[0]+role)*struct.unpack_from('<H', board_code, 0x39f4)[0]
+        board['dashboards'].append(dict(id=identifier, banks=struct.unpack_from('<H', board_code, 0x39e8)[0], script=script(identifier,source)))
     return dict(title=title, entrance=entrance, rooms=rooms, transfer=transfer, board=board)
 
 

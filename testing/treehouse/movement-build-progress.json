@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-13",
+  "status": "in_progress",
+  "runtime": "Godot",
+  "change": "Production movement events now generate node-flash, road-surface and pawn-background ownership through the beginning of landing. The first pawn step happens after preparation, before its wait, and a roll no longer resets the pending reminder countdown.",
+  "preview": "http://127.0.0.1:8768/",
+  "preview_process_id": 4040,
+  "build": {
+    "path": "testing/output/treehouse/godot-move-build-a/build.json",
+    "sha256": "bde73a6c0259d4eaf167c9f966e1d876b903bc395b6059b8f866a7bfbaa8ce45"
+  },
+  "evidence": [
+    {
+      "path": "testing/output/treehouse/godot-resource-move-d/report.json",
+      "sha256": "93edd19ef34025094c753d243b63c9467984ad6a2e373a4d22aaf7ee747b1337",
+      "scope": "component",
+      "checks": 470,
+      "native_resource_comparisons": 450
+    },
+    {
+      "path": "testing/output/treehouse/godot-resource-move-d-envelope/evidence.json",
+      "sha256": "bb52cf5a2b8647abee402fdb34fc99bdcb16ff93fcfba31082c789c9a4743602",
+      "scope": "component"
+    },
+    {
+      "path": "testing/output/treehouse/godot-move-board-web-a-envelope/evidence.json",
+      "sha256": "b1957438223827374b0906ed6a41ff0e4c1418ec0dfa01482feb10f3f47ee011",
+      "scope": "web",
+      "checks": 21
+    },
+    {
+      "path": "testing/output/treehouse/resource-board-move-controls-a.json",
+      "sha256": "ae371a5e9dfcae5f1bcd35563ce622a4b41c0acd8a302f3828da9a21e6e523e0",
+      "scope": "reference",
+      "checks": 356
+    },
+    {
+      "path": "testing/output/treehouse/godot-move-delivery-a.json",
+      "sha256": "383c92092e7b609d919d4f7291e17f6bec6ec0eac6e66a5121bd7c4f4292692a",
+      "scope": "delivery",
+      "files": 9
+    },
+    {
+      "path": "testing/output/treehouse/godot-move-money-loss-a/report.json",
+      "sha256": "3f2f2da8937a221c5d4f83a70cdad45f47b8cfad48993ea804ce9667960f6124",
+      "scope": "component",
+      "passed": false,
+      "note": "Byte-identical report to the previous roll build: 12/33 images, 11/33 states, first RNG divergence step-10, losing ending not reached."
+    }
+  ],
+  "limits": [
+    "Movement preparation takes five native ticks that the logical model does not yet account for. The report retains exact=false with both event timelines; the 17 pawn frames and their three-tick spacing match.",
+    "The component fixture supplies one board-entry RNG seed, the initial reminder countdown, and earlier room/credit semantic inputs. These are not runtime schedules.",
+    "Resource initialization and later lifetimes are not yet integrated across live gameplay.",
+    "The existing completion index remains preserved on the older export; other Web suites and index reconciliation remain required.",
+    "No issue or existing native discrepancy was closed."
+  ],
+  "next": [
+    "Continue from the generated pre-landing state through amount preparation, text, sound, both coin arrays and payment rendering.",
+    "Generate later-turn redraw lifetimes and connect the complete resource lifecycle to live gameplay.",
+    "Derive the unused payment amount from the generated cursor source address and replay the full Money game.",
+    "Resolve preparation elapsed time, refresh other Web suites, and reconcile the completion index while retaining historical evidence."
+  ]
+}

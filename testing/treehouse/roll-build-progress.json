@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-13",
+  "status": "in_progress",
+  "runtime": "Godot",
+  "change": "Restored the original 24-tick button flash before rolling; production events drive resource ownership through the first roll and pawn blink.",
+  "preview": "http://127.0.0.1:8768/",
+  "preview_process_id": 6764,
+  "build": {
+    "path": "testing/output/treehouse/godot-roll-build-a/build.json",
+    "sha256": "afb9e63c09ac55ddd9155ecb8db42c588246ef184f6d014c24d2b252d5d0aa6c"
+  },
+  "evidence": [
+    {
+      "path": "testing/output/treehouse/godot-resource-roll-c/report.json",
+      "sha256": "a33be27b39320fb2b51437614d5524e3c314e383aab393430ab472bd12ce02ef",
+      "scope": "component",
+      "checks": 443
+    },
+    {
+      "path": "testing/output/treehouse/godot-resource-roll-c-envelope/evidence.json",
+      "sha256": "0cf9ee790fb0d3d7a4ae38ebfe390d7bd41c6a87ecfcfbb5db514779bc336ac0",
+      "scope": "component"
+    },
+    {
+      "path": "testing/output/treehouse/godot-roll-board-web-a-envelope/evidence.json",
+      "sha256": "c77cec9860417f4ddd50816058d80e6534616401b9217cf520f69eb94c2de74d",
+      "scope": "web",
+      "checks": 21
+    },
+    {
+      "path": "testing/output/treehouse/resource-board-roll-controls-a.json",
+      "sha256": "235b0821fee87e9930925f735abb9cb31020f6638cba8dcd64fc91bdc6caf9c0",
+      "scope": "reference",
+      "checks": 230
+    },
+    {
+      "path": "testing/output/treehouse/godot-roll-delivery-a.json",
+      "sha256": "ba90d9716386f12698e23586c3ce2b0efa77493ae3a9a07e5036fdbe570065af",
+      "scope": "delivery",
+      "files": 9
+    },
+    {
+      "path": "testing/output/treehouse/godot-roll-money-loss-a/report.json",
+      "sha256": "3f2f2da8937a221c5d4f83a70cdad45f47b8cfad48993ea804ce9667960f6124",
+      "scope": "component",
+      "passed": false,
+      "note": "Every checkpoint retains the previous pixel count and state differences: 12/33 images, 11/33 states, first RNG divergence step-10, losing ending not reached."
+    }
+  ],
+  "limits": [
+    "Relative PIT tick matches do not prove absolute scanout or audio waveform parity.",
+    "Resource initialization and later lifetimes are not yet integrated across live gameplay.",
+    "The completion index still references the prior export. Automatic approval review rejected the bulk replacement without a detailed reason; the index was preserved.",
+    "All existing open issues and seven native discrepancies remain open."
+  ],
+  "next": [
+    "Generate movement, landing, payment and subsequent redraw resource lifetimes.",
+    "Connect the generated startup/room/board resource lifecycle to live gameplay.",
+    "Derive the missing payment preparation from the generated cursor source address and replay the full Money game.",
+    "Refresh other browser suites on the new export and reconcile the completion index without discarding historical evidence."
+  ]
+}

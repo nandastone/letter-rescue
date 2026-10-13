@@ -23,8 +23,11 @@ from verify_dos_resource_startup import mcbs
 from memory_catalog import read_catalogs, read_files
 
 
-def verify(godot, output, entrance=False, selection='', assets=None, room=False, transfer=False, board=False):
+def verify(godot, output, entrance=False, selection='', assets=None, room=False, transfer=False, board=False, play=False, roll=False, move=False):
     output.mkdir(parents=True, exist_ok=False)
+    roll = roll or move
+    play = play or roll
+    board = board or play
     transfer = transfer or board
     room = room or transfer
     selection = selection or ('boy' if room else '')
@@ -33,7 +36,7 @@ def verify(godot, output, entrance=False, selection='', assets=None, room=False,
     entrance = entrance or bool(selection)
     bundle = json.loads(assets.read_text(encoding='utf-8')) if assets else None
     inputs = bundle['resource_ownership'] if bundle else extract(DATA / 'source/The_Treehouse_1991.zip')
-    parameters = dict(inputs=inputs, entrance=entrance, selection=selection, room=room, transfer=transfer, board=board)
+    parameters = dict(inputs=inputs, entrance=entrance, selection=selection, room=room, transfer=transfer, board=board, play=play, roll=roll, move=move)
     config = inputs['scenes']['entrance']
     boundaries = [('background-palette', 'resource-startup-palette-a', 1), ('title-palette', 'resource-startup-palette-a', 3),
                   ('animation-before', 'resource-startup-animation-a', 0), ('animation-after', 'resource-startup-animation-a', 1),
@@ -74,6 +77,37 @@ def verify(godot, output, entrance=False, selection='', assets=None, room=False,
         boundaries.extend([('board-background-before','resource-board-start-palette-a',44),('board-background-after','resource-board-start-palette-a',45),
                            ('board-options-before','resource-board-start-palette-a',46),('board-options-after','resource-board-start-palette-a',47),
                            ('board-options-painted','resource-board-options-a',1)])
+    if play:
+        boundaries.extend([('board-play-before','resource-board-play-a',0),
+                           ('board-restart-before','resource-board-restart-a',0),
+                           ('board-redraw-after','resource-board-redraw-a',1),
+                           ('board-dashboard-before','resource-board-dashboard-a',0),
+                           ('board-dashboard-after','resource-board-dashboard-a',1),
+                           ('board-play-after','resource-board-play-a',1)])
+    if roll:
+        boundaries.extend([('board-roll-before','resource-board-first-roll-a',0),
+                           ('board-roll-faces-before','resource-board-roll-faces-a',0),
+                           ('board-roll-faces-after','resource-board-roll-faces-a',1),
+                           ('board-roll-after','resource-board-first-roll-a',1)])
+        run = json.loads((DATA/'resource-board-first-roll-a/run.json').read_text(encoding='utf-8'))
+        events = run['events']
+        tick = next(e['pit'] for e in events if e['label']=='roll.click')
+        parameters['expected_roll_prompts'] = [[e['pit']-tick,e['stack'][4] if e['stack'][4]<32768 else e['stack'][4]-65536]
+                                               for e in events if e['label']=='hint.draw']
+        parameters['expected_roll_sounds'] = [[e['pit']-tick,e['stack'][2]] for e in events if e['label']=='sound.play']
+        parameters['expected_roll_complete'] = next(e['pit']-tick for e in events if e['label']=='roll.complete')
+    if move:
+        boundaries.extend([('board-move-before','resource-board-move-a',0),
+                           ('board-movement-before','resource-board-movement-a',0),
+                           ('board-movement-after','resource-board-movement-a',1),
+                           ('board-landing-before','resource-board-move-a',1)])
+        run = json.loads((DATA/'resource-board-move-a/run.json').read_text(encoding='utf-8'))
+        parameters['move_target'] = run['move_target']
+        events = run['events']
+        tick = next(e['pit'] for e in events if e['label']=='node.flash')
+        end = next(i for i,e in enumerate(events) if e['label']=='landing.begin')
+        parameters['expected_move_ticks'] = [[e['label'],e['pit']-tick] for e in events[:end+1]
+                                             if e['label'] in ['movement.begin','pawn.paint','movement.end','landing.begin']]
     expected, references = {}, {}
     for label, name, index in boundaries:
         folder = DATA / name
@@ -91,11 +125,20 @@ def verify(godot, output, entrance=False, selection='', assets=None, room=False,
                                catalogs=read_catalogs(raw, ss), payloads=payloads)
         if board and label == 'board-before':
             parameters['board_seed'] = struct.unpack_from('<I',raw,ss*16+0x5290)[0]
-        if board and label == 'board-options-before':
+        if board and label in ['board-options-before','board-redraw-after']:
             ds = ss*16
-            parameters['expected_game'] = dict(seed=struct.unpack_from('<I',raw,ds+0x5290)[0],nodes=list(struct.unpack_from('<2h',raw,ds+0x52c4)),
+            parameters['expected_game' if label=='board-options-before' else 'expected_started_game'] = dict(seed=struct.unpack_from('<I',raw,ds+0x5290)[0],nodes=list(struct.unpack_from('<2h',raw,ds+0x52c4)),
                                               directions=list(struct.unpack_from('<2h',raw,ds+0x5734)),balances=list(struct.unpack_from('<2h',raw,ds+0x5a0c)),
                                               types=list(struct.unpack_from('<24h',raw,ds+0x59da)))
+        if roll and label=='board-roll-after':
+            parameters['expected_rolled_game'] = dict(seed=struct.unpack_from('<I',raw,ss*16+0x5290)[0],
+                                                     remaining=struct.unpack_from('<h',raw,ss*16+0x5276)[0])
+        if roll and label=='board-roll-before':
+            parameters['roll_hint_countdown'] = struct.unpack_from('<H',raw,ss*16+0x201a)[0]
+        if move and label=='board-landing-before':
+            parameters['expected_landing_game'] = dict(seed=struct.unpack_from('<I',raw,ss*16+0x5290)[0],
+                 remaining=struct.unpack_from('<h',raw,ss*16+0x5276)[0],nodes=list(struct.unpack_from('<2h',raw,ss*16+0x52c4)),
+                 directions=list(struct.unpack_from('<2h',raw,ss*16+0x5734)))
     (output / 'fixture.json').write_text(json.dumps(parameters),encoding='utf-8')
     with (output / 'godot.log').open('w', encoding='utf-8') as log:
         process = subprocess.run([str(godot), '--headless', '--path', str(ROOT / 'treehouse-godot'),
@@ -122,8 +165,10 @@ def verify(godot, output, entrance=False, selection='', assets=None, room=False,
         checks.append(dict(name=f'{label} modeled payloads', passed=bool(payloads) and not differences,
                            compared=len(payloads), differences=differences))
     report = dict(passed=all(c['passed'] for c in checks), checks=checks, scope=__doc__, references=references,
-                  stages=list(actual['stages']), entrance=entrance, selection=selection, room=room, transfer=transfer, board=board,
+                  stages=list(actual['stages']), entrance=entrance, selection=selection, room=room, transfer=transfer, board=board, play=play, roll=roll, move=move,
+                  movement_timing=actual.get('movement_timing'),
                   board_semantic_seed=parameters.get('board_seed'),
+                  roll_semantic_hint_countdown=parameters.get('roll_hint_countdown'),
                   semantic_inputs=dict(cloud=5, credit_changes=2, hour=12, minute=0, objects=[9,20,8,10,6]) if room else dict(cloud=5,credit_changes=2) if selection else {},
                   source_files={p.relative_to(ROOT).as_posix(): digest(p) for p in sorted((ROOT / 'treehouse-godot/scripts').glob('*.gd'))},
                   extractor_sha256=digest(ROOT / 'tools/treehouse/resource_startup_inputs.py'),
@@ -145,5 +190,8 @@ if __name__ == '__main__':
     parser.add_argument('--room', action='store_true')
     parser.add_argument('--transfer', action='store_true')
     parser.add_argument('--board', action='store_true')
+    parser.add_argument('--play', action='store_true')
+    parser.add_argument('--roll', action='store_true')
+    parser.add_argument('--move', action='store_true')
     args = parser.parse_args()
-    raise SystemExit(0 if verify(args.godot, args.output, args.entrance, args.selection, args.assets, args.room, args.transfer, args.board) else 1)
+    raise SystemExit(0 if verify(args.godot, args.output, args.entrance, args.selection, args.assets, args.room, args.transfer, args.board, args.play, args.roll, args.move) else 1)

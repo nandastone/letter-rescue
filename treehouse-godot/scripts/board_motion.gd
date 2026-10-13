@@ -92,10 +92,14 @@ func dashboard_step() -> Array:
 	return []
 
 func post_roll() -> Array:
+	game.pawn_blink_started.emit()
 	var result: Array = [{"g":{"phase":"blink"}}]
 	for i in 3:
 		result += [{"g":{"car_hidden":true}},12,{"g":{"car_hidden":false}},12]
-	return result+[{"g":{"phase":"move"}},op("set_hint")]
+	return result+[op("finish_pawn_blink"),{"g":{"phase":"move"}}]
+
+func finish_pawn_blink() -> void:
+	game.pawn_blink_finished.emit()
 
 func set_hint(delay: int = 300) -> void:
 	game.hint_due = game.tick+delay
@@ -127,7 +131,7 @@ func reminder(kind: String, clicked: int = -1) -> Array:
 	else:
 		var nodes = ([clicked] if clicked>=0 else [])+game.neighbours()
 		for node in nodes:
-			result += [{"g":{"node_hint":node}},12,{"g":{"node_hint":-1}}]
+			result += [gop("begin_node_flash",[node]),12,gop("finish_node_flash")]
 	return result+[{"m":{"reminding":false}},op("set_hint")]
 
 func number(n: int) -> Array:

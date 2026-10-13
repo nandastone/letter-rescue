@@ -2,6 +2,17 @@ extends RefCounted
 ## Overlay 3: directed roads, money/chip amounts and retained game options.
 const Motion = preload("res://scripts/board_motion.gd")
 const Renderer = preload("res://scripts/board_renderer.gd")
+signal roll_prompt_drawn(value: int)
+signal roll_faces_started
+signal roll_faces_finished
+signal pawn_blink_started
+signal pawn_blink_finished
+signal node_flash_started(node: int)
+signal node_flash_finished
+signal pawn_travel_started(target: int)
+signal pawn_travel_step
+signal pawn_travel_finished
+signal landing_started
 var host
 var store
 var tables: Dictionary
@@ -215,6 +226,7 @@ func start() -> void:
 
 func stop_reminder() -> void:
 	if motion.reminding:
+		if node_hint>=0: finish_node_flash()
 		motion.cancel()
 		offer_hint = -1
 		node_hint = -1
@@ -225,9 +237,16 @@ func roll() -> void:
 	if motion.busy or options or moving!=null or phase in ["rolling","move","reward","exchange"]:
 		return
 	speak(1045)
+	motion.start([motion.gop("flash_roll_prompt",[true]),12,motion.gop("flash_roll_prompt",[false]),12,motion.gop("continue_roll")])
+
+func flash_roll_prompt(red: bool) -> void:
+	hint_red = red
+	roll_prompt_drawn.emit(remaining)
+
+func continue_roll() -> Array:
 	if winner>=0 or loser>=0:
 		host.rewards.open_board()
-		return
+		return []
 	if not first:
 		player = 1-player
 		new_board()
@@ -236,12 +255,13 @@ func roll() -> void:
 		message = ""
 		remaining = -1
 		phase = "intro"
-		motion.start([motion.op("perform_dashboard"),motion.gop("begin_roll")])
-		return
+		return [motion.op("perform_dashboard"),motion.gop("begin_roll")]
 	first = false
 	begin_roll()
+	return []
 
 func begin_roll() -> void:
+	roll_faces_started.emit()
 	var previous_coins_visible = payment_coins_visible
 	clear_offer()
 	payment_coins_visible = previous_coins_visible
@@ -265,6 +285,7 @@ func begin_roll() -> void:
 	roll_index = 0
 	remaining = roll_frames[0]
 	roll_due = tick+6
+	roll_prompt_drawn.emit(remaining)
 	speak(1045)
 
 func find_path(target: int, steps: int = -1, node: int = -1):
@@ -289,8 +310,16 @@ func move(target: int) -> bool:
 		motion.start([motion.op("reminder",["move",target])])
 		return false
 	hint_due = tick+300
-	motion.start([{"g":{"node_hint":target}},12,{"g":{"node_hint":-1,"path":selected_path}},motion.gop("next_edge")])
+	motion.start([motion.gop("begin_node_flash",[target]),12,motion.gop("finish_node_flash"),{"g":{"path":selected_path}},motion.gop("next_edge")])
 	return true
+
+func begin_node_flash(target: int) -> void:
+	node_hint = target
+	node_flash_started.emit(target)
+
+func finish_node_flash() -> void:
+	node_hint = -1
+	node_flash_finished.emit()
 
 func robot_path() -> void:
 	var node = nodes[player]
@@ -325,8 +354,16 @@ func next_edge() -> void:
 	directions[player] = direction
 	var a = center(from)
 	var b = center(to)
+	pawn_travel_started.emit(to)
 	speak(1020+player)
 	moving = {"from":from,"to":to,"x":a[0],"y":a[1],"tx":b[0],"ty":b[1],"due":tick+3,"arrived":false}
+	step_pawn()
+
+func step_pawn() -> void:
+	moving.x += sign(moving.tx-moving.x)*min(2,abs(moving.tx-moving.x))
+	moving.y += sign(moving.ty-moving.y)*min(2,abs(moving.ty-moving.y))
+	moving.due = tick+3
+	pawn_travel_step.emit()
 
 func amounts(type: int) -> Array:
 	var rank = level()
@@ -359,6 +396,7 @@ func coins(amount: int) -> Array:
 	return result
 
 func land() -> void:
+	landing_started.emit()
 	clear_offer()
 	var node = nodes[player]
 	var type = types[node]
@@ -450,26 +488,29 @@ func update(now: int) -> void:
 		if roll_index<8:
 			remaining = roll_frames[roll_index]
 			roll_due = tick+6+roll_index
+			roll_prompt_drawn.emit(remaining)
 			speak(1045)
 		else:
 			remaining = roll_result
 			roll_due = null
+			roll_faces_finished.emit()
 			phase = "move"
 			motion.start([motion.op("robot_turn" if role()==2 else "post_roll")])
 	elif moving!=null and tick>=moving.due:
 		if not moving.arrived:
-			moving.x += sign(moving.tx-moving.x)*min(2,abs(moving.tx-moving.x))
-			moving.y += sign(moving.ty-moving.y)*min(2,abs(moving.ty-moving.y))
-			moving.due = tick+3
 			if moving.x!=moving.tx or moving.y!=moving.ty:
+				step_pawn()
 				return
 			moving.arrived = true
 			stop_speak()
+			nodes[player] = moving.to
+			pawn_travel_finished.emit()
 			if role()!=2:
 				moving.due = tick+12
 				return
 		nodes[player] = moving.to
 		remaining -= 1
+		roll_prompt_drawn.emit(remaining)
 		speak(1045)
 		moving = null
 		hint_due = tick+300

@@ -117,3 +117,79 @@ Next is generating board start, turn, sound and redraw resource events after
 options dismissal, then connecting the live lifecycle and deriving the payment's
 cursor-dependent second amount. The full losing Money replay, seven native
 discrepancies, timing and waveform work remain open.
+
+
+## 2026-10-13 — Godot board options to first-turn readiness
+
+The source-generated Godot resource chain now continues through Play: the click
+sound, preference dismissal, fresh board draw, pawn saved background, dashboard
+animation and three opening prompt flashes. Board start uses the production
+BoardGame preparation and continues its RNG without reseeding. Dashboard sound
+comes from the production SCR interpreter. Click completion is an explicit
+caller event, as are animation completion and each prompt draw; this component
+comparison does not claim an elapsed-time implementation.
+
+Evidence under `testing/output/treehouse/`:
+
+- `godot-resource-play-c/report.json`: **415 checks pass**, including 402 native
+  allocator/DOS/catalog/modeled-payload comparisons and 13 focused, interpreter
+  and gameplay checks. Uses the normal generated asset bundle.
+- `godot-resource-startup-g/report.json`: **108 startup checks pass** with that
+  same bundle.
+- `resource-board-play-controls-a.json`: **468 checks pass** comparing the Play,
+  restart, redraw and dashboard observers against the plain control. Ordinary
+  PNG/WAV/RAM files, callback timelines and input/source metadata agree.
+- `resource-board-play-a`, `resource-board-restart-a`, `resource-board-redraw-a`,
+  `resource-board-dashboard-a`: new paired original snapshots, obtained by
+  restoring the existing fixed-clock options state and clicking Play normally.
+- `godot-resource-play-a/report.json`: preserved failing first candidate. Its
+  three failures were the click sound's lock bit, which the original releases
+  during the button flash. The corrected model exposes sound completion to its
+  caller. `godot-resource-play-b/report.json` preserves the intermediate pass.
+- `godot-resource-play-assets-a.log`: normal asset generation retains all 2,337
+  shapes and 356 scripts. Asset SHA-256:
+  `032f0d9a81ac39c473dc5bc35d9c17f1ce9184270a8fb51c4997513f12bb78a8`.
+
+Limits: one board-entry seed and room/credit/sound completion semantic inputs
+remain explicit fixture inputs. Converted surface pixels, live lifecycle,
+absolute frame timing and audio waveform parity are not proved by these checks.
+No native discrepancy or issue was closed. The preview still serves the prior
+scanout export. Next: roll/movement/landing/payment lifetimes, live integration,
+then the full losing Money replay and a fresh playable export.
+
+
+## 2026-10-13 — First roll, restored button flash and refreshed preview
+
+The Godot board now reproduces the original question-mark button flash before
+rolling: red for 12 ticks, white for 12 ticks, then eight faces at their authored
+6-through-13-tick intervals, followed by three 12-tick pawn blink pairs. The
+new production events drive the resource model's prompt surfaces and saved
+pawn image. Starting from the existing generated startup/board chain and its
+one entry seed, the roll result and final RNG agree without reseeding.
+
+`godot-resource-roll-c/report.json` passes **443 checks**: 426 native resource
+boundary comparisons and 17 gameplay/interpreter/focused checks. The first roll
+matches native relative PIT ticks for every prompt draw and all nine sound
+dispatches, completing at tick 172. This is logical-event evidence; absolute
+scanout timing and audio waveform parity remain open. The original observers
+match their ordinary control in **230 checks**. An initial candidate's closure
+ownership leak is preserved in `godot-resource-roll-a`; weak ownership fixed it,
+and attempts B/C terminate cleanly.
+
+The new `godot-roll-build-a` Web export passes **21 browser checks** across
+Money and Chips: options, roll, legal movement, persisted mode and room return.
+The resource test and Web test have build-bound evidence envelopes. All nine
+served files match the immutable export at http://127.0.0.1:8768/ (PID 6764).
+PCK SHA-256: `b1f96ec656ea3d6dc6832210ae31d3f6879250be1ea08feeb0294cb2ac1927fd`.
+
+`godot-roll-money-loss-a/report.json` retains exactly the previous checkpoint
+pixel counts and state differences: 12/33 images, 11/33 states, first RNG
+mismatch at step-10, losing ending not reached. No issue was closed. Resource
+lifecycle integration, movement/landing/payment lifetimes and seven native
+failures remain open. Prior suite results need refreshing on this export.
+
+Automatic approval review rejected the bulk completion-index replacement
+without a detailed reason. The existing index was preserved; the new export,
+hashed evidence and remaining work are recorded in
+`testing/treehouse/roll-build-progress.json`. The remaining-work ledger points
+to that record. No acceptance was promoted or historical evidence discarded.
